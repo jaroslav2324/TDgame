@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/tower_defence.dir/src/main.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/main.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/main.cpp"
+}
+]
