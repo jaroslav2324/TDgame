@@ -7,15 +7,17 @@
 
 #include "settings.h"
 #include "Enemy.cpp"
+#include "./EnemyManager.cpp"
 
 using std::string;
 
 
-
+/*Basic class for all towers*/
 class Tower{
 public:
-    Tower(EnemyManager& enemyManager);
-    Tower(EnemyManager& enemyManager, float damage, float radius, int level);
+    Tower(EnemyManager* enemyManager);
+    //TODO second onstructor
+    Tower(EnemyManager* enemyManager, float damage, float radius, int level);
     
     float getDamage();
     float getRadius();
@@ -28,8 +30,7 @@ public:
     //TODO findNearestEnemyInRadius
     //TODO hitEnemy
 
-    // TODO loadSprite
-
+    // TODO void loadSprite() = 0;
     float getExpForNextLvl(int currentLevel);
 
 protected:
@@ -43,7 +44,7 @@ protected:
     int gridCoordX = 0;
     int gridCoordY = 0;
 
-    EnemyManager& enemyManager;
+    EnemyManager* enemyManager;
     Enemy* aimedEnemy = nullptr;
 
     SDL_Texture* towerSprite = nullptr;
@@ -57,9 +58,7 @@ protected:
 
 
 
-
-
-Tower::Tower(EnemyManager& enemyManager){
+Tower::Tower(EnemyManager* enemyManager){
 
     Tower::enemyManager = enemyManager;
 
