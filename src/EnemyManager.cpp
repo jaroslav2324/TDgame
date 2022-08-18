@@ -11,6 +11,9 @@ class EnemyManager{
     public:
     EnemyManager();
     ~EnemyManager();
+
+    Enemy* findFirstEnemyForTower(float coordX, float coordY, float radius);
+    Enemy* findNearestEnemyForTower(float coordX, float coordY, float radius);
         
     void spawnEnemy(int enemyType);
     void addSpawnedEnemy(Enemy*);
@@ -55,3 +58,60 @@ void EnemyManager::killEnemy(Enemy* enemy){
     }
 }
 
+/*
+coordX, coordY - coords of the tower(not grid coords);
+*/
+Enemy* EnemyManager::findFirstEnemyForTower(float coordX, float coordY, float radius){
+
+    float diffX, diffY;
+    float squareDistance, squareRadius;
+
+    for (auto enemy: enemiesList){
+        diffX = abs(enemy->getCoordX() - coordX);
+        diffY = abs(enemy->getCoordY() - coordY);
+
+        squareDistance = pow(diffX, 2) + pow(diffY, 2); //between tower and enemy
+        squareRadius = pow(radius, 2);
+
+        if (squareDistance < squareRadius)
+            return enemy;
+    }
+
+    return nullptr;
+}
+
+
+Enemy* EnemyManager::findNearestEnemyForTower(float coordX, float coordY, float radius){
+
+    float diffX, diffY;
+    float minDiffX, minDiffY;
+    float squareDistance, squareRadius;
+
+    Enemy* returnEnemy = nullptr;
+
+    for (auto enemy: enemiesList){
+        diffX = abs(enemy->getCoordX() - coordX);
+        diffY = abs(enemy->getCoordY() - coordY);
+
+        squareDistance = pow(diffX, 2) + pow(diffY, 2); //between tower and enemy
+        squareRadius = pow(radius, 2);
+
+        if (returnEnemy == nullptr)
+            if (squareDistance < squareRadius){
+                minDiffX = diffX;
+                minDiffY = diffY;
+                returnEnemy = enemy;
+                continue;
+            }
+
+        else{
+            float minSquareDistance = pow(minDiffX, 2) + pow(minDiffY, 2);
+            if (squareDistance < squareRadius && squareDistance < minSquareDistance){
+                minDiffX = diffX;
+                minDiffY = diffY;
+                returnEnemy = enemy;
+            }
+        }
+            
+    return returnEnemy;
+}

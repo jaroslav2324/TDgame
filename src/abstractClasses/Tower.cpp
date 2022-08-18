@@ -26,9 +26,9 @@ public:
     void addExperience(float exp);
     void checkAndLevelUp();
 
-    //TODO findFirstEnemyInRadius
-    //TODO findNearestEnemyInRadius
-    //TODO hitEnemy
+    void findFirstEnemyInRadius();
+    void findNearestEnemyInRadius();
+    void hitEnemy();
 
     // TODO void loadSprite() = 0;
     float getExpForNextLvl(int currentLevel);
@@ -41,6 +41,8 @@ protected:
     float expForNextLvl = 0;
     
     //TODO grid coords getters and setters
+    float coordX = 0;
+    float coordY = 0;
     int gridCoordX = 0;
     int gridCoordY = 0;
 
@@ -99,4 +101,25 @@ void Tower::checkAndLevelUp(){
         level++;
         expForNextLvl = getExpForNextLvl(level);
     }
+}
+
+
+void Tower::findFirstEnemyInRadius(){
+    aimedEnemy = enemyManager->findFirstEnemyForTower(coordX, coordY, radius);
+}
+
+void Tower::findNearestEnemyInRadius(){
+    aimedEnemy = enemyManager->findNearestEnemyForTower(coordX, coordY, radius);
+}
+
+void Tower::hitEnemy(){
+
+    if (aimedEnemy != nullptr){
+        aimedEnemy->getDamage(damage);
+
+        if (aimedEnemy->isDead()){
+            enemyManager->killEnemy(aimedEnemy);
+            aimedEnemy = nullptr;
+        }
+    } 
 }
