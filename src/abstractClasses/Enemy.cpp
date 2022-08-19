@@ -5,6 +5,7 @@
 #include <SDL2/SDL.h>
 
 #include "./EnemiesWay.cpp"
+#include "./Base.cpp"
 #include "./approximateComparison.cpp"
 
 using std::string;
@@ -20,11 +21,14 @@ public:
     bool ifWaypointPassed(EnemiesWay&);
     void replaceToNextWaypointCoords(EnemiesWay& way);
 
-    void getDamage(float damage);
+    void applyDamage(float damage);
     bool isDead();
 
-    //TODO DamageBase
-    //TODO freeze enemy
+    void freeze(float freezeMultiplyer);
+    void unfreeze();
+
+    //TODO check position near base
+    void damageBaseAndGetKilled(Base& base);
     //TODO time of freezing
     //TODO load sprite
 
@@ -37,7 +41,7 @@ protected:
     float currentSpeed = 0;
     float maxSpeed = 0;
 
-    float damageToBase = 0;
+    int damageToBase = 0;
 
     int numCurrentWaypoint = 0;
     std::pair<float, float> currentCoords;
@@ -126,12 +130,30 @@ float Enemy::getCoordY(){
     return currentCoords.second;
 }
 
-void Enemy::getDamage(float damage){
+/*hit Enemy*/
+void Enemy::applyDamage(float damage){
     hitPoints -= damage;
 }
 
 bool Enemy::isDead(){
-    if (hitPoints < 0)
+    if (hitPoints <= 0)
         return true;
     return false;
+}
+
+/*
+Slow down Enemy
+freezeMultiplyer between 0 and 1
+*/
+void Enemy::freeze(float freezeMultiplyer){
+    currentSpeed = maxSpeed * (1 - freezeMultiplyer);
+}
+
+void Enemy::unfreeze(){
+    currentSpeed = maxSpeed;
+}
+
+void Enemy::damageBaseAndGetKilled(Base& base){
+    base.applyDamage(damageToBase);
+    hitPoints = 0;
 }

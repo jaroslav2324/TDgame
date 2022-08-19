@@ -16,7 +16,6 @@ using std::string;
 class Tower{
 public:
     Tower(EnemyManager* enemyManager);
-    //TODO second onstructor
     Tower(EnemyManager* enemyManager, float damage, float radius, int level);
     
     float getDamage();
@@ -46,7 +45,7 @@ protected:
     int gridCoordX = 0;
     int gridCoordY = 0;
 
-    EnemyManager* enemyManager;
+    EnemyManager* enemyManager = nullptr;
     Enemy* aimedEnemy = nullptr;
 
     SDL_Texture* towerSprite = nullptr;
@@ -63,6 +62,20 @@ protected:
 Tower::Tower(EnemyManager* enemyManager){
 
     Tower::enemyManager = enemyManager;
+
+    float e = 0;
+    for (auto expForLvl = listExpForLvls->front(); expForLvl != listExpForLvls->back(); expForLvl++){
+        expForLvl = e;
+        e += 100;
+    }
+}
+
+Tower::Tower(EnemyManager* enemyManager, float damage, float radius, int level){
+
+    Tower::enemyManager = enemyManager;
+    Tower::damage = damage;
+    Tower::radius = radius;
+    Tower::level = level;
 
     float e = 0;
     for (auto expForLvl = listExpForLvls->front(); expForLvl != listExpForLvls->back(); expForLvl++){
@@ -115,11 +128,10 @@ void Tower::findNearestEnemyInRadius(){
 void Tower::hitEnemy(){
 
     if (aimedEnemy != nullptr){
-        aimedEnemy->getDamage(damage);
+        aimedEnemy->applyDamage(damage);
 
-        if (aimedEnemy->isDead()){
-            enemyManager->killEnemy(aimedEnemy);
+        if (aimedEnemy->isDead())
             aimedEnemy = nullptr;
-        }
+        
     } 
 }

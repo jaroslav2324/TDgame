@@ -17,7 +17,9 @@ class EnemyManager{
         
     void spawnEnemy(int enemyType);
     void addSpawnedEnemy(Enemy*);
+    //and delete
     void killEnemy(Enemy*);
+    void findAndDeleteKilledEnemies();
 
     private:
     std::vector<Enemy*> enemiesList;
@@ -114,4 +116,17 @@ Enemy* EnemyManager::findNearestEnemyForTower(float coordX, float coordY, float 
         }
             
     return returnEnemy;
+    }
 }
+
+
+void EnemyManager::findAndDeleteKilledEnemies(){
+
+    int offset = 0;
+    for (auto enemy: enemiesList){
+        if (enemy->isDead())
+            enemiesList.erase(enemiesList.begin() + offset);
+        offset++;
+    }
+}
+
