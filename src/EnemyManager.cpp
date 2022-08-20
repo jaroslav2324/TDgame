@@ -1,3 +1,5 @@
+#pragma once
+
 #include <vector>
 #include <string>
 
@@ -21,6 +23,8 @@ class EnemyManager{
     void killEnemy(Enemy*);
     void findAndDeleteKilledEnemies();
 
+    //TODO void moveAllEnemies();
+
     private:
     std::vector<Enemy*> enemyList;
 };
@@ -40,7 +44,8 @@ void EnemyManager::spawnEnemy(int enemyType){
     //TODO add types of enemies
     Enemy* enemy = nullptr;
     if (enemyType == BASIC_ENEMY)
-        enemy = new class BasicEnemy;
+    //TODO change sprite path
+        enemy = new class BasicEnemy("");
 
     enemyList.push_back(enemy);
 }

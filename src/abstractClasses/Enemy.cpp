@@ -15,21 +15,20 @@ using std::string;
 class Enemy{
 public:
     Enemy(string& enemySpritePath);
+
+    void move();
     
-    void MoveToNextWaypoint();
-
-    bool ifWaypointPassed(EnemiesWay&);
-    void replaceToNextWaypointCoords(EnemiesWay& way);
-
     void applyDamage(float damage);
     bool isDead();
 
     void freeze(float freezeMultiplyer);
     void unfreeze();
 
-    //TODO check position near base
-    void damageBaseAndGetKilled(Base& base);
-    //TODO time of freezing
+    virtual void setMovementTimer() = 0;
+
+    bool isNearBase();
+    void damageBaseAndGetKilled();
+    //TODO Freeze timer
     //TODO load sprite
 
     float getCoordX();
@@ -48,19 +47,30 @@ protected:
     std::pair<float, float> coordsCurrentWaypoint;
     std::pair<float, float> coordsNextWaypoint;
 
+    Timer* movementTimer = nullptr;
+
+    EnemiesWay* way = nullptr;
+    Base* base = nullptr;
+
+/*baseSpeed multiplyes by timePeriodOfMoving in seconds*/
+    void MoveToNextWaypoint(double timePeriodOfMoving);
+
+    bool ifWaypointPassed();
+    void replaceToNextWaypointCoords();
+
     void copyCoords(std::pair<float, float>& destination, std::pair<float, float>& source);
     
     SDL_Texture* enemySprite = nullptr;
 };
 
-void Enemy::replaceToNextWaypointCoords(EnemiesWay& way){
+void Enemy::replaceToNextWaypointCoords(){
     coordsCurrentWaypoint = coordsNextWaypoint;
-    coordsNextWaypoint = way.getNextWaypointCoords(numCurrentWaypoint);
+    coordsNextWaypoint = way->getNextWaypointCoords(numCurrentWaypoint);
     numCurrentWaypoint++;
 }
 
-void Enemy::MoveToNextWaypoint(){
-    //TODO add timer
+void Enemy::MoveToNextWaypoint(double timePeriodOfMoving ){
+
     //find proportion of coords change
     float diffX = coordsNextWaypoint.first - coordsCurrentWaypoint.first;
     float diffY = coordsNextWaypoint.second = coordsCurrentWaypoint.second;
@@ -71,15 +81,15 @@ void Enemy::MoveToNextWaypoint(){
     double proportionChangeY = diffY / sumDiffXY;
 
     /*find coords change*/
-    float changeX = currentSpeed * proportionChangeX;
-    float changeY = currentSpeed * proportionChangeY;
+    float changeX = currentSpeed * proportionChangeX * timePeriodOfMoving;
+    float changeY = currentSpeed * proportionChangeY * timePeriodOfMoving;
 
     /*change coords*/
     currentCoords.first += changeX;
     currentCoords.second += changeY;
 }
 
-bool Enemy::ifWaypointPassed(EnemiesWay& way){
+bool Enemy::ifWaypointPassed(){
 
     float diffX = coordsNextWaypoint.first - coordsCurrentWaypoint.first;
     float diffY = coordsNextWaypoint.second - coordsCurrentWaypoint.second;
@@ -153,7 +163,28 @@ void Enemy::unfreeze(){
     currentSpeed = maxSpeed;
 }
 
-void Enemy::damageBaseAndGetKilled(Base& base){
-    base.applyDamage(damageToBase);
+void Enemy::damageBaseAndGetKilled(){
+    base->applyDamage(damageToBase);
     hitPoints = 0;
+}
+
+void Enemy::move(){
+
+    if (movementTimer->tickIfNeeded()){
+
+        if (ifWaypointPassed())
+            replaceToNextWaypointCoords();
+        
+        MoveToNextWaypoint(movementTimer->getCountPeriod() / 1000);
+
+        if(isNearBase())
+            damageBaseAndGetKilled();
+    }
+}
+
+bool Enemy::isNearBase(){
+    std::pair<float, float> baseCoords = way->getLastCoords();
+    if (ifPixelCoordsApprEqual(currentCoords, baseCoords))
+        return true;
+    return false;
 }

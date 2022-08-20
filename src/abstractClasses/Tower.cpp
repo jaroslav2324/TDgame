@@ -6,6 +6,7 @@
 #include <SDL2/SDL.h>
 
 #include "settings.h"
+#include "Timer.h"
 #include "Enemy.cpp"
 #include "./EnemyManager.cpp"
 
@@ -16,18 +17,21 @@ using std::string;
 class Tower{
 public:
     Tower(EnemyManager* enemyManager);
-    Tower(EnemyManager* enemyManager, float damage, float radius, int level);
+    Tower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level);
+
+    virtual void setAttackTimer() = 0;
+
+    //TODO change exp in derived classes
+    void setExpForDamage(float exp);
+    void setExpForKill(float exp);
+
+    //TODO change timer functions;
     
     float getDamage();
     float getRadius();
     //int getLevel();
 
-    void addExperience(float exp);
-    void checkAndLevelUp();
-
-    void findFirstEnemyInRadius();
-    void findNearestEnemyInRadius();
-    void hitEnemy();
+    void attack();
 
     bool isDestroyed();
     void setDestroyed();
@@ -41,6 +45,12 @@ protected:
     int level = 0;
     float experience = 0;
     float expForNextLvl = 0;
+
+    float expForDamage = 0;
+    float expForKill = 0;
+
+    //in milliseconds
+    float attackSpeed = 0;
     
     //TODO grid coords getters and setters
     float coordX = 0;
@@ -50,12 +60,21 @@ protected:
 
     bool destroyed = false;
 
+    Timer* attackTimer = nullptr;
+
     EnemyManager* enemyManager = nullptr;
     Enemy* aimedEnemy = nullptr;
 
     SDL_Texture* towerSprite = nullptr;
 
     std::vector<float> listExpForLvls[MAXLEVEL + 1];
+
+    void findFirstEnemyInRadius();
+    void findNearestEnemyInRadius();
+    void hitEnemy();
+
+    void addExperience(float exp);
+    void checkAndLevelUp();
 
     void setDamage(float damage);
     void setRadius(float radius);
@@ -75,11 +94,12 @@ Tower::Tower(EnemyManager* enemyManager){
     }
 }
 
-Tower::Tower(EnemyManager* enemyManager, float damage, float radius, int level){
+Tower::Tower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level){
 
     Tower::enemyManager = enemyManager;
     Tower::damage = damage;
     Tower::radius = radius;
+    Tower::attackSpeed = attackSpeed;
     Tower::level = level;
 
     float e = 0;
@@ -107,6 +127,14 @@ void Tower::setRadius(float radius){
 
 void Tower::setLevel(int level){
     Tower::level = level;
+}
+
+void Tower::setExpForDamage(float exp){
+    expForDamage = exp;
+}
+
+void Tower::setExpForKill(float exp){
+    expForKill = exp;
 }
 
 void Tower::addExperience(float exp){
@@ -139,6 +167,24 @@ void Tower::hitEnemy(){
             aimedEnemy = nullptr;
         
     } 
+}
+
+void Tower::attack(){
+
+    if(attackTimer->tickIfNeeded()){
+
+        findFirstEnemyInRadius();
+        hitEnemy();
+        //TODO if freeze damage slow down enemy
+
+        if (aimedEnemy->isDead())
+            addExperience(expForKill);
+        else
+            addExperience(expForDamage);
+
+        checkAndLevelUp();
+        
+    }
 }
 
 void Tower::setDestroyed(){

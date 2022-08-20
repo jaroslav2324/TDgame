@@ -1,3 +1,5 @@
+#pragma once
+
 #include <vector>
 
 #include "TowerTypes.h"
@@ -13,6 +15,8 @@ class TowerManager{
     void destroyTower(Tower*);
 
     void findAndDeleteDestroyedTowers();
+
+    //TODO void attackAllTowers();
 
     private:
     std::vector<Tower*> towerList;

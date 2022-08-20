@@ -8,20 +8,33 @@
 using std::cout;
 using std::endl;
 
+/*Periodic timer with count period in milliseconds*/
 class Timer {
 public:
 	Timer(const double countPeriod) : countPeriod(countPeriod) {
 		currentTime = SDL_GetTicks();
 	};
+
+	/*copy constructor to set different countPeriod*/
+	Timer(Timer& timer, double countPeriod): countPeriod(countPeriod){
+		prevTime = timer.prevTime;
+		currentTime = timer.currentTime;
+		frameTime = timer.frameTime;
+		amountTicks = timer.amountTicks;
+	}
+
 	void printCountPeriod();
 	void printAmountTicks();
 
+	double getCountPeriod();
+
 	bool tickIfNeeded();
 protected:
-	// in ms
+	
 	double prevTime = 0;
 	double currentTime;
 	double frameTime = 0;
+    //in milliseconds
 	const double countPeriod;
 
 	long long amountTicks = 0;
@@ -44,6 +57,11 @@ bool Timer::tickIfNeeded() {
 	}
 
 	return false;
+}
+
+/*in milliseconds*/ 
+double Timer::getCountPeriod(){
+	return countPeriod;
 }
 
 void Timer::printAmountTicks() {
