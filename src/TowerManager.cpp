@@ -16,7 +16,7 @@ class TowerManager{
 
     void findAndDeleteDestroyedTowers();
 
-    //TODO void attackAllTowers();
+    void allTowersAttack();
 
     private:
     std::vector<Tower*> towerList;
@@ -59,4 +59,9 @@ void TowerManager::findAndDeleteDestroyedTowers(){
             towerList.erase(towerList.begin() + offset);
         offset++;
     }
+}
+
+void TowerManager::allTowersAttack(){
+    for (auto tower: towerList)
+        tower->attack();
 }

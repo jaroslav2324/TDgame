@@ -24,6 +24,7 @@ class EnemyManager{
     void findAndDeleteKilledEnemies();
 
     //TODO void moveAllEnemies();
+    void allEnemiesMove();
 
     private:
     std::vector<Enemy*> enemyList;
@@ -133,5 +134,10 @@ void EnemyManager::findAndDeleteKilledEnemies(){
             enemyList.erase(enemyList.begin() + offset);
         offset++;
     }
+}
+
+void EnemyManager::allEnemiesMove(){
+    for (auto enemy: enemyList)
+        enemy->move();
 }
 
