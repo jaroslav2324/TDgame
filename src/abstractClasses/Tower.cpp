@@ -29,6 +29,9 @@ public:
     void findNearestEnemyInRadius();
     void hitEnemy();
 
+    bool isDestroyed();
+    void setDestroyed();
+
     // TODO void loadSprite() = 0;
     float getExpForNextLvl(int currentLevel);
 
@@ -44,6 +47,8 @@ protected:
     float coordY = 0;
     int gridCoordX = 0;
     int gridCoordY = 0;
+
+    bool destroyed = false;
 
     EnemyManager* enemyManager = nullptr;
     Enemy* aimedEnemy = nullptr;
@@ -134,4 +139,14 @@ void Tower::hitEnemy(){
             aimedEnemy = nullptr;
         
     } 
+}
+
+void Tower::setDestroyed(){
+    destroyed = true;
+}
+
+bool Tower::isDestroyed(){
+    if (destroyed)
+        return true;
+    return false;
 }

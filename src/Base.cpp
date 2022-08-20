@@ -6,10 +6,12 @@ class Base{
 
     int getHitPoits();
     void setHitPoints(int hitPoints);
-    bool ifNoHitPoitsLeft();
-    
+    bool noHitPoitsLeft();
+
     void applyDamage(int damage);
     //TODO end game
+
+    //TODO loadSprite
 
     private:
     int hitPoints;
@@ -31,7 +33,7 @@ void Base::applyDamage(int damage){
     hitPoints -= damage;
 }
 
-bool Base::ifNoHitPoitsLeft(){
+bool Base::noHitPoitsLeft(){
     if (hitPoints <= 0)
         return true;
     return false;

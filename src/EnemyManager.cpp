@@ -22,7 +22,7 @@ class EnemyManager{
     void findAndDeleteKilledEnemies();
 
     private:
-    std::vector<Enemy*> enemiesList;
+    std::vector<Enemy*> enemyList;
 };
 
 EnemyManager::EnemyManager(){
@@ -31,7 +31,7 @@ EnemyManager::EnemyManager(){
 
 EnemyManager::~EnemyManager(){
 
-    for (auto elm = enemiesList.front(); elm != enemiesList.back(); elm++)
+    for (auto elm = enemyList.front(); elm != enemyList.back(); elm++)
         delete elm;
 }
 
@@ -39,23 +39,23 @@ EnemyManager::~EnemyManager(){
 void EnemyManager::spawnEnemy(int enemyType){
     //TODO add types of enemies
     Enemy* enemy = nullptr;
-    if (enemyType == BASIC)
+    if (enemyType == BASIC_ENEMY)
         enemy = new class BasicEnemy;
 
-    enemiesList.push_back(enemy);
+    enemyList.push_back(enemy);
 }
 
 void EnemyManager::addSpawnedEnemy(Enemy* enemy){
-    enemiesList.push_back(enemy);
+    enemyList.push_back(enemy);
 }
 
 void EnemyManager::killEnemy(Enemy* enemy){
 
     /*offset to delete enemy from vector*/ 
     int offset = 0;
-    for (auto elm = enemiesList.front(); elm != enemiesList.back(); elm++){
+    for (auto elm = enemyList.front(); elm != enemyList.back(); elm++){
         if (elm == enemy)
-            enemiesList.erase(enemiesList.begin() + offset);
+            enemyList.erase(enemyList.begin() + offset);
         offset++;
     }
 }
@@ -68,7 +68,7 @@ Enemy* EnemyManager::findFirstEnemyForTower(float coordX, float coordY, float ra
     float diffX, diffY;
     float squareDistance, squareRadius;
 
-    for (auto enemy: enemiesList){
+    for (auto enemy: enemyList){
         diffX = abs(enemy->getCoordX() - coordX);
         diffY = abs(enemy->getCoordY() - coordY);
 
@@ -91,7 +91,7 @@ Enemy* EnemyManager::findNearestEnemyForTower(float coordX, float coordY, float 
 
     Enemy* returnEnemy = nullptr;
 
-    for (auto enemy: enemiesList){
+    for (auto enemy: enemyList){
         diffX = abs(enemy->getCoordX() - coordX);
         diffY = abs(enemy->getCoordY() - coordY);
 
@@ -123,9 +123,9 @@ Enemy* EnemyManager::findNearestEnemyForTower(float coordX, float coordY, float 
 void EnemyManager::findAndDeleteKilledEnemies(){
 
     int offset = 0;
-    for (auto enemy: enemiesList){
+    for (auto enemy: enemyList){
         if (enemy->isDead())
-            enemiesList.erase(enemiesList.begin() + offset);
+            enemyList.erase(enemyList.begin() + offset);
         offset++;
     }
 }
