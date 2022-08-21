@@ -4,6 +4,7 @@
 
 #include <SDL2/SDL.h>
 
+#include "Timers.h"
 #include "./EnemiesWay.cpp"
 #include "./Base.cpp"
 #include "./approximateComparison.cpp"
@@ -15,20 +16,23 @@ using std::string;
 class Enemy{
 public:
     Enemy(string& enemySpritePath);
+    ~Enemy();
 
     void move();
     
     void applyDamage(float damage);
     bool isDead();
 
-    void freeze(float freezeMultiplyer);
+    void freeze(float freezeMultiplyer, double time);
     void unfreeze();
 
     virtual void setMovementTimer() = 0;
 
     bool isNearBase();
     void damageBaseAndGetKilled();
-    //TODO Freeze timer
+
+    //freezeTime in ms
+    void activateFreezeTimer(double freezeTime);
     //TODO load sprite
 
     float getCoordX();
@@ -42,12 +46,15 @@ protected:
 
     int damageToBase = 0;
 
+    bool isFreezed = false;
+
     int numCurrentWaypoint = 0;
     std::pair<float, float> currentCoords;
     std::pair<float, float> coordsCurrentWaypoint;
     std::pair<float, float> coordsNextWaypoint;
 
-    Timer* movementTimer = nullptr;
+    PeriodicTimer* movementTimer = nullptr;
+    CountdownTimer* freezeTimer = nullptr;
 
     EnemiesWay* way = nullptr;
     Base* base = nullptr;
@@ -62,6 +69,16 @@ protected:
     
     SDL_Texture* enemySprite = nullptr;
 };
+
+Enemy::Enemy(std::string& spritePath){
+
+}
+
+Enemy::~Enemy(){
+
+    if (freezeTimer != nullptr)
+        delete freezeTimer;
+}
 
 void Enemy::replaceToNextWaypointCoords(){
     coordsCurrentWaypoint = coordsNextWaypoint;
@@ -155,8 +172,9 @@ bool Enemy::isDead(){
 Slow down Enemy
 freezeMultiplyer between 0 and 1
 */
-void Enemy::freeze(float freezeMultiplyer){
+void Enemy::freeze(float freezeMultiplyer, double time){
     currentSpeed = maxSpeed * (1 - freezeMultiplyer);
+    activateFreezeTimer(time);
 }
 
 void Enemy::unfreeze(){
@@ -174,7 +192,13 @@ void Enemy::move(){
 
         if (ifWaypointPassed())
             replaceToNextWaypointCoords();
-        
+
+        if (freezeTimer != nullptr)
+            if ( ! freezeTimer->isCountdownEnd() && isFreezed){
+                unfreeze();
+                isFreezed = false;
+            }
+
         MoveToNextWaypoint(movementTimer->getCountPeriod() / 1000);
 
         if(isNearBase())
@@ -187,4 +211,12 @@ bool Enemy::isNearBase(){
     if (ifPixelCoordsApprEqual(currentCoords, baseCoords))
         return true;
     return false;
+}
+
+void Enemy::activateFreezeTimer(double freezeTime){
+
+    if (freezeTimer == nullptr)
+        freezeTimer = new CountdownTimer(freezeTime);
+    else
+        freezeTimer->replaceToMoreTime(freezeTime);
 }

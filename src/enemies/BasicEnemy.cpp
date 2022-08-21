@@ -1,4 +1,5 @@
 
+#include "Timers.h"
 #include "abstractClasses/Enemy.cpp"
 
 class BasicEnemy: public Enemy{
@@ -20,7 +21,7 @@ BasicEnemy::~BasicEnemy(){
 
 
 void BasicEnemy::setMovementTimer(){
-    movementTimer = new Timer(1 / FPS);
+    movementTimer = new PeriodicTimer(1 / FPS);
 }
 
 void BasicEnemy::deleteMovementTimer(){

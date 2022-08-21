@@ -6,7 +6,7 @@
 #include <SDL2/SDL.h>
 
 #include "settings.h"
-#include "Timer.h"
+#include "Timers.h"
 #include "Enemy.cpp"
 #include "./EnemyManager.cpp"
 
@@ -41,7 +41,10 @@ public:
 
 protected:
     float damage = 0;
+    double freezeMultyplyer = 0;
+    double freezeTime = 0;
     float radius = 0;
+
     int level = 0;
     float experience = 0;
     float expForNextLvl = 0;
@@ -60,7 +63,7 @@ protected:
 
     bool destroyed = false;
 
-    Timer* attackTimer = nullptr;
+    PeriodicTimer* attackTimer = nullptr;
 
     EnemyManager* enemyManager = nullptr;
     Enemy* aimedEnemy = nullptr;
@@ -175,15 +178,14 @@ void Tower::attack(){
 
         findFirstEnemyInRadius();
         hitEnemy();
-        //TODO if freeze damage slow down enemy
+        aimedEnemy->freeze(freezeMultyplyer, freezeTime);
 
         if (aimedEnemy->isDead())
             addExperience(expForKill);
         else
             addExperience(expForDamage);
 
-        checkAndLevelUp();
-        
+        checkAndLevelUp(); 
     }
 }
 

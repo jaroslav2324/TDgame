@@ -23,7 +23,6 @@ class EnemyManager{
     void killEnemy(Enemy*);
     void findAndDeleteKilledEnemies();
 
-    //TODO void moveAllEnemies();
     void allEnemiesMove();
 
     private:

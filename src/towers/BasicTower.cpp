@@ -18,7 +18,7 @@ BasicTower::~BasicTower(){
 }
 
 void BasicTower::setAttackTimer(){
-    attackTimer = new Timer(attackSpeed);
+    attackTimer = new PeriodicTimer(attackSpeed);
 }
 
 void BasicTower::deleteAttackTimer(){
