@@ -173,11 +173,13 @@ Slow down Enemy
 freezeMultiplyer between 0 and 1
 */
 void Enemy::freeze(float freezeMultiplyer, double time){
+    isFreezed = true;
     currentSpeed = maxSpeed * (1 - freezeMultiplyer);
     activateFreezeTimer(time);
 }
 
 void Enemy::unfreeze(){
+    isFreezed = false;
     currentSpeed = maxSpeed;
 }
 
@@ -194,10 +196,9 @@ void Enemy::move(){
             replaceToNextWaypointCoords();
 
         if (freezeTimer != nullptr)
-            if ( ! freezeTimer->isCountdownEnd() && isFreezed){
+            if (freezeTimer->isCountdownEnd() && isFreezed)
                 unfreeze();
-                isFreezed = false;
-            }
+            
 
         MoveToNextWaypoint(movementTimer->getCountPeriod() / 1000);
 
