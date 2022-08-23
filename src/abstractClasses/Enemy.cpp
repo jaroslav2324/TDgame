@@ -90,7 +90,7 @@ void Enemy::MoveToNextWaypoint(double timePeriodOfMoving ){
 
     //find proportion of coords change
     float diffX = coordsNextWaypoint.first - coordsCurrentWaypoint.first;
-    float diffY = coordsNextWaypoint.second = coordsCurrentWaypoint.second;
+    float diffY = coordsNextWaypoint.second - coordsCurrentWaypoint.second;
 
     float sumDiffXY = abs(diffX) + abs(diffY);
 

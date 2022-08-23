@@ -8,6 +8,7 @@
 #include "settings.h"
 #include "Timers.h"
 #include "Enemy.cpp"
+#include "Projectile.cpp"
 #include "./EnemyManager.cpp"
 
 using std::string;
@@ -24,8 +25,6 @@ public:
     //TODO change exp in derived classes
     void setExpForDamage(float exp);
     void setExpForKill(float exp);
-
-    //TODO change timer functions;
     
     float getDamage();
     float getRadius();
@@ -37,6 +36,7 @@ public:
     void setDestroyed();
 
     // TODO void loadSprite() = 0;
+    //TODO render
     float getExpForNextLvl(int currentLevel);
 
 protected:
@@ -61,6 +61,7 @@ protected:
     int gridCoordX = 0;
     int gridCoordY = 0;
 
+    //TODO add UI to destroy tower
     bool destroyed = false;
 
     PeriodicTimer* attackTimer = nullptr;
@@ -70,10 +71,14 @@ protected:
 
     SDL_Texture* towerSprite = nullptr;
 
+    //FIXME [] for vector?
     std::vector<float> listExpForLvls[MAXLEVEL + 1];
+
+    std::vector<Projectile*> projectileList;
 
     void findFirstEnemyInRadius();
     void findNearestEnemyInRadius();
+    //TODO delete hitEnemy
     void hitEnemy();
 
     void addExperience(float exp);
@@ -174,10 +179,15 @@ void Tower::hitEnemy(){
 
 void Tower::attack(){
 
+    //TODO move projectile
+
     if(attackTimer->tickIfNeeded()){
 
         findFirstEnemyInRadius();
+
+        //TODO spawn projectile
         hitEnemy();
+        //TODO move freeze to Projectile
         aimedEnemy->freeze(freezeMultyplyer, freezeTime);
 
         if (aimedEnemy->isDead())
