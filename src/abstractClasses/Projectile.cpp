@@ -1,3 +1,5 @@
+#pragma once
+
 #include "utility"
 
 #include "Tower.cpp"
@@ -9,6 +11,8 @@ class Projectile{
     public:
     Projectile(Tower* motherTower, Enemy* aimedEnemy, std::pair<float, float> spawnCoords);
     ~Projectile();
+
+    bool hasDamagedEnemy();
     //TODO load sprite
     //TODO render
     void attack();
@@ -36,9 +40,9 @@ class Projectile{
     bool isReachedEnemy();
 };
 
-Projectile::Projectile(Tower* motherTower, Enemy* aimedEnemy, std::pair<float, float> coords){
+Projectile::Projectile(Tower* motherTower, Enemy* aimedEnemy, std::pair<float, float> spawnCoords){
     Projectile::aimedEnemy = aimedEnemy;
-    currentCoords = coords;
+    currentCoords = spawnCoords;
 
     movementTimer = new PeriodicTimer(1 / FPS);
 }
@@ -124,4 +128,10 @@ void Projectile::attack(){
     moveToEnemy();
     if (isReachedEnemy())
         hitAndFreezeEnemy();
+}
+
+bool Projectile::hasDamagedEnemy(){
+    if (damagedEnemy)
+        return true;
+    return false;
 }

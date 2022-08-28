@@ -55,9 +55,10 @@ protected:
     //in milliseconds
     float attackSpeed = 0;
     
+    //TODO set coords
+    std::pair<float, float> towerCoords;
+
     //TODO grid coords getters and setters
-    float coordX = 0;
-    float coordY = 0;
     int gridCoordX = 0;
     int gridCoordY = 0;
 
@@ -78,8 +79,6 @@ protected:
 
     void findFirstEnemyInRadius();
     void findNearestEnemyInRadius();
-    //TODO delete hitEnemy
-    void hitEnemy();
 
     void addExperience(float exp);
     void checkAndLevelUp();
@@ -159,22 +158,11 @@ void Tower::checkAndLevelUp(){
 
 
 void Tower::findFirstEnemyInRadius(){
-    aimedEnemy = enemyManager->findFirstEnemyForTower(coordX, coordY, radius);
+    aimedEnemy = enemyManager->findFirstEnemyForTower(towerCoords, radius);
 }
 
 void Tower::findNearestEnemyInRadius(){
-    aimedEnemy = enemyManager->findNearestEnemyForTower(coordX, coordY, radius);
-}
-
-void Tower::hitEnemy(){
-
-    if (aimedEnemy != nullptr){
-        aimedEnemy->applyDamage(damage);
-
-        if (aimedEnemy->isDead())
-            aimedEnemy = nullptr;
-        
-    } 
+    aimedEnemy = enemyManager->findNearestEnemyForTower(towerCoords, radius);
 }
 
 void Tower::attack(){
@@ -185,13 +173,27 @@ void Tower::attack(){
 
         findFirstEnemyInRadius();
 
-        //TODO spawn projectile
-        hitEnemy();
-        //TODO move freeze to Projectile
-        aimedEnemy->freeze(freezeMultyplyer, freezeTime);
+        /*spawn projectile and add it to the list*/
+        Projectile* projectile = new Projectile(this, aimedEnemy, towerCoords);
+        projectileList.push_back(projectile);
 
-        if (aimedEnemy->isDead())
+        /*move all projectiles and delete if they hit enemy*/
+        int offset = 0;
+        for (auto proj: projectileList){
+            proj->attack();
+            if(proj->hasDamagedEnemy()){
+                delete proj;
+                projectileList.erase(projectileList.begin() + offset);
+            }
+            offset++;
+        }
+
+        
+        /*add experience for tower*/
+        if (aimedEnemy->isDead()){
+            aimedEnemy = nullptr;
             addExperience(expForKill);
+        }
         else
             addExperience(expForDamage);
 
