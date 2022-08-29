@@ -1,33 +1,4 @@
-#pragma once
-
-#include <vector>
-#include <string>
-
-#include "EnemyTypes.h"
-#include "abstractClasses/Enemy.cpp"
-#include "enemies/BasicEnemy.cpp"
-
-using std::string;
-
-class EnemyManager{
-    public:
-    EnemyManager();
-    ~EnemyManager();
-
-    Enemy* findFirstEnemyForTower(std::pair<float, float> towerCoords, float radius);
-    Enemy* findNearestEnemyForTower(std::pair<float, float> towerCoords, float radius);
-        
-    void spawnEnemy(int enemyType);
-    void addSpawnedEnemy(Enemy*);
-    //and delete
-    void killEnemy(Enemy*);
-    void findAndDeleteKilledEnemies();
-
-    void allEnemiesMove();
-
-    private:
-    std::vector<Enemy*> enemyList;
-};
+#include "EnemyManager.h"
 
 EnemyManager::EnemyManager(){
 

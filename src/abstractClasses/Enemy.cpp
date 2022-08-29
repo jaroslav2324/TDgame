@@ -1,77 +1,9 @@
 #pragma once
 
-#include <string>
-
-#include <SDL2/SDL.h>
-
-#include "Timers.h"
-#include "./EnemiesWay.cpp"
-#include "./Base.cpp"
-#include "./approximateComparison.cpp"
-
-using std::string;
-
-
-/*Basic class for all enemies*/
-class Enemy{
-public:
-    Enemy(string& enemySpritePath);
-    ~Enemy();
-
-    void move();
-    
-    void applyDamage(float damage);
-    bool isDead();
-
-    void freeze(float freezeMultiplyer, double time);
-    void unfreeze();
-
-    virtual void setMovementTimer() = 0;
-
-    bool isNearBase();
-    void damageBaseAndGetKilled();
-
-    //freezeTime in ms
-    void activateFreezeTimer(double freezeTime);
-    //TODO load sprite
-
-    float getCoordX();
-    float getCoordY();
-
-protected:
-    float hitPoints = 0;
-    float maxHitPoints = 0;
-    float currentSpeed = 0;
-    float maxSpeed = 0;
-
-    int damageToBase = 0;
-
-    bool isFreezed = false;
-
-    int numCurrentWaypoint = 0;
-    std::pair<float, float> currentCoords;
-    std::pair<float, float> coordsCurrentWaypoint;
-    std::pair<float, float> coordsNextWaypoint;
-
-    PeriodicTimer* movementTimer = nullptr;
-    CountdownTimer* freezeTimer = nullptr;
-
-    EnemiesWay* way = nullptr;
-    Base* base = nullptr;
-
-/*baseSpeed multiplyes by timePeriodOfMoving in seconds*/
-    void MoveToNextWaypoint(double timePeriodOfMoving);
-
-    bool ifWaypointPassed();
-    void replaceToNextWaypointCoords();
-
-    void copyCoords(std::pair<float, float>& destination, std::pair<float, float>& source);
-    
-    SDL_Texture* enemySprite = nullptr;
-};
+#include "Enemy.h"
 
 Enemy::Enemy(std::string& spritePath){
-
+    //TODO implement constructor;
 }
 
 Enemy::~Enemy(){

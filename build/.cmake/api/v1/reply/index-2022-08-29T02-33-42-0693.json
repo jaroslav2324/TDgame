@@ -8,34 +8,34 @@
 		},
 		"paths" : 
 		{
-			"cmake" : "/usr/bin/cmake",
-			"cpack" : "/usr/bin/cpack",
-			"ctest" : "/usr/bin/ctest",
-			"root" : "/usr/share/cmake-3.22"
+			"cmake" : "/home/linuxbrew/.linuxbrew/Cellar/cmake/3.24.1/bin/cmake",
+			"cpack" : "/home/linuxbrew/.linuxbrew/Cellar/cmake/3.24.1/bin/cpack",
+			"ctest" : "/home/linuxbrew/.linuxbrew/Cellar/cmake/3.24.1/bin/ctest",
+			"root" : "/home/linuxbrew/.linuxbrew/Cellar/cmake/3.24.1/share/cmake"
 		},
 		"version" : 
 		{
 			"isDirty" : false,
 			"major" : 3,
-			"minor" : 22,
+			"minor" : 24,
 			"patch" : 1,
-			"string" : "3.22.1",
+			"string" : "3.24.1",
 			"suffix" : ""
 		}
 	},
 	"objects" : 
 	[
 		{
-			"jsonFile" : "codemodel-v2-4c09dd3f43c17d0e0554.json",
+			"jsonFile" : "codemodel-v2-18a2ed764a48033c07c2.json",
 			"kind" : "codemodel",
 			"version" : 
 			{
 				"major" : 2,
-				"minor" : 3
+				"minor" : 4
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-1675a3471aac208f63e5.json",
+			"jsonFile" : "cache-v2-da122d75a2fe06db407c.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -77,7 +77,7 @@
 				"responses" : 
 				[
 					{
-						"jsonFile" : "cache-v2-1675a3471aac208f63e5.json",
+						"jsonFile" : "cache-v2-da122d75a2fe06db407c.json",
 						"kind" : "cache",
 						"version" : 
 						{
@@ -86,12 +86,12 @@
 						}
 					},
 					{
-						"jsonFile" : "codemodel-v2-4c09dd3f43c17d0e0554.json",
+						"jsonFile" : "codemodel-v2-18a2ed764a48033c07c2.json",
 						"kind" : "codemodel",
 						"version" : 
 						{
 							"major" : 2,
-							"minor" : 3
+							"minor" : 4
 						}
 					},
 					{

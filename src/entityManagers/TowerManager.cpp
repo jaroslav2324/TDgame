@@ -1,27 +1,4 @@
-#pragma once
-
-#include <vector>
-
-#include "TowerTypes.h"
-#include "abstractClasses/Tower.cpp"
-#include "towers/BasicTower.cpp"
-
-class TowerManager{
-    public:
-    TowerManager(EnemyManager* enemyManager);
-
-    void buildTower(int towerType);
-    void addBuiltTower(Tower*);
-    void destroyTower(Tower*);
-
-    void findAndDeleteDestroyedTowers();
-
-    void allTowersAttack();
-
-    private:
-    std::vector<Tower*> towerList;
-    EnemyManager* enemyManager = nullptr;
-};
+#include "TowerManager.h"
 
 TowerManager::TowerManager(EnemyManager* enemyManager){
     TowerManager::enemyManager = enemyManager;
