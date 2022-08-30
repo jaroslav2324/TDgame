@@ -4,7 +4,8 @@
 #include "settings.h"
 #include "GridTile.h"
 
-/*grid class for render tiles*/
+/*grid class for render tiles
+ONLY FOR RENDERING TILES*/
 class Grid{
     public:
     Grid();

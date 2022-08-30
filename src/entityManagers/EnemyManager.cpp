@@ -17,11 +17,20 @@ EnemyManager::~EnemyManager(){
 void EnemyManager::spawnEnemy(int enemyType){
     //TODO add types of enemies
     Enemy* enemy = nullptr;
-    if (enemyType == BASIC_ENEMY)
-    //TODO change sprite path
-        enemy = new class BasicEnemy("");
 
-    enemyList.push_back(enemy);
+    switch (enemyType){
+
+    case BASIC_ENEMY:
+        //TODO change sprite path
+        enemy = new class BasicEnemy("");
+        break;
+
+    default:
+        cout << "No such enemy type!(spawn enemy in EnemyManager)" << endl;
+    }
+
+    if (enemy != nullptr)
+        enemyList.push_back(enemy);
 }
 
 void EnemyManager::addSpawnedEnemy(Enemy* enemy){
