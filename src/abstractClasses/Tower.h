@@ -17,17 +17,11 @@ using std::string;
 class Tower{
 public:
     Tower(EnemyManager* enemyManager);
+    //TODO end constructor
     Tower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level);
 
-    virtual void setAttackTimer() = 0;
-
-    //TODO change exp in derived classes
-    void setExpForDamage(float exp);
-    void setExpForKill(float exp);
-    
     float getDamage();
     float getRadius();
-    //int getLevel();
 
     void attack();
 
@@ -54,12 +48,9 @@ protected:
     //in milliseconds
     float attackSpeed = 0;
     
-    //TODO set coords
     std::pair<float, float> towerCoords;
 
-    //TODO grid coords getters and setters
-    int gridCoordX = 0;
-    int gridCoordY = 0;
+    std::pair<int, int> gridCoords;
 
     //TODO add UI to destroy tower
     bool destroyed = false;
@@ -75,6 +66,11 @@ protected:
 
     std::vector<Projectile*> projectileList;
 
+    virtual void setAttackTimer() = 0;
+
+    void setExpForDamage(float exp);
+    void setExpForKill(float exp);
+
     void findFirstEnemyInRadius();
     void findNearestEnemyInRadius();
 
@@ -84,4 +80,6 @@ protected:
     void setDamage(float damage);
     void setRadius(float radius);
     void setLevel(int level);
+    void setCoords(std::pair<float, float> coords);
+    void setGridCoords(std::pair<int, int> gridCoords);
 };

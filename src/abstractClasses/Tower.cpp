@@ -5,7 +5,7 @@ Tower::Tower(EnemyManager* enemyManager){
     Tower::enemyManager = enemyManager;
 
     float exp = 0;
-    for (int i = 0; i <= MAXLEVEL; i++){
+    for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
         listExpForLvls.push_back(exp);
         exp += 100;
     }
@@ -20,7 +20,7 @@ Tower::Tower(EnemyManager* enemyManager, float damage, float radius, float attac
     Tower::level = level;
 
     float exp = 0;
-    for (int i = 0; i <= MAXLEVEL; i++){
+    for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
         listExpForLvls.push_back(exp);
         exp += 100;
     }
@@ -52,6 +52,14 @@ void Tower::setExpForDamage(float exp){
 
 void Tower::setExpForKill(float exp){
     expForKill = exp;
+}
+
+void Tower::setCoords(std::pair<float, float> coords){
+    Tower::towerCoords = coords;
+}
+
+void Tower::setGridCoords(std::pair<int, int> gridCoords){
+    Tower::gridCoords = gridCoords;
 }
 
 void Tower::addExperience(float exp){
