@@ -5,6 +5,9 @@ EnemyManager::EnemyManager(){
 }
 
 EnemyManager::~EnemyManager(){
+    
+    if (enemyList.size() <= 0)
+        return;
 
     for (auto elm = enemyList.front(); elm != enemyList.back(); elm++)
         delete elm;

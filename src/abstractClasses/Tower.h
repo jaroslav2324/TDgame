@@ -71,8 +71,7 @@ protected:
 
     SDL_Texture* towerSprite = nullptr;
 
-    //FIXME [] for vector?
-    std::vector<float> listExpForLvls[MAXLEVEL + 1];
+    std::vector<float> listExpForLvls;
 
     std::vector<Projectile*> projectileList;
 

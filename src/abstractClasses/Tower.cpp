@@ -4,10 +4,10 @@ Tower::Tower(EnemyManager* enemyManager){
 
     Tower::enemyManager = enemyManager;
 
-    float e = 0;
-    for (auto expForLvl = listExpForLvls->front(); expForLvl != listExpForLvls->back(); expForLvl++){
-        expForLvl = e;
-        e += 100;
+    float exp = 0;
+    for (int i = 0; i <= MAXLEVEL; i++){
+        listExpForLvls.push_back(exp);
+        exp += 100;
     }
 }
 
@@ -19,10 +19,10 @@ Tower::Tower(EnemyManager* enemyManager, float damage, float radius, float attac
     Tower::attackSpeed = attackSpeed;
     Tower::level = level;
 
-    float e = 0;
-    for (auto expForLvl = listExpForLvls->front(); expForLvl != listExpForLvls->back(); expForLvl++){
-        expForLvl = e;
-        e += 100;
+    float exp = 0;
+    for (int i = 0; i <= MAXLEVEL; i++){
+        listExpForLvls.push_back(exp);
+        exp += 100;
     }
 }
 
@@ -56,6 +56,10 @@ void Tower::setExpForKill(float exp){
 
 void Tower::addExperience(float exp){
     experience += exp;
+}
+
+float Tower::getExpForNextLvl(int level){
+    return listExpForLvls[level];
 }
 
 void Tower::checkAndLevelUp(){
