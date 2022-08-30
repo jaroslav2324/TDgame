@@ -1,7 +1,8 @@
 #pragma once
 
-#include "Timers.h"
-#include "Enemy.h"
+#include "../Timers.h"
+#include "../abstractClasses/Enemy.h"
+
 
 class BasicEnemy: public Enemy{
     public:

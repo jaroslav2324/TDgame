@@ -3,8 +3,8 @@
 #include <vector>
 #include <string>
 
-#include "EnemyTypes.h"
-#include "BasicEnemy.h"
+#include "../EnemyTypes.h"
+#include "../enemies/BasicEnemy.h"
 
 using std::string;
 

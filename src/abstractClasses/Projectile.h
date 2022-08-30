@@ -2,7 +2,6 @@
 
 #include "utility"
 
-#include "Tower.h"
 #include "Enemy.h"
 
 /*basic class for all projectiles
@@ -30,7 +29,6 @@ class Projectile{
     double freezeTime = 0;
 
     Enemy* aimedEnemy;
-    Tower* moterTower;
     PeriodicTimer* movementTimer;
 
     std::pair<float, float> currentCoords;

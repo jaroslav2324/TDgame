@@ -3,23 +3,27 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
-#include "Projectile.h"
-#include "BasicTower.h"
-
-using std::cout;
-using std::endl;
+#include "Timers.h"
+#include "abstractClasses/Enemy.h"
 
 //TODO implement main logic
 int main(int argc, char **argv)
 {
-	cout << "Hello world!" << endl;
+	std::cout << "main" << std::endl;
+	/*
+	EnemyManager* testEnemyManager = new EnemyManager();
 
-	//Tower* testTower = new BasicTower();
+	Enemy* testEnemy = new BasicEnemy("");
 
-	//Projectile* testProjectile = new Projectile();
+	Tower* testTower = new BasicTower(testEnemyManager);
 
+	Projectile* testProjectile = new Projectile(testEnemy, std::make_pair(0, 0));
 
-	//delete testProjectile;
+	delete testEnemyManager;
+	delete testEnemy;
+	delete testTower;
+	delete testProjectile;
+	*/
 
 	return 0;
 }

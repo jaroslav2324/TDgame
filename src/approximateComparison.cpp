@@ -1,8 +1,4 @@
-#pragma once
-
-#include <math.h>
-
-#include "settings.h"
+#include "approximateComparison.h"
 
 bool ifPixelCoordsApprEqual(float x1, float y1, float x2, float y2){
 

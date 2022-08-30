@@ -2,8 +2,8 @@
 
 #include <vector>
 
-#include "TowerTypes.h"
-#include "BasicTower.h"
+#include "../TowerTypes.h"
+#include "../towers/BasicTower.h"
 
 class TowerManager{
     public:

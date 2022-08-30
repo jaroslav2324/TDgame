@@ -5,11 +5,11 @@
 
 #include <SDL2/SDL.h>
 
-#include "settings.h"
-#include "Timers.h"
+#include "../settings.h"
+#include "../Timers.h"
 #include "Enemy.h"
+#include "../entityManagers/EnemyManager.h"
 #include "Projectile.h"
-#include "./EnemyManager.h"
 
 using std::string;
 

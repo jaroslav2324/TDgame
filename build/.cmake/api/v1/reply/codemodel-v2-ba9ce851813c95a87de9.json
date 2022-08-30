@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "tower_defence",
+					"name" : "TowerDefence",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "tower_defence::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-tower_defence-Debug-4ca04484eb779245dada.json",
-					"name" : "tower_defence",
+					"id" : "TowerDefence::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TowerDefence-Debug-62b0b8290a838eb97897.json",
+					"name" : "TowerDefence",
 					"projectIndex" : 0
 				}
 			]

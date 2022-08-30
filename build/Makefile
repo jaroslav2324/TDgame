@@ -117,24 +117,144 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named tower_defence
+# Target rules for targets named TowerDefence
 
 # Build rule for target.
-tower_defence: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tower_defence
-.PHONY : tower_defence
+TowerDefence: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TowerDefence
+.PHONY : TowerDefence
 
 # fast build rule for target.
-tower_defence/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower_defence.dir/build.make CMakeFiles/tower_defence.dir/build
-.PHONY : tower_defence/fast
+TowerDefence/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/build
+.PHONY : TowerDefence/fast
+
+src/Base.o: src/Base.cpp.o
+.PHONY : src/Base.o
+
+# target to build an object file
+src/Base.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Base.cpp.o
+.PHONY : src/Base.cpp.o
+
+src/Base.i: src/Base.cpp.i
+.PHONY : src/Base.i
+
+# target to preprocess a source file
+src/Base.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Base.cpp.i
+.PHONY : src/Base.cpp.i
+
+src/Base.s: src/Base.cpp.s
+.PHONY : src/Base.s
+
+# target to generate assembly for a file
+src/Base.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Base.cpp.s
+.PHONY : src/Base.cpp.s
+
+src/EnemiesWay.o: src/EnemiesWay.cpp.o
+.PHONY : src/EnemiesWay.o
+
+# target to build an object file
+src/EnemiesWay.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.o
+.PHONY : src/EnemiesWay.cpp.o
+
+src/EnemiesWay.i: src/EnemiesWay.cpp.i
+.PHONY : src/EnemiesWay.i
+
+# target to preprocess a source file
+src/EnemiesWay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.i
+.PHONY : src/EnemiesWay.cpp.i
+
+src/EnemiesWay.s: src/EnemiesWay.cpp.s
+.PHONY : src/EnemiesWay.s
+
+# target to generate assembly for a file
+src/EnemiesWay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.s
+.PHONY : src/EnemiesWay.cpp.s
+
+src/Timers.o: src/Timers.cpp.o
+.PHONY : src/Timers.o
+
+# target to build an object file
+src/Timers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Timers.cpp.o
+.PHONY : src/Timers.cpp.o
+
+src/Timers.i: src/Timers.cpp.i
+.PHONY : src/Timers.i
+
+# target to preprocess a source file
+src/Timers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Timers.cpp.i
+.PHONY : src/Timers.cpp.i
+
+src/Timers.s: src/Timers.cpp.s
+.PHONY : src/Timers.s
+
+# target to generate assembly for a file
+src/Timers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Timers.cpp.s
+.PHONY : src/Timers.cpp.s
+
+src/abstractClasses/Enemy.o: src/abstractClasses/Enemy.cpp.o
+.PHONY : src/abstractClasses/Enemy.o
+
+# target to build an object file
+src/abstractClasses/Enemy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o
+.PHONY : src/abstractClasses/Enemy.cpp.o
+
+src/abstractClasses/Enemy.i: src/abstractClasses/Enemy.cpp.i
+.PHONY : src/abstractClasses/Enemy.i
+
+# target to preprocess a source file
+src/abstractClasses/Enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.i
+.PHONY : src/abstractClasses/Enemy.cpp.i
+
+src/abstractClasses/Enemy.s: src/abstractClasses/Enemy.cpp.s
+.PHONY : src/abstractClasses/Enemy.s
+
+# target to generate assembly for a file
+src/abstractClasses/Enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.s
+.PHONY : src/abstractClasses/Enemy.cpp.s
+
+src/approximateComparison.o: src/approximateComparison.cpp.o
+.PHONY : src/approximateComparison.o
+
+# target to build an object file
+src/approximateComparison.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o
+.PHONY : src/approximateComparison.cpp.o
+
+src/approximateComparison.i: src/approximateComparison.cpp.i
+.PHONY : src/approximateComparison.i
+
+# target to preprocess a source file
+src/approximateComparison.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.i
+.PHONY : src/approximateComparison.cpp.i
+
+src/approximateComparison.s: src/approximateComparison.cpp.s
+.PHONY : src/approximateComparison.s
+
+# target to generate assembly for a file
+src/approximateComparison.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.s
+.PHONY : src/approximateComparison.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower_defence.dir/build.make CMakeFiles/tower_defence.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -142,7 +262,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower_defence.dir/build.make CMakeFiles/tower_defence.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -150,7 +270,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower_defence.dir/build.make CMakeFiles/tower_defence.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -161,7 +281,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... tower_defence"
+	@echo "... TowerDefence"
+	@echo "... src/Base.o"
+	@echo "... src/Base.i"
+	@echo "... src/Base.s"
+	@echo "... src/EnemiesWay.o"
+	@echo "... src/EnemiesWay.i"
+	@echo "... src/EnemiesWay.s"
+	@echo "... src/Timers.o"
+	@echo "... src/Timers.i"
+	@echo "... src/Timers.s"
+	@echo "... src/abstractClasses/Enemy.o"
+	@echo "... src/abstractClasses/Enemy.i"
+	@echo "... src/abstractClasses/Enemy.s"
+	@echo "... src/approximateComparison.o"
+	@echo "... src/approximateComparison.i"
+	@echo "... src/approximateComparison.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

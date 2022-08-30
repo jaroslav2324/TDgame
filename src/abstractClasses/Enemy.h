@@ -4,10 +4,10 @@
 
 #include <SDL2/SDL.h>
 
-#include "Timers.h"
-#include "./EnemiesWay.cpp"
-#include "./Base.cpp"
-#include "./approximateComparison.cpp"
+#include "../Timers.h"
+#include "../EnemiesWay.h"
+#include "../Base.h"
+#include "../approximateComparison.h"
 
 using std::string;
 

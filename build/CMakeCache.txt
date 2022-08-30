@@ -147,7 +147,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=tower_defence
+CMAKE_PROJECT_NAME:STATIC=TowerDefence
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1.0
@@ -225,6 +225,15 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+//Value Computed by CMake
+TowerDefence_BINARY_DIR:STATIC=/home/jaros/gitProjects/c++/TDgame/build
+
+//Value Computed by CMake
+TowerDefence_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+TowerDefence_SOURCE_DIR:STATIC=/home/jaros/gitProjects/c++/TDgame
 
 //Value Computed by CMake
 tower_defence_BINARY_DIR:STATIC=/home/jaros/gitProjects/c++/TDgame/build

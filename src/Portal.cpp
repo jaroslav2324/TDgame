@@ -1,6 +1,2 @@
-#pragma once
+#include "Portal.h"
 
-
-class Portal{
-    //TODO load sprite
-};

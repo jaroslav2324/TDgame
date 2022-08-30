@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/jaros/gitProjects/c++/TDgame/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/tower_defence.dir/all
+all: CMakeFiles/TowerDefence.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/tower_defence.dir/clean
+clean: CMakeFiles/TowerDefence.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/tower_defence.dir
+# Target rules for target CMakeFiles/TowerDefence.dir
 
 # All Build rule for target.
-CMakeFiles/tower_defence.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower_defence.dir/build.make CMakeFiles/tower_defence.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower_defence.dir/build.make CMakeFiles/tower_defence.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=1,2 "Built target tower_defence"
-.PHONY : CMakeFiles/tower_defence.dir/all
+CMakeFiles/TowerDefence.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target TowerDefence"
+.PHONY : CMakeFiles/TowerDefence.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/tower_defence.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tower_defence.dir/all
+CMakeFiles/TowerDefence.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TowerDefence.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles 0
-.PHONY : CMakeFiles/tower_defence.dir/rule
+.PHONY : CMakeFiles/TowerDefence.dir/rule
 
 # Convenience name for target.
-tower_defence: CMakeFiles/tower_defence.dir/rule
-.PHONY : tower_defence
+TowerDefence: CMakeFiles/TowerDefence.dir/rule
+.PHONY : TowerDefence
 
 # clean rule for target.
-CMakeFiles/tower_defence.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower_defence.dir/build.make CMakeFiles/tower_defence.dir/clean
-.PHONY : CMakeFiles/tower_defence.dir/clean
+CMakeFiles/TowerDefence.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/clean
+.PHONY : CMakeFiles/TowerDefence.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

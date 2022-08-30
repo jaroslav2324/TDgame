@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Projectile.h"
+#include "../abstractClasses/Projectile.h"
 
 class BasicProjectile: public Projectile{
     //TODO set sprite
