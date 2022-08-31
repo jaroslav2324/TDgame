@@ -1,7 +1,14 @@
 #pragma once
 
+#include "SDL2/SDL.h"
 
 class Portal{
-    //TODO load sprite
-    //TODO spawn coords in constructor
+    public:
+    Portal(std::pair<float, float> spawnCoords);
+    ~Portal();
+    void render();
+
+    private:
+    std::pair<float, float> coords;
+    SDL_Texture* portalSprite = nullptr;
 };

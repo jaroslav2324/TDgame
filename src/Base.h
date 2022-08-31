@@ -1,9 +1,13 @@
 #pragma once
 
+#include <utility>
+
+#include "SDL2/SDL.h"
+
 class Base{
     public:
-    //TODO spawnCoords in constructor
     //TODO add interaction with end game interfase
+    //TODO end game
     Base(std::pair<float, float> spawnCoords);
 
     int getHitPoits();
@@ -11,10 +15,11 @@ class Base{
     bool noHitPoitsLeft();
 
     void applyDamage(int damage);
-    //TODO end game
-
-    //TODO loadSprite
 
     private:
     int hitPoints;
+
+    std::pair<float, float> coords;
+
+    SDL_Texture* baseSprite = nullptr;
 };

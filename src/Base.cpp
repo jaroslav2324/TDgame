@@ -1,7 +1,8 @@
 #include "Base.h"
 
-Base::Base(){
-
+Base::Base(std::pair<float, float> spawnCoords){
+    coords = spawnCoords;
+    //TODO load sprite
 }
 
 int Base::getHitPoits(){

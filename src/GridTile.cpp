@@ -1,11 +1,11 @@
 #include "GridTile.h"
 
 GridTile::GridTile(){
-    //TODO created with no sprite
+    //TODO load basic sprite
 }
 
 GridTile::GridTile(std::string& spritePath){
-    //TODO load sprite
+    //TODO load sprite with sprite path
 }
 
 GridTile::~GridTile(){
@@ -15,4 +15,3 @@ GridTile::~GridTile(){
 void GridTile::renderTile(){
     //TODO render
 }
-
