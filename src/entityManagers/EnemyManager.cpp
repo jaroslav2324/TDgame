@@ -1,14 +1,16 @@
 #include "EnemyManager.h"
 
-EnemyManager::EnemyManager(){
+EnemyManager::EnemyManager(Base* base, EnemiesWay* enemiesWay){
 
+    EnemyManager::base = base;
+
+    EnemyManager::enemiesWay = enemiesWay;
 }
 
 EnemyManager::~EnemyManager(){
     
     if (enemyList.size() <= 0)
         return;
-
     for (auto elm = enemyList.front(); elm != enemyList.back(); elm++)
         delete elm;
 }
@@ -21,8 +23,7 @@ void EnemyManager::spawnEnemy(int enemyType){
     switch (enemyType){
 
     case BASIC_ENEMY:
-        //TODO change sprite path
-        enemy = new class BasicEnemy("");
+        enemy = new class BasicEnemy(BASIC_ENEMY_SPRITE_PATH, enemiesWay, base);
         break;
 
     default:

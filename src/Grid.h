@@ -8,6 +8,7 @@
 ONLY FOR RENDERING TILES*/
 class Grid{
     public:
+    //TODO include EnemiesWay
     Grid();
     ~Grid();
     void renderGrid();

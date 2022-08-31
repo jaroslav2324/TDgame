@@ -2,10 +2,18 @@
 
 Game::Game(){
 
-    enemyManager = new EnemyManager();
+    enemiesWay = new EnemiesWay();
+
+    auto baseCoords = enemiesWay->getFirstCoords();
+    base = new Base(baseCoords);
+
+    enemyManager = new EnemyManager(base, enemiesWay);
     towerManager = new TowerManager(enemyManager);
 
     fpsTimer = new PeriodicTimer(1 / FPS);
+
+    grid = new Grid();
+
 }
 
 Game::~Game(){
@@ -14,6 +22,12 @@ Game::~Game(){
     delete enemyManager;
 
     delete fpsTimer;
+
+    delete grid;
+
+    delete base;
+
+    delete enemiesWay;
 }
 
 void Game::renderAll(){
@@ -32,4 +46,17 @@ void Game::renderAll(){
 void Game::loop(){
 
     //TODO game loop
+    if (fpsTimer->tickIfNeeded()){
+
+        towerManager->allTowersAttack();
+
+        enemyManager->allEnemiesMove();
+
+        //spawn enemies if needed 
+
+        //if base destroyed
+        if(base->noHitPoitsLeft()){
+            //TODO end game
+        }
+    }
 }

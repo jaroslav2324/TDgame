@@ -11,3 +11,8 @@
 
 /*used in comparison of coordinates*/
 #define EPSILON_COORDS 1
+
+//TODO change sprite paths
+#define BASIC_ENEMY_SPRITE_PATH ""
+
+#define BASIC_TOWER_SPRITE_PATH ""

@@ -15,7 +15,7 @@ using std::string;
 class Enemy{
     
 public:
-    Enemy(string& enemySpritePath);
+    Enemy(string& enemySpritePath, EnemiesWay* way, Base* base);
     ~Enemy();
 
     void move();
@@ -53,7 +53,10 @@ protected:
     std::pair<float, float> coordsCurrentWaypoint;
     std::pair<float, float> coordsNextWaypoint;
 
+    //TODO implement Timer
+    //TODO add system changing timer
     PeriodicTimer* movementTimer = nullptr;
+    
     CountdownTimer* freezeTimer = nullptr;
 
     EnemiesWay* way = nullptr;

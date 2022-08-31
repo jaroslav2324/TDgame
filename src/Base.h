@@ -2,7 +2,9 @@
 
 class Base{
     public:
-    Base();
+    //TODO spawnCoords in constructor
+    //TODO add interaction with end game interfase
+    Base(std::pair<float, float> spawnCoords);
 
     int getHitPoits();
     void setHitPoints(int hitPoints);

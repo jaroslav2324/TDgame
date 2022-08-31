@@ -10,7 +10,7 @@ using std::string;
 
 class EnemyManager{
     public:
-    EnemyManager();
+    EnemyManager(Base* base, EnemiesWay* enemiesWay);
     ~EnemyManager();
 
     Enemy* findFirstEnemyForTower(std::pair<float, float> towerCoords, float radius);
@@ -26,4 +26,12 @@ class EnemyManager{
 
     private:
     std::vector<Enemy*> enemyList;
+
+    //TODO initialise portal
+    Portal* portal = nullptr;
+    Base* base = nullptr;
+
+    EnemiesWay* enemiesWay = nullptr;
+
+    //TODO create class spawner
 };

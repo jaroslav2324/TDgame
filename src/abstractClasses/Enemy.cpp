@@ -2,8 +2,12 @@
 
 #include "Enemy.h"
 
-Enemy::Enemy(std::string& spritePath){
+Enemy::Enemy(std::string& spritePath, EnemiesWay* way, Base* base){
     //TODO implement constructor;
+    //TODO add timers
+
+    Enemy::way = way;
+    Enemy::base = base;
 }
 
 Enemy::~Enemy(){
