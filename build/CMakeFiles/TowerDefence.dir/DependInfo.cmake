@@ -23,6 +23,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/CMakeFiles/SDL2main.dir/DependInfo.cmake"
+  "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/CMakeFiles/SDL2-static.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

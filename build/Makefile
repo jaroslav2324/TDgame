@@ -129,6 +129,71 @@ TowerDefence/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/build
 .PHONY : TowerDefence/fast
 
+#=============================================================================
+# Target rules for targets named sdl_headers_copy
+
+# Build rule for target.
+sdl_headers_copy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl_headers_copy
+.PHONY : sdl_headers_copy
+
+# fast build rule for target.
+sdl_headers_copy/fast:
+	$(MAKE) $(MAKESILENT) -f libs/SDL/CMakeFiles/sdl_headers_copy.dir/build.make libs/SDL/CMakeFiles/sdl_headers_copy.dir/build
+.PHONY : sdl_headers_copy/fast
+
+#=============================================================================
+# Target rules for targets named SDL2main
+
+# Build rule for target.
+SDL2main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDL2main
+.PHONY : SDL2main
+
+# fast build rule for target.
+SDL2main/fast:
+	$(MAKE) $(MAKESILENT) -f libs/SDL/CMakeFiles/SDL2main.dir/build.make libs/SDL/CMakeFiles/SDL2main.dir/build
+.PHONY : SDL2main/fast
+
+#=============================================================================
+# Target rules for targets named SDL2-static
+
+# Build rule for target.
+SDL2-static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDL2-static
+.PHONY : SDL2-static
+
+# fast build rule for target.
+SDL2-static/fast:
+	$(MAKE) $(MAKESILENT) -f libs/SDL/CMakeFiles/SDL2-static.dir/build.make libs/SDL/CMakeFiles/SDL2-static.dir/build
+.PHONY : SDL2-static/fast
+
+#=============================================================================
+# Target rules for targets named SDL2_test
+
+# Build rule for target.
+SDL2_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDL2_test
+.PHONY : SDL2_test
+
+# fast build rule for target.
+SDL2_test/fast:
+	$(MAKE) $(MAKESILENT) -f libs/SDL/CMakeFiles/SDL2_test.dir/build.make libs/SDL/CMakeFiles/SDL2_test.dir/build
+.PHONY : SDL2_test/fast
+
+#=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f libs/SDL/CMakeFiles/uninstall.dir/build.make libs/SDL/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
 src/Base.o: src/Base.cpp.o
 .PHONY : src/Base.o
 
@@ -401,6 +466,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... sdl_headers_copy"
+	@echo "... uninstall"
+	@echo "... SDL2-static"
+	@echo "... SDL2_test"
+	@echo "... SDL2main"
 	@echo "... TowerDefence"
 	@echo "... src/Base.o"
 	@echo "... src/Base.i"

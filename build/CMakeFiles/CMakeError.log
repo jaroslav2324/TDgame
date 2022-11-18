@@ -1,0 +1,1057 @@
+Performing C SOURCE FILE Test HAVE_GCC_PREFERRED_STACK_BOUNDARY failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cd438/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cd438.dir/build.make CMakeFiles/cmTC_cd438.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cd438.dir/src.c.o
+/usr/bin/gcc -DHAVE_GCC_PREFERRED_STACK_BOUNDARY  -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos" -mpreferred-stack-boundary=2 -o CMakeFiles/cmTC_cd438.dir/src.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/src.c
+cc1: error: ‘-mpreferred-stack-boundary=2’ is not between 3 and 12
+gmake[1]: *** [CMakeFiles/cmTC_cd438.dir/build.make:78: CMakeFiles/cmTC_cd438.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_cd438/fast] Error 2
+
+
+Source file was:
+int x = 0; int main(int argc, char **argv) { return 0; }
+Performing C SOURCE FILE Test HAVE_ALTIVEC_H_HDR failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3038e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3038e.dir/build.make CMakeFiles/cmTC_3038e.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3038e.dir/src.c.o
+/usr/bin/gcc -DHAVE_ALTIVEC_H_HDR  -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos" -maltivec -o CMakeFiles/cmTC_3038e.dir/src.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/src.c
+gcc: error: unrecognized command-line option ‘-maltivec’
+gmake[1]: *** [CMakeFiles/cmTC_3038e.dir/build.make:78: CMakeFiles/cmTC_3038e.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_3038e/fast] Error 2
+
+
+Source file was:
+
+          #include <altivec.h>
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { return 0; }
+Performing C SOURCE FILE Test HAVE_ALTIVEC failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0938f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0938f.dir/build.make CMakeFiles/cmTC_0938f.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0938f.dir/src.c.o
+/usr/bin/gcc -DHAVE_ALTIVEC  -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos" -maltivec -o CMakeFiles/cmTC_0938f.dir/src.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/src.c
+gcc: error: unrecognized command-line option ‘-maltivec’
+gmake[1]: *** [CMakeFiles/cmTC_0938f.dir/build.make:78: CMakeFiles/cmTC_0938f.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_0938f/fast] Error 2
+
+
+Source file was:
+
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { return 0; }
+Determining if the include file libunwind.h exists failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d8b4f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d8b4f.dir/build.make CMakeFiles/cmTC_d8b4f.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d8b4f.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_d8b4f.dir/CheckIncludeFile.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: libunwind.h: No such file or directory
+    1 | #include <libunwind.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_d8b4f.dir/build.make:78: CMakeFiles/cmTC_d8b4f.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_d8b4f/fast] Error 2
+
+
+
+Determining if the strlcpy exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e2153/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e2153.dir/build.make CMakeFiles/cmTC_e2153.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e2153.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_e2153.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘strlcpy’ undeclared (first use in this function); did you mean ‘strncpy’?
+   14 |   return ((int*)(&strlcpy))[argc];
+      |                   ^~~~~~~
+      |                   strncpy
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_e2153.dir/build.make:78: CMakeFiles/cmTC_e2153.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e2153/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlcpy
+  return ((int*)(&strlcpy))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strlcat exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_75938/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_75938.dir/build.make CMakeFiles/cmTC_75938.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_75938.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_75938.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘strlcat’ undeclared (first use in this function); did you mean ‘strncat’?
+   14 |   return ((int*)(&strlcat))[argc];
+      |                   ^~~~~~~
+      |                   strncat
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_75938.dir/build.make:78: CMakeFiles/cmTC_75938.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_75938/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlcat
+  return ((int*)(&strlcat))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strrev exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_36a55/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_36a55.dir/build.make CMakeFiles/cmTC_36a55.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_36a55.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_36a55.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_strrev’ undeclared (first use in this function)
+   14 |   return ((int*)(&_strrev))[argc];
+      |                   ^~~~~~~
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_36a55.dir/build.make:78: CMakeFiles/cmTC_36a55.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_36a55/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strrev
+  return ((int*)(&_strrev))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strupr exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_29a0e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_29a0e.dir/build.make CMakeFiles/cmTC_29a0e.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_29a0e.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_29a0e.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_strupr’ undeclared (first use in this function)
+   14 |   return ((int*)(&_strupr))[argc];
+      |                   ^~~~~~~
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_29a0e.dir/build.make:78: CMakeFiles/cmTC_29a0e.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_29a0e/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strupr
+  return ((int*)(&_strupr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strlwr exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4282f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4282f.dir/build.make CMakeFiles/cmTC_4282f.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4282f.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_4282f.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_strlwr’ undeclared (first use in this function)
+   14 |   return ((int*)(&_strlwr))[argc];
+      |                   ^~~~~~~
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_4282f.dir/build.make:78: CMakeFiles/cmTC_4282f.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_4282f/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strlwr
+  return ((int*)(&_strlwr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the itoa exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9b3d5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9b3d5.dir/build.make CMakeFiles/cmTC_9b3d5.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9b3d5.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_9b3d5.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘itoa’ undeclared (first use in this function)
+   14 |   return ((int*)(&itoa))[argc];
+      |                   ^~~~
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_9b3d5.dir/build.make:78: CMakeFiles/cmTC_9b3d5.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_9b3d5/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef itoa
+  return ((int*)(&itoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ltoa exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_421e5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_421e5.dir/build.make CMakeFiles/cmTC_421e5.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_421e5.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_421e5.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_ltoa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_ltoa))[argc];
+      |                   ^~~~~
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_421e5.dir/build.make:78: CMakeFiles/cmTC_421e5.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_421e5/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ltoa
+  return ((int*)(&_ltoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _uitoa exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f26d7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f26d7.dir/build.make CMakeFiles/cmTC_f26d7.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f26d7.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_f26d7.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_uitoa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_uitoa))[argc];
+      |                   ^~~~~~
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_f26d7.dir/build.make:78: CMakeFiles/cmTC_f26d7.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f26d7/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _uitoa
+  return ((int*)(&_uitoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ultoa exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_492af/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_492af.dir/build.make CMakeFiles/cmTC_492af.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_492af.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_492af.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_ultoa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_ultoa))[argc];
+      |                   ^~~~~~
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_492af.dir/build.make:78: CMakeFiles/cmTC_492af.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_492af/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ultoa
+  return ((int*)(&_ultoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _i64toa exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b6794/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b6794.dir/build.make CMakeFiles/cmTC_b6794.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b6794.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_b6794.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_i64toa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_i64toa))[argc];
+      |                   ^~~~~~~
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_b6794.dir/build.make:78: CMakeFiles/cmTC_b6794.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_b6794/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _i64toa
+  return ((int*)(&_i64toa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ui64toa exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_21b7f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_21b7f.dir/build.make CMakeFiles/cmTC_21b7f.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_21b7f.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_21b7f.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_ui64toa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_ui64toa))[argc];
+      |                   ^~~~~~~~
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_21b7f.dir/build.make:78: CMakeFiles/cmTC_21b7f.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_21b7f/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ui64toa
+  return ((int*)(&_ui64toa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _stricmp exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_292db/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_292db.dir/build.make CMakeFiles/cmTC_292db.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_292db.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_292db.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_stricmp’ undeclared (first use in this function); did you mean ‘strncmp’?
+   14 |   return ((int*)(&_stricmp))[argc];
+      |                   ^~~~~~~~
+      |                   strncmp
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_292db.dir/build.make:78: CMakeFiles/cmTC_292db.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_292db/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _stricmp
+  return ((int*)(&_stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strnicmp exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_01961/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_01961.dir/build.make CMakeFiles/cmTC_01961.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_01961.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_01961.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_strnicmp’ undeclared (first use in this function); did you mean ‘strncmp’?
+   14 |   return ((int*)(&_strnicmp))[argc];
+      |                   ^~~~~~~~~
+      |                   strncmp
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_01961.dir/build.make:78: CMakeFiles/cmTC_01961.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_01961/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strnicmp
+  return ((int*)(&_strnicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _wcsdup exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f2459/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f2459.dir/build.make CMakeFiles/cmTC_f2459.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f2459.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_f2459.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_wcsdup’ undeclared (first use in this function); did you mean ‘wcsdup’?
+   14 |   return ((int*)(&_wcsdup))[argc];
+      |                   ^~~~~~~
+      |                   wcsdup
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_f2459.dir/build.make:78: CMakeFiles/cmTC_f2459.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f2459/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _wcsdup
+  return ((int*)(&_wcsdup))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcslcat exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_aeb3b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_aeb3b.dir/build.make CMakeFiles/cmTC_aeb3b.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aeb3b.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_aeb3b.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘wcslcat’ undeclared (first use in this function); did you mean ‘wcsncat’?
+   14 |   return ((int*)(&wcslcat))[argc];
+      |                   ^~~~~~~
+      |                   wcsncat
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_aeb3b.dir/build.make:78: CMakeFiles/cmTC_aeb3b.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_aeb3b/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcslcat
+  return ((int*)(&wcslcat))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcslcpy exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5ff62/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5ff62.dir/build.make CMakeFiles/cmTC_5ff62.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5ff62.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_5ff62.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘wcslcpy’ undeclared (first use in this function); did you mean ‘wcsncpy’?
+   14 |   return ((int*)(&wcslcpy))[argc];
+      |                   ^~~~~~~
+      |                   wcsncpy
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_5ff62.dir/build.make:78: CMakeFiles/cmTC_5ff62.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5ff62/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcslcpy
+  return ((int*)(&wcslcpy))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _wcsicmp exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1c49e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1c49e.dir/build.make CMakeFiles/cmTC_1c49e.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1c49e.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_1c49e.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_wcsicmp’ undeclared (first use in this function); did you mean ‘wcsncmp’?
+   14 |   return ((int*)(&_wcsicmp))[argc];
+      |                   ^~~~~~~~
+      |                   wcsncmp
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_1c49e.dir/build.make:78: CMakeFiles/cmTC_1c49e.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_1c49e/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _wcsicmp
+  return ((int*)(&_wcsicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _wcsnicmp exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7976f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7976f.dir/build.make CMakeFiles/cmTC_7976f.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7976f.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_7976f.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_wcsnicmp’ undeclared (first use in this function); did you mean ‘wcsncmp’?
+   14 |   return ((int*)(&_wcsnicmp))[argc];
+      |                   ^~~~~~~~~
+      |                   wcsncmp
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_7976f.dir/build.make:78: CMakeFiles/cmTC_7976f.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7976f/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _wcsnicmp
+  return ((int*)(&_wcsnicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the fopen64 exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b88cb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b88cb.dir/build.make CMakeFiles/cmTC_b88cb.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b88cb.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_b88cb.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘fopen64’ undeclared (first use in this function); did you mean ‘fopen’?
+   14 |   return ((int*)(&fopen64))[argc];
+      |                   ^~~~~~~
+      |                   fopen
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_b88cb.dir/build.make:78: CMakeFiles/cmTC_b88cb.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_b88cb/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fopen64
+  return ((int*)(&fopen64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the fseeko64 exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_39398/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_39398.dir/build.make CMakeFiles/cmTC_39398.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_39398.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_39398.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘fseeko64’ undeclared (first use in this function); did you mean ‘fseeko’?
+   14 |   return ((int*)(&fseeko64))[argc];
+      |                   ^~~~~~~~
+      |                   fseeko
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_39398.dir/build.make:78: CMakeFiles/cmTC_39398.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_39398/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fseeko64
+  return ((int*)(&fseeko64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the sysctlbyname exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_00f25/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_00f25.dir/build.make CMakeFiles/cmTC_00f25.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_00f25.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_00f25.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:3:10: fatal error: sys/sysctl.h: No such file or directory
+    3 | #include <sys/sysctl.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_00f25.dir/build.make:78: CMakeFiles/cmTC_00f25.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_00f25/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+#include <sys/sysctl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sysctlbyname
+  return ((int*)(&sysctlbyname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the elf_aux_info exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f9c15/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f9c15.dir/build.make CMakeFiles/cmTC_f9c15.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f9c15.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_f9c15.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘elf_aux_info’ undeclared (first use in this function)
+    8 |   return ((int*)(&elf_aux_info))[argc];
+      |                   ^~~~~~~~~~~~
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_f9c15.dir/build.make:78: CMakeFiles/cmTC_f9c15.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f9c15/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/auxv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef elf_aux_info
+  return ((int*)(&elf_aux_info))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function iconv_open exists in the iconv failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_27c10/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_27c10.dir/build.make CMakeFiles/cmTC_27c10.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_27c10.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open -o CMakeFiles/cmTC_27c10.dir/CheckFunctionExists.c.o -c /home/linuxbrew/.linuxbrew/Cellar/cmake/3.24.1/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_27c10
+/home/linuxbrew/.linuxbrew/Cellar/cmake/3.24.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27c10.dir/link.txt --verbose=1
+/usr/bin/gcc  -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open -rdynamic CMakeFiles/cmTC_27c10.dir/CheckFunctionExists.c.o -o cmTC_27c10  -liconv 
+/home/linuxbrew/.linuxbrew/bin/ld: cannot find -liconv: No such file or directory
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_27c10.dir/build.make:99: cmTC_27c10] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_27c10/fast] Error 2
+
+
+
+Determining if the alloca exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_94b8a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_94b8a.dir/build.make CMakeFiles/cmTC_94b8a.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_94b8a.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_94b8a.dir/CheckSymbolExists.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘alloca’ undeclared (first use in this function); did you mean ‘valloc’?
+    8 |   return ((int*)(&alloca))[argc];
+      |                   ^~~~~~
+      |                   valloc
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_94b8a.dir/build.make:78: CMakeFiles/cmTC_94b8a.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_94b8a/fast] Error 2
+
+
+File /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef alloca
+  return ((int*)(&alloca))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file audio/audiolib.h exists failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_90574/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_90574.dir/build.make CMakeFiles/cmTC_90574.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_90574.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_90574.dir/CheckIncludeFile.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: audio/audiolib.h: No such file or directory
+    1 | #include <audio/audiolib.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_90574.dir/build.make:78: CMakeFiles/cmTC_90574.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_90574/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_RPI failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5ca92/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5ca92.dir/build.make CMakeFiles/cmTC_5ca92.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5ca92.dir/src.c.o
+/usr/bin/gcc -DHAVE_RPI  -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"   -I/opt/vc/include -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux/  -L/opt/vc/lib -o CMakeFiles/cmTC_5ca92.dir/src.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/src.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/src.c:2:18: fatal error: bcm_host.h: No such file or directory
+    2 |         #include <bcm_host.h>
+      |                  ^~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_5ca92.dir/build.make:78: CMakeFiles/cmTC_5ca92.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5ca92/fast] Error 2
+
+
+Source file was:
+
+        #include <bcm_host.h>
+        #include <EGL/eglplatform.h>
+        int main(int argc, char **argv) {
+          EGL_DISPMANX_WINDOW_T window;
+          bcm_host_init();
+        }
+Performing C SOURCE FILE Test HAVE_VIVANTE_VDK failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_97b03/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_97b03.dir/build.make CMakeFiles/cmTC_97b03.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_97b03.dir/src.c.o
+/usr/bin/gcc -DHAVE_VIVANTE_VDK  -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_97b03.dir/src.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/src.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/src.c:2:18: fatal error: gc_vdk.h: No such file or directory
+    2 |         #include <gc_vdk.h>
+      |                  ^~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_97b03.dir/build.make:78: CMakeFiles/cmTC_97b03.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_97b03/fast] Error 2
+
+
+Source file was:
+
+        #include <gc_vdk.h>
+        int main(int argc, char** argv) { return 0; }
+Performing C SOURCE FILE Test HAVE_VIVANTE_EGL_FB failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7e740/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7e740.dir/build.make CMakeFiles/cmTC_7e740.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7e740.dir/src.c.o
+/usr/bin/gcc -DHAVE_VIVANTE_EGL_FB  -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -o CMakeFiles/cmTC_7e740.dir/src.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/src.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/src.c:4:18: fatal error: EGL/eglvivante.h: No such file or directory
+    4 |         #include <EGL/eglvivante.h>
+      |                  ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_7e740.dir/build.make:78: CMakeFiles/cmTC_7e740.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7e740/fast] Error 2
+
+
+Source file was:
+
+        #define LINUX
+        #define EGL_API_FB
+        #include <EGL/eglvivante.h>
+        int main(int argc, char** argv) { return 0; }
+Determining if files pthread_np.h exist failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_25b1d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_25b1d.dir/build.make CMakeFiles/cmTC_25b1d.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_25b1d.dir/HAVE_PTHREAD_NP_H.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos"  -D_REENTRANT -pthread -o CMakeFiles/cmTC_25b1d.dir/HAVE_PTHREAD_NP_H.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c:2:10: fatal error: pthread_np.h: No such file or directory
+    2 | #include <pthread_np.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_25b1d.dir/build.make:78: CMakeFiles/cmTC_25b1d.dir/HAVE_PTHREAD_NP_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_25b1d/fast] Error 2
+
+
+Source:
+/* */
+#include <pthread_np.h>
+
+
+int main(void){return 0;}
+
+Determining if the include file samplerate.h exists failed with the following output:
+Change Dir: /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4efb2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4efb2.dir/build.make CMakeFiles/cmTC_4efb2.dir/build
+gmake[1]: Entering directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4efb2.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -idirafter "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos" -DHAVE_LINUX_VERSION_H  -o CMakeFiles/cmTC_4efb2.dir/CheckIncludeFile.c.o -c /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: samplerate.h: No such file or directory
+    1 | #include <samplerate.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_4efb2.dir/build.make:78: CMakeFiles/cmTC_4efb2.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_4efb2/fast] Error 2
+
+
+

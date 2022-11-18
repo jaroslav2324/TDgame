@@ -15,7 +15,8 @@
 		],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"CMakeLists.txt",
+			"libs/SDL/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -25,20 +26,46 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 10,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 18,
+				"line" : 15,
 				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 3355,
+				"parent" : 3
 			}
 		]
 	},
 	"compileGroups" : 
 	[
 		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug"
+				}
+			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
@@ -56,28 +83,53 @@
 			]
 		}
 	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "SDL2main::@be180c1d6cb18b51fb7d"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "SDL2-static::@be180c1d6cb18b51fb7d"
+		}
+	],
 	"id" : "TowerDefence::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
 				"fragment" : "",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-lSDL2main",
+				"fragment" : "libs/SDL/libSDL2maind.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-lSDL2",
+				"fragment" : "libs/SDL/libSDL2d.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
-				"fragment" : "-lSDL2_image",
+				"backtrace" : 4,
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-pthread",
 				"role" : "libraries"
 			}
 		],

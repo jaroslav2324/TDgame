@@ -5,6 +5,7 @@
 
 #include "../EnemyTypes.h"
 #include "../enemies/BasicEnemy.h"
+#include "../Portal.h"
 
 using std::string;
 

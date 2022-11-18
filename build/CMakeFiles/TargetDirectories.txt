@@ -1,3 +1,10 @@
 /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/TowerDefence.dir
 /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/edit_cache.dir
 /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles/rebuild_cache.dir
+/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/CMakeFiles/sdl_headers_copy.dir
+/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/CMakeFiles/SDL2main.dir
+/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/CMakeFiles/SDL2-static.dir
+/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/CMakeFiles/SDL2_test.dir
+/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/CMakeFiles/uninstall.dir
+/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/CMakeFiles/edit_cache.dir
+/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/CMakeFiles/rebuild_cache.dir
