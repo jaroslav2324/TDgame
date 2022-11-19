@@ -26,6 +26,11 @@ Tower::Tower(EnemyManager* enemyManager, float damage, float radius, float attac
     }
 }
 
+Tower::~Tower(){
+    if (towerSprite != nullptr)
+        SDL_DestroyTexture(towerSprite);
+}
+
 float Tower::getDamage(){
     return damage;
 }
@@ -130,3 +135,21 @@ bool Tower::isDestroyed(){
         return true;
     return false;
 }
+
+void Tower::loadSprite(SDL_Renderer* renderer){
+
+    towerSprite = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);    
+}
+
+void Tower::render(SDL_Renderer* renderer){
+
+    //TODO move to constructor
+    if(towerSprite == nullptr)
+        loadSprite(renderer);
+
+    int x = towerCoords.first - TOWER_SPRITE_SIZE / 2;
+    int y = towerCoords.second - TOWER_SPRITE_SIZE / 2;
+    SDL_Rect towerRect = {x, y, TOWER_SPRITE_SIZE, TOWER_SPRITE_SIZE};
+    SDL_RenderCopy(renderer, towerSprite, 0, &towerRect);
+}
+    

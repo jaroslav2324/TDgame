@@ -17,6 +17,8 @@ class TowerManager{
 
     void allTowersAttack();
 
+    void renderAllTowers(SDL_Renderer* renderer);
+
     private:
     std::vector<Tower*> towerList;
     EnemyManager* enemyManager = nullptr;

@@ -42,3 +42,9 @@ void TowerManager::allTowersAttack(){
     for (auto tower: towerList)
         tower->attack();
 }
+
+void TowerManager::renderAllTowers(SDL_Renderer* renderer){
+    
+    for (auto towerPtr: towerList)
+        towerPtr->render(renderer);
+}

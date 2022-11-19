@@ -1782,11 +1782,8 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/Portal.h
- /usr/include/SDL2/SDL_image.h
- /usr/include/SDL2/SDL.h
- /usr/include/SDL2/SDL_version.h
- /usr/include/SDL2/begin_code.h
- /usr/include/SDL2/close_code.h
+ /usr/local/include/SDL2/SDL_image.h
+ /usr/local/include/SDL2/SDL.h
  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
 
 CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o
@@ -2631,11 +2628,8 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/Portal.h
- /usr/include/SDL2/SDL_image.h
- /usr/include/SDL2/SDL.h
- /usr/include/SDL2/SDL_version.h
- /usr/include/SDL2/begin_code.h
- /usr/include/SDL2/close_code.h
+ /usr/local/include/SDL2/SDL_image.h
+ /usr/local/include/SDL2/SDL.h
 
 CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/main.cpp
@@ -2983,11 +2977,8 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/local/include/SDL2/SDL_version.h
  /usr/local/include/SDL2/SDL_locale.h
  /usr/local/include/SDL2/SDL_misc.h
- /usr/include/SDL2/SDL_image.h
- /usr/include/SDL2/SDL.h
- /usr/include/SDL2/SDL_version.h
- /usr/include/SDL2/begin_code.h
- /usr/include/SDL2/close_code.h
+ /usr/local/include/SDL2/SDL_image.h
+ /usr/local/include/SDL2/SDL.h
  /home/jaros/gitProjects/c++/TDgame/src/Timers.h
  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h
  /home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.h
@@ -3398,10 +3389,7 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/Portal.h
- /usr/include/SDL2/SDL_image.h
- /usr/include/SDL2/SDL.h
- /usr/include/SDL2/SDL_version.h
- /usr/include/SDL2/begin_code.h
- /usr/include/SDL2/close_code.h
+ /usr/local/include/SDL2/SDL_image.h
+ /usr/local/include/SDL2/SDL.h
  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
 

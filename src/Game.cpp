@@ -40,7 +40,7 @@ void Game::renderAll(){
     //render enemies  
     //render projectiles
 
-    //render UI
+    //TODO render UI
 }
 
 void Game::loop(){

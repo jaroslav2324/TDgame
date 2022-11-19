@@ -19,6 +19,7 @@ public:
     Tower(EnemyManager* enemyManager);
     //TODO end constructor
     Tower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level);
+    ~Tower();
 
     float getDamage();
     float getRadius();
@@ -28,8 +29,9 @@ public:
     bool isDestroyed();
     void setDestroyed();
 
-    //TODO void loadSprite() = 0;
-    //TODO render
+    virtual void loadSprite(SDL_Renderer* renderer);
+    void render(SDL_Renderer* renderer);
+
     float getExpForNextLvl(int currentLevel);
 
 protected:

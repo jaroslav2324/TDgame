@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug
 
-CXX_FLAGS = -g
+CXX_FLAGS = -g -fPIE
 

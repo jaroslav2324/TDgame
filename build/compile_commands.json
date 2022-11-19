@@ -1,62 +1,62 @@
 [
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/main.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/main.cpp",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/main.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/main.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/main.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/Timers.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Timers.cpp",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/Timers.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Timers.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/Timers.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.cpp",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/Base.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Base.cpp",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/Base.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Base.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/Base.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.cpp",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/approximateComparison.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.cpp",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.cpp",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.cpp",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.cpp",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.cpp",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.cpp",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/main/dummy/SDL_dummy_main.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/main/dummy/SDL_dummy_main.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/main/dummy/SDL_dummy_main.c"
 },
 {
@@ -1206,82 +1206,82 @@
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_assert.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_assert.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_assert.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_assert.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_common.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_common.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_common.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_common.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_compare.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_compare.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_compare.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_compare.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_crc32.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_crc32.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_crc32.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_crc32.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_font.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_font.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_font.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_font.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_fuzzer.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_fuzzer.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_fuzzer.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_fuzzer.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_harness.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_harness.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_harness.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_harness.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imageBlit.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlit.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imageBlit.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imageBlit.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imageBlitBlend.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageBlitBlend.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imageBlitBlend.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imageBlitBlend.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imageFace.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imageFace.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imageFace.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imageFace.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imagePrimitives.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitives.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imagePrimitives.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imagePrimitives.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imagePrimitivesBlend.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_imagePrimitivesBlend.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imagePrimitivesBlend.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_imagePrimitivesBlend.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_log.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_log.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_log.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_log.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_md5.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_md5.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_md5.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_md5.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_memory.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_memory.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_memory.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_memory.c"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
-  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_random.c",
+  "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=25 -DSDL_BUILD_MICRO_VERSION=1 -g -fPIC -o CMakeFiles/SDL2_test.dir/src/test/SDL_test_random.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_random.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/test/SDL_test_random.c"
 }
 ]

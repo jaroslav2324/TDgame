@@ -1776,11 +1776,8 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: /home/jaros/gitProj
   /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/Portal.h \
-  /usr/include/SDL2/SDL_image.h \
-  /usr/include/SDL2/SDL.h \
-  /usr/include/SDL2/SDL_version.h \
-  /usr/include/SDL2/begin_code.h \
-  /usr/include/SDL2/close_code.h \
+  /usr/local/include/SDL2/SDL_image.h \
+  /usr/local/include/SDL2/SDL.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
 
 CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.cpp \
@@ -2622,11 +2619,8 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o: /home/jaros/g
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/Portal.h \
-  /usr/include/SDL2/SDL_image.h \
-  /usr/include/SDL2/SDL.h \
-  /usr/include/SDL2/SDL_version.h \
-  /usr/include/SDL2/begin_code.h \
-  /usr/include/SDL2/close_code.h
+  /usr/local/include/SDL2/SDL_image.h \
+  /usr/local/include/SDL2/SDL.h
 
 CMakeFiles/TowerDefence.dir/src/main.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -2973,11 +2967,8 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /usr/local/include/SDL2/SDL_version.h \
   /usr/local/include/SDL2/SDL_locale.h \
   /usr/local/include/SDL2/SDL_misc.h \
-  /usr/include/SDL2/SDL_image.h \
-  /usr/include/SDL2/SDL.h \
-  /usr/include/SDL2/SDL_version.h \
-  /usr/include/SDL2/begin_code.h \
-  /usr/include/SDL2/close_code.h \
+  /usr/local/include/SDL2/SDL_image.h \
+  /usr/local/include/SDL2/SDL.h \
   /home/jaros/gitProjects/c++/TDgame/src/Timers.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.h \
@@ -3387,21 +3378,14 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
   /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/Portal.h \
-  /usr/include/SDL2/SDL_image.h \
-  /usr/include/SDL2/SDL.h \
-  /usr/include/SDL2/SDL_version.h \
-  /usr/include/SDL2/begin_code.h \
-  /usr/include/SDL2/close_code.h \
+  /usr/local/include/SDL2/SDL_image.h \
+  /usr/local/include/SDL2/SDL.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
 
 
 /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.cpp:
 
-/usr/include/SDL2/begin_code.h:
-
-/usr/include/SDL2/SDL.h:
-
-/usr/include/SDL2/SDL_image.h:
+/usr/local/include/SDL2/SDL_image.h:
 
 /home/jaros/gitProjects/c++/TDgame/src/Portal.h:
 
@@ -3534,8 +3518,6 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 /usr/include/c++/11/tuple:
 
 /usr/include/c++/11/bits/hashtable.h:
-
-/usr/include/SDL2/close_code.h:
 
 /usr/include/c++/11/backward/binders.h:
 
@@ -3978,8 +3960,6 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/clwbintrin.h:
-
-/usr/include/SDL2/SDL_version.h:
 
 /usr/local/include/SDL2/SDL_version.h:
 

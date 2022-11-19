@@ -35,34 +35,22 @@ void Projectile::moveToEnemy(){
     currentCoords.first += changeX;
     currentCoords.second += changeY;
 
+    // the projectile flies to the left and passing by the enemy
+    if (diffX < 0 && currentCoords.first < enemyCoordX)
+        currentCoords.first = enemyCoordX;
 
-    //FIXME projectile won`t hit enemy because of diffX and diffY, it will go back and fourth
+    // the projectile flies to the right and passing by the enemy   
+    if (diffX >= 0 && currentCoords.first > enemyCoordX)
+        currentCoords.first = enemyCoordX;
 
-    /*if diffX < 0 x coord of the projectile is right from the enemy
-      if diffX > 0 x coord of the projectile is left from the enemy*/
-    if (diffX < 0){
-        /*if enemy passed by waypoint*/ 
-        if (currentCoords.first < enemyCoordX)
-            currentCoords.first = enemyCoordX;
-    }
-    else{
-        /*if enemy passed by waypoint*/ 
-        if (currentCoords.first > enemyCoordX)
-            currentCoords.first = enemyCoordX;
-    }
+    // the projectile up and passing by the enemy
+    if (diffY < 0 && currentCoords.second < enemyCoordY)
+        currentCoords.second = enemyCoordY;
 
-    /*if diffY < 0 y coord of the projectile is down from the enemy
-      if diffY > 0 y coord of the projectile is up from the enemy*/
-    if (diffX < 0){
-        /*if enemy passed by waypoint*/ 
-        if (currentCoords.second < enemyCoordY)
-            currentCoords.second = enemyCoordY;
-    }
-    else{
-        /*if enemy passed by waypoint*/ 
-        if (currentCoords.second > enemyCoordY)
-            currentCoords.second = enemyCoordY;
-    }
+    // the projectile flies down and passing by the enemy   
+    if (diffY >= 0 && currentCoords.second > enemyCoordY)
+        currentCoords.second = enemyCoordY;
+    
 }
 
 bool Projectile::isReachedEnemy(){
