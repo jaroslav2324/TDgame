@@ -30,20 +30,20 @@ Game::~Game(){
     delete enemiesWay;
 }
 
-void Game::renderAll(){
+void Game::renderAll(SDL_Renderer* renderer){
 
     //TODO render
 
     //render grid
 
-    //render towers
+    towerManager->renderAllTowers(renderer);
     //render enemies  
     //render projectiles
 
     //TODO render UI
 }
 
-void Game::loop(){
+void Game::loop(SDL_Renderer* renderer){
 
     //TODO game loop
     if (fpsTimer->tickIfNeeded()){
@@ -59,4 +59,6 @@ void Game::loop(){
             //TODO end game
         }
     }
+
+    renderAll(renderer);
 }
