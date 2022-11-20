@@ -7,15 +7,18 @@
 /*class for tile of the grid*/
 class GridTile{
     public:
-    GridTile(std::pair<float, float> coords);
-    GridTile(std::string& spritePath, std::pair<float, float> coords);
+    GridTile(SDL_Renderer* renderer, std::pair<float, float> coords);
+    GridTile(SDL_Renderer* renderer, std::string& spritePath, std::pair<float, float> coords);
     ~GridTile();
-    void loadAndRenderTile(SDL_Renderer* renderer);
+
+    void render(SDL_Renderer* renderer);
     
     private:
     std::pair<float, float> coords;
 
     std::string spritePath = "";
 
-    SDL_Texture* tileTexture;
+    SDL_Texture* tileTexture = nullptr;
+
+    void loadTexture(SDL_Renderer* renderer);
 };

@@ -11,7 +11,7 @@
 class Game{
     public:
     //TODO add UI
-    Game();
+    Game(SDL_Renderer* renderer);
     ~Game();
 
     /*main game function*/

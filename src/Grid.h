@@ -8,7 +8,7 @@
 ONLY FOR RENDERING TILES*/
 class Grid{
     public:
-    Grid();
+    Grid(SDL_Renderer* renderer);
     ~Grid();
     void renderGrid(SDL_Renderer* renderer);
 

@@ -1,8 +1,18 @@
 [
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/Base.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Base.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/Base.cpp"
+},
+{
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
   "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/main.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/main.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/main.cpp"
+},
+{
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/Game.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Game.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/Game.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
@@ -13,11 +23,6 @@
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
   "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.cpp"
-},
-{
-  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/Base.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Base.cpp",
-  "file": "/home/jaros/gitProjects/c++/TDgame/src/Base.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
@@ -46,6 +51,11 @@
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/Grid.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Grid.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/Grid.cpp"
+},
+{
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
   "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.cpp"
 },
@@ -53,6 +63,16 @@
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
   "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.cpp"
+},
+{
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/GridTile.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/GridTile.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/GridTile.cpp"
+},
+{
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",

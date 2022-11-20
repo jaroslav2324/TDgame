@@ -242,6 +242,78 @@ src/EnemiesWay.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.s
 .PHONY : src/EnemiesWay.cpp.s
 
+src/Game.o: src/Game.cpp.o
+.PHONY : src/Game.o
+
+# target to build an object file
+src/Game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Game.cpp.o
+.PHONY : src/Game.cpp.o
+
+src/Game.i: src/Game.cpp.i
+.PHONY : src/Game.i
+
+# target to preprocess a source file
+src/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Game.cpp.i
+.PHONY : src/Game.cpp.i
+
+src/Game.s: src/Game.cpp.s
+.PHONY : src/Game.s
+
+# target to generate assembly for a file
+src/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Game.cpp.s
+.PHONY : src/Game.cpp.s
+
+src/Grid.o: src/Grid.cpp.o
+.PHONY : src/Grid.o
+
+# target to build an object file
+src/Grid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Grid.cpp.o
+.PHONY : src/Grid.cpp.o
+
+src/Grid.i: src/Grid.cpp.i
+.PHONY : src/Grid.i
+
+# target to preprocess a source file
+src/Grid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Grid.cpp.i
+.PHONY : src/Grid.cpp.i
+
+src/Grid.s: src/Grid.cpp.s
+.PHONY : src/Grid.s
+
+# target to generate assembly for a file
+src/Grid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Grid.cpp.s
+.PHONY : src/Grid.cpp.s
+
+src/GridTile.o: src/GridTile.cpp.o
+.PHONY : src/GridTile.o
+
+# target to build an object file
+src/GridTile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/GridTile.cpp.o
+.PHONY : src/GridTile.cpp.o
+
+src/GridTile.i: src/GridTile.cpp.i
+.PHONY : src/GridTile.i
+
+# target to preprocess a source file
+src/GridTile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/GridTile.cpp.i
+.PHONY : src/GridTile.cpp.i
+
+src/GridTile.s: src/GridTile.cpp.s
+.PHONY : src/GridTile.s
+
+# target to generate assembly for a file
+src/GridTile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/GridTile.cpp.s
+.PHONY : src/GridTile.cpp.s
+
 src/Timers.o: src/Timers.cpp.o
 .PHONY : src/Timers.o
 
@@ -410,6 +482,30 @@ src/entityManagers/EnemyManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.s
 .PHONY : src/entityManagers/EnemyManager.cpp.s
 
+src/entityManagers/TowerManager.o: src/entityManagers/TowerManager.cpp.o
+.PHONY : src/entityManagers/TowerManager.o
+
+# target to build an object file
+src/entityManagers/TowerManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o
+.PHONY : src/entityManagers/TowerManager.cpp.o
+
+src/entityManagers/TowerManager.i: src/entityManagers/TowerManager.cpp.i
+.PHONY : src/entityManagers/TowerManager.i
+
+# target to preprocess a source file
+src/entityManagers/TowerManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.i
+.PHONY : src/entityManagers/TowerManager.cpp.i
+
+src/entityManagers/TowerManager.s: src/entityManagers/TowerManager.cpp.s
+.PHONY : src/entityManagers/TowerManager.s
+
+# target to generate assembly for a file
+src/entityManagers/TowerManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.s
+.PHONY : src/entityManagers/TowerManager.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -478,6 +574,15 @@ help:
 	@echo "... src/EnemiesWay.o"
 	@echo "... src/EnemiesWay.i"
 	@echo "... src/EnemiesWay.s"
+	@echo "... src/Game.o"
+	@echo "... src/Game.i"
+	@echo "... src/Game.s"
+	@echo "... src/Grid.o"
+	@echo "... src/Grid.i"
+	@echo "... src/Grid.s"
+	@echo "... src/GridTile.o"
+	@echo "... src/GridTile.i"
+	@echo "... src/GridTile.s"
 	@echo "... src/Timers.o"
 	@echo "... src/Timers.i"
 	@echo "... src/Timers.s"
@@ -499,6 +604,9 @@ help:
 	@echo "... src/entityManagers/EnemyManager.o"
 	@echo "... src/entityManagers/EnemyManager.i"
 	@echo "... src/entityManagers/EnemyManager.s"
+	@echo "... src/entityManagers/TowerManager.o"
+	@echo "... src/entityManagers/TowerManager.i"
+	@echo "... src/entityManagers/TowerManager.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

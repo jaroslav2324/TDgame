@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game(){
+Game::Game(SDL_Renderer* renderer){
 
     enemiesWay = new EnemiesWay();
 
@@ -12,7 +12,7 @@ Game::Game(){
 
     fpsTimer = new PeriodicTimer(1 / FPS);
 
-    grid = new Grid();
+    grid = new Grid(renderer);
 
 }
 
@@ -34,8 +34,7 @@ void Game::renderAll(SDL_Renderer* renderer){
 
     //TODO render
 
-    //render grid
-
+    grid->renderGrid(renderer);
     towerManager->renderAllTowers(renderer);
     enemyManager->renderAllEnemies(renderer);
     towerManager->renderAllProjectiles(renderer);
@@ -54,7 +53,7 @@ void Game::loop(SDL_Renderer* renderer){
 
         enemyManager->allEnemiesMove();
 
-        //spawn enemies if needed 
+        //TODO spawn enemies if needed 
 
         //if base destroyed
         if(base->noHitPoitsLeft()){
