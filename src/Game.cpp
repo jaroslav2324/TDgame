@@ -37,10 +37,12 @@ void Game::renderAll(SDL_Renderer* renderer){
     //render grid
 
     towerManager->renderAllTowers(renderer);
-    //render enemies  
-    //render projectiles
+    enemyManager->renderAllEnemies(renderer);
+    towerManager->renderAllProjectiles(renderer);
 
     //TODO render UI
+
+    SDL_RenderPresent(renderer);
 }
 
 void Game::loop(SDL_Renderer* renderer){
@@ -48,7 +50,7 @@ void Game::loop(SDL_Renderer* renderer){
     //TODO game loop
     if (fpsTimer->tickIfNeeded()){
 
-        towerManager->allTowersAttack();
+        towerManager->allTowersAttack(renderer);
 
         enemyManager->allEnemiesMove();
 

@@ -1,13 +1,21 @@
 #include "Projectile.h"
 
-Projectile::Projectile(Enemy* aimedEnemy, std::pair<float, float> spawnCoords){
+Projectile::Projectile(SDL_Renderer* renderer, Enemy* aimedEnemy, std::pair<float, float> spawnCoords){
     Projectile::aimedEnemy = aimedEnemy;
     currentCoords = spawnCoords;
+
+    loadTexture(renderer);
 
     movementTimer = new PeriodicTimer(1 / FPS);
 }
 
 Projectile::~Projectile(){
+
+    if (projectileTexture != nullptr){
+        SDL_DestroyTexture(projectileTexture);
+        projectileTexture = nullptr;
+    }
+
     delete movementTimer;
 }
 
@@ -82,4 +90,23 @@ bool Projectile::hasDamagedEnemy(){
     if (damagedEnemy)
         return true;
     return false;
+}
+
+
+void Projectile::loadTexture(SDL_Renderer* renderer){
+
+    if (projectileTexture == nullptr)
+        projectileTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);
+    else{
+        SDL_DestroyTexture(projectileTexture);
+        projectileTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);
+    }   
+}
+
+void Projectile::render(SDL_Renderer* renderer){
+
+    int x = currentCoords.first - PROJECTILE_SPRITE_SIZE / 2;
+    int y = currentCoords.second - PROJECTILE_SPRITE_SIZE / 2;
+    SDL_Rect projectileRect = {x, y, PROJECTILE_SPRITE_SIZE, PROJECTILE_SPRITE_SIZE};
+    SDL_RenderCopy(renderer, projectileTexture, 0, &projectileRect);
 }

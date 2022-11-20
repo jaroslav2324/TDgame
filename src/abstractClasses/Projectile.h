@@ -8,13 +8,16 @@
 */
 class Projectile{
     public:
-    Projectile(Enemy* aimedEnemy, std::pair<float, float> spawnCoords);
+    Projectile(SDL_Renderer* renderer, Enemy* aimedEnemy, std::pair<float, float> spawnCoords);
     //TODO add constructor setting private fields
     ~Projectile();
 
     bool hasDamagedEnemy();
-    //TODO load sprite
-    //TODO render
+    
+    //TODO make private pure virtual
+    virtual void loadTexture(SDL_Renderer* renderer);
+    void render(SDL_Renderer* renderer);
+
     void attack();
 
     protected:
@@ -32,6 +35,8 @@ class Projectile{
     PeriodicTimer* movementTimer;
 
     std::pair<float, float> currentCoords;
+
+    SDL_Texture* projectileTexture = nullptr;
     
     void moveToEnemy();
     void hitAndFreezeEnemy();

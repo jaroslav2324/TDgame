@@ -24,13 +24,15 @@ public:
     float getDamage();
     float getRadius();
 
-    void attack();
+    void attack(SDL_Renderer* renderer);
 
     bool isDestroyed();
     void setDestroyed();
 
+    //TODO make private pure virtual
     virtual void loadTexture(SDL_Renderer* renderer);
     void render(SDL_Renderer* renderer);
+    void renderAllProjectiles(SDL_Renderer* renderer);
 
     float getExpForNextLvl(int currentLevel);
 
@@ -69,6 +71,7 @@ protected:
     std::vector<Projectile*> projectileList;
 
     virtual void setAttackTimer() = 0;
+    
 
     void setExpForDamage(float exp);
     void setExpForKill(float exp);

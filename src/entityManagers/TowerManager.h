@@ -9,15 +9,16 @@ class TowerManager{
     public:
     TowerManager(EnemyManager* enemyManager);
 
-    void buildTower(int towerType);
+    void buildTower(SDL_Renderer* renderer, int towerType);
     void addBuiltTower(Tower*);
     void destroyTower(Tower*);
 
     void findAndDeleteDestroyedTowers();
 
-    void allTowersAttack();
+    void allTowersAttack(SDL_Renderer* renderer);
 
     void renderAllTowers(SDL_Renderer* renderer);
+    void renderAllProjectiles(SDL_Renderer* renderer);
 
     private:
     std::vector<Tower*> towerList;

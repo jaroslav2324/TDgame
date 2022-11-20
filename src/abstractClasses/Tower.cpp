@@ -100,14 +100,14 @@ void Tower::findNearestEnemyInRadius(){
     aimedEnemy = enemyManager->findNearestEnemyForTower(towerCoords, radius);
 }
 
-void Tower::attack(){
+void Tower::attack(SDL_Renderer* renderer){
 
     if(attackTimer->tickIfNeeded()){
 
         findFirstEnemyInRadius();
 
         /*spawn projectile and add it to the list*/
-        Projectile* projectile = new Projectile(aimedEnemy, towerCoords);
+        Projectile* projectile = new Projectile(renderer, aimedEnemy, towerCoords);
         projectileList.push_back(projectile);
 
         /*move all projectiles and delete if they hit enemy*/
@@ -160,5 +160,10 @@ void Tower::render(SDL_Renderer* renderer){
     int y = towerCoords.second - TOWER_SPRITE_SIZE / 2;
     SDL_Rect towerRect = {x, y, TOWER_SPRITE_SIZE, TOWER_SPRITE_SIZE};
     SDL_RenderCopy(renderer, towerTexture, 0, &towerRect);
+}
+
+void Tower::renderAllProjectiles(SDL_Renderer* renderer){
+    for (auto projectilePtr: projectileList)
+        projectilePtr->render(renderer);
 }
     

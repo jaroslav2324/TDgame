@@ -4,11 +4,11 @@ TowerManager::TowerManager(EnemyManager* enemyManager){
     TowerManager::enemyManager = enemyManager;
 }
 
-void TowerManager::buildTower(int towerType){
+void TowerManager::buildTower(SDL_Renderer* renderer, int towerType){
     //TODO add types of towers
     Tower* tower = nullptr;
     if (towerType == BASIC_TOWER)
-        tower = new class BasicTower(enemyManager);
+        tower = new class BasicTower(renderer, enemyManager);
 
     towerList.push_back(tower);
 }
@@ -38,13 +38,20 @@ void TowerManager::findAndDeleteDestroyedTowers(){
     }
 }
 
-void TowerManager::allTowersAttack(){
+void TowerManager::allTowersAttack(SDL_Renderer* renderer){
+    //TODO remove SDL_Renderer
     for (auto tower: towerList)
-        tower->attack();
+        tower->attack(renderer);
 }
 
 void TowerManager::renderAllTowers(SDL_Renderer* renderer){
     
     for (auto towerPtr: towerList)
         towerPtr->render(renderer);
+}
+
+void TowerManager::renderAllProjectiles(SDL_Renderer* renderer){
+    
+    for (auto towerPtr: towerList)
+        towerPtr->renderAllProjectiles(renderer);
 }

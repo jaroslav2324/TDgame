@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 	}
 	
 
-	Projectile* testProjectile = new Projectile(testEnemy, std::make_pair(0, 0));
+	Projectile* testProjectile = new Projectile(renderer, testEnemy, std::make_pair(0, 0));
 
 	delete testEnemyManager;
 	
