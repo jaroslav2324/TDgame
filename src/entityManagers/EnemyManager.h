@@ -25,6 +25,8 @@ class EnemyManager{
 
     void allEnemiesMove();
 
+    void renderAllEnemies(SDL_Renderer* renderer);
+
     private:
     std::vector<Enemy*> enemyList;
 

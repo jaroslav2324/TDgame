@@ -7,8 +7,9 @@
 #define GAME_LEVEL_WIDTH 12 //amount of files in width on the game screen
 #define GAME_LEVEL_HEIGHT 9 //amount of files in height on the game screen
 
-#define TILESIZE 50 //amount of pixels in grid tile side
-#define TOWER_SPRITE_SIZE 50
+#define TILESIZE 100 //amount of pixels in grid tile side
+#define TOWER_SPRITE_SIZE 100
+#define ENEMY_SPRITE_SIZE 50
 
 /*used in comparison of coordinates*/
 #define EPSILON_COORDS 1

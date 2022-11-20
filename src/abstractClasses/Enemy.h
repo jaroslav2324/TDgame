@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 #include "../Timers.h"
 #include "../EnemiesWay.h"
@@ -15,7 +16,7 @@ using std::string;
 class Enemy{
     
 public:
-    Enemy(string& enemySpritePath, EnemiesWay* way, Base* base);
+    Enemy(EnemiesWay* way, Base* base);
     ~Enemy();
 
     void move();
@@ -33,7 +34,9 @@ public:
 
     //freezeTime in ms
     void activateFreezeTimer(double freezeTime);
-    //TODO load sprite
+    
+    virtual void loadSprite(SDL_Renderer* renderer);
+    void render(SDL_Renderer* renderer);
 
     float getCoordX();
     float getCoordY();
@@ -70,5 +73,5 @@ protected:
 
     void copyCoords(std::pair<float, float>& destination, std::pair<float, float>& source);
     
-    SDL_Texture* enemySprite = nullptr;
+    SDL_Texture* enemyTexture = nullptr;
 };

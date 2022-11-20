@@ -2,7 +2,7 @@
 
 #include "Enemy.h"
 
-Enemy::Enemy(std::string& spritePath, EnemiesWay* way, Base* base){
+Enemy::Enemy(EnemiesWay* way, Base* base){
     //TODO implement constructor;
     //TODO add timers
 
@@ -14,6 +14,9 @@ Enemy::~Enemy(){
 
     if (freezeTimer != nullptr)
         delete freezeTimer;
+
+    if (enemyTexture != nullptr)
+        SDL_DestroyTexture(enemyTexture);
 }
 
 void Enemy::replaceToNextWaypointCoords(){
@@ -156,4 +159,20 @@ void Enemy::activateFreezeTimer(double freezeTime){
         freezeTimer = new CountdownTimer(freezeTime);
     else
         freezeTimer->replaceToMoreTime(freezeTime);
+}
+
+void Enemy::loadSprite(SDL_Renderer* renderer){
+    enemyTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);    
+}
+
+void Enemy::render(SDL_Renderer* renderer){
+
+    //TODO move to constructor
+    if(enemyTexture == nullptr)
+        loadSprite(renderer);
+
+    int x = currentCoords.first - ENEMY_SPRITE_SIZE / 2;
+    int y = currentCoords.second - ENEMY_SPRITE_SIZE / 2;
+    SDL_Rect enemyRect = {x, y, ENEMY_SPRITE_SIZE, ENEMY_SPRITE_SIZE};
+    SDL_RenderCopy(renderer, enemyTexture, 0, &enemyRect);
 }

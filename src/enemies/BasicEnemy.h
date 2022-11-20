@@ -6,7 +6,7 @@
 
 class BasicEnemy: public Enemy{
     public:
-    BasicEnemy(std::string spritePath, EnemiesWay* way, Base* base): Enemy(spritePath, way, base){
+    BasicEnemy(EnemiesWay* way, Base* base): Enemy(way, base){
         setMovementTimer();
     };
 

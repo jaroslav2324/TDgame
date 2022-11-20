@@ -23,7 +23,7 @@ void EnemyManager::spawnEnemy(int enemyType){
     switch (enemyType){
 
     case BASIC_ENEMY:
-        enemy = new class BasicEnemy(BASIC_ENEMY_SPRITE_PATH, enemiesWay, base);
+        enemy = new class BasicEnemy(enemiesWay, base);
         break;
 
     default:
@@ -124,3 +124,8 @@ void EnemyManager::allEnemiesMove(){
         enemy->move();
 }
 
+void EnemyManager::renderAllEnemies(SDL_Renderer* renderer){
+    
+    for (auto enemyPtr: enemyList)
+        enemyPtr->render(renderer);
+}
