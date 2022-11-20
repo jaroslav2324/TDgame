@@ -6,7 +6,7 @@
 
 class BasicEnemy: public Enemy{
     public:
-    BasicEnemy(EnemiesWay* way, Base* base): Enemy(way, base){
+    BasicEnemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base): Enemy(renderer, way, base){
         setMovementTimer();
     };
 

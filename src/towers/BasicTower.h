@@ -4,7 +4,7 @@
 
 class BasicTower: public Tower{
     public:
-    BasicTower(EnemyManager* enemyManager): Tower(enemyManager){
+    BasicTower(SDL_Renderer* renderer, EnemyManager* enemyManager): Tower(renderer, enemyManager){
         setAttackTimer();
     };
     ~BasicTower();

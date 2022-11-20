@@ -2,12 +2,16 @@
 
 #include "Enemy.h"
 
-Enemy::Enemy(EnemiesWay* way, Base* base){
+Enemy::Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base){
     //TODO implement constructor;
     //TODO add timers
+    //TODO delete SDL_Renderer from constructor or move to fields of the class?
+
+    loadTexture(renderer);
 
     Enemy::way = way;
     Enemy::base = base;
+
 }
 
 Enemy::~Enemy(){
@@ -15,8 +19,10 @@ Enemy::~Enemy(){
     if (freezeTimer != nullptr)
         delete freezeTimer;
 
-    if (enemyTexture != nullptr)
+    if (enemyTexture != nullptr){
         SDL_DestroyTexture(enemyTexture);
+        enemyTexture = nullptr;
+    }
 }
 
 void Enemy::replaceToNextWaypointCoords(){
@@ -161,15 +167,17 @@ void Enemy::activateFreezeTimer(double freezeTime){
         freezeTimer->replaceToMoreTime(freezeTime);
 }
 
-void Enemy::loadSprite(SDL_Renderer* renderer){
-    enemyTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);    
+void Enemy::loadTexture(SDL_Renderer* renderer){
+
+    if (enemyTexture == nullptr)
+        enemyTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);    
+    else {
+        SDL_DestroyTexture(enemyTexture);
+        enemyTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);    
+    }
 }
 
 void Enemy::render(SDL_Renderer* renderer){
-
-    //TODO move to constructor
-    if(enemyTexture == nullptr)
-        loadSprite(renderer);
 
     int x = currentCoords.first - ENEMY_SPRITE_SIZE / 2;
     int y = currentCoords.second - ENEMY_SPRITE_SIZE / 2;

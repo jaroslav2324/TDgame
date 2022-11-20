@@ -17,7 +17,7 @@ class EnemyManager{
     Enemy* findFirstEnemyForTower(std::pair<float, float> towerCoords, float radius);
     Enemy* findNearestEnemyForTower(std::pair<float, float> towerCoords, float radius);
         
-    void spawnEnemy(int enemyType);
+    void spawnEnemy(SDL_Renderer* renderer, int enemyType);
     //TODO spawnEnemies
     void addSpawnedEnemy(Enemy*);
     void killEnemy(Enemy*);

@@ -31,9 +31,9 @@ int main(int argc, char **argv)
 	
 	EnemyManager* testEnemyManager = new EnemyManager(base, way);
 	
-	Enemy* testEnemy = new BasicEnemy(way, base);
+	Enemy* testEnemy = new BasicEnemy(renderer, way, base);
 	
-	Tower* testTower = new BasicTower(testEnemyManager);
+	Tower* testTower = new BasicTower(renderer, testEnemyManager);
 
 	while (true)
 	{

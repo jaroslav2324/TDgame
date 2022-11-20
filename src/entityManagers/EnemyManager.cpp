@@ -16,14 +16,14 @@ EnemyManager::~EnemyManager(){
 }
 
 
-void EnemyManager::spawnEnemy(int enemyType){
+void EnemyManager::spawnEnemy(SDL_Renderer* renderer,int enemyType){
     //TODO add types of enemies
     Enemy* enemy = nullptr;
 
     switch (enemyType){
 
     case BASIC_ENEMY:
-        enemy = new class BasicEnemy(enemiesWay, base);
+        enemy = new class BasicEnemy(renderer, enemiesWay, base);
         break;
 
     default:

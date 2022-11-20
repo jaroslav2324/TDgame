@@ -1,8 +1,11 @@
 #include "Tower.h"
 
-Tower::Tower(EnemyManager* enemyManager){
+Tower::Tower(SDL_Renderer* renderer, EnemyManager* enemyManager){
+    //TODO delete SDL_Renderer from constructor or move to fields of the class?
 
     Tower::enemyManager = enemyManager;
+
+    loadTexture(renderer);
 
     float exp = 0;
     for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
@@ -11,13 +14,16 @@ Tower::Tower(EnemyManager* enemyManager){
     }
 }
 
-Tower::Tower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level){
+Tower::Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level){
+    //TODO delete SDL_Renderer from constructor or move to fields of the class?
 
     Tower::enemyManager = enemyManager;
     Tower::damage = damage;
     Tower::radius = radius;
     Tower::attackSpeed = attackSpeed;
     Tower::level = level;
+
+    loadTexture(renderer);
 
     float exp = 0;
     for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
@@ -27,8 +33,10 @@ Tower::Tower(EnemyManager* enemyManager, float damage, float radius, float attac
 }
 
 Tower::~Tower(){
-    if (towerSprite != nullptr)
-        SDL_DestroyTexture(towerSprite);
+    if (towerTexture != nullptr){
+        SDL_DestroyTexture(towerTexture);
+        towerTexture = nullptr;
+        }
 }
 
 float Tower::getDamage(){
@@ -136,20 +144,21 @@ bool Tower::isDestroyed(){
     return false;
 }
 
-void Tower::loadSprite(SDL_Renderer* renderer){
+void Tower::loadTexture(SDL_Renderer* renderer){
 
-    towerSprite = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);    
+    if (towerTexture == nullptr)
+        towerTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);
+    else{
+        SDL_DestroyTexture(towerTexture);
+        towerTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);
+    }    
 }
 
 void Tower::render(SDL_Renderer* renderer){
 
-    //TODO move to constructor
-    if(towerSprite == nullptr)
-        loadSprite(renderer);
-
     int x = towerCoords.first - TOWER_SPRITE_SIZE / 2;
     int y = towerCoords.second - TOWER_SPRITE_SIZE / 2;
     SDL_Rect towerRect = {x, y, TOWER_SPRITE_SIZE, TOWER_SPRITE_SIZE};
-    SDL_RenderCopy(renderer, towerSprite, 0, &towerRect);
+    SDL_RenderCopy(renderer, towerTexture, 0, &towerRect);
 }
     

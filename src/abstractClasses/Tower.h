@@ -16,9 +16,9 @@ using std::string;
 /*Basic class for all towers*/
 class Tower{
 public:
-    Tower(EnemyManager* enemyManager);
+    Tower(SDL_Renderer* renderer,EnemyManager* enemyManager);
     //TODO end constructor
-    Tower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level);
+    Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level);
     ~Tower();
 
     float getDamage();
@@ -29,7 +29,7 @@ public:
     bool isDestroyed();
     void setDestroyed();
 
-    virtual void loadSprite(SDL_Renderer* renderer);
+    virtual void loadTexture(SDL_Renderer* renderer);
     void render(SDL_Renderer* renderer);
 
     float getExpForNextLvl(int currentLevel);
@@ -62,7 +62,7 @@ protected:
     EnemyManager* enemyManager = nullptr;
     Enemy* aimedEnemy = nullptr;
 
-    SDL_Texture* towerSprite = nullptr;
+    SDL_Texture* towerTexture = nullptr;
 
     std::vector<float> listExpForLvls;
 

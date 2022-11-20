@@ -16,7 +16,7 @@ using std::string;
 class Enemy{
     
 public:
-    Enemy(EnemiesWay* way, Base* base);
+    Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base);
     ~Enemy();
 
     void move();
@@ -35,7 +35,7 @@ public:
     //freezeTime in ms
     void activateFreezeTimer(double freezeTime);
     
-    virtual void loadSprite(SDL_Renderer* renderer);
+    virtual void loadTexture(SDL_Renderer* renderer);
     void render(SDL_Renderer* renderer);
 
     float getCoordX();
