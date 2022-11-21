@@ -5,7 +5,7 @@ Game::Game(SDL_Renderer* renderer){
     enemiesWay = new EnemiesWay();
 
     auto baseCoords = enemiesWay->getFirstCoords();
-    base = new Base(baseCoords);
+    base = new Base(renderer, baseCoords);
 
     enemyManager = new EnemyManager(base, enemiesWay);
     towerManager = new TowerManager(enemyManager);
