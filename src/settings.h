@@ -25,7 +25,8 @@
 #define BASIC_TOWER_SPRITE_PATH "../Assets/tower.jpg"
 
 #define BASIC_GRID_TILE_SPRITE_PATH "../Assets/tile.jpg"
-#define PORTAL_TILE_SPRITE_PATH ""
+#define PORTAL_TILE_SPRITE_PATH "../Assets/portal.jpg"
+#define BASE_TILE_SPRITE_PATH "../Assets/base.jpg"
 
 // relative path build/TowerDefence file
 #define TEST_SPRITE_PATH "../Assets/test.jpeg"

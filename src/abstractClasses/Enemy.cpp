@@ -1,5 +1,3 @@
-#pragma once
-
 #include "Enemy.h"
 
 Enemy::Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base){
@@ -170,10 +168,10 @@ void Enemy::activateFreezeTimer(double freezeTime){
 void Enemy::loadTexture(SDL_Renderer* renderer){
 
     if (enemyTexture == nullptr)
-        enemyTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);    
+        enemyTexture = IMG_LoadTexture(renderer, BASIC_ENEMY_SPRITE_PATH);    
     else {
         SDL_DestroyTexture(enemyTexture);
-        enemyTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);    
+        enemyTexture = IMG_LoadTexture(renderer, BASIC_ENEMY_SPRITE_PATH);    
     }
 }
 

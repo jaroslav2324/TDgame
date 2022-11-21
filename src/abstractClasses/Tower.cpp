@@ -147,10 +147,10 @@ bool Tower::isDestroyed(){
 void Tower::loadTexture(SDL_Renderer* renderer){
 
     if (towerTexture == nullptr)
-        towerTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);
+        towerTexture = IMG_LoadTexture(renderer, BASIC_TOWER_SPRITE_PATH);
     else{
         SDL_DestroyTexture(towerTexture);
-        towerTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);
+        towerTexture = IMG_LoadTexture(renderer, BASIC_TOWER_SPRITE_PATH);
     }    
 }
 
