@@ -22,10 +22,10 @@ GridTile::~GridTile(){
 void GridTile::loadTexture(SDL_Renderer* renderer){
 
     if (tileTexture == nullptr)
-        tileTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);
+        tileTexture = IMG_LoadTexture(renderer, BASIC_GRID_TILE_SPRITE_PATH);
     else{
         SDL_DestroyTexture(tileTexture);
-        tileTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);
+        tileTexture = IMG_LoadTexture(renderer, BASIC_GRID_TILE_SPRITE_PATH);
     }  
 
 }

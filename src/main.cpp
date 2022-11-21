@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 		cout << "SDL_image error" << endl;
 
 
-	SDL_Window* window = SDL_CreateWindow("window", 0, 0, 500, 500, SDL_WINDOW_SHOWN);
+	SDL_Window* window = SDL_CreateWindow("TD_Game", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
 	Game* game = new Game(renderer);
@@ -36,7 +36,6 @@ int main(int argc, char **argv)
 
 	delete game;
 	
-
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 

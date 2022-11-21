@@ -4,6 +4,9 @@
 
 #define MAX_TOWER_LEVEL 9
 
+#define SCREEN_WIDTH 1200
+#define SCREEN_HEIGHT 900
+
 #define GAME_LEVEL_WIDTH 12 //amount of files in width on the game screen
 #define GAME_LEVEL_HEIGHT 9 //amount of files in height on the game screen
 
@@ -17,11 +20,11 @@
 #define EPSILON_COORDS 1
 
 //TODO change sprite paths
-#define BASIC_ENEMY_SPRITE_PATH ""
+#define BASIC_ENEMY_SPRITE_PATH "../Assets/enemy.png"
 
-#define BASIC_TOWER_SPRITE_PATH ""
+#define BASIC_TOWER_SPRITE_PATH "../Assets/tower.jpg"
 
-#define BASIC_GRID_TILE_SPRITE_PATH ""
+#define BASIC_GRID_TILE_SPRITE_PATH "../Assets/tile.jpg"
 #define PORTAL_TILE_SPRITE_PATH ""
 
 // relative path build/TowerDefence file
