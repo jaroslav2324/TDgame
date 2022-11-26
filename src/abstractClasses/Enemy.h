@@ -16,7 +16,7 @@ using std::string;
 class Enemy{
     
 public:
-    Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base);
+    Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, std::pair<float, float> coords);
     ~Enemy();
 
     void move();

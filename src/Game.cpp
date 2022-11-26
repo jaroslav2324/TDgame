@@ -16,7 +16,7 @@ Game::Game(SDL_Renderer* renderer){
 
     //TODO delete test spawn
     towerManager->buildTower(renderer, BASIC_TOWER, std::make_pair(250, 250));
-
+    enemyManager->spawnEnemy(renderer, BASIC_ENEMY, std::make_pair(450, 450));
 }
 
 Game::~Game(){
