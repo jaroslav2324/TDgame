@@ -7,8 +7,8 @@
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 900
 
-#define GAME_LEVEL_WIDTH 12 //amount of files in width on the game screen
-#define GAME_LEVEL_HEIGHT 9 //amount of files in height on the game screen
+#define GAME_LEVEL_WIDTH 12 //amount of tiles in width on the game screen
+#define GAME_LEVEL_HEIGHT 9 //amount of tiles in height on the game screen
 
 #define TILESIZE 100 //amount of pixels in grid tile side
 //TODO move to classes as constants?
@@ -19,7 +19,6 @@
 /*used in comparison of coordinates*/
 #define EPSILON_COORDS 1
 
-//TODO change sprite paths
 #define BASIC_ENEMY_SPRITE_PATH "../Assets/enemy.png"
 
 #define BASIC_TOWER_SPRITE_PATH "../Assets/tower.jpg"

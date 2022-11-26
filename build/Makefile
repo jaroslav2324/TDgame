@@ -338,6 +338,54 @@ src/Timers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Timers.cpp.s
 .PHONY : src/Timers.cpp.s
 
+src/UI/Button.o: src/UI/Button.cpp.o
+.PHONY : src/UI/Button.o
+
+# target to build an object file
+src/UI/Button.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o
+.PHONY : src/UI/Button.cpp.o
+
+src/UI/Button.i: src/UI/Button.cpp.i
+.PHONY : src/UI/Button.i
+
+# target to preprocess a source file
+src/UI/Button.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.i
+.PHONY : src/UI/Button.cpp.i
+
+src/UI/Button.s: src/UI/Button.cpp.s
+.PHONY : src/UI/Button.s
+
+# target to generate assembly for a file
+src/UI/Button.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.s
+.PHONY : src/UI/Button.cpp.s
+
+src/UI/Interface.o: src/UI/Interface.cpp.o
+.PHONY : src/UI/Interface.o
+
+# target to build an object file
+src/UI/Interface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.o
+.PHONY : src/UI/Interface.cpp.o
+
+src/UI/Interface.i: src/UI/Interface.cpp.i
+.PHONY : src/UI/Interface.i
+
+# target to preprocess a source file
+src/UI/Interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.i
+.PHONY : src/UI/Interface.cpp.i
+
+src/UI/Interface.s: src/UI/Interface.cpp.s
+.PHONY : src/UI/Interface.s
+
+# target to generate assembly for a file
+src/UI/Interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.s
+.PHONY : src/UI/Interface.cpp.s
+
 src/abstractClasses/Enemy.o: src/abstractClasses/Enemy.cpp.o
 .PHONY : src/abstractClasses/Enemy.o
 
@@ -586,6 +634,12 @@ help:
 	@echo "... src/Timers.o"
 	@echo "... src/Timers.i"
 	@echo "... src/Timers.s"
+	@echo "... src/UI/Button.o"
+	@echo "... src/UI/Button.i"
+	@echo "... src/UI/Button.s"
+	@echo "... src/UI/Interface.o"
+	@echo "... src/UI/Interface.i"
+	@echo "... src/UI/Interface.s"
 	@echo "... src/abstractClasses/Enemy.o"
 	@echo "... src/abstractClasses/Enemy.i"
 	@echo "... src/abstractClasses/Enemy.s"

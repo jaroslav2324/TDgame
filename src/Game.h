@@ -16,7 +16,6 @@ class Game{
 
     /*main game function*/
     void loop(SDL_Renderer* renderer);
-    //TODO change
     void renderAll(SDL_Renderer* renderer);
 
     private:

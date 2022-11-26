@@ -15,7 +15,6 @@
 using std::cout;
 using std::endl;
 
-//TODO implement main logic
 int main(int argc, char **argv)
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
