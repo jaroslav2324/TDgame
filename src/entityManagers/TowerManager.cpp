@@ -4,11 +4,11 @@ TowerManager::TowerManager(EnemyManager* enemyManager){
     TowerManager::enemyManager = enemyManager;
 }
 
-void TowerManager::buildTower(SDL_Renderer* renderer, int towerType){
+void TowerManager::buildTower(SDL_Renderer* renderer, int towerType, std::pair<float, float> coords){
     //TODO add types of towers
     Tower* tower = nullptr;
     if (towerType == BASIC_TOWER)
-        tower = new class BasicTower(renderer, enemyManager);
+        tower = new class BasicTower(renderer, enemyManager, coords);
 
     towerList.push_back(tower);
 }

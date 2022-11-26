@@ -9,7 +9,7 @@ class TowerManager{
     public:
     TowerManager(EnemyManager* enemyManager);
 
-    void buildTower(SDL_Renderer* renderer, int towerType);
+    void buildTower(SDL_Renderer* renderer, int towerType, std::pair<float, float> coords);
     void addBuiltTower(Tower*);
     void destroyTower(Tower*);
 

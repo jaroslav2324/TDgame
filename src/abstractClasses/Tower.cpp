@@ -1,9 +1,10 @@
 #include "Tower.h"
 
-Tower::Tower(SDL_Renderer* renderer, EnemyManager* enemyManager){
+Tower::Tower(SDL_Renderer* renderer, EnemyManager* enemyManager, std::pair<float, float> coords){
     //TODO delete SDL_Renderer from constructor or move to fields of the class?
 
     Tower::enemyManager = enemyManager;
+    Tower::towerCoords = coords;
 
     loadTexture(renderer);
 
@@ -14,7 +15,7 @@ Tower::Tower(SDL_Renderer* renderer, EnemyManager* enemyManager){
     }
 }
 
-Tower::Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level){
+Tower::Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, std::pair<float, float> coords){
     //TODO delete SDL_Renderer from constructor or move to fields of the class?
 
     Tower::enemyManager = enemyManager;
@@ -22,6 +23,7 @@ Tower::Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, fl
     Tower::radius = radius;
     Tower::attackSpeed = attackSpeed;
     Tower::level = level;
+    Tower::towerCoords = coords;
 
     loadTexture(renderer);
 

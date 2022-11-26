@@ -14,6 +14,9 @@ Game::Game(SDL_Renderer* renderer){
 
     grid = new Grid(renderer);
 
+    //TODO delete test spawn
+    towerManager->buildTower(renderer, BASIC_TOWER, std::make_pair(250, 250));
+
 }
 
 Game::~Game(){

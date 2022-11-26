@@ -4,7 +4,7 @@
 
 class BasicTower: public Tower{
     public:
-    BasicTower(SDL_Renderer* renderer, EnemyManager* enemyManager): Tower(renderer, enemyManager){
+    BasicTower(SDL_Renderer* renderer, EnemyManager* enemyManager, std::pair<float, float> coords): Tower(renderer, enemyManager, coords){
         setAttackTimer();
     };
     ~BasicTower();
