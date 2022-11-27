@@ -14,9 +14,17 @@ Game::Game(SDL_Renderer* renderer){
 
     grid = new Grid(renderer);
 
-    //TODO delete test spawn
+    //TODO delete test
     towerManager->buildTower(renderer, BASIC_TOWER, std::make_pair(250, 250));
     enemyManager->spawnEnemy(renderer, BASIC_ENEMY, std::make_pair(450, 450));
+
+    testBtn = new Button(renderer,     TEST_BTN_BASIC_TEXTURE_PATH, 
+                                       TEST_BTN_PRESSED_TEXTURE_PATH,
+                                       TEST_BTN_HOVERED_TEXTURE_PATH,
+                                       std::make_pair(300, 500));
+                                       
+    testBtn->setModeHovered();
+    testBtn->setModePressed();
 }
 
 Game::~Game(){
@@ -31,6 +39,9 @@ Game::~Game(){
     delete base;
 
     delete enemiesWay;
+
+    //TODO delete this
+    delete testBtn;
 }
 
 void Game::renderAll(SDL_Renderer* renderer){
@@ -41,6 +52,9 @@ void Game::renderAll(SDL_Renderer* renderer){
     towerManager->renderAllTowers(renderer);
     enemyManager->renderAllEnemies(renderer);
     towerManager->renderAllProjectiles(renderer);
+
+    //TODO delete
+    testBtn->render(renderer);
 
     //TODO render UI
 

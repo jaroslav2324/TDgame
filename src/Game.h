@@ -6,6 +6,7 @@
 #include "Grid.h"
 #include "Portal.h"
 #include "Base.h"
+#include "UI/Button.h"
 
 /*main class for game*/
 class Game{
@@ -19,6 +20,9 @@ class Game{
     void renderAll(SDL_Renderer* renderer);
 
     private:
+
+    //TODO remove testbtn
+    Button* testBtn = nullptr;
     
     EnemyManager* enemyManager = nullptr;
     TowerManager* towerManager = nullptr;

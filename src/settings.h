@@ -29,3 +29,8 @@
 
 // relative path build/TowerDefence file
 #define TEST_SPRITE_PATH "../Assets/test.jpeg"
+
+#define TEST_BTN_BASIC_TEXTURE_PATH "../Assets/white_square.jpg"
+#define TEST_BTN_PRESSED_TEXTURE_PATH "../Assets/dark_grey_square.png"
+#define TEST_BTN_HOVERED_TEXTURE_PATH "../Assets/light_grey_square.jpg"
+
