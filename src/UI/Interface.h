@@ -1,8 +1,10 @@
 #include <vector>
+#include <iostream>
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
+#include "../settings.h"
 #include "Button.h"
 
 class Interface{
@@ -12,5 +14,6 @@ class Interface{
     void render(SDL_Renderer* renderer);
     private:   
     
-    //TODO add buttons
+    Button* buildTowerBtn = nullptr;
+    Button* spawnEnemyBtn = nullptr;
 };

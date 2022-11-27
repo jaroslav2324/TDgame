@@ -103,3 +103,16 @@ void Button::setModePressed(){
 void Button::setModeHovered(){
     currentBtnMode = HOVERED;
 }
+
+bool Button::isPointInRect(std::pair<int, int> point){
+    
+    int x1 = coords.first - BTN_WIDTH / 2;
+    int y1 = coords.second - BTN_HEIGHT / 2;
+
+    int x2 = coords.first + BTN_WIDTH / 2;
+    int y2 = coords.second + BTN_HEIGHT / 2;
+
+    if (point.first < x1 || point.second < y1 || point.first >= x2 || point.second >= y2)
+        return false;
+    return true;
+}

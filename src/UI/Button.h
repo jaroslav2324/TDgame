@@ -18,6 +18,8 @@ public:
     void setModePressed();
     void setModeHovered();
 
+    bool isPointInRect(std::pair<int, int> point);
+
 private:
 
     const int BTN_WIDTH = 100;
@@ -39,5 +41,6 @@ private:
     //TODO add mode changing(create cursor position seeker)
     int currentBtnMode = 0;
 
+    // center coords
     std::pair<float, float> coords;
 };

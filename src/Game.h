@@ -6,7 +6,7 @@
 #include "Grid.h"
 #include "Portal.h"
 #include "Base.h"
-#include "UI/Button.h"
+#include "UI/Interface.h"
 
 /*main class for game*/
 class Game{
@@ -21,8 +21,7 @@ class Game{
 
     private:
 
-    //TODO remove testbtn
-    Button* testBtn = nullptr;
+    Interface* interface = nullptr;
     
     EnemyManager* enemyManager = nullptr;
     TowerManager* towerManager = nullptr;

@@ -29,10 +29,18 @@ int main(int argc, char **argv)
 
 	Game* game = new Game(renderer);
 
-	game->renderAll(renderer);
+	SDL_Event event;
+	bool quit=false;
+	while (!quit) {
+			game->renderAll(renderer);
+			SDL_WaitEvent(&event);
 
-	SDL_Delay(10000);
-
+			switch (event.type) {
+				case SDL_QUIT:    
+					quit = true;        
+					break;
+			}
+	}
 	delete game;
 	
 	SDL_DestroyRenderer(renderer);
