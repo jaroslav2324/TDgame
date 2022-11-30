@@ -6,11 +6,12 @@ Interface::Interface(SDL_Renderer* renderer){
     buildTowerBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
                                          TEST_BTN_PRESSED_TEXTURE_PATH,
                                          TEST_BTN_HOVERED_TEXTURE_PATH,
-                                         std::make_pair(300, 500));
+                                         std::make_pair<float, float>(300, 40));
+
     spawnEnemyBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
                                          TEST_BTN_PRESSED_TEXTURE_PATH,
                                          TEST_BTN_HOVERED_TEXTURE_PATH,
-                                         std::make_pair(600, 500));
+                                         std::make_pair<float, float>(600, 40));
 }
 
 Interface::~Interface(){
@@ -24,7 +25,18 @@ Interface::~Interface(){
 
 void Interface::render(SDL_Renderer* renderer){
 
-    //TODO render back interface textures
+    SDL_SetRenderDrawColor(renderer, 150, 150, 100, 255);
+    SDL_Rect rect = {0, 0, 100, SCREEN_HEIGHT};
+    SDL_RenderFillRect(renderer, &rect);
+
+    rect = {0, 0, SCREEN_WIDTH, 80};
+    SDL_RenderFillRect(renderer, &rect);
+
+    rect = {0, SCREEN_HEIGHT - 10, SCREEN_WIDTH, 10};
+    SDL_RenderFillRect(renderer, &rect);
+
+    rect = {SCREEN_WIDTH - 10, 0, 10, SCREEN_HEIGHT};
+    SDL_RenderFillRect(renderer, &rect);
 
     // check howering ower btns
     int x, y;
