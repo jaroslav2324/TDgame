@@ -28,19 +28,7 @@ int main(int argc, char **argv)
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
 	Game* game = new Game(renderer);
-
-	SDL_Event event;
-	bool quit=false;
-	while (!quit) {
-			game->renderAll(renderer);
-			SDL_WaitEvent(&event);
-
-			switch (event.type) {
-				case SDL_QUIT:    
-					quit = true;        
-					break;
-			}
-	}
+	game->loop(renderer);
 	delete game;
 	
 	SDL_DestroyRenderer(renderer);

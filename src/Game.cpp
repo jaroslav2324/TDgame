@@ -54,20 +54,36 @@ void Game::renderAll(SDL_Renderer* renderer){
 
 void Game::loop(SDL_Renderer* renderer){
 
-    //TODO game loop
-    if (fpsTimer->tickIfNeeded()){
+    bool quit = false;
+    while (!quit){
+        
+  
+        if (fpsTimer->tickIfNeeded()){
 
-        towerManager->allTowersAttack(renderer);
+            // handle events
+            SDL_Event event;
+            while(SDL_PollEvent(&event)){
+                switch (event.type) {
+                    case SDL_QUIT:    
+                        quit = true;        
+                        break;
+                }
+            }
 
-        enemyManager->allEnemiesMove();
+            //FIXME seg fault
+            //towerManager->allTowersAttack(renderer);
 
-        //TODO spawn enemies if needed 
+            //enemyManager->allEnemiesMove();
 
-        //if base destroyed
-        if(base->noHitPoitsLeft()){
-            //TODO end game
+            //TODO spawn enemies if needed 
+
+            //if base destroyed
+            //if(base->noHitPoitsLeft()){
+                //TODO end game
+            //}
         }
-    }
 
-    renderAll(renderer);
+        renderAll(renderer);
+	}
+
 }
