@@ -104,6 +104,10 @@ void Button::setModeHovered(){
     currentBtnMode = HOVERED;
 }
 
+void Button::setRecentlyPressedFlag(){
+    buttonRecentlyPressed = true;
+}
+
 bool Button::isPointInRect(std::pair<int, int> point){
     
     int x1 = coords.first - BTN_WIDTH / 2;

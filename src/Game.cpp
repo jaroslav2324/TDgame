@@ -67,6 +67,11 @@ void Game::loop(SDL_Renderer* renderer){
                     case SDL_QUIT:    
                         quit = true;        
                         break;
+                    case SDL_MOUSEBUTTONDOWN:
+                        if (event.button.button == SDL_BUTTON_LEFT){
+                            //TODO get mouse position and save it to interface to render buttons
+                        }
+                            
                 }
             }
 

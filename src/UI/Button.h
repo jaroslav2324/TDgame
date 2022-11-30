@@ -18,6 +18,7 @@ public:
     void setModeBasic();
     void setModePressed();
     void setModeHovered();
+    void setRecentlyPressedFlag();
 
     bool isPointInRect(std::pair<int, int> point);
 
@@ -41,6 +42,8 @@ private:
 
     //TODO add mode changing(create cursor position seeker)
     int currentBtnMode = 0;
+
+    bool buttonRecentlyPressed = false;
 
     // center coords
     std::pair<float, float> coords;

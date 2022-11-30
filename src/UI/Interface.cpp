@@ -41,6 +41,8 @@ void Interface::render(SDL_Renderer* renderer){
     // check howering ower btns
     int x, y;
 
+    //TODO check pressing buttons
+
     SDL_GetMouseState(&x, &y);
 
     if (buildTowerBtn->isPointInRect(std::make_pair(x, y)))
