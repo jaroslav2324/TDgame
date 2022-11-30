@@ -1,6 +1,6 @@
 #include "Enemy.h"
 
-Enemy::Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, std::pair<float, float> coords){
+Enemy::Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Coords coords){
     //TODO implement constructor;
     //TODO add timers
     //TODO delete SDL_Renderer from constructor or move to fields of the class?
@@ -33,8 +33,8 @@ void Enemy::replaceToNextWaypointCoords(){
 void Enemy::MoveToNextWaypoint(double timePeriodOfMoving ){
 
     //find proportion of coords change
-    float diffX = coordsNextWaypoint.first - coordsCurrentWaypoint.first;
-    float diffY = coordsNextWaypoint.second - coordsCurrentWaypoint.second;
+    float diffX = coordsNextWaypoint.x - coordsCurrentWaypoint.x;
+    float diffY = coordsNextWaypoint.y - coordsCurrentWaypoint.y;
 
     float sumDiffXY = abs(diffX) + abs(diffY);
 
@@ -46,39 +46,39 @@ void Enemy::MoveToNextWaypoint(double timePeriodOfMoving ){
     float changeY = currentSpeed * proportionChangeY * timePeriodOfMoving;
 
     /*change coords*/
-    currentCoords.first += changeX;
-    currentCoords.second += changeY;
+    currentCoords.x += changeX;
+    currentCoords.y += changeY;
 }
 
 bool Enemy::ifWaypointPassed(){
 
-    float diffX = coordsNextWaypoint.first - coordsCurrentWaypoint.first;
-    float diffY = coordsNextWaypoint.second - coordsCurrentWaypoint.second;
+    float diffX = coordsNextWaypoint.x - coordsCurrentWaypoint.x;
+    float diffY = coordsNextWaypoint.y - coordsCurrentWaypoint.y;
 
     /*if diffX < 0 x coord of the next waypoint is left from current waypoint
       if diffX > 0 x coord of the next waypoint is right from current waypoint*/
     if (diffX < 0){
         /*if enemy passed by waypoint*/ 
-        if (currentCoords.first < coordsNextWaypoint.first)
-            currentCoords.first = coordsNextWaypoint.first;
+        if (currentCoords.x < coordsNextWaypoint.x)
+            currentCoords.x = coordsNextWaypoint.x;
     }
     else{
         /*if enemy passed by waypoint*/ 
-        if (currentCoords.first > coordsNextWaypoint.first)
-            currentCoords.first = coordsNextWaypoint.first;
+        if (currentCoords.x > coordsNextWaypoint.x)
+            currentCoords.x = coordsNextWaypoint.x;
     }
 
     /*if diffY < 0 y coord of the next waypoint is up from current waypoint
       if diffY > 0 y coord of the next waypoint is down from current waypoint*/
     if (diffX < 0){
         /*if enemy passed by waypoint*/ 
-        if (currentCoords.second < coordsNextWaypoint.second)
-            currentCoords.second = coordsNextWaypoint.second;
+        if (currentCoords.y < coordsNextWaypoint.y)
+            currentCoords.y = coordsNextWaypoint.y;
     }
     else{
         /*if enemy passed by waypoint*/ 
-        if (currentCoords.second > coordsNextWaypoint.second)
-            currentCoords.second = coordsNextWaypoint.second;
+        if (currentCoords.y > coordsNextWaypoint.y)
+            currentCoords.y = coordsNextWaypoint.y;
     }
 
     if (ifPixelCoordsApprEqual(currentCoords, coordsNextWaypoint))
@@ -88,17 +88,17 @@ bool Enemy::ifWaypointPassed(){
 }
 
 /*Copy coordinates from source to destination*/
-void Enemy::copyCoords(std::pair<float, float>& destination, std::pair<float, float>& source){
-    destination.first = source.first;
-    destination.second = source.second;
+void Enemy::copyCoords(Coords& destination, Coords& source){
+    destination.x = source.x;
+    destination.y = source.y;
 }
 
 float Enemy::getCoordX(){
-    return currentCoords.first;
+    return currentCoords.x;
 }
 
 float Enemy::getCoordY(){
-    return currentCoords.second;
+    return currentCoords.y;
 }
 
 /*hit Enemy*/
@@ -152,7 +152,7 @@ void Enemy::move(){
 }
 
 bool Enemy::isNearBase(){
-    std::pair<float, float> baseCoords = way->getLastCoords();
+    Coords baseCoords = way->getLastCoords();
     if (ifPixelCoordsApprEqual(currentCoords, baseCoords))
         return true;
     return false;
@@ -178,8 +178,8 @@ void Enemy::loadTexture(SDL_Renderer* renderer){
 
 void Enemy::render(SDL_Renderer* renderer){
 
-    int x = currentCoords.first - ENEMY_SPRITE_SIZE / 2;
-    int y = currentCoords.second - ENEMY_SPRITE_SIZE / 2;
+    int x = currentCoords.x - ENEMY_SPRITE_SIZE / 2;
+    int y = currentCoords.y - ENEMY_SPRITE_SIZE / 2;
     SDL_Rect enemyRect = {x, y, ENEMY_SPRITE_SIZE, ENEMY_SPRITE_SIZE};
     SDL_RenderCopy(renderer, enemyTexture, 0, &enemyRect);
 }

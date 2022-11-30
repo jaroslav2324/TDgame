@@ -16,9 +16,9 @@ using std::string;
 /*Basic class for all towers*/
 class Tower{
 public:
-    Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, std::pair<float, float> coords);
+    Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, Coords coords);
     //TODO end constructor
-    Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, std::pair<float, float> coords);
+    Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords);
     ~Tower();
 
     float getDamage();
@@ -52,7 +52,7 @@ protected:
     //in milliseconds
     float attackSpeed = 0;
     
-    std::pair<float, float> towerCoords;
+    Coords towerCoords;
 
     std::pair<int, int> gridCoords;
 
@@ -85,6 +85,6 @@ protected:
     void setDamage(float damage);
     void setRadius(float radius);
     void setLevel(int level);
-    void setCoords(std::pair<float, float> coords);
+    void setCoords(Coords coords);
     void setGridCoords(std::pair<int, int> gridCoords);
 };

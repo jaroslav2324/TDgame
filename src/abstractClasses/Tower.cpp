@@ -1,6 +1,6 @@
 #include "Tower.h"
 
-Tower::Tower(SDL_Renderer* renderer, EnemyManager* enemyManager, std::pair<float, float> coords){
+Tower::Tower(SDL_Renderer* renderer, EnemyManager* enemyManager, Coords coords){
     //TODO delete SDL_Renderer from constructor or move to fields of the class?
 
     Tower::enemyManager = enemyManager;
@@ -15,7 +15,7 @@ Tower::Tower(SDL_Renderer* renderer, EnemyManager* enemyManager, std::pair<float
     }
 }
 
-Tower::Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, std::pair<float, float> coords){
+Tower::Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords){
     //TODO delete SDL_Renderer from constructor or move to fields of the class?
 
     Tower::enemyManager = enemyManager;
@@ -69,7 +69,7 @@ void Tower::setExpForKill(float exp){
     expForKill = exp;
 }
 
-void Tower::setCoords(std::pair<float, float> coords){
+void Tower::setCoords(Coords coords){
     Tower::towerCoords = coords;
 }
 
@@ -158,8 +158,8 @@ void Tower::loadTexture(SDL_Renderer* renderer){
 
 void Tower::render(SDL_Renderer* renderer){
 
-    int x = towerCoords.first - TOWER_SPRITE_SIZE / 2;
-    int y = towerCoords.second - TOWER_SPRITE_SIZE / 2;
+    int x = towerCoords.x - TOWER_SPRITE_SIZE / 2;
+    int y = towerCoords.y - TOWER_SPRITE_SIZE / 2;
     SDL_Rect towerRect = {x, y, TOWER_SPRITE_SIZE, TOWER_SPRITE_SIZE};
     SDL_RenderCopy(renderer, towerTexture, 0, &towerRect);
 }

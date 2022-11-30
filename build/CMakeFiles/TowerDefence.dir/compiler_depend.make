@@ -260,7 +260,8 @@ CMakeFiles/TowerDefence.dir/src/Base.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /usr/local/include/SDL2/SDL_misc.h \
   /usr/local/include/SDL2/SDL_image.h \
   /usr/local/include/SDL2/SDL.h \
-  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+  /home/jaros/gitProjects/c++/TDgame/src/settings.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
 
 CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.cpp \
   /usr/include/stdc-predef.h \
@@ -322,7 +323,8 @@ CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.o: /home/jaros/gitProjects/c++/TD
   /usr/include/c++/11/bits/enable_special_members.h \
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
-  /usr/include/c++/11/bits/erase_if.h
+  /usr/include/c++/11/bits/erase_if.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
 
 CMakeFiles/TowerDefence.dir/src/Game.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/Game.cpp \
   /usr/include/stdc-predef.h \
@@ -697,10 +699,12 @@ CMakeFiles/TowerDefence.dir/src/Game.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \
   /home/jaros/gitProjects/c++/TDgame/src/Portal.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.h \
   /home/jaros/gitProjects/c++/TDgame/src/TowerTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.h \
@@ -708,8 +712,10 @@ CMakeFiles/TowerDefence.dir/src/Game.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/Grid.h \
   /home/jaros/gitProjects/c++/TDgame/src/GridTile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/UI/Interface.h \
-  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
+  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
 
 CMakeFiles/TowerDefence.dir/src/Grid.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/Grid.cpp \
   /usr/include/stdc-predef.h \
@@ -2739,6 +2745,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o: /home/jaros/gitProj
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
@@ -3483,12 +3490,14 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: /home/jaros/gitProj
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \
   /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h \
   /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/Portal.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
 
 CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.cpp \
@@ -3587,7 +3596,8 @@ CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o: /home/jaros/gitProj
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
-  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+  /home/jaros/gitProjects/c++/TDgame/src/settings.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
 
 CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.cpp \
   /usr/include/stdc-predef.h \
@@ -3954,6 +3964,7 @@ CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o: /home/jaros/gitProject
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
@@ -5090,10 +5101,12 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \
   /home/jaros/gitProjects/c++/TDgame/src/Portal.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.h \
   /home/jaros/gitProjects/c++/TDgame/src/TowerTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.h \
@@ -5101,8 +5114,10 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/Grid.h \
   /home/jaros/gitProjects/c++/TDgame/src/GridTile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/UI/Interface.h \
-  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
+  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
 
 CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.cpp \
   /usr/include/stdc-predef.h \
@@ -5476,12 +5491,14 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \
   /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h \
   /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/Portal.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
 
 
@@ -5650,6 +5667,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 /usr/include/c++/11/new:
 
 /usr/include/c++/11/unordered_map:
+
+/home/jaros/gitProjects/c++/TDgame/src/Coords.h:
 
 /home/jaros/gitProjects/c++/TDgame/src/settings.h:
 

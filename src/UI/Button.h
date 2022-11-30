@@ -3,14 +3,16 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
+#include "../Coords.h"
+
 using std::string;
 
 class Button
 {
 public:
 
-    Button(SDL_Renderer* renderer, string& btnImgPath, string& btnPressedImgPath, string& btnHoveredImgPath, std::pair<float, float> coords);
-    Button(SDL_Renderer* renderer, const char* btnImgPath, const char* btnPressedImgPath, const char* btnHoveredImgPath, std::pair<float, float> coords);
+    Button(SDL_Renderer* renderer, string& btnImgPath, string& btnPressedImgPath, string& btnHoveredImgPath, Coords coords);
+    Button(SDL_Renderer* renderer, const char* btnImgPath, const char* btnPressedImgPath, const char* btnHoveredImgPath, Coords coords);
     ~Button();
 
     void render(SDL_Renderer* renderer);
@@ -20,7 +22,7 @@ public:
     void setModeHovered();
     void setRecentlyPressedFlag();
 
-    bool isPointInRect(std::pair<int, int> point);
+    bool isPointInRect(Coords point);
 
 private:
 
@@ -46,5 +48,5 @@ private:
     bool buttonRecentlyPressed = false;
 
     // center coords
-    std::pair<float, float> coords;
+    Coords coords;
 };

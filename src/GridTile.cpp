@@ -3,12 +3,12 @@
 #include "settings.h"
 #include "GridTile.h"
 
-GridTile::GridTile(SDL_Renderer* renderer, std::pair<float, float> coords){
+GridTile::GridTile(SDL_Renderer* renderer, Coords coords){
     GridTile::coords = coords;
     loadTexture(renderer);
 }
 
-GridTile::GridTile(SDL_Renderer* renderer, std::string& spritePath, std::pair<float, float> coords){
+GridTile::GridTile(SDL_Renderer* renderer, std::string& spritePath, Coords coords){
     GridTile::coords = coords;
     GridTile::spritePath = spritePath;
     loadTexture(renderer);
@@ -32,8 +32,8 @@ void GridTile::loadTexture(SDL_Renderer* renderer){
 
 void GridTile::render(SDL_Renderer* renderer){
 
-    int x = coords.first - TILESIZE/ 2;
-    int y = coords.second - TILESIZE / 2;
+    int x = coords.x - TILESIZE/ 2;
+    int y = coords.y - TILESIZE / 2;
     SDL_Rect tileRect = {x, y, TILESIZE, TILESIZE};
     SDL_RenderCopy(renderer, tileTexture, 0, &tileRect);
 }

@@ -1,13 +1,13 @@
 #include "Button.h"
 
-Button::Button(SDL_Renderer* renderer, string& btnImgPath, string& btnPressedImgPath, string& btnHoveredImgPath, std::pair<float, float> coords){
+Button::Button(SDL_Renderer* renderer, string& btnImgPath, string& btnPressedImgPath, string& btnHoveredImgPath, Coords coords){
 
     Button::coords = coords;
 
     loadTextures(renderer, btnImgPath, btnPressedImgPath, btnHoveredImgPath);
 }
 
-Button::Button(SDL_Renderer* renderer, const char* btnImgPath, const char* btnPressedImgPath, const char* btnHoveredImgPath, std::pair<float, float> coords){
+Button::Button(SDL_Renderer* renderer, const char* btnImgPath, const char* btnPressedImgPath, const char* btnHoveredImgPath, Coords coords){
 
     Button::coords = coords;
 
@@ -72,8 +72,8 @@ void Button::loadTextures(SDL_Renderer* renderer, const char* btnImgPath, const 
 
 void Button::render(SDL_Renderer* renderer){
 
-    int x = coords.first - BTN_WIDTH / 2;
-    int y = coords.second - BTN_HEIGHT / 2;
+    int x = coords.x - BTN_WIDTH / 2;
+    int y = coords.y - BTN_HEIGHT / 2;
     SDL_Rect btnRect = {x, y, BTN_WIDTH, BTN_HEIGHT};
 
     switch (currentBtnMode)
@@ -108,15 +108,15 @@ void Button::setRecentlyPressedFlag(){
     buttonRecentlyPressed = true;
 }
 
-bool Button::isPointInRect(std::pair<int, int> point){
+bool Button::isPointInRect(Coords point){
     
-    int x1 = coords.first - BTN_WIDTH / 2;
-    int y1 = coords.second - BTN_HEIGHT / 2;
+    int x1 = coords.x - BTN_WIDTH / 2;
+    int y1 = coords.y - BTN_HEIGHT / 2;
 
-    int x2 = coords.first + BTN_WIDTH / 2;
-    int y2 = coords.second + BTN_HEIGHT / 2;
+    int x2 = coords.x + BTN_WIDTH / 2;
+    int y2 = coords.y + BTN_HEIGHT / 2;
 
-    if (point.first < x1 || point.second < y1 || point.first >= x2 || point.second >= y2)
+    if (point.x < x1 || point.y < y1 || point.x >= x2 || point.y >= y2)
         return false;
     return true;
 }

@@ -6,12 +6,13 @@
 #include "SDL2/SDL_image.h"
 
 #include "settings.h"
+#include "Coords.h"
 
 class Base{
     public:
     //TODO add interaction with end game interfase
     //TODO end game
-    Base(SDL_Renderer* renderer, std::pair<float, float> spawnCoords);
+    Base(SDL_Renderer* renderer, Coords spawnCoords);
     ~Base();
 
     int getHitPoits();
@@ -25,7 +26,7 @@ class Base{
     private:
     int hitPoints;
 
-    std::pair<float, float> coords;
+    Coords coords;
 
     SDL_Texture* baseTexture = nullptr;
 

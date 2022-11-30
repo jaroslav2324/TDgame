@@ -6,12 +6,12 @@ Interface::Interface(SDL_Renderer* renderer){
     buildTowerBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
                                          TEST_BTN_PRESSED_TEXTURE_PATH,
                                          TEST_BTN_HOVERED_TEXTURE_PATH,
-                                         std::make_pair<float, float>(300, 40));
+                                         Coords(300, 40));
 
     spawnEnemyBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
                                          TEST_BTN_PRESSED_TEXTURE_PATH,
                                          TEST_BTN_HOVERED_TEXTURE_PATH,
-                                         std::make_pair<float, float>(600, 40));
+                                         Coords(600, 40));
 }
 
 Interface::~Interface(){
@@ -45,12 +45,12 @@ void Interface::render(SDL_Renderer* renderer){
 
     SDL_GetMouseState(&x, &y);
 
-    if (buildTowerBtn->isPointInRect(std::make_pair(x, y)))
+    if (buildTowerBtn->isPointInRect(Coords(x, y)))
         buildTowerBtn->setModeHovered();
     else
         buildTowerBtn->setModeBasic();
 
-    if (spawnEnemyBtn->isPointInRect(std::make_pair(x, y)))
+    if (spawnEnemyBtn->isPointInRect(Coords(x, y)))
         spawnEnemyBtn->setModeHovered();
     else
         spawnEnemyBtn->setModeBasic();

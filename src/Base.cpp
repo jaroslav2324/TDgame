@@ -1,6 +1,6 @@
 #include "Base.h"
 
-Base::Base(SDL_Renderer* renderer, std::pair<float, float> spawnCoords){
+Base::Base(SDL_Renderer* renderer, Coords spawnCoords){
     coords = spawnCoords;
     
     loadTexture(renderer);
@@ -42,8 +42,8 @@ void Base::loadTexture(SDL_Renderer* renderer){
 
 void Base::render(SDL_Renderer* renderer){
 
-    int x = coords.first - TILESIZE / 2;
-    int y = coords.second - TILESIZE / 2;
+    int x = coords.x - TILESIZE / 2;
+    int y = coords.y - TILESIZE / 2;
     SDL_Rect baseRect = {x, y, TILESIZE, TILESIZE};
     SDL_RenderCopy(renderer, baseTexture, 0, &baseRect);
 }

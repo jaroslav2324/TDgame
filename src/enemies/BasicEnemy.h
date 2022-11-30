@@ -6,7 +6,7 @@
 
 class BasicEnemy: public Enemy{
     public:
-    BasicEnemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, std::pair<float, float> coords): Enemy(renderer, way, base, coords){
+    BasicEnemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Coords coords): Enemy(renderer, way, base, coords){
         setMovementTimer();
     };
 

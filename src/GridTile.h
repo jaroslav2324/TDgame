@@ -4,17 +4,19 @@
 
 #include "SDL2/SDL.h"
 
+#include "Coords.h"
+
 /*class for tile of the grid*/
 class GridTile{
     public:
-    GridTile(SDL_Renderer* renderer, std::pair<float, float> coords);
-    GridTile(SDL_Renderer* renderer, std::string& spritePath, std::pair<float, float> coords);
+    GridTile(SDL_Renderer* renderer, Coords coords);
+    GridTile(SDL_Renderer* renderer, std::string& spritePath, Coords coords);
     ~GridTile();
 
     void render(SDL_Renderer* renderer);
     
     private:
-    std::pair<float, float> coords;
+    Coords coords;
 
     std::string spritePath = "";
 

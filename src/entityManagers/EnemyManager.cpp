@@ -16,7 +16,7 @@ EnemyManager::~EnemyManager(){
 }
 
 
-void EnemyManager::spawnEnemy(SDL_Renderer* renderer,int enemyType, std::pair<float, float> coords){
+void EnemyManager::spawnEnemy(SDL_Renderer* renderer,int enemyType, Coords coords){
     //TODO add types of enemies
     Enemy* enemy = nullptr;
 
@@ -52,14 +52,14 @@ void EnemyManager::killEnemy(Enemy* enemy){
 /*
 coordX, coordY - coords of the tower(not grid coords);
 */
-Enemy* EnemyManager::findFirstEnemyForTower(std::pair<float, float> towerCoords, float radius){
+Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, float radius){
 
     float diffX, diffY;
     float squareDistance, squareRadius;
 
     for (auto enemy: enemyList){
-        diffX = abs(enemy->getCoordX() - towerCoords.first);
-        diffY = abs(enemy->getCoordY() - towerCoords.second);
+        diffX = abs(enemy->getCoordX() - towerCoords.x);
+        diffY = abs(enemy->getCoordY() - towerCoords.y);
 
         squareDistance = pow(diffX, 2) + pow(diffY, 2); //between tower and enemy
         squareRadius = pow(radius, 2);
@@ -72,7 +72,7 @@ Enemy* EnemyManager::findFirstEnemyForTower(std::pair<float, float> towerCoords,
 }
 
 
-Enemy* EnemyManager::findNearestEnemyForTower(std::pair<float, float> towerCoords, float radius){
+Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, float radius){
 
     float diffX, diffY;
     float minDiffX, minDiffY;
@@ -81,8 +81,8 @@ Enemy* EnemyManager::findNearestEnemyForTower(std::pair<float, float> towerCoord
     Enemy* returnEnemy = nullptr;
 
     for (auto enemy: enemyList){
-        diffX = abs(enemy->getCoordX() - towerCoords.first);
-        diffY = abs(enemy->getCoordY() - towerCoords.second);
+        diffX = abs(enemy->getCoordX() - towerCoords.x);
+        diffY = abs(enemy->getCoordY() - towerCoords.y);
 
         squareDistance = pow(diffX, 2) + pow(diffY, 2); //between tower and enemy
         squareRadius = pow(radius, 2);

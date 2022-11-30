@@ -17,8 +17,8 @@ Game::Game(SDL_Renderer* renderer){
     interface = new Interface(renderer);
 
     //TODO delete test
-    towerManager->buildTower(renderer, BASIC_TOWER, std::make_pair(250, 250));
-    enemyManager->spawnEnemy(renderer, BASIC_ENEMY, std::make_pair(450, 450));
+    towerManager->buildTower(renderer, BASIC_TOWER, Coords(250, 250));
+    enemyManager->spawnEnemy(renderer, BASIC_ENEMY, Coords(450, 450));
 }
 
 Game::~Game(){

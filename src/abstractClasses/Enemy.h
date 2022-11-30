@@ -16,7 +16,7 @@ using std::string;
 class Enemy{
     
 public:
-    Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, std::pair<float, float> coords);
+    Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Coords coords);
     ~Enemy();
 
     void move();
@@ -52,9 +52,9 @@ protected:
     bool isFreezed = false;
 
     int numCurrentWaypoint = 0;
-    std::pair<float, float> currentCoords;
-    std::pair<float, float> coordsCurrentWaypoint;
-    std::pair<float, float> coordsNextWaypoint;
+    Coords currentCoords;
+    Coords coordsCurrentWaypoint;
+    Coords coordsNextWaypoint;
 
     //TODO implement Timer
     //TODO add system changing timer
@@ -71,7 +71,7 @@ protected:
     bool ifWaypointPassed();
     void replaceToNextWaypointCoords();
 
-    void copyCoords(std::pair<float, float>& destination, std::pair<float, float>& source);
+    void copyCoords(Coords& destination, Coords& source);
     
     SDL_Texture* enemyTexture = nullptr;
 };

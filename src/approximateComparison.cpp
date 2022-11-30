@@ -12,10 +12,10 @@ bool ifPixelCoordsApprEqual(float x1, float y1, float x2, float y2){
     return false;
 }
 
-bool ifPixelCoordsApprEqual(std::pair<float, float>& first, std::pair<float, float>& second){
+bool ifPixelCoordsApprEqual(Coords first, Coords second){
 
-    float diffX = abs(first.first - second.first);
-    float diffY = abs(first.second - second.second);
+    float diffX = abs(first.x - second.x);
+    float diffY = abs(first.x - second.x);
 
     float diffBetweenPoints = sqrt(pow(diffX, 2) + pow(diffY, 2));
 

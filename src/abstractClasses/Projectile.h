@@ -8,7 +8,7 @@
 */
 class Projectile{
     public:
-    Projectile(SDL_Renderer* renderer, Enemy* aimedEnemy, std::pair<float, float> spawnCoords);
+    Projectile(SDL_Renderer* renderer, Enemy* aimedEnemy, Coords spawnCoords);
     //TODO add constructor setting private fields
     ~Projectile();
 
@@ -34,7 +34,7 @@ class Projectile{
     Enemy* aimedEnemy;
     PeriodicTimer* movementTimer;
 
-    std::pair<float, float> currentCoords;
+    Coords currentCoords;
 
     SDL_Texture* projectileTexture = nullptr;
     

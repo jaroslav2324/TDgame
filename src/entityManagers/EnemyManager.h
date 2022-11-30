@@ -14,10 +14,10 @@ class EnemyManager{
     EnemyManager(Base* base, EnemiesWay* enemiesWay);
     ~EnemyManager();
 
-    Enemy* findFirstEnemyForTower(std::pair<float, float> towerCoords, float radius);
-    Enemy* findNearestEnemyForTower(std::pair<float, float> towerCoords, float radius);
+    Enemy* findFirstEnemyForTower(Coords towerCoords, float radius);
+    Enemy* findNearestEnemyForTower(Coords towerCoords, float radius);
         
-    void spawnEnemy(SDL_Renderer* renderer, int enemyType, std::pair<float, float> coords);
+    void spawnEnemy(SDL_Renderer* renderer, int enemyType, Coords coords);
     //TODO spawnEnemies
     void addSpawnedEnemy(Enemy*);
     void killEnemy(Enemy*);
