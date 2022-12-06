@@ -704,7 +704,6 @@ CMakeFiles/TowerDefence.dir/src/Game.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \
   /home/jaros/gitProjects/c++/TDgame/src/Portal.h \
-  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.h \
   /home/jaros/gitProjects/c++/TDgame/src/TowerTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.h \
@@ -712,10 +711,14 @@ CMakeFiles/TowerDefence.dir/src/Game.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/Grid.h \
   /home/jaros/gitProjects/c++/TDgame/src/GridTile.h \
-  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/UI/Interface.h \
-  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h \
-  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_queue.h \
+  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
 
 CMakeFiles/TowerDefence.dir/src/Grid.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/Grid.cpp \
   /usr/include/stdc-predef.h \
@@ -1035,7 +1038,8 @@ CMakeFiles/TowerDefence.dir/src/Grid.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /usr/include/asm-generic/errno-base.h \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
-  /usr/include/c++/11/bits/basic_string.tcc
+  /usr/include/c++/11/bits/basic_string.tcc \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
 
 CMakeFiles/TowerDefence.dir/src/GridTile.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/GridTile.cpp \
   /usr/include/stdc-predef.h \
@@ -1356,7 +1360,8 @@ CMakeFiles/TowerDefence.dir/src/GridTile.cpp.o: /home/jaros/gitProjects/c++/TDga
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
-  /usr/local/include/SDL2/SDL.h
+  /usr/local/include/SDL2/SDL.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
 
 CMakeFiles/TowerDefence.dir/src/Timers.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/Timers.cpp \
   /usr/include/stdc-predef.h \
@@ -2023,7 +2028,38 @@ CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o: /home/jaros/gitProjects/c++/TDg
   /usr/local/include/SDL2/SDL_locale.h \
   /usr/local/include/SDL2/SDL_misc.h \
   /usr/local/include/SDL2/SDL_image.h \
-  /usr/local/include/SDL2/SDL.h
+  /usr/local/include/SDL2/SDL.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Timers.h \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/locale_classes.h \
+  /usr/include/c++/11/bits/locale_classes.tcc \
+  /usr/include/c++/11/system_error \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
+  /usr/include/c++/11/stdexcept \
+  /usr/include/c++/11/streambuf \
+  /usr/include/c++/11/bits/streambuf.tcc \
+  /usr/include/c++/11/bits/basic_ios.h \
+  /usr/include/c++/11/bits/locale_facets.h \
+  /usr/include/c++/11/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+  /usr/include/c++/11/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+  /usr/include/c++/11/bits/locale_facets.tcc \
+  /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/bits/istream.tcc
 
 CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/UI/Interface.cpp \
   /usr/include/stdc-predef.h \
@@ -2075,6 +2111,15 @@ CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.o: /home/jaros/gitProjects/c++/
   /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/range_access.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_function.h \
+  /usr/include/c++/11/backward/binders.h \
+  /usr/include/c++/11/bits/stl_queue.h \
+  /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
@@ -2155,8 +2200,6 @@ CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.o: /home/jaros/gitProjects/c++/
   /usr/include/c++/11/string \
   /usr/include/c++/11/bits/ostream_insert.h \
   /usr/include/c++/11/bits/cxxabi_forced.h \
-  /usr/include/c++/11/bits/stl_function.h \
-  /usr/include/c++/11/backward/binders.h \
   /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/string_view \
   /usr/include/c++/11/bits/string_view.tcc \
@@ -2379,7 +2422,9 @@ CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.o: /home/jaros/gitProjects/c++/
   /usr/local/include/SDL2/SDL_image.h \
   /usr/local/include/SDL2/SDL.h \
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
-  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
+  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Timers.h
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.cpp \
   /usr/include/stdc-predef.h \
@@ -3115,6 +3160,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o: /home/jaros/gi
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
@@ -3497,7 +3543,6 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: /home/jaros/gitProj
   /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/Portal.h \
-  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
 
 CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.cpp \
@@ -4341,6 +4386,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o: /home/jaros/g
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \
@@ -4720,6 +4766,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: /home/jaros/g
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \
   /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h \
@@ -5106,7 +5153,6 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \
   /home/jaros/gitProjects/c++/TDgame/src/Portal.h \
-  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.h \
   /home/jaros/gitProjects/c++/TDgame/src/TowerTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.h \
@@ -5114,10 +5160,14 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/Grid.h \
   /home/jaros/gitProjects/c++/TDgame/src/GridTile.h \
-  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/UI/Interface.h \
-  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h \
-  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_queue.h \
+  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
 
 CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.cpp \
   /usr/include/stdc-predef.h \
@@ -5498,7 +5548,6 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
   /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/Portal.h \
-  /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
 
 
@@ -5512,6 +5561,10 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 
 /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h:
 
+/usr/include/c++/11/bits/stl_queue.h:
+
+/usr/include/c++/11/bits/stl_heap.h:
+
 /home/jaros/gitProjects/c++/TDgame/src/UI/Interface.h:
 
 /home/jaros/gitProjects/c++/TDgame/src/GridTile.h:
@@ -5521,6 +5574,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.h:
 
 /home/jaros/gitProjects/c++/TDgame/src/Portal.h:
+
+/usr/include/c++/11/bits/deque.tcc:
 
 /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h:
 
@@ -5653,6 +5708,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 /usr/include/c++/11/bits/hashtable.h:
 
 /usr/include/c++/11/backward/binders.h:
+
+/usr/include/c++/11/bits/stl_deque.h:
 
 /usr/include/c++/11/bits/stl_function.h:
 
@@ -5978,6 +6035,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vp2intersectvlintrin.h:
 
+/usr/include/c++/11/queue:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/waitpkgintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
@@ -6113,6 +6172,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 /usr/lib/gcc/x86_64-linux-gnu/11/include/enqcmdintrin.h:
 
 /usr/local/include/SDL2/SDL_misc.h:
+
+/usr/include/c++/11/deque:
 
 /usr/include/c++/11/bits/string_view.tcc:
 

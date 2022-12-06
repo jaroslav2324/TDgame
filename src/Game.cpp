@@ -10,7 +10,7 @@ Game::Game(SDL_Renderer* renderer){
     enemyManager = new EnemyManager(base, enemiesWay);
     towerManager = new TowerManager(enemyManager);
 
-    fpsTimer = new PeriodicTimer(1 / FPS);
+    fpsTimer = new PeriodicTimer(1 / FPS * 1000);
 
     grid = new Grid(renderer);
 
@@ -55,24 +55,29 @@ void Game::renderAll(SDL_Renderer* renderer){
 void Game::loop(SDL_Renderer* renderer){
 
     bool quit = false;
+    
     while (!quit){
-        
-  
-        if (fpsTimer->tickIfNeeded()){
 
-            // handle events
-            SDL_Event event;
-            while(SDL_PollEvent(&event)){
-                switch (event.type) {
-                    case SDL_QUIT:    
-                        quit = true;        
-                        break;
-                    case SDL_MOUSEBUTTONDOWN:
-                        if (event.button.button == SDL_BUTTON_LEFT){
-                            //TODO get mouse position and save it to interface to render buttons
-                        }
-                            
-                }
+        // handle events
+        SDL_Event event;
+        while(SDL_PollEvent(&event)){
+            switch (event.type) {
+                case SDL_QUIT:    
+                    quit = true;        
+                    break;
+                case SDL_MOUSEBUTTONDOWN:
+                    if (event.button.button == SDL_BUTTON_LEFT){
+                        int x, y;
+                        SDL_GetMouseState(&x, &y);
+                        interface->saveMouseClickCoords(Coords(x, y));
+                    }      
+            }
+            
+        //int cnt = 0;
+        if (fpsTimer->tickIfNeeded()){
+            //cout << cnt << endl;
+            //cnt++;
+
             }
 
             //FIXME seg fault

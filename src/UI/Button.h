@@ -4,6 +4,7 @@
 #include <SDL2/SDL_image.h>
 
 #include "../Coords.h"
+#include "../Timers.h"
 
 using std::string;
 
@@ -21,6 +22,7 @@ public:
     void setModePressed();
     void setModeHovered();
     void setRecentlyPressedFlag();
+    void unsetRecentlyPressedFlag();
 
     bool isPointInRect(Coords point);
 
@@ -42,10 +44,12 @@ private:
         HOVERED
     };
 
-    //TODO add mode changing(create cursor position seeker)
+    CountdownTimer* showPressedButtonTimer = nullptr;
+    
     int currentBtnMode = 0;
 
-    bool buttonRecentlyPressed = false;
+    // in milliseconds
+    const double showPressedButtonTime = 250;
 
     // center coords
     Coords coords;

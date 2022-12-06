@@ -1,6 +1,6 @@
 #pragma once
 
-#define FPS 60
+#define FPS 60.0
 
 #define MAX_TOWER_LEVEL 9
 

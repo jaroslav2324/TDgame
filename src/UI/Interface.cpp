@@ -55,8 +55,22 @@ void Interface::render(SDL_Renderer* renderer){
     else
         spawnEnemyBtn->setModeBasic();
 
+    while(!savedMouseClicks.empty()){
+        Coords mouseCoords = savedMouseClicks.front();
+        savedMouseClicks.pop();
+        
+        if (buildTowerBtn->isPointInRect(mouseCoords))
+            buildTowerBtn->setModePressed();
+        if (spawnEnemyBtn->isPointInRect(mouseCoords))
+            spawnEnemyBtn->setModePressed();
+    }
+
     // then render buttons
     buildTowerBtn->render(renderer);
     spawnEnemyBtn->render(renderer);
 
+}
+
+void Interface::saveMouseClickCoords(Coords coords){
+    savedMouseClicks.push(coords);
 }
