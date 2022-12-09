@@ -2,7 +2,7 @@
 #include "Portal.h"
 
 Portal::Portal(SDL_Renderer* renderer, Coords coords){
-    coords = coords;
+    Portal::coords = coords;
     loadTexture(renderer);
 }
 

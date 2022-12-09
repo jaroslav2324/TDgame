@@ -1,8 +1,12 @@
 #pragma once
 
 #include <unordered_map>
+#include <iostream>
 
 #include "Coords.h"
+
+using std::cout;
+using std::endl;
 /*
 class-conatiner of waypoint coords
 portal is always the first waypoint
@@ -16,7 +20,10 @@ class EnemiesWay{
     Coords getLastCoords();
     Coords getWaypointCoords(int numWaypoint);
 
+    int getAmountWaypoints();
+
     private:
+    int amountWaypoints = -1;
 
     std::unordered_map<int, Coords> dictOfWaypoints;
 };
