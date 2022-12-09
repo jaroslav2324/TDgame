@@ -1,6 +1,9 @@
 #include "Interface.h"
 
-Interface::Interface(SDL_Renderer* renderer){
+Interface::Interface(SDL_Renderer* renderer, TowerManager* towerManager, EnemyManager* enemyManager){
+
+    this->towerManager = towerManager;
+    this->enemyManager = enemyManager;
 
     //TODO change button textures
     buildTowerBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
@@ -41,8 +44,6 @@ void Interface::render(SDL_Renderer* renderer){
     // check howering ower btns
     int x, y;
 
-    //TODO check pressing buttons
-
     SDL_GetMouseState(&x, &y);
 
     if (buildTowerBtn->isPointInRect(Coords(x, y)))
@@ -55,14 +56,25 @@ void Interface::render(SDL_Renderer* renderer){
     else
         spawnEnemyBtn->setModeBasic();
 
+    // check pressing on buttons
     while(!savedMouseClicks.empty()){
         Coords mouseCoords = savedMouseClicks.front();
         savedMouseClicks.pop();
-        
-        if (buildTowerBtn->isPointInRect(mouseCoords))
+
+        if (buildTowerBtn->isPointInRect(mouseCoords)){
             buildTowerBtn->setModePressed();
-        if (spawnEnemyBtn->isPointInRect(mouseCoords))
+            srand(time(0));
+            int x = rand() % SCREEN_WIDTH;
+            int y = rand() % SCREEN_HEIGHT;
+            towerManager->buildTower(renderer, BASIC_TOWER, Coords(x, y));
+        }
+        if (spawnEnemyBtn->isPointInRect(mouseCoords)){
             spawnEnemyBtn->setModePressed();
+            srand(time(0));
+            int x = rand() % SCREEN_WIDTH;
+            int y = rand() % SCREEN_HEIGHT;
+            enemyManager->spawnEnemy(renderer, BASIC_ENEMY, Coords(x, y));
+        }
     }
 
     // then render buttons

@@ -14,11 +14,8 @@ Game::Game(SDL_Renderer* renderer){
 
     grid = new Grid(renderer);
 
-    interface = new Interface(renderer);
+    interface = new Interface(renderer, towerManager, enemyManager);
 
-    //TODO delete test
-    towerManager->buildTower(renderer, BASIC_TOWER, Coords(250, 250));
-    enemyManager->spawnEnemy(renderer, BASIC_ENEMY, Coords(450, 450));
 }
 
 Game::~Game(){
@@ -72,7 +69,7 @@ void Game::loop(SDL_Renderer* renderer){
                         interface->saveMouseClickCoords(Coords(x, y));
                     }      
             }
-            
+
         //int cnt = 0;
         if (fpsTimer->tickIfNeeded()){
             //cout << cnt << endl;

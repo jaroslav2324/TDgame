@@ -4,6 +4,18 @@ TowerManager::TowerManager(EnemyManager* enemyManager){
     TowerManager::enemyManager = enemyManager;
 }
 
+TowerManager::~TowerManager(){
+
+    // delete towers
+    int size = towerList.size();
+    for (int i = size - 1; i >= 0; i--){
+        if (towerList[i] != nullptr)
+            delete towerList[i];
+        towerList.pop_back();
+    }
+    
+}
+
 void TowerManager::buildTower(SDL_Renderer* renderer, int towerType, Coords coords){
     //TODO add types of towers
     Tower* tower = nullptr;
@@ -22,8 +34,10 @@ void TowerManager::destroyTower(Tower* tower){
     /*offset to delete tower from vector*/ 
     int offset = 0;
     for (auto elm = towerList.front(); elm != towerList.back(); elm++){
-        if (elm == tower)
+        if (elm == tower){
             towerList.erase(towerList.begin() + offset);
+            elm = nullptr;
+        }
         offset++;
     }
 }

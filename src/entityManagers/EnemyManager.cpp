@@ -11,8 +11,14 @@ EnemyManager::~EnemyManager(){
     
     if (enemyList.size() <= 0)
         return;
-    for (auto elm = enemyList.front(); elm != enemyList.back(); elm++)
-        delete elm;
+        
+        // delete enemies
+    int size = enemyList.size();
+    for (int i = size - 1; i >= 0; i--){
+        if (enemyList[i] != nullptr)
+            delete enemyList[i];
+        enemyList.pop_back();
+    }
 }
 
 

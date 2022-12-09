@@ -721,6 +721,16 @@ CMakeFiles/TowerDefence.dir/src/Game.cpp.o
  /usr/include/c++/11/bits/deque.tcc
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
+ /usr/include/c++/11/random
+ /usr/include/c++/11/bits/random.h
+ /usr/include/c++/11/bits/uniform_int_dist.h
+ /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h
+ /usr/include/c++/11/bits/random.tcc
+ /usr/include/c++/11/numeric
+ /usr/include/c++/11/bits/stl_numeric.h
+ /usr/include/c++/11/bit
+ /usr/include/c++/11/pstl/glue_numeric_defs.h
+ /usr/include/c++/11/pstl/execution_defs.h
  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
 
 CMakeFiles/TowerDefence.dir/src/Grid.cpp.o
@@ -2262,18 +2272,7 @@ CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.o
  /usr/include/c++/11/bits/ostream.tcc
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
- /usr/local/include/SDL2/SDL.h
- /usr/local/include/SDL2/SDL_main.h
- /usr/local/include/SDL2/SDL_stdinc.h
- /usr/local/include/SDL2/SDL_config.h
- /usr/local/include/SDL2/SDL_platform.h
- /usr/local/include/SDL2/begin_code.h
- /usr/local/include/SDL2/close_code.h
- /usr/include/c++/11/stdlib.h
- /usr/include/string.h
- /usr/include/strings.h
- /usr/include/inttypes.h
- /usr/include/c++/11/math.h
+ /usr/include/c++/11/random
  /usr/include/c++/11/cmath
  /usr/include/math.h
  /usr/include/x86_64-linux-gnu/bits/math-vector.h
@@ -2299,6 +2298,27 @@ CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.o
  /usr/include/c++/11/tr1/poly_hermite.tcc
  /usr/include/c++/11/tr1/poly_laguerre.tcc
  /usr/include/c++/11/tr1/riemann_zeta.tcc
+ /usr/include/c++/11/bits/random.h
+ /usr/include/c++/11/bits/uniform_int_dist.h
+ /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h
+ /usr/include/c++/11/bits/random.tcc
+ /usr/include/c++/11/numeric
+ /usr/include/c++/11/bits/stl_numeric.h
+ /usr/include/c++/11/bit
+ /usr/include/c++/11/pstl/glue_numeric_defs.h
+ /usr/include/c++/11/pstl/execution_defs.h
+ /usr/local/include/SDL2/SDL.h
+ /usr/local/include/SDL2/SDL_main.h
+ /usr/local/include/SDL2/SDL_stdinc.h
+ /usr/local/include/SDL2/SDL_config.h
+ /usr/local/include/SDL2/SDL_platform.h
+ /usr/local/include/SDL2/begin_code.h
+ /usr/local/include/SDL2/close_code.h
+ /usr/include/c++/11/stdlib.h
+ /usr/include/string.h
+ /usr/include/strings.h
+ /usr/include/inttypes.h
+ /usr/include/c++/11/math.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -2430,9 +2450,35 @@ CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.o
  /usr/local/include/SDL2/SDL_image.h
  /usr/local/include/SDL2/SDL.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
- /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
- /home/jaros/gitProjects/c++/TDgame/src/Coords.h
+ /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.h
+ /home/jaros/gitProjects/c++/TDgame/src/TowerTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.h
+ /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.h
  /home/jaros/gitProjects/c++/TDgame/src/Timers.h
+ /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h
+ /home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.h
+ /usr/include/c++/11/unordered_map
+ /usr/include/c++/11/ext/aligned_buffer.h
+ /usr/include/c++/11/bits/hashtable.h
+ /usr/include/c++/11/bits/hashtable_policy.h
+ /usr/include/c++/11/tuple
+ /usr/include/c++/11/utility
+ /usr/include/c++/11/bits/stl_relops.h
+ /usr/include/c++/11/array
+ /usr/include/c++/11/bits/invoke.h
+ /usr/include/c++/11/bits/enable_special_members.h
+ /usr/include/c++/11/bits/node_handle.h
+ /usr/include/c++/11/bits/unordered_map.h
+ /usr/include/c++/11/bits/erase_if.h
+ /home/jaros/gitProjects/c++/TDgame/src/Coords.h
+ /home/jaros/gitProjects/c++/TDgame/src/Base.h
+ /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h
+ /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
+ /home/jaros/gitProjects/c++/TDgame/src/Portal.h
+ /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
+ /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.cpp
@@ -5183,6 +5229,16 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/include/c++/11/bits/deque.tcc
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
+ /usr/include/c++/11/random
+ /usr/include/c++/11/bits/random.h
+ /usr/include/c++/11/bits/uniform_int_dist.h
+ /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h
+ /usr/include/c++/11/bits/random.tcc
+ /usr/include/c++/11/numeric
+ /usr/include/c++/11/bits/stl_numeric.h
+ /usr/include/c++/11/bit
+ /usr/include/c++/11/pstl/glue_numeric_defs.h
+ /usr/include/c++/11/pstl/execution_defs.h
  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
 
 CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o

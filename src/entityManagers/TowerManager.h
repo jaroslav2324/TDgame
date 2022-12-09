@@ -8,6 +8,7 @@
 class TowerManager{
     public:
     TowerManager(EnemyManager* enemyManager);
+    ~TowerManager();
 
     void buildTower(SDL_Renderer* renderer, int towerType, Coords coords);
     void addBuiltTower(Tower*);
