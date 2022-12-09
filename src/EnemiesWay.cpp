@@ -54,3 +54,22 @@ Coords EnemiesWay::getLastCoords(){
 int EnemiesWay::getAmountWaypoints(){
     return amountWaypoints;
 }
+
+void EnemiesWay::render(SDL_Renderer* renderer){
+    
+    SDL_SetRenderDrawColor(renderer, 0, 255, 255, 255);
+
+    int lineWidth = 3;
+    int x1, y1, x2, y2;
+
+    for (int i = 0; i < amountWaypoints - 1; i++){
+        x1 = dictOfWaypoints[i].x;
+        y1 = dictOfWaypoints[i].y;
+        x2 = dictOfWaypoints[i + 1].x;
+        y2 = dictOfWaypoints[i + 1].y;
+
+        for (int j = 0; j < lineWidth; j++, x1++, x2++, y1++, y2++)
+            SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
+    }
+        
+}

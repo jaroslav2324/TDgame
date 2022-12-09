@@ -42,6 +42,9 @@ void Game::renderAll(SDL_Renderer* renderer){
     //TODO render
 
     grid->renderGrid(renderer);
+    enemiesWay->render(renderer);
+    portal->render(renderer);
+    base->render(renderer);
     towerManager->renderAllTowers(renderer);
     enemyManager->renderAllEnemies(renderer);
     towerManager->renderAllProjectiles(renderer);

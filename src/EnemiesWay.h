@@ -3,6 +3,8 @@
 #include <unordered_map>
 #include <iostream>
 
+#include "SDL2/SDL.h"
+
 #include "Coords.h"
 
 using std::cout;
@@ -21,6 +23,8 @@ class EnemiesWay{
     Coords getWaypointCoords(int numWaypoint);
 
     int getAmountWaypoints();
+
+    void render(SDL_Renderer* renderer);
 
     private:
     int amountWaypoints = -1;
