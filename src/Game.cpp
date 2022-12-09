@@ -4,10 +4,13 @@ Game::Game(SDL_Renderer* renderer){
 
     enemiesWay = new EnemiesWay();
 
-    auto baseCoords = enemiesWay->getFirstCoords();
+    auto baseCoords = enemiesWay->getLastCoords();
     base = new Base(renderer, baseCoords);
+    auto portalCoords = enemiesWay->getFirstCoords();
+    portal = new Portal(renderer, portalCoords);
 
-    enemyManager = new EnemyManager(base, enemiesWay);
+
+    enemyManager = new EnemyManager(base, portal, enemiesWay);
     towerManager = new TowerManager(enemyManager);
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);

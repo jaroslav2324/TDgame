@@ -1,8 +1,8 @@
 
 #include "Portal.h"
 
-Portal::Portal(SDL_Renderer* renderer, Coords spawnCoords){
-    coords = spawnCoords;
+Portal::Portal(SDL_Renderer* renderer, Coords coords){
+    coords = coords;
     loadTexture(renderer);
 }
 
@@ -27,4 +27,8 @@ void Portal::render(SDL_Renderer* renderer){
     int y = coords.y - TILESIZE / 2;
     SDL_Rect portalRect = {x, y, TILESIZE, TILESIZE};
     SDL_RenderCopy(renderer, portalTexture, 0, &portalRect);
+}
+
+Coords Portal::getCoords(){
+    return coords;
 }

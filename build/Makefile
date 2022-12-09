@@ -314,6 +314,30 @@ src/GridTile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/GridTile.cpp.s
 .PHONY : src/GridTile.cpp.s
 
+src/Portal.o: src/Portal.cpp.o
+.PHONY : src/Portal.o
+
+# target to build an object file
+src/Portal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Portal.cpp.o
+.PHONY : src/Portal.cpp.o
+
+src/Portal.i: src/Portal.cpp.i
+.PHONY : src/Portal.i
+
+# target to preprocess a source file
+src/Portal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Portal.cpp.i
+.PHONY : src/Portal.cpp.i
+
+src/Portal.s: src/Portal.cpp.s
+.PHONY : src/Portal.s
+
+# target to generate assembly for a file
+src/Portal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Portal.cpp.s
+.PHONY : src/Portal.cpp.s
+
 src/Timers.o: src/Timers.cpp.o
 .PHONY : src/Timers.o
 
@@ -631,6 +655,9 @@ help:
 	@echo "... src/GridTile.o"
 	@echo "... src/GridTile.i"
 	@echo "... src/GridTile.s"
+	@echo "... src/Portal.o"
+	@echo "... src/Portal.i"
+	@echo "... src/Portal.s"
 	@echo "... src/Timers.o"
 	@echo "... src/Timers.i"
 	@echo "... src/Timers.s"

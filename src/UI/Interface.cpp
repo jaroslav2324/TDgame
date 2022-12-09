@@ -28,6 +28,7 @@ Interface::~Interface(){
 
 void Interface::render(SDL_Renderer* renderer){
 
+    
     SDL_SetRenderDrawColor(renderer, 150, 150, 100, 255);
     SDL_Rect rect = {0, 0, 100, SCREEN_HEIGHT};
     SDL_RenderFillRect(renderer, &rect);
@@ -73,7 +74,8 @@ void Interface::render(SDL_Renderer* renderer){
             srand(time(0));
             int x = rand() % SCREEN_WIDTH;
             int y = rand() % SCREEN_HEIGHT;
-            enemyManager->spawnEnemy(renderer, BASIC_ENEMY, Coords(x, y));
+            //enemyManager->spawnEnemyWithCoords(renderer, BASIC_ENEMY, Coords(x, y));
+            enemyManager->spawnEnemyAtPortal(renderer, BASIC_ENEMY);
         }
     }
 

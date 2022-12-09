@@ -12,10 +12,12 @@
 /*Only graphical class, enemies spawn in enemy manager*/
 class Portal{
     public:
-    Portal(SDL_Renderer* renderer, Coords spawnCoords);
+    Portal(SDL_Renderer* renderer, Coords coords);
     ~Portal();
 
     void render(SDL_Renderer* renderer);
+
+    Coords getCoords();
 
     private:
     Coords coords;

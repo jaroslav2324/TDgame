@@ -1,18 +1,16 @@
 #include "EnemyManager.h"
 
-EnemyManager::EnemyManager(Base* base, EnemiesWay* enemiesWay){
+EnemyManager::EnemyManager(Base* base, Portal* portal, EnemiesWay* enemiesWay){
 
     EnemyManager::base = base;
+    EnemyManager::portal = portal;
 
     EnemyManager::enemiesWay = enemiesWay;
 }
 
 EnemyManager::~EnemyManager(){
     
-    if (enemyList.size() <= 0)
-        return;
-        
-        // delete enemies
+    // delete enemies
     int size = enemyList.size();
     for (int i = size - 1; i >= 0; i--){
         if (enemyList[i] != nullptr)
@@ -22,14 +20,22 @@ EnemyManager::~EnemyManager(){
 }
 
 
-void EnemyManager::spawnEnemy(SDL_Renderer* renderer,int enemyType, Coords coords){
-    //TODO add types of enemies
+void EnemyManager::spawnEnemyWithCoords(SDL_Renderer* renderer, int enemyType, Coords coords){
+    createAndAddEnemy(renderer, enemyType, coords);
+}
+
+void EnemyManager::spawnEnemyAtPortal(SDL_Renderer* renderer, int enemyType){
+    Coords coords = portal->getCoords();
+    createAndAddEnemy(renderer, enemyType, coords);
+}
+
+void EnemyManager::createAndAddEnemy(SDL_Renderer* renderer, int enemyType, Coords coords){
     Enemy* enemy = nullptr;
 
     switch (enemyType){
-
+    //TODO add types of enemies
     case BASIC_ENEMY:
-        enemy = new class BasicEnemy(renderer, enemiesWay, base, coords);
+        enemy = new class BasicEnemy(renderer, enemiesWay, base, portal, coords);
         break;
 
     default:

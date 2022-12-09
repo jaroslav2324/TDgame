@@ -11,13 +11,14 @@ using std::string;
 
 class EnemyManager{
     public:
-    EnemyManager(Base* base, EnemiesWay* enemiesWay);
+    EnemyManager(Base* base, Portal* portal, EnemiesWay* enemiesWay);
     ~EnemyManager();
 
     Enemy* findFirstEnemyForTower(Coords towerCoords, float radius);
     Enemy* findNearestEnemyForTower(Coords towerCoords, float radius);
         
-    void spawnEnemy(SDL_Renderer* renderer, int enemyType, Coords coords);
+    void spawnEnemyWithCoords(SDL_Renderer* renderer, int enemyType, Coords coords);
+    void spawnEnemyAtPortal(SDL_Renderer* renderer, int enemyType);
     //TODO spawnEnemies
     void addSpawnedEnemy(Enemy*);
     void killEnemy(Enemy*);
@@ -30,11 +31,11 @@ class EnemyManager{
     private:
     std::vector<Enemy*> enemyList;
 
-    //TODO initialise portal
     Portal* portal = nullptr;
     Base* base = nullptr;
 
     EnemiesWay* enemiesWay = nullptr;
 
+    void createAndAddEnemy(SDL_Renderer* renderer, int enemyType, Coords coords);
     //TODO create class spawner
 };

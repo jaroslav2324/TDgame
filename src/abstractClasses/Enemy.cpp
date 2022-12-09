@@ -1,6 +1,6 @@
 #include "Enemy.h"
 
-Enemy::Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Coords coords){
+Enemy::Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Portal* portal, Coords coords){
     //TODO implement constructor;
     //TODO add timers
     //TODO delete SDL_Renderer from constructor or move to fields of the class?
@@ -10,6 +10,7 @@ Enemy::Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Coords coords)
     Enemy::way = way;
     Enemy::base = base;
     Enemy::currentCoords = coords;
+    Enemy::portal = portal;
 
 }
 

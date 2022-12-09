@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/TowerDefence.dir/src/Grid.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/GridTile.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/GridTile.cpp.o.d"
+  "CMakeFiles/TowerDefence.dir/src/Portal.cpp.o"
+  "CMakeFiles/TowerDefence.dir/src/Portal.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/Timers.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/Timers.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o"

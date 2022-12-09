@@ -31,6 +31,7 @@ class Game{
     EnemiesWay* enemiesWay = nullptr;
 
     Base* base = nullptr;
+    Portal* portal = nullptr;
 
     Grid* grid = nullptr;
 };

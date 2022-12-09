@@ -8,6 +8,7 @@
 #include "../Timers.h"
 #include "../EnemiesWay.h"
 #include "../Base.h"
+#include "../Portal.h"
 #include "../approximateComparison.h"
 
 using std::string;
@@ -16,7 +17,7 @@ using std::string;
 class Enemy{
     
 public:
-    Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Coords coords);
+    Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Portal * portal, Coords coords);
     ~Enemy();
 
     void move();
@@ -64,6 +65,7 @@ protected:
 
     EnemiesWay* way = nullptr;
     Base* base = nullptr;
+    Portal * portal = nullptr;
 
 /*baseSpeed multiplyes by timePeriodOfMoving in seconds*/
     void MoveToNextWaypoint(double timePeriodOfMoving);
