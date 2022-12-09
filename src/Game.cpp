@@ -19,6 +19,9 @@ Game::Game(SDL_Renderer* renderer){
 
     interface = new Interface(renderer, towerManager, enemyManager);
 
+    //TODO delete test spawn
+    enemyManager->spawnEnemyAtPortal(renderer, BASIC_ENEMY);
+
 }
 
 Game::~Game(){
@@ -77,16 +80,12 @@ void Game::loop(SDL_Renderer* renderer){
             }
 
         //int cnt = 0;
-        if (fpsTimer->tickIfNeeded()){
-            //cout << cnt << endl;
-            //cnt++;
 
-            }
 
             //FIXME seg fault
             //towerManager->allTowersAttack(renderer);
 
-            //enemyManager->allEnemiesMove();
+            
 
             //TODO spawn enemies if needed 
 
@@ -94,6 +93,12 @@ void Game::loop(SDL_Renderer* renderer){
             //if(base->noHitPoitsLeft()){
                 //TODO end game
             //}
+        }
+
+        if (fpsTimer->tickIfNeeded()){
+        //cout << cnt << endl;
+        //cnt++;
+        enemyManager->allEnemiesMove();
         }
 
         renderAll(renderer);

@@ -1,7 +1,7 @@
 #include "Enemy.h"
 
 Enemy::Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Portal* portal, Coords coords){
-    //TODO implement constructor;
+
     //TODO add timers
     //TODO delete SDL_Renderer from constructor or move to fields of the class?
 
@@ -11,6 +11,9 @@ Enemy::Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Portal* portal
     Enemy::base = base;
     Enemy::currentCoords = coords;
     Enemy::portal = portal;
+
+    Enemy::coordsCurrentWaypoint = way->getFirstCoords();
+    Enemy::coordsNextWaypoint = way->getWaypointCoords(1);
 
 }
 
@@ -27,11 +30,13 @@ Enemy::~Enemy(){
 
 void Enemy::replaceToNextWaypointCoords(){
     coordsCurrentWaypoint = coordsNextWaypoint;
-    coordsNextWaypoint = way->getNextWaypointCoords(numCurrentWaypoint);
-    numCurrentWaypoint++;
+    coordsNextWaypoint = way->getNextWaypointCoords(numNextWaypoint);
+    numNextWaypoint++;
 }
 
 void Enemy::MoveToNextWaypoint(double timePeriodOfMoving ){
+
+    //cout << currentCoords.x << " " << currentCoords.y << endl;
 
     //find proportion of coords change
     float diffX = coordsNextWaypoint.x - coordsCurrentWaypoint.x;
@@ -71,7 +76,7 @@ bool Enemy::ifWaypointPassed(){
 
     /*if diffY < 0 y coord of the next waypoint is up from current waypoint
       if diffY > 0 y coord of the next waypoint is down from current waypoint*/
-    if (diffX < 0){
+    if (diffY < 0){
         /*if enemy passed by waypoint*/ 
         if (currentCoords.y < coordsNextWaypoint.y)
             currentCoords.y = coordsNextWaypoint.y;
@@ -82,8 +87,11 @@ bool Enemy::ifWaypointPassed(){
             currentCoords.y = coordsNextWaypoint.y;
     }
 
-    if (ifPixelCoordsApprEqual(currentCoords, coordsNextWaypoint))
+    if (ifPixelCoordsApprEqual(currentCoords, coordsNextWaypoint)){
+        // cout << currentCoords.x << " " << currentCoords.y << " are equal ";
+        // cout << coordsNextWaypoint.x << " " << coordsNextWaypoint.y << endl;
         return true;
+    }
     return false;
     
 }
@@ -137,6 +145,9 @@ void Enemy::move(){
 
     if (movementTimer->tickIfNeeded()){
 
+        // cout << currentCoords.x << " " << currentCoords.y << endl;
+        // cout << coordsNextWaypoint.x << " " << coordsNextWaypoint.y << endl;
+
         if (ifWaypointPassed())
             replaceToNextWaypointCoords();
 
@@ -145,7 +156,7 @@ void Enemy::move(){
                 unfreeze();
             
 
-        MoveToNextWaypoint(movementTimer->getCountPeriod() / 1000);
+        MoveToNextWaypoint(movementTimer->getCountPeriod());
 
         if(isNearBase())
             damageBaseAndGetKilled();

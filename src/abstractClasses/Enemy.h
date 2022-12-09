@@ -52,7 +52,7 @@ protected:
 
     bool isFreezed = false;
 
-    int numCurrentWaypoint = 0;
+    int numNextWaypoint = 1;
     Coords currentCoords;
     Coords coordsCurrentWaypoint;
     Coords coordsNextWaypoint;

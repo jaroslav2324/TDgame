@@ -15,7 +15,7 @@ bool ifPixelCoordsApprEqual(float x1, float y1, float x2, float y2){
 bool ifPixelCoordsApprEqual(Coords first, Coords second){
 
     float diffX = abs(first.x - second.x);
-    float diffY = abs(first.x - second.x);
+    float diffY = abs(first.y - second.y);
 
     float diffBetweenPoints = sqrt(pow(diffX, 2) + pow(diffY, 2));
 
