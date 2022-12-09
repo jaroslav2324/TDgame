@@ -21,7 +21,19 @@ class TowerManager{
     void renderAllTowers(SDL_Renderer* renderer);
     void renderAllProjectiles(SDL_Renderer* renderer);
 
+    void activateBuildMode(SDL_Renderer* renderer);
+    void deactivateBuildMode();
+    bool isBuildModeActive();
+
     private:
     std::vector<Tower*> towerList;
     EnemyManager* enemyManager = nullptr;
+
+    // TODO buildModeFlag, buildingTower
+    bool buildModeOn = false;
+    // tower sprite in build mode
+    Tower* buildingTower = nullptr;
+    // render on grid
+    void renderBuildingTower(SDL_Renderer* renderer);
+
 };

@@ -62,10 +62,58 @@ void TowerManager::renderAllTowers(SDL_Renderer* renderer){
     
     for (auto towerPtr: towerList)
         towerPtr->render(renderer);
+    if (buildModeOn)
+        renderBuildingTower(renderer);
 }
+
+void TowerManager::renderBuildingTower(SDL_Renderer* renderer){
+
+    if (buildingTower == nullptr)
+        return;
+
+    int mouseX, mouseY;
+    int x, y;
+
+    SDL_GetMouseState(&mouseX, &mouseY);
+    x = mouseX - mouseX % TILESIZE + TILESIZE / 2;
+    y = mouseY - mouseY % TILESIZE + TILESIZE / 2;
+
+    buildingTower->setCoords(Coords(x, y));
+    buildingTower->render(renderer);
+}
+
 
 void TowerManager::renderAllProjectiles(SDL_Renderer* renderer){
     
     for (auto towerPtr: towerList)
         towerPtr->renderAllProjectiles(renderer);
 }
+
+void TowerManager::activateBuildMode(SDL_Renderer* renderer){
+
+    //TODO create buildingTower
+    buildModeOn = true;
+
+    if (buildingTower != nullptr)
+        delete buildingTower;
+
+    int x, y;
+    SDL_GetMouseState(&x, &y);
+    // TODO change renderer(remove)
+    buildingTower = new BasicTower(renderer, enemyManager, Coords(x, y));
+    buildingTower->setDamage(0);
+}
+
+void TowerManager::deactivateBuildMode(){
+
+    buildModeOn = false;
+
+    if (buildingTower != nullptr)
+        delete buildingTower;
+}
+
+bool TowerManager::isBuildModeActive(){
+    return buildModeOn;
+}
+
+

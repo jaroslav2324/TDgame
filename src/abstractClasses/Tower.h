@@ -36,6 +36,9 @@ public:
 
     float getExpForNextLvl(int currentLevel);
 
+    void setDamage(float damage);
+    void setCoords(Coords coords);
+
 protected:
     float damage = 0;
     double freezeMultyplyer = 0;
@@ -72,7 +75,6 @@ protected:
 
     virtual void setAttackTimer() = 0;
     
-
     void setExpForDamage(float exp);
     void setExpForKill(float exp);
 
@@ -82,9 +84,7 @@ protected:
     void addExperience(float exp);
     void checkAndLevelUp();
 
-    void setDamage(float damage);
     void setRadius(float radius);
     void setLevel(int level);
-    void setCoords(Coords coords);
     void setGridCoords(std::pair<int, int> gridCoords);
 };
