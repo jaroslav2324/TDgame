@@ -14,13 +14,21 @@ TowerManager::~TowerManager(){
         towerList.pop_back();
     }
     
+    if (buildingTower != nullptr)
+        delete buildingTower;
 }
 
+// pass any coords, these coords will be converted to right grid coords
 void TowerManager::buildTower(SDL_Renderer* renderer, int towerType, Coords coords){
+
+    int x, y;
+    x = (int)coords.x - (int)coords.x % TILESIZE + TILESIZE / 2;
+    y = (int)coords.y - (int)coords.y % TILESIZE + TILESIZE / 2;
+    
     //TODO add types of towers
     Tower* tower = nullptr;
     if (towerType == BASIC_TOWER)
-        tower = new class BasicTower(renderer, enemyManager, coords);
+        tower = new class BasicTower(renderer, enemyManager, Coords(x, y));
 
     towerList.push_back(tower);
 }
@@ -91,7 +99,6 @@ void TowerManager::renderAllProjectiles(SDL_Renderer* renderer){
 
 void TowerManager::activateBuildMode(SDL_Renderer* renderer){
 
-    //TODO create buildingTower
     buildModeOn = true;
 
     if (buildingTower != nullptr)
@@ -108,12 +115,26 @@ void TowerManager::deactivateBuildMode(){
 
     buildModeOn = false;
 
-    if (buildingTower != nullptr)
+    if (buildingTower != nullptr){
         delete buildingTower;
+        buildingTower = nullptr;
+    }
 }
 
 bool TowerManager::isBuildModeActive(){
     return buildModeOn;
 }
 
+bool TowerManager::isTowerExistsInTile(Coords coords)
+{
+    int x, y;
+    x = (int)coords.x - (int)coords.x % TILESIZE + TILESIZE / 2;
+    y = (int)coords.y - (int)coords.y % TILESIZE + TILESIZE / 2;
+    Coords c(x, y);
 
+    for (auto tower: towerList)
+        if(ifCoordsApprEqual(c, tower->getCoords()))
+            return true;
+
+    return false;
+}

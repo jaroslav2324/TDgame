@@ -4,6 +4,7 @@
 
 #include "../TowerTypes.h"
 #include "../towers/BasicTower.h"
+#include "../approximateComparison.h"
 
 class TowerManager{
     public:
@@ -25,11 +26,13 @@ class TowerManager{
     void deactivateBuildMode();
     bool isBuildModeActive();
 
+    // pass coords in the tile, function returns if tower exists in this tile
+    bool isTowerExistsInTile(Coords coords);
+
     private:
     std::vector<Tower*> towerList;
     EnemyManager* enemyManager = nullptr;
 
-    // TODO buildModeFlag, buildingTower
     bool buildModeOn = false;
     // tower sprite in build mode
     Tower* buildingTower = nullptr;

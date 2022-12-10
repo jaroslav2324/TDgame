@@ -168,4 +168,8 @@ void Tower::renderAllProjectiles(SDL_Renderer* renderer){
     for (auto projectilePtr: projectileList)
         projectilePtr->render(renderer);
 }
+
+Coords Tower::getCoords(){
+    return towerCoords;
+}
     

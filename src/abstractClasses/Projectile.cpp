@@ -67,7 +67,7 @@ bool Projectile::isReachedEnemy(){
     float enemyCoordY = aimedEnemy->getCoordY();
     Coords enemyCoords(enemyCoordX, enemyCoordY);
 
-    if (ifPixelCoordsApprEqual(currentCoords, enemyCoords))
+    if (ifCoordsApprEqual(currentCoords, enemyCoords))
         return true;
     return false;
 }

@@ -64,18 +64,36 @@ void Interface::render(SDL_Renderer* renderer){
 
         if (buildTowerBtn->isPointInRect(mouseCoords)){
             buildTowerBtn->setModePressed();
-            srand(time(0));
-            int x = rand() % SCREEN_WIDTH;
-            int y = rand() % SCREEN_HEIGHT;
-            towerManager->buildTower(renderer, BASIC_TOWER, Coords(x, y));
+            // srand(time(0));
+            // int x = rand() % SCREEN_WIDTH;
+            // int y = rand() % SCREEN_HEIGHT;
+            // towerManager->buildTower(renderer, BASIC_TOWER, Coords(x, y));
+
+
+            if (!towerManager->isBuildModeActive())
+                towerManager->activateBuildMode(renderer);
+            
         }
-        if (spawnEnemyBtn->isPointInRect(mouseCoords)){
+        else if (spawnEnemyBtn->isPointInRect(mouseCoords)){
             spawnEnemyBtn->setModePressed();
             srand(time(0));
             int x = rand() % SCREEN_WIDTH;
             int y = rand() % SCREEN_HEIGHT;
             //enemyManager->spawnEnemyWithCoords(renderer, BASIC_ENEMY, Coords(x, y));
             enemyManager->spawnEnemyAtPortal(renderer, BASIC_ENEMY);
+        }
+
+        else{
+            if (towerManager->isBuildModeActive()){
+                if (towerManager->isTowerExistsInTile(mouseCoords)){
+                    //TODO warn player
+                    cout << "Tower already exists, coords: " << mouseCoords.x << " " << mouseCoords.y << endl;
+                }
+                else{
+                    towerManager->buildTower(renderer, BASIC_TOWER, Coords(mouseCoords.x, mouseCoords.y));
+                    towerManager->deactivateBuildMode();
+                }
+            }
         }
     }
 

@@ -23,6 +23,7 @@ public:
 
     float getDamage();
     float getRadius();
+    Coords getCoords();
 
     void attack(SDL_Renderer* renderer);
 

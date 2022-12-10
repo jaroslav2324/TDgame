@@ -87,7 +87,7 @@ bool Enemy::ifWaypointPassed(){
             currentCoords.y = coordsNextWaypoint.y;
     }
 
-    if (ifPixelCoordsApprEqual(currentCoords, coordsNextWaypoint)){
+    if (ifCoordsApprEqual(currentCoords, coordsNextWaypoint)){
         // cout << currentCoords.x << " " << currentCoords.y << " are equal ";
         // cout << coordsNextWaypoint.x << " " << coordsNextWaypoint.y << endl;
         return true;
@@ -165,7 +165,7 @@ void Enemy::move(){
 
 bool Enemy::isNearBase(){
     Coords baseCoords = way->getLastCoords();
-    if (ifPixelCoordsApprEqual(currentCoords, baseCoords))
+    if (ifCoordsApprEqual(currentCoords, baseCoords))
         return true;
     return false;
 }
