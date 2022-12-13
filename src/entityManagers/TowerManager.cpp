@@ -62,8 +62,10 @@ void TowerManager::findAndDeleteDestroyedTowers(){
 
 void TowerManager::allTowersAttack(SDL_Renderer* renderer){
     //TODO remove SDL_Renderer
-    for (auto tower: towerList)
+    for (auto tower: towerList){
         tower->attack(renderer);
+        tower->moveAllProjectiles();
+    }
 }
 
 void TowerManager::renderAllTowers(SDL_Renderer* renderer){

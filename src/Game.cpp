@@ -19,9 +19,6 @@ Game::Game(SDL_Renderer* renderer){
 
     interface = new Interface(renderer, towerManager, enemyManager);
 
-    //TODO delete test spawn
-    enemyManager->spawnEnemyAtPortal(renderer, BASIC_ENEMY);
-
 }
 
 Game::~Game(){
@@ -42,8 +39,6 @@ Game::~Game(){
 
 void Game::renderAll(SDL_Renderer* renderer){
 
-    //TODO render
-
     grid->renderGrid(renderer);
     enemiesWay->render(renderer);
     portal->render(renderer);
@@ -52,7 +47,6 @@ void Game::renderAll(SDL_Renderer* renderer){
     enemyManager->renderAllEnemies(renderer);
     towerManager->renderAllProjectiles(renderer);
 
-    //TODO render UI
     interface->render(renderer);
 
     SDL_RenderPresent(renderer);
@@ -82,9 +76,6 @@ void Game::loop(SDL_Renderer* renderer){
         //int cnt = 0;
 
 
-            //FIXME seg fault
-            //towerManager->allTowersAttack(renderer);
-
             
 
             //TODO spawn enemies if needed 
@@ -99,6 +90,10 @@ void Game::loop(SDL_Renderer* renderer){
         //cout << cnt << endl;
         //cnt++;
         enemyManager->allEnemiesMove();
+        //cout << base->getHitPoits() << endl;
+
+        towerManager->allTowersAttack(renderer);
+        
         }
 
         renderAll(renderer);

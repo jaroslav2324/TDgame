@@ -9,6 +9,9 @@ void BasicTower::setAttackTimer(){
 }
 
 void BasicTower::deleteAttackTimer(){
-    delete attackTimer;
+    if (attackTimer != nullptr){
+        delete attackTimer;
+        attackTimer = nullptr;
+    }
 }
 

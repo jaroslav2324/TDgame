@@ -24,7 +24,7 @@ class Base{
     void render(SDL_Renderer* renderer);
 
     private:
-    int hitPoints;
+    int hitPoints = 10;
 
     Coords coords;
 

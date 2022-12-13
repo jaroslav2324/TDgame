@@ -108,32 +108,44 @@ void Tower::attack(SDL_Renderer* renderer){
 
         findFirstEnemyInRadius();
 
-        /*spawn projectile and add it to the list*/
-        Projectile* projectile = new Projectile(renderer, aimedEnemy, towerCoords);
-        projectileList.push_back(projectile);
+        // if enemy found
+        if (aimedEnemy != nullptr){
 
-        /*move all projectiles and delete if they hit enemy*/
-        int offset = 0;
-        for (auto proj: projectileList){
-            proj->attack();
-            if(proj->hasDamagedEnemy()){
-                delete proj;
-                projectileList.erase(projectileList.begin() + offset);
+            /*spawn projectile and add it to the list*/
+            //TODO change BasicProjectile
+            Projectile* projectile = new BasicProjectile(renderer, aimedEnemy, towerCoords);
+            projectileList.push_back(projectile);
+
+            /*move all projectiles and delete if they hit enemy*/
+            int offset = 0;
+            for (auto proj: projectileList){
+                proj->attack();
+                if(proj->hasDamagedEnemy()){
+                    delete proj;
+                    projectileList.erase(projectileList.begin() + offset);
+                }
+                offset++;
             }
-            offset++;
-        }
-
         
-        /*add experience for tower*/
-        if (aimedEnemy->isDead()){
-            aimedEnemy = nullptr;
-            addExperience(expForKill);
-        }
-        else
-            addExperience(expForDamage);
+        
+            /*add experience for tower*/
+            if (aimedEnemy->isDead()){
+                aimedEnemy = nullptr;
+                addExperience(expForKill);
+            }
+            else
+                addExperience(expForDamage);
 
-        checkAndLevelUp(); 
+            checkAndLevelUp(); 
+        }
+
     }
+}
+
+void Tower::moveAllProjectiles(){
+
+    for (auto projectile: projectileList)
+        projectile->attack();
 }
 
 void Tower::setDestroyed(){

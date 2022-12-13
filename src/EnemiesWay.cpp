@@ -2,28 +2,28 @@
 
 EnemiesWay::EnemiesWay(){
     //TODO find more convenient way to fill waypoints
-    amountWaypoints = 10;
+    amountWaypoints = 2;
 
     int numWaypoint = 0;
-    dictOfWaypoints[numWaypoint] = Coords(400, 200);
+    dictOfWaypoints[numWaypoint] = Coords(150, 150);
     numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(500, 200);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(500, 300);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(400, 400);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(300, 500);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(500, 400);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(700, 500);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(600, 500);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(600, 600);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(500, 500);
+    // dictOfWaypoints[numWaypoint] = Coords(500, 200);
+    // numWaypoint++;
+    // dictOfWaypoints[numWaypoint] = Coords(500, 300);
+    // numWaypoint++;
+    // dictOfWaypoints[numWaypoint] = Coords(400, 400);
+    // numWaypoint++;
+    // dictOfWaypoints[numWaypoint] = Coords(300, 500);
+    // numWaypoint++;
+    // dictOfWaypoints[numWaypoint] = Coords(500, 400);
+    // numWaypoint++;
+    // dictOfWaypoints[numWaypoint] = Coords(700, 500);
+    // numWaypoint++;
+    // dictOfWaypoints[numWaypoint] = Coords(600, 500);
+    // numWaypoint++;
+    // dictOfWaypoints[numWaypoint] = Coords(600, 600);
+    // numWaypoint++;
+    dictOfWaypoints[numWaypoint] = Coords(850, 850);
 }
 
 // if there is no next waypoint returns current waypoint

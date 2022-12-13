@@ -10,15 +10,16 @@
 #include "Enemy.h"
 #include "../entityManagers/EnemyManager.h"
 #include "Projectile.h"
+#include "../projectiles/BasicProjectile.h"
 
 using std::string;
 
 /*Basic class for all towers*/
 class Tower{
 public:
-    Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, Coords coords);
+    Tower(SDL_Renderer* renderer, EnemyManager* enemyManager, Coords coords);
     //TODO end constructor
-    Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords);
+    Tower(SDL_Renderer* renderer, EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords);
     ~Tower();
 
     float getDamage();
@@ -26,11 +27,11 @@ public:
     Coords getCoords();
 
     void attack(SDL_Renderer* renderer);
+    void moveAllProjectiles();
 
     bool isDestroyed();
     void setDestroyed();
 
-    //TODO make private pure virtual
     virtual void loadTexture(SDL_Renderer* renderer);
     void render(SDL_Renderer* renderer);
     void renderAllProjectiles(SDL_Renderer* renderer);

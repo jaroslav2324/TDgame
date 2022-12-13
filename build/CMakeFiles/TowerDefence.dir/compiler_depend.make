@@ -1008,6 +1008,7 @@ CMakeFiles/TowerDefence.dir/src/Game.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/Grid.h \
   /home/jaros/gitProjects/c++/TDgame/src/GridTile.h \
   /home/jaros/gitProjects/c++/TDgame/src/UI/Interface.h \
@@ -3031,6 +3032,7 @@ CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.o: /home/jaros/gitProjects/c++/
   /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.cpp \
@@ -4152,7 +4154,8 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: /home/jaros/gitProj
   /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h \
   /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
-  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
+  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h
 
 CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.cpp \
   /usr/include/stdc-predef.h \
@@ -5383,7 +5386,8 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: /home/jaros/g
   /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h \
   /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
-  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
+  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h
 
 CMakeFiles/TowerDefence.dir/src/main.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -5768,6 +5772,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/Grid.h \
   /home/jaros/gitProjects/c++/TDgame/src/GridTile.h \
   /home/jaros/gitProjects/c++/TDgame/src/UI/Interface.h \
@@ -6168,7 +6173,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
   /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h \
   /home/jaros/gitProjects/c++/TDgame/src/EnemyTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
-  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
+  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h
 
 
 /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.cpp:
@@ -6220,6 +6226,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 /usr/include/c++/11/bits/vector.tcc:
 
 /usr/include/c++/11/bits/stl_bvector.h:
+
+/home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h:
 
 /usr/include/c++/11/bits/stl_vector.h:
 
