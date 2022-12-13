@@ -218,6 +218,30 @@ src/Base.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Base.cpp.s
 .PHONY : src/Base.cpp.s
 
+src/Coords.o: src/Coords.cpp.o
+.PHONY : src/Coords.o
+
+# target to build an object file
+src/Coords.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Coords.cpp.o
+.PHONY : src/Coords.cpp.o
+
+src/Coords.i: src/Coords.cpp.i
+.PHONY : src/Coords.i
+
+# target to preprocess a source file
+src/Coords.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Coords.cpp.i
+.PHONY : src/Coords.cpp.i
+
+src/Coords.s: src/Coords.cpp.s
+.PHONY : src/Coords.s
+
+# target to generate assembly for a file
+src/Coords.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Coords.cpp.s
+.PHONY : src/Coords.cpp.s
+
 src/EnemiesWay.o: src/EnemiesWay.cpp.o
 .PHONY : src/EnemiesWay.o
 
@@ -643,6 +667,9 @@ help:
 	@echo "... src/Base.o"
 	@echo "... src/Base.i"
 	@echo "... src/Base.s"
+	@echo "... src/Coords.o"
+	@echo "... src/Coords.i"
+	@echo "... src/Coords.s"
 	@echo "... src/EnemiesWay.o"
 	@echo "... src/EnemiesWay.i"
 	@echo "... src/EnemiesWay.s"

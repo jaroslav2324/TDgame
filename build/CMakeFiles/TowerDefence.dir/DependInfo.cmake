@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/jaros/gitProjects/c++/TDgame/src/Base.cpp" "CMakeFiles/TowerDefence.dir/src/Base.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/Base.cpp.o.d"
+  "/home/jaros/gitProjects/c++/TDgame/src/Coords.cpp" "CMakeFiles/TowerDefence.dir/src/Coords.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/Coords.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.cpp" "CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/Game.cpp" "CMakeFiles/TowerDefence.dir/src/Game.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/Game.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/Grid.cpp" "CMakeFiles/TowerDefence.dir/src/Grid.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/Grid.cpp.o.d"

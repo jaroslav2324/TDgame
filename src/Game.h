@@ -1,4 +1,6 @@
 
+#include <fstream>
+
 #include "Timers.h"
 #include "entityManagers/EnemyManager.h"
 #include "entityManagers/TowerManager.h"
@@ -7,6 +9,9 @@
 #include "Portal.h"
 #include "Base.h"
 #include "UI/Interface.h"
+
+using std::cout;
+using std::endl;
 
 /*main class for game*/
 class Game{

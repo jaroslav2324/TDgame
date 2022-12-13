@@ -33,7 +33,7 @@ void Interface::render(SDL_Renderer* renderer){
     SDL_Rect rect = {0, 0, 100, SCREEN_HEIGHT};
     SDL_RenderFillRect(renderer, &rect);
 
-    rect = {0, 0, SCREEN_WIDTH, 80};
+    rect = {0, 0, SCREEN_WIDTH, 100};
     SDL_RenderFillRect(renderer, &rect);
 
     rect = {0, SCREEN_HEIGHT - 10, SCREEN_WIDTH, 10};
