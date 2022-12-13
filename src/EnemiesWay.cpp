@@ -2,19 +2,18 @@
 
 EnemiesWay::EnemiesWay(){
     //TODO find more convenient way to fill waypoints
-    amountWaypoints = 2;
 
     int numWaypoint = 0;
     dictOfWaypoints[numWaypoint] = Coords(250, 250);
     numWaypoint++;
-    // dictOfWaypoints[numWaypoint] = Coords(500, 200);
-    // numWaypoint++;
-    // dictOfWaypoints[numWaypoint] = Coords(500, 300);
-    // numWaypoint++;
-    // dictOfWaypoints[numWaypoint] = Coords(400, 400);
-    // numWaypoint++;
-    // dictOfWaypoints[numWaypoint] = Coords(300, 500);
-    // numWaypoint++;
+    dictOfWaypoints[numWaypoint] = Coords(1050, 250);
+    numWaypoint++;
+    dictOfWaypoints[numWaypoint] = Coords(1050, 550);
+    numWaypoint++;
+    dictOfWaypoints[numWaypoint] = Coords(250, 550);
+    numWaypoint++;
+    dictOfWaypoints[numWaypoint] = Coords(250, 750);
+    numWaypoint++;
     // dictOfWaypoints[numWaypoint] = Coords(500, 400);
     // numWaypoint++;
     // dictOfWaypoints[numWaypoint] = Coords(700, 500);
@@ -24,6 +23,9 @@ EnemiesWay::EnemiesWay(){
     // dictOfWaypoints[numWaypoint] = Coords(600, 600);
     // numWaypoint++;
     dictOfWaypoints[numWaypoint] = Coords(1050, 750);
+    numWaypoint++;
+
+    amountWaypoints = numWaypoint;
 }
 
 // if there is no next waypoint returns current waypoint
