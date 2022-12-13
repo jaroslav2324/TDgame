@@ -64,7 +64,7 @@ void TowerManager::allTowersAttack(SDL_Renderer* renderer){
     //TODO remove SDL_Renderer
     for (auto tower: towerList){
         tower->attack(renderer);
-        tower->moveAllProjectiles();
+        //tower->moveAllProjectiles();
     }
 }
 

@@ -104,6 +104,9 @@ void Tower::findNearestEnemyInRadius(){
 
 void Tower::attack(SDL_Renderer* renderer){
 
+/*move all projectiles and delete if they hit enemy*/
+    moveAllProjectiles();
+
     if(attackTimer->tickIfNeeded()){
 
         findFirstEnemyInRadius();
@@ -116,21 +119,16 @@ void Tower::attack(SDL_Renderer* renderer){
             Projectile* projectile = new BasicProjectile(renderer, aimedEnemy, towerCoords);
             projectileList.push_back(projectile);
 
-            /*move all projectiles and delete if they hit enemy*/
-            int offset = 0;
-            for (auto proj: projectileList){
-                proj->attack();
-                if(proj->hasDamagedEnemy()){
-                    delete proj;
-                    projectileList.erase(projectileList.begin() + offset);
-                }
-                offset++;
-            }
-        
-        
             /*add experience for tower*/
             if (aimedEnemy->isDead()){
                 aimedEnemy = nullptr;
+                int size = projectileList.size();
+                for (int i = size - 1; i >= 0; i--){
+                    delete projectileList[i];
+                    projectileList.pop_back();
+                }
+                    
+
                 addExperience(expForKill);
             }
             else
@@ -140,12 +138,22 @@ void Tower::attack(SDL_Renderer* renderer){
         }
 
     }
+    //cout << projectileList.size() << endl;
 }
 
 void Tower::moveAllProjectiles(){
 
-    for (auto projectile: projectileList)
+    int offset = 0;
+    for (auto projectile: projectileList){
         projectile->attack();
+        if (projectile->hasDamagedEnemy()){
+            delete projectile;
+            projectileList.erase(projectileList.begin() + offset);
+        }
+        offset++;
+    }   
+   
+    //cout << projectileList.size() << endl;
 }
 
 void Tower::setDestroyed(){

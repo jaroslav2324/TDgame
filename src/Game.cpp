@@ -93,6 +93,7 @@ void Game::loop(SDL_Renderer* renderer){
         //cout << base->getHitPoits() << endl;
 
         towerManager->allTowersAttack(renderer);
+        enemyManager->findAndDeleteKilledEnemies();
         
         }
 

@@ -2,6 +2,7 @@
 
 #include <string>
 #include <vector>
+#include <list>
 
 #include <SDL2/SDL.h>
 

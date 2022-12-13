@@ -12,6 +12,8 @@
 #include "../approximateComparison.h"
 
 using std::string;
+using std::cout;
+using std::endl;
 
 /*Basic class for all enemies*/
 class Enemy{

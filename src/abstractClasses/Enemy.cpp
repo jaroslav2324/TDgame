@@ -113,6 +113,7 @@ float Enemy::getCoordY(){
 /*hit Enemy*/
 void Enemy::applyDamage(float damage){
     hitPoints -= damage;
+    //cout << hitPoints << endl;
 }
 
 bool Enemy::isDead(){

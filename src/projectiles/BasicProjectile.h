@@ -8,6 +8,7 @@ class BasicProjectile: public Projectile{
     //TODO render
 
     BasicProjectile(SDL_Renderer* renderer, Enemy* aimedEnemy, Coords spawnCoords): Projectile(renderer, aimedEnemy, spawnCoords){
-        speed = 120;
+        damage = 1;
+        speed = 220;
     }
 };

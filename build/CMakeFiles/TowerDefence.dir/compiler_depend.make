@@ -1007,6 +1007,10 @@ CMakeFiles/TowerDefence.dir/src/Game.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /home/jaros/gitProjects/c++/TDgame/src/TowerTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/list.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/Grid.h \
@@ -3008,11 +3012,15 @@ CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.o: /home/jaros/gitProjects/c++/
   /home/jaros/gitProjects/c++/TDgame/src/TowerTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/list.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/Timers.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
-  /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/hashtable.h \
   /usr/include/c++/11/bits/hashtable_policy.h \
   /usr/include/c++/11/tuple \
@@ -3933,6 +3941,11 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: /home/jaros/gitProj
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/list.tcc \
   /usr/local/include/SDL2/SDL.h \
   /usr/local/include/SDL2/SDL_main.h \
   /usr/local/include/SDL2/SDL_stdinc.h \
@@ -4134,7 +4147,6 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: /home/jaros/gitProj
   /usr/local/include/SDL2/SDL.h \
   /home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
-  /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/hashtable.h \
   /usr/include/c++/11/bits/hashtable_policy.h \
   /usr/include/c++/11/tuple \
@@ -5165,6 +5177,11 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: /home/jaros/g
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/list.tcc \
   /usr/local/include/SDL2/SDL.h \
   /usr/local/include/SDL2/SDL_main.h \
   /usr/local/include/SDL2/SDL_stdinc.h \
@@ -5366,7 +5383,6 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: /home/jaros/g
   /usr/local/include/SDL2/SDL.h \
   /home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
-  /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/hashtable.h \
   /usr/include/c++/11/bits/hashtable_policy.h \
   /usr/include/c++/11/tuple \
@@ -5771,6 +5787,10 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /home/jaros/gitProjects/c++/TDgame/src/TowerTypes.h \
   /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/list.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/Grid.h \
@@ -5952,6 +5972,11 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/list.tcc \
   /usr/local/include/SDL2/SDL.h \
   /usr/local/include/SDL2/SDL_main.h \
   /usr/local/include/SDL2/SDL_stdinc.h \
@@ -6153,7 +6178,6 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
   /usr/local/include/SDL2/SDL.h \
   /home/jaros/gitProjects/c++/TDgame/src/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
-  /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/hashtable.h \
   /usr/include/c++/11/bits/hashtable_policy.h \
   /usr/include/c++/11/tuple \
@@ -6212,6 +6236,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 /usr/include/c++/11/bits/stl_numeric.h:
 
 /home/jaros/gitProjects/c++/TDgame/src/GridTile.h:
+
+/usr/include/c++/11/bits/stl_list.h:
 
 /home/jaros/gitProjects/c++/TDgame/src/TowerTypes.h:
 
@@ -6581,6 +6607,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 
 /usr/include/stdio.h:
 
+/usr/include/c++/11/bits/list.tcc:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
 
 /usr/local/include/SDL2/SDL_joystick.h:
@@ -6676,6 +6704,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 /usr/local/include/SDL2/SDL_gamecontroller.h:
 
 /usr/include/c++/11/ext/numeric_traits.h:
+
+/usr/include/c++/11/bits/allocated_ptr.h:
 
 /usr/include/c++/11/ext/type_traits.h:
 
@@ -6776,6 +6806,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 /usr/local/include/SDL2/SDL_rwops.h:
 
 /usr/local/include/SDL2/SDL_clipboard.h:
+
+/usr/include/c++/11/list:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/wbnoinvdintrin.h:
 
