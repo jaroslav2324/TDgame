@@ -5,7 +5,7 @@ EnemiesWay::EnemiesWay(){
     amountWaypoints = 2;
 
     int numWaypoint = 0;
-    dictOfWaypoints[numWaypoint] = Coords(125, 125);
+    dictOfWaypoints[numWaypoint] = Coords(250, 250);
     numWaypoint++;
     // dictOfWaypoints[numWaypoint] = Coords(500, 200);
     // numWaypoint++;
@@ -23,7 +23,7 @@ EnemiesWay::EnemiesWay(){
     // numWaypoint++;
     // dictOfWaypoints[numWaypoint] = Coords(600, 600);
     // numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(1425, 825);
+    dictOfWaypoints[numWaypoint] = Coords(1050, 750);
 }
 
 // if there is no next waypoint returns current waypoint

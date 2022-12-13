@@ -7,8 +7,7 @@ Game::Game(SDL_Renderer* renderer){
     auto baseCoords = enemiesWay->getLastCoords();
     base = new Base(renderer, baseCoords);
     auto portalCoords = enemiesWay->getFirstCoords();
-    //FIXME
-    //cout << portalCoords;
+    cout << portalCoords;
     portal = new Portal(renderer, portalCoords);
 
 
@@ -57,7 +56,7 @@ void Game::renderAll(SDL_Renderer* renderer){
 void Game::loop(SDL_Renderer* renderer){
 
     bool quit = false;
-    int cnt = 0;
+    // int cnt = 0;
 
     while (!quit){
 
@@ -90,8 +89,8 @@ void Game::loop(SDL_Renderer* renderer){
         }
 
         if (fpsTimer->tickIfNeeded()){
-        cout << cnt << endl;
-        cnt++;
+        // cout << cnt << endl;
+        // cnt++;
         enemyManager->allEnemiesMove();
         //cout << base->getHitPoits() << endl;
 

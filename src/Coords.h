@@ -3,6 +3,8 @@
 #include <iostream>
 #include <fstream>
 
+using std::ostream;
+
 struct Coords{
     Coords(): x(0), y(0){};
     Coords(float x, float y): x(x), y(y){};
@@ -11,6 +13,6 @@ struct Coords{
 
 };
 
-std::ostream& operator<<(std::ostream& os, const Coords& coords);
+ostream& operator<<(ostream& os, const Coords& coords);
 //ostream& operator<<(ostream& os, Coords coords);
 
