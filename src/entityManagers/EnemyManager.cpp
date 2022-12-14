@@ -61,9 +61,6 @@ void EnemyManager::killEnemy(Enemy* enemy){
     }
 }
 
-/*
-coordX, coordY - coords of the tower(not grid coords);
-*/
 Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, float radius){
 
     float diffX, diffY;
@@ -82,7 +79,6 @@ Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, float radius){
 
     return nullptr;
 }
-
 
 Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, float radius){
 
@@ -141,4 +137,32 @@ void EnemyManager::renderAllEnemies(SDL_Renderer* renderer){
     
     for (auto enemyPtr: enemyList)
         enemyPtr->render(renderer);
+}
+
+void EnemyManager::setWave(Wave wave){
+    currentWave = wave;
+}
+
+void EnemyManager::spawnEnemiesInWave(SDL_Renderer* renderer){
+    
+    if (currentWave.listEnemiesTypes.size() <= 0){
+
+        if (enemyInWaveSpawnTimer != nullptr){
+            delete enemyInWaveSpawnTimer;
+            enemyInWaveSpawnTimer = nullptr;
+        }
+
+        // if (DEBUG_CONSOLE_OUTPUT_ON)
+        //     cout << "List of spawn enemies is empty. Use setWave to set new wave of enemies." << endl;
+        return;
+    }
+
+    if (enemyInWaveSpawnTimer == nullptr)
+        enemyInWaveSpawnTimer = new PeriodicTimer(currentWave.spawnPeriod);
+
+    if (enemyInWaveSpawnTimer->tickIfNeeded()){
+        int enemyType = currentWave.listEnemiesTypes.front();
+        currentWave.listEnemiesTypes.pop_front();
+        spawnEnemyAtPortal(renderer, enemyType);
+    }
 }

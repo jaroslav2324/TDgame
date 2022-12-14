@@ -1,5 +1,7 @@
 #pragma once
 
+#define DEBUG_CONSOLE_OUTPUT_ON true
+
 #define FPS 60.0
 
 #define MAX_TOWER_LEVEL 9

@@ -434,6 +434,30 @@ src/UI/GameInterface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.s
 .PHONY : src/UI/GameInterface.cpp.s
 
+src/Wave.o: src/Wave.cpp.o
+.PHONY : src/Wave.o
+
+# target to build an object file
+src/Wave.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Wave.cpp.o
+.PHONY : src/Wave.cpp.o
+
+src/Wave.i: src/Wave.cpp.i
+.PHONY : src/Wave.i
+
+# target to preprocess a source file
+src/Wave.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Wave.cpp.i
+.PHONY : src/Wave.cpp.i
+
+src/Wave.s: src/Wave.cpp.s
+.PHONY : src/Wave.s
+
+# target to generate assembly for a file
+src/Wave.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Wave.cpp.s
+.PHONY : src/Wave.cpp.s
+
 src/abstractClasses/Enemy.o: src/abstractClasses/Enemy.cpp.o
 .PHONY : src/abstractClasses/Enemy.o
 
@@ -694,6 +718,9 @@ help:
 	@echo "... src/UI/GameInterface.o"
 	@echo "... src/UI/GameInterface.i"
 	@echo "... src/UI/GameInterface.s"
+	@echo "... src/Wave.o"
+	@echo "... src/Wave.i"
+	@echo "... src/Wave.s"
 	@echo "... src/abstractClasses/Enemy.o"
 	@echo "... src/abstractClasses/Enemy.i"
 	@echo "... src/abstractClasses/Enemy.s"

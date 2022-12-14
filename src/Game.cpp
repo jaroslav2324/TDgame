@@ -99,10 +99,6 @@ void Game::loop(SDL_Renderer* renderer){
         
 
 
-            
-
-            //TODO spawn enemies if needed 
-
             //if base destroyed
             //if(base->noHitPoitsLeft()){
                 //TODO end game
@@ -112,6 +108,7 @@ void Game::loop(SDL_Renderer* renderer){
         if (fpsTimer->tickIfNeeded()){
         // cout << cnt << endl;
         // cnt++;
+        enemyManager->spawnEnemiesInWave(renderer);
         enemyManager->allEnemiesMove();
         //cout << base->getHitPoits() << endl;
 

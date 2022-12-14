@@ -15,6 +15,8 @@ GameInterface::GameInterface(SDL_Renderer* renderer, TowerManager* towerManager,
                                          TEST_BTN_PRESSED_TEXTURE_PATH,
                                          TEST_BTN_HOVERED_TEXTURE_PATH,
                                          Coords(600, 40));
+
+    
 }
 
 GameInterface::~GameInterface(){
@@ -68,23 +70,18 @@ void GameInterface::render(SDL_Renderer* renderer){
 
         if (buildTowerBtn->isPointInRect(mouseCoords)){
             buildTowerBtn->setModePressed();
-            // srand(time(0));
-            // int x = rand() % SCREEN_WIDTH;
-            // int y = rand() % SCREEN_HEIGHT;
-            // towerManager->buildTower(renderer, BASIC_TOWER, Coords(x, y));
-
 
             if (!towerManager->isBuildModeActive())
                 towerManager->activateBuildMode(renderer);
             
         }
         else if (spawnEnemyBtn->isPointInRect(mouseCoords)){
+
             spawnEnemyBtn->setModePressed();
-            srand(time(0));
-            int x = rand() % SCREEN_WIDTH;
-            int y = rand() % SCREEN_HEIGHT;
-            //enemyManager->spawnEnemyWithCoords(renderer, BASIC_ENEMY, Coords(x, y));
-            enemyManager->spawnEnemyAtPortal(renderer, BASIC_ENEMY);
+            //TODO change wave
+            Wave newWave = getBasicTestWave();
+            enemyManager->setWave(newWave);
+            // enemyManager->spawnEnemyAtPortal(renderer, BASIC_ENEMY);
         }
 
         else{

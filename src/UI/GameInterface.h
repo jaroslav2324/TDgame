@@ -11,6 +11,7 @@
 #include "../entityManagers/TowerManager.h"
 #include "../entityManagers/EnemyManager.h"
 #include "Button.h"
+#include "../Wave.h"
 
 using std::queue;
 
