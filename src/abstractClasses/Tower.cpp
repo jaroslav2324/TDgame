@@ -116,7 +116,7 @@ void Tower::attack(SDL_Renderer* renderer){
 
             /*spawn projectile and add it to the list*/
             //TODO change BasicProjectile
-            Projectile* projectile = new BasicProjectile(renderer, aimedEnemy, towerCoords);
+            Projectile* projectile = newProjectile(renderer);
             projectileList.push_back(projectile);
 
             /*add experience for tower*/

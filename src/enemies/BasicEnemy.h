@@ -23,4 +23,5 @@ class BasicEnemy: public Enemy{
     private:
     void setMovementTimer();
     void deleteMovementTimer();
+    
 };

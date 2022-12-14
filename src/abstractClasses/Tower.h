@@ -77,6 +77,8 @@ protected:
     std::vector<Projectile*> projectileList;
 
     virtual void setAttackTimer() = 0;
+
+    virtual Projectile* newProjectile(SDL_Renderer* renderer) = 0;
     
     void setExpForDamage(float exp);
     void setExpForKill(float exp);
