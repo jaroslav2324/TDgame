@@ -63,6 +63,8 @@ void GameInterface::render(SDL_Renderer* renderer){
     else
         spawnEnemyBtn->setModeBasic();
 
+    // TODO move button actions from render method?
+
     // check pressing on buttons
     while(!savedMouseClicks.empty()){
         Coords mouseCoords = savedMouseClicks.front();

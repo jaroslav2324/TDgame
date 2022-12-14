@@ -87,9 +87,9 @@ void Button::loadTextures(SDL_Renderer* renderer, const char* btnImgPath, const 
 
 void Button::render(SDL_Renderer* renderer){
 
-    int x = coords.x - BTN_WIDTH / 2;
-    int y = coords.y - BTN_HEIGHT / 2;
-    SDL_Rect btnRect = {x, y, BTN_WIDTH, BTN_HEIGHT};
+    int x = coords.x - btn_width / 2;
+    int y = coords.y - btn_height / 2;
+    SDL_Rect btnRect = {x, y, btn_width, btn_height};
 
     if (!showPressedButtonTimer->isCountdownEnd()){
         SDL_RenderCopy(renderer, pressedBtnTexture, 0, &btnRect);
@@ -127,13 +127,18 @@ void Button::setModeHovered(){
 
 bool Button::isPointInRect(Coords point){
     
-    int x1 = coords.x - BTN_WIDTH / 2;
-    int y1 = coords.y - BTN_HEIGHT / 2;
+    int x1 = coords.x - btn_width / 2;
+    int y1 = coords.y - btn_height / 2;
 
-    int x2 = coords.x + BTN_WIDTH / 2;
-    int y2 = coords.y + BTN_HEIGHT / 2;
+    int x2 = coords.x + btn_width / 2;
+    int y2 = coords.y + btn_height / 2;
 
     if (point.x < x1 || point.y < y1 || point.x >= x2 || point.y >= y2)
         return false;
     return true;
+}
+
+void Button::setWidthHeight(int width, int height){
+    btn_width = width;
+    btn_height = height;
 }

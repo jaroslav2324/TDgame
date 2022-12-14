@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 
 #include <SDL2/SDL.h>
@@ -26,10 +28,12 @@ public:
 
     bool isPointInRect(Coords point);
 
+    void setWidthHeight(int width, int height);
+
 private:
 
-    const int BTN_WIDTH = 100;
-    const int BTN_HEIGHT = 50;
+    int btn_width = 100;
+    int btn_height = 50;
 
     void loadTextures(SDL_Renderer* renderer, string& btnImgPath, string& btnPressedImgPath, string& btnHoveredImgPath);
     void loadTextures(SDL_Renderer* renderer, const char* btnImgPath, const char* btnPressedImgPath, const char* btnHoveredImgPath);

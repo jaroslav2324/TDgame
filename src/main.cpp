@@ -11,6 +11,7 @@
 #include "towers/BasicTower.h"
 #include "abstractClasses/Projectile.h"
 #include "entityManagers/EnemyManager.h"
+#include "UI/MainMenu.h"
 
 using std::cout;
 using std::endl;
@@ -27,10 +28,18 @@ int main(int argc, char **argv)
 	SDL_Window* window = SDL_CreateWindow("TD_Game", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
-	Game* game = new Game(renderer);
-	game->loop(renderer);
-	delete game;
+	PeriodicTimer* fpsTimer = new PeriodicTimer(1 / FPS * 1000);
+
+	MainMenu* mainMenu = new MainMenu(renderer, fpsTimer);
+	mainMenu->loop(renderer);
+
+	// Game* game = new Game(renderer);
+	// game->loop(renderer);
+	// delete game;
 	
+	delete mainMenu;
+	delete fpsTimer;
+
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 

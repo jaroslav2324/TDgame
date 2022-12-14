@@ -434,6 +434,30 @@ src/UI/GameInterface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.s
 .PHONY : src/UI/GameInterface.cpp.s
 
+src/UI/MainMenu.o: src/UI/MainMenu.cpp.o
+.PHONY : src/UI/MainMenu.o
+
+# target to build an object file
+src/UI/MainMenu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o
+.PHONY : src/UI/MainMenu.cpp.o
+
+src/UI/MainMenu.i: src/UI/MainMenu.cpp.i
+.PHONY : src/UI/MainMenu.i
+
+# target to preprocess a source file
+src/UI/MainMenu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.i
+.PHONY : src/UI/MainMenu.cpp.i
+
+src/UI/MainMenu.s: src/UI/MainMenu.cpp.s
+.PHONY : src/UI/MainMenu.s
+
+# target to generate assembly for a file
+src/UI/MainMenu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.s
+.PHONY : src/UI/MainMenu.cpp.s
+
 src/Wave.o: src/Wave.cpp.o
 .PHONY : src/Wave.o
 
@@ -718,6 +742,9 @@ help:
 	@echo "... src/UI/GameInterface.o"
 	@echo "... src/UI/GameInterface.i"
 	@echo "... src/UI/GameInterface.s"
+	@echo "... src/UI/MainMenu.o"
+	@echo "... src/UI/MainMenu.i"
+	@echo "... src/UI/MainMenu.s"
 	@echo "... src/Wave.o"
 	@echo "... src/Wave.i"
 	@echo "... src/Wave.s"
