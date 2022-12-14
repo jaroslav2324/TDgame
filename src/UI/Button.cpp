@@ -20,17 +20,25 @@ Button::Button(SDL_Renderer* renderer, const char* btnImgPath, const char* btnPr
 
 Button::~Button(){
     
-    if (btnTexture != nullptr)
+    if (btnTexture != nullptr){
         SDL_DestroyTexture(btnTexture);
+        btnTexture = nullptr;
+    }
 
-    if (pressedBtnTexture != nullptr)
+    if (pressedBtnTexture != nullptr){
         SDL_DestroyTexture(pressedBtnTexture);
+        pressedBtnTexture = nullptr;
+    }
 
-    if (hoveredBtnTexture != nullptr)
+    if (hoveredBtnTexture != nullptr){
         SDL_DestroyTexture(hoveredBtnTexture);
+        hoveredBtnTexture = nullptr;
+    }
 
-    if (showPressedButtonTimer != nullptr)
+    if (showPressedButtonTimer != nullptr){
         delete showPressedButtonTimer;
+        showPressedButtonTimer = nullptr;
+    }
 }
 
 void Button::loadTextures(SDL_Renderer* renderer, string& btnImgPath, string& btnPressedImgPath, string& btnHoveredImgPath){

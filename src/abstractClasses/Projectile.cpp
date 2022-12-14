@@ -16,7 +16,10 @@ Projectile::~Projectile(){
         projectileTexture = nullptr;
     }
 
-    delete movementTimer;
+    if (movementTimer != nullptr){
+        delete movementTimer;
+        movementTimer = nullptr;
+    }
 }
 
 void Projectile::moveToEnemy(){

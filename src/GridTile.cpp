@@ -15,8 +15,10 @@ GridTile::GridTile(SDL_Renderer* renderer, std::string& spritePath, Coords coord
 }
 
 GridTile::~GridTile(){
-    if (tileTexture != nullptr)
+    if (tileTexture != nullptr){
         SDL_DestroyTexture(tileTexture);
+        tileTexture = nullptr;
+    }
 }
 
 void GridTile::loadTexture(SDL_Renderer* renderer){

@@ -8,8 +8,10 @@ Base::Base(SDL_Renderer* renderer, Coords spawnCoords){
 
 Base::~Base(){
 
-    if (baseTexture != nullptr)
+    if (baseTexture != nullptr){
         SDL_DestroyTexture(baseTexture);
+        baseTexture = nullptr;
+    }
 }
 
 int Base::getHitPoits(){

@@ -14,8 +14,10 @@ TowerManager::~TowerManager(){
         towerList.pop_back();
     }
     
-    if (buildingTower != nullptr)
+    if (buildingTower != nullptr){
         delete buildingTower;
+        buildingTower = nullptr;
+    }
 }
 
 // pass any coords, these coords will be converted to right grid coords

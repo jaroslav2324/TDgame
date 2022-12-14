@@ -13,8 +13,10 @@ Grid::Grid(SDL_Renderer* renderer){
 Grid::~Grid(){
 
     for (int i = 0; i < GAME_LEVEL_HEIGHT; i++)
-        for (int j = 0; j < GAME_LEVEL_WIDTH; j++)
+        for (int j = 0; j < GAME_LEVEL_WIDTH; j++){
             delete gridTilesField[i][j];
+            gridTilesField[i][j] = nullptr;
+        }
 }
 
 void Grid::renderGrid(SDL_Renderer* renderer){

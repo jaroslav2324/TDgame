@@ -44,6 +44,7 @@ private:
         HOVERED
     };
 
+    // how long show texture of pressed button after mouse clicking
     CountdownTimer* showPressedButtonTimer = nullptr;
     
     int currentBtnMode = 0;

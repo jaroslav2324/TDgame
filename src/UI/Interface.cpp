@@ -19,11 +19,15 @@ Interface::Interface(SDL_Renderer* renderer, TowerManager* towerManager, EnemyMa
 
 Interface::~Interface(){
     
-    if (buildTowerBtn != nullptr)
+    if (buildTowerBtn != nullptr){
         delete buildTowerBtn;
+        buildTowerBtn = nullptr;
+    }
 
-    if (spawnEnemyBtn != nullptr)
+    if (spawnEnemyBtn != nullptr){
         delete spawnEnemyBtn;
+        spawnEnemyBtn = nullptr;
+    }
 }
 
 void Interface::render(SDL_Renderer* renderer){

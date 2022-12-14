@@ -7,7 +7,7 @@ Game::Game(SDL_Renderer* renderer){
     auto baseCoords = enemiesWay->getLastCoords();
     base = new Base(renderer, baseCoords);
     auto portalCoords = enemiesWay->getFirstCoords();
-    cout << portalCoords;
+    // cout << portalCoords;
     portal = new Portal(renderer, portalCoords);
 
 
@@ -24,18 +24,39 @@ Game::Game(SDL_Renderer* renderer){
 
 Game::~Game(){
 
-    delete towerManager;
-    delete enemyManager;
+    if (towerManager != nullptr){
+        delete towerManager;
+        towerManager = nullptr;
+    }
+    if (enemyManager != nullptr){
+        delete enemyManager;
+        enemyManager = nullptr;
+    }
 
-    delete fpsTimer;
+    if (fpsTimer != nullptr){
+        delete fpsTimer;
+        fpsTimer = nullptr;
+    }
 
-    delete grid;
+    if (grid != nullptr){
+        delete grid;
+        grid = nullptr;
+    }
 
-    delete base;
+    if (base != nullptr){
+        delete base;
+        base = nullptr;
+    }
 
-    delete enemiesWay;
+    if (enemiesWay != nullptr){
+        delete enemiesWay;
+        enemiesWay = nullptr;
+    }
 
-    delete interface;
+    if (interface != nullptr){
+        delete interface;
+        interface = nullptr;
+    }
 }
 
 void Game::renderAll(SDL_Renderer* renderer){

@@ -19,8 +19,10 @@ Enemy::Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Portal* portal
 
 Enemy::~Enemy(){
 
-    if (freezeTimer != nullptr)
+    if (freezeTimer != nullptr){
         delete freezeTimer;
+        freezeTimer = nullptr;
+    }
 
     if (enemyTexture != nullptr){
         SDL_DestroyTexture(enemyTexture);

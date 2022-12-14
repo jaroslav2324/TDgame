@@ -7,8 +7,10 @@ Portal::Portal(SDL_Renderer* renderer, Coords coords){
 }
 
 Portal::~Portal(){
-    if (portalTexture != nullptr)
+    if (portalTexture != nullptr){
         SDL_DestroyTexture(portalTexture);
+        portalTexture = nullptr;
+    }
 }
 
 void Portal::loadTexture(SDL_Renderer* renderer){

@@ -10,5 +10,8 @@ void BasicEnemy::setMovementTimer(){
 }
 
 void BasicEnemy::deleteMovementTimer(){
-    delete movementTimer;
+    if (movementTimer != nullptr){
+        delete movementTimer;
+        movementTimer = nullptr;
+    }
 }
