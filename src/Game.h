@@ -8,7 +8,7 @@
 #include "Grid.h"
 #include "Portal.h"
 #include "Base.h"
-#include "UI/Interface.h"
+#include "UI/GameInterface.h"
 
 using std::cout;
 using std::endl;
@@ -26,7 +26,7 @@ class Game{
 
     private:
 
-    Interface* interface = nullptr;
+    GameInterface* interface = nullptr;
     
     EnemyManager* enemyManager = nullptr;
     TowerManager* towerManager = nullptr;

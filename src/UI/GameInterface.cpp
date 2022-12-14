@@ -1,6 +1,6 @@
-#include "Interface.h"
+#include "GameInterface.h"
 
-Interface::Interface(SDL_Renderer* renderer, TowerManager* towerManager, EnemyManager* enemyManager){
+GameInterface::GameInterface(SDL_Renderer* renderer, TowerManager* towerManager, EnemyManager* enemyManager){
 
     this->towerManager = towerManager;
     this->enemyManager = enemyManager;
@@ -17,7 +17,7 @@ Interface::Interface(SDL_Renderer* renderer, TowerManager* towerManager, EnemyMa
                                          Coords(600, 40));
 }
 
-Interface::~Interface(){
+GameInterface::~GameInterface(){
     
     if (buildTowerBtn != nullptr){
         delete buildTowerBtn;
@@ -30,7 +30,7 @@ Interface::~Interface(){
     }
 }
 
-void Interface::render(SDL_Renderer* renderer){
+void GameInterface::render(SDL_Renderer* renderer){
 
     
     SDL_SetRenderDrawColor(renderer, 150, 150, 100, 255);
@@ -107,6 +107,6 @@ void Interface::render(SDL_Renderer* renderer){
 
 }
 
-void Interface::saveMouseClickCoords(Coords coords){
+void GameInterface::saveMouseClickCoords(Coords coords){
     savedMouseClicks.push(coords);
 }

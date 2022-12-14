@@ -18,7 +18,7 @@ Game::Game(SDL_Renderer* renderer){
 
     grid = new Grid(renderer);
 
-    interface = new Interface(renderer, towerManager, enemyManager);
+    interface = new GameInterface(renderer, towerManager, enemyManager);
 
 }
 

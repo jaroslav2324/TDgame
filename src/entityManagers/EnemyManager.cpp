@@ -92,6 +92,7 @@ Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, float radius){
 
     Enemy* returnEnemy = nullptr;
 
+    // TODO rewrite this
     for (auto enemy: enemyList){
         diffX = abs(enemy->getCoordX() - towerCoords.x);
         diffY = abs(enemy->getCoordY() - towerCoords.y);
@@ -115,9 +116,9 @@ Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, float radius){
                 returnEnemy = enemy;
             }
         }
-            
-    return returnEnemy;
     }
+
+    return returnEnemy;
 }
 
 

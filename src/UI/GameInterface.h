@@ -14,10 +14,10 @@
 
 using std::queue;
 
-class Interface{
+class GameInterface{
     public:
-    Interface(SDL_Renderer* renderer, TowerManager* towerManager, EnemyManager* enemyManager);
-    ~Interface();
+    GameInterface(SDL_Renderer* renderer, TowerManager* towerManager, EnemyManager* enemyManager);
+    ~GameInterface();
     void render(SDL_Renderer* renderer);
     void saveMouseClickCoords(Coords coords);
     private:   

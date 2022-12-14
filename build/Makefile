@@ -410,29 +410,29 @@ src/UI/Button.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.s
 .PHONY : src/UI/Button.cpp.s
 
-src/UI/Interface.o: src/UI/Interface.cpp.o
-.PHONY : src/UI/Interface.o
+src/UI/GameInterface.o: src/UI/GameInterface.cpp.o
+.PHONY : src/UI/GameInterface.o
 
 # target to build an object file
-src/UI/Interface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.o
-.PHONY : src/UI/Interface.cpp.o
+src/UI/GameInterface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o
+.PHONY : src/UI/GameInterface.cpp.o
 
-src/UI/Interface.i: src/UI/Interface.cpp.i
-.PHONY : src/UI/Interface.i
+src/UI/GameInterface.i: src/UI/GameInterface.cpp.i
+.PHONY : src/UI/GameInterface.i
 
 # target to preprocess a source file
-src/UI/Interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.i
-.PHONY : src/UI/Interface.cpp.i
+src/UI/GameInterface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.i
+.PHONY : src/UI/GameInterface.cpp.i
 
-src/UI/Interface.s: src/UI/Interface.cpp.s
-.PHONY : src/UI/Interface.s
+src/UI/GameInterface.s: src/UI/GameInterface.cpp.s
+.PHONY : src/UI/GameInterface.s
 
 # target to generate assembly for a file
-src/UI/Interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Interface.cpp.s
-.PHONY : src/UI/Interface.cpp.s
+src/UI/GameInterface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.s
+.PHONY : src/UI/GameInterface.cpp.s
 
 src/abstractClasses/Enemy.o: src/abstractClasses/Enemy.cpp.o
 .PHONY : src/abstractClasses/Enemy.o
@@ -691,9 +691,9 @@ help:
 	@echo "... src/UI/Button.o"
 	@echo "... src/UI/Button.i"
 	@echo "... src/UI/Button.s"
-	@echo "... src/UI/Interface.o"
-	@echo "... src/UI/Interface.i"
-	@echo "... src/UI/Interface.s"
+	@echo "... src/UI/GameInterface.o"
+	@echo "... src/UI/GameInterface.i"
+	@echo "... src/UI/GameInterface.s"
 	@echo "... src/abstractClasses/Enemy.o"
 	@echo "... src/abstractClasses/Enemy.i"
 	@echo "... src/abstractClasses/Enemy.s"
