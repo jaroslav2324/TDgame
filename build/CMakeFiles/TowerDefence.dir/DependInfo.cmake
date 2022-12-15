@@ -29,6 +29,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/jaros/gitProjects/c++/TDgame/src/game/Portal.cpp" "CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/game/Wave.cpp" "CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/main.cpp" "CMakeFiles/TowerDefence.dir/src/main.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/main.cpp.o.d"
+  "/home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.cpp" "CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.cpp" "CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o.d"
   )
 

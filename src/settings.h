@@ -23,7 +23,9 @@
 
 #define BASIC_ENEMY_SPRITE_PATH "../Assets/enemy.png"
 
-#define BASIC_TOWER_SPRITE_PATH "../Assets/tower.jpg"
+#define BASIC_TOWER_SPRITE_PATH "../Assets/tower2.jpg"
+
+#define BASIC_PROJECTILE_SPRITE_PATH "../Assets/projectile.jpg"
 
 #define BASIC_GRID_TILE_SPRITE_PATH "../Assets/tile.jpg"
 #define PORTAL_TILE_SPRITE_PATH "../Assets/portal.jpg"

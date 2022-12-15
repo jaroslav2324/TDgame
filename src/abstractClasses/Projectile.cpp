@@ -4,8 +4,6 @@ Projectile::Projectile(SDL_Renderer* renderer, Enemy* aimedEnemy, Coords spawnCo
     Projectile::aimedEnemy = aimedEnemy;
     currentCoords = spawnCoords;
 
-    loadTexture(renderer);
-
     movementTimer = new PeriodicTimer(1 / FPS);
 }
 
@@ -93,17 +91,6 @@ bool Projectile::hasDamagedEnemy(){
     if (damagedEnemy)
         return true;
     return false;
-}
-
-
-void Projectile::loadTexture(SDL_Renderer* renderer){
-
-    if (projectileTexture == nullptr)
-        projectileTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);
-    else{
-        SDL_DestroyTexture(projectileTexture);
-        projectileTexture = IMG_LoadTexture(renderer, TEST_SPRITE_PATH);
-    }   
 }
 
 void Projectile::render(SDL_Renderer* renderer){
