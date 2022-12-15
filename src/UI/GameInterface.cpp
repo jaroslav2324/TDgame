@@ -48,6 +48,7 @@ void GameInterface::render(SDL_Renderer* renderer){
     rect = {SCREEN_WIDTH - 10, 0, 10, SCREEN_HEIGHT};
     SDL_RenderFillRect(renderer, &rect);
 
+    // TODO move from render
     // check howering ower btns
     int x, y;
 

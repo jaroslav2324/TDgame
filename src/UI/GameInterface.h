@@ -12,6 +12,7 @@
 #include "../entityManagers/EnemyManager.h"
 #include "Button.h"
 #include "../Wave.h"
+#include "MenuOptionsCodes.h"
 
 using std::queue;
 

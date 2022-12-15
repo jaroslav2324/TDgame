@@ -71,53 +71,28 @@ void Game::renderAll(SDL_Renderer* renderer){
 
     interface->render(renderer);
 
-    SDL_RenderPresent(renderer);
+    // SDL_RenderPresent(renderer);
 }
 
-void Game::loop(SDL_Renderer* renderer){
+MenuOptionsCode Game::makeFrameTurn(SDL_Renderer* renderer){
 
-    bool quit = false;
-    // int cnt = 0;
+    //if base destroyed
+    //if(base->noHitPoitsLeft()){
+        //TODO end game
+    //}
 
-    while (!quit){
+    MenuOptionsCode code = NO_CHANGES;
 
-        // handle events
-        SDL_Event event;
-        while(SDL_PollEvent(&event)){
-            switch (event.type) {
-                case SDL_QUIT:    
-                    quit = true;        
-                    break;
-                case SDL_MOUSEBUTTONDOWN:
-                    if (event.button.button == SDL_BUTTON_LEFT){
-                        int x, y;
-                        SDL_GetMouseState(&x, &y);
-                        interface->saveMouseClickCoords(Coords(x, y));
-                    }      
-            }
+    enemyManager->spawnEnemiesInWave(renderer);
+    enemyManager->allEnemiesMove();
+    //cout << base->getHitPoits() << endl;
 
-        
+    towerManager->allTowersAttack(renderer);
+    enemyManager->findAndDeleteKilledEnemies();
 
+    return code;
+}
 
-            //if base destroyed
-            //if(base->noHitPoitsLeft()){
-                //TODO end game
-            //}
-        }
-
-        if (fpsTimer->tickIfNeeded()){
-        // cout << cnt << endl;
-        // cnt++;
-        enemyManager->spawnEnemiesInWave(renderer);
-        enemyManager->allEnemiesMove();
-        //cout << base->getHitPoits() << endl;
-
-        towerManager->allTowersAttack(renderer);
-        enemyManager->findAndDeleteKilledEnemies();
-        
-        }
-
-        renderAll(renderer);
-	}
-
+void Game::saveMouseClickCoords(Coords coords){
+    interface->saveMouseClickCoords(coords);
 }

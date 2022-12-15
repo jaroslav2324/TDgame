@@ -43,45 +43,27 @@ MainMenu::MainMenu(SDL_Renderer* renderer, PeriodicTimer* fpsTimer){
         }
     }
 
-    void MainMenu::loop(SDL_Renderer* renderer){
+MenuOptionsCode MainMenu::makeFrameTurn(){
 
-        bool quit = false;
-    // int cnt = 0;
-
-    while (!quit){
-
-        // handle events
-        SDL_Event event;
-        while(SDL_PollEvent(&event)){
-            switch (event.type) {
-                case SDL_QUIT:    
-                    quit = true;        
-                    break;
-                case SDL_MOUSEBUTTONDOWN:
-                    if (event.button.button == SDL_BUTTON_LEFT){
-                        int x, y;
-                        SDL_GetMouseState(&x, &y);
-                        saveMouseClickCoords(Coords(x, y));
-                    }      
-            }
-        }
-
-        if (fpsTimer->tickIfNeeded()){
-        // cout << cnt << endl;
-        // cnt++;
-            render(renderer);
-            SDL_RenderPresent(renderer);
-        }
-	}
-
-
-    }
+    return handleButtonClicks();
+}
 
 void MainMenu::render(SDL_Renderer* renderer){
 
     SDL_SetRenderDrawColor(renderer, 150, 150, 100, 255);
     SDL_Rect rect = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};
     SDL_RenderFillRect(renderer, &rect);
+
+    startGameBtn->render(renderer);
+    settingsBtn->render(renderer);
+    quitBtn->render(renderer);
+}
+
+void MainMenu::saveMouseClickCoords(Coords coords){
+    savedMouseClicks.push(coords);
+}
+
+MenuOptionsCode MainMenu::handleButtonClicks(){
 
 
     // check howering over buttons
@@ -108,6 +90,7 @@ void MainMenu::render(SDL_Renderer* renderer){
         quitBtn->setModeBasic();
 
 
+    MenuOptionsCode code = NO_CHANGES;
     // check pressing on buttons
     while(!savedMouseClicks.empty()){
         Coords mouseCoords = savedMouseClicks.front();
@@ -115,23 +98,27 @@ void MainMenu::render(SDL_Renderer* renderer){
 
         if (startGameBtn->isPointInRect(mouseCoords)){
             startGameBtn->setModePressed();
-            
+            code = START_GAME;
+
+            if (DEBUG_CONSOLE_OUTPUT_ON)
+                cout << "Start game button pressed" << endl;
         }
         else if (settingsBtn->isPointInRect(mouseCoords)){
+            // TODO add settings on flag
             settingsBtn->setModePressed();
+
+            if (DEBUG_CONSOLE_OUTPUT_ON)
+                cout << "Options button pressed" << endl;
 
         }
         else if (quitBtn->isPointInRect(mouseCoords)){
             quitBtn->setModePressed();
+            code = QUIT_TO_DESKTOP;
 
+            if (DEBUG_CONSOLE_OUTPUT_ON)
+                cout << "Quit button pressed" << endl;
         }
     }
 
-    startGameBtn->render(renderer);
-    settingsBtn->render(renderer);
-    quitBtn->render(renderer);
-}
-
-void MainMenu::saveMouseClickCoords(Coords coords){
-    savedMouseClicks.push(coords);
+    return code;
 }

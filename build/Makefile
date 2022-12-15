@@ -194,6 +194,30 @@ uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f libs/SDL/CMakeFiles/uninstall.dir/build.make libs/SDL/CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
 
+src/Application.o: src/Application.cpp.o
+.PHONY : src/Application.o
+
+# target to build an object file
+src/Application.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Application.cpp.o
+.PHONY : src/Application.cpp.o
+
+src/Application.i: src/Application.cpp.i
+.PHONY : src/Application.i
+
+# target to preprocess a source file
+src/Application.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Application.cpp.i
+.PHONY : src/Application.cpp.i
+
+src/Application.s: src/Application.cpp.s
+.PHONY : src/Application.s
+
+# target to generate assembly for a file
+src/Application.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Application.cpp.s
+.PHONY : src/Application.cpp.s
+
 src/Base.o: src/Base.cpp.o
 .PHONY : src/Base.o
 
@@ -712,6 +736,9 @@ help:
 	@echo "... SDL2_test"
 	@echo "... SDL2main"
 	@echo "... TowerDefence"
+	@echo "... src/Application.o"
+	@echo "... src/Application.i"
+	@echo "... src/Application.s"
 	@echo "... src/Base.o"
 	@echo "... src/Base.i"
 	@echo "... src/Base.s"

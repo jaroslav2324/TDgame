@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/TowerDefence.dir/src/Application.cpp.o"
+  "CMakeFiles/TowerDefence.dir/src/Application.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/Base.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/Base.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/Coords.cpp.o"

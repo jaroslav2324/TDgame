@@ -4,11 +4,13 @@
 #include <queue>
 
 #include "../settings.h"
+#include "MenuOptionsCodes.h"
 #include "Button.h"
 
 using std::queue;
 using std::cout;
 using std::endl;
+
 
 class MainMenu{
 
@@ -16,7 +18,9 @@ class MainMenu{
     MainMenu(SDL_Renderer* renderer, PeriodicTimer* fpsTimer);
     ~MainMenu();
 
-    void loop(SDL_Renderer* renderer);
+    MenuOptionsCode makeFrameTurn();
+
+    void render(SDL_Renderer* renderer);
 
     void saveMouseClickCoords(Coords coords);
 
@@ -30,5 +34,5 @@ class MainMenu{
 
     queue<Coords> savedMouseClicks;
 
-    void render(SDL_Renderer* renderer);
+    MenuOptionsCode handleButtonClicks();
 };
