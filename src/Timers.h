@@ -27,6 +27,8 @@ public:
 
 	// in milliseconds
 	void setTime(double ms);
+	// sets frame time which used to check if tick is needed (if frame time > count period)
+	void setFrameTime(double ms);
 
 	void printCountPeriod();
 	void printAmountTicks();

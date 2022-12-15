@@ -23,6 +23,10 @@ void PeriodicTimer::setTime(double ms){
 	currentTime = ms;
 }
 
+void PeriodicTimer::setFrameTime(double ms){
+	frameTime = ms;
+}
+
 /*in milliseconds*/ 
 double PeriodicTimer::getCountPeriod(){
 	return countPeriod;
@@ -41,14 +45,16 @@ void PeriodicTimer::printCountPeriod() {
 ostream& operator<<(ostream& os, const PeriodicTimer& timer){
     cout << "Count period " << timer.countPeriod << " ms," << endl;
 	cout << "Previous time " << timer.prevTime << " ms," << endl;
-	cout << "Current time " << timer.currentTime << " ms." << endl;
+	cout << "Current time " << timer.currentTime << " ms," << endl;
+	cout << "Frame time " << timer.frameTime << " ms." << endl;
     return os;
 }
 
 ostream& operator<<(ostream& os, const PeriodicTimer* timer){
     cout << "Count period " << timer->countPeriod << " ms," << endl;
 	cout << "Previous time " << timer->prevTime << " ms," << endl;
-	cout << "Current time " << timer->currentTime << " ms." << endl;
+	cout << "Current time " << timer->currentTime << " ms," << endl;
+	cout << "Frame time " << timer->frameTime << " ms." << endl;
     return os;
 }
 

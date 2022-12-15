@@ -159,13 +159,16 @@ void EnemyManager::spawnEnemiesInWave(SDL_Renderer* renderer){
 
     if (enemyInWaveSpawnTimer == nullptr){
         enemyInWaveSpawnTimer = new PeriodicTimer(currentWave.spawnPeriod);
-        enemyInWaveSpawnTimer->setTime(currentWave.spawnPeriod);
+        // to start wave just after setting the wave
+        enemyInWaveSpawnTimer->setFrameTime(currentWave.spawnPeriod);
         cout << enemyInWaveSpawnTimer;
     }
 
+    //cout << enemyInWaveSpawnTimer;
     if (enemyInWaveSpawnTimer->tickIfNeeded()){
         int enemyType = currentWave.listEnemiesTypes.front();
         currentWave.listEnemiesTypes.pop_front();
         spawnEnemyAtPortal(renderer, enemyType);
+        //cout << enemyInWaveSpawnTimer;
     }
 }
