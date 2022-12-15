@@ -157,8 +157,10 @@ void EnemyManager::spawnEnemiesInWave(SDL_Renderer* renderer){
         return;
     }
 
-    if (enemyInWaveSpawnTimer == nullptr)
+    if (enemyInWaveSpawnTimer == nullptr){
         enemyInWaveSpawnTimer = new PeriodicTimer(currentWave.spawnPeriod);
+        enemyInWaveSpawnTimer->setTime(currentWave.spawnPeriod);
+    }
 
     if (enemyInWaveSpawnTimer->tickIfNeeded()){
         int enemyType = currentWave.listEnemiesTypes.front();

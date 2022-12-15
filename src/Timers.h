@@ -23,6 +23,9 @@ public:
 		amountTicks = timer.amountTicks;
 	}
 
+	// in milliseconds
+	void setTime(double ms);
+
 	void printCountPeriod();
 	void printAmountTicks();
 

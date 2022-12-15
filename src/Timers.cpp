@@ -19,6 +19,10 @@ bool PeriodicTimer::tickIfNeeded() {
 	return false;
 }
 
+void PeriodicTimer::setTime(double ms){
+	currentTime = ms;
+}
+
 /*in milliseconds*/ 
 double PeriodicTimer::getCountPeriod(){
 	return countPeriod;
