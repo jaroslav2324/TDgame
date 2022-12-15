@@ -6,7 +6,7 @@
 #include <SDL2/SDL_image.h>
 
 #include "settings.h"
-#include "Game.h"
+#include "game/Game.h"
 #include "UI/MainMenu.h"
 #include "UI/MenuOptionsCodes.h"
 

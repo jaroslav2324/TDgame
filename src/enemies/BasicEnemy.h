@@ -2,7 +2,7 @@
 
 #include "../Timers.h"
 #include "../abstractClasses/Enemy.h"
-#include "../Portal.h"
+#include "../game/Portal.h"
 
 
 class BasicEnemy: public Enemy{

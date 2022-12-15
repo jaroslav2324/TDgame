@@ -1,6 +1,5 @@
 #include <SDL2/SDL_image.h>
 
-#include "settings.h"
 #include "GridTile.h"
 
 GridTile::GridTile(SDL_Renderer* renderer, Coords coords){

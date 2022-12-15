@@ -3,7 +3,7 @@
 #include <iostream>
 #include <list>
 
-#include "EnemyTypes.h"
+#include "../enemies/EnemyTypes.h"
 
 using std::list;
 using std::cout;

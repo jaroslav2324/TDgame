@@ -6,8 +6,8 @@
 
 #include "SDL2/SDL.h"
 
-#include "settings.h"
-#include "Coords.h"
+#include "../settings.h"
+#include "../Coords.h"
 
 /*Only graphical class, enemies spawn in enemy manager*/
 class Portal{

@@ -4,10 +4,10 @@
 #include <list>
 #include <string>
 
-#include "../EnemyTypes.h"
+#include "../enemies/EnemyTypes.h"
 #include "../enemies/BasicEnemy.h"
-#include "../Portal.h"
-#include "../Wave.h"
+#include "../game/Portal.h"
+#include "../game/Wave.h"
 
 using std::list;
 using std::string;

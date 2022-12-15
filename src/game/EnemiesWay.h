@@ -5,7 +5,7 @@
 
 #include "SDL2/SDL.h"
 
-#include "Coords.h"
+#include "../Coords.h"
 
 using std::cout;
 using std::endl;

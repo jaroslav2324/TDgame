@@ -5,8 +5,8 @@
 #include "SDL2/SDL.h"
 #include "SDL2/SDL_image.h"
 
-#include "settings.h"
-#include "Coords.h"
+#include "../settings.h"
+#include "../Coords.h"
 
 class Base{
     public:

@@ -4,7 +4,8 @@
 
 #include "SDL2/SDL.h"
 
-#include "Coords.h"
+#include "../settings.h"
+#include "../Coords.h"
 
 /*class for tile of the grid*/
 class GridTile{

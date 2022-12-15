@@ -218,30 +218,6 @@ src/Application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Application.cpp.s
 .PHONY : src/Application.cpp.s
 
-src/Base.o: src/Base.cpp.o
-.PHONY : src/Base.o
-
-# target to build an object file
-src/Base.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Base.cpp.o
-.PHONY : src/Base.cpp.o
-
-src/Base.i: src/Base.cpp.i
-.PHONY : src/Base.i
-
-# target to preprocess a source file
-src/Base.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Base.cpp.i
-.PHONY : src/Base.cpp.i
-
-src/Base.s: src/Base.cpp.s
-.PHONY : src/Base.s
-
-# target to generate assembly for a file
-src/Base.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Base.cpp.s
-.PHONY : src/Base.cpp.s
-
 src/Coords.o: src/Coords.cpp.o
 .PHONY : src/Coords.o
 
@@ -265,126 +241,6 @@ src/Coords.s: src/Coords.cpp.s
 src/Coords.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Coords.cpp.s
 .PHONY : src/Coords.cpp.s
-
-src/EnemiesWay.o: src/EnemiesWay.cpp.o
-.PHONY : src/EnemiesWay.o
-
-# target to build an object file
-src/EnemiesWay.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.o
-.PHONY : src/EnemiesWay.cpp.o
-
-src/EnemiesWay.i: src/EnemiesWay.cpp.i
-.PHONY : src/EnemiesWay.i
-
-# target to preprocess a source file
-src/EnemiesWay.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.i
-.PHONY : src/EnemiesWay.cpp.i
-
-src/EnemiesWay.s: src/EnemiesWay.cpp.s
-.PHONY : src/EnemiesWay.s
-
-# target to generate assembly for a file
-src/EnemiesWay.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/EnemiesWay.cpp.s
-.PHONY : src/EnemiesWay.cpp.s
-
-src/Game.o: src/Game.cpp.o
-.PHONY : src/Game.o
-
-# target to build an object file
-src/Game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Game.cpp.o
-.PHONY : src/Game.cpp.o
-
-src/Game.i: src/Game.cpp.i
-.PHONY : src/Game.i
-
-# target to preprocess a source file
-src/Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Game.cpp.i
-.PHONY : src/Game.cpp.i
-
-src/Game.s: src/Game.cpp.s
-.PHONY : src/Game.s
-
-# target to generate assembly for a file
-src/Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Game.cpp.s
-.PHONY : src/Game.cpp.s
-
-src/Grid.o: src/Grid.cpp.o
-.PHONY : src/Grid.o
-
-# target to build an object file
-src/Grid.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Grid.cpp.o
-.PHONY : src/Grid.cpp.o
-
-src/Grid.i: src/Grid.cpp.i
-.PHONY : src/Grid.i
-
-# target to preprocess a source file
-src/Grid.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Grid.cpp.i
-.PHONY : src/Grid.cpp.i
-
-src/Grid.s: src/Grid.cpp.s
-.PHONY : src/Grid.s
-
-# target to generate assembly for a file
-src/Grid.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Grid.cpp.s
-.PHONY : src/Grid.cpp.s
-
-src/GridTile.o: src/GridTile.cpp.o
-.PHONY : src/GridTile.o
-
-# target to build an object file
-src/GridTile.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/GridTile.cpp.o
-.PHONY : src/GridTile.cpp.o
-
-src/GridTile.i: src/GridTile.cpp.i
-.PHONY : src/GridTile.i
-
-# target to preprocess a source file
-src/GridTile.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/GridTile.cpp.i
-.PHONY : src/GridTile.cpp.i
-
-src/GridTile.s: src/GridTile.cpp.s
-.PHONY : src/GridTile.s
-
-# target to generate assembly for a file
-src/GridTile.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/GridTile.cpp.s
-.PHONY : src/GridTile.cpp.s
-
-src/Portal.o: src/Portal.cpp.o
-.PHONY : src/Portal.o
-
-# target to build an object file
-src/Portal.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Portal.cpp.o
-.PHONY : src/Portal.cpp.o
-
-src/Portal.i: src/Portal.cpp.i
-.PHONY : src/Portal.i
-
-# target to preprocess a source file
-src/Portal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Portal.cpp.i
-.PHONY : src/Portal.cpp.i
-
-src/Portal.s: src/Portal.cpp.s
-.PHONY : src/Portal.s
-
-# target to generate assembly for a file
-src/Portal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Portal.cpp.s
-.PHONY : src/Portal.cpp.s
 
 src/Timers.o: src/Timers.cpp.o
 .PHONY : src/Timers.o
@@ -481,30 +337,6 @@ src/UI/MainMenu.s: src/UI/MainMenu.cpp.s
 src/UI/MainMenu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.s
 .PHONY : src/UI/MainMenu.cpp.s
-
-src/Wave.o: src/Wave.cpp.o
-.PHONY : src/Wave.o
-
-# target to build an object file
-src/Wave.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Wave.cpp.o
-.PHONY : src/Wave.cpp.o
-
-src/Wave.i: src/Wave.cpp.i
-.PHONY : src/Wave.i
-
-# target to preprocess a source file
-src/Wave.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Wave.cpp.i
-.PHONY : src/Wave.cpp.i
-
-src/Wave.s: src/Wave.cpp.s
-.PHONY : src/Wave.s
-
-# target to generate assembly for a file
-src/Wave.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Wave.cpp.s
-.PHONY : src/Wave.cpp.s
 
 src/abstractClasses/Enemy.o: src/abstractClasses/Enemy.cpp.o
 .PHONY : src/abstractClasses/Enemy.o
@@ -674,6 +506,174 @@ src/entityManagers/TowerManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.s
 .PHONY : src/entityManagers/TowerManager.cpp.s
 
+src/game/Base.o: src/game/Base.cpp.o
+.PHONY : src/game/Base.o
+
+# target to build an object file
+src/game/Base.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Base.cpp.o
+.PHONY : src/game/Base.cpp.o
+
+src/game/Base.i: src/game/Base.cpp.i
+.PHONY : src/game/Base.i
+
+# target to preprocess a source file
+src/game/Base.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Base.cpp.i
+.PHONY : src/game/Base.cpp.i
+
+src/game/Base.s: src/game/Base.cpp.s
+.PHONY : src/game/Base.s
+
+# target to generate assembly for a file
+src/game/Base.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Base.cpp.s
+.PHONY : src/game/Base.cpp.s
+
+src/game/EnemiesWay.o: src/game/EnemiesWay.cpp.o
+.PHONY : src/game/EnemiesWay.o
+
+# target to build an object file
+src/game/EnemiesWay.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/EnemiesWay.cpp.o
+.PHONY : src/game/EnemiesWay.cpp.o
+
+src/game/EnemiesWay.i: src/game/EnemiesWay.cpp.i
+.PHONY : src/game/EnemiesWay.i
+
+# target to preprocess a source file
+src/game/EnemiesWay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/EnemiesWay.cpp.i
+.PHONY : src/game/EnemiesWay.cpp.i
+
+src/game/EnemiesWay.s: src/game/EnemiesWay.cpp.s
+.PHONY : src/game/EnemiesWay.s
+
+# target to generate assembly for a file
+src/game/EnemiesWay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/EnemiesWay.cpp.s
+.PHONY : src/game/EnemiesWay.cpp.s
+
+src/game/Game.o: src/game/Game.cpp.o
+.PHONY : src/game/Game.o
+
+# target to build an object file
+src/game/Game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Game.cpp.o
+.PHONY : src/game/Game.cpp.o
+
+src/game/Game.i: src/game/Game.cpp.i
+.PHONY : src/game/Game.i
+
+# target to preprocess a source file
+src/game/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Game.cpp.i
+.PHONY : src/game/Game.cpp.i
+
+src/game/Game.s: src/game/Game.cpp.s
+.PHONY : src/game/Game.s
+
+# target to generate assembly for a file
+src/game/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Game.cpp.s
+.PHONY : src/game/Game.cpp.s
+
+src/game/Grid.o: src/game/Grid.cpp.o
+.PHONY : src/game/Grid.o
+
+# target to build an object file
+src/game/Grid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o
+.PHONY : src/game/Grid.cpp.o
+
+src/game/Grid.i: src/game/Grid.cpp.i
+.PHONY : src/game/Grid.i
+
+# target to preprocess a source file
+src/game/Grid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.i
+.PHONY : src/game/Grid.cpp.i
+
+src/game/Grid.s: src/game/Grid.cpp.s
+.PHONY : src/game/Grid.s
+
+# target to generate assembly for a file
+src/game/Grid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.s
+.PHONY : src/game/Grid.cpp.s
+
+src/game/GridTile.o: src/game/GridTile.cpp.o
+.PHONY : src/game/GridTile.o
+
+# target to build an object file
+src/game/GridTile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o
+.PHONY : src/game/GridTile.cpp.o
+
+src/game/GridTile.i: src/game/GridTile.cpp.i
+.PHONY : src/game/GridTile.i
+
+# target to preprocess a source file
+src/game/GridTile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.i
+.PHONY : src/game/GridTile.cpp.i
+
+src/game/GridTile.s: src/game/GridTile.cpp.s
+.PHONY : src/game/GridTile.s
+
+# target to generate assembly for a file
+src/game/GridTile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.s
+.PHONY : src/game/GridTile.cpp.s
+
+src/game/Portal.o: src/game/Portal.cpp.o
+.PHONY : src/game/Portal.o
+
+# target to build an object file
+src/game/Portal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o
+.PHONY : src/game/Portal.cpp.o
+
+src/game/Portal.i: src/game/Portal.cpp.i
+.PHONY : src/game/Portal.i
+
+# target to preprocess a source file
+src/game/Portal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.i
+.PHONY : src/game/Portal.cpp.i
+
+src/game/Portal.s: src/game/Portal.cpp.s
+.PHONY : src/game/Portal.s
+
+# target to generate assembly for a file
+src/game/Portal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.s
+.PHONY : src/game/Portal.cpp.s
+
+src/game/Wave.o: src/game/Wave.cpp.o
+.PHONY : src/game/Wave.o
+
+# target to build an object file
+src/game/Wave.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o
+.PHONY : src/game/Wave.cpp.o
+
+src/game/Wave.i: src/game/Wave.cpp.i
+.PHONY : src/game/Wave.i
+
+# target to preprocess a source file
+src/game/Wave.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.i
+.PHONY : src/game/Wave.cpp.i
+
+src/game/Wave.s: src/game/Wave.cpp.s
+.PHONY : src/game/Wave.s
+
+# target to generate assembly for a file
+src/game/Wave.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.s
+.PHONY : src/game/Wave.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -739,27 +739,9 @@ help:
 	@echo "... src/Application.o"
 	@echo "... src/Application.i"
 	@echo "... src/Application.s"
-	@echo "... src/Base.o"
-	@echo "... src/Base.i"
-	@echo "... src/Base.s"
 	@echo "... src/Coords.o"
 	@echo "... src/Coords.i"
 	@echo "... src/Coords.s"
-	@echo "... src/EnemiesWay.o"
-	@echo "... src/EnemiesWay.i"
-	@echo "... src/EnemiesWay.s"
-	@echo "... src/Game.o"
-	@echo "... src/Game.i"
-	@echo "... src/Game.s"
-	@echo "... src/Grid.o"
-	@echo "... src/Grid.i"
-	@echo "... src/Grid.s"
-	@echo "... src/GridTile.o"
-	@echo "... src/GridTile.i"
-	@echo "... src/GridTile.s"
-	@echo "... src/Portal.o"
-	@echo "... src/Portal.i"
-	@echo "... src/Portal.s"
 	@echo "... src/Timers.o"
 	@echo "... src/Timers.i"
 	@echo "... src/Timers.s"
@@ -772,9 +754,6 @@ help:
 	@echo "... src/UI/MainMenu.o"
 	@echo "... src/UI/MainMenu.i"
 	@echo "... src/UI/MainMenu.s"
-	@echo "... src/Wave.o"
-	@echo "... src/Wave.i"
-	@echo "... src/Wave.s"
 	@echo "... src/abstractClasses/Enemy.o"
 	@echo "... src/abstractClasses/Enemy.i"
 	@echo "... src/abstractClasses/Enemy.s"
@@ -796,6 +775,27 @@ help:
 	@echo "... src/entityManagers/TowerManager.o"
 	@echo "... src/entityManagers/TowerManager.i"
 	@echo "... src/entityManagers/TowerManager.s"
+	@echo "... src/game/Base.o"
+	@echo "... src/game/Base.i"
+	@echo "... src/game/Base.s"
+	@echo "... src/game/EnemiesWay.o"
+	@echo "... src/game/EnemiesWay.i"
+	@echo "... src/game/EnemiesWay.s"
+	@echo "... src/game/Game.o"
+	@echo "... src/game/Game.i"
+	@echo "... src/game/Game.s"
+	@echo "... src/game/Grid.o"
+	@echo "... src/game/Grid.i"
+	@echo "... src/game/Grid.s"
+	@echo "... src/game/GridTile.o"
+	@echo "... src/game/GridTile.i"
+	@echo "... src/game/GridTile.s"
+	@echo "... src/game/Portal.o"
+	@echo "... src/game/Portal.i"
+	@echo "... src/game/Portal.s"
+	@echo "... src/game/Wave.o"
+	@echo "... src/game/Wave.i"
+	@echo "... src/game/Wave.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

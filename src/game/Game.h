@@ -1,14 +1,14 @@
 
 #include <fstream>
 
-#include "Timers.h"
-#include "entityManagers/EnemyManager.h"
-#include "entityManagers/TowerManager.h"
+#include "../Timers.h"
+#include "../entityManagers/EnemyManager.h"
+#include "../entityManagers/TowerManager.h"
 #include "EnemiesWay.h"
 #include "Grid.h"
 #include "Portal.h"
 #include "Base.h"
-#include "UI/GameInterface.h"
+#include "../UI/GameInterface.h"
 
 using std::cout;
 using std::endl;

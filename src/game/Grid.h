@@ -1,7 +1,7 @@
 
 #include "SDL2/SDL.h"
 
-#include "settings.h"
+#include "../settings.h"
 #include "GridTile.h"
 
 /*grid class for render tiles

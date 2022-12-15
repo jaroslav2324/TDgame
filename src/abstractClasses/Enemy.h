@@ -6,9 +6,9 @@
 #include <SDL2/SDL_image.h>
 
 #include "../Timers.h"
-#include "../EnemiesWay.h"
-#include "../Base.h"
-#include "../Portal.h"
+#include "../game/EnemiesWay.h"
+#include "../game/Base.h"
+#include "../game/Portal.h"
 #include "../approximateComparison.h"
 
 using std::string;

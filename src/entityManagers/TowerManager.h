@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "../TowerTypes.h"
+#include "../towers/TowerTypes.h"
 #include "../towers/BasicTower.h"
 #include "../approximateComparison.h"
 
