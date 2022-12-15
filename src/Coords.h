@@ -14,5 +14,3 @@ struct Coords{
 };
 
 ostream& operator<<(ostream& os, const Coords& coords);
-//ostream& operator<<(ostream& os, Coords coords);
-

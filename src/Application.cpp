@@ -67,6 +67,9 @@ void Application::loop(){
                         int x, y;
                         SDL_GetMouseState(&x, &y);
                         Coords mouseCoords(x, y);
+
+                        if (DEBUG_CONSOLE_OUTPUT_ON)
+                            cout << "Mose click registered at " << mouseCoords;
                         
                         if (mainMenuOn)
                             mainMenu->saveMouseClickCoords(mouseCoords);

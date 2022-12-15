@@ -160,6 +160,7 @@ void EnemyManager::spawnEnemiesInWave(SDL_Renderer* renderer){
     if (enemyInWaveSpawnTimer == nullptr){
         enemyInWaveSpawnTimer = new PeriodicTimer(currentWave.spawnPeriod);
         enemyInWaveSpawnTimer->setTime(currentWave.spawnPeriod);
+        cout << enemyInWaveSpawnTimer;
     }
 
     if (enemyInWaveSpawnTimer->tickIfNeeded()){

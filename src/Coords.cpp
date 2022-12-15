@@ -5,7 +5,3 @@ ostream& operator<<(ostream& os, const Coords& coords){
     return os;
 }
 
-// ostream& operator<<(ostream& os, Coords coords){
-//     os << "Coords: " << coords.x << " " << coords.y << endl;
-//     return os;
-// }

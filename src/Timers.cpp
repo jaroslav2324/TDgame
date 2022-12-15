@@ -38,6 +38,21 @@ void PeriodicTimer::printCountPeriod() {
 	cout << "Count period: " << countPeriod << endl;
 }
 
+ostream& operator<<(ostream& os, const PeriodicTimer& timer){
+    cout << "Count period " << timer.countPeriod << " ms," << endl;
+	cout << "Previous time " << timer.prevTime << " ms," << endl;
+	cout << "Current time " << timer.currentTime << " ms." << endl;
+    return os;
+}
+
+ostream& operator<<(ostream& os, const PeriodicTimer* timer){
+    cout << "Count period " << timer->countPeriod << " ms," << endl;
+	cout << "Previous time " << timer->prevTime << " ms," << endl;
+	cout << "Current time " << timer->currentTime << " ms." << endl;
+    return os;
+}
+
+
 
 
 
@@ -76,4 +91,18 @@ void CountdownTimer::replaceToMoreTime(double countdownTime){
 
 void CountdownTimer::replaceTime(double countdownTime){
 	CountdownTimer::countdownTime = countdownTime;
+}
+
+ostream& operator<<(ostream& os, const CountdownTimer& timer){
+    cout << "Countdown time " << timer.countdownTime << " ms," << endl;
+	cout << "Previous time " << timer.prevTime << " ms," << endl;
+	cout << "Current time " << timer.currentTime << " ms." << endl;
+    return os;
+}
+
+ostream& operator<<(ostream& os, const CountdownTimer* timer){
+    cout << "Countdown time " << timer->countdownTime << " ms," << endl;
+	cout << "Previous time " << timer->prevTime << " ms," << endl;
+	cout << "Current time " << timer->currentTime << " ms." << endl;
+    return os;
 }

@@ -76,6 +76,8 @@ void GameInterface::render(SDL_Renderer* renderer){
 
             if (!towerManager->isBuildModeActive())
                 towerManager->activateBuildMode(renderer);
+            else
+                towerManager->deactivateBuildMode();
             
         }
         else if (spawnEnemyBtn->isPointInRect(mouseCoords)){

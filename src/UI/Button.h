@@ -23,12 +23,14 @@ public:
     void setModeBasic();
     void setModePressed();
     void setModeHovered();
-    void setRecentlyPressedFlag();
-    void unsetRecentlyPressedFlag();
+    //void setRecentlyPressedFlag();
+    //void unsetRecentlyPressedFlag();
 
     bool isPointInRect(Coords point);
 
     void setWidthHeight(int width, int height);
+
+    bool isPressingCooldownInactive();
 
 private:
 
@@ -49,12 +51,12 @@ private:
     };
 
     // how long show texture of pressed button after mouse clicking
-    CountdownTimer* showPressedButtonTimer = nullptr;
+    CountdownTimer* pressingCooldownTimer = nullptr;
     
     int currentBtnMode = 0;
 
     // in milliseconds
-    const double showPressedButtonTime = 250;
+    const double pressingCooldownTime = 250;
 
     // center coords
     Coords coords;

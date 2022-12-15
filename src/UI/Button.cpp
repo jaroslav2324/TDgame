@@ -6,7 +6,7 @@ Button::Button(SDL_Renderer* renderer, string& btnImgPath, string& btnPressedImg
 
     loadTextures(renderer, btnImgPath, btnPressedImgPath, btnHoveredImgPath);
 
-    showPressedButtonTimer = new CountdownTimer(0);
+    pressingCooldownTimer = new CountdownTimer(0);
 }
 
 Button::Button(SDL_Renderer* renderer, const char* btnImgPath, const char* btnPressedImgPath, const char* btnHoveredImgPath, Coords coords){
@@ -15,7 +15,7 @@ Button::Button(SDL_Renderer* renderer, const char* btnImgPath, const char* btnPr
 
     loadTextures(renderer, btnImgPath, btnPressedImgPath, btnHoveredImgPath);
 
-    showPressedButtonTimer = new CountdownTimer(0);
+    pressingCooldownTimer = new CountdownTimer(0);
 }
 
 Button::~Button(){
@@ -35,9 +35,9 @@ Button::~Button(){
         hoveredBtnTexture = nullptr;
     }
 
-    if (showPressedButtonTimer != nullptr){
-        delete showPressedButtonTimer;
-        showPressedButtonTimer = nullptr;
+    if (pressingCooldownTimer != nullptr){
+        delete pressingCooldownTimer;
+        pressingCooldownTimer = nullptr;
     }
 }
 
@@ -91,7 +91,7 @@ void Button::render(SDL_Renderer* renderer){
     int y = coords.y - btn_height / 2;
     SDL_Rect btnRect = {x, y, btn_width, btn_height};
 
-    if (!showPressedButtonTimer->isCountdownEnd()){
+    if (!pressingCooldownTimer->isCountdownEnd()){
         SDL_RenderCopy(renderer, pressedBtnTexture, 0, &btnRect);
         return;
     }
@@ -118,7 +118,7 @@ void Button::setModeBasic(){
 
 void Button::setModePressed(){
     currentBtnMode = PRESSED;
-    showPressedButtonTimer->addTime(showPressedButtonTime);
+    pressingCooldownTimer->replaceTime(pressingCooldownTime);
 }
 
 void Button::setModeHovered(){
@@ -141,4 +141,8 @@ bool Button::isPointInRect(Coords point){
 void Button::setWidthHeight(int width, int height){
     btn_width = width;
     btn_height = height;
+}
+
+bool Button::isPressingCooldownInactive(){
+    return pressingCooldownTimer->isCountdownEnd();
 }

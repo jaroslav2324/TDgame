@@ -787,6 +787,11 @@ CMakeFiles/TowerDefence.dir/src/Timers.cpp.o: /home/jaros/gitProjects/c++/TDgame
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /usr/local/include/SDL2/SDL.h \
   /usr/local/include/SDL2/SDL_main.h \
   /usr/local/include/SDL2/SDL_stdinc.h \
@@ -1690,6 +1695,11 @@ CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o: /home/jaros/gitProjects/
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/list.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/Timers.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
@@ -1705,11 +1715,6 @@ CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o: /home/jaros/gitProjects/
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
   /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/game/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \
@@ -2442,6 +2447,11 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o: /home/jaros/gitProj
   /usr/local/include/SDL2/SDL_image.h \
   /usr/local/include/SDL2/SDL.h \
   /home/jaros/gitProjects/c++/TDgame/src/Timers.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/game/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/ext/aligned_buffer.h \
@@ -2458,11 +2468,6 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o: /home/jaros/gitProj
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
   /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/game/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h \
@@ -2820,6 +2825,11 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o: /home/jaros/gi
   /usr/local/include/SDL2/SDL_image.h \
   /usr/local/include/SDL2/SDL.h \
   /home/jaros/gitProjects/c++/TDgame/src/Timers.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/game/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/ext/aligned_buffer.h \
@@ -2834,11 +2844,6 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o: /home/jaros/gi
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
   /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/game/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h \
@@ -3202,6 +3207,11 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: /home/jaros/gitProj
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h \
   /usr/local/include/SDL2/SDL_image.h \
   /usr/local/include/SDL2/SDL.h \
@@ -3220,11 +3230,6 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: /home/jaros/gitProj
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
   /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/game/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \
@@ -3632,6 +3637,11 @@ CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o: /home/jaros/gitProject
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /usr/local/include/SDL2/SDL.h \
   /usr/local/include/SDL2/SDL_main.h \
   /usr/local/include/SDL2/SDL_stdinc.h \
@@ -3816,11 +3826,6 @@ CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o: /home/jaros/gitProject
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
   /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/game/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h \
@@ -4020,6 +4025,11 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o: /home/jaros/g
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /usr/local/include/SDL2/SDL.h \
   /usr/local/include/SDL2/SDL_main.h \
   /usr/local/include/SDL2/SDL_stdinc.h \
@@ -4203,11 +4213,6 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o: /home/jaros/g
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
   /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/game/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/settings.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h \
@@ -4575,6 +4580,11 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: /home/jaros/g
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h \
   /usr/local/include/SDL2/SDL_image.h \
   /usr/local/include/SDL2/SDL.h \
@@ -4593,11 +4603,6 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: /home/jaros/g
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
   /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/game/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \
@@ -7783,6 +7788,11 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h \
   /usr/local/include/SDL2/SDL_image.h \
   /usr/local/include/SDL2/SDL.h \
@@ -7801,11 +7811,6 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
   /home/jaros/gitProjects/c++/TDgame/src/Coords.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /home/jaros/gitProjects/c++/TDgame/src/game/Base.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h \
   /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h \

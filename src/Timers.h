@@ -2,9 +2,11 @@
 #pragma once
 
 #include <iostream>
+#include <fstream>
 
 #include "SDL2/SDL.h"
 
+using std::ostream;
 using std::cout;
 using std::endl;
 
@@ -41,12 +43,21 @@ protected:
 	const double countPeriod;
 
 	long long amountTicks = 0;
+
+	friend ostream& operator<<(ostream& os, const PeriodicTimer& timer);
+	friend ostream& operator<<(ostream& os, const PeriodicTimer* timer);
 };
+
+ostream& operator<<(ostream& os, const PeriodicTimer& timer);
+ostream& operator<<(ostream& os, const PeriodicTimer* timer);
+
 
 /*starts countdown when created
 countdown time in milliseconds*/
 class CountdownTimer{
+
 	public:
+
 	CountdownTimer(double countdownTime);
 
 	void addTime(double countdownTime);
@@ -55,6 +66,7 @@ class CountdownTimer{
 	void replaceTime(double countdownTime);
 
 	bool isCountdownEnd();
+
 
 	private:
 	double countdownTime;
@@ -65,4 +77,10 @@ class CountdownTimer{
 	long long amountTicks = 0;
 
 	void countdown();
+
+	friend ostream& operator<<(ostream& os, const CountdownTimer& timer);
+	friend ostream& operator<<(ostream& os, const CountdownTimer* timer);
 };
+
+ostream& operator<<(ostream& os, const CountdownTimer& timer);
+ostream& operator<<(ostream& os, const CountdownTimer* timer);
