@@ -396,6 +396,7 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o: /home/jaros/gitProjects/c++/T
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Grid.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/GridTile.h \
   /home/jaros/gitProjects/c++/TDgame/src/UI/GameInterface.h \
@@ -1312,7 +1313,8 @@ CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o: /home/jaros/gitProjects/c++/TDg
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
-  /home/jaros/gitProjects/c++/TDgame/src/Timers.h
+  /home/jaros/gitProjects/c++/TDgame/src/Timers.h \
+  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
 
 CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/UI/GameInterface.cpp \
   /usr/include/stdc-predef.h \
@@ -1724,6 +1726,7 @@ CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o: /home/jaros/gitProjects/
   /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h \
   /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h \
   /home/jaros/gitProjects/c++/TDgame/src/UI/MenuOptionsCodes.h
 
@@ -2096,7 +2099,8 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: /home/jaros/gitProjects/c++/T
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
-  /home/jaros/gitProjects/c++/TDgame/src/Timers.h
+  /home/jaros/gitProjects/c++/TDgame/src/Timers.h \
+  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.cpp \
   /usr/include/stdc-predef.h \
@@ -3238,7 +3242,8 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: /home/jaros/gitProj
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
-  /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h
+  /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
 
 CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.cpp \
   /usr/include/stdc-predef.h \
@@ -4611,7 +4616,8 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: /home/jaros/g
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
-  /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h
+  /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
 
 CMakeFiles/TowerDefence.dir/src/game/Base.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/game/Base.cpp \
   /usr/include/stdc-predef.h \
@@ -5732,6 +5738,7 @@ CMakeFiles/TowerDefence.dir/src/game/Game.cpp.o: /home/jaros/gitProjects/c++/TDg
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Grid.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/GridTile.h \
   /home/jaros/gitProjects/c++/TDgame/src/UI/GameInterface.h \
@@ -7406,6 +7413,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: /home/jaros/gitProjects/c++/TDgame/s
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
   /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Grid.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/GridTile.h \
   /home/jaros/gitProjects/c++/TDgame/src/UI/GameInterface.h \
@@ -8196,7 +8204,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
   /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h \
   /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h \
   /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h \
-  /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h
+  /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h \
+  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
 
 
 /home/jaros/gitProjects/c++/TDgame/src/game/Wave.cpp:
@@ -8240,6 +8249,8 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects
 /usr/include/c++/11/bits/stl_heap.h:
 
 /home/jaros/gitProjects/c++/TDgame/src/UI/GameInterface.h:
+
+/home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h:
 
 /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.h:
 

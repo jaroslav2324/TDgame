@@ -73,21 +73,21 @@ MenuOptionsCode MainMenu::handleButtonClicks(){
 
     // start game button
     if (startGameBtn->isPointInRect(mouseCoords))
-        startGameBtn->setModeHovered();
+        startGameBtn->setModeHoveredOver();
     else
-        startGameBtn->setModeBasic();
+        startGameBtn->setModeNoCursorInteraction();
 
     // settings button
     if (settingsBtn->isPointInRect(mouseCoords))
-        settingsBtn->setModeHovered();
+        settingsBtn->setModeHoveredOver();
     else
-        settingsBtn->setModeBasic();
+        settingsBtn->setModeNoCursorInteraction();
 
     // quit button
     if (quitBtn->isPointInRect(mouseCoords))
-        quitBtn->setModeHovered();
+        quitBtn->setModeHoveredOver();
     else
-        quitBtn->setModeBasic();
+        quitBtn->setModeNoCursorInteraction();
 
 
     MenuOptionsCode code = NO_CHANGES;
@@ -97,7 +97,7 @@ MenuOptionsCode MainMenu::handleButtonClicks(){
         savedMouseClicks.pop();
 
         if (startGameBtn->isPointInRect(mouseCoords)){
-            startGameBtn->setModePressed();
+            startGameBtn->setModePressedOn();
             code = START_GAME;
 
             if (DEBUG_CONSOLE_OUTPUT_ON)
@@ -105,14 +105,14 @@ MenuOptionsCode MainMenu::handleButtonClicks(){
         }
         else if (settingsBtn->isPointInRect(mouseCoords)){
             // TODO add settings on flag
-            settingsBtn->setModePressed();
+            settingsBtn->setModePressedOn();
 
             if (DEBUG_CONSOLE_OUTPUT_ON)
                 cout << "Options button pressed" << endl;
 
         }
         else if (quitBtn->isPointInRect(mouseCoords)){
-            quitBtn->setModePressed();
+            quitBtn->setModePressedOn();
             code = QUIT_TO_DESKTOP;
 
             if (DEBUG_CONSOLE_OUTPUT_ON)

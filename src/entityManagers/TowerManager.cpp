@@ -71,9 +71,24 @@ void TowerManager::allTowersAttack(SDL_Renderer* renderer){
 }
 
 void TowerManager::renderAllTowers(SDL_Renderer* renderer){
-    
-    for (auto towerPtr: towerList)
+
+    // check cursor hovering over towers
+    int x, y;
+    SDL_GetMouseState(&x, &y);
+    Coords mouseCoords(x, y);
+
+    // render towers
+    for (auto towerPtr: towerList){
+
+        if (towerPtr->isPointInRect(mouseCoords))
+            towerPtr->setModeHoveredOver();
+        else
+            towerPtr->setModeNoCursorInteraction();
+
         towerPtr->render(renderer);
+
+    }
+
     if (buildModeOn)
         renderBuildingTower(renderer);
 }

@@ -55,14 +55,14 @@ void GameInterface::render(SDL_Renderer* renderer){
     SDL_GetMouseState(&x, &y);
 
     if (buildTowerBtn->isPointInRect(Coords(x, y)))
-        buildTowerBtn->setModeHovered();
+        buildTowerBtn->setModeHoveredOver();
     else
-        buildTowerBtn->setModeBasic();
+        buildTowerBtn->setModeNoCursorInteraction();
 
     if (spawnEnemyBtn->isPointInRect(Coords(x, y)))
-        spawnEnemyBtn->setModeHovered();
+        spawnEnemyBtn->setModeHoveredOver();
     else
-        spawnEnemyBtn->setModeBasic();
+        spawnEnemyBtn->setModeNoCursorInteraction();
 
     // TODO move button actions from render method?
 
@@ -72,7 +72,7 @@ void GameInterface::render(SDL_Renderer* renderer){
         savedMouseClicks.pop();
 
         if (buildTowerBtn->isPointInRect(mouseCoords)){
-            buildTowerBtn->setModePressed();
+            buildTowerBtn->setModePressedOn();
 
             if (!towerManager->isBuildModeActive())
                 towerManager->activateBuildMode(renderer);
@@ -82,7 +82,7 @@ void GameInterface::render(SDL_Renderer* renderer){
         }
         else if (spawnEnemyBtn->isPointInRect(mouseCoords)){
 
-            spawnEnemyBtn->setModePressed();
+            spawnEnemyBtn->setModePressedOn();
             //TODO change wave
             Wave newWave = getBasicTestWave();
             enemyManager->setWave(newWave);

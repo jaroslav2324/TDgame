@@ -96,15 +96,15 @@ void Button::render(SDL_Renderer* renderer){
         return;
     }
 
-    switch (currentBtnMode)
+    switch (btnCursorInteractionMode)
     {
-    case BASIC:
+    case NO_INTERACTION:
         SDL_RenderCopy(renderer, btnTexture, 0, &btnRect);
         break;
-    case PRESSED:
+    case PRESSED_ON:
         SDL_RenderCopy(renderer, pressedBtnTexture, 0, &btnRect);
         break;
-    case HOVERED:
+    case HOVERED_OVER:
         SDL_RenderCopy(renderer, hoveredBtnTexture, 0, &btnRect);
         break;
     default:
@@ -112,17 +112,17 @@ void Button::render(SDL_Renderer* renderer){
     }
 }
 
-void Button::setModeBasic(){
-    currentBtnMode = BASIC;
+void Button::setModeNoCursorInteraction(){
+    btnCursorInteractionMode = NO_INTERACTION;
 }
 
-void Button::setModePressed(){
-    currentBtnMode = PRESSED;
+void Button::setModePressedOn(){
+    btnCursorInteractionMode = PRESSED_ON;
     pressingCooldownTimer->replaceTime(pressingCooldownTime);
 }
 
-void Button::setModeHovered(){
-    currentBtnMode = HOVERED;
+void Button::setModeHoveredOver(){
+    btnCursorInteractionMode = HOVERED_OVER;
 }
 
 bool Button::isPointInRect(Coords point){

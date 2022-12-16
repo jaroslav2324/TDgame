@@ -7,6 +7,7 @@
 
 #include "../Coords.h"
 #include "../Timers.h"
+#include "../ObjectCursorInteractionsModes.h"
 
 using std::string;
 
@@ -20,9 +21,9 @@ public:
 
     void render(SDL_Renderer* renderer);
 
-    void setModeBasic();
-    void setModePressed();
-    void setModeHovered();
+    void setModeNoCursorInteraction();
+    void setModePressedOn();
+    void setModeHoveredOver();
     //void setRecentlyPressedFlag();
     //void unsetRecentlyPressedFlag();
 
@@ -44,16 +45,10 @@ private:
     SDL_Texture* pressedBtnTexture = nullptr;
     SDL_Texture* hoveredBtnTexture = nullptr;
 
-    enum BtnModes{
-        BASIC,
-        PRESSED,
-        HOVERED
-    };
-
     // how long show texture of pressed button after mouse clicking
     CountdownTimer* pressingCooldownTimer = nullptr;
     
-    int currentBtnMode = 0;
+    ObjectCursorInteractionsModes btnCursorInteractionMode = NO_INTERACTION;
 
     // in milliseconds
     const double pressingCooldownTime = 250;

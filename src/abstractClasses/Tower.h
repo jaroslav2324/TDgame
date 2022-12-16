@@ -12,6 +12,7 @@
 #include "../entityManagers/EnemyManager.h"
 #include "Projectile.h"
 #include "../projectiles/BasicProjectile.h"
+#include "../ObjectCursorInteractionsModes.h"
 
 using std::string;
 
@@ -42,6 +43,12 @@ public:
     void setDamage(float damage);
     void setCoords(Coords coords);
 
+    bool isPointInRect(Coords point);
+
+    void setModeNoCursorInteraction();
+    void setModePressedOn();
+    void setModeHoveredOver();
+
 protected:
     float damage = 0;
     double freezeMultyplyer = 0;
@@ -60,7 +67,10 @@ protected:
     
     Coords towerCoords;
 
+    // TODO delete?
     std::pair<int, int> gridCoords;
+
+    ObjectCursorInteractionsModes towerCursorInteractionMode = NO_INTERACTION;
 
     //TODO add UI to destroy tower
     bool destroyed = false;
@@ -92,4 +102,6 @@ protected:
     void setRadius(float radius);
     void setLevel(int level);
     void setGridCoords(std::pair<int, int> gridCoords);
+
+    void renderRadiusCircle(SDL_Renderer* renderer);
 };
