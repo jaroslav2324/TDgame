@@ -28,17 +28,22 @@ void Projectile::moveToEnemy(){
     float enemyCoordY = aimedEnemy->getCoordY();
 
     //find proportion of coords change
-    float diffX = enemyCoordX - currentCoords.x;
-    float diffY = enemyCoordY - currentCoords.y;
+    double diffX = enemyCoordX - currentCoords.x;
+    double diffY = enemyCoordY - currentCoords.y;
 
-    float sumDiffXY = abs(diffX) + abs(diffY);
+    char signOfDiffX = 1;
+    if (diffX < 0)
+        signOfDiffX = -1;
 
-    double proportionChangeX = diffX / sumDiffXY;
-    double proportionChangeY = diffY / sumDiffXY;
+    double distanceToEnemy = sqrt(pow(diffX, 2) + pow(diffY, 2));
+    double movingDistance = speed * timePeriodOfMoving;
+    double scale = movingDistance / distanceToEnemy;
 
-    /*find coords change*/
-    float changeX = speed * proportionChangeX * timePeriodOfMoving;
-    float changeY = speed * proportionChangeY * timePeriodOfMoving;
+    // equality movingDistance^2 = changeX^2 + changeY^2
+    double changeY = diffY * scale;
+    double changeX;
+    changeX = sqrt(pow(movingDistance, 2) - pow(changeY, 2));
+    changeX *= signOfDiffX;
 
     /*change coords*/
     currentCoords.x += changeX;

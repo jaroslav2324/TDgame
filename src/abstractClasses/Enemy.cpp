@@ -44,14 +44,28 @@ void Enemy::MoveToNextWaypoint(double timePeriodOfMoving ){
     float diffX = coordsNextWaypoint.x - coordsCurrentWaypoint.x;
     float diffY = coordsNextWaypoint.y - coordsCurrentWaypoint.y;
 
-    float sumDiffXY = abs(diffX) + abs(diffY);
+    char signOfDiffX = 1;
+    if (diffX < 0)
+        signOfDiffX = -1;
 
-    double proportionChangeX = diffX / sumDiffXY;
-    double proportionChangeY = diffY / sumDiffXY;
+    double distanceToEnemy = sqrt(pow(diffX, 2) + pow(diffY, 2));
+    double movingDistance = currentSpeed * timePeriodOfMoving;
+    double scale = movingDistance / distanceToEnemy;
 
-    /*find coords change*/
-    float changeX = currentSpeed * proportionChangeX * timePeriodOfMoving;
-    float changeY = currentSpeed * proportionChangeY * timePeriodOfMoving;
+    // equality movingDistance^2 = changeX^2 + changeY^2
+    double changeY = diffY * scale;
+    double changeX;
+    changeX = sqrt(pow(movingDistance, 2) - pow(changeY, 2));
+    changeX *= signOfDiffX;
+
+    // float sumDiffXY = abs(diffX) + abs(diffY);
+
+    // double proportionChangeX = diffX / sumDiffXY;
+    // double proportionChangeY = diffY / sumDiffXY;
+
+    // /*find coords change*/
+    // float changeX = currentSpeed * proportionChangeX * timePeriodOfMoving;
+    // float changeY = currentSpeed * proportionChangeY * timePeriodOfMoving;
 
     /*change coords*/
     currentCoords.x += changeX;
