@@ -746,6 +746,54 @@ src/towers/BasicTower.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.s
 .PHONY : src/towers/BasicTower.cpp.s
 
+src/towers/FireTower.o: src/towers/FireTower.cpp.o
+.PHONY : src/towers/FireTower.o
+
+# target to build an object file
+src/towers/FireTower.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o
+.PHONY : src/towers/FireTower.cpp.o
+
+src/towers/FireTower.i: src/towers/FireTower.cpp.i
+.PHONY : src/towers/FireTower.i
+
+# target to preprocess a source file
+src/towers/FireTower.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.i
+.PHONY : src/towers/FireTower.cpp.i
+
+src/towers/FireTower.s: src/towers/FireTower.cpp.s
+.PHONY : src/towers/FireTower.s
+
+# target to generate assembly for a file
+src/towers/FireTower.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.s
+.PHONY : src/towers/FireTower.cpp.s
+
+src/towers/IceTower.o: src/towers/IceTower.cpp.o
+.PHONY : src/towers/IceTower.o
+
+# target to build an object file
+src/towers/IceTower.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o
+.PHONY : src/towers/IceTower.cpp.o
+
+src/towers/IceTower.i: src/towers/IceTower.cpp.i
+.PHONY : src/towers/IceTower.i
+
+# target to preprocess a source file
+src/towers/IceTower.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.i
+.PHONY : src/towers/IceTower.cpp.i
+
+src/towers/IceTower.s: src/towers/IceTower.cpp.s
+.PHONY : src/towers/IceTower.s
+
+# target to generate assembly for a file
+src/towers/IceTower.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.s
+.PHONY : src/towers/IceTower.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -829,6 +877,12 @@ help:
 	@echo "... src/towers/BasicTower.o"
 	@echo "... src/towers/BasicTower.i"
 	@echo "... src/towers/BasicTower.s"
+	@echo "... src/towers/FireTower.o"
+	@echo "... src/towers/FireTower.i"
+	@echo "... src/towers/FireTower.s"
+	@echo "... src/towers/IceTower.o"
+	@echo "... src/towers/IceTower.i"
+	@echo "... src/towers/IceTower.s"
 .PHONY : help
 
 

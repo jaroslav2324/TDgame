@@ -6,10 +6,20 @@ GameInterface::GameInterface(SDL_Renderer* renderer, TowerManager* towerManager,
     this->enemyManager = enemyManager;
 
     //TODO change button textures
-    buildTowerBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
+    buildBasicTowerBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
                                          TEST_BTN_PRESSED_TEXTURE_PATH,
                                          TEST_BTN_HOVERED_TEXTURE_PATH,
-                                         Coords(300, 40));
+                                         Coords(50, 300));
+
+    buildIceTowerBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
+                                         TEST_BTN_PRESSED_TEXTURE_PATH,
+                                         TEST_BTN_HOVERED_TEXTURE_PATH,
+                                         Coords(50, 450));
+
+    buildFireTowerBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
+                                         TEST_BTN_PRESSED_TEXTURE_PATH,
+                                         TEST_BTN_HOVERED_TEXTURE_PATH,
+                                         Coords(50, 600));                                   
 
     spawnEnemyBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
                                          TEST_BTN_PRESSED_TEXTURE_PATH,
@@ -21,9 +31,19 @@ GameInterface::GameInterface(SDL_Renderer* renderer, TowerManager* towerManager,
 
 GameInterface::~GameInterface(){
     
-    if (buildTowerBtn != nullptr){
-        delete buildTowerBtn;
-        buildTowerBtn = nullptr;
+    if (buildBasicTowerBtn != nullptr){
+        delete buildBasicTowerBtn;
+        buildBasicTowerBtn = nullptr;
+    }
+
+    if (buildIceTowerBtn != nullptr){
+        delete buildIceTowerBtn;
+        buildIceTowerBtn = nullptr;
+    }
+
+    if (buildFireTowerBtn != nullptr){
+        delete buildFireTowerBtn;
+        buildFireTowerBtn = nullptr;
     }
 
     if (spawnEnemyBtn != nullptr){
@@ -54,10 +74,20 @@ void GameInterface::render(SDL_Renderer* renderer){
 
     SDL_GetMouseState(&x, &y);
 
-    if (buildTowerBtn->isPointInRect(Coords(x, y)))
-        buildTowerBtn->setModeHoveredOver();
+    if (buildBasicTowerBtn->isPointInRect(Coords(x, y)))
+        buildBasicTowerBtn->setModeHoveredOver();
     else
-        buildTowerBtn->setModeNoCursorInteraction();
+        buildBasicTowerBtn->setModeNoCursorInteraction();
+
+    if (buildIceTowerBtn->isPointInRect(Coords(x, y)))
+        buildIceTowerBtn->setModeHoveredOver();
+    else
+        buildIceTowerBtn->setModeNoCursorInteraction();
+
+    if (buildFireTowerBtn->isPointInRect(Coords(x, y)))
+        buildFireTowerBtn->setModeHoveredOver();
+    else
+        buildFireTowerBtn->setModeNoCursorInteraction();
 
     if (spawnEnemyBtn->isPointInRect(Coords(x, y)))
         spawnEnemyBtn->setModeHoveredOver();
@@ -71,14 +101,33 @@ void GameInterface::render(SDL_Renderer* renderer){
         Coords mouseCoords = savedMouseClicks.front();
         savedMouseClicks.pop();
 
-        if (buildTowerBtn->isPointInRect(mouseCoords)){
-            buildTowerBtn->setModePressedOn();
+        if (buildBasicTowerBtn->isPointInRect(mouseCoords)){
+            buildBasicTowerBtn->setModePressedOn();
+            buildTowerType = BASIC_TOWER;
 
             if (!towerManager->isBuildModeActive())
-                towerManager->activateBuildMode(renderer);
+                towerManager->activateBuildMode(renderer, BASIC_TOWER);
             else
                 towerManager->deactivateBuildMode();
             
+        }
+        else if (buildIceTowerBtn->isPointInRect(mouseCoords)){
+            buildIceTowerBtn->setModePressedOn();
+            buildTowerType = ICE_TOWER;
+
+            if (!towerManager->isBuildModeActive())
+                towerManager->activateBuildMode(renderer, ICE_TOWER);
+            else
+                towerManager->deactivateBuildMode();
+        }
+        else if (buildFireTowerBtn->isPointInRect(mouseCoords)){
+            buildFireTowerBtn->setModePressedOn();
+            buildTowerType = FIRE_TOWER;
+
+            if (!towerManager->isBuildModeActive())
+                towerManager->activateBuildMode(renderer, FIRE_TOWER);
+            else
+                towerManager->deactivateBuildMode();
         }
         else if (spawnEnemyBtn->isPointInRect(mouseCoords)){
 
@@ -96,7 +145,7 @@ void GameInterface::render(SDL_Renderer* renderer){
                     cout << "Tower already exists, coords: " << mouseCoords.x << " " << mouseCoords.y << endl;
                 }
                 else{
-                    towerManager->buildTower(renderer, BASIC_TOWER, Coords(mouseCoords.x, mouseCoords.y));
+                    towerManager->buildTower(renderer, buildTowerType, Coords(mouseCoords.x, mouseCoords.y));
                     towerManager->deactivateBuildMode();
                 }
             }
@@ -104,7 +153,9 @@ void GameInterface::render(SDL_Renderer* renderer){
     }
 
     // then render buttons
-    buildTowerBtn->render(renderer);
+    buildBasicTowerBtn->render(renderer);
+    buildIceTowerBtn->render(renderer);
+    buildFireTowerBtn->render(renderer);
     spawnEnemyBtn->render(renderer);
 
 }

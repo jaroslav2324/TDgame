@@ -31,6 +31,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/jaros/gitProjects/c++/TDgame/src/main.cpp" "CMakeFiles/TowerDefence.dir/src/main.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/main.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.cpp" "CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.cpp" "CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o.d"
+  "/home/jaros/gitProjects/c++/TDgame/src/towers/FireTower.cpp" "CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o.d"
+  "/home/jaros/gitProjects/c++/TDgame/src/towers/IceTower.cpp" "CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o.d"
   )
 
 # Targets to which this target links.

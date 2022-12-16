@@ -34,7 +34,7 @@ public:
     bool isDestroyed();
     void setDestroyed();
 
-    virtual void loadTexture(SDL_Renderer* renderer);
+    virtual void loadTexture(SDL_Renderer* renderer) = 0;
     void render(SDL_Renderer* renderer);
     void renderAllProjectiles(SDL_Renderer* renderer);
 

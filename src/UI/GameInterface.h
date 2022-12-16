@@ -24,7 +24,10 @@ class GameInterface{
     void saveMouseClickCoords(Coords coords);
     private:   
     
-    Button* buildTowerBtn = nullptr;
+    TowerTypes buildTowerType = BASIC_TOWER;
+    Button* buildBasicTowerBtn = nullptr;
+    Button* buildIceTowerBtn = nullptr;
+    Button* buildFireTowerBtn = nullptr;
     Button* spawnEnemyBtn = nullptr;
 
     TowerManager * towerManager = nullptr;

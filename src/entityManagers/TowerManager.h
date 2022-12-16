@@ -4,6 +4,8 @@
 
 #include "../towers/TowerTypes.h"
 #include "../towers/BasicTower.h"
+#include "../towers/IceTower.h"
+#include "../towers/FireTower.h"
 #include "../approximateComparison.h"
 
 class TowerManager{
@@ -22,7 +24,7 @@ class TowerManager{
     void renderAllTowers(SDL_Renderer* renderer);
     void renderAllProjectiles(SDL_Renderer* renderer);
 
-    void activateBuildMode(SDL_Renderer* renderer);
+    void activateBuildMode(SDL_Renderer* renderer, TowerTypes buildingTowerType);
     void deactivateBuildMode();
     bool isBuildModeActive();
 

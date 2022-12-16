@@ -45,6 +45,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o.d"
+  "CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o"
+  "CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o.d"
+  "CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o"
+  "CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o.d"
   "TowerDefence"
   "TowerDefence.pdb"
 )

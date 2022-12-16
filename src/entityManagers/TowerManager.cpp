@@ -29,8 +29,24 @@ void TowerManager::buildTower(SDL_Renderer* renderer, int towerType, Coords coor
     
     //TODO add types of towers
     Tower* tower = nullptr;
-    if (towerType == BASIC_TOWER)
-        tower = new class BasicTower(renderer, enemyManager, Coords(x, y));
+    switch(towerType){
+
+        case BASIC_TOWER:
+            tower = new class BasicTower(renderer, enemyManager, Coords(x, y));
+            break;
+
+            case ICE_TOWER:
+            tower = new class IceTower(renderer, enemyManager, Coords(x, y));
+            break;
+
+            case FIRE_TOWER:
+            tower = new class FireTower(renderer, enemyManager, Coords(x, y));
+            break;
+
+        default:
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            cout << "NO TOWER WAS BUILT. ADD MORE TYPES TO TOWER MANAGER." << endl;
+    }
 
     towerList.push_back(tower);
 }
@@ -116,7 +132,7 @@ void TowerManager::renderAllProjectiles(SDL_Renderer* renderer){
         towerPtr->renderAllProjectiles(renderer);
 }
 
-void TowerManager::activateBuildMode(SDL_Renderer* renderer){
+void TowerManager::activateBuildMode(SDL_Renderer* renderer, TowerTypes buildingTowerType){
 
     buildModeOn = true;
 
@@ -126,7 +142,20 @@ void TowerManager::activateBuildMode(SDL_Renderer* renderer){
     int x, y;
     SDL_GetMouseState(&x, &y);
     // TODO change renderer(remove)
-    buildingTower = new BasicTower(renderer, enemyManager, Coords(x, y));
+    switch (buildingTowerType)
+    {
+    case BASIC_TOWER:
+        buildingTower = new BasicTower(renderer, enemyManager, Coords(x, y));
+        break;
+    case ICE_TOWER:
+        buildingTower = new IceTower(renderer, enemyManager, Coords(x, y));
+        break;
+    case FIRE_TOWER:
+        buildingTower = new FireTower(renderer, enemyManager, Coords(x, y));
+        break;
+    default:
+        break;
+    }
     buildingTower->setDamage(0);
 }
 

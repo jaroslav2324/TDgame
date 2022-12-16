@@ -6,8 +6,6 @@ Tower::Tower(SDL_Renderer* renderer, EnemyManager* enemyManager, Coords coords){
     Tower::enemyManager = enemyManager;
     Tower::towerCoords = coords;
 
-    loadTexture(renderer);
-
     float exp = 0;
     for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
         listExpForLvls.push_back(exp);
@@ -24,8 +22,6 @@ Tower::Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, fl
     Tower::attackSpeed = attackSpeed;
     Tower::level = level;
     Tower::towerCoords = coords;
-
-    loadTexture(renderer);
 
     float exp = 0;
     for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
@@ -166,16 +162,6 @@ bool Tower::isDestroyed(){
     return false;
 }
 
-void Tower::loadTexture(SDL_Renderer* renderer){
-
-    if (towerTexture == nullptr)
-        towerTexture = IMG_LoadTexture(renderer, BASIC_TOWER_SPRITE_PATH);
-    else{
-        SDL_DestroyTexture(towerTexture);
-        towerTexture = IMG_LoadTexture(renderer, BASIC_TOWER_SPRITE_PATH);
-    }    
-}
-
 void Tower::render(SDL_Renderer* renderer){
 
     if (towerCursorInteractionMode == HOVERED_OVER)
@@ -210,6 +196,7 @@ void Tower::renderRadiusCircle(SDL_Renderer * renderer)
     int ty = 1;
     int error = (tx - diameter);
 
+    // TODO add line width
     while (x >= y)
     {
         //  Each of the following renders an octant of the circle
