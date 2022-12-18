@@ -1,11 +1,8 @@
 #include "Enemy.h"
 
-Enemy::Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Portal* portal, Coords coords){
+Enemy::Enemy(EnemiesWay* way, Base* base, Portal* portal, Coords coords){
 
     //TODO add timers
-    //TODO delete SDL_Renderer from constructor or move to fields of the class?
-
-    loadTexture(renderer);
 
     Enemy::way = way;
     Enemy::base = base;
@@ -22,11 +19,6 @@ Enemy::~Enemy(){
     if (freezeTimer != nullptr){
         delete freezeTimer;
         freezeTimer = nullptr;
-    }
-
-    if (enemyTexture != nullptr){
-        SDL_DestroyTexture(enemyTexture);
-        enemyTexture = nullptr;
     }
 }
 
@@ -186,20 +178,10 @@ void Enemy::activateFreezeTimer(double freezeTime){
         freezeTimer->replaceToMoreTime(freezeTime);
 }
 
-void Enemy::loadTexture(SDL_Renderer* renderer){
-
-    if (enemyTexture == nullptr)
-        enemyTexture = IMG_LoadTexture(renderer, BASIC_ENEMY_SPRITE_PATH);    
-    else {
-        SDL_DestroyTexture(enemyTexture);
-        enemyTexture = IMG_LoadTexture(renderer, BASIC_ENEMY_SPRITE_PATH);    
-    }
-}
-
-void Enemy::render(SDL_Renderer* renderer){
+void Enemy::render(TexturesHolder* texturesHolder){
 
     int x = currentCoords.x - ENEMY_SPRITE_SIZE / 2;
     int y = currentCoords.y - ENEMY_SPRITE_SIZE / 2;
     SDL_Rect enemyRect = {x, y, ENEMY_SPRITE_SIZE, ENEMY_SPRITE_SIZE};
-    SDL_RenderCopy(renderer, enemyTexture, 0, &enemyRect);
+    texturesHolder->renderTexture(enemyTextureType, &enemyRect);
 }

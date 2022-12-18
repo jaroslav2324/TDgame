@@ -20,23 +20,3 @@
 
 /*used in comparison of coordinates*/
 #define EPSILON_COORDS 1
-
-#define BASIC_ENEMY_SPRITE_PATH "../Assets/enemy.png"
-
-#define BASIC_TOWER_SPRITE_PATH "../Assets/towerSD1.jpeg"
-#define ICE_TOWER_SPRITE_PATH "../Assets/towerSD7.jpeg"
-#define FIRE_TOWER_SPRITE_PATH "../Assets/towerSD11.jpeg"
-
-#define BASIC_PROJECTILE_SPRITE_PATH "../Assets/projectile.jpg"
-
-#define BASIC_GRID_TILE_SPRITE_PATH "../Assets/tile.jpg"
-#define PORTAL_TILE_SPRITE_PATH "../Assets/portal.jpg"
-#define BASE_TILE_SPRITE_PATH "../Assets/base.jpg"
-
-// relative path build/TowerDefence file
-#define TEST_SPRITE_PATH "../Assets/test.jpeg"
-
-#define TEST_BTN_BASIC_TEXTURE_PATH "../Assets/white_square.jpg"
-#define TEST_BTN_PRESSED_TEXTURE_PATH "../Assets/dark_grey_square.png"
-#define TEST_BTN_HOVERED_TEXTURE_PATH "../Assets/light_grey_square.jpg"
-

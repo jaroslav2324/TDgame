@@ -18,9 +18,9 @@ using std::queue;
 
 class GameInterface{
     public:
-    GameInterface(SDL_Renderer* renderer, TowerManager* towerManager, EnemyManager* enemyManager);
+    GameInterface(TowerManager* towerManager, EnemyManager* enemyManager);
     ~GameInterface();
-    void render(SDL_Renderer* renderer);
+    void render(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
     void saveMouseClickCoords(Coords coords);
     private:   
     

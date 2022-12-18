@@ -1,26 +1,26 @@
 #include "MainMenu.h"
 
-MainMenu::MainMenu(SDL_Renderer* renderer, PeriodicTimer* fpsTimer){
+MainMenu::MainMenu(PeriodicTimer* fpsTimer){
     this->fpsTimer = fpsTimer;
     
     //TODO change button textures
     // TODO change button centers(height)
-    startGameBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
-                                            TEST_BTN_PRESSED_TEXTURE_PATH,
-                                            TEST_BTN_HOVERED_TEXTURE_PATH,
+    startGameBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
+                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
+                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
                                             Coords(SCREEN_WIDTH / 2, 150));
     startGameBtn->setWidthHeight(500, 200);
                                     
 
-    settingsBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
-                                            TEST_BTN_PRESSED_TEXTURE_PATH,
-                                            TEST_BTN_HOVERED_TEXTURE_PATH,
+    settingsBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
+                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
+                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
                                             Coords(SCREEN_WIDTH / 2, 450));
     settingsBtn->setWidthHeight(500, 200);
 
-    quitBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
-                                            TEST_BTN_PRESSED_TEXTURE_PATH,
-                                            TEST_BTN_HOVERED_TEXTURE_PATH,
+    quitBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
+                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
+                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
                                             Coords(SCREEN_WIDTH / 2, 750));
     quitBtn->setWidthHeight(500, 200);
 }
@@ -48,15 +48,15 @@ MenuOptionsCode MainMenu::makeFrameTurn(){
     return handleButtonClicks();
 }
 
-void MainMenu::render(SDL_Renderer* renderer){
+void MainMenu::render(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
 
     SDL_SetRenderDrawColor(renderer, 150, 150, 100, 255);
     SDL_Rect rect = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};
     SDL_RenderFillRect(renderer, &rect);
 
-    startGameBtn->render(renderer);
-    settingsBtn->render(renderer);
-    quitBtn->render(renderer);
+    startGameBtn->render(texturesHolder);
+    settingsBtn->render(texturesHolder);
+    quitBtn->render(texturesHolder);
 }
 
 void MainMenu::saveMouseClickCoords(Coords coords){

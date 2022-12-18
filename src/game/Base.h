@@ -7,12 +7,13 @@
 
 #include "../settings.h"
 #include "../Coords.h"
+#include "../TexturesHolder.h"
 
 class Base{
     public:
     //TODO add interaction with end game interfase
     //TODO end game
-    Base(SDL_Renderer* renderer, Coords spawnCoords);
+    Base(Coords spawnCoords);
     ~Base();
 
     int getHitPoits();
@@ -21,14 +22,10 @@ class Base{
 
     void applyDamage(int damage);
 
-    void render(SDL_Renderer* renderer);
+    void render(TexturesHolder* texturesHolder);
 
     private:
     int hitPoints = 10;
 
     Coords coords;
-
-    SDL_Texture* baseTexture = nullptr;
-
-    void loadTexture(SDL_Renderer* renderer);
 };

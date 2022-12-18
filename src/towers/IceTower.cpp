@@ -17,15 +17,6 @@ void IceTower::deleteAttackTimer(){
 
 Projectile* IceTower::newProjectile(SDL_Renderer* renderer){
     // TODO change
-    return new BasicProjectile(renderer, aimedEnemy, towerCoords);
+    return new BasicProjectile(TexturesEnumeration::BASIC_PROJECTILE_TEXTURE, aimedEnemy, towerCoords);
 }
 
-void IceTower::loadTexture(SDL_Renderer* renderer){
-
-    if (towerTexture == nullptr)
-        towerTexture = IMG_LoadTexture(renderer, ICE_TOWER_SPRITE_PATH);
-    else{
-        SDL_DestroyTexture(towerTexture);
-        towerTexture = IMG_LoadTexture(renderer, ICE_TOWER_SPRITE_PATH);
-    }    
-}

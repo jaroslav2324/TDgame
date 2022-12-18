@@ -6,6 +6,7 @@
 #include <SDL2/SDL_image.h>
 
 #include "settings.h"
+#include "TexturesHolder.h"
 #include "game/Game.h"
 #include "UI/MainMenu.h"
 #include "UI/MenuOptionsCodes.h"
@@ -23,6 +24,7 @@ class Application{
     private:
     SDL_Renderer* renderer = nullptr;
     SDL_Window* window = nullptr;
+    TexturesHolder* texturesHolder = nullptr;
 
     bool mainMenuOn = true;
     MainMenu* mainMenu = nullptr;

@@ -64,6 +64,7 @@ void EnemiesWay::render(SDL_Renderer* renderer){
     int lineWidth = 3;
     int x1, y1, x2, y2;
 
+    // TODO change rendereing algorythm
     for (int i = 0; i < amountWaypoints - 1; i++){
         x1 = dictOfWaypoints[i].x;
         y1 = dictOfWaypoints[i].y;

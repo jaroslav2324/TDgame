@@ -20,22 +20,22 @@ EnemyManager::~EnemyManager(){
 }
 
 
-void EnemyManager::spawnEnemyWithCoords(SDL_Renderer* renderer, int enemyType, Coords coords){
-    createAndAddEnemy(renderer, enemyType, coords);
+void EnemyManager::spawnEnemyWithCoords(int enemyType, Coords coords){
+    createAndAddEnemy(enemyType, coords);
 }
 
-void EnemyManager::spawnEnemyAtPortal(SDL_Renderer* renderer, int enemyType){
+void EnemyManager::spawnEnemyAtPortal(int enemyType){
     Coords coords = portal->getCoords();
-    createAndAddEnemy(renderer, enemyType, coords);
+    createAndAddEnemy(enemyType, coords);
 }
 
-void EnemyManager::createAndAddEnemy(SDL_Renderer* renderer, int enemyType, Coords coords){
+void EnemyManager::createAndAddEnemy(int enemyType, Coords coords){
     Enemy* enemy = nullptr;
 
     switch (enemyType){
     //TODO add types of enemies
     case BASIC_ENEMY:
-        enemy = new class BasicEnemy(renderer, enemiesWay, base, portal, coords);
+        enemy = new class BasicEnemy(enemiesWay, base, portal, coords);
         break;
 
     default:
@@ -135,17 +135,17 @@ void EnemyManager::allEnemiesMove(){
         enemy->move();
 }
 
-void EnemyManager::renderAllEnemies(SDL_Renderer* renderer){
+void EnemyManager::renderAllEnemies(TexturesHolder* texturesHolder){
     
     for (auto enemyPtr: enemyList)
-        enemyPtr->render(renderer);
+        enemyPtr->render(texturesHolder);
 }
 
 void EnemyManager::setWave(Wave wave){
     currentWave = wave;
 }
 
-void EnemyManager::spawnEnemiesInWave(SDL_Renderer* renderer){
+void EnemyManager::spawnEnemiesInWave(){
     
     if (currentWave.listEnemiesTypes.size() <= 0){
 
@@ -163,14 +163,14 @@ void EnemyManager::spawnEnemiesInWave(SDL_Renderer* renderer){
         enemyInWaveSpawnTimer = new PeriodicTimer(currentWave.spawnPeriod);
         // to start wave just after setting the wave
         enemyInWaveSpawnTimer->setFrameTime(currentWave.spawnPeriod);
-        cout << enemyInWaveSpawnTimer;
+        //cout << enemyInWaveSpawnTimer;
     }
 
     //cout << enemyInWaveSpawnTimer;
     if (enemyInWaveSpawnTimer->tickIfNeeded()){
         int enemyType = currentWave.listEnemiesTypes.front();
         currentWave.listEnemiesTypes.pop_front();
-        spawnEnemyAtPortal(renderer, enemyType);
+        spawnEnemyAtPortal(enemyType);
         //cout << enemyInWaveSpawnTimer;
     }
 }

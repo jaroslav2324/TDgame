@@ -1,24 +1,25 @@
 #pragma once
 
+#include "../TexturesHolder.h"
 #include "../abstractClasses/Tower.h"
 
 class BasicTower: public Tower{
     public:
-    BasicTower(SDL_Renderer* renderer, EnemyManager* enemyManager, Coords coords): Tower(renderer, enemyManager, coords){
+    BasicTower(TexturesEnumeration towerTextureNum, EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){
         attackSpeed = 750;
         radius = 200;
 
-        loadTexture(renderer);
+        this->towerTextureNum = towerTextureNum;
 
         setAttackTimer();
 
     };
-    BasicTower(SDL_Renderer* renderer, EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
-    Tower(renderer, enemyManager, damage, radius, attackSpeed, level, coords){
+    BasicTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
+    Tower(enemyManager, damage, radius, attackSpeed, level, coords){
         attackSpeed = 750;
         radius = 200;
 
-        loadTexture(renderer);
+        this->towerTextureNum = towerTextureNum;
 
         setAttackTimer();
 
@@ -26,9 +27,7 @@ class BasicTower: public Tower{
     ~BasicTower();
 
     private:
-
-    void loadTexture(SDL_Renderer* renderer);
-
+    
     void setAttackTimer();
     void deleteAttackTimer();
     Projectile* newProjectile(SDL_Renderer* renderer);

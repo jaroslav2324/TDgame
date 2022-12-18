@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/jaros/gitProjects/c++/TDgame/src/Application.cpp" "CMakeFiles/TowerDefence.dir/src/Application.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/Application.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/Coords.cpp" "CMakeFiles/TowerDefence.dir/src/Coords.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/Coords.cpp.o.d"
+  "/home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.cpp" "CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o.d"
+  "/home/jaros/gitProjects/c++/TDgame/src/TexturesHolder.cpp" "CMakeFiles/TowerDefence.dir/src/TexturesHolder.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/TexturesHolder.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/Timers.cpp" "CMakeFiles/TowerDefence.dir/src/Timers.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/Timers.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/UI/Button.cpp" "CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/UI/GameInterface.cpp" "CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o.d"

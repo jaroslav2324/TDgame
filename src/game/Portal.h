@@ -8,20 +8,18 @@
 
 #include "../settings.h"
 #include "../Coords.h"
+#include "../TexturesHolder.h"
 
 /*Only graphical class, enemies spawn in enemy manager*/
 class Portal{
     public:
-    Portal(SDL_Renderer* renderer, Coords coords);
+    Portal(Coords coords);
     ~Portal();
 
-    void render(SDL_Renderer* renderer);
+    void render(TexturesHolder* texturesHolder);
 
     Coords getCoords();
 
     private:
     Coords coords;
-    SDL_Texture* portalTexture = nullptr;
-
-    void loadTexture(SDL_Renderer* renderer);
 };

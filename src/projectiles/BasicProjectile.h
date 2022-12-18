@@ -5,12 +5,12 @@
 class BasicProjectile: public Projectile{
     public:
 
-    BasicProjectile(SDL_Renderer* renderer, Enemy* aimedEnemy, Coords spawnCoords): Projectile(renderer, aimedEnemy, spawnCoords){
-        loadTexture(renderer);
+    BasicProjectile(TexturesEnumeration projectileTextureType, Enemy* aimedEnemy, Coords spawnCoords): Projectile(aimedEnemy, spawnCoords){
         damage = 1;
         speed = 220;
+
+        this->projectileTextureType = projectileTextureType;
     }
 
     private:
-    void loadTexture(SDL_Renderer* renderer);
 };

@@ -6,22 +6,17 @@
 
 #include "../settings.h"
 #include "../Coords.h"
+#include "../TexturesHolder.h"
 
 /*class for tile of the grid*/
 class GridTile{
     public:
-    GridTile(SDL_Renderer* renderer, Coords coords);
-    GridTile(SDL_Renderer* renderer, std::string& spritePath, Coords coords);
+    GridTile(TexturesEnumeration gridTileTextureType, Coords coords);
     ~GridTile();
 
-    void render(SDL_Renderer* renderer);
+    void render(TexturesHolder* texturesHolder);
     
     private:
     Coords coords;
-
-    std::string spritePath = "";
-
-    SDL_Texture* tileTexture = nullptr;
-
-    void loadTexture(SDL_Renderer* renderer);
+    TexturesEnumeration gridTileTextureType;
 };

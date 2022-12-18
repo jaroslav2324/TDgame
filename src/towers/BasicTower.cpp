@@ -16,15 +16,6 @@ void BasicTower::deleteAttackTimer(){
 }
 
 Projectile* BasicTower::newProjectile(SDL_Renderer* renderer){
-    return new BasicProjectile(renderer, aimedEnemy, towerCoords);
+    return new BasicProjectile(TexturesEnumeration::BASIC_PROJECTILE_TEXTURE, aimedEnemy, towerCoords);
 }
 
-void BasicTower::loadTexture(SDL_Renderer* renderer){
-
-    if (towerTexture == nullptr)
-        towerTexture = IMG_LoadTexture(renderer, BASIC_TOWER_SPRITE_PATH);
-    else{
-        SDL_DestroyTexture(towerTexture);
-        towerTexture = IMG_LoadTexture(renderer, BASIC_TOWER_SPRITE_PATH);
-    }    
-}

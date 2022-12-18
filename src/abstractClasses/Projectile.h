@@ -2,20 +2,20 @@
 
 #include "utility"
 
+#include "../TexturesHolder.h"
 #include "Enemy.h"
 
 /*basic class for all projectiles
 */
 class Projectile{
     public:
-    Projectile(SDL_Renderer* renderer, Enemy* aimedEnemy, Coords spawnCoords);
+    Projectile(Enemy* aimedEnemy, Coords spawnCoords);
     //TODO add constructor setting private fields
     ~Projectile();
 
     bool hasDamagedEnemy();
     
-    virtual void loadTexture(SDL_Renderer* renderer) = 0;
-    void render(SDL_Renderer* renderer);
+    void render(TexturesHolder* texturesHolder);
 
     void attack();
 
@@ -35,7 +35,7 @@ class Projectile{
 
     Coords currentCoords;
 
-    SDL_Texture* projectileTexture = nullptr;
+    TexturesEnumeration projectileTextureType;
     
     void moveToEnemy();
     void hitAndFreezeEnemy();

@@ -17,15 +17,6 @@ void FireTower::deleteAttackTimer(){
 
 Projectile* FireTower::newProjectile(SDL_Renderer* renderer){
     // TODO change
-    return new BasicProjectile(renderer, aimedEnemy, towerCoords);
+    return new BasicProjectile(TexturesEnumeration::BASIC_PROJECTILE_TEXTURE, aimedEnemy, towerCoords);
 }
 
-void FireTower::loadTexture(SDL_Renderer* renderer){
-
-    if (towerTexture == nullptr)
-        towerTexture = IMG_LoadTexture(renderer, FIRE_TOWER_SPRITE_PATH);
-    else{
-        SDL_DestroyTexture(towerTexture);
-        towerTexture = IMG_LoadTexture(renderer, FIRE_TOWER_SPRITE_PATH);
-    }    
-}

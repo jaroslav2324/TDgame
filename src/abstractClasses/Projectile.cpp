@@ -1,6 +1,6 @@
 #include "Projectile.h"
 
-Projectile::Projectile(SDL_Renderer* renderer, Enemy* aimedEnemy, Coords spawnCoords){
+Projectile::Projectile(Enemy* aimedEnemy, Coords spawnCoords){
     Projectile::aimedEnemy = aimedEnemy;
     currentCoords = spawnCoords;
 
@@ -8,11 +8,6 @@ Projectile::Projectile(SDL_Renderer* renderer, Enemy* aimedEnemy, Coords spawnCo
 }
 
 Projectile::~Projectile(){
-
-    if (projectileTexture != nullptr){
-        SDL_DestroyTexture(projectileTexture);
-        projectileTexture = nullptr;
-    }
 
     if (movementTimer != nullptr){
         delete movementTimer;
@@ -98,10 +93,10 @@ bool Projectile::hasDamagedEnemy(){
     return false;
 }
 
-void Projectile::render(SDL_Renderer* renderer){
+void Projectile::render(TexturesHolder* texturesHolder){
 
     int x = currentCoords.x - PROJECTILE_SPRITE_SIZE / 2;
     int y = currentCoords.y - PROJECTILE_SPRITE_SIZE / 2;
     SDL_Rect projectileRect = {x, y, PROJECTILE_SPRITE_SIZE, PROJECTILE_SPRITE_SIZE};
-    SDL_RenderCopy(renderer, projectileTexture, 0, &projectileRect);
+    texturesHolder->renderTexture(projectileTextureType, &projectileRect);
 }

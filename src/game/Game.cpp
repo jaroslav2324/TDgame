@@ -1,14 +1,14 @@
 #include "Game.h"
 
-Game::Game(SDL_Renderer* renderer){
+Game::Game(){
 
     enemiesWay = new EnemiesWay();
 
     auto baseCoords = enemiesWay->getLastCoords();
-    base = new Base(renderer, baseCoords);
+    base = new Base(baseCoords);
     auto portalCoords = enemiesWay->getFirstCoords();
     // cout << portalCoords;
-    portal = new Portal(renderer, portalCoords);
+    portal = new Portal(portalCoords);
 
 
     enemyManager = new EnemyManager(base, portal, enemiesWay);
@@ -16,9 +16,9 @@ Game::Game(SDL_Renderer* renderer){
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
 
-    grid = new Grid(renderer);
+    grid = new Grid();
 
-    interface = new GameInterface(renderer, towerManager, enemyManager);
+    interface = new GameInterface(towerManager, enemyManager);
 
 }
 
@@ -59,17 +59,17 @@ Game::~Game(){
     }
 }
 
-void Game::renderAll(SDL_Renderer* renderer){
+void Game::renderAll(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
 
-    grid->renderGrid(renderer);
+    grid->renderGrid(texturesHolder);
     enemiesWay->render(renderer);
-    portal->render(renderer);
-    base->render(renderer);
-    towerManager->renderAllTowers(renderer);
-    enemyManager->renderAllEnemies(renderer);
-    towerManager->renderAllProjectiles(renderer);
+    portal->render(texturesHolder);
+    base->render(texturesHolder);
+    towerManager->renderAllTowers(renderer, texturesHolder);
+    enemyManager->renderAllEnemies(texturesHolder);
+    towerManager->renderAllProjectiles(renderer, texturesHolder);
 
-    interface->render(renderer);
+    interface->render(renderer, texturesHolder);
 
     // SDL_RenderPresent(renderer);
 }
@@ -83,7 +83,7 @@ MenuOptionsCode Game::makeFrameTurn(SDL_Renderer* renderer){
 
     MenuOptionsCode code = NO_CHANGES;
 
-    enemyManager->spawnEnemiesInWave(renderer);
+    enemyManager->spawnEnemiesInWave();
     enemyManager->allEnemiesMove();
     //cout << base->getHitPoits() << endl;
 

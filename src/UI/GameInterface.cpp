@@ -1,29 +1,29 @@
 #include "GameInterface.h"
 
-GameInterface::GameInterface(SDL_Renderer* renderer, TowerManager* towerManager, EnemyManager* enemyManager){
+GameInterface::GameInterface(TowerManager* towerManager, EnemyManager* enemyManager){
 
     this->towerManager = towerManager;
     this->enemyManager = enemyManager;
 
     //TODO change button textures
-    buildBasicTowerBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
-                                         TEST_BTN_PRESSED_TEXTURE_PATH,
-                                         TEST_BTN_HOVERED_TEXTURE_PATH,
+    buildBasicTowerBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
+                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
+                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
                                          Coords(50, 300));
 
-    buildIceTowerBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
-                                         TEST_BTN_PRESSED_TEXTURE_PATH,
-                                         TEST_BTN_HOVERED_TEXTURE_PATH,
+    buildIceTowerBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
+                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
+                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
                                          Coords(50, 450));
 
-    buildFireTowerBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
-                                         TEST_BTN_PRESSED_TEXTURE_PATH,
-                                         TEST_BTN_HOVERED_TEXTURE_PATH,
+    buildFireTowerBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
+                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
+                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
                                          Coords(50, 600));                                   
 
-    spawnEnemyBtn = new Button(renderer, TEST_BTN_BASIC_TEXTURE_PATH, 
-                                         TEST_BTN_PRESSED_TEXTURE_PATH,
-                                         TEST_BTN_HOVERED_TEXTURE_PATH,
+    spawnEnemyBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
+                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
+                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
                                          Coords(600, 40));
 
     
@@ -52,7 +52,7 @@ GameInterface::~GameInterface(){
     }
 }
 
-void GameInterface::render(SDL_Renderer* renderer){
+void GameInterface::render(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
 
     
     SDL_SetRenderDrawColor(renderer, 150, 150, 100, 255);
@@ -106,7 +106,7 @@ void GameInterface::render(SDL_Renderer* renderer){
             buildTowerType = BASIC_TOWER;
 
             if (!towerManager->isBuildModeActive())
-                towerManager->activateBuildMode(renderer, BASIC_TOWER);
+                towerManager->activateBuildMode(BASIC_TOWER);
             else
                 towerManager->deactivateBuildMode();
             
@@ -116,7 +116,7 @@ void GameInterface::render(SDL_Renderer* renderer){
             buildTowerType = ICE_TOWER;
 
             if (!towerManager->isBuildModeActive())
-                towerManager->activateBuildMode(renderer, ICE_TOWER);
+                towerManager->activateBuildMode(ICE_TOWER);
             else
                 towerManager->deactivateBuildMode();
         }
@@ -125,7 +125,7 @@ void GameInterface::render(SDL_Renderer* renderer){
             buildTowerType = FIRE_TOWER;
 
             if (!towerManager->isBuildModeActive())
-                towerManager->activateBuildMode(renderer, FIRE_TOWER);
+                towerManager->activateBuildMode(FIRE_TOWER);
             else
                 towerManager->deactivateBuildMode();
         }
@@ -145,7 +145,7 @@ void GameInterface::render(SDL_Renderer* renderer){
                     cout << "Tower already exists, coords: " << mouseCoords.x << " " << mouseCoords.y << endl;
                 }
                 else{
-                    towerManager->buildTower(renderer, buildTowerType, Coords(mouseCoords.x, mouseCoords.y));
+                    towerManager->buildTower(buildTowerType, Coords(mouseCoords.x, mouseCoords.y));
                     towerManager->deactivateBuildMode();
                 }
             }
@@ -153,10 +153,10 @@ void GameInterface::render(SDL_Renderer* renderer){
     }
 
     // then render buttons
-    buildBasicTowerBtn->render(renderer);
-    buildIceTowerBtn->render(renderer);
-    buildFireTowerBtn->render(renderer);
-    spawnEnemyBtn->render(renderer);
+    buildBasicTowerBtn->render(texturesHolder);
+    buildIceTowerBtn->render(texturesHolder);
+    buildFireTowerBtn->render(texturesHolder);
+    spawnEnemyBtn->render(texturesHolder);
 
 }
 

@@ -11,10 +11,11 @@ Application::Application(){
 
 	window = SDL_CreateWindow("TD_Game", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    texturesHolder = new TexturesHolder(renderer);
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
-    mainMenu = new MainMenu(renderer, fpsTimer);
-    game = new Game(renderer);
+    mainMenu = new MainMenu(fpsTimer);
+    game = new Game();
 }
 
 Application::~Application(){
@@ -34,6 +35,11 @@ Application::~Application(){
         fpsTimer = nullptr;
     }
 
+    if (texturesHolder != nullptr){
+        delete texturesHolder;
+        texturesHolder = nullptr;
+    }
+
     if (renderer != nullptr){
         SDL_DestroyRenderer(renderer);
         renderer = nullptr;
@@ -49,6 +55,8 @@ Application::~Application(){
 }
 
 void Application::loop(){
+
+    
 
     bool quit = false;
 
@@ -69,7 +77,7 @@ void Application::loop(){
                         Coords mouseCoords(x, y);
 
                         if (DEBUG_CONSOLE_OUTPUT_ON)
-                            cout << "Mose click registered at " << mouseCoords;
+                            cout << "Mouse click registered at " << mouseCoords;
                         
                         if (mainMenuOn)
                             mainMenu->saveMouseClickCoords(mouseCoords);
@@ -85,7 +93,7 @@ void Application::loop(){
 
                 MenuOptionsCode code;
                 code = mainMenu->makeFrameTurn();
-                mainMenu->render(renderer);
+                mainMenu->render(renderer, texturesHolder);
 
                 switch (code){
 
@@ -105,7 +113,7 @@ void Application::loop(){
             else{  
                 MenuOptionsCode code;
                 code  = game->makeFrameTurn(renderer);
-                game->renderAll(renderer);
+                game->renderAll(renderer, texturesHolder);
                 
                 // switch (code)
                 

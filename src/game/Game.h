@@ -16,11 +16,12 @@ using std::endl;
 /*main class for game*/
 class Game{
     public:
-    Game(SDL_Renderer* renderer);
+    Game();
     ~Game();
 
+    // TODO change
     MenuOptionsCode makeFrameTurn(SDL_Renderer* renderer);
-    void renderAll(SDL_Renderer* renderer);
+    void renderAll(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
     void saveMouseClickCoords(Coords coords);
 
     private:

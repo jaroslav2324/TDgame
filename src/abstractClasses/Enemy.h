@@ -5,6 +5,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
+#include "../TexturesHolder.h"
 #include "../Timers.h"
 #include "../game/EnemiesWay.h"
 #include "../game/Base.h"
@@ -19,7 +20,7 @@ using std::endl;
 class Enemy{
     
 public:
-    Enemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Portal * portal, Coords coords);
+    Enemy(EnemiesWay* way, Base* base, Portal * portal, Coords coords);
     ~Enemy();
 
     void move();
@@ -38,8 +39,7 @@ public:
     //freezeTime in ms
     void activateFreezeTimer(double freezeTime);
     
-    virtual void loadTexture(SDL_Renderer* renderer);
-    void render(SDL_Renderer* renderer);
+    void render(TexturesHolder* texturesHolder);
 
     float getCoordX();
     float getCoordY();
@@ -77,5 +77,5 @@ protected:
 
     void copyCoords(Coords& destination, Coords& source);
     
-    SDL_Texture* enemyTexture = nullptr;
+    TexturesEnumeration enemyTextureType;
 };

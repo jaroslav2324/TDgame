@@ -7,6 +7,7 @@
 #include <SDL2/SDL.h>
 
 #include "../settings.h"
+#include "../TexturesHolder.h"
 #include "../Timers.h"
 #include "Enemy.h"
 #include "../entityManagers/EnemyManager.h"
@@ -19,9 +20,9 @@ using std::string;
 /*Basic class for all towers*/
 class Tower{
 public:
-    Tower(SDL_Renderer* renderer, EnemyManager* enemyManager, Coords coords);
+    Tower(EnemyManager* enemyManager, Coords coords);
     //TODO end constructor
-    Tower(SDL_Renderer* renderer, EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords);
+    Tower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords);
     ~Tower();
 
     float getDamage();
@@ -34,9 +35,8 @@ public:
     bool isDestroyed();
     void setDestroyed();
 
-    virtual void loadTexture(SDL_Renderer* renderer) = 0;
-    void render(SDL_Renderer* renderer);
-    void renderAllProjectiles(SDL_Renderer* renderer);
+    void render(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
+    void renderAllProjectiles(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
 
     float getExpForNextLvl(int currentLevel);
 
@@ -80,7 +80,7 @@ protected:
     EnemyManager* enemyManager = nullptr;
     Enemy* aimedEnemy = nullptr;
 
-    SDL_Texture* towerTexture = nullptr;
+    TexturesEnumeration towerTextureNum;
 
     std::vector<float> listExpForLvls;
 

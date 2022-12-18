@@ -7,15 +7,16 @@
 
 class BasicEnemy: public Enemy{
     public:
-    BasicEnemy(SDL_Renderer* renderer, EnemiesWay* way, Base* base, Portal* portal, Coords coords): Enemy(renderer, way, base, portal, coords){
+    BasicEnemy(EnemiesWay* way, Base* base, Portal* portal, Coords coords): Enemy(way, base, portal, coords){
         setMovementTimer();
+        enemyTextureType = TexturesEnumeration::BASIC_ENEMY_TEXTURE;
 
-    hitPoints = 2;
-    maxHitPoints = 2;
-    currentSpeed = 100;
-    maxSpeed = 5;
+        hitPoints = 2;
+        maxHitPoints = 2;
+        currentSpeed = 100;
+        maxSpeed = 5;
 
-    damageToBase = 1;
+        damageToBase = 1;
     };
 
     ~BasicEnemy();

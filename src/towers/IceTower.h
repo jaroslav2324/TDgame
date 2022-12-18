@@ -4,21 +4,21 @@
 
 class IceTower: public Tower{
     public:
-    IceTower(SDL_Renderer* renderer, EnemyManager* enemyManager, Coords coords): Tower(renderer, enemyManager, coords){
+    IceTower(TexturesEnumeration towerTextureNum, EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){
         attackSpeed = 1500;
         radius = 350;
 
-        loadTexture(renderer);
+        this->towerTextureNum = towerTextureNum;
 
         setAttackTimer();
 
     };
-    IceTower(SDL_Renderer* renderer, EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
-    Tower(renderer, enemyManager, damage, radius, attackSpeed, level, coords){
+    IceTower(TexturesEnumeration towerTextureNum, EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
+    Tower(enemyManager, damage, radius, attackSpeed, level, coords){
         attackSpeed = 1500;
         radius = 350;
 
-        loadTexture(renderer);
+        this->towerTextureNum = towerTextureNum;
         
         setAttackTimer();
 
@@ -26,8 +26,6 @@ class IceTower: public Tower{
     ~IceTower();
 
     private:
-
-    void loadTexture(SDL_Renderer* renderer);
 
     void setAttackTimer();
     void deleteAttackTimer();

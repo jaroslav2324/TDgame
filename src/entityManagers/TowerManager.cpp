@@ -21,7 +21,7 @@ TowerManager::~TowerManager(){
 }
 
 // pass any coords, these coords will be converted to right grid coords
-void TowerManager::buildTower(SDL_Renderer* renderer, int towerType, Coords coords){
+void TowerManager::buildTower(int towerType, Coords coords){
 
     int x, y;
     x = (int)coords.x - (int)coords.x % TILESIZE + TILESIZE / 2;
@@ -32,15 +32,15 @@ void TowerManager::buildTower(SDL_Renderer* renderer, int towerType, Coords coor
     switch(towerType){
 
         case BASIC_TOWER:
-            tower = new class BasicTower(renderer, enemyManager, Coords(x, y));
+            tower = new class BasicTower(TexturesEnumeration::BASIC_TOWER_TEXTURE, enemyManager, Coords(x, y));
             break;
 
             case ICE_TOWER:
-            tower = new class IceTower(renderer, enemyManager, Coords(x, y));
+            tower = new class IceTower(TexturesEnumeration::ICE_TOWER_TEXTURE, enemyManager, Coords(x, y));
             break;
 
             case FIRE_TOWER:
-            tower = new class FireTower(renderer, enemyManager, Coords(x, y));
+            tower = new class FireTower(TexturesEnumeration::FIRE_TOWER_TEXTURE, enemyManager, Coords(x, y));
             break;
 
         default:
@@ -86,7 +86,7 @@ void TowerManager::allTowersAttack(SDL_Renderer* renderer){
     }
 }
 
-void TowerManager::renderAllTowers(SDL_Renderer* renderer){
+void TowerManager::renderAllTowers(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
 
     // check cursor hovering over towers
     int x, y;
@@ -101,15 +101,15 @@ void TowerManager::renderAllTowers(SDL_Renderer* renderer){
         else
             towerPtr->setModeNoCursorInteraction();
 
-        towerPtr->render(renderer);
+        towerPtr->render(renderer, texturesHolder);
 
     }
 
     if (buildModeOn)
-        renderBuildingTower(renderer);
+        renderBuildingTower(renderer, texturesHolder);
 }
 
-void TowerManager::renderBuildingTower(SDL_Renderer* renderer){
+void TowerManager::renderBuildingTower(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
 
     if (buildingTower == nullptr)
         return;
@@ -122,17 +122,17 @@ void TowerManager::renderBuildingTower(SDL_Renderer* renderer){
     y = mouseY - mouseY % TILESIZE + TILESIZE / 2;
 
     buildingTower->setCoords(Coords(x, y));
-    buildingTower->render(renderer);
+    buildingTower->render(renderer, texturesHolder);
 }
 
 
-void TowerManager::renderAllProjectiles(SDL_Renderer* renderer){
+void TowerManager::renderAllProjectiles(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
     
     for (auto towerPtr: towerList)
-        towerPtr->renderAllProjectiles(renderer);
+        towerPtr->renderAllProjectiles(renderer, texturesHolder);
 }
 
-void TowerManager::activateBuildMode(SDL_Renderer* renderer, TowerTypes buildingTowerType){
+void TowerManager::activateBuildMode(TowerTypes buildingTowerType){
 
     buildModeOn = true;
 
@@ -145,13 +145,13 @@ void TowerManager::activateBuildMode(SDL_Renderer* renderer, TowerTypes building
     switch (buildingTowerType)
     {
     case BASIC_TOWER:
-        buildingTower = new BasicTower(renderer, enemyManager, Coords(x, y));
+        buildingTower = new BasicTower(TexturesEnumeration::BASIC_TOWER_TEXTURE, enemyManager, Coords(x, y));
         break;
     case ICE_TOWER:
-        buildingTower = new IceTower(renderer, enemyManager, Coords(x, y));
+        buildingTower = new IceTower(TexturesEnumeration::ICE_TOWER_TEXTURE, enemyManager, Coords(x, y));
         break;
     case FIRE_TOWER:
-        buildingTower = new FireTower(renderer, enemyManager, Coords(x, y));
+        buildingTower = new FireTower(TexturesEnumeration::FIRE_TOWER_TEXTURE, enemyManager, Coords(x, y));
         break;
     default:
         break;

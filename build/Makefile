@@ -242,6 +242,54 @@ src/Coords.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Coords.cpp.s
 .PHONY : src/Coords.cpp.s
 
+src/TexturesEnum.o: src/TexturesEnum.cpp.o
+.PHONY : src/TexturesEnum.o
+
+# target to build an object file
+src/TexturesEnum.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o
+.PHONY : src/TexturesEnum.cpp.o
+
+src/TexturesEnum.i: src/TexturesEnum.cpp.i
+.PHONY : src/TexturesEnum.i
+
+# target to preprocess a source file
+src/TexturesEnum.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.i
+.PHONY : src/TexturesEnum.cpp.i
+
+src/TexturesEnum.s: src/TexturesEnum.cpp.s
+.PHONY : src/TexturesEnum.s
+
+# target to generate assembly for a file
+src/TexturesEnum.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.s
+.PHONY : src/TexturesEnum.cpp.s
+
+src/TexturesHolder.o: src/TexturesHolder.cpp.o
+.PHONY : src/TexturesHolder.o
+
+# target to build an object file
+src/TexturesHolder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/TexturesHolder.cpp.o
+.PHONY : src/TexturesHolder.cpp.o
+
+src/TexturesHolder.i: src/TexturesHolder.cpp.i
+.PHONY : src/TexturesHolder.i
+
+# target to preprocess a source file
+src/TexturesHolder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/TexturesHolder.cpp.i
+.PHONY : src/TexturesHolder.cpp.i
+
+src/TexturesHolder.s: src/TexturesHolder.cpp.s
+.PHONY : src/TexturesHolder.s
+
+# target to generate assembly for a file
+src/TexturesHolder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/TexturesHolder.cpp.s
+.PHONY : src/TexturesHolder.cpp.s
+
 src/Timers.o: src/Timers.cpp.o
 .PHONY : src/Timers.o
 
@@ -814,6 +862,12 @@ help:
 	@echo "... src/Coords.o"
 	@echo "... src/Coords.i"
 	@echo "... src/Coords.s"
+	@echo "... src/TexturesEnum.o"
+	@echo "... src/TexturesEnum.i"
+	@echo "... src/TexturesEnum.s"
+	@echo "... src/TexturesHolder.o"
+	@echo "... src/TexturesHolder.i"
+	@echo "... src/TexturesHolder.s"
 	@echo "... src/Timers.o"
 	@echo "... src/Timers.i"
 	@echo "... src/Timers.s"

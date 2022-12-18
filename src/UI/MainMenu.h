@@ -15,12 +15,12 @@ using std::endl;
 class MainMenu{
 
     public:
-    MainMenu(SDL_Renderer* renderer, PeriodicTimer* fpsTimer);
+    MainMenu(PeriodicTimer* fpsTimer);
     ~MainMenu();
 
     MenuOptionsCode makeFrameTurn();
 
-    void render(SDL_Renderer* renderer);
+    void render(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
 
     void saveMouseClickCoords(Coords coords);
 

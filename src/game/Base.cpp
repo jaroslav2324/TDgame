@@ -1,17 +1,11 @@
 #include "Base.h"
 
-Base::Base(SDL_Renderer* renderer, Coords spawnCoords){
+Base::Base(Coords spawnCoords){
     coords = spawnCoords;
-    
-    loadTexture(renderer);
 }
 
 Base::~Base(){
 
-    if (baseTexture != nullptr){
-        SDL_DestroyTexture(baseTexture);
-        baseTexture = nullptr;
-    }
 }
 
 int Base::getHitPoits(){
@@ -32,20 +26,10 @@ bool Base::noHitPoitsLeft(){
     return false;
 }
 
-void Base::loadTexture(SDL_Renderer* renderer){
-
-    if (baseTexture == nullptr)
-        baseTexture = IMG_LoadTexture(renderer, BASE_TILE_SPRITE_PATH);    
-    else {
-        SDL_DestroyTexture(baseTexture);
-        baseTexture = IMG_LoadTexture(renderer, BASE_TILE_SPRITE_PATH);    
-    }
-}
-
-void Base::render(SDL_Renderer* renderer){
+void Base::render(TexturesHolder* texturesHolder){
 
     int x = coords.x - TILESIZE / 2;
     int y = coords.y - TILESIZE / 2;
     SDL_Rect baseRect = {x, y, TILESIZE, TILESIZE};
-    SDL_RenderCopy(renderer, baseTexture, 0, &baseRect);
+    texturesHolder->renderTexture(TexturesEnumeration::BASE_TEXTURE, &baseRect);
 }

@@ -1,6 +1,6 @@
 #include "Tower.h"
 
-Tower::Tower(SDL_Renderer* renderer, EnemyManager* enemyManager, Coords coords){
+Tower::Tower(EnemyManager* enemyManager, Coords coords){
     //TODO delete SDL_Renderer from constructor or move to fields of the class?
 
     Tower::enemyManager = enemyManager;
@@ -13,7 +13,7 @@ Tower::Tower(SDL_Renderer* renderer, EnemyManager* enemyManager, Coords coords){
     }
 }
 
-Tower::Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords){
+Tower::Tower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords){
     //TODO delete SDL_Renderer from constructor or move to fields of the class?
 
     Tower::enemyManager = enemyManager;
@@ -31,10 +31,7 @@ Tower::Tower(SDL_Renderer* renderer,EnemyManager* enemyManager, float damage, fl
 }
 
 Tower::~Tower(){
-    if (towerTexture != nullptr){
-        SDL_DestroyTexture(towerTexture);
-        towerTexture = nullptr;
-        }
+
 }
 
 float Tower::getDamage(){
@@ -163,7 +160,7 @@ bool Tower::isDestroyed(){
     return false;
 }
 
-void Tower::render(SDL_Renderer* renderer){
+void Tower::render(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
 
     if (towerCursorInteractionMode == HOVERED_OVER)
         renderRadiusCircle(renderer);
@@ -171,12 +168,12 @@ void Tower::render(SDL_Renderer* renderer){
     int x = towerCoords.x - TOWER_SPRITE_SIZE / 2;
     int y = towerCoords.y - TOWER_SPRITE_SIZE / 2;
     SDL_Rect towerRect = {x, y, TOWER_SPRITE_SIZE, TOWER_SPRITE_SIZE};
-    SDL_RenderCopy(renderer, towerTexture, 0, &towerRect);
+    texturesHolder->renderTexture(towerTextureNum, &towerRect);
 }
 
-void Tower::renderAllProjectiles(SDL_Renderer* renderer){
+void Tower::renderAllProjectiles(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
     for (auto projectilePtr: projectileList)
-        projectilePtr->render(renderer);
+        projectilePtr->render(texturesHolder);
 }
 
 Coords Tower::getCoords(){
