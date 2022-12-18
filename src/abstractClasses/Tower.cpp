@@ -145,6 +145,7 @@ void Tower::moveAllProjectiles(){
         if (projectile->hasDamagedEnemy()){
             delete projectile;
             projectileList.erase(projectileList.begin() + offset);
+            continue;
         }
         offset++;
     }   

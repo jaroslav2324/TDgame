@@ -122,8 +122,10 @@ void EnemyManager::findAndDeleteKilledEnemies(){
 
     int offset = 0;
     for (auto enemy: enemyList){
-        if (enemy->isDead())
+        if (enemy->isDead()){
             enemyList.erase(enemyList.begin() + offset);
+            continue;
+        }
         offset++;
     }
 }
