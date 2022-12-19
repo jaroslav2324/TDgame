@@ -21,34 +21,16 @@ TowerManager::~TowerManager(){
 }
 
 // pass any coords, these coords will be converted to right grid coords
-void TowerManager::buildTower(int towerType, Coords coords){
+void TowerManager::buildTower(TowerTypes towerType, Coords mouseCoords){
 
     int x, y;
-    x = (int)coords.x - (int)coords.x % TILESIZE + TILESIZE / 2;
-    y = (int)coords.y - (int)coords.y % TILESIZE + TILESIZE / 2;
+    x = (int)mouseCoords.x - (int)mouseCoords.x % TILESIZE + TILESIZE / 2;
+    y = (int)mouseCoords.y - (int)mouseCoords.y % TILESIZE + TILESIZE / 2;
+    Coords towerCoords(x, y);
     
     //TODO add types of towers
-    Tower* tower = nullptr;
-    switch(towerType){
+    createAndAddTower(towerType, towerCoords);
 
-        case BASIC_TOWER:
-            tower = new class BasicTower(enemyManager, Coords(x, y));
-            break;
-
-            case ICE_TOWER:
-            tower = new class IceTower(enemyManager, Coords(x, y));
-            break;
-
-            case FIRE_TOWER:
-            tower = new class FireTower(enemyManager, Coords(x, y));
-            break;
-
-        default:
-        if (DEBUG_CONSOLE_OUTPUT_ON)
-            cout << "NO TOWER WAS BUILT. ADD MORE TYPES TO TOWER MANAGER." << endl;
-    }
-
-    towerList.push_back(tower);
 }
 
 void TowerManager::addBuiltTower(Tower* tower){
@@ -141,21 +123,9 @@ void TowerManager::activateBuildMode(TowerTypes buildingTowerType){
 
     int x, y;
     SDL_GetMouseState(&x, &y);
-    // TODO change renderer(remove)
-    switch (buildingTowerType)
-    {
-    case BASIC_TOWER:
-        buildingTower = new BasicTower(enemyManager, Coords(x, y));
-        break;
-    case ICE_TOWER:
-        buildingTower = new IceTower(enemyManager, Coords(x, y));
-        break;
-    case FIRE_TOWER:
-        buildingTower = new FireTower(enemyManager, Coords(x, y));
-        break;
-    default:
-        break;
-    }
+    Coords towerCoords(x, y);
+
+    buildingTower = createTower(buildingTowerType, towerCoords);
     buildingTower->setDamage(0);
 }
 
@@ -185,4 +155,48 @@ bool TowerManager::isTowerExistsInTile(Coords coords)
             return true;
 
     return false;
+}
+
+void TowerManager::createAndAddTower(TowerTypes towerType, Coords coords){
+
+    Tower* tower = nullptr;
+    switch (towerType)
+    {
+    case BASIC_TOWER:
+        tower = new BasicTower(enemyManager, coords);
+        break;
+    case ICE_TOWER:
+        tower = new IceTower(enemyManager, coords);
+        break;
+    case FIRE_TOWER:
+        tower = new FireTower(enemyManager, coords);
+        break;
+    default:
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            cout << "NO TOWER WAS CREATED. ADD MORE TYPES TO TOWER MANAGER." << endl;
+        break;
+    }
+    towerList.push_back(tower);
+}
+
+Tower* TowerManager::createTower(TowerTypes towerType, Coords coords){
+
+    Tower* tower = nullptr;
+    switch (towerType)
+    {
+    case BASIC_TOWER:
+        tower = new BasicTower(enemyManager, coords);
+        break;
+    case ICE_TOWER:
+        tower = new IceTower(enemyManager, coords);
+        break;
+    case FIRE_TOWER:
+        tower = new FireTower(enemyManager, coords);
+        break;
+    default:
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            cout << "NO TOWER WAS CREATED. ADD MORE TYPES TO TOWER MANAGER." << endl;
+        break;
+    }
+    return tower;
 }

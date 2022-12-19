@@ -13,7 +13,7 @@ class TowerManager{
     TowerManager(EnemyManager* enemyManager);
     ~TowerManager();
 
-    void buildTower(int towerType, Coords coords);
+    void buildTower(TowerTypes towerType, Coords coords);
     void addBuiltTower(Tower*);
     void destroyTower(Tower*);
 
@@ -40,5 +40,9 @@ class TowerManager{
     Tower* buildingTower = nullptr;
     // render on grid
     void renderBuildingTower(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
+
+    // adds tower to towers list
+    void createAndAddTower(TowerTypes towerType, Coords coords);
+    Tower* createTower(TowerTypes towerType, Coords coords);
 
 };
