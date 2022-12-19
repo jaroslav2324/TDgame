@@ -5,7 +5,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
-#include "../TexturesHolder.h"
+#include "../Renderer.h"
 #include "../Coords.h"
 #include "../Timers.h"
 #include "../ObjectCursorInteractionsModes.h"
@@ -19,7 +19,7 @@ public:
     Button(TexturesEnumeration textureNoInteraction, TexturesEnumeration textureHoveredOver, TexturesEnumeration texturePressedOn, Coords coords);
     ~Button();
 
-    void render(TexturesHolder* texturesHolder);
+    void render(Renderer* renderer);
 
     void setModeNoCursorInteraction();
     void setModePressedOn();

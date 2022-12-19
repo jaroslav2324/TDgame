@@ -93,10 +93,10 @@ bool Projectile::hasDamagedEnemy(){
     return false;
 }
 
-void Projectile::render(TexturesHolder* texturesHolder){
+void Projectile::render(Renderer* renderer){
 
     int x = currentCoords.x - PROJECTILE_SPRITE_SIZE / 2;
     int y = currentCoords.y - PROJECTILE_SPRITE_SIZE / 2;
     SDL_Rect projectileRect = {x, y, PROJECTILE_SPRITE_SIZE, PROJECTILE_SPRITE_SIZE};
-    texturesHolder->renderTexture(projectileTextureType, &projectileRect);
+    renderer->renderTexture(projectileTextureType, &projectileRect);
 }

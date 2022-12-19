@@ -52,21 +52,23 @@ GameInterface::~GameInterface(){
     }
 }
 
-void GameInterface::render(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
+void GameInterface::render(Renderer* renderer){
 
+    SDL_Color color = {150, 150, 100, 255};
     
-    SDL_SetRenderDrawColor(renderer, 150, 150, 100, 255);
     SDL_Rect rect = {0, 0, 100, SCREEN_HEIGHT};
-    SDL_RenderFillRect(renderer, &rect);
+    const SDL_Rect* rectPtr = &rect;
+
+    renderer->renderFilledRect(rectPtr, color);
 
     rect = {0, 0, SCREEN_WIDTH, 100};
-    SDL_RenderFillRect(renderer, &rect);
+    renderer->renderFilledRect(rectPtr, color);
 
     rect = {0, SCREEN_HEIGHT - 10, SCREEN_WIDTH, 10};
-    SDL_RenderFillRect(renderer, &rect);
+    renderer->renderFilledRect(rectPtr, color);
 
     rect = {SCREEN_WIDTH - 10, 0, 10, SCREEN_HEIGHT};
-    SDL_RenderFillRect(renderer, &rect);
+    renderer->renderFilledRect(rectPtr, color);
 
     // TODO move from render
     // check howering ower btns
@@ -153,10 +155,10 @@ void GameInterface::render(SDL_Renderer* renderer, TexturesHolder* texturesHolde
     }
 
     // then render buttons
-    buildBasicTowerBtn->render(texturesHolder);
-    buildIceTowerBtn->render(texturesHolder);
-    buildFireTowerBtn->render(texturesHolder);
-    spawnEnemyBtn->render(texturesHolder);
+    buildBasicTowerBtn->render(renderer);
+    buildIceTowerBtn->render(renderer);
+    buildFireTowerBtn->render(renderer);
+    spawnEnemyBtn->render(renderer);
 
 }
 

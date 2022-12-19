@@ -7,7 +7,7 @@
 
 #include "../settings.h"
 #include "../Coords.h"
-#include "../TexturesHolder.h"
+#include "../Renderer.h"
 
 class Base{
     public:
@@ -22,7 +22,7 @@ class Base{
 
     void applyDamage(int damage);
 
-    void render(TexturesHolder* texturesHolder);
+    void render(Renderer* renderer);
 
     private:
     int hitPoints = 10;

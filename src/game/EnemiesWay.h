@@ -6,6 +6,7 @@
 #include "SDL2/SDL.h"
 
 #include "../Coords.h"
+#include "../Renderer.h"
 
 using std::cout;
 using std::endl;
@@ -24,7 +25,7 @@ class EnemiesWay{
 
     int getAmountWaypoints();
 
-    void render(SDL_Renderer* renderer);
+    void render(Renderer* renderer);
 
     private:
     int amountWaypoints = -1;

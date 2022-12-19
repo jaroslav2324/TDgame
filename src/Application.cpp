@@ -8,10 +8,7 @@ Application::Application(){
     if (IMG_Init(IMG_INIT_JPG) == 0)
         cout << "SDL_image error" << endl;
 
-
-	window = SDL_CreateWindow("TD_Game", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-    texturesHolder = new TexturesHolder(renderer);
+    renderer = new Renderer();
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
     mainMenu = new MainMenu(fpsTimer);
@@ -35,19 +32,9 @@ Application::~Application(){
         fpsTimer = nullptr;
     }
 
-    if (texturesHolder != nullptr){
-        delete texturesHolder;
-        texturesHolder = nullptr;
-    }
-
     if (renderer != nullptr){
-        SDL_DestroyRenderer(renderer);
+        delete renderer;
         renderer = nullptr;
-    }
-
-    if (window != nullptr){
-        SDL_DestroyWindow(window);
-        window = nullptr;
     }
 
 	IMG_Quit();
@@ -93,7 +80,7 @@ void Application::loop(){
 
                 MenuOptionsCode code;
                 code = mainMenu->makeFrameTurn();
-                mainMenu->render(renderer, texturesHolder);
+                mainMenu->render(renderer);
 
                 switch (code){
 
@@ -112,14 +99,14 @@ void Application::loop(){
 
             else{  
                 MenuOptionsCode code;
-                code  = game->makeFrameTurn(renderer);
-                game->renderAll(renderer, texturesHolder);
+                code  = game->makeFrameTurn();
+                game->renderAll(renderer);
                 
                 // switch (code)
                 
             }
 
-            SDL_RenderPresent(renderer);
+            renderer->renderPresent();
         }
 	}
 }

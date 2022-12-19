@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../TexturesHolder.h"
 #include "../abstractClasses/Tower.h"
 
 class BasicTower: public Tower{
@@ -30,5 +29,5 @@ class BasicTower: public Tower{
     
     void setAttackTimer();
     void deleteAttackTimer();
-    Projectile* newProjectile(SDL_Renderer* renderer);
+    Projectile* newProjectile();
 };

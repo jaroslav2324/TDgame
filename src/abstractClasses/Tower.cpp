@@ -95,7 +95,7 @@ void Tower::findNearestEnemyInRadius(){
     aimedEnemy = enemyManager->findNearestEnemyForTower(towerCoords, radius);
 }
 
-void Tower::attack(SDL_Renderer* renderer){
+void Tower::attack(){
 
 /*move all projectiles and delete if they hit enemy*/
     moveAllProjectiles();
@@ -109,7 +109,7 @@ void Tower::attack(SDL_Renderer* renderer){
 
             /*spawn projectile and add it to the list*/
             //TODO change BasicProjectile
-            Projectile* projectile = newProjectile(renderer);
+            Projectile* projectile = newProjectile();
             projectileList.push_back(projectile);
 
             /*add experience for tower*/
@@ -160,7 +160,7 @@ bool Tower::isDestroyed(){
     return false;
 }
 
-void Tower::render(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
+void Tower::render(Renderer* renderer){
 
     if (towerCursorInteractionMode == HOVERED_OVER)
         renderRadiusCircle(renderer);
@@ -168,59 +168,24 @@ void Tower::render(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
     int x = towerCoords.x - TOWER_SPRITE_SIZE / 2;
     int y = towerCoords.y - TOWER_SPRITE_SIZE / 2;
     SDL_Rect towerRect = {x, y, TOWER_SPRITE_SIZE, TOWER_SPRITE_SIZE};
-    texturesHolder->renderTexture(towerTextureType, &towerRect);
+    renderer->renderTexture(towerTextureType, &towerRect);
 }
 
-void Tower::renderAllProjectiles(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
+void Tower::renderAllProjectiles(Renderer* renderer){
     for (auto projectilePtr: projectileList)
-        projectilePtr->render(texturesHolder);
+        projectilePtr->render(renderer);
 }
 
 Coords Tower::getCoords(){
     return towerCoords;
 }
 
-void Tower::renderRadiusCircle(SDL_Renderer * renderer)
-{
-    SDL_SetRenderDrawColor(renderer, 100, 100, 180, 180);
+void Tower::renderRadiusCircle(Renderer* renderer){
+    // TODO move color to class fields
+    SDL_Color radiusColor = {100, 100, 180, 180};
 
-    int centerX = towerCoords.x;
-    int centerY = towerCoords.y;
-    int diameter = (radius * 2);
-
-    int x = (radius - 1);
-    int y = 0;
-    int tx = 1;
-    int ty = 1;
-    int error = (tx - diameter);
-
-    // TODO add line width
-    while (x >= y)
-    {
-        //  Each of the following renders an octant of the circle
-        SDL_RenderDrawPoint(renderer, centerX + x, centerY - y);
-        SDL_RenderDrawPoint(renderer, centerX + x, centerY + y);
-        SDL_RenderDrawPoint(renderer, centerX - x, centerY - y);
-        SDL_RenderDrawPoint(renderer, centerX - x, centerY + y);
-        SDL_RenderDrawPoint(renderer, centerX + y, centerY - x);
-        SDL_RenderDrawPoint(renderer, centerX + y, centerY + x);
-        SDL_RenderDrawPoint(renderer, centerX - y, centerY - x);
-        SDL_RenderDrawPoint(renderer, centerX - y, centerY + x);
-
-        if (error <= 0)
-        {
-            ++y;
-            error += ty;
-            ty += 2;
-        }
-
-        if (error > 0)
-        {
-            --x;
-            tx += 2;
-            error += (tx - diameter);
-        }
-    }
+    Coords coords = towerCoords;
+    renderer->renderCircle(coords, radius, radiusColor);
 }
 
 void Tower::setModeNoCursorInteraction(){

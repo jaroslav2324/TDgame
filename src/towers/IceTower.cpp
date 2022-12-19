@@ -15,7 +15,7 @@ void IceTower::deleteAttackTimer(){
     }
 }
 
-Projectile* IceTower::newProjectile(SDL_Renderer* renderer){
+Projectile* IceTower::newProjectile(){
     // TODO change
     return new BasicProjectile(aimedEnemy, towerCoords);
 }

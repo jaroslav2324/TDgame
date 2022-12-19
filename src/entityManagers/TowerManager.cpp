@@ -60,15 +60,15 @@ void TowerManager::findAndDeleteDestroyedTowers(){
     }
 }
 
-void TowerManager::allTowersAttack(SDL_Renderer* renderer){
-    //TODO remove SDL_Renderer
+void TowerManager::allTowersAttack(){
+
     for (auto tower: towerList){
-        tower->attack(renderer);
+        tower->attack();
         //tower->moveAllProjectiles();
     }
 }
 
-void TowerManager::renderAllTowers(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
+void TowerManager::renderAllTowers(Renderer* renderer){
 
     // check cursor hovering over towers
     int x, y;
@@ -83,15 +83,15 @@ void TowerManager::renderAllTowers(SDL_Renderer* renderer, TexturesHolder* textu
         else
             towerPtr->setModeNoCursorInteraction();
 
-        towerPtr->render(renderer, texturesHolder);
+        towerPtr->render(renderer);
 
     }
 
     if (buildModeOn)
-        renderBuildingTower(renderer, texturesHolder);
+        renderBuildingTower(renderer);
 }
 
-void TowerManager::renderBuildingTower(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
+void TowerManager::renderBuildingTower(Renderer* renderer){
 
     if (buildingTower == nullptr)
         return;
@@ -104,14 +104,14 @@ void TowerManager::renderBuildingTower(SDL_Renderer* renderer, TexturesHolder* t
     y = mouseY - mouseY % TILESIZE + TILESIZE / 2;
 
     buildingTower->setCoords(Coords(x, y));
-    buildingTower->render(renderer, texturesHolder);
+    buildingTower->render(renderer);
 }
 
 
-void TowerManager::renderAllProjectiles(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
+void TowerManager::renderAllProjectiles(Renderer* renderer){
     
     for (auto towerPtr: towerList)
-        towerPtr->renderAllProjectiles(renderer, texturesHolder);
+        towerPtr->renderAllProjectiles(renderer);
 }
 
 void TowerManager::activateBuildMode(TowerTypes buildingTowerType){

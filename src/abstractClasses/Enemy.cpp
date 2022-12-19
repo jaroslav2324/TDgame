@@ -178,10 +178,10 @@ void Enemy::activateFreezeTimer(double freezeTime){
         freezeTimer->replaceToMoreTime(freezeTime);
 }
 
-void Enemy::render(TexturesHolder* texturesHolder){
+void Enemy::render(Renderer* renderer){
 
     int x = currentCoords.x - ENEMY_SPRITE_SIZE / 2;
     int y = currentCoords.y - ENEMY_SPRITE_SIZE / 2;
     SDL_Rect enemyRect = {x, y, ENEMY_SPRITE_SIZE, ENEMY_SPRITE_SIZE};
-    texturesHolder->renderTexture(enemyTextureType, &enemyRect);
+    renderer->renderTexture(enemyTextureType, &enemyRect);
 }

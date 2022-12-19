@@ -19,9 +19,8 @@ class Game{
     Game();
     ~Game();
 
-    // TODO change
-    MenuOptionsCode makeFrameTurn(SDL_Renderer* renderer);
-    void renderAll(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
+    MenuOptionsCode makeFrameTurn();
+    void renderAll(Renderer* renderer);
     void saveMouseClickCoords(Coords coords);
 
     private:

@@ -26,10 +26,10 @@ bool Base::noHitPoitsLeft(){
     return false;
 }
 
-void Base::render(TexturesHolder* texturesHolder){
+void Base::render(Renderer* renderer){
 
     int x = coords.x - TILESIZE / 2;
     int y = coords.y - TILESIZE / 2;
     SDL_Rect baseRect = {x, y, TILESIZE, TILESIZE};
-    texturesHolder->renderTexture(TexturesEnumeration::BASE_TEXTURE, &baseRect);
+    renderer->renderTexture(TexturesEnumeration::BASE_TEXTURE, &baseRect);
 }

@@ -20,7 +20,7 @@ class GameInterface{
     public:
     GameInterface(TowerManager* towerManager, EnemyManager* enemyManager);
     ~GameInterface();
-    void render(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
+    void render(Renderer* renderer);
     void saveMouseClickCoords(Coords coords);
     private:   
     

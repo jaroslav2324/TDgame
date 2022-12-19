@@ -48,15 +48,15 @@ MenuOptionsCode MainMenu::makeFrameTurn(){
     return handleButtonClicks();
 }
 
-void MainMenu::render(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
+void MainMenu::render(Renderer* renderer){
 
-    SDL_SetRenderDrawColor(renderer, 150, 150, 100, 255);
+    SDL_Color color = {150, 150, 100, 255};
     SDL_Rect rect = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};
-    SDL_RenderFillRect(renderer, &rect);
+    renderer->renderFilledRect(&rect, color);
 
-    startGameBtn->render(texturesHolder);
-    settingsBtn->render(texturesHolder);
-    quitBtn->render(texturesHolder);
+    startGameBtn->render(renderer);
+    settingsBtn->render(renderer);
+    quitBtn->render(renderer);
 }
 
 void MainMenu::saveMouseClickCoords(Coords coords){

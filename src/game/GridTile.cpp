@@ -11,10 +11,10 @@ GridTile::~GridTile(){
 
 }
 
-void GridTile::render(TexturesHolder* texturesHolder){
+void GridTile::render(Renderer* renderer){
 
     int x = coords.x - TILESIZE/ 2;
     int y = coords.y - TILESIZE / 2;
     SDL_Rect tileRect = {x, y, TILESIZE, TILESIZE};
-    texturesHolder->renderTexture(gridTileTextureType, &tileRect);
+    renderer->renderTexture(gridTileTextureType, &tileRect);
 }

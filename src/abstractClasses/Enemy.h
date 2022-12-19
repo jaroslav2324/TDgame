@@ -5,7 +5,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
-#include "../TexturesHolder.h"
+#include "../Renderer.h"
 #include "../Timers.h"
 #include "../game/EnemiesWay.h"
 #include "../game/Base.h"
@@ -39,7 +39,7 @@ public:
     //freezeTime in ms
     void activateFreezeTimer(double freezeTime);
     
-    void render(TexturesHolder* texturesHolder);
+    void render(Renderer* renderer);
 
     float getCoordX();
     float getCoordY();

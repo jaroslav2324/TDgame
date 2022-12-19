@@ -59,22 +59,22 @@ Game::~Game(){
     }
 }
 
-void Game::renderAll(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
+void Game::renderAll(Renderer* renderer){
 
-    grid->renderGrid(texturesHolder);
+    grid->renderGrid(renderer);
     enemiesWay->render(renderer);
-    portal->render(texturesHolder);
-    base->render(texturesHolder);
-    towerManager->renderAllTowers(renderer, texturesHolder);
-    enemyManager->renderAllEnemies(texturesHolder);
-    towerManager->renderAllProjectiles(renderer, texturesHolder);
+    portal->render(renderer);
+    base->render(renderer);
+    towerManager->renderAllTowers(renderer);
+    enemyManager->renderAllEnemies(renderer);
+    towerManager->renderAllProjectiles(renderer);
 
-    interface->render(renderer, texturesHolder);
+    interface->render(renderer);
 
     // SDL_RenderPresent(renderer);
 }
 
-MenuOptionsCode Game::makeFrameTurn(SDL_Renderer* renderer){
+MenuOptionsCode Game::makeFrameTurn(){
 
     //if base destroyed
     //if(base->noHitPoitsLeft()){
@@ -87,7 +87,7 @@ MenuOptionsCode Game::makeFrameTurn(SDL_Renderer* renderer){
     enemyManager->allEnemiesMove();
     //cout << base->getHitPoits() << endl;
 
-    towerManager->allTowersAttack(renderer);
+    towerManager->allTowersAttack();
     enemyManager->findAndDeleteKilledEnemies();
 
     return code;

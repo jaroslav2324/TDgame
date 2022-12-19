@@ -35,7 +35,7 @@ class EnemyManager{
 
     void allEnemiesMove();
 
-    void renderAllEnemies(TexturesHolder* texturesHolder);
+    void renderAllEnemies(Renderer* renderer);
 
     private:
     std::vector<Enemy*> enemyList;

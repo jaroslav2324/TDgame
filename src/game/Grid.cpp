@@ -19,9 +19,9 @@ Grid::~Grid(){
         }
 }
 
-void Grid::renderGrid(TexturesHolder* texturesHolder){
+void Grid::renderGrid(Renderer* renderer){
 
     for (int i = 0; i < GAME_LEVEL_HEIGHT; i++)
         for (int j = 0; j < GAME_LEVEL_WIDTH; j++)
-            gridTilesField[i][j]->render(texturesHolder);
+            gridTilesField[i][j]->render(renderer);
 }

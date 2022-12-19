@@ -19,10 +19,10 @@ class TowerManager{
 
     void findAndDeleteDestroyedTowers();
 
-    void allTowersAttack(SDL_Renderer* renderer);
+    void allTowersAttack();
 
-    void renderAllTowers(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
-    void renderAllProjectiles(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
+    void renderAllTowers(Renderer* renderer);
+    void renderAllProjectiles(Renderer* renderer);
 
     void activateBuildMode(TowerTypes buildingTowerType);
     void deactivateBuildMode();
@@ -39,7 +39,7 @@ class TowerManager{
     // tower sprite in build mode
     Tower* buildingTower = nullptr;
     // render on grid
-    void renderBuildingTower(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
+    void renderBuildingTower(Renderer* renderer);
 
     // adds tower to towers list
     void createAndAddTower(TowerTypes towerType, Coords coords);

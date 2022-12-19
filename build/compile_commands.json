@@ -126,8 +126,8 @@
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/TexturesHolder.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/TexturesHolder.cpp",
-  "file": "/home/jaros/gitProjects/c++/TDgame/src/TexturesHolder.cpp"
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Renderer.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/Renderer.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",

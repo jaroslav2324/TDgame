@@ -57,12 +57,13 @@ int EnemiesWay::getAmountWaypoints(){
     return amountWaypoints;
 }
 
-void EnemiesWay::render(SDL_Renderer* renderer){
+void EnemiesWay::render(Renderer* renderer){
     
-    SDL_SetRenderDrawColor(renderer, 0, 255, 255, 255);
+    SDL_Color color = {0, 255, 255, 255};
 
     int lineWidth = 3;
     int x1, y1, x2, y2;
+    Coords point1, point2;
 
     // TODO change rendereing algorythm
     for (int i = 0; i < amountWaypoints - 1; i++){
@@ -71,8 +72,13 @@ void EnemiesWay::render(SDL_Renderer* renderer){
         x2 = dictOfWaypoints[i + 1].x;
         y2 = dictOfWaypoints[i + 1].y;
 
-        for (int j = 0; j < lineWidth; j++, x1++, x2++, y1++, y2++)
-            SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
+        for (int j = 0; j < lineWidth; j++, x1++, x2++, y1++, y2++){
+            point1.x = x1;
+            point1.y = y1;
+            point2.x = x2;
+            point2.y = y2;
+            renderer->renderLine(point1, point2, color);
+        }
     }
         
 }

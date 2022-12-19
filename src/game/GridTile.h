@@ -6,7 +6,7 @@
 
 #include "../settings.h"
 #include "../Coords.h"
-#include "../TexturesHolder.h"
+#include "../Renderer.h"
 
 /*class for tile of the grid*/
 class GridTile{
@@ -14,7 +14,7 @@ class GridTile{
     GridTile(TexturesEnumeration gridTileTextureType, Coords coords);
     ~GridTile();
 
-    void render(TexturesHolder* texturesHolder);
+    void render(Renderer* renderer);
     
     private:
     Coords coords;

@@ -2,7 +2,7 @@
 
 #include "utility"
 
-#include "../TexturesHolder.h"
+#include "../Renderer.h"
 #include "Enemy.h"
 
 /*basic class for all projectiles
@@ -15,7 +15,7 @@ class Projectile{
 
     bool hasDamagedEnemy();
     
-    void render(TexturesHolder* texturesHolder);
+    void render(Renderer* renderer);
 
     void attack();
 

@@ -15,7 +15,7 @@ void FireTower::deleteAttackTimer(){
     }
 }
 
-Projectile* FireTower::newProjectile(SDL_Renderer* renderer){
+Projectile* FireTower::newProjectile(){
     // TODO change
     return new BasicProjectile(aimedEnemy, towerCoords);
 }

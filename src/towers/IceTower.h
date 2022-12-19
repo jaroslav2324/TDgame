@@ -29,5 +29,5 @@ class IceTower: public Tower{
 
     void setAttackTimer();
     void deleteAttackTimer();
-    Projectile* newProjectile(SDL_Renderer* renderer);
+    Projectile* newProjectile();
 };

@@ -7,7 +7,7 @@
 #include <SDL2/SDL.h>
 
 #include "../settings.h"
-#include "../TexturesHolder.h"
+#include "../Renderer.h"
 #include "../Timers.h"
 #include "Enemy.h"
 #include "../entityManagers/EnemyManager.h"
@@ -29,14 +29,14 @@ public:
     float getRadius();
     Coords getCoords();
 
-    void attack(SDL_Renderer* renderer);
+    void attack();
     void moveAllProjectiles();
 
     bool isDestroyed();
     void setDestroyed();
 
-    void render(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
-    void renderAllProjectiles(SDL_Renderer* renderer, TexturesHolder* texturesHolder);
+    void render(Renderer* renderer);
+    void renderAllProjectiles(Renderer* renderer);
 
     float getExpForNextLvl(int currentLevel);
 
@@ -88,7 +88,7 @@ protected:
 
     virtual void setAttackTimer() = 0;
 
-    virtual Projectile* newProjectile(SDL_Renderer* renderer) = 0;
+    virtual Projectile* newProjectile() = 0;
     
     void setExpForDamage(float exp);
     void setExpForKill(float exp);
@@ -103,5 +103,5 @@ protected:
     void setLevel(int level);
     void setGridCoords(std::pair<int, int> gridCoords);
 
-    void renderRadiusCircle(SDL_Renderer* renderer);
+    void renderRadiusCircle(Renderer* renderer);
 };

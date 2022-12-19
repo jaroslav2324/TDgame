@@ -8,7 +8,7 @@
 
 #include "../settings.h"
 #include "../Coords.h"
-#include "../TexturesHolder.h"
+#include "../Renderer.h"
 
 /*Only graphical class, enemies spawn in enemy manager*/
 class Portal{
@@ -16,7 +16,7 @@ class Portal{
     Portal(Coords coords);
     ~Portal();
 
-    void render(TexturesHolder* texturesHolder);
+    void render(Renderer* renderer);
 
     Coords getCoords();
 

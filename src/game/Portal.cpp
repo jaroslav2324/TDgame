@@ -9,12 +9,12 @@ Portal::~Portal(){
 
 }
 
-void Portal::render(TexturesHolder* texturesHolder){
+void Portal::render(Renderer* renderer){
 
     int x = coords.x - TILESIZE / 2;
     int y = coords.y - TILESIZE / 2;
     SDL_Rect portalRect = {x, y, TILESIZE, TILESIZE};
-    texturesHolder->renderTexture(TexturesEnumeration::PORTAL_TEXTURE, &portalRect);
+    renderer->renderTexture(TexturesEnumeration::PORTAL_TEXTURE, &portalRect);
 }
 
 Coords Portal::getCoords(){

@@ -19,27 +19,27 @@ Button::~Button(){
     }
 }
 
-void Button::render(TexturesHolder* texturesHolder){
+void Button::render(Renderer* renderer){
 
     int x = coords.x - btn_width / 2;
     int y = coords.y - btn_height / 2;
     SDL_Rect btnRect = {x, y, btn_width, btn_height};
 
     if (!pressingCooldownTimer->isCountdownEnd()){
-        texturesHolder->renderTexture(texturePressedOn, &btnRect);
+        renderer->renderTexture(texturePressedOn, &btnRect);
         return;
     }
 
     switch (btnCursorInteractionMode)
     {
     case NO_INTERACTION:
-        texturesHolder->renderTexture(textureNoInteraction, &btnRect);
+        renderer->renderTexture(textureNoInteraction, &btnRect);
         break;
     case PRESSED_ON:
-        texturesHolder->renderTexture(texturePressedOn, &btnRect);
+        renderer->renderTexture(texturePressedOn, &btnRect);
         break;
     case HOVERED_OVER:
-    texturesHolder->renderTexture(textureHoveredOver, &btnRect);
+    renderer->renderTexture(textureHoveredOver, &btnRect);
         break;
     default:
         break;

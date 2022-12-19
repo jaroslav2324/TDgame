@@ -135,10 +135,10 @@ void EnemyManager::allEnemiesMove(){
         enemy->move();
 }
 
-void EnemyManager::renderAllEnemies(TexturesHolder* texturesHolder){
+void EnemyManager::renderAllEnemies(Renderer* renderer){
     
     for (auto enemyPtr: enemyList)
-        enemyPtr->render(texturesHolder);
+        enemyPtr->render(renderer);
 }
 
 void EnemyManager::setWave(Wave wave){
