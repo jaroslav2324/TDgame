@@ -4,21 +4,21 @@
 
 class FireTower: public Tower{
     public:
-    FireTower(TexturesEnumeration towerTextureNum, EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){
+    FireTower(EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){
         attackSpeed = 50;
         radius = 100;
 
-        this->towerTextureNum = towerTextureNum;
+        this->towerTextureType = TexturesEnumeration::FIRE_TOWER_TEXTURE;
 
         setAttackTimer();
 
     };
-    FireTower(TexturesEnumeration towerTextureNum, EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
+    FireTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
     Tower(enemyManager, damage, radius, attackSpeed, level, coords){
         attackSpeed =   50;
         radius = 100;
 
-        this->towerTextureNum = towerTextureNum;
+        this->towerTextureType = TexturesEnumeration::FIRE_TOWER_TEXTURE;
 
         setAttackTimer();
 

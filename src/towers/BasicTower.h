@@ -5,11 +5,11 @@
 
 class BasicTower: public Tower{
     public:
-    BasicTower(TexturesEnumeration towerTextureNum, EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){
+    BasicTower(EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){
         attackSpeed = 750;
         radius = 200;
 
-        this->towerTextureNum = towerTextureNum;
+        this->towerTextureType = TexturesEnumeration::BASIC_TOWER_TEXTURE;
 
         setAttackTimer();
 
@@ -19,7 +19,7 @@ class BasicTower: public Tower{
         attackSpeed = 750;
         radius = 200;
 
-        this->towerTextureNum = towerTextureNum;
+        this->towerTextureType = TexturesEnumeration::BASIC_TOWER_TEXTURE;
 
         setAttackTimer();
 

@@ -32,15 +32,15 @@ void TowerManager::buildTower(int towerType, Coords coords){
     switch(towerType){
 
         case BASIC_TOWER:
-            tower = new class BasicTower(TexturesEnumeration::BASIC_TOWER_TEXTURE, enemyManager, Coords(x, y));
+            tower = new class BasicTower(enemyManager, Coords(x, y));
             break;
 
             case ICE_TOWER:
-            tower = new class IceTower(TexturesEnumeration::ICE_TOWER_TEXTURE, enemyManager, Coords(x, y));
+            tower = new class IceTower(enemyManager, Coords(x, y));
             break;
 
             case FIRE_TOWER:
-            tower = new class FireTower(TexturesEnumeration::FIRE_TOWER_TEXTURE, enemyManager, Coords(x, y));
+            tower = new class FireTower(enemyManager, Coords(x, y));
             break;
 
         default:
@@ -145,13 +145,13 @@ void TowerManager::activateBuildMode(TowerTypes buildingTowerType){
     switch (buildingTowerType)
     {
     case BASIC_TOWER:
-        buildingTower = new BasicTower(TexturesEnumeration::BASIC_TOWER_TEXTURE, enemyManager, Coords(x, y));
+        buildingTower = new BasicTower(enemyManager, Coords(x, y));
         break;
     case ICE_TOWER:
-        buildingTower = new IceTower(TexturesEnumeration::ICE_TOWER_TEXTURE, enemyManager, Coords(x, y));
+        buildingTower = new IceTower(enemyManager, Coords(x, y));
         break;
     case FIRE_TOWER:
-        buildingTower = new FireTower(TexturesEnumeration::FIRE_TOWER_TEXTURE, enemyManager, Coords(x, y));
+        buildingTower = new FireTower(enemyManager, Coords(x, y));
         break;
     default:
         break;

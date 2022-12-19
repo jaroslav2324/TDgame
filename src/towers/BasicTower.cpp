@@ -16,6 +16,6 @@ void BasicTower::deleteAttackTimer(){
 }
 
 Projectile* BasicTower::newProjectile(SDL_Renderer* renderer){
-    return new BasicProjectile(TexturesEnumeration::BASIC_PROJECTILE_TEXTURE, aimedEnemy, towerCoords);
+    return new BasicProjectile(aimedEnemy, towerCoords);
 }
 

@@ -80,7 +80,7 @@ protected:
     EnemyManager* enemyManager = nullptr;
     Enemy* aimedEnemy = nullptr;
 
-    TexturesEnumeration towerTextureNum;
+    TexturesEnumeration towerTextureType;
 
     std::vector<float> listExpForLvls;
 

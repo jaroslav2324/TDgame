@@ -168,7 +168,7 @@ void Tower::render(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
     int x = towerCoords.x - TOWER_SPRITE_SIZE / 2;
     int y = towerCoords.y - TOWER_SPRITE_SIZE / 2;
     SDL_Rect towerRect = {x, y, TOWER_SPRITE_SIZE, TOWER_SPRITE_SIZE};
-    texturesHolder->renderTexture(towerTextureNum, &towerRect);
+    texturesHolder->renderTexture(towerTextureType, &towerRect);
 }
 
 void Tower::renderAllProjectiles(SDL_Renderer* renderer, TexturesHolder* texturesHolder){
