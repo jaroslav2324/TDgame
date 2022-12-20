@@ -185,7 +185,7 @@ void Tower::renderRadiusCircle(Renderer* renderer){
     SDL_Color radiusColor = {100, 100, 180, 180};
 
     Coords coords = towerCoords;
-    renderer->renderCircle(coords, radius, radiusColor);
+    renderer->renderCircle(coords, radius, radiusColor, 3);
 }
 
 void Tower::setModeNoCursorInteraction(){

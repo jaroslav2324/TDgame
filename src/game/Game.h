@@ -30,6 +30,7 @@ class Game{
     EnemyManager* enemyManager = nullptr;
     TowerManager* towerManager = nullptr;
 
+
     PeriodicTimer* fpsTimer = nullptr;
 
     EnemiesWay* enemiesWay = nullptr;
