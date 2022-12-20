@@ -1,6 +1,8 @@
 #pragma once
 
 #define DEBUG_CONSOLE_OUTPUT_ON true
+#define LOADING_LEVELS_ON true
+#define SAVING_LEVELS_ON true
 
 #define FPS 60.0
 

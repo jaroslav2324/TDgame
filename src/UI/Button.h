@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <fstream>
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
@@ -10,6 +11,8 @@
 #include "../Timers.h"
 #include "../ObjectCursorInteractionsModes.h"
 
+using std::ostream;
+using std::istream;
 using std::string;
 
 class Button
@@ -24,8 +27,11 @@ public:
     void setModeNoCursorInteraction();
     void setModePressedOn();
     void setModeHoveredOver();
-    //void setRecentlyPressedFlag();
-    //void unsetRecentlyPressedFlag();
+
+    // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+    void saveToBinaryFile(ostream& outpustStream);
+    // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+    void loadFromBinaryFile(istream& inputStream);
 
     bool isPointInRect(Coords point);
 
@@ -35,8 +41,8 @@ public:
 
 private:
 
-    int btn_width = 100;
-    int btn_height = 50;
+    int btnWidth = 100;
+    int btnHeight = 50;
 
     // how long show texture of pressed button after mouse clicking
     CountdownTimer* pressingCooldownTimer = nullptr;
@@ -44,11 +50,11 @@ private:
     ObjectCursorInteractionsModes btnCursorInteractionMode = NO_INTERACTION;
 
     TexturesEnumeration textureNoInteraction;
-    TexturesEnumeration texturePressedOn;
     TexturesEnumeration textureHoveredOver;
+    TexturesEnumeration texturePressedOn;
 
     // in milliseconds
-    const double pressingCooldownTime = 250;
+    double pressingCooldownTime = 250;
 
     // center coords
     Coords coords;
