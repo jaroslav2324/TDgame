@@ -8,7 +8,6 @@
 class BasicEnemy: public Enemy{
     public:
     BasicEnemy(EnemiesWay* way, Base* base, Portal* portal, Coords coords): Enemy(way, base, portal, coords){
-        setMovementTimer();
         enemyTextureType = TexturesEnumeration::BASIC_ENEMY_TEXTURE;
 
         hitPoints = 2;
@@ -22,7 +21,5 @@ class BasicEnemy: public Enemy{
     ~BasicEnemy();
 
     private:
-    void setMovementTimer();
-    void deleteMovementTimer();
     
 };

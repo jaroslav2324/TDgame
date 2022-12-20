@@ -18,6 +18,11 @@ class Portal{
 
     void render(Renderer* renderer);
 
+    // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+    void saveToBinaryFile(ostream& outpustStream);
+    // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+    void loadFromBinaryFile(istream& inputStream);
+
     Coords getCoords();
 
     private:

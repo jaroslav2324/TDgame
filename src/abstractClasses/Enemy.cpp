@@ -2,7 +2,7 @@
 
 Enemy::Enemy(EnemiesWay* way, Base* base, Portal* portal, Coords coords){
 
-    //TODO add timers
+    movementTimer = new PeriodicTimer(1 / FPS * 1000);
 
     Enemy::way = way;
     Enemy::base = base;
@@ -20,6 +20,12 @@ Enemy::~Enemy(){
         delete freezeTimer;
         freezeTimer = nullptr;
     }
+
+    if (movementTimer != nullptr){
+        delete movementTimer;
+        movementTimer = nullptr;
+
+    }
 }
 
 void Enemy::replaceToNextWaypointCoords(){
@@ -30,7 +36,8 @@ void Enemy::replaceToNextWaypointCoords(){
 
 void Enemy::MoveToNextWaypoint(double timePeriodOfMoving ){
 
-    //cout << currentCoords.x << " " << currentCoords.y << endl;
+    // convert to seconds
+    timePeriodOfMoving /= 1000;
 
     //find proportion of coords change
     float diffX = coordsNextWaypoint.x - coordsCurrentWaypoint.x;
@@ -144,6 +151,7 @@ void Enemy::damageBaseAndGetKilled(){
 void Enemy::move(){
 
     if (movementTimer->tickIfNeeded()){
+
 
         // cout << currentCoords.x << " " << currentCoords.y << endl;
         // cout << coordsNextWaypoint.x << " " << coordsNextWaypoint.y << endl;

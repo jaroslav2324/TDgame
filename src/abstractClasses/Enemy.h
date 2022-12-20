@@ -31,8 +31,6 @@ public:
     void freeze(float freezeMultiplyer, double time);
     void unfreeze();
 
-    virtual void setMovementTimer() = 0;
-
     bool isNearBase();
     void damageBaseAndGetKilled();
 
@@ -59,8 +57,6 @@ protected:
     Coords coordsCurrentWaypoint;
     Coords coordsNextWaypoint;
 
-    //TODO implement Timer
-    //TODO add system changing timer
     PeriodicTimer* movementTimer = nullptr;
     
     CountdownTimer* freezeTimer = nullptr;
@@ -69,8 +65,8 @@ protected:
     Base* base = nullptr;
     Portal * portal = nullptr;
 
-/*baseSpeed multiplyes by timePeriodOfMoving in seconds*/
-    void MoveToNextWaypoint(double timePeriodOfMoving);
+/*baseSpeed is multiplyed by timePeriodOfMoving. The last value is given in milliseconds*/
+    void MoveToNextWaypoint(double timePeriodOfMoving); 
 
     bool ifWaypointPassed();
     void replaceToNextWaypointCoords();
