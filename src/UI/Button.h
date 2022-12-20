@@ -25,8 +25,8 @@ public:
     void render(Renderer* renderer);
 
     void setModeNoCursorInteraction();
-    void setModePressedOn();
     void setModeHoveredOver();
+    void setModePressedOn();
 
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     void saveToBinaryFile(ostream& outpustStream);

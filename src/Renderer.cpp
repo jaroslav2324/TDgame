@@ -9,11 +9,11 @@ Renderer::Renderer(){
     map<TexturesEnumeration, const char*> texturesPaths;
 
     texturesPaths[TexturesEnumeration::BASIC_ENEMY_TEXTURE] = "../Assets/enemy.png";
-    texturesPaths[TexturesEnumeration::BASIC_TOWER_TEXTURE] = "../Assets/towerSD1.jpeg";
-    texturesPaths[TexturesEnumeration::ICE_TOWER_TEXTURE] = "../Assets/towerSD7.jpeg";
-    texturesPaths[TexturesEnumeration::FIRE_TOWER_TEXTURE] = "../Assets/towerSD11.jpeg";
+    texturesPaths[TexturesEnumeration::BASIC_TOWER_TEXTURE] = "../Assets/towers/towerSD1.jpeg";
+    texturesPaths[TexturesEnumeration::ICE_TOWER_TEXTURE] = "../Assets/towers/towerSD7.jpeg";
+    texturesPaths[TexturesEnumeration::FIRE_TOWER_TEXTURE] = "../Assets/towers/towerSD11.jpeg";
     texturesPaths[TexturesEnumeration::BASIC_PROJECTILE_TEXTURE] = "../Assets/projectile.jpg";
-    texturesPaths[TexturesEnumeration::BASIC_GRID_TILE_TEXTURE] = "../Assets/tile.jpg";
+    texturesPaths[TexturesEnumeration::BASIC_GRID_TILE_TEXTURE] = "../Assets/groundTiles/groundTileSD5.jpeg";
     texturesPaths[TexturesEnumeration::PORTAL_TEXTURE] = "../Assets/portal.jpg";
     texturesPaths[TexturesEnumeration::BASE_TEXTURE] = "../Assets/base.jpg";
     texturesPaths[TexturesEnumeration::TEST_TEXTURE] = "../Assets/test.jpeg";
