@@ -20,6 +20,11 @@ class Base{
     void setHitPoints(int hitPoints);
     bool noHitPoitsLeft();
 
+    // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+    void saveToBinaryFile(ostream& outpustStream);
+    // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+    void loadFromBinaryFile(istream& inputStream);
+
     void applyDamage(int damage);
 
     void render(Renderer* renderer);

@@ -33,3 +33,34 @@ void Base::render(Renderer* renderer){
     SDL_Rect baseRect = {x, y, TILESIZE, TILESIZE};
     renderer->renderTexture(TexturesEnumeration::BASE_TEXTURE, &baseRect);
 }
+
+void Base::saveToBinaryFile(ostream& outpustStream){
+
+    if (DEBUG_CONSOLE_OUTPUT_ON && !SAVING_LEVELS_ON)
+        cout << "Saving levels is turned off. Saving base stopped." << endl;
+
+    if (!SAVING_LEVELS_ON)
+        return;
+    
+    // save hitpoints
+    outpustStream.write((char*)&hitPoints, sizeof(hitPoints));
+
+    // save coords
+    coords.saveToBinaryFile(outpustStream);
+
+}
+
+void Base::loadFromBinaryFile(istream& inputStream){
+
+    if (DEBUG_CONSOLE_OUTPUT_ON && !LOADING_LEVELS_ON)
+        cout << "Loading levels is turned off. Loading base stopped." << endl;
+
+    if (!LOADING_LEVELS_ON)
+        return;
+
+    // load hitpoints
+    inputStream.read((char*)&hitPoints, sizeof(hitPoints));
+
+    // load coords
+    coords.loadFromBinaryFile(inputStream);
+}

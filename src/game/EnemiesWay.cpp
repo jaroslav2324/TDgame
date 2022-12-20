@@ -79,6 +79,38 @@ void EnemiesWay::render(Renderer* renderer){
             point2.y = y2;
             renderer->renderLine(point1, point2, color);
         }
-    }
-        
+    }     
 }
+
+void EnemiesWay::saveToBinaryFile(ostream& outpustStream){
+
+    if (DEBUG_CONSOLE_OUTPUT_ON && !SAVING_LEVELS_ON)
+        cout << "Saving levels is turned off. Saving enemies way stopped." << endl;
+
+    if (!SAVING_LEVELS_ON)
+        return;
+    
+    // save amount of waypoints
+    outpustStream.write((char*)&amountWaypoints, sizeof(amountWaypoints));
+
+    // save waypoints coords
+    for (int i = 0; i < amountWaypoints; i++)
+        dictOfWaypoints[i].saveToBinaryFile(outpustStream);
+}
+
+void EnemiesWay::loadFromBinaryFile(istream& inputStream){
+
+    if (DEBUG_CONSOLE_OUTPUT_ON && !LOADING_LEVELS_ON)
+        cout << "Loading levels is turned off. Loading enemies way stopped." << endl;
+
+    if (!LOADING_LEVELS_ON)
+        return;
+
+    // load amount of waypoints
+    inputStream.read((char*)&amountWaypoints, sizeof(amountWaypoints));
+
+    // save waypoints coords
+    for (int i = 0; i < amountWaypoints; i++)
+        dictOfWaypoints[i].loadFromBinaryFile(inputStream);
+}
+
