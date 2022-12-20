@@ -65,7 +65,7 @@ void EnemiesWay::render(Renderer* renderer){
     int x1, y1, x2, y2;
     Coords point1, point2;
 
-    // TODO change rendereing algorythm
+    // TODO change rendering algorythm
     for (int i = 0; i < amountWaypoints - 1; i++){
         x1 = dictOfWaypoints[i].x;
         y1 = dictOfWaypoints[i].y;

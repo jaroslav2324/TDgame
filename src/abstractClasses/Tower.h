@@ -21,7 +21,6 @@ using std::string;
 class Tower{
 public:
     Tower(EnemyManager* enemyManager, Coords coords);
-    //TODO end constructor
     Tower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords);
     ~Tower();
 
@@ -66,6 +65,8 @@ protected:
     float attackSpeed = 0;
     
     Coords towerCoords;
+
+    SDL_Color radiusColor = {100, 100, 180, 180};
 
     // TODO delete?
     std::pair<int, int> gridCoords;

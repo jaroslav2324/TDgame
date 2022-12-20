@@ -28,7 +28,6 @@ void TowerManager::buildTower(TowerTypes towerType, Coords mouseCoords){
     y = (int)mouseCoords.y - (int)mouseCoords.y % TILESIZE + TILESIZE / 2;
     Coords towerCoords(x, y);
     
-    //TODO add types of towers
     createAndAddTower(towerType, towerCoords);
 
 }
@@ -160,6 +159,7 @@ bool TowerManager::isTowerExistsInTile(Coords coords)
 void TowerManager::createAndAddTower(TowerTypes towerType, Coords coords){
 
     Tower* tower = nullptr;
+        //TODO add types of towers
     switch (towerType)
     {
     case BASIC_TOWER:
@@ -182,6 +182,7 @@ void TowerManager::createAndAddTower(TowerTypes towerType, Coords coords){
 Tower* TowerManager::createTower(TowerTypes towerType, Coords coords){
 
     Tower* tower = nullptr;
+        //TODO add types of towers
     switch (towerType)
     {
     case BASIC_TOWER:

@@ -10,7 +10,6 @@
 class Projectile{
     public:
     Projectile(Enemy* aimedEnemy, Coords spawnCoords);
-    //TODO add constructor setting private fields
     ~Projectile();
 
     bool hasDamagedEnemy();

@@ -1,7 +1,6 @@
 #include "Tower.h"
 
 Tower::Tower(EnemyManager* enemyManager, Coords coords){
-    //TODO delete SDL_Renderer from constructor or move to fields of the class?
 
     Tower::enemyManager = enemyManager;
     Tower::towerCoords = coords;
@@ -14,7 +13,6 @@ Tower::Tower(EnemyManager* enemyManager, Coords coords){
 }
 
 Tower::Tower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords){
-    //TODO delete SDL_Renderer from constructor or move to fields of the class?
 
     Tower::enemyManager = enemyManager;
     Tower::damage = damage;
@@ -108,7 +106,6 @@ void Tower::attack(){
         if (aimedEnemy != nullptr){
 
             /*spawn projectile and add it to the list*/
-            //TODO change BasicProjectile
             Projectile* projectile = newProjectile();
             projectileList.push_back(projectile);
 
@@ -181,9 +178,7 @@ Coords Tower::getCoords(){
 }
 
 void Tower::renderRadiusCircle(Renderer* renderer){
-    // TODO move color to class fields
-    SDL_Color radiusColor = {100, 100, 180, 180};
-
+    
     Coords coords = towerCoords;
     renderer->renderCircle(coords, radius, radiusColor, 3);
 }
