@@ -31,3 +31,10 @@ void Coords::loadFromBinaryFile(istream& inputStream){
     inputStream.read((char*)&y, sizeof(y));
 }
 
+Coords& Coords::operator()(float x, float y){
+    
+    this->x = x;
+    this->y = y;
+    return *this;
+}
+

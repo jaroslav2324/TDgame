@@ -21,6 +21,7 @@ struct Coords{
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     void loadFromBinaryFile(istream& inputStream);
 
+    Coords& operator()(float x, float y);
 };
 
 ostream& operator<<(ostream& os, const Coords& coords);

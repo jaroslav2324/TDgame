@@ -33,7 +33,7 @@ class EnemiesWay{
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     void loadFromBinaryFile(istream& inputStream);
 
-    void render(Renderer* renderer);
+    void render(Renderer* renderer, int lineWidth = 3, SDL_Color color = {0, 255, 255, 255});
 
     private:
     int amountWaypoints = -1;

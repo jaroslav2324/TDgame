@@ -14,14 +14,6 @@ EnemiesWay::EnemiesWay(){
     numWaypoint++;
     dictOfWaypoints[numWaypoint] = Coords(250, 750);
     numWaypoint++;
-    // dictOfWaypoints[numWaypoint] = Coords(500, 400);
-    // numWaypoint++;
-    // dictOfWaypoints[numWaypoint] = Coords(700, 500);
-    // numWaypoint++;
-    // dictOfWaypoints[numWaypoint] = Coords(600, 500);
-    // numWaypoint++;
-    // dictOfWaypoints[numWaypoint] = Coords(600, 600);
-    // numWaypoint++;
     dictOfWaypoints[numWaypoint] = Coords(1050, 750);
     numWaypoint++;
 
@@ -57,38 +49,30 @@ int EnemiesWay::getAmountWaypoints(){
     return amountWaypoints;
 }
 
-void EnemiesWay::render(Renderer* renderer){
+void EnemiesWay::render(Renderer* renderer, int lineWidth, SDL_Color color){
     
-    SDL_Color color = {0, 255, 255, 255};
-
-    int lineWidth = 3;
     int x1, y1, x2, y2;
     Coords point1, point2;
 
-    // TODO change rendering algorythm(render from center of point)(check on diagonal lines)
+    // TODO change rendering algorythm(check on diagonal lines)
     for (int i = 0; i < amountWaypoints - 1; i++){
-        x1 = dictOfWaypoints[i].x;
-        y1 = dictOfWaypoints[i].y;
-        x2 = dictOfWaypoints[i + 1].x;
-        y2 = dictOfWaypoints[i + 1].y;
+
+        x1 = dictOfWaypoints[i].x - lineWidth / 2;
+        y1 = dictOfWaypoints[i].y - lineWidth / 2;
+        
+        x2 = dictOfWaypoints[i + 1].x - lineWidth / 2;
+        y2 = dictOfWaypoints[i + 1].y - lineWidth / 2;
 
         if (x1 != x2){
-            for (int j = 0; j < lineWidth; j++, y1++, y2++){
-            point1.x = x1;
-            point1.y = y1;
-            point2.x = x2;
-            point2.y = y2;
-            renderer->renderLine(point1, point2, color);
-            }
+
+            for (int j = 0; j < lineWidth; j++, y1++, y2++)                
+                renderer->renderLine(point1(x1, y1), point2(x2, y2), color);
         }
         else{
-            for (int j = 0; j < lineWidth; j++, x1++, x2++){
-            point1.x = x1;
-            point1.y = y1;
-            point2.x = x2;
-            point2.y = y2;
-            renderer->renderLine(point1, point2, color);
-            }
+
+            for (int j = 0; j < lineWidth; j++, x1++, x2++)
+                renderer->renderLine(point1(x1, y1), point2(x2, y2), color);
+            
         }
     }     
 }
