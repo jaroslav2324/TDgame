@@ -8,6 +8,7 @@
 #include <SDL2/SDL_image.h>
 
 #include "../settings.h"
+#include "../abstractClasses/Interface.h"
 #include "../entityManagers/TowerManager.h"
 #include "../entityManagers/EnemyManager.h"
 #include "Button.h"
@@ -16,12 +17,13 @@
 
 using std::queue;
 
-class GameInterface{
+class GameInterface:  public Interface{
     public:
     GameInterface(TowerManager* towerManager, EnemyManager* enemyManager);
     ~GameInterface();
     void render(Renderer* renderer);
-    void saveMouseClickCoords(Coords coords);
+    //void saveMouseClickCoords(Coords coords);
+
     private:   
     
     TowerTypes buildTowerType = BASIC_TOWER;
@@ -33,5 +35,8 @@ class GameInterface{
     TowerManager * towerManager = nullptr;
     EnemyManager* enemyManager = nullptr;
 
-    queue<Coords> savedMouseClicks;
+    //queue<Coords> savedMouseClicks;
+
+    void handleHoveringOverButtons();
+    void handlePressingOnButtons();
 };

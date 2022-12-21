@@ -70,7 +70,18 @@ void GameInterface::render(Renderer* renderer){
     rect = {SCREEN_WIDTH - 10, 0, 10, SCREEN_HEIGHT};
     renderer->renderFilledRect(rectPtr, color);
 
-    // TODO move from render
+    handleHoveringOverButtons();
+    handlePressingOnButtons();
+
+    // then render buttons
+    buildBasicTowerBtn->render(renderer);
+    buildIceTowerBtn->render(renderer);
+    buildFireTowerBtn->render(renderer);
+    spawnEnemyBtn->render(renderer);
+
+}
+
+void GameInterface::handleHoveringOverButtons(){
     // check howering ower btns
     int x, y;
 
@@ -95,9 +106,10 @@ void GameInterface::render(Renderer* renderer){
         spawnEnemyBtn->setModeHoveredOver();
     else
         spawnEnemyBtn->setModeNoCursorInteraction();
+}
 
-    // TODO move button actions from render method?
-
+void GameInterface::handlePressingOnButtons(){
+    
     // check pressing on buttons
     while(!savedMouseClicks.empty()){
         Coords mouseCoords = savedMouseClicks.front();
@@ -153,15 +165,8 @@ void GameInterface::render(Renderer* renderer){
             }
         }
     }
-
-    // then render buttons
-    buildBasicTowerBtn->render(renderer);
-    buildIceTowerBtn->render(renderer);
-    buildFireTowerBtn->render(renderer);
-    spawnEnemyBtn->render(renderer);
-
 }
 
-void GameInterface::saveMouseClickCoords(Coords coords){
-    savedMouseClicks.push(coords);
-}
+// void GameInterface::saveMouseClickCoords(Coords coords){
+//     savedMouseClicks.push(coords);
+// }

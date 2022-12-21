@@ -410,6 +410,30 @@ src/abstractClasses/Enemy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.s
 .PHONY : src/abstractClasses/Enemy.cpp.s
 
+src/abstractClasses/Interface.o: src/abstractClasses/Interface.cpp.o
+.PHONY : src/abstractClasses/Interface.o
+
+# target to build an object file
+src/abstractClasses/Interface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o
+.PHONY : src/abstractClasses/Interface.cpp.o
+
+src/abstractClasses/Interface.i: src/abstractClasses/Interface.cpp.i
+.PHONY : src/abstractClasses/Interface.i
+
+# target to preprocess a source file
+src/abstractClasses/Interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.i
+.PHONY : src/abstractClasses/Interface.cpp.i
+
+src/abstractClasses/Interface.s: src/abstractClasses/Interface.cpp.s
+.PHONY : src/abstractClasses/Interface.s
+
+# target to generate assembly for a file
+src/abstractClasses/Interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.s
+.PHONY : src/abstractClasses/Interface.cpp.s
+
 src/abstractClasses/Projectile.o: src/abstractClasses/Projectile.cpp.o
 .PHONY : src/abstractClasses/Projectile.o
 
@@ -883,6 +907,9 @@ help:
 	@echo "... src/abstractClasses/Enemy.o"
 	@echo "... src/abstractClasses/Enemy.i"
 	@echo "... src/abstractClasses/Enemy.s"
+	@echo "... src/abstractClasses/Interface.o"
+	@echo "... src/abstractClasses/Interface.i"
+	@echo "... src/abstractClasses/Interface.s"
 	@echo "... src/abstractClasses/Projectile.o"
 	@echo "... src/abstractClasses/Projectile.i"
 	@echo "... src/abstractClasses/Projectile.s"
