@@ -2,5 +2,6 @@
 //TODO expand enemy types
 
 enum EnemyTypes{
-    BASIC_ENEMY
+    BASIC_ENEMY,
+    ORC_ENEMY
 };

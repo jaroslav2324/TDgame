@@ -9,6 +9,7 @@ Renderer::Renderer(){
     map<TexturesEnumeration, const char*> texturesPaths;
 
     texturesPaths[TexturesEnumeration::BASIC_ENEMY_TEXTURE] = "../Assets/enemy.png";
+    texturesPaths[TexturesEnumeration::ORC_ENEMY_TEXTURE] = "../Assets/orc.jpeg";
     texturesPaths[TexturesEnumeration::BASIC_TOWER_TEXTURE] = "../Assets/towers/towerSD1.jpeg";
     texturesPaths[TexturesEnumeration::ICE_TOWER_TEXTURE] = "../Assets/towers/towerSD7.jpeg";
     texturesPaths[TexturesEnumeration::FIRE_TOWER_TEXTURE] = "../Assets/towers/towerSD11.jpeg";

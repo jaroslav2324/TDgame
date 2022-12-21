@@ -37,6 +37,9 @@ void EnemyManager::createAndAddEnemy(int enemyType, Coords coords){
     case BASIC_ENEMY:
         enemy = new class BasicEnemy(enemiesWay, base, portal, coords);
         break;
+    case ORC_ENEMY:
+        enemy = new class OrcEnemy(enemiesWay, base, portal, coords);
+        break;
 
     default:
         cout << "No such enemy type!(spawn enemy in EnemyManager)" << endl;

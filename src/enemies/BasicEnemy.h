@@ -13,7 +13,7 @@ class BasicEnemy: public Enemy{
         hitPoints = 2;
         maxHitPoints = 2;
         currentSpeed = 100;
-        maxSpeed = 5;
+        maxSpeed = 100;
 
         damageToBase = 1;
     };

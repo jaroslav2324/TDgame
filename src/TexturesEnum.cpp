@@ -27,6 +27,9 @@ ostream& operator<<(std::ostream& out, const TexturesEnumeration& textureNum){
     case TexturesEnumeration::BASIC_ENEMY_TEXTURE:
         out << "\"basic enemy texture\"" << endl;
         break;
+    case TexturesEnumeration::ORC_ENEMY_TEXTURE:
+        out << "\"orc enemy texture\"" << endl;
+        break;
     case TexturesEnumeration::BASIC_TOWER_TEXTURE:
         out << "\"basic tower texture\"" << endl;
         break;
@@ -65,4 +68,6 @@ ostream& operator<<(std::ostream& out, const TexturesEnumeration& textureNum){
             cout << "No case for such texture num: " << static_cast<int>(textureNum) << endl;
         break;
     }
+
+    return out;
 }

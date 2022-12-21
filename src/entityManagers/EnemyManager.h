@@ -6,6 +6,7 @@
 
 #include "../enemies/EnemyTypes.h"
 #include "../enemies/BasicEnemy.h"
+#include "../enemies/OrcEnemy.h"
 #include "../game/Portal.h"
 #include "../game/Wave.h"
 
