@@ -314,6 +314,30 @@ src/Timers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Timers.cpp.s
 .PHONY : src/Timers.cpp.s
 
+src/UI/BasicInterface.o: src/UI/BasicInterface.cpp.o
+.PHONY : src/UI/BasicInterface.o
+
+# target to build an object file
+src/UI/BasicInterface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o
+.PHONY : src/UI/BasicInterface.cpp.o
+
+src/UI/BasicInterface.i: src/UI/BasicInterface.cpp.i
+.PHONY : src/UI/BasicInterface.i
+
+# target to preprocess a source file
+src/UI/BasicInterface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.i
+.PHONY : src/UI/BasicInterface.cpp.i
+
+src/UI/BasicInterface.s: src/UI/BasicInterface.cpp.s
+.PHONY : src/UI/BasicInterface.s
+
+# target to generate assembly for a file
+src/UI/BasicInterface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.s
+.PHONY : src/UI/BasicInterface.cpp.s
+
 src/UI/Button.o: src/UI/Button.cpp.o
 .PHONY : src/UI/Button.o
 
@@ -337,30 +361,6 @@ src/UI/Button.s: src/UI/Button.cpp.s
 src/UI/Button.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.s
 .PHONY : src/UI/Button.cpp.s
-
-src/UI/GameInterface.o: src/UI/GameInterface.cpp.o
-.PHONY : src/UI/GameInterface.o
-
-# target to build an object file
-src/UI/GameInterface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o
-.PHONY : src/UI/GameInterface.cpp.o
-
-src/UI/GameInterface.i: src/UI/GameInterface.cpp.i
-.PHONY : src/UI/GameInterface.i
-
-# target to preprocess a source file
-src/UI/GameInterface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.i
-.PHONY : src/UI/GameInterface.cpp.i
-
-src/UI/GameInterface.s: src/UI/GameInterface.cpp.s
-.PHONY : src/UI/GameInterface.s
-
-# target to generate assembly for a file
-src/UI/GameInterface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.s
-.PHONY : src/UI/GameInterface.cpp.s
 
 src/UI/MainMenu.o: src/UI/MainMenu.cpp.o
 .PHONY : src/UI/MainMenu.o
@@ -895,12 +895,12 @@ help:
 	@echo "... src/Timers.o"
 	@echo "... src/Timers.i"
 	@echo "... src/Timers.s"
+	@echo "... src/UI/BasicInterface.o"
+	@echo "... src/UI/BasicInterface.i"
+	@echo "... src/UI/BasicInterface.s"
 	@echo "... src/UI/Button.o"
 	@echo "... src/UI/Button.i"
 	@echo "... src/UI/Button.s"
-	@echo "... src/UI/GameInterface.o"
-	@echo "... src/UI/GameInterface.i"
-	@echo "... src/UI/GameInterface.s"
 	@echo "... src/UI/MainMenu.o"
 	@echo "... src/UI/MainMenu.i"
 	@echo "... src/UI/MainMenu.s"

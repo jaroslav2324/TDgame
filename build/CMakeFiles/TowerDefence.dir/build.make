@@ -279,19 +279,19 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.cpp -o CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.s
 
-CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
-CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/UI/GameInterface.cpp
-CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o -MF CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/UI/GameInterface.cpp
+CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
+CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/UI/BasicInterface.cpp
+CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o -MF CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/UI/BasicInterface.cpp
 
-CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jaros/gitProjects/c++/TDgame/src/UI/GameInterface.cpp > CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.i
+CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jaros/gitProjects/c++/TDgame/src/UI/BasicInterface.cpp > CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.i
 
-CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jaros/gitProjects/c++/TDgame/src/UI/GameInterface.cpp -o CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.s
+CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jaros/gitProjects/c++/TDgame/src/UI/BasicInterface.cpp -o CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.s
 
 CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/UI/Button.cpp
@@ -478,7 +478,7 @@ TowerDefence_OBJECTS = \
 "CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o" \
-"CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o" \
+"CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/Coords.cpp.o" \
@@ -510,7 +510,7 @@ TowerDefence: CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o
-TowerDefence: CMakeFiles/TowerDefence.dir/src/UI/GameInterface.cpp.o
+TowerDefence: CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/Coords.cpp.o

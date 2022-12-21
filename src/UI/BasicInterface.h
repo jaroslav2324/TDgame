@@ -17,12 +17,17 @@
 
 using std::queue;
 
-class GameInterface:  public Interface{
+class BasicInterface:  public Interface{
     public:
-    GameInterface(TowerManager* towerManager, EnemyManager* enemyManager);
-    ~GameInterface();
+    BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager);
+    ~BasicInterface();
     void render(Renderer* renderer);
     //void saveMouseClickCoords(Coords coords);
+
+    // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+    void saveToBinaryFile(ostream& outpustStream);
+    // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+    void loadFromBinaryFile(istream& inputStream);
 
     private:   
     

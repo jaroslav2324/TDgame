@@ -18,7 +18,7 @@ Game::Game(){
 
     grid = new Grid();
 
-    interface = new GameInterface(towerManager, enemyManager);
+    interface = new BasicInterface(towerManager, enemyManager);
 
 }
 

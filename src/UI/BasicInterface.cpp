@@ -1,6 +1,6 @@
-#include "GameInterface.h"
+#include "BasicInterface.h"
 
-GameInterface::GameInterface(TowerManager* towerManager, EnemyManager* enemyManager){
+BasicInterface::BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager){
 
     this->towerManager = towerManager;
     this->enemyManager = enemyManager;
@@ -29,7 +29,7 @@ GameInterface::GameInterface(TowerManager* towerManager, EnemyManager* enemyMana
     
 }
 
-GameInterface::~GameInterface(){
+BasicInterface::~BasicInterface(){
     
     if (buildBasicTowerBtn != nullptr){
         delete buildBasicTowerBtn;
@@ -52,7 +52,7 @@ GameInterface::~GameInterface(){
     }
 }
 
-void GameInterface::render(Renderer* renderer){
+void BasicInterface::render(Renderer* renderer){
 
     SDL_Color color = {150, 150, 100, 255};
     
@@ -81,7 +81,7 @@ void GameInterface::render(Renderer* renderer){
 
 }
 
-void GameInterface::handleHoveringOverButtons(){
+void BasicInterface::handleHoveringOverButtons(){
     // check howering ower btns
     int x, y;
 
@@ -108,7 +108,7 @@ void GameInterface::handleHoveringOverButtons(){
         spawnEnemyBtn->setModeNoCursorInteraction();
 }
 
-void GameInterface::handlePressingOnButtons(){
+void BasicInterface::handlePressingOnButtons(){
     
     // check pressing on buttons
     while(!savedMouseClicks.empty()){
@@ -167,6 +167,34 @@ void GameInterface::handlePressingOnButtons(){
     }
 }
 
-// void GameInterface::saveMouseClickCoords(Coords coords){
-//     savedMouseClicks.push(coords);
-// }
+// file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+void BasicInterface::saveToBinaryFile(ostream& outpustStream){
+
+    if (DEBUG_CONSOLE_OUTPUT_ON && !SAVING_LEVELS_ON)
+        cout << "Saving levels is turned off. Saving interface stopped." << endl;
+
+    if (!SAVING_LEVELS_ON)
+        return;
+    
+    // save buttons
+    buildBasicTowerBtn->saveToBinaryFile(outpustStream);
+    buildIceTowerBtn->saveToBinaryFile(outpustStream);
+    buildFireTowerBtn->saveToBinaryFile(outpustStream);
+    spawnEnemyBtn->saveToBinaryFile(outpustStream);    
+}
+
+// file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+void BasicInterface::loadFromBinaryFile(istream& inputStream){
+
+    if (DEBUG_CONSOLE_OUTPUT_ON && !LOADING_LEVELS_ON)
+        cout << "Loading levels is turned off. Loading interface stopped." << endl;
+
+    if (!LOADING_LEVELS_ON)
+        return;
+
+    // load buttons
+    buildBasicTowerBtn->loadFromBinaryFile(inputStream);
+    buildIceTowerBtn->loadFromBinaryFile(inputStream);
+    buildFireTowerBtn->loadFromBinaryFile(inputStream);
+    spawnEnemyBtn->loadFromBinaryFile(inputStream);   
+}
