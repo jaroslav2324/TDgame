@@ -1,23 +1,10 @@
 #include "EnemiesWay.h"
 
 EnemiesWay::EnemiesWay(){
-    //TODO find more convenient way to fill waypoints
 
-    int numWaypoint = 0;
-    dictOfWaypoints[numWaypoint] = Coords(250, 250);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(1050, 250);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(1050, 550);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(250, 550);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(250, 750);
-    numWaypoint++;
-    dictOfWaypoints[numWaypoint] = Coords(1050, 750);
-    numWaypoint++;
-
-    amountWaypoints = numWaypoint;
+    // change way if needed
+    dictOfWaypoints = getWayInvS();
+    amountWaypoints = dictOfWaypoints.size();
 }
 
 // if there is no next waypoint returns current waypoint
@@ -107,5 +94,64 @@ void EnemiesWay::loadFromBinaryFile(istream& inputStream){
     // save waypoints coords
     for (int i = 0; i < amountWaypoints; i++)
         dictOfWaypoints[i].loadFromBinaryFile(inputStream);
+}
+
+// Test ways for enemies
+
+// way with form of mirrored letter S
+unordered_map<int, Coords> getWayInvS(){
+
+    unordered_map<int, Coords> mapOfWaypoints;
+
+    int numWaypoint = 0;
+    mapOfWaypoints[numWaypoint] = Coords(250, 250);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(1050, 250);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(1050, 550);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(250, 550);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(250, 750);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(1050, 750);
+
+    return mapOfWaypoints;
+}
+// way with form of letter S
+unordered_map<int, Coords> getWayS(){
+
+    unordered_map<int, Coords> mapOfWaypoints;
+
+    int numWaypoint = 0;
+    mapOfWaypoints[numWaypoint] = Coords(1050, 250);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(250, 250);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(250, 550);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(1050, 550);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(1050, 750);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(250, 750);
+
+    return mapOfWaypoints;
+}
+// way with form of letter Z
+unordered_map<int, Coords> getWayZ(){
+
+    unordered_map<int, Coords> mapOfWaypoints;
+
+    int numWaypoint = 0;
+    mapOfWaypoints[numWaypoint] = Coords(250, 250);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(1050, 250);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(250, 750);
+    numWaypoint++;
+    mapOfWaypoints[numWaypoint] = Coords(1050, 750);
+
+    return mapOfWaypoints;
 }
 

@@ -9,6 +9,7 @@
 #include "../Coords.h"
 #include "../Renderer.h"
 
+using std::unordered_map;
 using std::ostream;
 using std::istream;
 using std::cout;
@@ -38,5 +39,14 @@ class EnemiesWay{
     private:
     int amountWaypoints = -1;
 
-    std::unordered_map<int, Coords> dictOfWaypoints;
+    unordered_map<int, Coords> dictOfWaypoints;
 };
+
+// Test ways for enemies
+
+// way with form of mirrored letter S
+unordered_map<int, Coords> getWayInvS();
+// way with form of letter S
+unordered_map<int, Coords> getWayS();
+// way with form of letter Z
+unordered_map<int, Coords> getWayZ();
