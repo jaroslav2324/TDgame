@@ -506,30 +506,6 @@ src/approximateComparison.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.s
 .PHONY : src/approximateComparison.cpp.s
 
-src/enemies/BasicEnemy.o: src/enemies/BasicEnemy.cpp.o
-.PHONY : src/enemies/BasicEnemy.o
-
-# target to build an object file
-src/enemies/BasicEnemy.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o
-.PHONY : src/enemies/BasicEnemy.cpp.o
-
-src/enemies/BasicEnemy.i: src/enemies/BasicEnemy.cpp.i
-.PHONY : src/enemies/BasicEnemy.i
-
-# target to preprocess a source file
-src/enemies/BasicEnemy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.i
-.PHONY : src/enemies/BasicEnemy.cpp.i
-
-src/enemies/BasicEnemy.s: src/enemies/BasicEnemy.cpp.s
-.PHONY : src/enemies/BasicEnemy.s
-
-# target to generate assembly for a file
-src/enemies/BasicEnemy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.s
-.PHONY : src/enemies/BasicEnemy.cpp.s
-
 src/entityManagers/EnemyManager.o: src/entityManagers/EnemyManager.cpp.o
 .PHONY : src/entityManagers/EnemyManager.o
 
@@ -919,9 +895,6 @@ help:
 	@echo "... src/approximateComparison.o"
 	@echo "... src/approximateComparison.i"
 	@echo "... src/approximateComparison.s"
-	@echo "... src/enemies/BasicEnemy.o"
-	@echo "... src/enemies/BasicEnemy.i"
-	@echo "... src/enemies/BasicEnemy.s"
 	@echo "... src/entityManagers/EnemyManager.o"
 	@echo "... src/entityManagers/EnemyManager.i"
 	@echo "... src/entityManagers/EnemyManager.s"

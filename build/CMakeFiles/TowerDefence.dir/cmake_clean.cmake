@@ -25,8 +25,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o.d"
-  "CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o"
-  "CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o"

@@ -167,24 +167,10 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.cpp -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.s
 
-CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
-CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.cpp
-CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o -MF CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.cpp
-
-CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.cpp > CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.i
-
-CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.cpp -o CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.s
-
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.cpp
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o -MF CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.cpp
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.i: cmake_force
@@ -198,7 +184,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.cpp
 CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o -MF CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.cpp
 
 CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.i: cmake_force
@@ -212,7 +198,7 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/game/Grid.cpp
 CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o -MF CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/game/Grid.cpp
 
 CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.i: cmake_force
@@ -226,7 +212,7 @@ CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.cpp
 CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o -MF CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.cpp
 
 CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.i: cmake_force
@@ -240,7 +226,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.cpp
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o -MF CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.cpp
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.i: cmake_force
@@ -254,7 +240,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/game/GridTile.cpp
 CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o -MF CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/game/GridTile.cpp
 
 CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.i: cmake_force
@@ -268,7 +254,7 @@ CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.cpp
 CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o -MF CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.cpp
 
 CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.i: cmake_force
@@ -282,7 +268,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/UI/BasicInterface.cpp
 CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o -MF CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/UI/BasicInterface.cpp
 
 CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.i: cmake_force
@@ -296,7 +282,7 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/UI/Button.cpp
 CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o -MF CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/UI/Button.cpp
 
 CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.i: cmake_force
@@ -310,7 +296,7 @@ CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/game/Portal.cpp
 CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o -MF CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/game/Portal.cpp
 
 CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.i: cmake_force
@@ -324,7 +310,7 @@ CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/Coords.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/Coords.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/Coords.cpp
 CMakeFiles/TowerDefence.dir/src/Coords.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/TowerDefence.dir/src/Coords.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/TowerDefence.dir/src/Coords.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/Coords.cpp.o -MF CMakeFiles/TowerDefence.dir/src/Coords.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/Coords.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Coords.cpp
 
 CMakeFiles/TowerDefence.dir/src/Coords.cpp.i: cmake_force
@@ -338,7 +324,7 @@ CMakeFiles/TowerDefence.dir/src/Coords.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/game/Wave.cpp
 CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o -MF CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/game/Wave.cpp
 
 CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.i: cmake_force
@@ -352,7 +338,7 @@ CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/UI/MainMenu.cpp
 CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o -MF CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/UI/MainMenu.cpp
 
 CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.i: cmake_force
@@ -366,7 +352,7 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/Application.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/Application.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/Application.cpp
 CMakeFiles/TowerDefence.dir/src/Application.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/TowerDefence.dir/src/Application.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/TowerDefence.dir/src/Application.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/Application.cpp.o -MF CMakeFiles/TowerDefence.dir/src/Application.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/Application.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Application.cpp
 
 CMakeFiles/TowerDefence.dir/src/Application.cpp.i: cmake_force
@@ -380,7 +366,7 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.cpp
 CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o -MF CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.cpp
 
 CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.i: cmake_force
@@ -394,7 +380,7 @@ CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/towers/IceTower.cpp
 CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o -MF CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/towers/IceTower.cpp
 
 CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.i: cmake_force
@@ -408,7 +394,7 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/towers/FireTower.cpp
 CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o -MF CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/towers/FireTower.cpp
 
 CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.i: cmake_force
@@ -422,7 +408,7 @@ CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/Renderer.cpp
 CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o -MF CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Renderer.cpp
 
 CMakeFiles/TowerDefence.dir/src/Renderer.cpp.i: cmake_force
@@ -436,7 +422,7 @@ CMakeFiles/TowerDefence.dir/src/Renderer.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.cpp
 CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o -MF CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.cpp
 
 CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.i: cmake_force
@@ -450,7 +436,7 @@ CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.s: cmake_force
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Interface.cpp
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o -MF CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Interface.cpp
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.i: cmake_force
@@ -470,7 +456,6 @@ TowerDefence_OBJECTS = \
 "CMakeFiles/TowerDefence.dir/src/game/EnemiesWay.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o" \
-"CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o" \
@@ -502,7 +487,6 @@ TowerDefence: CMakeFiles/TowerDefence.dir/src/Timers.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/game/EnemiesWay.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o
-TowerDefence: CMakeFiles/TowerDefence.dir/src/enemies/BasicEnemy.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o
@@ -527,7 +511,7 @@ TowerDefence: CMakeFiles/TowerDefence.dir/build.make
 TowerDefence: libs/SDL/libSDL2maind.a
 TowerDefence: libs/SDL/libSDL2d.a
 TowerDefence: CMakeFiles/TowerDefence.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking CXX executable TowerDefence"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable TowerDefence"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TowerDefence.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
