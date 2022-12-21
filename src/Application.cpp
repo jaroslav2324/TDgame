@@ -12,14 +12,14 @@ Application::Application(){
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
     mainMenu = new MainMenu(fpsTimer);
-    game = new Game();
+    gameLevel = new GameLevel();
 }
 
 Application::~Application(){
 
-    if (game != nullptr){
-        delete game;
-        game = nullptr;
+    if (gameLevel != nullptr){
+        delete gameLevel;
+        gameLevel = nullptr;
     }
 
     if (mainMenu != nullptr){
@@ -69,7 +69,7 @@ void Application::loop(){
                         if (mainMenuOn)
                             mainMenu->saveMouseClickCoords(mouseCoords);
                         else
-                            game->saveMouseClickCoords(mouseCoords);
+                            gameLevel->saveMouseClickCoords(mouseCoords);
                     }      
             }
         }
@@ -99,8 +99,8 @@ void Application::loop(){
 
             else{  
                 MenuOptionsCode code;
-                code  = game->makeFrameTurn();
-                game->renderAll(renderer);
+                code  = gameLevel->makeFrameTurn();
+                gameLevel->renderAll(renderer);
                 
                 // switch (code)
                 

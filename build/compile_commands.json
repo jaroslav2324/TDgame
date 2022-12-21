@@ -11,8 +11,8 @@
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/game/Game.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/game/Game.cpp",
-  "file": "/home/jaros/gitProjects/c++/TDgame/src/game/Game.cpp"
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -fPIE -o CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/game/GameLevel.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/game/GameLevel.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",

@@ -7,7 +7,7 @@
 
 #include "settings.h"
 #include "Renderer.h"
-#include "game/Game.h"
+#include "game/GameLevel.h"
 #include "UI/MainMenu.h"
 #include "UI/MenuOptionsCodes.h"
 
@@ -26,7 +26,7 @@ class Application{
 
     bool mainMenuOn = true;
     MainMenu* mainMenu = nullptr;
-    Game* game = nullptr;
+    GameLevel* gameLevel = nullptr;
 
     PeriodicTimer* fpsTimer =nullptr;
 };

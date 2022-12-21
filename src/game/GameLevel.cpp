@@ -1,6 +1,6 @@
-#include "Game.h"
+#include "GameLevel.h"
 
-Game::Game(){
+GameLevel::GameLevel(){
 
     enemiesWay = new EnemiesWay();
 
@@ -22,7 +22,7 @@ Game::Game(){
 
 }
 
-Game::~Game(){
+GameLevel::~GameLevel(){
 
     if (towerManager != nullptr){
         delete towerManager;
@@ -59,7 +59,7 @@ Game::~Game(){
     }
 }
 
-void Game::renderAll(Renderer* renderer){
+void GameLevel::renderAll(Renderer* renderer){
 
     grid->renderGrid(renderer);
     enemiesWay->render(renderer);
@@ -74,11 +74,11 @@ void Game::renderAll(Renderer* renderer){
     // SDL_RenderPresent(renderer);
 }
 
-MenuOptionsCode Game::makeFrameTurn(){
+MenuOptionsCode GameLevel::makeFrameTurn(){
 
     //if base destroyed
     //if(base->noHitPoitsLeft()){
-        //TODO end game
+        //TODO end gameLevel
     //}
 
     MenuOptionsCode code = NO_CHANGES;
@@ -93,6 +93,6 @@ MenuOptionsCode Game::makeFrameTurn(){
     return code;
 }
 
-void Game::saveMouseClickCoords(Coords coords){
+void GameLevel::saveMouseClickCoords(Coords coords){
     interface->saveMouseClickCoords(coords);
 }

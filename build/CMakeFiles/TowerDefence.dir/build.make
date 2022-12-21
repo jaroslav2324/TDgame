@@ -97,19 +97,19 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TowerDefence.dir/src/main.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jaros/gitProjects/c++/TDgame/src/main.cpp -o CMakeFiles/TowerDefence.dir/src/main.cpp.s
 
-CMakeFiles/TowerDefence.dir/src/game/Game.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
-CMakeFiles/TowerDefence.dir/src/game/Game.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/game/Game.cpp
-CMakeFiles/TowerDefence.dir/src/game/Game.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TowerDefence.dir/src/game/Game.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/game/Game.cpp.o -MF CMakeFiles/TowerDefence.dir/src/game/Game.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/game/Game.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/game/Game.cpp
+CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
+CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/game/GameLevel.cpp
+CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: CMakeFiles/TowerDefence.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o -MF CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o.d -o CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/game/GameLevel.cpp
 
-CMakeFiles/TowerDefence.dir/src/game/Game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TowerDefence.dir/src/game/Game.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jaros/gitProjects/c++/TDgame/src/game/Game.cpp > CMakeFiles/TowerDefence.dir/src/game/Game.cpp.i
+CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jaros/gitProjects/c++/TDgame/src/game/GameLevel.cpp > CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.i
 
-CMakeFiles/TowerDefence.dir/src/game/Game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TowerDefence.dir/src/game/Game.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jaros/gitProjects/c++/TDgame/src/game/Game.cpp -o CMakeFiles/TowerDefence.dir/src/game/Game.cpp.s
+CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jaros/gitProjects/c++/TDgame/src/game/GameLevel.cpp -o CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.s
 
 CMakeFiles/TowerDefence.dir/src/Timers.cpp.o: CMakeFiles/TowerDefence.dir/flags.make
 CMakeFiles/TowerDefence.dir/src/Timers.cpp.o: /home/jaros/gitProjects/c++/TDgame/src/Timers.cpp
@@ -465,7 +465,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.s: cmake_force
 TowerDefence_OBJECTS = \
 "CMakeFiles/TowerDefence.dir/src/game/Base.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/main.cpp.o" \
-"CMakeFiles/TowerDefence.dir/src/game/Game.cpp.o" \
+"CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/Timers.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/game/EnemiesWay.cpp.o" \
 "CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o" \
@@ -497,7 +497,7 @@ TowerDefence_EXTERNAL_OBJECTS =
 
 TowerDefence: CMakeFiles/TowerDefence.dir/src/game/Base.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/main.cpp.o
-TowerDefence: CMakeFiles/TowerDefence.dir/src/game/Game.cpp.o
+TowerDefence: CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/Timers.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/game/EnemiesWay.cpp.o
 TowerDefence: CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o

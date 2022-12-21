@@ -176,6 +176,7 @@ void BasicInterface::saveToBinaryFile(ostream& outpustStream){
     if (!SAVING_LEVELS_ON)
         return;
     
+    //TODO add something?
     // save buttons
     buildBasicTowerBtn->saveToBinaryFile(outpustStream);
     buildIceTowerBtn->saveToBinaryFile(outpustStream);
@@ -192,6 +193,7 @@ void BasicInterface::loadFromBinaryFile(istream& inputStream){
     if (!LOADING_LEVELS_ON)
         return;
 
+    //TODO add something?
     // load buttons
     buildBasicTowerBtn->loadFromBinaryFile(inputStream);
     buildIceTowerBtn->loadFromBinaryFile(inputStream);

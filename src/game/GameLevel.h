@@ -13,11 +13,10 @@
 using std::cout;
 using std::endl;
 
-/*main class for game*/
-class Game{
+class GameLevel{
     public:
-    Game();
-    ~Game();
+    GameLevel();
+    ~GameLevel();
 
     MenuOptionsCode makeFrameTurn();
     void renderAll(Renderer* renderer);
