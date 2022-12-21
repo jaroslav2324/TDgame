@@ -96,3 +96,36 @@ MenuOptionsCode GameLevel::makeFrameTurn(){
 void GameLevel::saveMouseClickCoords(Coords coords){
     interface->saveMouseClickCoords(coords);
 }
+
+void GameLevel::saveToBinaryFile(ostream& outpustStream){
+
+    if (DEBUG_CONSOLE_OUTPUT_ON && !SAVING_LEVELS_ON)
+        cout << "Saving levels is turned off. Saving level stopped." << endl;
+
+    if (!SAVING_LEVELS_ON)
+        return;
+    
+    // save level
+    enemiesWay->saveToBinaryFile(outpustStream);
+    base->saveToBinaryFile(outpustStream);
+    portal->saveToBinaryFile(outpustStream);
+    grid->saveToBinaryFile(outpustStream);
+    interface->saveToBinaryFile(outpustStream);
+
+}
+
+void GameLevel::loadFromBinaryFile(istream& inputStream){
+
+    if (DEBUG_CONSOLE_OUTPUT_ON && !LOADING_LEVELS_ON)
+        cout << "Loading levels is turned off. Loading level stopped." << endl;
+
+    if (!LOADING_LEVELS_ON)
+        return;
+
+    // load level
+    enemiesWay->loadFromBinaryFile(inputStream);
+    base->loadFromBinaryFile(inputStream);
+    portal->loadFromBinaryFile(inputStream);
+    grid->loadFromBinaryFile(inputStream);
+    interface->loadFromBinaryFile(inputStream);
+}

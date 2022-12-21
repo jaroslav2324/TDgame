@@ -22,6 +22,11 @@ class GameLevel{
     void renderAll(Renderer* renderer);
     void saveMouseClickCoords(Coords coords);
 
+    // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+    void saveToBinaryFile(ostream& outpustStream);
+    // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+    void loadFromBinaryFile(istream& inputStream);
+
     private:
 
     BasicInterface* interface = nullptr;
