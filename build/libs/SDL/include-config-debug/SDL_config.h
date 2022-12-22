@@ -140,6 +140,7 @@
 #define HAVE_STRCASECMP 1
 /* #undef HAVE__STRNICMP */
 #define HAVE_STRNCASECMP 1
+/* #undef HAVE_STRCASESTR */
 #define HAVE_SSCANF 1
 #define HAVE_VSSCANF 1
 #define HAVE_VSNPRINTF 1
@@ -331,6 +332,7 @@
 #define SDL_INPUT_LINUXEV 1
 #define SDL_INPUT_LINUXKD 1
 /* #undef SDL_INPUT_FBSDKBIO */
+/* #undef SDL_INPUT_WSCONS */
 /* #undef SDL_JOYSTICK_ANDROID */
 /* #undef SDL_JOYSTICK_HAIKU */
 /* #undef SDL_JOYSTICK_WGI */
@@ -358,6 +360,7 @@
 /* #undef SDL_HAPTIC_XINPUT */
 /* #undef SDL_HAPTIC_ANDROID */
 /* #undef SDL_LIBUSB_DYNAMIC */
+#define SDL_UDEV_DYNAMIC "libudev.so.1"
 
 /* Enable various sensor drivers */
 /* #undef SDL_SENSOR_ANDROID */
@@ -538,7 +541,7 @@
 /* #undef SDL_VIDEO_VITA_PVR */
 /* #undef SDL_VIDEO_VITA_PVR_OGL */
 
-#if !defined(_STDINT_H_) && (!defined(HAVE_STDINT_H) || !_HAVE_STDINT_H)
+#if !defined(HAVE_STDINT_H) && !defined(_STDINT_H_)
 /* Most everything except Visual Studio 2008 and earlier has stdint.h now */
 #if defined(_MSC_VER) && (_MSC_VER < 1600)
 typedef signed __int8 int8_t;

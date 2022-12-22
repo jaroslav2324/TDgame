@@ -1,16 +1,12 @@
-cmake_minimum_required(VERSION 3.24.1)
+cmake_minimum_required(VERSION 3.22.1)
 
 project(TowerDefence)
 
-set( SDL_STATIC ON CACHE BOOL "" FORCE )
-set( SDL_SHARED OFF CACHE BOOL "" FORCE )
+ set( SDL_STATIC ON CACHE BOOL "" FORCE )
+ set( SDL_SHARED OFF CACHE BOOL "" FORCE )
 # 'libs/SDL' should point at a SDL
 # repo clone or extracted release tarball
-add_subdirectory( libs/SDL )
-# add_subdirectory( libs/SDL_image-release-2.6.2 )
-
-#find_file(SDL2_INCLUDE_DIR NAME SDL.h HINTS SDL2)
-#find_library(SDL2_LIBRARY NAME SDL2)
+ add_subdirectory( libs/SDL )
 
 add_executable(${CMAKE_PROJECT_NAME} src/game/Base.cpp src/main.cpp src/game/GameLevel.cpp src/Timers.cpp src/game/EnemiesWay.cpp  src/approximateComparison.cpp 
 src/abstractClasses/Enemy.cpp src/abstractClasses/Tower.cpp src/towers/BasicTower.cpp src/game/Grid.cpp

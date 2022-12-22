@@ -77,6 +77,7 @@ file(REMOVE_RECURSE
   "include/SDL_vulkan.h"
   "include/begin_code.h"
   "include/close_code.h"
+  "wayland-generated-protocols/fractional-scale-v1-client-protocol.h"
   "wayland-generated-protocols/idle-inhibit-unstable-v1-client-protocol.h"
   "wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-client-protocol.h"
   "wayland-generated-protocols/pointer-constraints-unstable-v1-client-protocol.h"
