@@ -24,6 +24,11 @@ EnemyManager::~EnemyManager(){
         delete sortingTimer;
         sortingTimer = nullptr;
     }
+
+    if (countdownBeforeWaveTimer != nullptr){
+        delete countdownBeforeWaveTimer;
+        countdownBeforeWaveTimer = nullptr;
+    }
 }
 
 
@@ -129,7 +134,6 @@ Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, float radius){
     return returnEnemy;
 }
 
-
 void EnemyManager::findAndDeleteKilledEnemies(){
 
     int offset = 0;
@@ -188,6 +192,67 @@ void EnemyManager::spawnEnemiesInWave(){
         if(DEBUG_CONSOLE_OUTPUT_ON)
             cout << "Enemy has been spawned" << endl;
     }
+}
+
+void EnemyManager::startSpawning(){
+
+    if (startedSpawning){
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            cout << "Spawning enemies has been started already" << endl;
+        return;
+    }
+
+    // TODO replace if needed
+    listOfSpawningWaves = getListWaves1();
+
+    startedSpawning = true;
+    currentWave = listOfSpawningWaves.front();
+    listOfSpawningWaves.pop_front();
+    countdownBeforeWaveTimer = new CountdownTimer(currentWave.countdownBeforeWave);
+
+}
+
+void EnemyManager::spawnEnemiesIfStarted(){
+
+    if (!startedSpawning)
+        return;
+
+    // wave has ended
+    if (countdownBeforeWaveTimer->isCountdownEnd() && currentWave.size() <= 0){
+
+        if (listOfSpawningWaves.size() > 0){
+            currentWave = listOfSpawningWaves.front();
+            listOfSpawningWaves.pop_front();
+
+            delete countdownBeforeWaveTimer;
+            countdownBeforeWaveTimer = new CountdownTimer(currentWave.countdownBeforeWave);
+
+            if (enemyInWaveSpawnTimer != nullptr){
+                delete enemyInWaveSpawnTimer;
+                enemyInWaveSpawnTimer = nullptr;
+            }
+        }
+        else
+            return;
+    }
+
+    // spawn enemy
+    if (countdownBeforeWaveTimer->isCountdownEnd()){
+
+        if (enemyInWaveSpawnTimer == nullptr)
+            enemyInWaveSpawnTimer = new PeriodicTimer(currentWave.spawnPeriod);
+
+        if (enemyInWaveSpawnTimer->tickIfNeeded()){
+
+            int enemyType = currentWave.listEnemiesTypes.front();
+            currentWave.listEnemiesTypes.pop_front();
+            spawnEnemyAtPortal(enemyType);
+            
+            if(DEBUG_CONSOLE_OUTPUT_ON)
+                cout << "Enemy has been spawned" << endl;
+        }
+    }
+
 }
 
 void EnemyManager::sortEnemiesWithSortingTimer(){

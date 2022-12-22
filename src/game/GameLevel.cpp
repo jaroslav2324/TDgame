@@ -83,7 +83,7 @@ MenuOptionsCode GameLevel::makeFrameTurn(){
 
     MenuOptionsCode code = NO_CHANGES;
 
-    enemyManager->spawnEnemiesInWave();
+    enemyManager->spawnEnemiesIfStarted();
     enemyManager->allEnemiesMove();
     //cout << base->getHitPoits() << endl;
 

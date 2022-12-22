@@ -146,10 +146,8 @@ void BasicInterface::handlePressingOnButtons(){
         else if (spawnEnemyBtn->isPointInRect(mouseCoords)){
 
             spawnEnemyBtn->setModePressedOn();
-            //TODO change wave
-            Wave newWave = getBasicOrcWave(10, 2000);
-            enemyManager->setWave(newWave);
-            // enemyManager->spawnEnemyAtPortal(renderer, BASIC_ENEMY);
+
+            enemyManager->startSpawning();
         }
 
         else{

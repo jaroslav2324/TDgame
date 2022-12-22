@@ -619,6 +619,32 @@ CMakeFiles/TowerDefence.dir/src/Coords.cpp.o: ../src/Coords.cpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
+  /usr/include/c++/11/math.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
   ../src/settings.h
 
 CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o: ../src/Renderer.cpp \
@@ -3309,31 +3335,6 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
-  ../src/settings.h \
-  ../src/Renderer.h \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/bits/node_handle.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /usr/include/c++/11/bits/erase_if.h \
-  /usr/local/include/SDL2/SDL.h \
-  /usr/local/include/SDL2/SDL_main.h \
-  /usr/local/include/SDL2/SDL_stdinc.h \
-  /usr/local/include/SDL2/SDL_config.h \
-  /usr/local/include/SDL2/SDL_platform.h \
-  /usr/local/include/SDL2/begin_code.h \
-  /usr/local/include/SDL2/close_code.h \
-  /usr/include/c++/11/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/inttypes.h \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
@@ -3360,6 +3361,31 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../src/settings.h \
+  ../src/Renderer.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/local/include/SDL2/SDL.h \
+  /usr/local/include/SDL2/SDL_main.h \
+  /usr/local/include/SDL2/SDL_stdinc.h \
+  /usr/local/include/SDL2/SDL_config.h \
+  /usr/local/include/SDL2/SDL_platform.h \
+  /usr/local/include/SDL2/begin_code.h \
+  /usr/local/include/SDL2/close_code.h \
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/inttypes.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
   /usr/local/include/SDL2/SDL_assert.h \
   /usr/local/include/SDL2/SDL_atomic.h \
@@ -4659,6 +4685,8 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o: ../src/entity
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
   ../src/enemies/EnemyTypes.h \
   ../src/enemies/BasicEnemy.h \
   ../src/Timers.h \
@@ -4873,8 +4901,6 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o: ../src/entity
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/stl_map.h \
   /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/array \
   /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/invoke.h \
@@ -6418,6 +6444,8 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/list.tcc \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
   ../src/enemies/EnemyTypes.h \
   ../src/enemies/BasicEnemy.h \
   ../src/abstractClasses/Enemy.h \
@@ -6432,8 +6460,6 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/stl_map.h \
   /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/array \
   /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/invoke.h \

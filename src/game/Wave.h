@@ -20,13 +20,22 @@ struct Wave{
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     void loadFromBinaryFile(istream& inputStream);
 
+    int size();
+
     list<EnemyTypes> listEnemiesTypes;
     double spawnPeriod;
+    // in ms
+    double countdownBeforeWave = 10000;
 };
 
 
 // value is period between spawning enemies
 
-Wave getBasicWave(uint amount, double msSpawnPeriod);
-Wave getOrcWave(uint amount, double msSpawnPeriod);
-Wave getBasicOrcWave(uint amount, double msSpawnPeriod);
+Wave getBasicWave(uint amount, double msSpawnPeriod, double countdownBeforeWave);
+Wave getOrcWave(uint amount, double msSpawnPeriod, double countdownBeforeWave);
+Wave getBasicOrcWave(uint amount, double msSpawnPeriod, double countdownBeforeWave);
+
+// lists of waves for different levels
+list<Wave> getListWaves1();
+list<Wave> getListWaves2();
+list<Wave> getListWaves3();

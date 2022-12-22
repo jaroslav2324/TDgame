@@ -30,7 +30,10 @@ class EnemyManager{
     /*Set wave of enemies. spawnPeriod in milliseconds*/
     void setWave(Wave wave);
     /*Spawn enemies with spawn period until there are enemies to spawn (at portal position)*/
+    // TODO remove or make private
     void spawnEnemiesInWave();
+    void startSpawning();
+    void spawnEnemiesIfStarted();
 
     void addSpawnedEnemy(Enemy*);
     void killEnemy(Enemy*);
@@ -49,10 +52,13 @@ class EnemyManager{
     EnemiesWay* enemiesWay = nullptr;
 
     Wave currentWave;
+    list<Wave> listOfSpawningWaves;
+    bool startedSpawning = false;
 
     // Controls frequency of spawning
     PeriodicTimer* enemyInWaveSpawnTimer = nullptr;
-    // TODO add timer before wave start
+    //timer before wave start
+    CountdownTimer* countdownBeforeWaveTimer = nullptr;
     // used for sorting enemies by distance to the base
     PeriodicTimer* sortingTimer = nullptr;
 

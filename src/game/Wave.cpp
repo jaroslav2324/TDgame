@@ -1,8 +1,16 @@
 #include "Wave.h"
 
-Wave getBasicWave(uint amount, double msSpawnPeriod){
+int Wave::size(){
+    return listEnemiesTypes.size();
+}
+
+Wave getBasicWave(uint amount, double msSpawnPeriod, double countdownBeforeWave){
+
     Wave wave;
+    wave.countdownBeforeWave = countdownBeforeWave;
+
     int waveLen = amount;
+
 
     for (int i = 0; i < waveLen; i ++)
         wave.listEnemiesTypes.push_back(BASIC_ENEMY);
@@ -12,8 +20,11 @@ Wave getBasicWave(uint amount, double msSpawnPeriod){
     return wave;
 }
 
-Wave getOrcWave(uint amount, double msSpawnPeriod){
+Wave getOrcWave(uint amount, double msSpawnPeriod, double countdownBeforeWave){
+
     Wave wave;
+    wave.countdownBeforeWave = countdownBeforeWave;
+
     int waveLen = amount;
 
     for (int i = 0; i < waveLen; i ++)
@@ -24,9 +35,11 @@ Wave getOrcWave(uint amount, double msSpawnPeriod){
     return wave;
 }
 
-Wave getBasicOrcWave(uint amount, double msSpawnPeriod){
+Wave getBasicOrcWave(uint amount, double msSpawnPeriod, double countdownBeforeWave){
 
     Wave wave;
+    wave.countdownBeforeWave = countdownBeforeWave;
+
     int waveLen = amount;
     bool isOrc = false;
 
@@ -47,6 +60,27 @@ Wave getBasicOrcWave(uint amount, double msSpawnPeriod){
     return wave;
 }
 
+list<Wave> getListWaves1(){
+    
+    list<Wave> listOfWaves;
+
+    listOfWaves.push_back(getBasicWave(5, 1500, 15000));
+    listOfWaves.push_back(getOrcWave(5, 1500, 8000));
+    listOfWaves.push_back(getBasicOrcWave(8, 1500, 10000));
+    listOfWaves.push_back(getBasicWave(12, 1000, 12000));
+    listOfWaves.push_back(getOrcWave(12, 1000, 12000));
+
+    return listOfWaves;
+}
+
+list<Wave> getListWaves2(){
+    // TODO implement
+}
+
+list<Wave> getListWaves3(){
+    // TODO implement
+}
+
 void Wave::saveToBinaryFile(ostream& outpustStream){
 
     if (DEBUG_CONSOLE_OUTPUT_ON && !SAVING_LEVELS_ON)
@@ -54,7 +88,7 @@ void Wave::saveToBinaryFile(ostream& outpustStream){
 
     if (!SAVING_LEVELS_ON)
         return;
-    
+    //TODO add countdownBeforeWave
     // save spawnning period
     outpustStream.write((char*)&spawnPeriod, sizeof(spawnPeriod));
 
@@ -70,7 +104,7 @@ void Wave::loadFromBinaryFile(istream& inputStream){
 
     if (!LOADING_LEVELS_ON)
         return;
-
+    //TODO add countdownBeforeWave
     // load spawnning period
     inputStream.read((char*)&spawnPeriod, sizeof(spawnPeriod));
 
