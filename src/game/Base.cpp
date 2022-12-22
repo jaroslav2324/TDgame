@@ -17,7 +17,10 @@ void Base::setHitPoints(int hitPoints){
 }
 
 void Base::applyDamage(int damage){
+    int currentHitPoints = hitPoints; // cout in debug mode
     hitPoints -= damage;
+    if (DEBUG_CONSOLE_OUTPUT_ON)
+        cout << "Base hit points changed " << currentHitPoints << " => " << hitPoints << endl;
 }
 
 bool Base::noHitPoitsLeft(){

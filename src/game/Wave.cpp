@@ -1,13 +1,48 @@
 #include "Wave.h"
 
-Wave getBasicTestWave(){
+Wave getBasicWave(uint amount, double msSpawnPeriod){
     Wave wave;
-    int waveLen = 5;
+    int waveLen = amount;
 
     for (int i = 0; i < waveLen; i ++)
         wave.listEnemiesTypes.push_back(BASIC_ENEMY);
 
-    wave.spawnPeriod = 2000;
+    wave.spawnPeriod = msSpawnPeriod;
+
+    return wave;
+}
+
+Wave getOrcWave(uint amount, double msSpawnPeriod){
+    Wave wave;
+    int waveLen = amount;
+
+    for (int i = 0; i < waveLen; i ++)
+        wave.listEnemiesTypes.push_back(ORC_ENEMY);
+
+    wave.spawnPeriod = msSpawnPeriod;
+
+    return wave;
+}
+
+Wave getBasicOrcWave(uint amount, double msSpawnPeriod){
+
+    Wave wave;
+    int waveLen = amount;
+    bool isOrc = false;
+
+    for (int i = 0; i < waveLen; i ++){
+
+        if (isOrc){
+            wave.listEnemiesTypes.push_back(ORC_ENEMY);
+            isOrc = false;
+        }
+        else{
+            wave.listEnemiesTypes.push_back(BASIC_ENEMY);
+            isOrc = true; 
+        }
+    }
+
+    wave.spawnPeriod = msSpawnPeriod;
 
     return wave;
 }

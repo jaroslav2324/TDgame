@@ -25,5 +25,8 @@ struct Wave{
 };
 
 
-Wave getBasicTestWave();
+// value is period between spawning enemies
 
+Wave getBasicWave(uint amount, double msSpawnPeriod);
+Wave getOrcWave(uint amount, double msSpawnPeriod);
+Wave getBasicOrcWave(uint amount, double msSpawnPeriod);

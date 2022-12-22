@@ -147,7 +147,7 @@ void BasicInterface::handlePressingOnButtons(){
 
             spawnEnemyBtn->setModePressedOn();
             //TODO change wave
-            Wave newWave = getBasicTestWave();
+            Wave newWave = getBasicOrcWave(10, 2000);
             enemyManager->setWave(newWave);
             // enemyManager->spawnEnemyAtPortal(renderer, BASIC_ENEMY);
         }
