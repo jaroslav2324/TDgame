@@ -1,5 +1,14 @@
 #include "Coords.h"
 
+double distance(Coords& point1, Coords& point2){
+    
+    double deltaX = point2.x - point1.x;
+    double deltaY = point2.y - point1.y;
+
+    return sqrt(pow(deltaX, 2) + pow(deltaY, 2));
+}
+
+
 ostream& operator<<(ostream& os, const Coords& coords){
     os << "Coords: " << coords.x << " " << coords.y << std::endl;
     return os;

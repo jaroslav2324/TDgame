@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <math.h>
 
 #include "settings.h"
 
@@ -23,5 +24,7 @@ struct Coords{
 
     Coords& operator()(float x, float y);
 };
+
+double distance(Coords& point1, Coords& point2);
 
 ostream& operator<<(ostream& os, const Coords& coords);

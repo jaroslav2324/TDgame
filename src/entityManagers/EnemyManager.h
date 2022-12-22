@@ -3,6 +3,7 @@
 #include <vector>
 #include <list>
 #include <string>
+#include <utility>
 
 #include "../enemies/EnemyTypes.h"
 #include "../enemies/BasicEnemy.h"
@@ -12,6 +13,7 @@
 
 using std::list;
 using std::string;
+using std::swap;
 
 class EnemyManager{
     public:
@@ -51,6 +53,10 @@ class EnemyManager{
     // Controls frequency of spawning
     PeriodicTimer* enemyInWaveSpawnTimer = nullptr;
     // TODO add timer before wave start
+    // used for sorting enemies by distance to the base
+    PeriodicTimer* sortingTimer = nullptr;
 
     void createAndAddEnemy(int enemyType, Coords coords);
+
+    void sortEnemiesWithSortingTimer();
 };

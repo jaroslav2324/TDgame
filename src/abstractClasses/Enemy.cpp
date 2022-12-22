@@ -47,9 +47,9 @@ void Enemy::MoveToNextWaypoint(double timePeriodOfMoving ){
     if (diffX < 0)
         signOfDiffX = -1;
 
-    double distanceToEnemy = sqrt(pow(diffX, 2) + pow(diffY, 2));
+    double distanceToNextWaypoint = sqrt(pow(diffX, 2) + pow(diffY, 2));
     double movingDistance = currentSpeed * timePeriodOfMoving;
-    double scale = movingDistance / distanceToEnemy;
+    double scale = movingDistance / distanceToNextWaypoint;
 
     // equality movingDistance^2 = changeX^2 + changeY^2
     double changeY = diffY * scale;
@@ -152,10 +152,6 @@ void Enemy::move(){
 
     if (movementTimer->tickIfNeeded()){
 
-
-        // cout << currentCoords.x << " " << currentCoords.y << endl;
-        // cout << coordsNextWaypoint.x << " " << coordsNextWaypoint.y << endl;
-
         if (ifWaypointPassed())
             replaceToNextWaypointCoords();
 
@@ -192,4 +188,12 @@ void Enemy::render(Renderer* renderer){
     int y = currentCoords.y - ENEMY_SPRITE_SIZE / 2;
     SDL_Rect enemyRect = {x, y, ENEMY_SPRITE_SIZE, ENEMY_SPRITE_SIZE};
     renderer->renderTexture(enemyTextureType, &enemyRect);
+}
+
+int Enemy::getNumNextWaypoint(){
+    return numNextWaypoint;
+}
+
+Coords Enemy::getCoords(){
+    return currentCoords;
 }

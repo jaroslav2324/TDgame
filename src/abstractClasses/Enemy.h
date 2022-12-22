@@ -39,8 +39,11 @@ public:
     
     void render(Renderer* renderer);
 
+    //TODO remove
     float getCoordX();
     float getCoordY();
+    Coords getCoords();
+    int getNumNextWaypoint();
 
 protected:
     float hitPoints = 0;
@@ -65,13 +68,14 @@ protected:
     Base* base = nullptr;
     Portal * portal = nullptr;
 
+    TexturesEnumeration enemyTextureType;
+
 /*baseSpeed is multiplyed by timePeriodOfMoving. The last value is given in milliseconds*/
     void MoveToNextWaypoint(double timePeriodOfMoving); 
 
     bool ifWaypointPassed();
     void replaceToNextWaypointCoords();
 
+    //TODO remove
     void copyCoords(Coords& destination, Coords& source);
-    
-    TexturesEnumeration enemyTextureType;
 };

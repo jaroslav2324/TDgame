@@ -2,6 +2,8 @@
 
 EnemyManager::EnemyManager(Base* base, Portal* portal, EnemiesWay* enemiesWay){
 
+    sortingTimer = new PeriodicTimer(500);
+
     EnemyManager::base = base;
     EnemyManager::portal = portal;
 
@@ -16,6 +18,11 @@ EnemyManager::~EnemyManager(){
         if (enemyList[i] != nullptr)
             delete enemyList[i];
         enemyList.pop_back();
+    }
+
+    if (sortingTimer != nullptr){
+        delete sortingTimer;
+        sortingTimer = nullptr;
     }
 }
 
@@ -68,6 +75,8 @@ Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, float radius){
 
     float diffX, diffY;
     float squareDistance, squareRadius;
+
+    sortEnemiesWithSortingTimer();
 
     for (auto enemy: enemyList){
         diffX = abs(enemy->getCoordX() - towerCoords.x);
@@ -171,9 +180,41 @@ void EnemyManager::spawnEnemiesInWave(){
 
     //cout << enemyInWaveSpawnTimer;
     if (enemyInWaveSpawnTimer->tickIfNeeded()){
+
         int enemyType = currentWave.listEnemiesTypes.front();
         currentWave.listEnemiesTypes.pop_front();
         spawnEnemyAtPortal(enemyType);
-        //cout << enemyInWaveSpawnTimer;
+        
+        if(DEBUG_CONSOLE_OUTPUT_ON)
+            cout << "Enemy has been spawned" << endl;
     }
+}
+
+void EnemyManager::sortEnemiesWithSortingTimer(){
+
+    int sizeVector = enemyList.size();
+
+    if(sortingTimer->tickIfNeeded()){
+        // bubble sort
+        for (int i = 0; i < sizeVector - 1; i++)
+            for (int j = 0; j < sizeVector - 1; j++){
+                
+                int numNextWaypoint1 = enemyList[i]->getNumNextWaypoint();
+                int numNextWaypoint2 = enemyList[j]->getNumNextWaypoint();
+
+                if (numNextWaypoint1 > numNextWaypoint2)
+                    swap(enemyList[i], enemyList[j]);
+                
+
+                if (numNextWaypoint1 == numNextWaypoint2){
+
+                    Coords coords1 = enemyList[i]->getCoords();
+                    Coords coords2 = enemyList[j]->getCoords();
+                    Coords coordsNextWaypoint = enemiesWay->getWaypointCoords(numNextWaypoint1);
+
+                    if (distance(coords1, coordsNextWaypoint) < distance(coords2, coordsNextWaypoint))
+                        swap(enemyList[i], enemyList[j]);
+                }
+            }
+        }
 }
