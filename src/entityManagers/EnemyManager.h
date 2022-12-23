@@ -29,9 +29,6 @@ class EnemyManager{
 
     /*Set wave of enemies. spawnPeriod in milliseconds*/
     void setWave(Wave wave);
-    /*Spawn enemies with spawn period until there are enemies to spawn (at portal position)*/
-    // TODO remove or make private
-    void spawnEnemiesInWave();
     void startSpawning();
     void spawnEnemiesIfStarted();
 
@@ -65,4 +62,8 @@ class EnemyManager{
     void createAndAddEnemy(int enemyType, Coords coords);
 
     void sortEnemiesWithSortingTimer();
+    
+    /* use for test if needed
+    Spawn enemies with spawn period until there are enemies to spawn (at portal position)*/
+    void spawnEnemiesInWave();
 };

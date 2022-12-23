@@ -42,6 +42,12 @@ ostream& operator<<(std::ostream& out, const TexturesEnumeration& textureNum){
     case TexturesEnumeration::BASIC_PROJECTILE_TEXTURE:
         out << "\"basic projectile texture\"" << endl;
         break;
+    case TexturesEnumeration::ICEBALL_PROJECTILE_TEXTURE:
+        out << "\"iceball projectile texture\"" << endl;
+        break;
+    case TexturesEnumeration::FIREBALL_PROJECTILE_TEXTURE:
+        out << "\"fireball projectile texture\"" << endl;
+        break;
     case TexturesEnumeration::BASIC_GRID_TILE_TEXTURE:
         out << "\"basic grid tile texture\"" << endl;
         break;
