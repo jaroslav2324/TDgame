@@ -68,9 +68,6 @@ protected:
 
     SDL_Color radiusColor = {100, 100, 180, 180};
 
-    // TODO delete?
-    std::pair<int, int> gridCoords;
-
     ObjectCursorInteractionsModes towerCursorInteractionMode = NO_INTERACTION;
 
     //TODO add UI to destroy tower
@@ -102,7 +99,6 @@ protected:
 
     void setRadius(float radius);
     void setLevel(int level);
-    void setGridCoords(std::pair<int, int> gridCoords);
 
     void renderRadiusCircle(Renderer* renderer);
 };

@@ -27,8 +27,4 @@ class Portal{
 
     private:
     Coords coords;
-
-    // TODO
-    // add spawner(in portal or enemyManager?)
-    // add startSpawningMethod
 };

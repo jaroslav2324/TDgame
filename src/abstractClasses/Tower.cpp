@@ -67,10 +67,6 @@ void Tower::setCoords(Coords coords){
     Tower::towerCoords = coords;
 }
 
-void Tower::setGridCoords(std::pair<int, int> gridCoords){
-    Tower::gridCoords = gridCoords;
-}
-
 void Tower::addExperience(float exp){
     experience += exp;
 }

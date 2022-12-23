@@ -73,5 +73,5 @@ protected:
     bool ifWaypointPassed();
     void replaceToNextWaypointCoords();
 
-    void renderHitPointsLine(Renderer* renderer);
+    void renderHitPointsBar(Renderer* renderer);
 };

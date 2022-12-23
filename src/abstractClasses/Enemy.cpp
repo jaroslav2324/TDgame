@@ -174,11 +174,10 @@ void Enemy::render(Renderer* renderer){
     int y = currentCoords.y - ENEMY_SPRITE_SIZE / 2;
     SDL_Rect enemyRect = {x, y, ENEMY_SPRITE_SIZE, ENEMY_SPRITE_SIZE};
     renderer->renderTexture(enemyTextureType, &enemyRect);
-    renderHitPointsLine(renderer);
+    renderHitPointsBar(renderer);
 }
 
-//TODO rename
-void Enemy::renderHitPointsLine(Renderer* renderer){
+void Enemy::renderHitPointsBar(Renderer* renderer){
     
     SDL_Color whiteColor = {255, 255, 255, 255};
     SDL_Color borderColor = {150, 150, 150, 255};

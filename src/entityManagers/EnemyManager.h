@@ -1,5 +1,7 @@
 #pragma once
 
+#include <sstream>
+#include <iomanip>
 #include <vector>
 #include <list>
 #include <string>
@@ -38,7 +40,7 @@ class EnemyManager{
 
     void allEnemiesMove();
 
-    void renderAllEnemies(Renderer* renderer);
+    void renderAll(Renderer* renderer);
 
     private:
     std::vector<Enemy*> enemyList;

@@ -155,36 +155,44 @@ void EnemyManager::allEnemiesMove(){
         enemy->move();
 }
 
-//TODO rename
-void EnemyManager::renderAllEnemies(Renderer* renderer){
+void EnemyManager::renderAll(Renderer* renderer){
     
+    // render enemies
     for (auto enemyPtr: enemyList)
         enemyPtr->render(renderer);
 
-    //TODO refactor
+    // white
+    SDL_Color textColor = {255, 255, 255, 255};
+    int x = 100;
+    int y = 100;
+
     // render countdown before waves 
     if (!startedSpawning){
-        SDL_Rect rect = {100, 100, 150, 75};
-        SDL_Color color = {255, 255, 255, 255};
-        renderer->renderText("Start wave!", &rect, color);
+        SDL_Rect rect = {x, y, 150, 75};
+        renderer->renderText("Start wave!", &rect, textColor);
     }
     else{
 
         if (!countdownBeforeWaveTimer->isCountdownEnd()){
             double untilNextWave = countdownBeforeWaveTimer->getTimeLeft();
+
             // convert to seconds
             untilNextWave /= 1000;
+            // set precision of double value on the screen
+            std::ostringstream stringStream;
+            stringStream << std::fixed;
+            stringStream << std::setprecision(1);
+            stringStream << untilNextWave;
 
-            string strUntilNextWave = std::to_string(untilNextWave);
+            string strUntilNextWave = stringStream.str();
             string screenText = "Before next wave " + strUntilNextWave + "s";
-            SDL_Rect rect = {100, 100, 400, 75};
-            SDL_Color color = {255, 255, 255, 255};
-            renderer->renderText(screenText, &rect, color);
+
+            SDL_Rect rect = {x, y, 400, 75};
+            renderer->renderText(screenText, &rect, textColor);
         }
         else if (enemyInWaveSpawnTimer != nullptr && listOfSpawningWaves.size() != 0){
-            SDL_Rect rect = {100, 100, 200, 75};
-            SDL_Color color = {255, 255, 255, 255};
-            renderer->renderText("Wave is here!", &rect, color);
+            SDL_Rect rect = {x, y, 200, 75};
+            renderer->renderText("Wave is here!", &rect, textColor);
         }
     }
 }
@@ -249,7 +257,6 @@ void EnemyManager::spawnEnemiesIfStarted(){
     if (!startedSpawning)
         return;
     
-
     // wave has ended
     if (countdownBeforeWaveTimer->isCountdownEnd() && currentWave.size() <= 0){
 
