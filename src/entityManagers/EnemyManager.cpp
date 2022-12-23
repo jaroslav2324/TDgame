@@ -155,10 +155,37 @@ void EnemyManager::allEnemiesMove(){
         enemy->move();
 }
 
+//TODO rename
 void EnemyManager::renderAllEnemies(Renderer* renderer){
     
     for (auto enemyPtr: enemyList)
         enemyPtr->render(renderer);
+
+    // render countdown before waves 
+    if (!startedSpawning){
+        SDL_Rect rect = {100, 100, 150, 100};
+        SDL_Color color = {255, 255, 255, 255};
+        renderer->renderText("Start wave!", &rect, color);
+    }
+    else{
+
+        if (!countdownBeforeWaveTimer->isCountdownEnd()){
+            double untilNextWave = countdownBeforeWaveTimer->getTimeLeft();
+            // convert to seconds
+            untilNextWave /= 1000;
+
+            string strUntilNextWave = std::to_string(untilNextWave);
+            string screenText = "Before next wave " + strUntilNextWave + "s";
+            SDL_Rect rect = {100, 100, 300, 100};
+            SDL_Color color = {255, 255, 255, 255};
+            renderer->renderText(screenText, &rect, color);
+        }
+        else if (enemyInWaveSpawnTimer != nullptr){
+            SDL_Rect rect = {100, 100, 150, 100};
+            SDL_Color color = {255, 255, 255, 255};
+            renderer->renderText("Wave is here!", &rect, color);
+        }
+    }
 }
 
 void EnemyManager::setWave(Wave wave){
@@ -220,6 +247,7 @@ void EnemyManager::spawnEnemiesIfStarted(){
 
     if (!startedSpawning)
         return;
+    
 
     // wave has ended
     if (countdownBeforeWaveTimer->isCountdownEnd() && currentWave.size() <= 0){

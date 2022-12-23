@@ -353,6 +353,7 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/Renderer.h
  /usr/include/c++/11/map
@@ -1016,6 +1017,7 @@ CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /usr/include/c++/11/fstream
@@ -1962,6 +1964,7 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o
  /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.h
  /home/jaros/gitProjects/c++/TDgame/src/towers/TowerTypes.h
@@ -2368,6 +2371,7 @@ CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o
  /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.h
@@ -2759,6 +2763,7 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o
  /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/Timers.h
@@ -3130,6 +3135,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o
  /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /usr/include/c++/11/fstream
@@ -3533,6 +3539,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o
@@ -3901,6 +3908,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /usr/include/c++/11/fstream
@@ -4297,6 +4305,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /usr/include/c++/11/fstream
  /usr/include/c++/11/bits/codecvt.h
@@ -4924,6 +4933,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o
  /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.h
@@ -5318,6 +5328,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /usr/include/c++/11/fstream
  /usr/include/c++/11/bits/codecvt.h
@@ -5722,6 +5733,7 @@ CMakeFiles/TowerDefence.dir/src/game/Base.cpp.o
  /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/game/EnemiesWay.cpp.o
@@ -6102,6 +6114,7 @@ CMakeFiles/TowerDefence.dir/src/game/EnemiesWay.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o
@@ -6489,6 +6502,7 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o
  /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.h
@@ -6911,6 +6925,7 @@ CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o
@@ -7284,6 +7299,7 @@ CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o
  /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o
@@ -7657,6 +7673,7 @@ CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o
  /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o
@@ -8206,6 +8223,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
  /home/jaros/gitProjects/c++/TDgame/src/Application.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/Renderer.h
  /usr/include/c++/11/map
@@ -8666,6 +8684,7 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /usr/include/c++/11/fstream
  /usr/include/c++/11/bits/codecvt.h
@@ -9070,6 +9089,7 @@ CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /usr/include/c++/11/fstream
  /usr/include/c++/11/bits/codecvt.h
@@ -9475,6 +9495,7 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
+ /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /usr/include/c++/11/fstream
  /usr/include/c++/11/bits/codecvt.h

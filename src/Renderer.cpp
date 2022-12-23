@@ -5,6 +5,9 @@ Renderer::Renderer(){
     this->window = SDL_CreateWindow("TD_Game", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     this->renderer = renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
+    // fonts
+    freeSans = TTF_OpenFont("../fonts/freesans/FreeSans/FreeSans.ttf", 24);
+
     // fill paths of textures
     map<TexturesEnumeration, const char*> texturesPaths;
 
@@ -50,6 +53,11 @@ Renderer::~Renderer(){
     if (window != nullptr){
         SDL_DestroyWindow(window);
         window = nullptr;
+    }
+
+    if (freeSans != nullptr){
+        TTF_CloseFont(freeSans);
+        freeSans = nullptr;
     }
 }
 
@@ -111,6 +119,21 @@ void Renderer::renderCircle(Coords& center, int radius, SDL_Color& color, int bo
             }
         }
     }
+}
+
+void Renderer::renderText(const char* text, const SDL_Rect* rect, SDL_Color& color){
+    
+    SDL_Surface* messageSurface = TTF_RenderText_Blended(freeSans, text, color);
+    SDL_Texture* messageTexture = SDL_CreateTextureFromSurface(renderer, messageSurface);
+    
+    SDL_RenderCopy(renderer, messageTexture, 0, rect);
+
+    SDL_DestroyTexture(messageTexture);
+    SDL_FreeSurface(messageSurface);
+}
+
+void Renderer::renderText(string& str, const SDL_Rect* rect, SDL_Color& color){
+    renderText(str.c_str(), rect, color);
 }
 
 void Renderer::renderPresent(){

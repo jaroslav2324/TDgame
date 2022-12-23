@@ -69,6 +69,8 @@ class CountdownTimer{
 
 	bool isCountdownEnd();
 
+	double getTimeLeft();
+
 
 	private:
 	double countdownTime;

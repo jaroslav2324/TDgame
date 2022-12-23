@@ -352,6 +352,7 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o: ../src/Application.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/Renderer.h \
   /usr/include/c++/11/map \
@@ -1013,6 +1014,7 @@ CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o: ../src/Renderer.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/Coords.h \
   /usr/include/c++/11/fstream \
@@ -1956,6 +1958,7 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: ../src/UI/BasicInterfac
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/TexturesEnum.h \
   ../src/entityManagers/TowerManager.h \
   ../src/towers/TowerTypes.h \
@@ -2361,6 +2364,7 @@ CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o: ../src/UI/Button.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/Coords.h \
   ../src/TexturesEnum.h \
@@ -2751,6 +2755,7 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: ../src/UI/MainMenu.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/Coords.h \
   ../src/TexturesEnum.h \
   ../src/Timers.h \
@@ -3121,6 +3126,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o: ../src/abstractClas
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/Coords.h \
   /usr/include/c++/11/fstream \
@@ -3523,6 +3529,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o: ../src/abstractClasses/Projectile.cpp \
@@ -3890,6 +3897,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o: ../src/abstrac
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/Coords.h \
   /usr/include/c++/11/fstream \
@@ -4285,6 +4293,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: ../src/abstractClas
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/Coords.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
@@ -4910,6 +4919,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o: ../src/entity
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/Coords.h \
   ../src/TexturesEnum.h \
@@ -5303,6 +5313,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: ../src/entity
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/Coords.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
@@ -5706,6 +5717,7 @@ CMakeFiles/TowerDefence.dir/src/game/Base.cpp.o: ../src/game/Base.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/game/EnemiesWay.cpp.o: ../src/game/EnemiesWay.cpp \
@@ -6085,6 +6097,7 @@ CMakeFiles/TowerDefence.dir/src/game/EnemiesWay.cpp.o: ../src/game/EnemiesWay.cp
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp \
@@ -6471,6 +6484,7 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/Coords.h \
   ../src/TexturesEnum.h \
@@ -6892,6 +6906,7 @@ CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o: ../src/game/Grid.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o: ../src/game/GridTile.cpp \
@@ -7264,6 +7279,7 @@ CMakeFiles/TowerDefence.dir/src/game/GridTile.cpp.o: ../src/game/GridTile.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o: ../src/game/Portal.cpp \
@@ -7636,6 +7652,7 @@ CMakeFiles/TowerDefence.dir/src/game/Portal.cpp.o: ../src/game/Portal.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o: ../src/game/Wave.cpp \
@@ -8183,6 +8200,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
   ../src/Application.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/Renderer.h \
   /usr/include/c++/11/map \
@@ -8642,6 +8660,7 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: ../src/towers/BasicTowe
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/Coords.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
@@ -9045,6 +9064,7 @@ CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o: ../src/towers/FireTower.
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/Coords.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
@@ -9449,6 +9469,7 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  /usr/include/SDL2/SDL_ttf.h \
   ../src/Coords.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
@@ -10371,6 +10392,8 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 /usr/include/c++/11/bits/streambuf.tcc:
 
 /usr/include/string.h:
+
+/usr/include/SDL2/SDL_ttf.h:
 
 /usr/local/include/SDL2/SDL_hidapi.h:
 

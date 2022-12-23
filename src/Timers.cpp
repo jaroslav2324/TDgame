@@ -99,6 +99,10 @@ void CountdownTimer::replaceTime(double countdownTime){
 	CountdownTimer::countdownTime = countdownTime;
 }
 
+double CountdownTimer::getTimeLeft(){
+	return countdownTime;
+}
+
 ostream& operator<<(ostream& os, const CountdownTimer& timer){
     cout << "Countdown time " << timer.countdownTime << " ms," << endl;
 	cout << "Previous time " << timer.prevTime << " ms," << endl;

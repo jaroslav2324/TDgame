@@ -8,6 +8,9 @@ Application::Application(){
     if (IMG_Init(IMG_INIT_JPG) == 0)
         cout << "SDL_image error" << endl;
 
+    if (TTF_Init() != 0)
+        cout << "SDL_ttf error" << endl;
+
     renderer = new Renderer();
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
@@ -37,6 +40,7 @@ Application::~Application(){
         renderer = nullptr;
     }
 
+    TTF_Quit();
 	IMG_Quit();
     SDL_Quit();
 }
