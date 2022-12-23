@@ -102,20 +102,6 @@ bool Enemy::ifWaypointPassed(){
     
 }
 
-/*Copy coordinates from source to destination*/
-void Enemy::copyCoords(Coords& destination, Coords& source){
-    destination.x = source.x;
-    destination.y = source.y;
-}
-
-float Enemy::getCoordX(){
-    return currentCoords.x;
-}
-
-float Enemy::getCoordY(){
-    return currentCoords.y;
-}
-
 /*hit Enemy*/
 void Enemy::applyDamage(float damage){
     hitPoints -= damage;

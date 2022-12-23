@@ -19,8 +19,9 @@ void Projectile::moveToEnemy(){
 
     double timePeriodOfMoving = movementTimer->getCountPeriod();
 
-    float enemyCoordX = aimedEnemy->getCoordX();
-    float enemyCoordY = aimedEnemy->getCoordY();
+    Coords enemyCoords = aimedEnemy->getCoords();
+    float enemyCoordX = enemyCoords.x;
+    float enemyCoordY = enemyCoords.y;
 
     //find proportion of coords change
     double diffX = enemyCoordX - currentCoords.x;
@@ -64,9 +65,7 @@ void Projectile::moveToEnemy(){
 
 bool Projectile::isReachedEnemy(){
 
-    float enemyCoordX = aimedEnemy->getCoordX();
-    float enemyCoordY = aimedEnemy->getCoordY();
-    Coords enemyCoords(enemyCoordX, enemyCoordY);
+    Coords enemyCoords = aimedEnemy->getCoords();
 
     if (ifCoordsApprEqual(currentCoords, enemyCoords))
         return true;

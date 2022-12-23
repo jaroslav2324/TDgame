@@ -83,9 +83,11 @@ Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, float radius){
 
     sortEnemiesWithSortingTimer();
 
+    Coords enemyCoords;
     for (auto enemy: enemyList){
-        diffX = abs(enemy->getCoordX() - towerCoords.x);
-        diffY = abs(enemy->getCoordY() - towerCoords.y);
+        enemyCoords = enemy->getCoords();
+        diffX = abs(enemyCoords.x - towerCoords.x);
+        diffY = abs(enemyCoords.y - towerCoords.y);
 
         squareDistance = pow(diffX, 2) + pow(diffY, 2); //between tower and enemy
         squareRadius = pow(radius, 2);
@@ -105,11 +107,13 @@ Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, float radius){
 
     Enemy* returnEnemy = nullptr;
 
+    Coords enemyCoords;
     // TODO rewrite this(why?)
     for (auto enemy: enemyList){
-        diffX = abs(enemy->getCoordX() - towerCoords.x);
-        diffY = abs(enemy->getCoordY() - towerCoords.y);
-
+        enemyCoords = enemy->getCoords();
+        diffX = abs(enemyCoords.x - towerCoords.x);
+        diffY = abs(enemyCoords.y - towerCoords.y);
+        
         squareDistance = pow(diffX, 2) + pow(diffY, 2); //between tower and enemy
         squareRadius = pow(radius, 2);
 

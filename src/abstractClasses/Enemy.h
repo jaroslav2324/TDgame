@@ -39,9 +39,6 @@ public:
     
     void render(Renderer* renderer);
 
-    //TODO remove
-    float getCoordX();
-    float getCoordY();
     Coords getCoords();
     int getNumNextWaypoint();
 
@@ -75,7 +72,4 @@ protected:
 
     bool ifWaypointPassed();
     void replaceToNextWaypointCoords();
-
-    //TODO remove
-    void copyCoords(Coords& destination, Coords& source);
 };
