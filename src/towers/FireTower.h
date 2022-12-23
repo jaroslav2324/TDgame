@@ -11,7 +11,7 @@ class FireTower: public Tower{
 
         this->towerTextureType = TexturesEnumeration::FIRE_TOWER_TEXTURE;
 
-        setAttackTimer();
+        //setAttackTimer();
 
     };
     FireTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
@@ -21,7 +21,7 @@ class FireTower: public Tower{
 
         this->towerTextureType = TexturesEnumeration::FIRE_TOWER_TEXTURE;
 
-        setAttackTimer();
+        //setAttackTimer();
 
     };
     ~FireTower();

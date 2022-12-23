@@ -10,7 +10,7 @@ class BasicTower: public Tower{
 
         this->towerTextureType = TexturesEnumeration::BASIC_TOWER_TEXTURE;
 
-        setAttackTimer();
+        //setAttackTimer();
 
     };
     BasicTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
@@ -20,7 +20,7 @@ class BasicTower: public Tower{
 
         this->towerTextureType = TexturesEnumeration::BASIC_TOWER_TEXTURE;
 
-        setAttackTimer();
+        //setAttackTimer();
 
     };
     ~BasicTower();

@@ -408,7 +408,9 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o: ../src/Application.cpp \
   ../src/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h \
   ../src/towers/IceTower.h \
+  ../src/projectiles/IceballProjectile.h \
   ../src/towers/FireTower.h \
+  ../src/projectiles/FireballProjectile.h \
   ../src/game/Grid.h \
   ../src/game/GridTile.h \
   ../src/UI/BasicInterface.h \
@@ -1983,7 +1985,9 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: ../src/UI/BasicInterfac
   ../src/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h \
   ../src/towers/IceTower.h \
+  ../src/projectiles/IceballProjectile.h \
   ../src/towers/FireTower.h \
+  ../src/projectiles/FireballProjectile.h \
   ../src/UI/Button.h \
   ../src/UI/MenuOptionsCodes.h
 
@@ -5326,7 +5330,9 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: ../src/entity
   ../src/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h \
   ../src/towers/IceTower.h \
-  ../src/towers/FireTower.h
+  ../src/projectiles/IceballProjectile.h \
+  ../src/towers/FireTower.h \
+  ../src/projectiles/FireballProjectile.h
 
 CMakeFiles/TowerDefence.dir/src/game/Base.cpp.o: ../src/game/Base.cpp \
   /usr/include/stdc-predef.h \
@@ -6487,7 +6493,9 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   ../src/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h \
   ../src/towers/IceTower.h \
+  ../src/projectiles/IceballProjectile.h \
   ../src/towers/FireTower.h \
+  ../src/projectiles/FireballProjectile.h \
   ../src/game/Grid.h \
   ../src/game/GridTile.h \
   ../src/UI/BasicInterface.h \
@@ -8231,7 +8239,9 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   ../src/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h \
   ../src/towers/IceTower.h \
+  ../src/projectiles/IceballProjectile.h \
   ../src/towers/FireTower.h \
+  ../src/projectiles/FireballProjectile.h \
   ../src/game/Grid.h \
   ../src/game/GridTile.h \
   ../src/UI/BasicInterface.h \
@@ -9060,7 +9070,8 @@ CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o: ../src/towers/FireTower.
   ../src/game/Wave.h \
   ../src/abstractClasses/Projectile.h \
   ../src/projectiles/BasicProjectile.h \
-  ../src/ObjectCursorInteractionsModes.h
+  ../src/ObjectCursorInteractionsModes.h \
+  ../src/projectiles/FireballProjectile.h
 
 CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cpp \
   /usr/include/stdc-predef.h \
@@ -9463,7 +9474,8 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
   ../src/game/Wave.h \
   ../src/abstractClasses/Projectile.h \
   ../src/projectiles/BasicProjectile.h \
-  ../src/ObjectCursorInteractionsModes.h
+  ../src/ObjectCursorInteractionsModes.h \
+  ../src/projectiles/IceballProjectile.h
 
 
 ../src/towers/IceTower.cpp:
@@ -9551,6 +9563,8 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 /usr/include/SDL2/SDL_assert.h:
 
 ../src/towers/FireTower.h:
+
+../src/projectiles/IceballProjectile.h:
 
 ../src/projectiles/BasicProjectile.h:
 
@@ -10173,6 +10187,8 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
 /usr/local/include/SDL2/SDL_thread.h:
+
+../src/projectiles/FireballProjectile.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/enqcmdintrin.h:
 

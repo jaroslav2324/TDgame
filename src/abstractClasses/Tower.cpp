@@ -29,7 +29,10 @@ Tower::Tower(EnemyManager* enemyManager, float damage, float radius, float attac
 }
 
 Tower::~Tower(){
-
+    if (attackTimer != nullptr){
+        delete attackTimer;
+        attackTimer = nullptr;
+    }
 }
 
 float Tower::getDamage(){
@@ -98,37 +101,47 @@ void Tower::attack(){
 /*move all projectiles and delete if they hit enemy*/
     moveAllProjectiles();
 
+    findFirstEnemyInRadius();
+
+    if (aimedEnemy == nullptr && attackTimer == nullptr)
+        return;
+
+    if (aimedEnemy == nullptr && attackTimer != nullptr){
+        if (attackTimer->tickIfNeeded()){
+            delete attackTimer;
+            attackTimer = nullptr;
+        }
+        return;
+    }
+
+    if (aimedEnemy != nullptr && attackTimer == nullptr){
+        attackTimer = new PeriodicTimer(attackSpeed);
+        attackTimer->setFrameTime(attackSpeed);
+    }
+
     if(attackTimer->tickIfNeeded()){
 
-        findFirstEnemyInRadius();
+        /*spawn projectile and add it to the list*/
+        Projectile* projectile = newProjectile();
+        projectileList.push_back(projectile);
 
-        // if enemy found
-        if (aimedEnemy != nullptr){
-
-            /*spawn projectile and add it to the list*/
-            Projectile* projectile = newProjectile();
-            projectileList.push_back(projectile);
-
-            /*add experience for tower*/
-            if (aimedEnemy->isDead()){
-                aimedEnemy = nullptr;
-                int size = projectileList.size();
-                for (int i = size - 1; i >= 0; i--){
-                    delete projectileList[i];
-                    projectileList.pop_back();
-                }
-                    
-
-                addExperience(expForKill);
+        /*add experience for tower*/
+        if (aimedEnemy->isDead()){
+            aimedEnemy = nullptr;
+            int size = projectileList.size();
+            for (int i = size - 1; i >= 0; i--){
+                delete projectileList[i];
+                projectileList.pop_back();
             }
-            else
-                addExperience(expForDamage);
+                
 
-            checkAndLevelUp(); 
+            addExperience(expForKill);
         }
+        else
+            addExperience(expForDamage);
 
+        checkAndLevelUp(); 
     }
-    //cout << projectileList.size() << endl;
 }
 
 void Tower::moveAllProjectiles(){
