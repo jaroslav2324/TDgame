@@ -45,8 +45,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/main.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/main.cpp.o.d"
-  "CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o"
-  "CMakeFiles/TowerDefence.dir/src/projectiles/BasicProjectile.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o"

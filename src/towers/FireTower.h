@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../abstractClasses/Tower.h"
+#include "../projectiles/FireballProjectile.h"
 
 class FireTower: public Tower{
     public:

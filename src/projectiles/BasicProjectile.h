@@ -11,6 +11,4 @@ class BasicProjectile: public Projectile{
 
         this->projectileTextureType = TexturesEnumeration::BASIC_PROJECTILE_TEXTURE;
     }
-
-    private:
 };
