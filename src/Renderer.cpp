@@ -70,6 +70,11 @@ void Renderer::renderFilledRect(const SDL_Rect* rect, SDL_Color& color){
     SDL_RenderFillRect(renderer, rect);
 }
 
+void Renderer::renderRect(const SDL_Rect* rect, SDL_Color& color){
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+    SDL_RenderDrawRect(renderer, rect);
+}
+
 void Renderer::renderLine(Coords& point1, Coords& point2, SDL_Color& color){
     SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
     SDL_RenderDrawLine(renderer, point1.x, point1.y, point2.x, point2.y);

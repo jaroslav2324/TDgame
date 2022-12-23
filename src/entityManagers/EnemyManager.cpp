@@ -161,9 +161,10 @@ void EnemyManager::renderAllEnemies(Renderer* renderer){
     for (auto enemyPtr: enemyList)
         enemyPtr->render(renderer);
 
+    //TODO refactor
     // render countdown before waves 
     if (!startedSpawning){
-        SDL_Rect rect = {100, 100, 150, 100};
+        SDL_Rect rect = {100, 100, 150, 75};
         SDL_Color color = {255, 255, 255, 255};
         renderer->renderText("Start wave!", &rect, color);
     }
@@ -176,12 +177,12 @@ void EnemyManager::renderAllEnemies(Renderer* renderer){
 
             string strUntilNextWave = std::to_string(untilNextWave);
             string screenText = "Before next wave " + strUntilNextWave + "s";
-            SDL_Rect rect = {100, 100, 300, 100};
+            SDL_Rect rect = {100, 100, 400, 75};
             SDL_Color color = {255, 255, 255, 255};
             renderer->renderText(screenText, &rect, color);
         }
-        else if (enemyInWaveSpawnTimer != nullptr){
-            SDL_Rect rect = {100, 100, 150, 100};
+        else if (enemyInWaveSpawnTimer != nullptr && listOfSpawningWaves.size() != 0){
+            SDL_Rect rect = {100, 100, 200, 75};
             SDL_Color color = {255, 255, 255, 255};
             renderer->renderText("Wave is here!", &rect, color);
         }

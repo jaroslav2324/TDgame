@@ -64,7 +64,7 @@ list<Wave> getListWaves1(){
     
     list<Wave> listOfWaves;
 
-    listOfWaves.push_back(getBasicWave(5, 1500, 15000));
+    listOfWaves.push_back(getBasicWave(5, 1500, 5000));
     listOfWaves.push_back(getOrcWave(5, 1500, 8000));
     listOfWaves.push_back(getBasicOrcWave(8, 1500, 10000));
     listOfWaves.push_back(getBasicWave(12, 1000, 12000));

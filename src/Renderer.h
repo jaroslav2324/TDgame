@@ -25,6 +25,7 @@ class Renderer{
 
     void renderPresent();
     void renderTexture(TexturesEnumeration textureNum, const SDL_Rect* textureRect);
+    void renderRect(const SDL_Rect* rect, SDL_Color& color);
     void renderFilledRect(const SDL_Rect* rect, SDL_Color& color);
     void renderLine(Coords& point1, Coords& point2, SDL_Color& color);
     void renderCircle(Coords& center, int radius, SDL_Color& color, int borderWidth = 1);

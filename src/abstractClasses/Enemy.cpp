@@ -174,6 +174,41 @@ void Enemy::render(Renderer* renderer){
     int y = currentCoords.y - ENEMY_SPRITE_SIZE / 2;
     SDL_Rect enemyRect = {x, y, ENEMY_SPRITE_SIZE, ENEMY_SPRITE_SIZE};
     renderer->renderTexture(enemyTextureType, &enemyRect);
+    renderHitPointsLine(renderer);
+}
+
+//TODO rename
+void Enemy::renderHitPointsLine(Renderer* renderer){
+    
+    SDL_Color whiteColor = {255, 255, 255, 255};
+    SDL_Color borderColor = {150, 150, 150, 255};
+    SDL_Color color;
+
+    if (hitPoints > 0.66 * maxHitPoints)
+        color = {0, 255, 0, 255};
+    else if (hitPoints > 0.33 * maxHitPoints)
+        color = {255, 255, 0, 255};
+    else
+        color = {255, 0, 0, 255};
+
+    //render border
+    int x = currentCoords.x - ENEMY_SPRITE_SIZE / 2;
+    int y = currentCoords.y - ENEMY_SPRITE_SIZE / 2 + 0.8 * ENEMY_SPRITE_SIZE;
+    SDL_Rect borderRect = {x, y, ENEMY_SPRITE_SIZE,   (int)(0.2 * ENEMY_SPRITE_SIZE)};
+    renderer->renderRect(&borderRect, borderColor);
+    
+    // fill with white color
+    x = currentCoords.x - ENEMY_SPRITE_SIZE / 2 + 1;
+    y = currentCoords.y - ENEMY_SPRITE_SIZE / 2 +       0.8 * ENEMY_SPRITE_SIZE + 1;
+    SDL_Rect whiteRect = {x, y, ENEMY_SPRITE_SIZE - 2, (int)(0.2 * ENEMY_SPRITE_SIZE - 2)};
+    renderer->renderFilledRect(&whiteRect, whiteColor);
+
+    // render hitpoints
+    x = currentCoords.x - ENEMY_SPRITE_SIZE / 2 + 1;
+    y = currentCoords.y - ENEMY_SPRITE_SIZE / 2 +       0.8 * ENEMY_SPRITE_SIZE + 1;
+    int width = (ENEMY_SPRITE_SIZE - 2) * ((double)hitPoints / maxHitPoints);
+    SDL_Rect rect = {x, y, width, (int)(0.2 * ENEMY_SPRITE_SIZE - 2)};
+    renderer->renderFilledRect(&rect, color);
 }
 
 int Enemy::getNumNextWaypoint(){
