@@ -81,8 +81,6 @@ MenuOptionsCode GameLevel::makeFrameTurn(){
         //TODO end gameLevel
     //}
 
-    MenuOptionsCode code = NO_CHANGES;
-
     enemyManager->spawnEnemiesIfStarted();
     enemyManager->allEnemiesMove();
     //cout << base->getHitPoits() << endl;
@@ -90,11 +88,17 @@ MenuOptionsCode GameLevel::makeFrameTurn(){
     towerManager->allTowersAttack();
     enemyManager->findAndDeleteKilledEnemies();
 
-    return code;
+    returntoAppCode = interface->handleCursorInteraction();
+
+    return returntoAppCode;
 }
 
 void GameLevel::saveMouseClickCoords(Coords coords){
     interface->saveMouseClickCoords(coords);
+}
+
+void GameLevel::setReturnToAppCode(MenuOptionsCode code){
+    returntoAppCode = code; 
 }
 
 void GameLevel::saveToBinaryFile(ostream& outpustStream){

@@ -182,6 +182,11 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o: ../src/Application.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /usr/local/include/SDL2/SDL.h \
   /usr/local/include/SDL2/SDL_main.h \
   /usr/local/include/SDL2/SDL_stdinc.h \
@@ -369,12 +374,8 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o: ../src/Application.cpp \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
   ../src/Coords.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   ../src/TexturesEnum.h \
+  ../src/LevelsEnum.h \
   ../src/game/GameLevel.h \
   ../src/Timers.h \
   ../src/entityManagers/EnemyManager.h \
@@ -445,8 +446,8 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o: ../src/Application.cpp \
   /usr/include/c++/11/pstl/glue_numeric_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
   ../src/abstractClasses/Interface.h \
-  ../src/UI/Button.h \
   ../src/UI/MenuOptionsCodes.h \
+  ../src/UI/Button.h \
   ../src/UI/MainMenu.h
 
 CMakeFiles/TowerDefence.dir/src/Coords.cpp.o: ../src/Coords.cpp \
@@ -1973,6 +1974,7 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: ../src/UI/BasicInterfac
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/TexturesEnum.h \
+  ../src/UI/MenuOptionsCodes.h \
   ../src/entityManagers/TowerManager.h \
   ../src/towers/TowerTypes.h \
   ../src/towers/BasicTower.h \
@@ -2017,8 +2019,7 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: ../src/UI/BasicInterfac
   ../src/projectiles/IceballProjectile.h \
   ../src/towers/FireTower.h \
   ../src/projectiles/FireballProjectile.h \
-  ../src/UI/Button.h \
-  ../src/UI/MenuOptionsCodes.h
+  ../src/UI/Button.h
 
 CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o: ../src/UI/Button.cpp \
   /usr/include/stdc-predef.h \
@@ -3556,7 +3557,8 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
-  ../src/TexturesEnum.h
+  ../src/TexturesEnum.h \
+  ../src/UI/MenuOptionsCodes.h
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o: ../src/abstractClasses/Projectile.cpp \
   /usr/include/stdc-predef.h \
@@ -6608,8 +6610,8 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   /usr/include/c++/11/pstl/glue_numeric_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
   ../src/abstractClasses/Interface.h \
-  ../src/UI/Button.h \
-  ../src/UI/MenuOptionsCodes.h
+  ../src/UI/MenuOptionsCodes.h \
+  ../src/UI/Button.h
 
 CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o: ../src/game/Grid.cpp \
   /usr/include/stdc-predef.h \
@@ -8278,6 +8280,11 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
   ../src/Application.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/Renderer.h \
@@ -8295,12 +8302,8 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
   ../src/Coords.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   ../src/TexturesEnum.h \
+  ../src/LevelsEnum.h \
   ../src/game/GameLevel.h \
   ../src/Timers.h \
   ../src/entityManagers/EnemyManager.h \
@@ -8371,8 +8374,8 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/pstl/glue_numeric_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
   ../src/abstractClasses/Interface.h \
-  ../src/UI/Button.h \
   ../src/UI/MenuOptionsCodes.h \
+  ../src/UI/Button.h \
   ../src/UI/MainMenu.h
 
 CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: ../src/towers/BasicTower.cpp \
@@ -9771,12 +9774,6 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 
 ../src/TexturesEnum.h:
 
-/usr/include/c++/11/bits/fstream.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
-
 ../src/Coords.h:
 
 /usr/include/c++/11/bits/stl_multimap.h:
@@ -9971,6 +9968,14 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/waitpkgintrin.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/tsxldtrkintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/tbmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/sgxintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/serializeintrin.h:
+
 /usr/include/c++/11/bits/stl_construct.h:
 
 /usr/include/c++/11/tr1/exp_integral.tcc:
@@ -10100,6 +10105,8 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 ../src/entityManagers/EnemyManager.cpp:
 
 /usr/local/include/SDL2/SDL_stdinc.h:
+
+../src/LevelsEnum.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512bwintrin.h:
 
@@ -10415,8 +10422,6 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 
 /usr/include/c++/11/bits/std_abs.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/sgxintrin.h:
-
 /usr/include/c++/11/cstdio:
 
 /usr/include/stdio.h:
@@ -10521,6 +10526,12 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 
 /usr/include/c++/11/bits/istream.tcc:
 
+/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
+
+/usr/include/c++/11/bits/fstream.tcc:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /usr/local/include/SDL2/SDL_endian.h:
@@ -10601,6 +10612,10 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 
 /usr/include/c++/11/tr1/legendre_function.tcc:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/x86gprintrin.h:
+
+/usr/include/c++/11/tr1/riemann_zeta.tcc:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
 
 /usr/include/c++/11/bits/basic_string.h:
@@ -10623,10 +10638,6 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 
 /usr/local/include/SDL2/SDL_clipboard.h:
 
-/usr/include/c++/11/tr1/riemann_zeta.tcc:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/x86gprintrin.h:
-
 /usr/include/SDL2/SDL_platform.h:
 
 /usr/include/c++/11/random:
@@ -10634,8 +10645,6 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 ../src/approximateComparison.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/cldemoteintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/tsxldtrkintrin.h:
 
 /usr/include/c++/11/string:
 
@@ -10660,7 +10669,3 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 /usr/lib/gcc/x86_64-linux-gnu/11/include/popcntintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/rtmintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/serializeintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/tbmintrin.h:

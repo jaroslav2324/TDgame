@@ -22,6 +22,8 @@ class GameLevel{
     void renderAll(Renderer* renderer);
     void saveMouseClickCoords(Coords coords);
 
+    void setReturnToAppCode(MenuOptionsCode code);
+
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     void saveToBinaryFile(ostream& outpustStream);
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
@@ -43,4 +45,6 @@ class GameLevel{
     Portal* portal = nullptr;
 
     Grid* grid = nullptr;
+
+    MenuOptionsCode returntoAppCode = NO_CHANGES;
 };

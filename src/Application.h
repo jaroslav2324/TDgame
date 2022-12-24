@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <fstream>
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
@@ -8,6 +9,7 @@
 
 #include "settings.h"
 #include "Renderer.h"
+#include "LevelsEnum.h"
 #include "game/GameLevel.h"
 #include "UI/MainMenu.h"
 #include "UI/MenuOptionsCodes.h"

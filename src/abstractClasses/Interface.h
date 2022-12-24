@@ -2,6 +2,7 @@
 
 #include "../Coords.h"
 #include "../Renderer.h"
+#include "../UI/MenuOptionsCodes.h"
 
 using std::queue;
 
@@ -23,5 +24,5 @@ class Interface{
     queue<Coords> savedMouseClicks;
 
     virtual void handleHoveringOverButtons() = 0;
-    virtual void handlePressingOnButtons() = 0;
+    virtual MenuOptionsCode handlePressingOnButtons() = 0;
 };

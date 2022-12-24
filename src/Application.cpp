@@ -89,12 +89,42 @@ void Application::loop(){
                 switch (code){
 
                 case START_GAME:
+                {
                     mainMenuOn = false;
+
+                    string levelsFolderPath = "../data/levels/";
+                    string levelPath;
+
+                    switch (numChosenLevel){
+                    case FIRST_LEVEL:
+                        levelPath = levelsFolderPath + "level1.bin";
+                        break;
+                    
+                    default:
+                        if (DEBUG_CONSOLE_OUTPUT_ON)
+                            cout << "There is no level with such number" << endl;
+                        levelPath = levelsFolderPath + "level1.bin";
+                        break;
+                    }
+
+                    std::ifstream levelFile;
+                    levelFile.open(levelPath, std::ios::binary);
+                    if (!levelFile){
+                        //TODO handle
+                        if (DEBUG_CONSOLE_OUTPUT_ON)
+                            cout << "file with path " << levelPath << " does not exist" << endl;
+                    }
+
+                    gameLevel->loadFromBinaryFile(levelFile);
+
                     break;
+                }
 
                 case QUIT_TO_DESKTOP:
+                {
                     quit = true;
                     break;
+                }
 
                 default:
                     break;
@@ -106,7 +136,17 @@ void Application::loop(){
                 code  = gameLevel->makeFrameTurn();
                 gameLevel->renderAll(renderer);
                 
-                // switch (code)
+                switch (code)
+                {
+                case QUIT_TO_MAIN_MENU:
+                    mainMenuOn = true;
+                    //TODO delete level
+                    
+                    break;
+                
+                default:
+                    break;
+                }
                 
             }
 

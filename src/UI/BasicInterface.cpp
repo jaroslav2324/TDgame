@@ -6,6 +6,11 @@ BasicInterface::BasicInterface(TowerManager* towerManager, EnemyManager* enemyMa
     this->enemyManager = enemyManager;
 
     //TODO change button textures
+    exitToMainMenuBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
+                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
+                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
+                                         Coords(50, 25));
+
     buildBasicTowerBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
                                          TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
                                          TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
@@ -50,6 +55,16 @@ BasicInterface::~BasicInterface(){
         delete spawnEnemyBtn;
         spawnEnemyBtn = nullptr;
     }
+
+    if (exitToMainMenuBtn != nullptr){
+        delete exitToMainMenuBtn;
+        exitToMainMenuBtn = nullptr;
+    }
+}
+
+MenuOptionsCode BasicInterface::handleCursorInteraction(){
+    handleHoveringOverButtons();
+    return handlePressingOnButtons();
 }
 
 void BasicInterface::render(Renderer* renderer){
@@ -70,10 +85,9 @@ void BasicInterface::render(Renderer* renderer){
     rect = {SCREEN_WIDTH - 10, 0, 10, SCREEN_HEIGHT};
     renderer->renderFilledRect(rectPtr, color);
 
-    handleHoveringOverButtons();
-    handlePressingOnButtons();
-
     // then render buttons
+    //TODO use vector
+    exitToMainMenuBtn->render(renderer);
     buildBasicTowerBtn->render(renderer);
     buildIceTowerBtn->render(renderer);
     buildFireTowerBtn->render(renderer);
@@ -86,6 +100,12 @@ void BasicInterface::handleHoveringOverButtons(){
     int x, y;
 
     SDL_GetMouseState(&x, &y);
+
+    //TODO use vector
+    if (exitToMainMenuBtn->isPointInRect(Coords(x, y)))
+        exitToMainMenuBtn->setModeHoveredOver();
+    else
+        exitToMainMenuBtn->setModeNoCursorInteraction();
 
     if (buildBasicTowerBtn->isPointInRect(Coords(x, y)))
         buildBasicTowerBtn->setModeHoveredOver();
@@ -108,8 +128,9 @@ void BasicInterface::handleHoveringOverButtons(){
         spawnEnemyBtn->setModeNoCursorInteraction();
 }
 
-void BasicInterface::handlePressingOnButtons(){
+MenuOptionsCode BasicInterface::handlePressingOnButtons(){
     
+    MenuOptionsCode code = NO_CHANGES;
     // check pressing on buttons
     while(!savedMouseClicks.empty()){
         Coords mouseCoords = savedMouseClicks.front();
@@ -149,6 +170,10 @@ void BasicInterface::handlePressingOnButtons(){
 
             enemyManager->startSpawning();
         }
+        else if (exitToMainMenuBtn->isPointInRect(mouseCoords)){
+            exitToMainMenuBtn->setModePressedOn();
+            code = QUIT_TO_MAIN_MENU;
+        }
 
         else{
             if (towerManager->isBuildModeActive()){
@@ -163,6 +188,8 @@ void BasicInterface::handlePressingOnButtons(){
             }
         }
     }
+
+    return code;
 }
 
 // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
@@ -176,6 +203,7 @@ void BasicInterface::saveToBinaryFile(ostream& outpustStream){
     
     //TODO add something?
     // save buttons
+    exitToMainMenuBtn->saveToBinaryFile(outpustStream);
     buildBasicTowerBtn->saveToBinaryFile(outpustStream);
     buildIceTowerBtn->saveToBinaryFile(outpustStream);
     buildFireTowerBtn->saveToBinaryFile(outpustStream);
@@ -193,6 +221,7 @@ void BasicInterface::loadFromBinaryFile(istream& inputStream){
 
     //TODO add something?
     // load buttons
+    exitToMainMenuBtn->loadFromBinaryFile(inputStream);
     buildBasicTowerBtn->loadFromBinaryFile(inputStream);
     buildIceTowerBtn->loadFromBinaryFile(inputStream);
     buildFireTowerBtn->loadFromBinaryFile(inputStream);

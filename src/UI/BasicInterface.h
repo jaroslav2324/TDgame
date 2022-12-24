@@ -21,8 +21,9 @@ class BasicInterface:  public Interface{
     public:
     BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager);
     ~BasicInterface();
+
+    MenuOptionsCode handleCursorInteraction();
     void render(Renderer* renderer);
-    //void saveMouseClickCoords(Coords coords);
 
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     void saveToBinaryFile(ostream& outpustStream);
@@ -32,6 +33,7 @@ class BasicInterface:  public Interface{
     private:   
     
     TowerTypes buildTowerType = BASIC_TOWER;
+    Button* exitToMainMenuBtn = nullptr;
     Button* buildBasicTowerBtn = nullptr;
     Button* buildIceTowerBtn = nullptr;
     Button* buildFireTowerBtn = nullptr;
@@ -43,5 +45,5 @@ class BasicInterface:  public Interface{
     //queue<Coords> savedMouseClicks;
 
     void handleHoveringOverButtons();
-    void handlePressingOnButtons();
+    MenuOptionsCode handlePressingOnButtons();
 };
