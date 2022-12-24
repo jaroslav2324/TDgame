@@ -30,4 +30,6 @@ class Application{
     GameLevel* gameLevel = nullptr;
 
     PeriodicTimer* fpsTimer =nullptr;
+
+    int numChosenLevel = 1;
 };

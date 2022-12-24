@@ -6,26 +6,26 @@ Renderer::Renderer(){
     this->renderer = renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     // fonts
-    freeSans = TTF_OpenFont("../fonts/freesans/FreeSans/FreeSans.ttf", 24);
+    freeSans = TTF_OpenFont("../data/fonts/freesans/FreeSans/FreeSans.ttf", 24);
 
     // fill paths of textures
     map<TexturesEnumeration, const char*> texturesPaths;
 
-    texturesPaths[TexturesEnumeration::BASIC_ENEMY_TEXTURE] = "../Assets/enemy.png";
-    texturesPaths[TexturesEnumeration::ORC_ENEMY_TEXTURE] = "../Assets/orc.jpeg";
-    texturesPaths[TexturesEnumeration::BASIC_TOWER_TEXTURE] = "../Assets/towers/towerSD1.jpeg";
-    texturesPaths[TexturesEnumeration::ICE_TOWER_TEXTURE] = "../Assets/towers/towerSD7.jpeg";
-    texturesPaths[TexturesEnumeration::FIRE_TOWER_TEXTURE] = "../Assets/towers/towerSD11.jpeg";
-    texturesPaths[TexturesEnumeration::BASIC_PROJECTILE_TEXTURE] = "../Assets/projectile.jpg";
-    texturesPaths[TexturesEnumeration::ICEBALL_PROJECTILE_TEXTURE] = "../Assets/iceballs/iceballSD4.jpeg";
-    texturesPaths[TexturesEnumeration::FIREBALL_PROJECTILE_TEXTURE] = "../Assets/fireballs/fireballSD1.jpeg";
-    texturesPaths[TexturesEnumeration::BASIC_GRID_TILE_TEXTURE] = "../Assets/groundTiles/groundTileSD5.jpeg";
-    texturesPaths[TexturesEnumeration::PORTAL_TEXTURE] = "../Assets/portal.jpg";
-    texturesPaths[TexturesEnumeration::BASE_TEXTURE] = "../Assets/base.jpg";
-    texturesPaths[TexturesEnumeration::TEST_TEXTURE] = "../Assets/test.jpeg";
-    texturesPaths[TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE] = "../Assets/white_square.jpg";
-    texturesPaths[TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE] = "../Assets/dark_grey_square.png";
-    texturesPaths[TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE] = "../Assets/light_grey_square.jpg";
+    texturesPaths[TexturesEnumeration::BASIC_ENEMY_TEXTURE] = "../data/assets/enemy.png";
+    texturesPaths[TexturesEnumeration::ORC_ENEMY_TEXTURE] = "../data/assets/orc.jpeg";
+    texturesPaths[TexturesEnumeration::BASIC_TOWER_TEXTURE] = "../data/assets/towers/towerSD1.jpeg";
+    texturesPaths[TexturesEnumeration::ICE_TOWER_TEXTURE] = "../data/assets/towers/towerSD7.jpeg";
+    texturesPaths[TexturesEnumeration::FIRE_TOWER_TEXTURE] = "../data/assets/towers/towerSD11.jpeg";
+    texturesPaths[TexturesEnumeration::BASIC_PROJECTILE_TEXTURE] = "..data/assets/projectile.jpg";
+    texturesPaths[TexturesEnumeration::ICEBALL_PROJECTILE_TEXTURE] = "../data/assets/iceballs/iceballSD4.jpeg";
+    texturesPaths[TexturesEnumeration::FIREBALL_PROJECTILE_TEXTURE] = "../data/assets/fireballs/fireballSD1.jpeg";
+    texturesPaths[TexturesEnumeration::BASIC_GRID_TILE_TEXTURE] = "../data/assets/groundTiles/groundTileSD5.jpeg";
+    texturesPaths[TexturesEnumeration::PORTAL_TEXTURE] = "../data/assets/portal.jpg";
+    texturesPaths[TexturesEnumeration::BASE_TEXTURE] = "../data/assets/base.jpg";
+    texturesPaths[TexturesEnumeration::TEST_TEXTURE] = "../data/assets/test.jpeg";
+    texturesPaths[TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE] = "../data/assets/white_square.jpg";
+    texturesPaths[TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE] = "../data/assets/dark_grey_square.png";
+    texturesPaths[TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE] = "../data/assets/light_grey_square.jpg";
     // add new paths here
 
 
