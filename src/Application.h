@@ -31,7 +31,7 @@ class Application{
     MainMenu* mainMenu = nullptr;
     GameLevel* gameLevel = nullptr;
 
-    PeriodicTimer* fpsTimer =nullptr;
+    PeriodicTimer* fpsTimer = nullptr;
 
-    int numChosenLevel = 1;
+    LevelsEnum numChosenLevel = FIRST_LEVEL;
 };

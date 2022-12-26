@@ -5,7 +5,7 @@ Application::Application(){
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
         cout << "SDL error" << endl;
 
-    if (IMG_Init(IMG_INIT_JPG) == 0)
+    if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) == 0)
         cout << "SDL_image error" << endl;
 
     if (TTF_Init() != 0)
@@ -106,6 +106,19 @@ void Application::loop(){
                         break;
                     }
 
+                    gameLevel = new GameLevel();
+
+                    std::ofstream levelFileOut;
+                    levelFileOut.open(levelPath, std::ios::binary);
+
+                    //TODO move
+                    gameLevel->saveToBinaryFile(levelFileOut);
+
+                    if (DEBUG_CONSOLE_OUTPUT_ON && SAVING_LEVELS_ON)
+                        cout << "Level saved with path " << levelPath << endl; 
+
+                    levelFileOut.close();
+
                     std::ifstream levelFile;
                     levelFile.open(levelPath, std::ios::binary);
                     if (!levelFile){
@@ -114,7 +127,6 @@ void Application::loop(){
                             cout << "file with path " << levelPath << " does not exist" << endl;
                     }
 
-                    gameLevel = new GameLevel();
                     gameLevel->loadFromBinaryFile(levelFile);
 
                     break;
