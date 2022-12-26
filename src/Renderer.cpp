@@ -16,7 +16,7 @@ Renderer::Renderer(){
     texturesPaths[TexturesEnumeration::BASIC_TOWER_TEXTURE] = "../data/assets/towers/towerSD1.jpeg";
     texturesPaths[TexturesEnumeration::ICE_TOWER_TEXTURE] = "../data/assets/towers/towerSD7.jpeg";
     texturesPaths[TexturesEnumeration::FIRE_TOWER_TEXTURE] = "../data/assets/towers/towerSD11.jpeg";
-    texturesPaths[TexturesEnumeration::BASIC_PROJECTILE_TEXTURE] = "..data/assets/projectile.jpg";
+    texturesPaths[TexturesEnumeration::BASIC_PROJECTILE_TEXTURE] = "../data/assets/projectile.jpg";
     texturesPaths[TexturesEnumeration::ICEBALL_PROJECTILE_TEXTURE] = "../data/assets/iceballs/iceballSD4.jpeg";
     texturesPaths[TexturesEnumeration::FIREBALL_PROJECTILE_TEXTURE] = "../data/assets/fireballs/fireballSD1.jpeg";
     texturesPaths[TexturesEnumeration::BASIC_GRID_TILE_TEXTURE] = "../data/assets/groundTiles/groundTileSD5.jpeg";

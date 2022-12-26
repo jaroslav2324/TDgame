@@ -15,7 +15,6 @@ Application::Application(){
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
     mainMenu = new MainMenu(fpsTimer);
-    gameLevel = new GameLevel();
 }
 
 Application::~Application(){
@@ -115,6 +114,7 @@ void Application::loop(){
                             cout << "file with path " << levelPath << " does not exist" << endl;
                     }
 
+                    gameLevel = new GameLevel();
                     gameLevel->loadFromBinaryFile(levelFile);
 
                     break;
@@ -140,7 +140,10 @@ void Application::loop(){
                 {
                 case QUIT_TO_MAIN_MENU:
                     mainMenuOn = true;
-                    //TODO delete level
+                    if (gameLevel != nullptr){
+                        delete gameLevel;
+                        gameLevel = nullptr;
+                    }
                     
                     break;
                 
