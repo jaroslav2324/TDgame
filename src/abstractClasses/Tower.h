@@ -1,3 +1,4 @@
+
 #pragma once
 
 #include <string>
@@ -28,14 +29,12 @@ public:
     float getRadius();
     Coords getCoords();
 
-    void attack();
-    void moveAllProjectiles();
+    virtual void attack() = 0;
 
     bool isDestroyed();
     void setDestroyed();
 
-    void render(Renderer* renderer);
-    void renderAllProjectiles(Renderer* renderer);
+    virtual void render(Renderer* renderer) = 0;
 
     float getExpForNextLvl(int currentLevel);
 
@@ -43,15 +42,12 @@ public:
     void setCoords(Coords coords);
 
     bool isPointInRect(Coords point);
-
     void setModeNoCursorInteraction();
     void setModePressedOn();
     void setModeHoveredOver();
 
 protected:
     float damage = 0;
-    double freezeMultyplyer = 0;
-    double freezeTime = 0;
     float radius = 0;
 
     int level = 0;
@@ -81,8 +77,6 @@ protected:
     TexturesEnumeration towerTextureType;
 
     std::vector<float> listExpForLvls;
-
-    std::vector<Projectile*> projectileList;
 
     virtual void setAttackTimer() = 0;
 

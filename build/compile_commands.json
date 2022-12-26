@@ -36,8 +36,8 @@
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.cpp",
-  "file": "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.cpp"
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/ProjectileTower.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/ProjectileTower.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
@@ -128,6 +128,11 @@
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
   "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Interface.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Interface.cpp"
+},
+{
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",

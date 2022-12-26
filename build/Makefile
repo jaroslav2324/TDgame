@@ -458,6 +458,30 @@ src/abstractClasses/Projectile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.s
 .PHONY : src/abstractClasses/Projectile.cpp.s
 
+src/abstractClasses/ProjectileTower.o: src/abstractClasses/ProjectileTower.cpp.o
+.PHONY : src/abstractClasses/ProjectileTower.o
+
+# target to build an object file
+src/abstractClasses/ProjectileTower.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.o
+.PHONY : src/abstractClasses/ProjectileTower.cpp.o
+
+src/abstractClasses/ProjectileTower.i: src/abstractClasses/ProjectileTower.cpp.i
+.PHONY : src/abstractClasses/ProjectileTower.i
+
+# target to preprocess a source file
+src/abstractClasses/ProjectileTower.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.i
+.PHONY : src/abstractClasses/ProjectileTower.cpp.i
+
+src/abstractClasses/ProjectileTower.s: src/abstractClasses/ProjectileTower.cpp.s
+.PHONY : src/abstractClasses/ProjectileTower.s
+
+# target to generate assembly for a file
+src/abstractClasses/ProjectileTower.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.s
+.PHONY : src/abstractClasses/ProjectileTower.cpp.s
+
 src/abstractClasses/Tower.o: src/abstractClasses/Tower.cpp.o
 .PHONY : src/abstractClasses/Tower.o
 
@@ -865,6 +889,9 @@ help:
 	@echo "... src/abstractClasses/Projectile.o"
 	@echo "... src/abstractClasses/Projectile.i"
 	@echo "... src/abstractClasses/Projectile.s"
+	@echo "... src/abstractClasses/ProjectileTower.o"
+	@echo "... src/abstractClasses/ProjectileTower.i"
+	@echo "... src/abstractClasses/ProjectileTower.s"
 	@echo "... src/abstractClasses/Tower.o"
 	@echo "... src/abstractClasses/Tower.i"
 	@echo "... src/abstractClasses/Tower.s"

@@ -9,9 +9,9 @@ project(TowerDefence)
  add_subdirectory( libs/SDL )
 
 add_executable(${CMAKE_PROJECT_NAME} src/game/Base.cpp src/main.cpp src/game/GameLevel.cpp src/Timers.cpp src/game/EnemiesWay.cpp  src/approximateComparison.cpp 
-src/abstractClasses/Enemy.cpp src/abstractClasses/Tower.cpp src/towers/BasicTower.cpp src/game/Grid.cpp src/entityManagers/EnemyManager.cpp src/abstractClasses/Projectile.cpp src/game/GridTile.cpp src/entityManagers/TowerManager.cpp
+src/abstractClasses/Enemy.cpp src/abstractClasses/ProjectileTower.cpp src/towers/BasicTower.cpp src/game/Grid.cpp src/entityManagers/EnemyManager.cpp src/abstractClasses/Projectile.cpp src/game/GridTile.cpp src/entityManagers/TowerManager.cpp
 src/UI/BasicInterface.cpp src/UI/Button.cpp src/game/Portal.cpp src/Coords.cpp src/game/Wave.cpp src/UI/MainMenu.cpp src/Application.cpp 
- src/towers/IceTower.cpp src/towers/FireTower.cpp src/Renderer.cpp src/TexturesEnum.cpp src/abstractClasses/Interface.cpp
+ src/towers/IceTower.cpp src/towers/FireTower.cpp src/Renderer.cpp src/TexturesEnum.cpp src/abstractClasses/Interface.cpp src/abstractClasses/Tower.cpp
 )
 
 #target_include_directories(TowerDefence ${SDL2_INCLUDE_DIR})

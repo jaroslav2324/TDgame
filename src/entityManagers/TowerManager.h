@@ -14,8 +14,8 @@ class TowerManager{
     ~TowerManager();
 
     void buildTower(TowerTypes towerType, Coords coords);
-    void addBuiltTower(Tower*);
-    void destroyTower(Tower*);
+    void addBuiltTower(ProjectileTower*);
+    void destroyTower(ProjectileTower*);
 
     void findAndDeleteDestroyedTowers();
 
@@ -32,17 +32,17 @@ class TowerManager{
     bool isTowerExistsInTile(Coords coords);
 
     private:
-    std::vector<Tower*> towerList;
+    std::vector<ProjectileTower*> towerList;
     EnemyManager* enemyManager = nullptr;
 
     bool buildModeOn = false;
     // tower sprite in build mode
-    Tower* buildingTower = nullptr;
+    ProjectileTower* buildingTower = nullptr;
     // render on grid
     void renderBuildingTower(Renderer* renderer);
 
     // adds tower to towers list
     void createAndAddTower(TowerTypes towerType, Coords coords);
-    Tower* createTower(TowerTypes towerType, Coords coords);
+    ProjectileTower* createTower(TowerTypes towerType, Coords coords);
 
 };

@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../abstractClasses/Tower.h"
+#include "../abstractClasses/ProjectileTower.h"
 
-class BasicTower: public Tower{
+class BasicTower: public ProjectileTower{
     public:
-    BasicTower(EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){
+    BasicTower(EnemyManager* enemyManager, Coords coords): ProjectileTower(enemyManager, coords){
         attackSpeed = 750;
         radius = 200;
 
@@ -14,7 +14,7 @@ class BasicTower: public Tower{
 
     };
     BasicTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
-    Tower(enemyManager, damage, radius, attackSpeed, level, coords){
+    ProjectileTower(enemyManager, damage, radius, attackSpeed, level, coords){
         attackSpeed = 750;
         radius = 200;
 

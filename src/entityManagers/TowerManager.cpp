@@ -32,11 +32,11 @@ void TowerManager::buildTower(TowerTypes towerType, Coords mouseCoords){
 
 }
 
-void TowerManager::addBuiltTower(Tower* tower){
+void TowerManager::addBuiltTower(ProjectileTower* tower){
     towerList.push_back(tower);
 }
 
-void TowerManager::destroyTower(Tower* tower){
+void TowerManager::destroyTower(ProjectileTower* tower){
 
     /*offset to delete tower from vector*/ 
     int offset = 0;
@@ -158,7 +158,8 @@ bool TowerManager::isTowerExistsInTile(Coords coords)
 
 void TowerManager::createAndAddTower(TowerTypes towerType, Coords coords){
 
-    Tower* tower = nullptr;
+    //TODO change
+    ProjectileTower* tower = nullptr;
         //TODO add types of towers
     switch (towerType)
     {
@@ -179,9 +180,9 @@ void TowerManager::createAndAddTower(TowerTypes towerType, Coords coords){
     towerList.push_back(tower);
 }
 
-Tower* TowerManager::createTower(TowerTypes towerType, Coords coords){
+ProjectileTower* TowerManager::createTower(TowerTypes towerType, Coords coords){
 
-    Tower* tower = nullptr;
+    ProjectileTower* tower = nullptr;
         //TODO add types of towers
     switch (towerType)
     {
