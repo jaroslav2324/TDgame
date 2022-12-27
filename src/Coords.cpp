@@ -40,6 +40,26 @@ void Coords::loadFromBinaryFile(istream& inputStream){
     inputStream.read((char*)&y, sizeof(y));
 }
 
+Coords Coords::operator+(Coords& coords){
+    
+    Coords outCoords;
+
+    outCoords.x = x + coords.x;
+    outCoords.y = y + coords.y;
+
+    return outCoords;
+}
+
+Coords Coords::operator+(Vector& vec){
+    
+    Coords outCoords;
+
+    outCoords.x = x + vec.a;
+    outCoords.y = y + vec.b;
+
+    return outCoords;
+}
+
 Coords& Coords::operator()(float x, float y){
     
     this->x = x;

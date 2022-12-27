@@ -38,30 +38,8 @@ int EnemiesWay::getAmountWaypoints(){
 
 void EnemiesWay::render(Renderer* renderer, int lineWidth, SDL_Color color){
     
-    int x1, y1, x2, y2;
-    Coords point1, point2;
-
-    // TODO change rendering algorythm(check on diagonal lines)
-    for (int i = 0; i < amountWaypoints - 1; i++){
-
-        x1 = dictOfWaypoints[i].x - lineWidth / 2;
-        y1 = dictOfWaypoints[i].y - lineWidth / 2;
-        
-        x2 = dictOfWaypoints[i + 1].x - lineWidth / 2;
-        y2 = dictOfWaypoints[i + 1].y - lineWidth / 2;
-
-        if (x1 != x2){
-
-            for (int j = 0; j < lineWidth; j++, y1++, y2++)                
-                renderer->renderLine(point1(x1, y1), point2(x2, y2), color);
-        }
-        else{
-
-            for (int j = 0; j < lineWidth; j++, x1++, x2++)
-                renderer->renderLine(point1(x1, y1), point2(x2, y2), color);
-            
-        }
-    }     
+    for (int i = 0; i < amountWaypoints - 1; i++)
+        renderer->renderLine(dictOfWaypoints[i], dictOfWaypoints[i + 1], color, lineWidth);
 }
 
 void EnemiesWay::saveToBinaryFile(ostream& outpustStream){

@@ -5,6 +5,7 @@
 #include <math.h>
 
 #include "settings.h"
+#include "Vector.h"
 
 using std::istream;
 using std::ostream;
@@ -22,9 +23,14 @@ struct Coords{
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     void loadFromBinaryFile(istream& inputStream);
 
+    Coords operator+(Coords& coords);
+    Coords operator+(Vector& vec);
     Coords& operator()(float x, float y);
+
 };
 
 double distance(Coords& point1, Coords& point2);
 
 ostream& operator<<(ostream& os, const Coords& coords);
+
+typedef Coords Point;

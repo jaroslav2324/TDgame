@@ -10,6 +10,7 @@
 
 #include "settings.h"
 #include "Coords.h"
+#include "Line.h"
 #include "TexturesEnum.h"
 
 using std::map;
@@ -27,7 +28,7 @@ class Renderer{
     void renderTexture(TexturesEnumeration textureNum, const SDL_Rect* textureRect);
     void renderRect(const SDL_Rect* rect, SDL_Color& color);
     void renderFilledRect(const SDL_Rect* rect, SDL_Color& color);
-    void renderLine(Coords& point1, Coords& point2, SDL_Color& color);
+    void renderLine(Coords& point1, Coords& point2, SDL_Color& color, int width = 1);
     void renderCircle(Coords& center, int radius, SDL_Color& color, int borderWidth = 1);
     void renderText(const char* text, const SDL_Rect* rect, SDL_Color& color);
     void renderText(string& str, const SDL_Rect* rect, SDL_Color& color);

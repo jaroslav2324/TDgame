@@ -75,9 +75,51 @@ void Renderer::renderRect(const SDL_Rect* rect, SDL_Color& color){
     SDL_RenderDrawRect(renderer, rect);
 }
 
-void Renderer::renderLine(Coords& point1, Coords& point2, SDL_Color& color){
+void Renderer::renderLine(Coords& point1, Coords& point2, SDL_Color& color, int width){
     SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+
+    if (width == 1){
     SDL_RenderDrawLine(renderer, point1.x, point1.y, point2.x, point2.y);
+    return;
+    }
+
+    Line centralLine(point1, point2);
+    Line perpendicularLine = getPerpendicularLine(centralLine);
+
+    double startPointX;
+    double startPointY;
+    double endPointX;
+    double endPointY;
+
+    double diffX = abs(point2.x - point1.x);
+    double diffY = abs(point2.y - point1.y);
+
+    if (diffX < diffY){
+
+        for (int i = 0 ; i < width; i++){
+            startPointX = point1.x - width / 2 + i;
+            startPointY = perpendicularLine.findY(startPointX);
+
+            endPointX = startPointX + centralLine.guidingVector.a;
+            endPointY = startPointY + centralLine.guidingVector.b;
+
+            SDL_RenderDrawLine(renderer, startPointX, startPointY, endPointX, endPointY);
+        }
+    }
+    else{
+
+        for (int i = 0 ; i < width; i++){
+            startPointY = point1.y - width / 2 + i;
+            startPointX = perpendicularLine.findX(startPointY);
+
+            endPointX = startPointX + centralLine.guidingVector.a;
+            endPointY = startPointY + centralLine.guidingVector.b;
+
+            SDL_RenderDrawLine(renderer, startPointX, startPointY, endPointX, endPointY);
+        }
+    }
+
+
 }
 
 void Renderer::renderCircle(Coords& center, int radius, SDL_Color& color, int borderWidth){
