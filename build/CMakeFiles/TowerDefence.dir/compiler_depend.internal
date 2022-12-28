@@ -7747,7 +7747,6 @@ CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o
  /usr/local/include/SDL2/SDL_version.h
  /usr/local/include/SDL2/SDL_locale.h
  /usr/local/include/SDL2/SDL_misc.h
- /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/game/GridTile.h
  /usr/include/c++/11/string
  /usr/include/c++/11/bits/stringfwd.h
@@ -7846,6 +7845,7 @@ CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h
  /usr/include/c++/11/bits/fstream.tcc
  /usr/include/c++/11/iostream
+ /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/Renderer.h

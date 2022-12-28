@@ -22,6 +22,7 @@ struct Wave{
 
     int size();
 
+    //TODO  add countdown before each enemy
     list<EnemyTypes> listEnemiesTypes;
     double spawnPeriod;
     // in ms

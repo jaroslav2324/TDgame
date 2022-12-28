@@ -1,15 +1,19 @@
 
 #include "SDL2/SDL.h"
 
-#include "../settings.h"
 #include "GridTile.h"
+#include "../settings.h"
+#include "../Coords.h"
 #include "../Renderer.h"
 
 /*grid class for render tiles
 ONLY FOR RENDERING TILES*/
 class Grid{
     public:
-    Grid(int gridWidth = GAME_LEVEL_WIDTH, int gridHeight = GAME_LEVEL_HEIGHT);
+    //TODO add grid start and end position
+    Grid(Coords startCoords, Coords endCoords, int tileWidth = TILESIZE, int tileHeight = TILESIZE, 
+         int gridWidth = GAME_LEVEL_WIDTH, int gridHeight = GAME_LEVEL_HEIGHT);
+
     ~Grid();
     void renderGrid(Renderer* renderer);
 
@@ -21,6 +25,12 @@ class Grid{
     private:
     int gridWidth = 0;
     int gridHeight = 0;
+
+    int tileWidth;
+    int tileHeight;
+
+    Coords startCoords;
+    Coords endCoords;
     
     GridTile*** gridTilesField = nullptr;
 };

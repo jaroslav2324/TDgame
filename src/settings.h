@@ -11,8 +11,8 @@
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 900
 
-#define GAME_LEVEL_WIDTH 12 //amount of tiles in width on the game screen
-#define GAME_LEVEL_HEIGHT 9 //amount of tiles in height on the game screen
+#define GAME_LEVEL_WIDTH 11 //amount of tiles in width on the game screen
+#define GAME_LEVEL_HEIGHT 8 //amount of tiles in height on the game screen
 
 #define TILESIZE 100 //amount of pixels in grid tile side
 //TODO move to classes as constants?

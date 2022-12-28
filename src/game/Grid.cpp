@@ -1,16 +1,20 @@
 #include "Grid.h"
 
-Grid::Grid(int gridWidth, int gridHeight){
+Grid::Grid(Coords startCoords, Coords endCoords, int tileWidth, int tileHeight, int gridWidth, int gridHeight){
 
+    this->startCoords = startCoords;
+    this->endCoords = endCoords;
+    this->tileWidth = tileWidth;
+    this->tileHeight = tileHeight;
     this->gridWidth = gridWidth;
     this->gridHeight = gridHeight;
 
     gridTilesField = new GridTile**[gridHeight];
 
-    for (int i = 0, coordY = 0; i < gridHeight; i++, coordY += TILESIZE){
+    for (int i = 0, coordY = startCoords.y; i < gridHeight; i++, coordY += tileHeight){
         gridTilesField[i] = new GridTile*[gridWidth];
-        for (int j = 0, coordX = 0; j < gridWidth; j ++, coordX += TILESIZE){
-            auto gridCoords = Coords(coordX + TILESIZE / 2, coordY + TILESIZE / 2);
+        for (int j = 0, coordX = startCoords.x; j < gridWidth; j ++, coordX += tileWidth){
+            auto gridCoords = Coords(coordX + tileWidth / 2, coordY + tileHeight / 2);
             gridTilesField[i][j] = new GridTile(TexturesEnumeration::BASIC_GRID_TILE_TEXTURE, gridCoords);
         }
     }
@@ -23,10 +27,10 @@ Grid::~Grid(){
             delete gridTilesField[i][j];
             gridTilesField[i][j] = nullptr;
         }
-        delete gridTilesField[i];
+        delete[] gridTilesField[i];
         gridTilesField[i] = nullptr;
     }
-    delete gridTilesField;
+    delete[] gridTilesField;
     gridTilesField = nullptr;
 }
 
@@ -46,6 +50,7 @@ void Grid::saveToBinaryFile(ostream& outpustStream){
         return;
     
     // save grid width and height
+    //TODO add
     outpustStream.write((char*)&gridWidth, sizeof(gridWidth));
     outpustStream.write((char*)&gridHeight, sizeof(gridHeight));
 
@@ -64,6 +69,7 @@ void Grid::loadFromBinaryFile(istream& inputStream){
         return;
 
     // load grid width and height
+    //TODO add
     inputStream.read((char*)&gridWidth, sizeof(gridWidth));
     inputStream.read((char*)&gridHeight, sizeof(gridHeight));
 

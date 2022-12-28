@@ -16,7 +16,8 @@ GameLevel::GameLevel(){
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
 
-    grid = new Grid();
+    grid = new Grid(Coords(100, 100), Coords(SCREEN_WIDTH, SCREEN_HEIGHT), TILESIZE, TILESIZE, GAME_LEVEL_WIDTH, GAME_LEVEL_HEIGHT
+    );
 
     interface = new BasicInterface(towerManager, enemyManager);
 
