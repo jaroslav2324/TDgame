@@ -23,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o.d"
+  "CMakeFiles/TowerDefence.dir/src/abstractClasses/LaserTower.cpp.o"
+  "CMakeFiles/TowerDefence.dir/src/abstractClasses/LaserTower.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.o"

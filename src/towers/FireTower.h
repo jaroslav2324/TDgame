@@ -1,26 +1,31 @@
 #pragma once
 
-#include "../abstractClasses/ProjectileTower.h"
-#include "../projectiles/FireballProjectile.h"
+#include "../abstractClasses/LaserTower.h"
+//#include "../projectiles/FireballProjectile.h"
 
-class FireTower: public ProjectileTower{
+class FireTower: public LaserTower{
     public:
-    FireTower(EnemyManager* enemyManager, Coords coords): ProjectileTower(enemyManager, coords){
-        attackSpeed = 50;
-        radius = 100;
+    FireTower(EnemyManager* enemyManager, Coords coords): LaserTower(enemyManager, coords){
+        radius = 200;
+        damage = 1;
+        attackSpeed = 100;
 
         this->towerTextureType = TexturesEnumeration::FIRE_TOWER_TEXTURE;
+
+        laserColor = {255, 0, 0, 255};
 
         //setAttackTimer();
 
     };
     FireTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
-    ProjectileTower(enemyManager, damage, radius, attackSpeed, level, coords){
-        attackSpeed =   50;
-        radius = 100;
+    LaserTower(enemyManager, damage, radius, attackSpeed, level, coords){
+        radius = 200;
+        damage = 1;
+        attackSpeed = 100;
 
         this->towerTextureType = TexturesEnumeration::FIRE_TOWER_TEXTURE;
 
+        laserColor = {255, 0, 0, 255};
         //setAttackTimer();
 
     };
@@ -28,7 +33,7 @@ class FireTower: public ProjectileTower{
 
     private:
 
+    // TODO remove
     void setAttackTimer();
     void deleteAttackTimer();
-    Projectile* newProjectile();
 };

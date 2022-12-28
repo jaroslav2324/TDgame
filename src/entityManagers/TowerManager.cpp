@@ -32,11 +32,11 @@ void TowerManager::buildTower(TowerTypes towerType, Coords mouseCoords){
 
 }
 
-void TowerManager::addBuiltTower(ProjectileTower* tower){
+void TowerManager::addBuiltTower(Tower* tower){
     towerList.push_back(tower);
 }
 
-void TowerManager::destroyTower(ProjectileTower* tower){
+void TowerManager::destroyTower(Tower* tower){
 
     /*offset to delete tower from vector*/ 
     int offset = 0;
@@ -107,10 +107,30 @@ void TowerManager::renderBuildingTower(Renderer* renderer){
 }
 
 
-void TowerManager::renderAllProjectiles(Renderer* renderer){
+void TowerManager::renderAllAttacks(Renderer* renderer){
+
+    ProjectileTower* projPtr = nullptr;
+    LaserTower* laserPtr = nullptr;
     
-    for (auto towerPtr: towerList)
-        towerPtr->renderAllProjectiles(renderer);
+    //TODO add towers
+    for (auto towerPtr: towerList){
+        //TODO rewrite?
+
+        projPtr = dynamic_cast<ProjectileTower*>(towerPtr);
+        if (projPtr != nullptr){
+            projPtr->renderAllProjectiles(renderer);
+            continue;
+        }
+
+        laserPtr = dynamic_cast<LaserTower*>(towerPtr);
+        if (laserPtr != nullptr){
+            laserPtr->renderLaser(renderer);
+            continue;
+        }
+
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            cout << "No dynamic cast " << endl;
+    }
 }
 
 void TowerManager::activateBuildMode(TowerTypes buildingTowerType){
@@ -158,8 +178,7 @@ bool TowerManager::isTowerExistsInTile(Coords coords)
 
 void TowerManager::createAndAddTower(TowerTypes towerType, Coords coords){
 
-    //TODO change
-    ProjectileTower* tower = nullptr;
+    Tower* tower = nullptr;
         //TODO add types of towers
     switch (towerType)
     {
@@ -180,9 +199,9 @@ void TowerManager::createAndAddTower(TowerTypes towerType, Coords coords){
     towerList.push_back(tower);
 }
 
-ProjectileTower* TowerManager::createTower(TowerTypes towerType, Coords coords){
+Tower* TowerManager::createTower(TowerTypes towerType, Coords coords){
 
-    ProjectileTower* tower = nullptr;
+    Tower* tower = nullptr;
         //TODO add types of towers
     switch (towerType)
     {

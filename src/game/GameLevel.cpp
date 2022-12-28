@@ -68,7 +68,7 @@ void GameLevel::renderAll(Renderer* renderer){
     base->render(renderer);
     towerManager->renderAllTowers(renderer);
     enemyManager->renderAll(renderer);
-    towerManager->renderAllProjectiles(renderer);
+    towerManager->renderAllAttacks(renderer);
 
     interface->render(renderer);
 

@@ -92,7 +92,7 @@ Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, float radius){
         squareDistance = pow(diffX, 2) + pow(diffY, 2); //between tower and enemy
         squareRadius = pow(radius, 2);
 
-        if (squareDistance < squareRadius)
+        if (squareDistance < squareRadius && !enemy->isDead())
             return enemy;
     }
 
@@ -108,7 +108,7 @@ Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, float radius){
     Enemy* returnEnemy = nullptr;
 
     Coords enemyCoords;
-    // TODO rewrite this(why?)
+    // TODO rewrite this
     for (auto enemy: enemyList){
         enemyCoords = enemy->getCoords();
         diffX = abs(enemyCoords.x - towerCoords.x);
@@ -118,7 +118,7 @@ Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, float radius){
         squareRadius = pow(radius, 2);
 
         if (returnEnemy == nullptr)
-            if (squareDistance < squareRadius){
+            if (squareDistance < squareRadius  && !enemy->isDead()){
                 minDiffX = diffX;
                 minDiffY = diffY;
                 returnEnemy = enemy;
@@ -127,7 +127,7 @@ Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, float radius){
 
         else{
             float minSquareDistance = pow(minDiffX, 2) + pow(minDiffY, 2);
-            if (squareDistance < squareRadius && squareDistance < minSquareDistance){
+            if (squareDistance < squareRadius && squareDistance < minSquareDistance  && !enemy->isDead()){
                 minDiffX = diffX;
                 minDiffY = diffY;
                 returnEnemy = enemy;

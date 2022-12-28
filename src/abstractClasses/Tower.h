@@ -79,8 +79,6 @@ protected:
     std::vector<float> listExpForLvls;
 
     virtual void setAttackTimer() = 0;
-
-    virtual Projectile* newProjectile() = 0;
     
     void setExpForDamage(float exp);
     void setExpForKill(float exp);
