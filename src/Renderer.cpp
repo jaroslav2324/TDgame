@@ -83,6 +83,11 @@ void Renderer::renderLine(Coords& point1, Coords& point2, SDL_Color& color, int 
     return;
     }
 
+    //TODO add if needed
+    /*
+    renderFilledCircle(point1, width, color, color);
+    renderFilledCircle(point2, width, color, color);
+    */
     Line centralLine(point1, point2);
     Line perpendicularLine = getPerpendicularLine(centralLine);
 
@@ -94,7 +99,6 @@ void Renderer::renderLine(Coords& point1, Coords& point2, SDL_Color& color, int 
     double diffX = abs(point2.x - point1.x);
     double diffY = abs(point2.y - point1.y);
 
-    //TODO change algorythm
     if (diffX < diffY){
 
         for (int i = 0 ; i < width; i++){
@@ -177,6 +181,14 @@ void Renderer::renderCircle(Coords& center, int radius, SDL_Color& color, int bo
             }
         }
     }
+}
+
+//TODO needs something more fast and accurate
+void Renderer::renderFilledCircle(Coords center, int radius, SDL_Color& radiusColor, SDL_Color& fillColor, int borderWidth){
+
+    for (int i = 1; i < radius; i++)
+        renderCircle(center, i, fillColor);
+    renderCircle(center, radius, radiusColor, borderWidth);
 }
 
 void Renderer::renderText(const char* text, const SDL_Rect* rect, SDL_Color& color){
