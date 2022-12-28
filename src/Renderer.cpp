@@ -94,6 +94,7 @@ void Renderer::renderLine(Coords& point1, Coords& point2, SDL_Color& color, int 
     double diffX = abs(point2.x - point1.x);
     double diffY = abs(point2.y - point1.y);
 
+    //TODO change algorythm
     if (diffX < diffY){
 
         for (int i = 0 ; i < width; i++){
@@ -102,6 +103,12 @@ void Renderer::renderLine(Coords& point1, Coords& point2, SDL_Color& color, int 
 
             endPointX = startPointX + centralLine.guidingVector.a;
             endPointY = startPointY + centralLine.guidingVector.b;
+
+            SDL_RenderDrawLine(renderer, startPointX, startPointY, endPointX, endPointY);
+
+            // this to reduce empty spaces in diagonal lines
+            startPointX++;
+            endPointX = startPointX + centralLine.guidingVector.a;
 
             SDL_RenderDrawLine(renderer, startPointX, startPointY, endPointX, endPointY);
         }
@@ -116,10 +123,14 @@ void Renderer::renderLine(Coords& point1, Coords& point2, SDL_Color& color, int 
             endPointY = startPointY + centralLine.guidingVector.b;
 
             SDL_RenderDrawLine(renderer, startPointX, startPointY, endPointX, endPointY);
+
+            // this to reduce empty spaces in diagonal lines
+            startPointY++;
+            endPointY = startPointY + centralLine.guidingVector.b;
+
+            SDL_RenderDrawLine(renderer, startPointX, startPointY, endPointX, endPointY);
         }
     }
-
-
 }
 
 void Renderer::renderCircle(Coords& center, int radius, SDL_Color& color, int borderWidth){
