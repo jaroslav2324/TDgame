@@ -14,9 +14,9 @@ using std::endl;
 
 struct Coords{
     Coords(): x(0), y(0){};
-    Coords(float x, float y): x(x), y(y){};
-    float x;
-    float y;
+    Coords(double x, double y): x(x), y(y){};
+    double x;
+    double y;
 
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     void saveToBinaryFile(ostream& outpustStream);
@@ -25,7 +25,7 @@ struct Coords{
 
     Coords operator+(Coords& coords);
     Coords operator+(Vector& vec);
-    Coords& operator()(float x, float y);
+    Coords& operator()(double x, double y);
 
 };
 

@@ -17,7 +17,7 @@ class FireTower: public LaserTower{
         //setAttackTimer();
 
     };
-    FireTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
+    FireTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords): 
     LaserTower(enemyManager, damage, radius, attackSpeed, level, coords){
         radius = 200;
         damage = 1;

@@ -5,14 +5,14 @@ Tower::Tower(EnemyManager* enemyManager, Coords coords){
     Tower::enemyManager = enemyManager;
     Tower::towerCoords = coords;
 
-    float exp = 0;
+    double exp = 0;
     for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
         listExpForLvls.push_back(exp);
         exp += 100;
     }
 }
 
-Tower::Tower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords){
+Tower::Tower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords){
 
     Tower::enemyManager = enemyManager;
     Tower::damage = damage;
@@ -21,7 +21,7 @@ Tower::Tower(EnemyManager* enemyManager, float damage, float radius, float attac
     Tower::level = level;
     Tower::towerCoords = coords;
 
-    float exp = 0;
+    double exp = 0;
     for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
         listExpForLvls.push_back(exp);
         exp += 100;
@@ -35,19 +35,19 @@ Tower::~Tower(){
     }
 }
 
-float Tower::getDamage(){
+double Tower::getDamage(){
     return damage;
 }
 
-float Tower::getRadius(){
+double Tower::getRadius(){
     return radius;
 }
 
-void Tower::setDamage(float damage){
+void Tower::setDamage(double damage){
     Tower::damage = damage;
 }
 
-void Tower::setRadius(float radius){
+void Tower::setRadius(double radius){
     Tower::radius = radius;
 }
 
@@ -55,11 +55,11 @@ void Tower::setLevel(int level){
     Tower::level = level;
 }
 
-void Tower::setExpForDamage(float exp){
+void Tower::setExpForDamage(double exp){
     expForDamage = exp;
 }
 
-void Tower::setExpForKill(float exp){
+void Tower::setExpForKill(double exp){
     expForKill = exp;
 }
 
@@ -67,11 +67,11 @@ void Tower::setCoords(Coords coords){
     Tower::towerCoords = coords;
 }
 
-void Tower::addExperience(float exp){
+void Tower::addExperience(double exp){
     experience += exp;
 }
 
-float Tower::getExpForNextLvl(int level){
+double Tower::getExpForNextLvl(int level){
     return listExpForLvls[level];
 }
 

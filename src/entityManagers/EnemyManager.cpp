@@ -76,10 +76,10 @@ void EnemyManager::killEnemy(Enemy* enemy){
     }
 }
 
-Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, float radius){
+Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, double radius){
 
-    float diffX, diffY;
-    float squareDistance, squareRadius;
+    double diffX, diffY;
+    double squareDistance, squareRadius;
 
     sortEnemiesWithSortingTimer();
 
@@ -99,11 +99,11 @@ Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, float radius){
     return nullptr;
 }
 
-Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, float radius){
+Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, double radius){
 
-    float diffX, diffY;
-    float minDiffX, minDiffY;
-    float squareDistance, squareRadius;
+    double diffX, diffY;
+    double minDiffX, minDiffY;
+    double squareDistance, squareRadius;
 
     Enemy* returnEnemy = nullptr;
 
@@ -126,7 +126,7 @@ Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, float radius){
             }
 
         else{
-            float minSquareDistance = pow(minDiffX, 2) + pow(minDiffY, 2);
+            double minSquareDistance = pow(minDiffX, 2) + pow(minDiffY, 2);
             if (squareDistance < squareRadius && squareDistance < minSquareDistance  && !enemy->isDead()){
                 minDiffX = diffX;
                 minDiffY = diffY;

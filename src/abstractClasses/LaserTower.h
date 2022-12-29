@@ -8,7 +8,7 @@
 class LaserTower: public Tower{
 public:
     LaserTower(EnemyManager* enemyManager, Coords coords);
-    LaserTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords);
+    LaserTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords);
     ~LaserTower();
 
     void attack();

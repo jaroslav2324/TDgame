@@ -14,10 +14,10 @@ bool ifCoordsApprEqual(float x1, float y1, float x2, float y2){
 
 bool ifCoordsApprEqual(Coords first, Coords second){
 
-    float diffX = abs(first.x - second.x);
-    float diffY = abs(first.y - second.y);
+    double diffX = abs(first.x - second.x);
+    double diffY = abs(first.y - second.y);
 
-    float diffBetweenPoints = sqrt(pow(diffX, 2) + pow(diffY, 2));
+    double diffBetweenPoints = sqrt(pow(diffX, 2) + pow(diffY, 2));
 
     if (diffBetweenPoints < EPSILON_COORDS) 
         return true;

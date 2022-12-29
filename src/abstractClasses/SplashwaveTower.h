@@ -8,7 +8,7 @@
 class SplashwaveTower: public Tower{
 public:
     SplashwaveTower(EnemyManager* enemyManager, Coords coords);
-    SplashwaveTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords);
+    SplashwaveTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords);
     ~SplashwaveTower();
 
     void findAllEnemiesInRadius();

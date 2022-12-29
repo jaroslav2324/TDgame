@@ -5,7 +5,7 @@
 class ProjectileTower: public Tower{
 public:
     ProjectileTower(EnemyManager* enemyManager, Coords coords);
-    ProjectileTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords);
+    ProjectileTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords);
     ~ProjectileTower();
 
     void attack();

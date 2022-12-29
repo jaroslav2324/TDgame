@@ -20,8 +20,8 @@ void Projectile::moveToEnemy(){
     double timePeriodOfMoving = movementTimer->getCountPeriod();
 
     Coords enemyCoords = aimedEnemy->getCoords();
-    float enemyCoordX = enemyCoords.x;
-    float enemyCoordY = enemyCoords.y;
+    double enemyCoordX = enemyCoords.x;
+    double enemyCoordY = enemyCoords.y;
 
     //find proportion of coords change
     double diffX = enemyCoordX - currentCoords.x;

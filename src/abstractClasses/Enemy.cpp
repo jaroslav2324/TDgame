@@ -40,8 +40,8 @@ void Enemy::MoveToNextWaypoint(double timePeriodOfMoving ){
     timePeriodOfMoving /= 1000;
 
     //find proportion of coords change
-    float diffX = coordsNextWaypoint.x - coordsCurrentWaypoint.x;
-    float diffY = coordsNextWaypoint.y - coordsCurrentWaypoint.y;
+    double diffX = coordsNextWaypoint.x - coordsCurrentWaypoint.x;
+    double diffY = coordsNextWaypoint.y - coordsCurrentWaypoint.y;
 
     char signOfDiffX = 1;
     if (diffX < 0)
@@ -64,8 +64,8 @@ void Enemy::MoveToNextWaypoint(double timePeriodOfMoving ){
 
 bool Enemy::ifWaypointPassed(){
 
-    float diffX = coordsNextWaypoint.x - coordsCurrentWaypoint.x;
-    float diffY = coordsNextWaypoint.y - coordsCurrentWaypoint.y;
+    double diffX = coordsNextWaypoint.x - coordsCurrentWaypoint.x;
+    double diffY = coordsNextWaypoint.y - coordsCurrentWaypoint.y;
 
     /*if diffX < 0 x coord of the next waypoint is left from current waypoint
       if diffX > 0 x coord of the next waypoint is right from current waypoint*/
@@ -103,7 +103,7 @@ bool Enemy::ifWaypointPassed(){
 }
 
 /*hit Enemy*/
-void Enemy::applyDamage(float damage){
+void Enemy::applyDamage(double damage){
     hitPoints -= damage;
     //cout << hitPoints << endl;
 }
@@ -118,7 +118,7 @@ bool Enemy::isDead(){
 Slow down Enemy
 freezeMultiplyer between 0 and 1
 */
-void Enemy::freeze(float freezeMultiplyer, double time){
+void Enemy::freeze(double freezeMultiplyer, double time){
     isFreezed = true;
     currentSpeed = maxSpeed * (1 - freezeMultiplyer);
     activateFreezeTimer(time);

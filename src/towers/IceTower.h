@@ -15,7 +15,7 @@ class IceTower: public SplashwaveTower{
         //setAttackTimer();
 
     };
-    IceTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
+    IceTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords): 
     SplashwaveTower(enemyManager, damage, radius, attackSpeed, level, coords){
         attackSpeed = 750;
         radius = 350;

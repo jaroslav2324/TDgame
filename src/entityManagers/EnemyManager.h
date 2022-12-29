@@ -23,9 +23,9 @@ class EnemyManager{
     ~EnemyManager();
 
     //TODO add type of enemies
-    Enemy* findFirstEnemyForTower(Coords towerCoords, float radius);
+    Enemy* findFirstEnemyForTower(Coords towerCoords, double radius);
     //TODO add type of enemies
-    Enemy* findNearestEnemyForTower(Coords towerCoords, float radius);
+    Enemy* findNearestEnemyForTower(Coords towerCoords, double radius);
     //TODO add type of enemies
     list<Enemy*> findAllEnemiesForTower(Coords towerCoords, double radius);
         

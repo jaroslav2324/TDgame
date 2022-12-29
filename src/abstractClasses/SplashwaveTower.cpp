@@ -5,14 +5,14 @@ SplashwaveTower::SplashwaveTower(EnemyManager* enemyManager, Coords coords): Tow
     this->enemyManager = enemyManager;
     this->towerCoords = coords;
 
-    float exp = 0;
+    double exp = 0;
     for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
         listExpForLvls.push_back(exp);
         exp += 100;
     }
 }
 
-SplashwaveTower::SplashwaveTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords):
+SplashwaveTower::SplashwaveTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords):
 Tower(enemyManager, damage, radius, attackSpeed, level, coords){
 
     //TODO remove?
@@ -23,7 +23,7 @@ Tower(enemyManager, damage, radius, attackSpeed, level, coords){
     this->level = level;
     this->towerCoords = coords;
 
-    float exp = 0;
+    double exp = 0;
     for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
         listExpForLvls.push_back(exp);
         exp += 100;

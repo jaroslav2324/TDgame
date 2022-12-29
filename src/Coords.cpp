@@ -60,7 +60,7 @@ Coords Coords::operator+(Vector& vec){
     return outCoords;
 }
 
-Coords& Coords::operator()(float x, float y){
+Coords& Coords::operator()(double x, double y){
     
     this->x = x;
     this->y = y;

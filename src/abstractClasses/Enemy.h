@@ -25,10 +25,10 @@ public:
 
     void move();
     
-    void applyDamage(float damage);
+    void applyDamage(double damage);
     bool isDead();
 
-    void freeze(float freezeMultiplyer, double time);
+    void freeze(double freezeMultiplyer, double time);
     void unfreeze();
 
     bool isNearBase();
@@ -43,10 +43,10 @@ public:
     int getNumNextWaypoint();
 
 protected:
-    float hitPoints = 0;
-    float maxHitPoints = 0;
-    float currentSpeed = 0;
-    float maxSpeed = 0;
+    double hitPoints = 0;
+    double maxHitPoints = 0;
+    double currentSpeed = 0;
+    double maxSpeed = 0;
 
     int damageToBase = 0;
 

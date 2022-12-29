@@ -13,7 +13,7 @@ class BasicTower: public ProjectileTower{
         //setAttackTimer();
 
     };
-    BasicTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
+    BasicTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords): 
     ProjectileTower(enemyManager, damage, radius, attackSpeed, level, coords){
         attackSpeed = 750;
         radius = 200;
