@@ -27,8 +27,9 @@ enum class TexturesEnumeration{
     TEST_BUTTON_NO_INTERACTION_TEXTURE,
     TEST_BUTTON_HOVERED_OVER_TEXTURE,
     TEST_BUTTON_PRESSED_ON_TEXTURE,
+    WHITE_CIRCLE,
     first=TexturesEnumeration::BASIC_ENEMY_TEXTURE,
-    last=TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE
+    last=TexturesEnumeration::WHITE_CIRCLE
 };
 
 // This block is made for iteration over enum

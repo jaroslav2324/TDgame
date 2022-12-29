@@ -69,6 +69,9 @@ ostream& operator<<(std::ostream& out, const TexturesEnumeration& textureNum){
     case TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE:
         out << "\"test button(pressed on) texture\"" << endl;
         break;
+    case TexturesEnumeration::WHITE_CIRCLE:
+        out << "\"white circle texture\"" << endl;
+        break;
     default:
         if (DEBUG_CONSOLE_OUTPUT_ON)
             cout << "No case for such texture num: " << static_cast<int>(textureNum) << endl;

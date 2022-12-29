@@ -63,7 +63,7 @@ protected:
     Coords towerCoords;
 
     SDL_Color radiusColor = {100, 100, 180, 180};
-    SDL_Color radiusAreaFillColor = {150, 150, 200, 10};
+    SDL_Color radiusAreaFillColor = {150, 150, 200, 80};
 
     ObjectCursorInteractionsModes towerCursorInteractionMode = NO_INTERACTION;
 

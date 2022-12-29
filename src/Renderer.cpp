@@ -26,6 +26,7 @@ Renderer::Renderer(){
     texturesPaths[TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE] = "../data/assets/white_square.jpg";
     texturesPaths[TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE] = "../data/assets/dark_grey_square.png";
     texturesPaths[TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE] = "../data/assets/light_grey_square.jpg";
+    texturesPaths[TexturesEnumeration::WHITE_CIRCLE] = "../data/assets/white_circle.png";
     // add new paths here
 
 
@@ -34,10 +35,23 @@ Renderer::Renderer(){
         for (const auto textureNum: TexturesEnumeration())
             if (texturesPaths.find(textureNum) == texturesPaths.end())
                 cout << "No path was added for texture " << textureNum << endl;
+        
   
     // load textures
-    for (const auto textureNum: TexturesEnumeration())
+    for (const auto textureNum: TexturesEnumeration()){
         textures[textureNum] = IMG_LoadTexture(renderer, texturesPaths[textureNum]);
+
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            if (textures[textureNum] == nullptr)
+                cout << "Wrong path for texture " << textureNum << endl;
+
+
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            cout << textureNum;
+    }
+
+    if (DEBUG_CONSOLE_OUTPUT_ON)
+        cout << endl << endl;
 }
 
 Renderer::~Renderer(){
@@ -184,11 +198,17 @@ void Renderer::renderCircle(Coords& center, int radius, SDL_Color& color, int bo
 }
 
 //TODO needs something more fast and accurate
-void Renderer::renderFilledCircle(Coords center, int radius, SDL_Color& radiusColor, SDL_Color& fillColor, int borderWidth){
+void Renderer::renderFilledCircle(Coords center, int radius, SDL_Color& fillColor){
 
-    for (int i = 1; i < radius; i++)
-        renderCircle(center, i, fillColor);
-    renderCircle(center, radius, radiusColor, borderWidth);
+    SDL_SetTextureColorMod(textures[TexturesEnumeration::WHITE_CIRCLE], fillColor.r, fillColor.g, fillColor.b);
+    SDL_SetTextureAlphaMod(textures[TexturesEnumeration::WHITE_CIRCLE], fillColor.a);
+
+    int diameter = (int)(2 * radius);
+    int x = (int)(center.x - radius);
+    int y = (int)(center.y - radius);
+
+    SDL_Rect rect = {x, y, diameter, diameter};
+    renderTexture(TexturesEnumeration::WHITE_CIRCLE, &rect); 
 }
 
 void Renderer::renderText(const char* text, const SDL_Rect* rect, SDL_Color& color){

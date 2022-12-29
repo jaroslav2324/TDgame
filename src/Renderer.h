@@ -30,7 +30,7 @@ class Renderer{
     void renderFilledRect(const SDL_Rect* rect, SDL_Color& color);
     void renderLine(Coords& point1, Coords& point2, SDL_Color& color, int width = 1);
     void renderCircle(Coords& center, int radius, SDL_Color& color, int borderWidth = 1);
-    void renderFilledCircle(Coords center, int radius, SDL_Color& radiusColor, SDL_Color& fillColor, int borderWidth = 1);
+    void renderFilledCircle(Coords center, int radius, SDL_Color& fillColor);
     void renderText(const char* text, const SDL_Rect* rect, SDL_Color& color);
     void renderText(string& str, const SDL_Rect* rect, SDL_Color& color);
 

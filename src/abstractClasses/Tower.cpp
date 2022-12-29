@@ -120,6 +120,7 @@ Coords Tower::getCoords(){
 void Tower::renderRadiusCircle(Renderer* renderer){
     
     Coords coords = towerCoords;
+    renderer->renderFilledCircle(coords, radius, radiusAreaFillColor);
     renderer->renderCircle(coords, radius, radiusColor, 3);
 }
 
