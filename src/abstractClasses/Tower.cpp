@@ -2,8 +2,8 @@
 
 Tower::Tower(EnemyManager* enemyManager, Coords coords){
 
-    Tower::enemyManager = enemyManager;
-    Tower::towerCoords = coords;
+    this->enemyManager = enemyManager;
+    this->towerCoords = coords;
 
     double exp = 0;
     for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
@@ -14,12 +14,12 @@ Tower::Tower(EnemyManager* enemyManager, Coords coords){
 
 Tower::Tower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords){
 
-    Tower::enemyManager = enemyManager;
-    Tower::damage = damage;
-    Tower::radius = radius;
-    Tower::attackSpeed = attackSpeed;
-    Tower::level = level;
-    Tower::towerCoords = coords;
+    this->enemyManager = enemyManager;
+    this->damage = damage;
+    this->radius = radius;
+    this->attackSpeed = attackSpeed;
+    this->level = level;
+    this->towerCoords = coords;
 
     double exp = 0;
     for (int i = 0; i <= MAX_TOWER_LEVEL; i++){

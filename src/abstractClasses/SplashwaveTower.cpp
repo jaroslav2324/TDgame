@@ -1,34 +1,9 @@
 #include "SplashwaveTower.h"
 
-SplashwaveTower::SplashwaveTower(EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){
-    //TODO remove?
-    this->enemyManager = enemyManager;
-    this->towerCoords = coords;
-
-    double exp = 0;
-    for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
-        listExpForLvls.push_back(exp);
-        exp += 100;
-    }
-}
+SplashwaveTower::SplashwaveTower(EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){}
 
 SplashwaveTower::SplashwaveTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords):
-Tower(enemyManager, damage, radius, attackSpeed, level, coords){
-
-    //TODO remove?
-    this->enemyManager = enemyManager;
-    this->damage = damage;
-    this->radius = radius;
-    this->attackSpeed = attackSpeed;
-    this->level = level;
-    this->towerCoords = coords;
-
-    double exp = 0;
-    for (int i = 0; i <= MAX_TOWER_LEVEL; i++){
-        listExpForLvls.push_back(exp);
-        exp += 100;
-    }
-}
+Tower(enemyManager, damage, radius, attackSpeed, level, coords){}
 
 SplashwaveTower::~SplashwaveTower(){
     if (attackTimer != nullptr){
@@ -109,7 +84,11 @@ void SplashwaveTower::renderSplashWave(Renderer* renderer){
         renderer->renderCircle(towerCoords, frontPosition, frontWaveColor);
 
     if (frontPosition - 1 > 0){
-        SDL_Color middleColor = {(frontWaveColor.r + endWaveColor.r) / 2, (frontWaveColor.g + endWaveColor.g) / 2, (frontWaveColor.b + endWaveColor.b) / 2, (frontWaveColor.a + endWaveColor.a) / 2};
+        Uint8 r = (frontWaveColor.r + endWaveColor.r) / 2;
+        Uint8 g = (frontWaveColor.g + endWaveColor.g) / 2;
+        Uint8 b = (frontWaveColor.b + endWaveColor.b) / 2;
+        Uint8 a = (frontWaveColor.a + endWaveColor.a) / 2;
+        SDL_Color middleColor = {r, g, b, a};
         renderer->renderCircle(towerCoords, frontPosition - 1, middleColor);
     }
     if (frontPosition - 2 > 0)
