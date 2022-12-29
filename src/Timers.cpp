@@ -32,6 +32,10 @@ double PeriodicTimer::getCountPeriod(){
 	return countPeriod;
 }
 
+double PeriodicTimer::getTime(){
+	return currentTime;
+}
+
 void PeriodicTimer::printAmountTicks() {
 
 	cout << "Amount ticks: " << amountTicks << endl;

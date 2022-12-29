@@ -10,6 +10,8 @@ using std::ostream;
 using std::cout;
 using std::endl;
 
+//TODO refactor double -> int
+
 /*Periodic timer with count period in milliseconds*/
 class PeriodicTimer {
 public:
@@ -34,6 +36,7 @@ public:
 	void printAmountTicks();
 
 	double getCountPeriod();
+	double getTime();
 
 	bool tickIfNeeded();
 protected:

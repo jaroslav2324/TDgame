@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../abstractClasses/ProjectileTower.h"
+#include "../abstractClasses/SplashwaveTower.h"
 #include "../projectiles/IceballProjectile.h"
 
-class IceTower: public ProjectileTower{
+class IceTower: public SplashwaveTower{
     public:
-    IceTower(EnemyManager* enemyManager, Coords coords): ProjectileTower(enemyManager, coords){
-        attackSpeed = 1500;
+    IceTower(EnemyManager* enemyManager, Coords coords): SplashwaveTower(enemyManager, coords){
+        attackSpeed = 750;
         radius = 350;
+        damage = 0.2;
 
         this->towerTextureType = TexturesEnumeration::ICE_TOWER_TEXTURE;
 
@@ -15,9 +16,10 @@ class IceTower: public ProjectileTower{
 
     };
     IceTower(EnemyManager* enemyManager, float damage, float radius, float attackSpeed, int level, Coords coords): 
-    ProjectileTower(enemyManager, damage, radius, attackSpeed, level, coords){
-        attackSpeed = 1500;
+    SplashwaveTower(enemyManager, damage, radius, attackSpeed, level, coords){
+        attackSpeed = 750;
         radius = 350;
+        damage = 0.2;
 
         this->towerTextureType = TexturesEnumeration::ICE_TOWER_TEXTURE;
         
@@ -30,5 +32,5 @@ class IceTower: public ProjectileTower{
 
     void setAttackTimer();
     void deleteAttackTimer();
-    Projectile* newProjectile();
+
 };

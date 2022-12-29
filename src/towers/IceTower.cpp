@@ -5,7 +5,12 @@ IceTower::~IceTower(){
 }
 
 void IceTower::setAttackTimer(){
-    attackTimer = new PeriodicTimer(attackSpeed);
+    if (attackTimer == nullptr)
+        attackTimer = new PeriodicTimer(attackSpeed);
+    else{
+        delete attackTimer;
+        attackTimer = nullptr;
+    }
 }
 
 void IceTower::deleteAttackTimer(){
@@ -13,9 +18,5 @@ void IceTower::deleteAttackTimer(){
         delete attackTimer;
         attackTimer = nullptr;
     }
-}
-
-Projectile* IceTower::newProjectile(){
-    return new IceballProjectile(aimedEnemy, towerCoords);
 }
 

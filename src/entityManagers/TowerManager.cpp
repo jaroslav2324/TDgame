@@ -111,6 +111,7 @@ void TowerManager::renderAllAttacks(Renderer* renderer){
 
     ProjectileTower* projPtr = nullptr;
     LaserTower* laserPtr = nullptr;
+    SplashwaveTower* splashPtr = nullptr;
     
     //TODO add towers
     for (auto towerPtr: towerList){
@@ -125,6 +126,12 @@ void TowerManager::renderAllAttacks(Renderer* renderer){
         laserPtr = dynamic_cast<LaserTower*>(towerPtr);
         if (laserPtr != nullptr){
             laserPtr->renderLaser(renderer);
+            continue;
+        }
+
+        splashPtr = dynamic_cast<SplashwaveTower*>(towerPtr);
+        if (splashPtr != nullptr){
+            splashPtr->renderSplashWave(renderer);
             continue;
         }
 

@@ -138,6 +138,32 @@ Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, float radius){
     return returnEnemy;
 }
 
+list<Enemy*> EnemyManager::findAllEnemiesForTower(Coords towerCoords, double radius){
+    //TODO add type of enemies
+
+    list<Enemy*> listOfAimedEnemies;
+
+    double diffX, diffY;
+    double squareDistance, squareRadius;
+
+    sortEnemiesWithSortingTimer();
+
+    Coords enemyCoords;
+    for (auto enemy: enemyList){
+        enemyCoords = enemy->getCoords();
+        diffX = abs(enemyCoords.x - towerCoords.x);
+        diffY = abs(enemyCoords.y - towerCoords.y);
+
+        squareDistance = pow(diffX, 2) + pow(diffY, 2); //between tower and enemy
+        squareRadius = pow(radius, 2);
+
+        if (squareDistance < squareRadius && !enemy->isDead())
+            listOfAimedEnemies.push_back(enemy);
+    }
+
+    return listOfAimedEnemies;
+}
+
 void EnemyManager::findAndDeleteKilledEnemies(){
 
     int offset = 0;

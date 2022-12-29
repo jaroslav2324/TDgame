@@ -22,8 +22,12 @@ class EnemyManager{
     EnemyManager(Base* base, Portal* portal, EnemiesWay* enemiesWay);
     ~EnemyManager();
 
+    //TODO add type of enemies
     Enemy* findFirstEnemyForTower(Coords towerCoords, float radius);
+    //TODO add type of enemies
     Enemy* findNearestEnemyForTower(Coords towerCoords, float radius);
+    //TODO add type of enemies
+    list<Enemy*> findAllEnemiesForTower(Coords towerCoords, double radius);
         
     /*use for custom spawning. For wave spawning use */
     void spawnEnemyWithCoords(int enemyType, Coords coords);

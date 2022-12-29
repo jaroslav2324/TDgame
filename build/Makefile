@@ -554,6 +554,30 @@ src/abstractClasses/ProjectileTower.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.s
 .PHONY : src/abstractClasses/ProjectileTower.cpp.s
 
+src/abstractClasses/SplashwaveTower.o: src/abstractClasses/SplashwaveTower.cpp.o
+.PHONY : src/abstractClasses/SplashwaveTower.o
+
+# target to build an object file
+src/abstractClasses/SplashwaveTower.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/SplashwaveTower.cpp.o
+.PHONY : src/abstractClasses/SplashwaveTower.cpp.o
+
+src/abstractClasses/SplashwaveTower.i: src/abstractClasses/SplashwaveTower.cpp.i
+.PHONY : src/abstractClasses/SplashwaveTower.i
+
+# target to preprocess a source file
+src/abstractClasses/SplashwaveTower.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/SplashwaveTower.cpp.i
+.PHONY : src/abstractClasses/SplashwaveTower.cpp.i
+
+src/abstractClasses/SplashwaveTower.s: src/abstractClasses/SplashwaveTower.cpp.s
+.PHONY : src/abstractClasses/SplashwaveTower.s
+
+# target to generate assembly for a file
+src/abstractClasses/SplashwaveTower.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/SplashwaveTower.cpp.s
+.PHONY : src/abstractClasses/SplashwaveTower.cpp.s
+
 src/abstractClasses/Tower.o: src/abstractClasses/Tower.cpp.o
 .PHONY : src/abstractClasses/Tower.o
 
@@ -973,6 +997,9 @@ help:
 	@echo "... src/abstractClasses/ProjectileTower.o"
 	@echo "... src/abstractClasses/ProjectileTower.i"
 	@echo "... src/abstractClasses/ProjectileTower.s"
+	@echo "... src/abstractClasses/SplashwaveTower.o"
+	@echo "... src/abstractClasses/SplashwaveTower.i"
+	@echo "... src/abstractClasses/SplashwaveTower.s"
 	@echo "... src/abstractClasses/Tower.o"
 	@echo "... src/abstractClasses/Tower.i"
 	@echo "... src/abstractClasses/Tower.s"
