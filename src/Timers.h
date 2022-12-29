@@ -15,12 +15,12 @@ using std::endl;
 /*Periodic timer with count period in milliseconds*/
 class PeriodicTimer {
 public:
-	PeriodicTimer(const double countPeriod) : countPeriod(countPeriod) {
+	PeriodicTimer(const int countPeriod) : countPeriod(countPeriod) {
 		currentTime = SDL_GetTicks();
 	};
 
 	/*copy constructor to set different countPeriod*/
-	PeriodicTimer(PeriodicTimer& timer, double countPeriod): countPeriod(countPeriod){
+	PeriodicTimer(PeriodicTimer& timer, int countPeriod): countPeriod(countPeriod){
 		prevTime = timer.prevTime;
 		currentTime = timer.currentTime;
 		frameTime = timer.frameTime;
@@ -28,24 +28,24 @@ public:
 	}
 
 	// in milliseconds
-	void setTime(double ms);
+	void setTime(int ms);
 	// sets frame time which used to check if tick is needed (if frame time > count period)
-	void setFrameTime(double ms);
+	void setFrameTime(int ms);
 
 	void printCountPeriod();
 	void printAmountTicks();
 
-	double getCountPeriod();
-	double getTime();
+	int getCountPeriod();
+	int getTime();
 
 	bool tickIfNeeded();
 protected:
 	
-	double prevTime = 0;
-	double currentTime;
-	double frameTime = 0;
+	int prevTime = 0;
+	int currentTime;
+	int frameTime = 0;
     //in milliseconds
-	const double countPeriod;
+	const int countPeriod;
 
 	long long amountTicks = 0;
 
@@ -63,23 +63,23 @@ class CountdownTimer{
 
 	public:
 
-	CountdownTimer(double countdownTime);
+	CountdownTimer(int countdownTime);
 
-	void addTime(double countdownTime);
+	void addTime(int countdownTime);
 	/*replaces timer time if new value is bigger*/ 
-	void replaceToMoreTime(double countDownTime);
-	void replaceTime(double countdownTime);
+	void replaceToMoreTime(int countDownTime);
+	void replaceTime(int countdownTime);
 
 	bool isCountdownEnd();
 
-	double getTimeLeft();
+	int getTimeLeft();
 
 
 	private:
-	double countdownTime;
+	int countdownTime;
 
-	double currentTime;
-	double prevTime = 0;
+	int currentTime;
+	int prevTime = 0;
 
 	long long amountTicks = 0;
 

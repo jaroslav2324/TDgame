@@ -6,7 +6,7 @@ bool PeriodicTimer::tickIfNeeded() {
 	prevTime = currentTime;
 	currentTime = SDL_GetTicks();
 
-	double deltaTime = currentTime - prevTime;
+	int deltaTime = currentTime - prevTime;
 
 	frameTime += deltaTime;
 
@@ -19,20 +19,20 @@ bool PeriodicTimer::tickIfNeeded() {
 	return false;
 }
 
-void PeriodicTimer::setTime(double ms){
+void PeriodicTimer::setTime(int ms){
 	currentTime = ms;
 }
 
-void PeriodicTimer::setFrameTime(double ms){
+void PeriodicTimer::setFrameTime(int ms){
 	frameTime = ms;
 }
 
 /*in milliseconds*/ 
-double PeriodicTimer::getCountPeriod(){
+int PeriodicTimer::getCountPeriod(){
 	return countPeriod;
 }
 
-double PeriodicTimer::getTime(){
+int PeriodicTimer::getTime(){
 	return currentTime;
 }
 
@@ -67,7 +67,7 @@ ostream& operator<<(ostream& os, const PeriodicTimer* timer){
 
 
 
-CountdownTimer::CountdownTimer(double countdownTime){
+CountdownTimer::CountdownTimer(int countdownTime){
 	currentTime = SDL_GetTicks();
 	CountdownTimer::countdownTime = countdownTime;
 }
@@ -90,20 +90,20 @@ bool CountdownTimer::isCountdownEnd(){
 	return true;
 }
 
-void CountdownTimer::addTime(double countdownTime){
+void CountdownTimer::addTime(int countdownTime){
 	CountdownTimer::countdownTime += countdownTime;
 }
 
-void CountdownTimer::replaceToMoreTime(double countdownTime){
+void CountdownTimer::replaceToMoreTime(int countdownTime){
 	if (countdownTime > CountdownTimer::countdownTime)
 		CountdownTimer::countdownTime = countdownTime;
 }
 
-void CountdownTimer::replaceTime(double countdownTime){
+void CountdownTimer::replaceTime(int countdownTime){
 	CountdownTimer::countdownTime = countdownTime;
 }
 
-double CountdownTimer::getTimeLeft(){
+int CountdownTimer::getTimeLeft(){
 	return countdownTime;
 }
 
