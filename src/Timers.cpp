@@ -120,3 +120,32 @@ ostream& operator<<(ostream& os, const CountdownTimer* timer){
 	cout << "Current time " << timer->currentTime << " ms." << endl;
     return os;
 }
+
+
+
+
+
+MeasurementTimer::MeasurementTimer(){
+	prevTime = SDL_GetTicks();
+}
+
+void MeasurementTimer::setStart(){
+	prevTime = SDL_GetTicks();
+}
+
+void MeasurementTimer::printTimeOnce(){
+
+	if (firstMeashureAccomplished == true)
+		return;
+
+	int time = SDL_GetTicks();
+	cout << prevTime << " -> " << time << endl;
+	prevTime = time;
+	firstMeashureAccomplished = true;
+}
+
+void MeasurementTimer::printTime(){
+	int time = SDL_GetTicks();
+	cout << prevTime << " -> " << time << endl;	
+	prevTime = time;
+}

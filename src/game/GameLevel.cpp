@@ -62,6 +62,8 @@ GameLevel::~GameLevel(){
 
 void GameLevel::renderAll(Renderer* renderer){
 
+    mt.setStart();
+
     grid->renderGrid(renderer);
     enemiesWay->render(renderer);
     portal->render(renderer);
@@ -72,6 +74,7 @@ void GameLevel::renderAll(Renderer* renderer){
 
     interface->render(renderer);
 
+    mt.printTime();
     // SDL_RenderPresent(renderer);
 }
 

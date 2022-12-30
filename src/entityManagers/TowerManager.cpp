@@ -118,7 +118,6 @@ void TowerManager::renderAllAttacks(Renderer* renderer){
 
         projPtr = dynamic_cast<ProjectileTower*>(towerPtr);
         if (projPtr != nullptr){
-            cout << "render" << endl;
             projPtr->renderAllProjectiles(renderer);
             continue;
         }

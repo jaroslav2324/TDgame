@@ -91,3 +91,28 @@ class CountdownTimer{
 
 ostream& operator<<(ostream& os, const CountdownTimer& timer);
 ostream& operator<<(ostream& os, const CountdownTimer* timer);
+
+
+
+
+
+
+/*starts counting time in ms when created
+*/
+class MeasurementTimer{
+
+	public:
+
+	MeasurementTimer();
+	void setStart();
+	void printTimeOnce();
+	void printTime();
+
+	private:
+
+	int prevTime;
+	bool firstMeashureAccomplished = false;
+
+	friend ostream& operator<<(ostream& os, const MeasurementTimer& timer);
+	friend ostream& operator<<(ostream& os, const MeasurementTimer* timer);
+};
