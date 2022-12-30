@@ -17,6 +17,7 @@ Application::Application(){
 
     mainMenu = new MainMenu();
     optionsMenu = new OptionsMenu();
+    levelsMenu = new LevelsMenu();
 }
 
 Application::~Application(){
@@ -36,6 +37,11 @@ Application::~Application(){
         optionsMenu = nullptr;
     }
 
+    if (levelsMenu != nullptr){
+        delete levelsMenu;
+        levelsMenu = nullptr;
+    }
+
     if (fpsTimer != nullptr){
         delete fpsTimer;
         fpsTimer = nullptr;
@@ -51,7 +57,7 @@ Application::~Application(){
     SDL_Quit();
 }
 
-void Application::loop(){
+void Application::loop(){ 
 
     int fpsCount = 0;
     // counts each second
@@ -73,9 +79,9 @@ void Application::loop(){
 
                 switch (code){
 
-                case START_GAME:
+                case OPEN_CHOOSE_LEVEL_MENU:
                 {
-                    activeSceneCode = ActiveScenesCodes::GAME_LEVEL;
+                    activeSceneCode = ActiveScenesCodes::CHOOSE_LEVEL_MENU;
                     loadChosenLevel();
                     break;
                 }
@@ -133,6 +139,28 @@ void Application::loop(){
                 }
             }
 
+            else if (activeSceneCode == ActiveScenesCodes::CHOOSE_LEVEL_MENU){
+
+                code = levelsMenu->makeFrameTurn();
+                levelsMenu->render(renderer);
+
+                switch (code)
+                {
+                case NO_CHANGES:
+                    break;
+                case QUIT_TO_MAIN_MENU:
+                    
+                    activeSceneCode = ActiveScenesCodes::MAIN_MENU;
+                    break;
+                
+                //TODO refactor
+                default:
+                    setChosenLevel(code);
+                    activeSceneCode = ActiveScenesCodes::GAME_LEVEL;
+                    break;
+                }
+            }
+
             renderer->renderPresent();
         }
 
@@ -166,7 +194,8 @@ void Application::handleEvents(){
                             mainMenu->saveMouseClickCoords(mouseCoords);
                         else if (activeSceneCode == ActiveScenesCodes::OPTIONS_MENU)
                             optionsMenu->saveMouseClickCoords(mouseCoords);
-                        //TODO add choose level menu
+                        else if (activeSceneCode == ActiveScenesCodes::CHOOSE_LEVEL_MENU)
+                            levelsMenu->saveMouseClickCoords(mouseCoords);
                         else if (activeSceneCode == ActiveScenesCodes::GAME_LEVEL)
                             gameLevel->saveMouseClickCoords(mouseCoords);
                     }      
@@ -180,7 +209,7 @@ void Application::loadChosenLevel(){
     string levelPath;
 
     switch (numChosenLevel){
-    case FIRST_LEVEL:
+    case LEVEL_1:
         levelPath = levelsFolderPath + "level1.bin";
         break;
 
@@ -221,5 +250,35 @@ void Application::unloadLevel(){
     if (gameLevel != nullptr){
         delete gameLevel;
         gameLevel = nullptr;
+    }
+}
+
+void Application::setChosenLevel(MenuOptionsCode code){
+
+    switch (code)
+    {
+    case CHOOSE_LVL1:
+        numChosenLevel = LEVEL_1;
+        return;
+
+    case CHOOSE_LVL2:
+        numChosenLevel = LEVEL_2;
+        return;
+
+    case CHOOSE_LVL3:
+        numChosenLevel = LEVEL_3;
+        return;
+    
+    case CHOOSE_LVL4:
+        numChosenLevel = LEVEL_4;
+        return;
+    
+    default:
+        // redColour
+        //TODO refactor set colour
+        cout << "\033[1;31m";
+        cout << "Warning! No conversion from options code " << code << " to level num" << endl;
+        cout << "\033[0m";
+        break;
     }
 }

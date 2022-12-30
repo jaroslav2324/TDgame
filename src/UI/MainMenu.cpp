@@ -95,7 +95,7 @@ MenuOptionsCode MainMenu::handlePressingOnButtons(){
 
         if (startGameBtn->isPointInRect(mouseCoords)){
             startGameBtn->setModePressedOn();
-            code = START_GAME;
+            code = OPEN_CHOOSE_LEVEL_MENU;
 
             if (DEBUG_CONSOLE_OUTPUT_ON)
                 cout << "Start game button pressed" << endl;

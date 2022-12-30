@@ -386,6 +386,30 @@ src/UI/Button.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.s
 .PHONY : src/UI/Button.cpp.s
 
+src/UI/LevelsMenu.o: src/UI/LevelsMenu.cpp.o
+.PHONY : src/UI/LevelsMenu.o
+
+# target to build an object file
+src/UI/LevelsMenu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o
+.PHONY : src/UI/LevelsMenu.cpp.o
+
+src/UI/LevelsMenu.i: src/UI/LevelsMenu.cpp.i
+.PHONY : src/UI/LevelsMenu.i
+
+# target to preprocess a source file
+src/UI/LevelsMenu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.i
+.PHONY : src/UI/LevelsMenu.cpp.i
+
+src/UI/LevelsMenu.s: src/UI/LevelsMenu.cpp.s
+.PHONY : src/UI/LevelsMenu.s
+
+# target to generate assembly for a file
+src/UI/LevelsMenu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.s
+.PHONY : src/UI/LevelsMenu.cpp.s
+
 src/UI/MainMenu.o: src/UI/MainMenu.cpp.o
 .PHONY : src/UI/MainMenu.o
 
@@ -1000,6 +1024,9 @@ help:
 	@echo "... src/UI/Button.o"
 	@echo "... src/UI/Button.i"
 	@echo "... src/UI/Button.s"
+	@echo "... src/UI/LevelsMenu.o"
+	@echo "... src/UI/LevelsMenu.i"
+	@echo "... src/UI/LevelsMenu.s"
 	@echo "... src/UI/MainMenu.o"
 	@echo "... src/UI/MainMenu.i"
 	@echo "... src/UI/MainMenu.s"

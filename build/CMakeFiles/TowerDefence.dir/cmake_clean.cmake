@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o.d"
+  "CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o"
+  "CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o"

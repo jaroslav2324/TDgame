@@ -13,6 +13,7 @@
 #include "game/GameLevel.h"
 #include "UI/MainMenu.h"
 #include "UI/OptionsMenu.h"
+#include "UI/LevelsMenu.h"
 #include "UI/MenuOptionsCodes.h"
 #include "UI/ActiveScenesCodes.h"
 
@@ -36,13 +37,15 @@ class Application{
     MainMenu* mainMenu = nullptr;
     OptionsMenu* optionsMenu = nullptr;
     GameLevel* gameLevel = nullptr;
+    LevelsMenu* levelsMenu = nullptr;
 
     PeriodicTimer* fpsTimer = nullptr;
 
-    LevelsEnum numChosenLevel = FIRST_LEVEL;
+    LevelsEnum numChosenLevel = LEVEL_1;
 
     void handleEvents();
 
+    void setChosenLevel(MenuOptionsCode code);
     void loadChosenLevel();
     void unloadLevel();
 };
