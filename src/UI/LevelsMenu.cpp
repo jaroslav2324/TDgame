@@ -34,6 +34,9 @@ LevelsMenu::LevelsMenu(){
                                          TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
                                             Coords((SCREEN_WIDTH * 2) / 3, (SCREEN_HEIGHT * 2) / 3));
     chooseLvl4Btn->setWidthHeight(100, 100);
+
+    createButtonsVec();
+    createButtonsReturnCodesVec();    
 }
 
 LevelsMenu::~LevelsMenu(){
@@ -83,81 +86,21 @@ void LevelsMenu::render(Renderer* renderer){
     chooseLvl4Btn->render(renderer);
 }
 
-void LevelsMenu::handleHoveringOverButtons(){
-
-    // check howering over buttons
-    int mouseX, mouseY;
-    SDL_GetMouseState(&mouseX, &mouseY);
-    Coords mouseCoords(mouseX, mouseY);
-
-    // to main menu button
-    if (toMainMenuBtn->isPointInRect(mouseCoords))
-        toMainMenuBtn->setModeHoveredOver();
-    else
-        toMainMenuBtn->setModeNoCursorInteraction();
-
-    if (chooseLvl1Btn->isPointInRect(mouseCoords))
-        chooseLvl1Btn->setModeHoveredOver();
-    else
-        chooseLvl1Btn->setModeNoCursorInteraction();
-
-    if (chooseLvl2Btn->isPointInRect(mouseCoords))
-        chooseLvl2Btn->setModeHoveredOver();
-    else
-        chooseLvl2Btn->setModeNoCursorInteraction();
-
-
-    if (chooseLvl3Btn->isPointInRect(mouseCoords))
-        chooseLvl3Btn->setModeHoveredOver();
-    else
-        chooseLvl3Btn->setModeNoCursorInteraction();
-
-    if (chooseLvl4Btn->isPointInRect(mouseCoords))
-        chooseLvl4Btn->setModeHoveredOver();
-    else
-        chooseLvl4Btn->setModeNoCursorInteraction();
+void LevelsMenu::createButtonsVec(){
+    buttonsVec.push_back(toMainMenuBtn);
+    buttonsVec.push_back(chooseLvl1Btn);
+    buttonsVec.push_back(chooseLvl2Btn);
+    buttonsVec.push_back(chooseLvl3Btn);
+    buttonsVec.push_back(chooseLvl4Btn);
 }
 
-MenuOptionsCode LevelsMenu::handlePressingOnButtons(){
-
-    MenuOptionsCode code = NO_CHANGES;
-    // check pressing on buttons
-    while(!savedMouseClicks.empty()){
-        Coords mouseCoords = savedMouseClicks.front();
-        savedMouseClicks.pop();
-
-        if (toMainMenuBtn->isPointInRect(mouseCoords)){
-            toMainMenuBtn->setModePressedOn();
-            code = QUIT_TO_MAIN_MENU;
-
-            if (DEBUG_CONSOLE_OUTPUT_ON)
-                cout << "return to main menu button pressed" << endl;
-        }
-
-        if (chooseLvl1Btn->isPointInRect(mouseCoords)){
-            chooseLvl1Btn->setModePressedOn();
-            code = CHOOSE_LVL1;
-        }
-
-        if (chooseLvl2Btn->isPointInRect(mouseCoords)){
-            chooseLvl2Btn->setModePressedOn();
-            code = CHOOSE_LVL2;
-        }
-
-        if (chooseLvl3Btn->isPointInRect(mouseCoords)){
-            chooseLvl3Btn->setModePressedOn();
-            code = CHOOSE_LVL3;
-        }
-
-        if (chooseLvl4Btn->isPointInRect(mouseCoords)){
-            chooseLvl4Btn->setModePressedOn();
-            code = CHOOSE_LVL4;
-        }
-    }
-
-    return code;
+void LevelsMenu::createButtonsReturnCodesVec(){
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::QUIT_TO_MAIN_MENU);
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::CHOOSE_LVL1);
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::CHOOSE_LVL2);
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::CHOOSE_LVL3);
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::CHOOSE_LVL4);
 }
-
 
 void LevelsMenu::saveToBinaryFile(ostream& outpustStream){
     //TODO implement

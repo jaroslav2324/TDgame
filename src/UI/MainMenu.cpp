@@ -22,6 +22,9 @@ MainMenu::MainMenu(){
                                          TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
                                             Coords(SCREEN_WIDTH / 2, 750));
     quitBtn->setWidthHeight(500, 200);
+
+    createButtonsVec();
+    createButtonsReturnCodesVec();    
 }
 
     MainMenu::~MainMenu(){
@@ -59,67 +62,17 @@ void MainMenu::render(Renderer* renderer){
     quitBtn->render(renderer);
 }
 
-void MainMenu::handleHoveringOverButtons(){
-
-    // check howering over buttons
-    int mouseX, mouseY;
-    SDL_GetMouseState(&mouseX, &mouseY);
-    Coords mouseCoords(mouseX, mouseY);
-
-    // start game button
-    if (startGameBtn->isPointInRect(mouseCoords))
-        startGameBtn->setModeHoveredOver();
-    else
-        startGameBtn->setModeNoCursorInteraction();
-
-    // settings button
-    if (settingsBtn->isPointInRect(mouseCoords))
-        settingsBtn->setModeHoveredOver();
-    else
-        settingsBtn->setModeNoCursorInteraction();
-
-    // quit button
-    if (quitBtn->isPointInRect(mouseCoords))
-        quitBtn->setModeHoveredOver();
-    else
-        quitBtn->setModeNoCursorInteraction();
+void MainMenu::createButtonsVec(){
+    buttonsVec.push_back(startGameBtn);
+    buttonsVec.push_back(settingsBtn);
+    buttonsVec.push_back(quitBtn);
 }
 
-MenuOptionsCode MainMenu::handlePressingOnButtons(){
-
-    MenuOptionsCode code = NO_CHANGES;
-    // check pressing on buttons
-    while(!savedMouseClicks.empty()){
-        Coords mouseCoords = savedMouseClicks.front();
-        savedMouseClicks.pop();
-
-        if (startGameBtn->isPointInRect(mouseCoords)){
-            startGameBtn->setModePressedOn();
-            code = OPEN_CHOOSE_LEVEL_MENU;
-
-            if (DEBUG_CONSOLE_OUTPUT_ON)
-                cout << "Start game button pressed" << endl;
-        }
-        else if (settingsBtn->isPointInRect(mouseCoords)){
-            settingsBtn->setModePressedOn();
-            code = OPEN_OPTIONS;
-
-            if (DEBUG_CONSOLE_OUTPUT_ON)
-                cout << "Options button pressed" << endl;
-
-        }
-        else if (quitBtn->isPointInRect(mouseCoords)){
-            quitBtn->setModePressedOn();
-            code = QUIT_TO_DESKTOP;
-
-            if (DEBUG_CONSOLE_OUTPUT_ON)
-                cout << "Quit button pressed" << endl;
-        }
-    }
-
-    return code;
+void MainMenu::createButtonsReturnCodesVec(){
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::OPEN_CHOOSE_LEVEL_MENU);
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::OPEN_OPTIONS);
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::QUIT_TO_DESKTOP);
 }
-
 
 void MainMenu::saveToBinaryFile(ostream& outpustStream){
     //TODO implement

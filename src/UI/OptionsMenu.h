@@ -25,6 +25,11 @@ class OptionsMenu: public Interface{
 
     PeriodicTimer* fpsTimer = nullptr;
 
-    void handleHoveringOverButtons();
-    MenuOptionsCode handlePressingOnButtons();
+    // implement if you want to iterate over buttons
+    virtual void createButtonsVec();
+    // implement if you want to return different options codes while iterating over buttons
+    virtual void createButtonsReturnCodesVec();
+
+    // void handleHoveringOverButtons();
+    // MenuOptionsCode handlePressingOnButtons();
 };

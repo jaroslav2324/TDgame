@@ -10,6 +10,9 @@ OptionsMenu::OptionsMenu(){
                                          TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
                                             Coords(SCREEN_WIDTH / 2, 250));
     toMainMenuBtn->setWidthHeight(500, 200);
+
+    createButtonsVec();
+    createButtonsReturnCodesVec();    
 }
 
 OptionsMenu::~OptionsMenu(){
@@ -35,41 +38,13 @@ void OptionsMenu::render(Renderer* renderer){
     toMainMenuBtn->render(renderer);
 }
 
-void OptionsMenu::handleHoveringOverButtons(){
-
-    // check howering over buttons
-    int mouseX, mouseY;
-    SDL_GetMouseState(&mouseX, &mouseY);
-    Coords mouseCoords(mouseX, mouseY);
-
-    // to main menu button
-    if (toMainMenuBtn->isPointInRect(mouseCoords))
-        toMainMenuBtn->setModeHoveredOver();
-    else
-        toMainMenuBtn->setModeNoCursorInteraction();
+void OptionsMenu::createButtonsVec(){
+    buttonsVec.push_back(toMainMenuBtn);
 }
 
-MenuOptionsCode OptionsMenu::handlePressingOnButtons(){
-
-    MenuOptionsCode code = NO_CHANGES;
-    // check pressing on buttons
-    while(!savedMouseClicks.empty()){
-        Coords mouseCoords = savedMouseClicks.front();
-        savedMouseClicks.pop();
-
-
-        if (toMainMenuBtn->isPointInRect(mouseCoords)){
-            toMainMenuBtn->setModePressedOn();
-            code = QUIT_TO_MAIN_MENU;
-
-            if (DEBUG_CONSOLE_OUTPUT_ON)
-                cout << "return to main menu button pressed" << endl;
-        }
-    }
-
-    return code;
+void OptionsMenu::createButtonsReturnCodesVec(){
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::QUIT_TO_MAIN_MENU);
 }
-
 
 void OptionsMenu::saveToBinaryFile(ostream& outpustStream){
     //TODO implement

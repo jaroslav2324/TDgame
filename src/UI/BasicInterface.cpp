@@ -31,7 +31,8 @@ BasicInterface::BasicInterface(TowerManager* towerManager, EnemyManager* enemyMa
                                          TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
                                          Coords(600, 40));
 
-    
+    createButtonsVec();
+    createButtonsReturnCodesVec();    
 }
 
 BasicInterface::~BasicInterface(){
@@ -93,39 +94,6 @@ void BasicInterface::render(Renderer* renderer){
     buildFireTowerBtn->render(renderer);
     spawnEnemyBtn->render(renderer);
 
-}
-
-void BasicInterface::handleHoveringOverButtons(){
-    // check howering ower btns
-    int x, y;
-
-    SDL_GetMouseState(&x, &y);
-
-    //TODO use vector
-    if (exitToMainMenuBtn->isPointInRect(Coords(x, y)))
-        exitToMainMenuBtn->setModeHoveredOver();
-    else
-        exitToMainMenuBtn->setModeNoCursorInteraction();
-
-    if (buildBasicTowerBtn->isPointInRect(Coords(x, y)))
-        buildBasicTowerBtn->setModeHoveredOver();
-    else
-        buildBasicTowerBtn->setModeNoCursorInteraction();
-
-    if (buildIceTowerBtn->isPointInRect(Coords(x, y)))
-        buildIceTowerBtn->setModeHoveredOver();
-    else
-        buildIceTowerBtn->setModeNoCursorInteraction();
-
-    if (buildFireTowerBtn->isPointInRect(Coords(x, y)))
-        buildFireTowerBtn->setModeHoveredOver();
-    else
-        buildFireTowerBtn->setModeNoCursorInteraction();
-
-    if (spawnEnemyBtn->isPointInRect(Coords(x, y)))
-        spawnEnemyBtn->setModeHoveredOver();
-    else
-        spawnEnemyBtn->setModeNoCursorInteraction();
 }
 
 MenuOptionsCode BasicInterface::handlePressingOnButtons(){
@@ -190,6 +158,22 @@ MenuOptionsCode BasicInterface::handlePressingOnButtons(){
     }
 
     return code;
+}
+
+void BasicInterface::createButtonsVec(){
+    buttonsVec.push_back(exitToMainMenuBtn);
+    buttonsVec.push_back(buildBasicTowerBtn);
+    buttonsVec.push_back(buildIceTowerBtn);
+    buttonsVec.push_back(buildFireTowerBtn);
+    buttonsVec.push_back(spawnEnemyBtn);
+}
+
+void BasicInterface::createButtonsReturnCodesVec(){
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::QUIT_TO_MAIN_MENU);
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::NO_CHANGES);
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::NO_CHANGES);
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::NO_CHANGES);
+    buttonsReturnCodesVec.push_back(MenuOptionsCode::NO_CHANGES);
 }
 
 // file must be opened in binary mode. Using with other streams is not recommended(unknown result).

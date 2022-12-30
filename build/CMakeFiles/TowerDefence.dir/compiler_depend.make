@@ -451,8 +451,8 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o: ../src/Application.cpp \
   /usr/include/c++/11/pstl/glue_numeric_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
   ../src/abstractClasses/Interface.h \
-  ../src/UI/MenuOptionsCodes.h \
   ../src/UI/Button.h \
+  ../src/UI/MenuOptionsCodes.h \
   ../src/UI/MainMenu.h \
   ../src/UI/OptionsMenu.h \
   ../src/UI/LevelsMenu.h \
@@ -2180,14 +2180,6 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: ../src/UI/BasicInterfac
   /usr/include/SDL2/close_code.h \
   ../src/settings.h \
   ../src/abstractClasses/Interface.h \
-  ../src/Coords.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
-  ../src/Vector.h \
-  ../src/Renderer.h \
   /usr/include/c++/11/map \
   /usr/include/c++/11/bits/stl_tree.h \
   /usr/include/c++/11/ext/aligned_buffer.h \
@@ -2200,9 +2192,20 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: ../src/UI/BasicInterfac
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  ../src/UI/Button.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
+  ../src/Renderer.h \
   /usr/include/SDL2/SDL_ttf.h \
+  ../src/Coords.h \
+  ../src/Vector.h \
   ../src/Line.h \
   ../src/TexturesEnum.h \
+  ../src/Timers.h \
+  ../src/ObjectCursorInteractionsModes.h \
   ../src/UI/MenuOptionsCodes.h \
   ../src/entityManagers/TowerManager.h \
   ../src/towers/TowerTypes.h \
@@ -2213,7 +2216,6 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: ../src/UI/BasicInterfac
   /usr/include/c++/11/bits/stl_list.h \
   /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/bits/list.tcc \
-  ../src/Timers.h \
   ../src/abstractClasses/Enemy.h \
   ../src/game/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
@@ -2245,13 +2247,11 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: ../src/UI/BasicInterfac
   ../src/game/Wave.h \
   ../src/abstractClasses/Projectile.h \
   ../src/projectiles/BasicProjectile.h \
-  ../src/ObjectCursorInteractionsModes.h \
   ../src/towers/IceTower.h \
   ../src/abstractClasses/SplashwaveTower.h \
   ../src/projectiles/IceballProjectile.h \
   ../src/towers/FireTower.h \
-  ../src/abstractClasses/LaserTower.h \
-  ../src/UI/Button.h
+  ../src/abstractClasses/LaserTower.h
 
 CMakeFiles/TowerDefence.dir/src/UI/Button.cpp.o: ../src/UI/Button.cpp \
   /usr/include/stdc-predef.h \
@@ -2636,8 +2636,8 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/stdc-predef.h \
   ../src/UI/LevelsMenu.h \
   ../src/abstractClasses/Interface.h \
-  /usr/include/c++/11/queue \
-  /usr/include/c++/11/deque \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
   /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -2673,31 +2673,41 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/c++/11/new \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/memoryfwd.h \
-  /usr/include/c++/11/bits/stl_construct.h \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_function.h \
+  /usr/include/c++/11/backward/binders.h \
   /usr/include/c++/11/ext/alloc_traits.h \
   /usr/include/c++/11/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/stl_map.h \
   /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/array \
   /usr/include/c++/11/bits/range_access.h \
-  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/functional_hash.h \
   /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
-  /usr/include/c++/11/bits/stl_function.h \
-  /usr/include/c++/11/backward/binders.h \
   /usr/include/c++/11/bits/stl_queue.h \
-  /usr/include/c++/11/bits/uses_allocator.h \
-  ../src/Coords.h \
-  /usr/include/c++/11/iostream \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/iosfwd \
+  ../src/UI/Button.h \
+  /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
   /usr/include/wchar.h \
@@ -2714,12 +2724,6 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/c++/11/exception \
-  /usr/include/c++/11/bits/exception_ptr.h \
-  /usr/include/c++/11/bits/cxxabi_init_exception.h \
-  /usr/include/c++/11/typeinfo \
-  /usr/include/c++/11/bits/nested_exception.h \
-  /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/include/stdint.h \
@@ -2733,11 +2737,14 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/c++/11/clocale \
   /usr/include/locale.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/11/iosfwd \
   /usr/include/c++/11/cctype \
   /usr/include/ctype.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/ostream_insert.h \
+  /usr/include/c++/11/bits/cxxabi_forced.h \
+  /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
@@ -2769,11 +2776,6 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
-  /usr/include/c++/11/bits/locale_classes.h \
-  /usr/include/c++/11/string \
-  /usr/include/c++/11/bits/ostream_insert.h \
-  /usr/include/c++/11/bits/cxxabi_forced.h \
-  /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/string_view \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/ext/string_conversions.h \
@@ -2808,6 +2810,16 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/bits/locale_classes.tcc \
   /usr/include/c++/11/system_error \
   /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
@@ -2824,14 +2836,24 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
   /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/ostream \
   /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
+  /usr/local/include/SDL2/SDL.h \
+  /usr/local/include/SDL2/SDL_main.h \
+  /usr/local/include/SDL2/SDL_stdinc.h \
+  /usr/local/include/SDL2/SDL_config.h \
+  /usr/local/include/SDL2/SDL_platform.h \
+  /usr/local/include/SDL2/begin_code.h \
+  /usr/local/include/SDL2/close_code.h \
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/inttypes.h \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
@@ -2858,32 +2880,6 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
-  ../src/settings.h \
-  ../src/Vector.h \
-  ../src/Renderer.h \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/bits/node_handle.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /usr/include/c++/11/bits/erase_if.h \
-  /usr/local/include/SDL2/SDL.h \
-  /usr/local/include/SDL2/SDL_main.h \
-  /usr/local/include/SDL2/SDL_stdinc.h \
-  /usr/local/include/SDL2/SDL_config.h \
-  /usr/local/include/SDL2/SDL_platform.h \
-  /usr/local/include/SDL2/begin_code.h \
-  /usr/local/include/SDL2/close_code.h \
-  /usr/include/c++/11/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/inttypes.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
   /usr/local/include/SDL2/SDL_assert.h \
   /usr/local/include/SDL2/SDL_atomic.h \
@@ -3017,13 +3013,17 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  ../src/Renderer.h \
+  /usr/include/c++/11/iostream \
   /usr/include/SDL2/SDL_ttf.h \
+  ../src/settings.h \
+  ../src/Coords.h \
+  ../src/Vector.h \
   ../src/Line.h \
   ../src/TexturesEnum.h \
-  ../src/UI/MenuOptionsCodes.h \
   ../src/Timers.h \
-  ../src/UI/Button.h \
-  ../src/ObjectCursorInteractionsModes.h
+  ../src/ObjectCursorInteractionsModes.h \
+  ../src/UI/MenuOptionsCodes.h
 
 CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: ../src/UI/MainMenu.cpp \
   /usr/include/stdc-predef.h \
@@ -3220,12 +3220,35 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: ../src/UI/MainMenu.cpp \
   /usr/include/c++/11/bits/uses_allocator.h \
   ../src/settings.h \
   ../src/abstractClasses/Interface.h \
-  ../src/Coords.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  ../src/UI/Button.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
+  /usr/local/include/SDL2/SDL.h \
+  /usr/local/include/SDL2/SDL_main.h \
+  /usr/local/include/SDL2/SDL_stdinc.h \
+  /usr/local/include/SDL2/SDL_config.h \
+  /usr/local/include/SDL2/SDL_platform.h \
+  /usr/local/include/SDL2/begin_code.h \
+  /usr/local/include/SDL2/close_code.h \
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/inttypes.h \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
@@ -3252,31 +3275,6 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: ../src/UI/MainMenu.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
-  ../src/Vector.h \
-  ../src/Renderer.h \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/bits/node_handle.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /usr/include/c++/11/bits/erase_if.h \
-  /usr/local/include/SDL2/SDL.h \
-  /usr/local/include/SDL2/SDL_main.h \
-  /usr/local/include/SDL2/SDL_stdinc.h \
-  /usr/local/include/SDL2/SDL_config.h \
-  /usr/local/include/SDL2/SDL_platform.h \
-  /usr/local/include/SDL2/begin_code.h \
-  /usr/local/include/SDL2/close_code.h \
-  /usr/include/c++/11/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/inttypes.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
   /usr/local/include/SDL2/SDL_assert.h \
   /usr/local/include/SDL2/SDL_atomic.h \
@@ -3410,20 +3408,22 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: ../src/UI/MainMenu.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  ../src/Renderer.h \
   /usr/include/SDL2/SDL_ttf.h \
+  ../src/Coords.h \
+  ../src/Vector.h \
   ../src/Line.h \
   ../src/TexturesEnum.h \
-  ../src/UI/MenuOptionsCodes.h \
-  ../src/UI/Button.h \
   ../src/Timers.h \
-  ../src/ObjectCursorInteractionsModes.h
+  ../src/ObjectCursorInteractionsModes.h \
+  ../src/UI/MenuOptionsCodes.h
 
 CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp \
   /usr/include/stdc-predef.h \
   ../src/UI/OptionsMenu.h \
   ../src/abstractClasses/Interface.h \
-  /usr/include/c++/11/queue \
-  /usr/include/c++/11/deque \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
   /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -3459,31 +3459,41 @@ CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp 
   /usr/include/c++/11/new \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/memoryfwd.h \
-  /usr/include/c++/11/bits/stl_construct.h \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_function.h \
+  /usr/include/c++/11/backward/binders.h \
   /usr/include/c++/11/ext/alloc_traits.h \
   /usr/include/c++/11/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/stl_map.h \
   /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/array \
   /usr/include/c++/11/bits/range_access.h \
-  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/functional_hash.h \
   /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
-  /usr/include/c++/11/bits/stl_function.h \
-  /usr/include/c++/11/backward/binders.h \
   /usr/include/c++/11/bits/stl_queue.h \
-  /usr/include/c++/11/bits/uses_allocator.h \
-  ../src/Coords.h \
-  /usr/include/c++/11/iostream \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/iosfwd \
+  ../src/UI/Button.h \
+  /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
   /usr/include/wchar.h \
@@ -3500,12 +3510,6 @@ CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp 
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/c++/11/exception \
-  /usr/include/c++/11/bits/exception_ptr.h \
-  /usr/include/c++/11/bits/cxxabi_init_exception.h \
-  /usr/include/c++/11/typeinfo \
-  /usr/include/c++/11/bits/nested_exception.h \
-  /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/include/stdint.h \
@@ -3519,11 +3523,14 @@ CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp 
   /usr/include/c++/11/clocale \
   /usr/include/locale.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/11/iosfwd \
   /usr/include/c++/11/cctype \
   /usr/include/ctype.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/ostream_insert.h \
+  /usr/include/c++/11/bits/cxxabi_forced.h \
+  /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
@@ -3555,11 +3562,6 @@ CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp 
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
-  /usr/include/c++/11/bits/locale_classes.h \
-  /usr/include/c++/11/string \
-  /usr/include/c++/11/bits/ostream_insert.h \
-  /usr/include/c++/11/bits/cxxabi_forced.h \
-  /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/string_view \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/ext/string_conversions.h \
@@ -3594,6 +3596,16 @@ CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp 
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/bits/locale_classes.tcc \
   /usr/include/c++/11/system_error \
   /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
@@ -3610,14 +3622,24 @@ CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp 
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
   /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/ostream \
   /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
+  /usr/local/include/SDL2/SDL.h \
+  /usr/local/include/SDL2/SDL_main.h \
+  /usr/local/include/SDL2/SDL_stdinc.h \
+  /usr/local/include/SDL2/SDL_config.h \
+  /usr/local/include/SDL2/SDL_platform.h \
+  /usr/local/include/SDL2/begin_code.h \
+  /usr/local/include/SDL2/close_code.h \
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/inttypes.h \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
@@ -3644,32 +3666,6 @@ CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp 
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
-  ../src/settings.h \
-  ../src/Vector.h \
-  ../src/Renderer.h \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/bits/node_handle.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /usr/include/c++/11/bits/erase_if.h \
-  /usr/local/include/SDL2/SDL.h \
-  /usr/local/include/SDL2/SDL_main.h \
-  /usr/local/include/SDL2/SDL_stdinc.h \
-  /usr/local/include/SDL2/SDL_config.h \
-  /usr/local/include/SDL2/SDL_platform.h \
-  /usr/local/include/SDL2/begin_code.h \
-  /usr/local/include/SDL2/close_code.h \
-  /usr/include/c++/11/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/inttypes.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
   /usr/local/include/SDL2/SDL_assert.h \
   /usr/local/include/SDL2/SDL_atomic.h \
@@ -3803,13 +3799,17 @@ CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp 
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  ../src/Renderer.h \
+  /usr/include/c++/11/iostream \
   /usr/include/SDL2/SDL_ttf.h \
+  ../src/settings.h \
+  ../src/Coords.h \
+  ../src/Vector.h \
   ../src/Line.h \
   ../src/TexturesEnum.h \
-  ../src/UI/MenuOptionsCodes.h \
   ../src/Timers.h \
-  ../src/UI/Button.h \
-  ../src/ObjectCursorInteractionsModes.h
+  ../src/ObjectCursorInteractionsModes.h \
+  ../src/UI/MenuOptionsCodes.h
 
 CMakeFiles/TowerDefence.dir/src/Vector.cpp.o: ../src/Vector.cpp \
   /usr/include/stdc-predef.h \
@@ -4390,8 +4390,8 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o: ../src/abstractClas
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstractClasses/Interface.cpp \
   /usr/include/stdc-predef.h \
   ../src/abstractClasses/Interface.h \
-  /usr/include/c++/11/queue \
-  /usr/include/c++/11/deque \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
   /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -4427,31 +4427,41 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/c++/11/new \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/memoryfwd.h \
-  /usr/include/c++/11/bits/stl_construct.h \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_function.h \
+  /usr/include/c++/11/backward/binders.h \
   /usr/include/c++/11/ext/alloc_traits.h \
   /usr/include/c++/11/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/stl_map.h \
   /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/array \
   /usr/include/c++/11/bits/range_access.h \
-  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/functional_hash.h \
   /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
-  /usr/include/c++/11/bits/stl_function.h \
-  /usr/include/c++/11/backward/binders.h \
   /usr/include/c++/11/bits/stl_queue.h \
-  /usr/include/c++/11/bits/uses_allocator.h \
-  ../src/Coords.h \
-  /usr/include/c++/11/iostream \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/iosfwd \
+  ../src/UI/Button.h \
+  /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
   /usr/include/wchar.h \
@@ -4468,12 +4478,6 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/c++/11/exception \
-  /usr/include/c++/11/bits/exception_ptr.h \
-  /usr/include/c++/11/bits/cxxabi_init_exception.h \
-  /usr/include/c++/11/typeinfo \
-  /usr/include/c++/11/bits/nested_exception.h \
-  /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/include/stdint.h \
@@ -4487,11 +4491,14 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/c++/11/clocale \
   /usr/include/locale.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/11/iosfwd \
   /usr/include/c++/11/cctype \
   /usr/include/ctype.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/ostream_insert.h \
+  /usr/include/c++/11/bits/cxxabi_forced.h \
+  /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
@@ -4523,11 +4530,6 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
-  /usr/include/c++/11/bits/locale_classes.h \
-  /usr/include/c++/11/string \
-  /usr/include/c++/11/bits/ostream_insert.h \
-  /usr/include/c++/11/bits/cxxabi_forced.h \
-  /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/string_view \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/ext/string_conversions.h \
@@ -4562,6 +4564,16 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/bits/locale_classes.tcc \
   /usr/include/c++/11/system_error \
   /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
@@ -4578,14 +4590,24 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
   /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/ostream \
   /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
+  /usr/local/include/SDL2/SDL.h \
+  /usr/local/include/SDL2/SDL_main.h \
+  /usr/local/include/SDL2/SDL_stdinc.h \
+  /usr/local/include/SDL2/SDL_config.h \
+  /usr/local/include/SDL2/SDL_platform.h \
+  /usr/local/include/SDL2/begin_code.h \
+  /usr/local/include/SDL2/close_code.h \
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/inttypes.h \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
@@ -4612,32 +4634,6 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
-  ../src/settings.h \
-  ../src/Vector.h \
-  ../src/Renderer.h \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/bits/node_handle.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /usr/include/c++/11/bits/erase_if.h \
-  /usr/local/include/SDL2/SDL.h \
-  /usr/local/include/SDL2/SDL_main.h \
-  /usr/local/include/SDL2/SDL_stdinc.h \
-  /usr/local/include/SDL2/SDL_config.h \
-  /usr/local/include/SDL2/SDL_platform.h \
-  /usr/local/include/SDL2/begin_code.h \
-  /usr/local/include/SDL2/close_code.h \
-  /usr/include/c++/11/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/inttypes.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
   /usr/local/include/SDL2/SDL_assert.h \
   /usr/local/include/SDL2/SDL_atomic.h \
@@ -4771,9 +4767,16 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  ../src/Renderer.h \
+  /usr/include/c++/11/iostream \
   /usr/include/SDL2/SDL_ttf.h \
+  ../src/settings.h \
+  ../src/Coords.h \
+  ../src/Vector.h \
   ../src/Line.h \
   ../src/TexturesEnum.h \
+  ../src/Timers.h \
+  ../src/ObjectCursorInteractionsModes.h \
   ../src/UI/MenuOptionsCodes.h
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/LaserTower.cpp.o: ../src/abstractClasses/LaserTower.cpp \
@@ -9111,8 +9114,8 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   /usr/include/c++/11/pstl/glue_numeric_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
   ../src/abstractClasses/Interface.h \
-  ../src/UI/MenuOptionsCodes.h \
-  ../src/UI/Button.h
+  ../src/UI/Button.h \
+  ../src/UI/MenuOptionsCodes.h
 
 CMakeFiles/TowerDefence.dir/src/game/Grid.cpp.o: ../src/game/Grid.cpp \
   /usr/include/stdc-predef.h \
@@ -10886,8 +10889,8 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/pstl/glue_numeric_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
   ../src/abstractClasses/Interface.h \
-  ../src/UI/MenuOptionsCodes.h \
   ../src/UI/Button.h \
+  ../src/UI/MenuOptionsCodes.h \
   ../src/UI/MainMenu.h \
   ../src/UI/OptionsMenu.h \
   ../src/UI/LevelsMenu.h \

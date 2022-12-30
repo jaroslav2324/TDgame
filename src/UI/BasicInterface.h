@@ -43,6 +43,12 @@ class BasicInterface:  public Interface{
     TowerManager * towerManager = nullptr;
     EnemyManager* enemyManager = nullptr;
 
-    void handleHoveringOverButtons();
+    //TODO refactor
+        // implement if you want to iterate over buttons
+    virtual void createButtonsVec();
+    // implement if you want to return different options codes while iterating over buttons
+    virtual void createButtonsReturnCodesVec();
+
+    //void handleHoveringOverButtons();
     MenuOptionsCode handlePressingOnButtons();
 };

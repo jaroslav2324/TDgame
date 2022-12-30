@@ -1,12 +1,17 @@
 #pragma once
 
+#include <map>
+#include <vector>
 #include <queue>
 
+#include "../UI/Button.h"
 #include "../Coords.h"
 #include "../Renderer.h"
 #include "../UI/MenuOptionsCodes.h"
 
+using std::vector;
 using std::queue;
+using std::map;
 
 class Interface{
     public:
@@ -25,6 +30,18 @@ class Interface{
 
     queue<Coords> savedMouseClicks;
 
-    virtual void handleHoveringOverButtons() = 0;
-    virtual MenuOptionsCode handlePressingOnButtons() = 0;
+    // Use for iteration over buttons
+    vector<Button*> buttonsVec;
+    // Return codes if button is pressed. Use for iteration over buttons
+    vector<MenuOptionsCode> buttonsReturnCodesVec;
+
+    //TODO add renderBtns
+
+    // implement if you want to iterate over buttons
+    virtual void createButtonsVec() = 0;
+    // implement if you want to return different options codes while iterating over buttons
+    virtual void createButtonsReturnCodesVec() = 0;
+
+    virtual void handleHoveringOverButtons();
+    virtual MenuOptionsCode handlePressingOnButtons();
 };

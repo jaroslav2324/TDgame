@@ -82,7 +82,6 @@ void Application::loop(){
                 case OPEN_CHOOSE_LEVEL_MENU:
                 {
                     activeSceneCode = ActiveScenesCodes::CHOOSE_LEVEL_MENU;
-                    loadChosenLevel();
                     break;
                 }
 
@@ -156,6 +155,7 @@ void Application::loop(){
                 //TODO refactor
                 default:
                     setChosenLevel(code);
+                    loadChosenLevel();
                     activeSceneCode = ActiveScenesCodes::GAME_LEVEL;
                     break;
                 }
