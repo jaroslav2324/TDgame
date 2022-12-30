@@ -455,6 +455,7 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/UI/MenuOptionsCodes.h
  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
  /home/jaros/gitProjects/c++/TDgame/src/UI/MainMenu.h
+ /home/jaros/gitProjects/c++/TDgame/src/UI/ActiveScenesCodes.h
 
 CMakeFiles/TowerDefence.dir/src/Coords.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/Coords.cpp
@@ -10128,6 +10129,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/UI/MenuOptionsCodes.h
  /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
  /home/jaros/gitProjects/c++/TDgame/src/UI/MainMenu.h
+ /home/jaros/gitProjects/c++/TDgame/src/UI/ActiveScenesCodes.h
 
 CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.cpp

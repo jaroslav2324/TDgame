@@ -13,6 +13,7 @@
 #include "game/GameLevel.h"
 #include "UI/MainMenu.h"
 #include "UI/MenuOptionsCodes.h"
+#include "UI/ActiveScenesCodes.h"
 
 using std::cout;
 using std::endl;
@@ -27,7 +28,8 @@ class Application{
     private:
     Renderer* renderer = nullptr;
 
-    bool mainMenuOn = true;
+    ActiveScenesCodes activeSceneCode = ActiveScenesCodes::MAIN_MENU;
+
     MainMenu* mainMenu = nullptr;
     GameLevel* gameLevel = nullptr;
 

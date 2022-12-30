@@ -47,6 +47,7 @@ Application::~Application(){
 void Application::loop(){
 
     int fpsCount = 0;
+    // counts each second
     PeriodicTimer fpsCounterTimer(1000);
 
     bool quit = false;
@@ -70,9 +71,10 @@ void Application::loop(){
                         if (DEBUG_CONSOLE_OUTPUT_ON)
                             cout << "Mouse click registered at " << mouseCoords;
                         
-                        if (mainMenuOn)
+                        if (activeSceneCode == ActiveScenesCodes::MAIN_MENU)
                             mainMenu->saveMouseClickCoords(mouseCoords);
-                        else
+                        //TODO add options menu and choose level menu
+                        else if (activeSceneCode == ActiveScenesCodes::GAME_LEVEL)
                             gameLevel->saveMouseClickCoords(mouseCoords);
                     }      
             }
@@ -82,7 +84,7 @@ void Application::loop(){
 
             fpsCount++;
 
-            if (mainMenuOn){
+            if (activeSceneCode == ActiveScenesCodes::MAIN_MENU){
 
                 MenuOptionsCode code;
                 code = mainMenu->makeFrameTurn();
@@ -92,7 +94,7 @@ void Application::loop(){
 
                 case START_GAME:
                 {
-                    mainMenuOn = false;
+                    activeSceneCode = ActiveScenesCodes::GAME_LEVEL;
 
                     string levelsFolderPath = "../data/levels/";
                     string levelPath;
@@ -146,7 +148,7 @@ void Application::loop(){
                 }
             }
 
-            else{  
+            else if (activeSceneCode == ActiveScenesCodes::GAME_LEVEL){  
                 MenuOptionsCode code;
                 code  = gameLevel->makeFrameTurn();
                 gameLevel->renderAll(renderer);
@@ -154,7 +156,7 @@ void Application::loop(){
                 switch (code)
                 {
                 case QUIT_TO_MAIN_MENU:
-                    mainMenuOn = true;
+                    activeSceneCode = ActiveScenesCodes::MAIN_MENU;
                     if (gameLevel != nullptr){
                         delete gameLevel;
                         gameLevel = nullptr;

@@ -453,7 +453,8 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o: ../src/Application.cpp \
   ../src/abstractClasses/Interface.h \
   ../src/UI/MenuOptionsCodes.h \
   ../src/UI/Button.h \
-  ../src/UI/MainMenu.h
+  ../src/UI/MainMenu.h \
+  ../src/UI/ActiveScenesCodes.h
 
 CMakeFiles/TowerDefence.dir/src/Coords.cpp.o: ../src/Coords.cpp \
   /usr/include/stdc-predef.h \
@@ -10099,7 +10100,8 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   ../src/abstractClasses/Interface.h \
   ../src/UI/MenuOptionsCodes.h \
   ../src/UI/Button.h \
-  ../src/UI/MainMenu.h
+  ../src/UI/MainMenu.h \
+  ../src/UI/ActiveScenesCodes.h
 
 CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: ../src/towers/BasicTower.cpp \
   /usr/include/stdc-predef.h \
@@ -11655,6 +11657,8 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vnniintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vbmi2vlintrin.h:
+
+../src/UI/ActiveScenesCodes.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vpopcntdqintrin.h:
 
