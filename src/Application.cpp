@@ -68,7 +68,7 @@ void Application::loop(){
                         SDL_GetMouseState(&x, &y);
                         Coords mouseCoords(x, y);
 
-                        if (DEBUG_CONSOLE_OUTPUT_ON)
+                        if (DEBUG_CONSOLE_OUTPUT_ON && DEBUG_OUTPUT_MOUSE_CLICKS)
                             cout << "Mouse click registered at " << mouseCoords;
                         
                         if (activeSceneCode == ActiveScenesCodes::MAIN_MENU)

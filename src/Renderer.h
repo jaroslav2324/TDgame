@@ -21,6 +21,7 @@ using std::endl;
 class Renderer{
 
     public:
+    //TODO separate loading textures for levels and menus
     Renderer();
     ~Renderer();
 

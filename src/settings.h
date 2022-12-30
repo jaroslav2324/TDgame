@@ -2,6 +2,7 @@
 
 #define DEBUG_CONSOLE_OUTPUT_ON true
 #define DEBUG_OUTPUT_FPS false
+#define DEBUG_OUTPUT_MOUSE_CLICKS false
 #define LOADING_LEVELS_ON true
 #define SAVING_LEVELS_ON false
 
