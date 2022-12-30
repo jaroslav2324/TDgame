@@ -27,6 +27,8 @@ class Application{
     void loop();
 
     private:
+    bool quitApp = false;
+
     Renderer* renderer = nullptr;
 
     ActiveScenesCodes activeSceneCode = ActiveScenesCodes::MAIN_MENU;
@@ -38,4 +40,9 @@ class Application{
     PeriodicTimer* fpsTimer = nullptr;
 
     LevelsEnum numChosenLevel = FIRST_LEVEL;
+
+    void handleEvents();
+
+    void loadChosenLevel();
+    void unloadLevel();
 };

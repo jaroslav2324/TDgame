@@ -56,17 +56,101 @@ void Application::loop(){
     int fpsCount = 0;
     // counts each second
     PeriodicTimer fpsCounterTimer(1000);
+    MenuOptionsCode code;
 
-    bool quit = false;
+    while (!quitApp){
 
-    while (!quit){
+        handleEvents();
 
-        // handle events
+        if (fpsTimer->tickIfNeeded()){
+
+            fpsCount++;
+
+            if (activeSceneCode == ActiveScenesCodes::MAIN_MENU){
+
+                code = mainMenu->makeFrameTurn();
+                mainMenu->render(renderer);
+
+                switch (code){
+
+                case START_GAME:
+                {
+                    activeSceneCode = ActiveScenesCodes::GAME_LEVEL;
+                    loadChosenLevel();
+                    break;
+                }
+
+                case OPEN_OPTIONS:
+                {
+                    activeSceneCode = ActiveScenesCodes::OPTIONS_MENU;
+                    break;
+                }
+
+                case QUIT_TO_DESKTOP:
+                {
+                    quitApp = true;
+                    break;
+                }
+
+                default:
+                    break;
+                }
+            }
+
+            else if (activeSceneCode == ActiveScenesCodes::OPTIONS_MENU){
+
+                code  = optionsMenu->makeFrameTurn();
+                optionsMenu->render(renderer);
+                
+                switch (code){
+
+                case QUIT_TO_MAIN_MENU:
+                {
+                    activeSceneCode = ActiveScenesCodes::MAIN_MENU;                    
+                    break;
+                }
+                
+                default:
+                    break;
+                }
+            }
+
+            else if (activeSceneCode == ActiveScenesCodes::GAME_LEVEL){  
+
+                code  = gameLevel->makeFrameTurn();
+                gameLevel->renderAll(renderer);
+                
+                switch (code){
+
+                case QUIT_TO_MAIN_MENU:
+
+                    activeSceneCode = ActiveScenesCodes::MAIN_MENU;
+                    unloadLevel();
+                    break;
+                
+                default:
+                    break;
+                }
+            }
+
+            renderer->renderPresent();
+        }
+
+        if (fpsCounterTimer.tickIfNeeded()){
+            if (DEBUG_CONSOLE_OUTPUT_ON && DEBUG_OUTPUT_FPS)
+                cout << "FPS: " << fpsCount << endl;
+            fpsCount = 0;
+        }
+	}
+}
+
+void Application::handleEvents(){
+
         SDL_Event event;
         while(SDL_PollEvent(&event)){
             switch (event.type) {
                 case SDL_QUIT:    
-                    quit = true;        
+                    quitApp = true;        
                     break;
                 case SDL_MOUSEBUTTONDOWN:
                     if (event.button.button == SDL_BUTTON_LEFT){
@@ -88,128 +172,54 @@ void Application::loop(){
                     }      
             }
         }
+}
 
-        if (fpsTimer->tickIfNeeded()){
+void Application::loadChosenLevel(){
 
-            fpsCount++;
+    string levelsFolderPath = "../data/levels/";
+    string levelPath;
 
-            if (activeSceneCode == ActiveScenesCodes::MAIN_MENU){
+    switch (numChosenLevel){
+    case FIRST_LEVEL:
+        levelPath = levelsFolderPath + "level1.bin";
+        break;
 
-                MenuOptionsCode code;
-                code = mainMenu->makeFrameTurn();
-                mainMenu->render(renderer);
+    default:
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            cout << "There is no level with such number" << endl;
+        levelPath = levelsFolderPath + "level1.bin";
+        break;
+    }
 
-                switch (code){
+    gameLevel = new GameLevel();
 
-                case START_GAME:
-                {
-                    activeSceneCode = ActiveScenesCodes::GAME_LEVEL;
+    std::ofstream levelFileOut;
+    levelFileOut.open(levelPath, std::ios::binary);
 
-                    string levelsFolderPath = "../data/levels/";
-                    string levelPath;
+    //TODO move
+    gameLevel->saveToBinaryFile(levelFileOut);
 
-                    switch (numChosenLevel){
-                    case FIRST_LEVEL:
-                        levelPath = levelsFolderPath + "level1.bin";
-                        break;
-                    
-                    default:
-                        if (DEBUG_CONSOLE_OUTPUT_ON)
-                            cout << "There is no level with such number" << endl;
-                        levelPath = levelsFolderPath + "level1.bin";
-                        break;
-                    }
+    if (DEBUG_CONSOLE_OUTPUT_ON && SAVING_LEVELS_ON)
+        cout << "Level saved with path " << levelPath << endl; 
 
-                    gameLevel = new GameLevel();
+    levelFileOut.close();
 
-                    std::ofstream levelFileOut;
-                    levelFileOut.open(levelPath, std::ios::binary);
+    std::ifstream levelFile;
+    levelFile.open(levelPath, std::ios::binary);
+    if (!levelFile){
+        //TODO handle
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            cout << "file with path " << levelPath << " does not exist" << endl;
+    }
 
-                    //TODO move
-                    gameLevel->saveToBinaryFile(levelFileOut);
+    gameLevel->loadFromBinaryFile(levelFile);
 
-                    if (DEBUG_CONSOLE_OUTPUT_ON && SAVING_LEVELS_ON)
-                        cout << "Level saved with path " << levelPath << endl; 
+}
 
-                    levelFileOut.close();
+void Application::unloadLevel(){
 
-                    std::ifstream levelFile;
-                    levelFile.open(levelPath, std::ios::binary);
-                    if (!levelFile){
-                        //TODO handle
-                        if (DEBUG_CONSOLE_OUTPUT_ON)
-                            cout << "file with path " << levelPath << " does not exist" << endl;
-                    }
-
-                    gameLevel->loadFromBinaryFile(levelFile);
-
-                    break;
-                }
-
-                case OPEN_OPTIONS:
-                {
-                    activeSceneCode = ActiveScenesCodes::OPTIONS_MENU;
-                    break;
-                }
-
-                case QUIT_TO_DESKTOP:
-                {
-                    quit = true;
-                    break;
-                }
-
-                default:
-                    break;
-                }
-            }
-
-            else if (activeSceneCode == ActiveScenesCodes::OPTIONS_MENU){
-                MenuOptionsCode code;
-                code  = optionsMenu->makeFrameTurn();
-                optionsMenu->render(renderer);
-                
-                switch (code){
-                    
-                case QUIT_TO_MAIN_MENU:
-                {
-                    activeSceneCode = ActiveScenesCodes::MAIN_MENU;                    
-                    break;
-                }
-                
-                default:
-                    break;
-                }
-            }
-
-            else if (activeSceneCode == ActiveScenesCodes::GAME_LEVEL){  
-                MenuOptionsCode code;
-                code  = gameLevel->makeFrameTurn();
-                gameLevel->renderAll(renderer);
-                
-                switch (code)
-                {
-                case QUIT_TO_MAIN_MENU:
-                    activeSceneCode = ActiveScenesCodes::MAIN_MENU;
-                    if (gameLevel != nullptr){
-                        delete gameLevel;
-                        gameLevel = nullptr;
-                    }
-                    
-                    break;
-                
-                default:
-                    break;
-                }
-                
-            }
-
-            renderer->renderPresent();
-        }
-
-        if (fpsCounterTimer.tickIfNeeded()){
-            if (DEBUG_CONSOLE_OUTPUT_ON && DEBUG_OUTPUT_FPS)
-                cout << "FPS: " << fpsCount << endl;
-            fpsCount = 0;
-        }
-	}
+    if (gameLevel != nullptr){
+        delete gameLevel;
+        gameLevel = nullptr;
+    }
 }
