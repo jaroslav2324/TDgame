@@ -16,6 +16,8 @@ class BasicEnemy: public Enemy{
         maxSpeed = 100;
 
         damageToBase = 1;
+
+        enemyType = EnemyTypes::FLYING_ENEMY;
     };
 
     ~BasicEnemy();

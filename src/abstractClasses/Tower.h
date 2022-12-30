@@ -74,6 +74,7 @@ protected:
 
     EnemyManager* enemyManager = nullptr;
     Enemy* aimedEnemy = nullptr;
+    EnemyTypes aimedEnemiesType;
 
     TexturesEnumeration towerTextureType;
 

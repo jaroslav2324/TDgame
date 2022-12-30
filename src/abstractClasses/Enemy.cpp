@@ -217,3 +217,7 @@ int Enemy::getNumNextWaypoint(){
 Coords Enemy::getCoords(){
     return currentCoords;
 }
+
+EnemyTypes Enemy::getType(){
+    return enemyType;
+}

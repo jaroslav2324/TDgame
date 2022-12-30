@@ -11,6 +11,7 @@
 #include "../game/Base.h"
 #include "../game/Portal.h"
 #include "../approximateComparison.h"
+#include "../enemies/EnemyTypes.h"
 
 using std::string;
 using std::cout;
@@ -39,6 +40,7 @@ public:
     
     void render(Renderer* renderer);
 
+    EnemyTypes getType();
     Coords getCoords();
     int getNumNextWaypoint();
 
@@ -66,6 +68,7 @@ protected:
     Portal * portal = nullptr;
 
     TexturesEnumeration enemyTextureType;
+    EnemyTypes enemyType;
 
 /*baseSpeed is multiplyed by timePeriodOfMoving. The last value is given in milliseconds*/
     void MoveToNextWaypoint(double timePeriodOfMoving); 

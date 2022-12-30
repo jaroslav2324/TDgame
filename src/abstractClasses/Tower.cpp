@@ -85,11 +85,11 @@ void Tower::checkAndLevelUp(){
 
 
 void Tower::findFirstEnemyInRadius(){
-    aimedEnemy = enemyManager->findFirstEnemyForTower(towerCoords, radius);
+    aimedEnemy = enemyManager->findFirstEnemyForTower(towerCoords, radius, aimedEnemiesType);
 }
 
 void Tower::findNearestEnemyInRadius(){
-    aimedEnemy = enemyManager->findNearestEnemyForTower(towerCoords, radius);
+    aimedEnemy = enemyManager->findNearestEnemyForTower(towerCoords, radius, aimedEnemiesType);
 }
 
 void Tower::setDestroyed(){

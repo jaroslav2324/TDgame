@@ -5,7 +5,7 @@
 #include <list>
 
 #include "../settings.h"
-#include "../enemies/EnemyTypes.h"
+#include "../enemies/EnemyKinds.h"
 
 using std::list;
 using std::ostream;
@@ -23,7 +23,7 @@ struct Wave{
     int size();
 
     //TODO  add countdown before each enemy
-    list<EnemyTypes> listEnemiesTypes;
+    list<EnemyKinds> listEnemiesTypes;
     double spawnPeriod;
     // in ms
     double countdownBeforeWave = 10000;

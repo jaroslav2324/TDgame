@@ -108,7 +108,7 @@ void Wave::loadFromBinaryFile(istream& inputStream){
     // load spawnning period
     inputStream.read((char*)&spawnPeriod, sizeof(spawnPeriod));
 
-    EnemyTypes type;
+    EnemyKinds type;
     // load list of enemies types
     for (auto enemyType: listEnemiesTypes){
         inputStream.read((char*)&type, sizeof(type));

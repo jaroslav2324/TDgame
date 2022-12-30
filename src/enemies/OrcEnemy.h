@@ -16,5 +16,7 @@ class OrcEnemy: public Enemy{
         maxSpeed = 50;
 
         damageToBase = 2;
+
+        enemyType = EnemyTypes::GROUND_ENEMY;
     };
 };

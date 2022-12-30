@@ -1,9 +1,13 @@
 #include "SplashwaveTower.h"
 
-SplashwaveTower::SplashwaveTower(EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){}
+SplashwaveTower::SplashwaveTower(EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){
+    aimedEnemiesType = EnemyTypes::FLYING_ENEMY;
+}
 
 SplashwaveTower::SplashwaveTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords):
-Tower(enemyManager, damage, radius, attackSpeed, level, coords){}
+Tower(enemyManager, damage, radius, attackSpeed, level, coords){
+    aimedEnemiesType = EnemyTypes::FLYING_ENEMY;
+}
 
 SplashwaveTower::~SplashwaveTower(){
     if (attackTimer != nullptr){
@@ -67,7 +71,7 @@ void SplashwaveTower::render(Renderer* renderer){
 }
 
 void SplashwaveTower::findAllEnemiesInRadius(){
-    listOfAimedEnemies = enemyManager->findAllEnemiesForTower(towerCoords, radius);
+    listOfAimedEnemies = enemyManager->findAllEnemiesForTower(towerCoords, radius, aimedEnemiesType);
 }
 
 void SplashwaveTower::renderSplashWave(Renderer* renderer){

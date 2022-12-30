@@ -1,7 +1,7 @@
-#pragma once
-//TODO expand enemy types
+#pragma once 
 
-enum EnemyTypes{
-    BASIC_ENEMY,
-    ORC_ENEMY
+enum class EnemyTypes{
+    ANY_TYPE_ENEMY,
+    GROUND_ENEMY,
+    FLYING_ENEMY
 };

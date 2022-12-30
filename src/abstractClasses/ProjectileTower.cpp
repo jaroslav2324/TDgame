@@ -1,9 +1,13 @@
 #include "ProjectileTower.h"
 
-ProjectileTower::ProjectileTower(EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){}
+ProjectileTower::ProjectileTower(EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){
+    aimedEnemiesType = EnemyTypes::GROUND_ENEMY;
+}
 
 ProjectileTower::ProjectileTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords):
-Tower(enemyManager, damage, radius, attackSpeed, level, coords){}
+Tower(enemyManager, damage, radius, attackSpeed, level, coords){
+    aimedEnemiesType = EnemyTypes::GROUND_ENEMY;
+}
 
 ProjectileTower::~ProjectileTower(){
     if (attackTimer != nullptr){

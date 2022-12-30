@@ -404,7 +404,7 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o
  /usr/include/c++/11/bits/stl_list.h
  /usr/include/c++/11/bits/allocated_ptr.h
  /usr/include/c++/11/bits/list.tcc
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/EnemiesWay.h
@@ -2241,7 +2241,7 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o
  /usr/include/c++/11/bits/locale_conv.h
  /usr/include/c++/11/bits/unique_ptr.h
  /usr/include/c++/11/bits/quoted_string.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
@@ -4407,7 +4407,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/LaserTower.cpp.o
  /usr/include/c++/11/bits/locale_conv.h
  /usr/include/c++/11/bits/unique_ptr.h
  /usr/include/c++/11/bits/quoted_string.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
@@ -5216,7 +5216,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.o
  /usr/include/c++/11/bits/locale_conv.h
  /usr/include/c++/11/bits/unique_ptr.h
  /usr/include/c++/11/bits/quoted_string.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
@@ -5636,7 +5636,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/SplashwaveTower.cpp.o
  /usr/include/c++/11/bits/locale_conv.h
  /usr/include/c++/11/bits/unique_ptr.h
  /usr/include/c++/11/bits/quoted_string.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
@@ -6056,7 +6056,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o
  /usr/include/c++/11/bits/locale_conv.h
  /usr/include/c++/11/bits/unique_ptr.h
  /usr/include/c++/11/bits/quoted_string.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
@@ -6492,7 +6492,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o
  /usr/include/c++/11/bits/allocated_ptr.h
  /usr/include/c++/11/ext/aligned_buffer.h
  /usr/include/c++/11/bits/list.tcc
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/Timers.h
  /usr/include/c++/11/iostream
@@ -7111,7 +7111,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o
  /usr/include/c++/11/bits/locale_conv.h
  /usr/include/c++/11/bits/unique_ptr.h
  /usr/include/c++/11/bits/quoted_string.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
@@ -8268,7 +8268,7 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o
  /usr/include/c++/11/bits/allocated_ptr.h
  /usr/include/c++/11/ext/aligned_buffer.h
  /usr/include/c++/11/bits/list.tcc
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h
  /usr/include/SDL2/SDL_image.h
@@ -9660,7 +9660,7 @@ CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o
  /usr/include/c++/11/ext/aligned_buffer.h
  /usr/include/c++/11/bits/list.tcc
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
 
 CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/main.cpp
@@ -10065,7 +10065,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/include/c++/11/bits/stl_list.h
  /usr/include/c++/11/bits/allocated_ptr.h
  /usr/include/c++/11/bits/list.tcc
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/EnemiesWay.h
@@ -10529,7 +10529,7 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o
  /usr/include/c++/11/bits/locale_conv.h
  /usr/include/c++/11/bits/unique_ptr.h
  /usr/include/c++/11/bits/quoted_string.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
@@ -10950,7 +10950,7 @@ CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o
  /usr/include/c++/11/bits/locale_conv.h
  /usr/include/c++/11/bits/unique_ptr.h
  /usr/include/c++/11/bits/quoted_string.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
@@ -11371,7 +11371,7 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o
  /usr/include/c++/11/bits/locale_conv.h
  /usr/include/c++/11/bits/unique_ptr.h
  /usr/include/c++/11/bits/quoted_string.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h

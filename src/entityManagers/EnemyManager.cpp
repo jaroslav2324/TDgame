@@ -76,7 +76,7 @@ void EnemyManager::killEnemy(Enemy* enemy){
     }
 }
 
-Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, double radius){
+Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, double radius, EnemyTypes enemyType){
 
     double diffX, diffY;
     double squareDistance, squareRadius;
@@ -85,6 +85,10 @@ Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, double radius){
 
     Coords enemyCoords;
     for (auto enemy: enemyList){
+
+        if (enemyType != EnemyTypes::ANY_TYPE_ENEMY && enemyType != enemy->getType())
+            continue;
+
         enemyCoords = enemy->getCoords();
         diffX = abs(enemyCoords.x - towerCoords.x);
         diffY = abs(enemyCoords.y - towerCoords.y);
@@ -99,7 +103,7 @@ Enemy* EnemyManager::findFirstEnemyForTower(Coords towerCoords, double radius){
     return nullptr;
 }
 
-Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, double radius){
+Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, double radius, EnemyTypes enemyType){
 
     double diffX, diffY;
     double minDiffX, minDiffY;
@@ -110,6 +114,10 @@ Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, double radius)
     Coords enemyCoords;
     // TODO rewrite this
     for (auto enemy: enemyList){
+
+        if (enemyType != EnemyTypes::ANY_TYPE_ENEMY && enemyType != enemy->getType())
+            continue;
+
         enemyCoords = enemy->getCoords();
         diffX = abs(enemyCoords.x - towerCoords.x);
         diffY = abs(enemyCoords.y - towerCoords.y);
@@ -138,7 +146,7 @@ Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, double radius)
     return returnEnemy;
 }
 
-list<Enemy*> EnemyManager::findAllEnemiesForTower(Coords towerCoords, double radius){
+list<Enemy*> EnemyManager::findAllEnemiesForTower(Coords towerCoords, double radius, EnemyTypes enemyType){
     //TODO add type of enemies
 
     list<Enemy*> listOfAimedEnemies;
@@ -150,6 +158,10 @@ list<Enemy*> EnemyManager::findAllEnemiesForTower(Coords towerCoords, double rad
 
     Coords enemyCoords;
     for (auto enemy: enemyList){
+
+        if (enemyType != EnemyTypes::ANY_TYPE_ENEMY && enemyType != enemy->getType())
+            continue;
+
         enemyCoords = enemy->getCoords();
         diffX = abs(enemyCoords.x - towerCoords.x);
         diffY = abs(enemyCoords.y - towerCoords.y);

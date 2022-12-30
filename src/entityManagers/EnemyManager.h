@@ -7,7 +7,7 @@
 #include <string>
 #include <utility>
 
-#include "../enemies/EnemyTypes.h"
+#include "../enemies/EnemyKinds.h"
 #include "../enemies/BasicEnemy.h"
 #include "../enemies/OrcEnemy.h"
 #include "../game/Portal.h"
@@ -22,12 +22,11 @@ class EnemyManager{
     EnemyManager(Base* base, Portal* portal, EnemiesWay* enemiesWay);
     ~EnemyManager();
 
-    //TODO add type of enemies
-    Enemy* findFirstEnemyForTower(Coords towerCoords, double radius);
-    //TODO add type of enemies
-    Enemy* findNearestEnemyForTower(Coords towerCoords, double radius);
-    //TODO add type of enemies
-    list<Enemy*> findAllEnemiesForTower(Coords towerCoords, double radius);
+    Enemy* findFirstEnemyForTower(Coords towerCoords, double radius, EnemyTypes enemyType = EnemyTypes::ANY_TYPE_ENEMY);
+    // not used
+    Enemy* findNearestEnemyForTower(Coords towerCoords, double radius, EnemyTypes enemyType = EnemyTypes::ANY_TYPE_ENEMY);
+    
+    list<Enemy*> findAllEnemiesForTower(Coords towerCoords, double radius, EnemyTypes enemyType = EnemyTypes::ANY_TYPE_ENEMY);
         
     /*use for custom spawning. For wave spawning use */
     void spawnEnemyWithCoords(int enemyType, Coords coords);

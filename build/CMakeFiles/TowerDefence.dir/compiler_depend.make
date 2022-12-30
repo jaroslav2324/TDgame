@@ -403,7 +403,7 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o: ../src/Application.cpp \
   /usr/include/c++/11/bits/stl_list.h \
   /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/bits/list.tcc \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/abstractClasses/Enemy.h \
   ../src/game/EnemiesWay.h \
@@ -2234,7 +2234,7 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: ../src/UI/BasicInterfac
   /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/quoted_string.h \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
@@ -4394,7 +4394,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/LaserTower.cpp.o: ../src/abstrac
   /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/quoted_string.h \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
@@ -5201,7 +5201,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.o: ../src/ab
   /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/quoted_string.h \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
@@ -5620,7 +5620,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/SplashwaveTower.cpp.o: ../src/ab
   /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/quoted_string.h \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
@@ -6039,7 +6039,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: ../src/abstractClas
   /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/quoted_string.h \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
@@ -6473,7 +6473,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o: ../src/entity
   /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/list.tcc \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/Timers.h \
   /usr/include/c++/11/iostream \
@@ -7091,7 +7091,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: ../src/entity
   /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/quoted_string.h \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
@@ -8245,7 +8245,7 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/list.tcc \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/abstractClasses/Enemy.h \
   /usr/include/SDL2/SDL_image.h \
@@ -9633,7 +9633,7 @@ CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o: ../src/game/Wave.cpp \
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/list.tcc \
   ../src/settings.h \
-  ../src/enemies/EnemyTypes.h
+  ../src/enemies/EnemyKinds.h
 
 CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -10037,7 +10037,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/stl_list.h \
   /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/bits/list.tcc \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/abstractClasses/Enemy.h \
   ../src/game/EnemiesWay.h \
@@ -10500,7 +10500,7 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: ../src/towers/BasicTowe
   /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/quoted_string.h \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
@@ -10920,7 +10920,7 @@ CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o: ../src/towers/FireTower.
   /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/quoted_string.h \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
@@ -11340,7 +11340,7 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
   /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/quoted_string.h \
-  ../src/enemies/EnemyTypes.h \
+  ../src/enemies/EnemyKinds.h \
   ../src/enemies/BasicEnemy.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
@@ -11363,6 +11363,8 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 /usr/include/SDL2/SDL_messagebox.h:
 
 /usr/include/SDL2/SDL_filesystem.h:
+
+/usr/include/SDL2/SDL_touch.h:
 
 /usr/include/SDL2/SDL_shape.h:
 
@@ -11465,10 +11467,6 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 /usr/include/SDL2/SDL_haptic.h:
 
 ../src/abstractClasses/Enemy.h:
-
-/usr/include/SDL2/SDL_touch.h:
-
-../src/enemies/EnemyTypes.h:
 
 /usr/include/c++/11/bits/list.tcc:
 
@@ -12259,6 +12257,8 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 /usr/include/c++/11/bits/basic_ios.tcc:
 
 /usr/include/c++/11/istream:
+
+../src/enemies/EnemyKinds.h:
 
 /usr/include/c++/11/bits/istream.tcc:
 
