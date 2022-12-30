@@ -17,6 +17,7 @@
 
 using std::queue;
 
+//TODO rename
 class BasicInterface:  public Interface{
     public:
     BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager);
@@ -41,8 +42,6 @@ class BasicInterface:  public Interface{
 
     TowerManager * towerManager = nullptr;
     EnemyManager* enemyManager = nullptr;
-
-    //queue<Coords> savedMouseClicks;
 
     void handleHoveringOverButtons();
     MenuOptionsCode handlePressingOnButtons();

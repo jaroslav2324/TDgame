@@ -45,7 +45,8 @@ MainMenu::MainMenu(PeriodicTimer* fpsTimer){
 
 MenuOptionsCode MainMenu::makeFrameTurn(){
 
-    return handleButtonClicks();
+    handleHoveringOverButtons();
+    return handlePressingOnButtons();
 }
 
 void MainMenu::render(Renderer* renderer){
@@ -59,12 +60,7 @@ void MainMenu::render(Renderer* renderer){
     quitBtn->render(renderer);
 }
 
-void MainMenu::saveMouseClickCoords(Coords coords){
-    savedMouseClicks.push(coords);
-}
-
-MenuOptionsCode MainMenu::handleButtonClicks(){
-
+void MainMenu::handleHoveringOverButtons(){
 
     // check howering over buttons
     int mouseX, mouseY;
@@ -88,7 +84,9 @@ MenuOptionsCode MainMenu::handleButtonClicks(){
         quitBtn->setModeHoveredOver();
     else
         quitBtn->setModeNoCursorInteraction();
+}
 
+MenuOptionsCode MainMenu::handlePressingOnButtons(){
 
     MenuOptionsCode code = NO_CHANGES;
     // check pressing on buttons
@@ -104,8 +102,8 @@ MenuOptionsCode MainMenu::handleButtonClicks(){
                 cout << "Start game button pressed" << endl;
         }
         else if (settingsBtn->isPointInRect(mouseCoords)){
-            // TODO add settings on flag
             settingsBtn->setModePressedOn();
+            code = OPEN_OPTIONS;
 
             if (DEBUG_CONSOLE_OUTPUT_ON)
                 cout << "Options button pressed" << endl;
@@ -121,4 +119,13 @@ MenuOptionsCode MainMenu::handleButtonClicks(){
     }
 
     return code;
+}
+
+
+void MainMenu::saveToBinaryFile(ostream& outpustStream){
+    //TODO implement
+}
+
+void MainMenu::loadFromBinaryFile(istream& inputStream){
+    //TODO implement
 }

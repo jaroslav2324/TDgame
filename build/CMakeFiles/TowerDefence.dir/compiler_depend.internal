@@ -416,6 +416,7 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.h
@@ -2227,6 +2228,7 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc
@@ -2830,24 +2832,13 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o
  /usr/include/c++/11/bits/stl_queue.h
  /usr/include/c++/11/bits/uses_allocator.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
- /home/jaros/gitProjects/c++/TDgame/src/UI/MenuOptionsCodes.h
- /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
+ /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Interface.h
+ /home/jaros/gitProjects/c++/TDgame/src/Coords.h
  /usr/include/c++/11/fstream
  /usr/include/c++/11/bits/codecvt.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h
  /usr/include/c++/11/bits/fstream.tcc
- /usr/local/include/SDL2/SDL.h
- /usr/local/include/SDL2/SDL_main.h
- /usr/local/include/SDL2/SDL_stdinc.h
- /usr/local/include/SDL2/SDL_config.h
- /usr/local/include/SDL2/SDL_platform.h
- /usr/local/include/SDL2/begin_code.h
- /usr/local/include/SDL2/close_code.h
- /usr/include/c++/11/stdlib.h
- /usr/include/string.h
- /usr/include/strings.h
- /usr/include/inttypes.h
  /usr/include/c++/11/math.h
  /usr/include/c++/11/cmath
  /usr/include/math.h
@@ -2874,6 +2865,31 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o
  /usr/include/c++/11/tr1/poly_hermite.tcc
  /usr/include/c++/11/tr1/poly_laguerre.tcc
  /usr/include/c++/11/tr1/riemann_zeta.tcc
+ /home/jaros/gitProjects/c++/TDgame/src/Vector.h
+ /home/jaros/gitProjects/c++/TDgame/src/Renderer.h
+ /usr/include/c++/11/map
+ /usr/include/c++/11/bits/stl_tree.h
+ /usr/include/c++/11/ext/aligned_buffer.h
+ /usr/include/c++/11/bits/node_handle.h
+ /usr/include/c++/11/bits/stl_map.h
+ /usr/include/c++/11/tuple
+ /usr/include/c++/11/utility
+ /usr/include/c++/11/bits/stl_relops.h
+ /usr/include/c++/11/array
+ /usr/include/c++/11/bits/invoke.h
+ /usr/include/c++/11/bits/stl_multimap.h
+ /usr/include/c++/11/bits/erase_if.h
+ /usr/local/include/SDL2/SDL.h
+ /usr/local/include/SDL2/SDL_main.h
+ /usr/local/include/SDL2/SDL_stdinc.h
+ /usr/local/include/SDL2/SDL_config.h
+ /usr/local/include/SDL2/SDL_platform.h
+ /usr/local/include/SDL2/begin_code.h
+ /usr/local/include/SDL2/close_code.h
+ /usr/include/c++/11/stdlib.h
+ /usr/include/string.h
+ /usr/include/strings.h
+ /usr/include/inttypes.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -3007,24 +3023,11 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
- /home/jaros/gitProjects/c++/TDgame/src/Renderer.h
- /usr/include/c++/11/map
- /usr/include/c++/11/bits/stl_tree.h
- /usr/include/c++/11/ext/aligned_buffer.h
- /usr/include/c++/11/bits/node_handle.h
- /usr/include/c++/11/bits/stl_map.h
- /usr/include/c++/11/tuple
- /usr/include/c++/11/utility
- /usr/include/c++/11/bits/stl_relops.h
- /usr/include/c++/11/array
- /usr/include/c++/11/bits/invoke.h
- /usr/include/c++/11/bits/stl_multimap.h
- /usr/include/c++/11/bits/erase_if.h
  /usr/include/SDL2/SDL_ttf.h
- /home/jaros/gitProjects/c++/TDgame/src/Coords.h
- /home/jaros/gitProjects/c++/TDgame/src/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/Line.h
  /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.h
+ /home/jaros/gitProjects/c++/TDgame/src/UI/MenuOptionsCodes.h
+ /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
  /home/jaros/gitProjects/c++/TDgame/src/Timers.h
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
 
@@ -3604,6 +3607,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Interface.cpp
@@ -4393,6 +4397,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/LaserTower.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc
@@ -4803,6 +4808,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/ProjectileTower.cpp
@@ -5202,6 +5208,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc
@@ -5622,6 +5629,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/SplashwaveTower.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc
@@ -6042,6 +6050,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc
@@ -6693,6 +6702,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
 
@@ -7097,6 +7107,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc
@@ -8298,6 +8309,7 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.h
@@ -10077,6 +10089,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.h
@@ -10515,6 +10528,7 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc
@@ -10936,6 +10950,7 @@ CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc
@@ -11357,6 +11372,7 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
  /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc

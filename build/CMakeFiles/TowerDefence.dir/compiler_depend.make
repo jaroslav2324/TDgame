@@ -415,6 +415,7 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o: ../src/Application.cpp \
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
   ../src/entityManagers/TowerManager.h \
@@ -2220,6 +2221,7 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: ../src/UI/BasicInterfac
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/entityManagers/EnemyManager.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
@@ -2821,24 +2823,13 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: ../src/UI/MainMenu.cpp \
   /usr/include/c++/11/bits/stl_queue.h \
   /usr/include/c++/11/bits/uses_allocator.h \
   ../src/settings.h \
-  ../src/UI/MenuOptionsCodes.h \
-  ../src/UI/Button.h \
+  ../src/abstractClasses/Interface.h \
+  ../src/Coords.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
-  /usr/local/include/SDL2/SDL.h \
-  /usr/local/include/SDL2/SDL_main.h \
-  /usr/local/include/SDL2/SDL_stdinc.h \
-  /usr/local/include/SDL2/SDL_config.h \
-  /usr/local/include/SDL2/SDL_platform.h \
-  /usr/local/include/SDL2/begin_code.h \
-  /usr/local/include/SDL2/close_code.h \
-  /usr/include/c++/11/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/inttypes.h \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
@@ -2865,6 +2856,31 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: ../src/UI/MainMenu.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../src/Vector.h \
+  ../src/Renderer.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/local/include/SDL2/SDL.h \
+  /usr/local/include/SDL2/SDL_main.h \
+  /usr/local/include/SDL2/SDL_stdinc.h \
+  /usr/local/include/SDL2/SDL_config.h \
+  /usr/local/include/SDL2/SDL_platform.h \
+  /usr/local/include/SDL2/begin_code.h \
+  /usr/local/include/SDL2/close_code.h \
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/inttypes.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
   /usr/local/include/SDL2/SDL_assert.h \
   /usr/local/include/SDL2/SDL_atomic.h \
@@ -2998,24 +3014,11 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: ../src/UI/MainMenu.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
-  ../src/Renderer.h \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/bits/node_handle.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /usr/include/c++/11/bits/erase_if.h \
   /usr/include/SDL2/SDL_ttf.h \
-  ../src/Coords.h \
-  ../src/Vector.h \
   ../src/Line.h \
   ../src/TexturesEnum.h \
+  ../src/UI/MenuOptionsCodes.h \
+  ../src/UI/Button.h \
   ../src/Timers.h \
   ../src/ObjectCursorInteractionsModes.h
 
@@ -3592,7 +3595,8 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Enemy.cpp.o: ../src/abstractClas
   /usr/include/c++/11/bits/unordered_map.h \
   ../src/game/Base.h \
   ../src/game/Portal.h \
-  ../src/approximateComparison.h
+  ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstractClasses/Interface.cpp \
   /usr/include/stdc-predef.h \
@@ -4380,6 +4384,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/LaserTower.cpp.o: ../src/abstrac
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/entityManagers/EnemyManager.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
@@ -4788,7 +4793,8 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Projectile.cpp.o: ../src/abstrac
   /usr/include/c++/11/bits/unordered_map.h \
   ../src/game/Base.h \
   ../src/game/Portal.h \
-  ../src/approximateComparison.h
+  ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h
 
 CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.o: ../src/abstractClasses/ProjectileTower.cpp \
   /usr/include/stdc-predef.h \
@@ -5187,6 +5193,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.o: ../src/ab
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/entityManagers/EnemyManager.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
@@ -5606,6 +5613,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/SplashwaveTower.cpp.o: ../src/ab
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/entityManagers/EnemyManager.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
@@ -6025,6 +6033,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o: ../src/abstractClas
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/entityManagers/EnemyManager.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
@@ -6674,6 +6683,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/EnemyManager.cpp.o: ../src/entity
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h
 
@@ -7077,6 +7087,7 @@ CMakeFiles/TowerDefence.dir/src/entityManagers/TowerManager.cpp.o: ../src/entity
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/entityManagers/EnemyManager.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
@@ -8275,6 +8286,7 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
   ../src/entityManagers/TowerManager.h \
@@ -10049,6 +10061,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
   ../src/entityManagers/TowerManager.h \
@@ -10486,6 +10499,7 @@ CMakeFiles/TowerDefence.dir/src/towers/BasicTower.cpp.o: ../src/towers/BasicTowe
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/entityManagers/EnemyManager.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
@@ -10906,6 +10920,7 @@ CMakeFiles/TowerDefence.dir/src/towers/FireTower.cpp.o: ../src/towers/FireTower.
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/entityManagers/EnemyManager.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
@@ -11326,6 +11341,7 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
   ../src/game/Base.h \
   ../src/game/Portal.h \
   ../src/approximateComparison.h \
+  ../src/enemies/EnemyTypes.h \
   ../src/entityManagers/EnemyManager.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
@@ -11363,8 +11379,6 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 /usr/include/SDL2/SDL_messagebox.h:
 
 /usr/include/SDL2/SDL_filesystem.h:
-
-/usr/include/SDL2/SDL_touch.h:
 
 /usr/include/SDL2/SDL_shape.h:
 
@@ -11455,6 +11469,10 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 ../src/projectiles/BasicProjectile.h:
 
 ../src/abstractClasses/ProjectileTower.h:
+
+/usr/include/SDL2/SDL_touch.h:
+
+../src/enemies/EnemyTypes.h:
 
 ../src/game/Portal.h:
 

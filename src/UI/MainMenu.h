@@ -4,6 +4,7 @@
 #include <queue>
 
 #include "../settings.h"
+#include "../abstractClasses/Interface.h"
 #include "MenuOptionsCodes.h"
 #include "Button.h"
 
@@ -12,7 +13,7 @@ using std::cout;
 using std::endl;
 
 
-class MainMenu{
+class MainMenu: public Interface{
 
     public:
     MainMenu(PeriodicTimer* fpsTimer);
@@ -22,7 +23,10 @@ class MainMenu{
 
     void render(Renderer* renderer);
 
-    void saveMouseClickCoords(Coords coords);
+    // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+    void saveToBinaryFile(ostream& outpustStream);
+    // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
+    void loadFromBinaryFile(istream& inputStream);
 
     private:
 
@@ -32,7 +36,6 @@ class MainMenu{
 
     PeriodicTimer* fpsTimer = nullptr;
 
-    queue<Coords> savedMouseClicks;
-
-    MenuOptionsCode handleButtonClicks();
+    void handleHoveringOverButtons();
+    MenuOptionsCode handlePressingOnButtons();
 };
