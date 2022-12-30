@@ -12,7 +12,7 @@ add_executable(${CMAKE_PROJECT_NAME} src/game/Base.cpp src/main.cpp src/game/Gam
 src/abstractClasses/Enemy.cpp src/abstractClasses/ProjectileTower.cpp src/towers/BasicTower.cpp src/game/Grid.cpp src/entityManagers/EnemyManager.cpp src/abstractClasses/Projectile.cpp src/game/GridTile.cpp src/entityManagers/TowerManager.cpp
 src/UI/BasicInterface.cpp src/UI/Button.cpp src/game/Portal.cpp src/Coords.cpp src/game/Wave.cpp src/UI/MainMenu.cpp src/Application.cpp 
  src/towers/IceTower.cpp src/towers/FireTower.cpp src/Renderer.cpp src/TexturesEnum.cpp src/abstractClasses/Interface.cpp src/abstractClasses/Tower.cpp
- src/Line.cpp src/Vector.cpp src/abstractClasses/LaserTower.cpp src/abstractClasses/SplashwaveTower.cpp
+ src/Line.cpp src/Vector.cpp src/abstractClasses/LaserTower.cpp src/abstractClasses/SplashwaveTower.cpp src/UI/OptionsMenu.cpp
 )
 
 #target_include_directories(TowerDefence ${SDL2_INCLUDE_DIR})

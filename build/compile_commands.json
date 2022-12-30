@@ -155,6 +155,11 @@
   "file": "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/SplashwaveTower.cpp"
 },
 {
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/UI/OptionsMenu.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/UI/OptionsMenu.cpp"
+},
+{
   "directory": "/home/jaros/gitProjects/c++/TDgame/build/libs/SDL",
   "command": "/usr/bin/gcc  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include  -idirafter \"/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/video/khronos\" -DHAVE_LINUX_VERSION_H  -Wall -fno-strict-aliasing -Wdeclaration-after-statement -fvisibility=hidden -Wshadow -mmmx -m3dnow -msse -msse2 -msse3 -D_REENTRANT -I/usr/include -I/usr/include/libdrm  -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MINOR_VERSION=27 -DSDL_BUILD_MICRO_VERSION=0 -g -o CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o -c /home/jaros/gitProjects/c++/TDgame/libs/SDL/src/main/dummy/SDL_dummy_main.c",
   "file": "/home/jaros/gitProjects/c++/TDgame/libs/SDL/src/main/dummy/SDL_dummy_main.c"

@@ -16,7 +16,7 @@ using std::endl;
 class MainMenu: public Interface{
 
     public:
-    MainMenu(PeriodicTimer* fpsTimer);
+    MainMenu();
     ~MainMenu();
 
     MenuOptionsCode makeFrameTurn();

@@ -1,7 +1,6 @@
 #include "MainMenu.h"
 
-MainMenu::MainMenu(PeriodicTimer* fpsTimer){
-    this->fpsTimer = fpsTimer;
+MainMenu::MainMenu(){
     
     //TODO change button textures
     // TODO change button centers(height)

@@ -12,6 +12,7 @@
 #include "LevelsEnum.h"
 #include "game/GameLevel.h"
 #include "UI/MainMenu.h"
+#include "UI/OptionsMenu.h"
 #include "UI/MenuOptionsCodes.h"
 #include "UI/ActiveScenesCodes.h"
 
@@ -31,6 +32,7 @@ class Application{
     ActiveScenesCodes activeSceneCode = ActiveScenesCodes::MAIN_MENU;
 
     MainMenu* mainMenu = nullptr;
+    OptionsMenu* optionsMenu = nullptr;
     GameLevel* gameLevel = nullptr;
 
     PeriodicTimer* fpsTimer = nullptr;

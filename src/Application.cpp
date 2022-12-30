@@ -14,7 +14,9 @@ Application::Application(){
     renderer = new Renderer();
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
-    mainMenu = new MainMenu(fpsTimer);
+
+    mainMenu = new MainMenu();
+    optionsMenu = new OptionsMenu();
 }
 
 Application::~Application(){
@@ -27,6 +29,11 @@ Application::~Application(){
     if (mainMenu != nullptr){
         delete mainMenu;
         mainMenu = nullptr;
+    }
+
+    if (optionsMenu != nullptr){
+        delete optionsMenu;
+        optionsMenu = nullptr;
     }
 
     if (fpsTimer != nullptr){
@@ -73,7 +80,9 @@ void Application::loop(){
                         
                         if (activeSceneCode == ActiveScenesCodes::MAIN_MENU)
                             mainMenu->saveMouseClickCoords(mouseCoords);
-                        //TODO add options menu and choose level menu
+                        else if (activeSceneCode == ActiveScenesCodes::OPTIONS_MENU)
+                            optionsMenu->saveMouseClickCoords(mouseCoords);
+                        //TODO add choose level menu
                         else if (activeSceneCode == ActiveScenesCodes::GAME_LEVEL)
                             gameLevel->saveMouseClickCoords(mouseCoords);
                     }      
@@ -137,12 +146,36 @@ void Application::loop(){
                     break;
                 }
 
+                case OPEN_OPTIONS:
+                {
+                    activeSceneCode = ActiveScenesCodes::OPTIONS_MENU;
+                    break;
+                }
+
                 case QUIT_TO_DESKTOP:
                 {
                     quit = true;
                     break;
                 }
 
+                default:
+                    break;
+                }
+            }
+
+            else if (activeSceneCode == ActiveScenesCodes::OPTIONS_MENU){
+                MenuOptionsCode code;
+                code  = optionsMenu->makeFrameTurn();
+                optionsMenu->render(renderer);
+                
+                switch (code){
+                    
+                case QUIT_TO_MAIN_MENU:
+                {
+                    activeSceneCode = ActiveScenesCodes::MAIN_MENU;                    
+                    break;
+                }
+                
                 default:
                     break;
                 }
