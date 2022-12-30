@@ -46,7 +46,8 @@ Application::~Application(){
 
 void Application::loop(){
 
-    
+    int fpsCount = 0;
+    PeriodicTimer fpsCounterTimer(1000);
 
     bool quit = false;
 
@@ -78,6 +79,8 @@ void Application::loop(){
         }
 
         if (fpsTimer->tickIfNeeded()){
+
+            fpsCount++;
 
             if (mainMenuOn){
 
@@ -166,6 +169,12 @@ void Application::loop(){
             }
 
             renderer->renderPresent();
+        }
+
+        if (fpsCounterTimer.tickIfNeeded()){
+            if (DEBUG_CONSOLE_OUTPUT_ON && DEBUG_OUTPUT_FPS)
+                cout << "FPS: " << fpsCount << endl;
+            fpsCount = 0;
         }
 	}
 }

@@ -1,6 +1,7 @@
 #pragma once
 
 #define DEBUG_CONSOLE_OUTPUT_ON true
+#define DEBUG_OUTPUT_FPS true
 #define LOADING_LEVELS_ON true
 #define SAVING_LEVELS_ON false
 
