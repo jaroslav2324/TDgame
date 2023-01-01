@@ -81,17 +81,6 @@ void ProjectileTower::moveAllProjectiles(){
     //cout << projectileList.size() << endl;
 }
 
-void ProjectileTower::render(Renderer* renderer){
-
-    if (towerCursorInteractionMode == HOVERED_OVER)
-        renderRadiusCircle(renderer);
-
-    int x = towerCoords.x - TOWER_SPRITE_SIZE / 2;
-    int y = towerCoords.y - TOWER_SPRITE_SIZE / 2;
-    SDL_Rect towerRect = {x, y, TOWER_SPRITE_SIZE, TOWER_SPRITE_SIZE};
-    renderer->renderTexture(towerTextureType, &towerRect);
-}
-
 void ProjectileTower::renderAllProjectiles(Renderer* renderer){
     for (auto projectilePtr: projectileList)
         projectilePtr->render(renderer);

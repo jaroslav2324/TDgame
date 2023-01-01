@@ -13,7 +13,6 @@ public:
 
     void attack();
 
-    void render(Renderer* renderer);
     void renderLaser(Renderer* renderer);
 
     void setLaserColor(SDL_Color color);

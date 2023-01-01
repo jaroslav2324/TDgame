@@ -34,7 +34,7 @@ public:
     bool isDestroyed();
     void setDestroyed();
 
-    virtual void render(Renderer* renderer) = 0;
+    virtual void render(Renderer* renderer);
 
     double getExpForNextLvl(int currentLevel);
 

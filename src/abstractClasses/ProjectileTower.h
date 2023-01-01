@@ -10,8 +10,7 @@ public:
 
     void attack();
     void moveAllProjectiles();
-
-    void render(Renderer* renderer);
+    
     void renderAllProjectiles(Renderer* renderer);
 
 protected:

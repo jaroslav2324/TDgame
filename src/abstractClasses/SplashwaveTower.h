@@ -15,8 +15,6 @@ public:
 
     void attack();
 
-    //TODO move to tower?
-    void render(Renderer* renderer);
     void renderSplashWave(Renderer* renderer);
 
 protected:
