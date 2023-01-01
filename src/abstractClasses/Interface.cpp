@@ -54,3 +54,18 @@ void Interface::renderButtons(Renderer* renderer){
 }
 
 
+void Interface::saveToBinaryFile(ostream& outpustStream){
+    if (DEBUG_CONSOLE_OUTPUT_ON){
+        cout << CoutTextColors::YELLOW;
+        cout << "Warning! Virtual function saveToBinaryFile not implemented but called from basic Interface class.";
+        cout << CoutTextColors::RESET;
+    }
+}
+
+void Interface::loadFromBinaryFile(istream& inputStream){
+    if (DEBUG_CONSOLE_OUTPUT_ON){
+        cout << CoutTextColors::YELLOW;
+        cout << "Warning! Virtual function loadFromBinaryFile not implemented but called from basic Interface class.";
+        cout << CoutTextColors::RESET;
+    }
+}

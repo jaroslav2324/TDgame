@@ -72,10 +72,3 @@ void MainMenu::createButtonsReturnCodesVec(){
     buttonsReturnCodesVec.push_back(MenuOptionsCode::QUIT_TO_DESKTOP);
 }
 
-void MainMenu::saveToBinaryFile(ostream& outpustStream){
-    //TODO implement
-}
-
-void MainMenu::loadFromBinaryFile(istream& inputStream){
-    //TODO implement
-}

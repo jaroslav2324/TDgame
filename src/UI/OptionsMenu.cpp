@@ -46,10 +46,3 @@ void OptionsMenu::createButtonsReturnCodesVec(){
     buttonsReturnCodesVec.push_back(MenuOptionsCode::QUIT_TO_MAIN_MENU);
 }
 
-void OptionsMenu::saveToBinaryFile(ostream& outpustStream){
-    //TODO implement
-}
-
-void OptionsMenu::loadFromBinaryFile(istream& inputStream){
-    //TODO implement
-}

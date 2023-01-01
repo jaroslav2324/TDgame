@@ -98,10 +98,3 @@ void LevelsMenu::createButtonsReturnCodesVec(){
     buttonsReturnCodesVec.push_back(MenuOptionsCode::CHOOSE_LVL4);
 }
 
-void LevelsMenu::saveToBinaryFile(ostream& outpustStream){
-    //TODO implement
-}
-
-void LevelsMenu::loadFromBinaryFile(istream& inputStream){
-    //TODO implement
-}

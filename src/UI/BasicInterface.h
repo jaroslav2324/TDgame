@@ -43,7 +43,6 @@ class BasicInterface:  public Interface{
     TowerManager * towerManager = nullptr;
     EnemyManager* enemyManager = nullptr;
 
-    //TODO refactor
     // implement if you want to iterate over buttons
     virtual void createButtonsVec();
     // implement if you want to return different options codes while iterating over buttons

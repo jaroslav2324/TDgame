@@ -4,6 +4,7 @@
 #include <vector>
 #include <queue>
 
+#include "../CoutTextColors.h"
 #include "../UI/Button.h"
 #include "../Coords.h"
 #include "../Renderer.h"
@@ -22,9 +23,9 @@ class Interface{
     void saveMouseClickCoords(Coords coords);
 
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
-    virtual void saveToBinaryFile(ostream& outpustStream) = 0;
+    virtual void saveToBinaryFile(ostream& outpustStream);
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
-    virtual void loadFromBinaryFile(istream& inputStream) = 0;
+    virtual void loadFromBinaryFile(istream& inputStream);
 
     protected:   
 
