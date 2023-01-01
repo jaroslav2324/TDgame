@@ -80,7 +80,7 @@ protected:
 
     std::vector<double> listExpForLvls;
 
-    virtual void setAttackTimer() = 0;
+    virtual void setAttackTimer();
     
     void setExpForDamage(double exp);
     void setExpForKill(double exp);

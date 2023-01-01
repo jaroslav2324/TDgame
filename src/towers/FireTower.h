@@ -33,7 +33,4 @@ class FireTower: public LaserTower{
 
     private:
 
-    // TODO remove
-    void setAttackTimer();
-    void deleteAttackTimer();
 };

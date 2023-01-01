@@ -149,4 +149,13 @@ bool Tower::isPointInRect(Coords point){
         return false;
     return true;
 }
+
+void Tower::setAttackTimer(){
+    if (attackTimer == nullptr)
+        attackTimer = new PeriodicTimer(attackSpeed);
+    else{
+        delete attackTimer;
+        attackTimer = new PeriodicTimer(attackSpeed);
+    }
+}
     

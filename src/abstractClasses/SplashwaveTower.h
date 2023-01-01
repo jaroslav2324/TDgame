@@ -23,6 +23,4 @@ protected:
 
     SDL_Color frontWaveColor = {150, 150, 200, 150};
     SDL_Color endWaveColor = {120, 120, 170, 150};
-    //TODO not abstract?
-    virtual void setAttackTimer() = 0;
 };

@@ -17,8 +17,5 @@ protected:
 
     std::vector<Projectile*> projectileList;
 
-    //TODO not abstract?
-    virtual void setAttackTimer() = 0;
-
     virtual Projectile* newProjectile() = 0;
 };

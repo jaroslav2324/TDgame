@@ -22,6 +22,4 @@ protected:
 
     SDL_Color laserColor = {255, 255, 0, 255};
     int laserWidth = 5;
-
-    virtual void setAttackTimer();
 };

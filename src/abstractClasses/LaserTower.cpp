@@ -55,7 +55,6 @@ void LaserTower::attack(){
 }
 
 void LaserTower::renderLaser(Renderer* renderer){
-    //TODO implement animation in renderer
     if (aimedEnemy != nullptr){
         Coords enemyCoords = aimedEnemy->getCoords();
         renderer->renderLine(towerCoords, enemyCoords, laserColor, laserWidth);
@@ -68,10 +67,4 @@ void LaserTower::setLaserColor(SDL_Color color){
 
 void LaserTower::setLaserWidth(int width){
     laserWidth = width;
-}
-
-void LaserTower::setAttackTimer(){
-    if (attackTimer != nullptr)
-        delete attackTimer;
-    attackTimer = new PeriodicTimer(100);
 }

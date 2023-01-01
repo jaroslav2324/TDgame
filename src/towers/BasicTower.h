@@ -27,7 +27,5 @@ class BasicTower: public ProjectileTower{
 
     private:
     
-    void setAttackTimer();
-    void deleteAttackTimer();
     Projectile* newProjectile();
 };

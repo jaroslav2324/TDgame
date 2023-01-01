@@ -30,7 +30,4 @@ class IceTower: public SplashwaveTower{
 
     private:
 
-    void setAttackTimer();
-    void deleteAttackTimer();
-
 };
