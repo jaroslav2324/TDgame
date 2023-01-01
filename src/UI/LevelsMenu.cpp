@@ -79,11 +79,7 @@ void LevelsMenu::render(Renderer* renderer){
     SDL_Rect rect = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};
     renderer->renderFilledRect(&rect, color);
 
-    toMainMenuBtn->render(renderer);
-    chooseLvl1Btn->render(renderer);
-    chooseLvl2Btn->render(renderer);
-    chooseLvl3Btn->render(renderer);
-    chooseLvl4Btn->render(renderer);
+    renderButtons(renderer);
 }
 
 void LevelsMenu::createButtonsVec(){

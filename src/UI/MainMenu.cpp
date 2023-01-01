@@ -57,9 +57,7 @@ void MainMenu::render(Renderer* renderer){
     SDL_Rect rect = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};
     renderer->renderFilledRect(&rect, color);
 
-    startGameBtn->render(renderer);
-    settingsBtn->render(renderer);
-    quitBtn->render(renderer);
+    renderButtons(renderer);
 }
 
 void MainMenu::createButtonsVec(){

@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/TowerDefence.dir/src/Application.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/Coords.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/Coords.cpp.o.d"
+  "CMakeFiles/TowerDefence.dir/src/CoutTextColors.cpp.o"
+  "CMakeFiles/TowerDefence.dir/src/CoutTextColors.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/Line.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/Line.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o"

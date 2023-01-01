@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/jaros/gitProjects/c++/TDgame/src/Application.cpp" "CMakeFiles/TowerDefence.dir/src/Application.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/Application.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/Coords.cpp" "CMakeFiles/TowerDefence.dir/src/Coords.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/Coords.cpp.o.d"
+  "/home/jaros/gitProjects/c++/TDgame/src/CoutTextColors.cpp" "CMakeFiles/TowerDefence.dir/src/CoutTextColors.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/CoutTextColors.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/Line.cpp" "CMakeFiles/TowerDefence.dir/src/Line.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/Line.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/Renderer.cpp" "CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.cpp" "CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o.d"

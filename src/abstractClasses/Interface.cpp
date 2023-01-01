@@ -47,5 +47,10 @@ MenuOptionsCode Interface::handlePressingOnButtons(){
     return returnCode;
 }
 
+void Interface::renderButtons(Renderer* renderer){
+
+    for (auto button: buttonsVec)
+        button->render(renderer);
+}
 
 

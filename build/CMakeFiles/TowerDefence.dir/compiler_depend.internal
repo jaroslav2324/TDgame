@@ -360,6 +360,7 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/CoutTextColors.h
  /home/jaros/gitProjects/c++/TDgame/src/Renderer.h
  /usr/include/c++/11/map
  /usr/include/c++/11/bits/stl_tree.h
@@ -10819,7 +10820,6 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
- /home/jaros/gitProjects/c++/TDgame/src/CoutTextColors.h
  /home/jaros/gitProjects/c++/TDgame/src/Application.h
  /usr/include/c++/11/fstream
  /usr/include/c++/11/bits/codecvt.h
@@ -10828,6 +10828,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/include/c++/11/bits/fstream.tcc
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/CoutTextColors.h
  /home/jaros/gitProjects/c++/TDgame/src/Renderer.h
  /usr/include/c++/11/map
  /usr/include/c++/11/bits/stl_tree.h

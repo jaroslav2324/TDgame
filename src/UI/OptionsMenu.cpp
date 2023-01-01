@@ -35,7 +35,7 @@ void OptionsMenu::render(Renderer* renderer){
     SDL_Rect rect = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};
     renderer->renderFilledRect(&rect, color);
 
-    toMainMenuBtn->render(renderer);
+    renderButtons(renderer);
 }
 
 void OptionsMenu::createButtonsVec(){

@@ -35,7 +35,7 @@ class Interface{
     // Return codes if button is pressed. Use for iteration over buttons
     vector<MenuOptionsCode> buttonsReturnCodesVec;
 
-    //TODO add renderBtns
+    void renderButtons(Renderer* renderer);
 
     // implement if you want to iterate over buttons
     virtual void createButtonsVec() = 0;

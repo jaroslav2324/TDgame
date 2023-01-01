@@ -242,6 +242,30 @@ src/Coords.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Coords.cpp.s
 .PHONY : src/Coords.cpp.s
 
+src/CoutTextColors.o: src/CoutTextColors.cpp.o
+.PHONY : src/CoutTextColors.o
+
+# target to build an object file
+src/CoutTextColors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/CoutTextColors.cpp.o
+.PHONY : src/CoutTextColors.cpp.o
+
+src/CoutTextColors.i: src/CoutTextColors.cpp.i
+.PHONY : src/CoutTextColors.i
+
+# target to preprocess a source file
+src/CoutTextColors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/CoutTextColors.cpp.i
+.PHONY : src/CoutTextColors.cpp.i
+
+src/CoutTextColors.s: src/CoutTextColors.cpp.s
+.PHONY : src/CoutTextColors.s
+
+# target to generate assembly for a file
+src/CoutTextColors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/CoutTextColors.cpp.s
+.PHONY : src/CoutTextColors.cpp.s
+
 src/Line.o: src/Line.cpp.o
 .PHONY : src/Line.o
 
@@ -1006,6 +1030,9 @@ help:
 	@echo "... src/Coords.o"
 	@echo "... src/Coords.i"
 	@echo "... src/Coords.s"
+	@echo "... src/CoutTextColors.o"
+	@echo "... src/CoutTextColors.i"
+	@echo "... src/CoutTextColors.s"
 	@echo "... src/Line.o"
 	@echo "... src/Line.i"
 	@echo "... src/Line.s"

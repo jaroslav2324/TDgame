@@ -87,13 +87,7 @@ void BasicInterface::render(Renderer* renderer){
     renderer->renderFilledRect(rectPtr, color);
 
     // then render buttons
-    //TODO use vector
-    exitToMainMenuBtn->render(renderer);
-    buildBasicTowerBtn->render(renderer);
-    buildIceTowerBtn->render(renderer);
-    buildFireTowerBtn->render(renderer);
-    spawnEnemyBtn->render(renderer);
-
+    renderButtons(renderer);
 }
 
 MenuOptionsCode BasicInterface::handlePressingOnButtons(){
