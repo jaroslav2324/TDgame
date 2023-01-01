@@ -197,7 +197,6 @@ void Renderer::renderCircle(Coords& center, int radius, SDL_Color& color, int bo
     }
 }
 
-//TODO needs something more fast and accurate
 void Renderer::renderFilledCircle(Coords center, int radius, SDL_Color& fillColor){
 
     SDL_SetTextureColorMod(textures[TexturesEnumeration::WHITE_CIRCLE], fillColor.r, fillColor.g, fillColor.b);

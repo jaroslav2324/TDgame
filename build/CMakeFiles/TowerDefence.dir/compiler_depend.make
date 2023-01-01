@@ -2375,6 +2375,7 @@ CMakeFiles/TowerDefence.dir/src/UI/BasicInterface.cpp.o: ../src/UI/BasicInterfac
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  ../src/CoutTextColors.h \
   ../src/UI/Button.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
@@ -2887,7 +2888,7 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
-  ../src/UI/Button.h \
+  ../src/CoutTextColors.h \
   /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/char_traits.h \
@@ -2993,8 +2994,8 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/istream \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -3019,9 +3020,11 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
   /usr/include/c++/11/bits/basic_ios.tcc \
-  /usr/include/c++/11/ostream \
   /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  ../src/UI/Button.h \
+  /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
@@ -3197,7 +3200,6 @@ CMakeFiles/TowerDefence.dir/src/UI/LevelsMenu.cpp.o: ../src/UI/LevelsMenu.cpp \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
   ../src/Renderer.h \
-  /usr/include/c++/11/iostream \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/Coords.h \
@@ -3415,6 +3417,7 @@ CMakeFiles/TowerDefence.dir/src/UI/MainMenu.cpp.o: ../src/UI/MainMenu.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  ../src/CoutTextColors.h \
   ../src/UI/Button.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
@@ -3673,7 +3676,7 @@ CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp 
   /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
-  ../src/UI/Button.h \
+  ../src/CoutTextColors.h \
   /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/char_traits.h \
@@ -3779,8 +3782,8 @@ CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp 
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/istream \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -3805,9 +3808,11 @@ CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp 
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
   /usr/include/c++/11/bits/basic_ios.tcc \
-  /usr/include/c++/11/ostream \
   /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  ../src/UI/Button.h \
+  /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
@@ -3983,7 +3988,6 @@ CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.o: ../src/UI/OptionsMenu.cpp 
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
   ../src/Renderer.h \
-  /usr/include/c++/11/iostream \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/Coords.h \
@@ -4641,7 +4645,7 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
-  ../src/UI/Button.h \
+  ../src/CoutTextColors.h \
   /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/char_traits.h \
@@ -4747,8 +4751,8 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/istream \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -4773,9 +4777,11 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
   /usr/include/c++/11/bits/basic_ios.tcc \
-  /usr/include/c++/11/ostream \
   /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  ../src/UI/Button.h \
+  /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
@@ -4951,7 +4957,6 @@ CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o: ../src/abstract
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
   ../src/Renderer.h \
-  /usr/include/c++/11/iostream \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/Coords.h \
@@ -9297,6 +9302,7 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   /usr/include/c++/11/pstl/glue_numeric_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
   ../src/abstractClasses/Interface.h \
+  ../src/CoutTextColors.h \
   ../src/UI/Button.h \
   ../src/UI/MenuOptionsCodes.h
 

@@ -152,11 +152,21 @@ void Application::loop(){
                     activeSceneCode = ActiveScenesCodes::MAIN_MENU;
                     break;
                 
-                //TODO refactor
-                default:
+                case CHOOSE_LVL1:
+                case CHOOSE_LVL2:
+                case CHOOSE_LVL3:
+                case CHOOSE_LVL4:
                     setChosenLevel(code);
                     loadChosenLevel();
                     activeSceneCode = ActiveScenesCodes::GAME_LEVEL;
+                    break;
+
+                default:
+                    if (DEBUG_CONSOLE_OUTPUT_ON){
+                        cout << CoutTextColors::RED;
+                        cout << "No case for option " << code << " in choose level menu" << endl;
+                        cout << CoutTextColors::RESET;
+                    }
                     break;
                 }
             }

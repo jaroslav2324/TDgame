@@ -97,7 +97,7 @@ ostream& operator<<(ostream& os, const CountdownTimer* timer);
 
 
 
-/*starts counting time in ms when created
+/*starts counting time in ms when created or with setStart meth
 */
 class MeasurementTimer{
 

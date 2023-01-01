@@ -15,7 +15,7 @@ struct Line{
 
     Line(): p1(0, 0), p2(0, 0), guidingVector(0, 0){};
     Line(Point& p1, Point& p2): p1(p1), p2(p2), guidingVector(p2.x - p1.x, p2.y - p1.y){};
-    // TODO add constructor with guiding vector and point
+    Line(Point& p1, Vector& guidingVector): p1(p1), guidingVector(guidingVector){p2.x = p1.x + guidingVector.a; p2.y = p2.y + guidingVector.b;};
 
     Point p1;
     Point p2;
