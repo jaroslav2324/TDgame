@@ -8,6 +8,7 @@
 #include <SDL2/SDL_ttf.h>
 
 #include "settings.h"
+#include "CoutTextColors.h"
 #include "Renderer.h"
 #include "LevelsEnum.h"
 #include "game/GameLevel.h"

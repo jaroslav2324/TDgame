@@ -10819,6 +10819,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
+ /home/jaros/gitProjects/c++/TDgame/src/CoutTextColors.h
  /home/jaros/gitProjects/c++/TDgame/src/Application.h
  /usr/include/c++/11/fstream
  /usr/include/c++/11/bits/codecvt.h

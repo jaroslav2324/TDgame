@@ -274,11 +274,9 @@ void Application::setChosenLevel(MenuOptionsCode code){
         return;
     
     default:
-        // redColour
-        //TODO refactor set colour
-        cout << "\033[1;31m";
+        cout << CoutTextColors::RED;
         cout << "Warning! No conversion from options code " << code << " to level num" << endl;
-        cout << "\033[0m";
+        cout << CoutTextColors::RESET;
         break;
     }
 }

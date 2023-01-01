@@ -10789,6 +10789,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  ../src/CoutTextColors.h \
   ../src/Application.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
@@ -12164,6 +12165,8 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 ../src/towers/IceTower.cpp:
 
 ../src/towers/FireTower.cpp:
+
+../src/CoutTextColors.h:
 
 ../src/main.cpp:
 
