@@ -11,6 +11,18 @@ Application::Application(){
     if (TTF_Init() != 0)
         cout << "SDL_ttf error" << endl;
 
+    if (Mix_Init(MIX_INIT_MP3) == 0)
+        cout << "SDL_mixer error" << endl;
+
+    int frequency = 22050;
+    Uint32 audioFormat = AUDIO_S32LSB;
+    int audioChannels = 2;
+    int audioBuffers = 4096;
+
+    if (Mix_OpenAudio(frequency, audioFormat, audioChannels, audioBuffers) != 0)
+        cout << CoutTextColors::RED << "Unable to initialize audio" <<CoutTextColors::RESET << endl;
+
+
     renderer = new Renderer();
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
@@ -52,6 +64,8 @@ Application::~Application(){
         renderer = nullptr;
     }
 
+    Mix_CloseAudio();
+    Mix_Quit();
     TTF_Quit();
 	IMG_Quit();
     SDL_Quit();

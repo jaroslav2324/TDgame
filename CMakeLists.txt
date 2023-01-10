@@ -17,4 +17,4 @@ src/UI/BasicInterface.cpp src/UI/Button.cpp src/game/Portal.cpp src/Coords.cpp s
 )
 
 #target_include_directories(TowerDefence ${SDL2_INCLUDE_DIR})
-target_link_libraries( ${CMAKE_PROJECT_NAME} SDL2main SDL2-static SDL2_image SDL2_ttf)
+target_link_libraries( ${CMAKE_PROJECT_NAME} SDL2main SDL2-static SDL2_image SDL2_ttf SDL2_mixer)

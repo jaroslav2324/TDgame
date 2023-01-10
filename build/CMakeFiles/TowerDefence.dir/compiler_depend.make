@@ -357,6 +357,11 @@ CMakeFiles/TowerDefence.dir/src/Application.cpp.o: ../src/Application.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
+  /usr/include/SDL2/SDL_mixer.h \
+  /usr/include/SDL2/SDL_stdinc.h \
+  /usr/include/SDL2/SDL_rwops.h \
+  /usr/include/SDL2/SDL_audio.h \
+  /usr/include/SDL2/SDL_endian.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/CoutTextColors.h \
@@ -10984,6 +10989,11 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
+  /usr/include/SDL2/SDL_mixer.h \
+  /usr/include/SDL2/SDL_stdinc.h \
+  /usr/include/SDL2/SDL_rwops.h \
+  /usr/include/SDL2/SDL_audio.h \
+  /usr/include/SDL2/SDL_endian.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/CoutTextColors.h \
@@ -12383,13 +12393,7 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 
 /usr/include/SDL2/SDL_thread.h:
 
-/usr/include/SDL2/SDL_endian.h:
-
 /usr/include/SDL2/SDL_error.h:
-
-/usr/include/SDL2/SDL_audio.h:
-
-/usr/include/SDL2/SDL_stdinc.h:
 
 ../src/game/Grid.cpp:
 
@@ -12548,6 +12552,12 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 ../src/CoutTextColors.h:
 
 ../src/settings.h:
+
+/usr/include/SDL2/SDL_endian.h:
+
+/usr/include/SDL2/SDL_audio.h:
+
+/usr/include/SDL2/SDL_stdinc.h:
 
 ../src/entityManagers/TowerManager.h:
 
@@ -13048,6 +13058,8 @@ CMakeFiles/TowerDefence.dir/src/towers/IceTower.cpp.o: ../src/towers/IceTower.cp
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/c++/11/bits/exception_ptr.h:
+
+/usr/include/SDL2/SDL_mixer.h:
 
 /usr/include/c++/11/ext/string_conversions.h:
 
