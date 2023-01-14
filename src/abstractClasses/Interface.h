@@ -19,7 +19,7 @@ class Interface{
     Interface();
     ~Interface();
 
-    virtual void render(Renderer* renderer) = 0;
+    virtual void render() = 0;
     void saveMouseClickCoords(Coords coords);
 
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
@@ -28,6 +28,9 @@ class Interface{
     virtual void loadFromBinaryFile(istream& inputStream);
 
     protected:   
+
+    Renderer* renderer = nullptr;
+    SoundPlayer* soundPlayer = nullptr;
 
     queue<Coords> savedMouseClicks;
 

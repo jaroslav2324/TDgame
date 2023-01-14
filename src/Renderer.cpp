@@ -24,8 +24,8 @@ Renderer::Renderer(){
     texturesPaths[TexturesEnumeration::BASE_TEXTURE] = "../data/assets/base.jpg";
     texturesPaths[TexturesEnumeration::TEST_TEXTURE] = "../data/assets/test.jpeg";
     texturesPaths[TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE] = "../data/assets/white_square.jpg";
-    texturesPaths[TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE] = "../data/assets/dark_grey_square.png";
-    texturesPaths[TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE] = "../data/assets/light_grey_square.jpg";
+    texturesPaths[TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE] = "../data/assets/light_grey_square.jpg";
+    texturesPaths[TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE] = "../data/assets/dark_grey_square.png";
     texturesPaths[TexturesEnumeration::WHITE_CIRCLE] = "../data/assets/white_circle.png";
     // add new paths here
 

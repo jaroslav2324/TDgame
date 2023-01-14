@@ -7,12 +7,12 @@
 class LevelsMenu: public Interface{
 
     public:
-    LevelsMenu();
+    LevelsMenu(Renderer* renderer, SoundPlayer* soundPlayer);
     ~LevelsMenu();
 
     MenuOptionsCode makeFrameTurn();
 
-    void render(Renderer* renderer);
+    void render();
 
     private:
 

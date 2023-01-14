@@ -1,38 +1,26 @@
 #include "LevelsMenu.h"
 
-LevelsMenu::LevelsMenu(){
+LevelsMenu::LevelsMenu(Renderer* renderer, SoundPlayer* soundPlayer){
+
+    this->renderer = renderer;
+    this->soundPlayer = soundPlayer;
     
     //TODO change button textures
     // TODO change button centers(height)
 
-    toMainMenuBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                            Coords(150, 100));
+    toMainMenuBtn = new Button(Coords(150, 100), renderer, soundPlayer);
     toMainMenuBtn->setWidthHeight(200, 100);
 
-    chooseLvl1Btn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                            Coords(SCREEN_WIDTH / 3, SCREEN_HEIGHT / 3));
+    chooseLvl1Btn = new Button(Coords(SCREEN_WIDTH / 3, SCREEN_HEIGHT / 3), renderer, soundPlayer);
     chooseLvl1Btn->setWidthHeight(100, 100);
 
-    chooseLvl2Btn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                            Coords((SCREEN_WIDTH * 2) / 3, SCREEN_HEIGHT / 3));
+    chooseLvl2Btn = new Button(Coords((SCREEN_WIDTH * 2) / 3, SCREEN_HEIGHT / 3), renderer, soundPlayer);
     chooseLvl2Btn->setWidthHeight(100, 100);
 
-    chooseLvl3Btn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                            Coords(SCREEN_WIDTH / 3, ((SCREEN_HEIGHT * 2) / 3)));
+    chooseLvl3Btn = new Button(Coords(SCREEN_WIDTH / 3, ((SCREEN_HEIGHT * 2) / 3)), renderer, soundPlayer);
     chooseLvl3Btn->setWidthHeight(100, 100);
 
-    chooseLvl4Btn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                            Coords((SCREEN_WIDTH * 2) / 3, (SCREEN_HEIGHT * 2) / 3));
+    chooseLvl4Btn = new Button(Coords((SCREEN_WIDTH * 2) / 3, (SCREEN_HEIGHT * 2) / 3), renderer, soundPlayer);
     chooseLvl4Btn->setWidthHeight(100, 100);
 
     createButtonsVec();
@@ -73,7 +61,7 @@ MenuOptionsCode LevelsMenu::makeFrameTurn(){
     return handlePressingOnButtons();
 }
 
-void LevelsMenu::render(Renderer* renderer){
+void LevelsMenu::render(){
 
     SDL_Color color = {120, 120, 150, 255};
     SDL_Rect rect = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};

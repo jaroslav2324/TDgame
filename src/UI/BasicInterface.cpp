@@ -1,35 +1,19 @@
 #include "BasicInterface.h"
 
-BasicInterface::BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager){
+BasicInterface::BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager, Renderer* renderer, SoundPlayer* soundPlayer){
+
+    this->renderer = renderer;
+    this->soundPlayer = soundPlayer;
 
     this->towerManager = towerManager;
     this->enemyManager = enemyManager;
 
     //TODO change button textures
-    exitToMainMenuBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                         Coords(50, 25));
-
-    buildBasicTowerBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                         Coords(50, 300));
-
-    buildIceTowerBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                         Coords(50, 450));
-
-    buildFireTowerBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                         Coords(50, 600));                                   
-
-    spawnEnemyBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                         Coords(600, 40));
+    exitToMainMenuBtn = new Button(Coords(50, 25), renderer, soundPlayer);
+    buildBasicTowerBtn = new Button(Coords(50, 300), renderer, soundPlayer);
+    buildIceTowerBtn = new Button(Coords(50, 450), renderer, soundPlayer);
+    buildFireTowerBtn = new Button(Coords(50, 600), renderer, soundPlayer);                                   
+    spawnEnemyBtn = new Button(Coords(600, 40), renderer, soundPlayer);
 
     createButtonsVec();
     createButtonsReturnCodesVec();    
@@ -68,7 +52,7 @@ MenuOptionsCode BasicInterface::handleCursorInteraction(){
     return handlePressingOnButtons();
 }
 
-void BasicInterface::render(Renderer* renderer){
+void BasicInterface::render(){
 
     SDL_Color color = {150, 150, 100, 255};
     
@@ -99,7 +83,7 @@ MenuOptionsCode BasicInterface::handlePressingOnButtons(){
         savedMouseClicks.pop();
 
         if (buildBasicTowerBtn->isPointInRect(mouseCoords)){
-            buildBasicTowerBtn->setModePressedOn();
+            buildBasicTowerBtn->setModeAndPlaySound(ObjectCursorInteractionsModes::PRESSED_ON);
             buildTowerType = BASIC_TOWER;
 
             if (!towerManager->isBuildModeActive())
@@ -109,7 +93,7 @@ MenuOptionsCode BasicInterface::handlePressingOnButtons(){
             
         }
         else if (buildIceTowerBtn->isPointInRect(mouseCoords)){
-            buildIceTowerBtn->setModePressedOn();
+            buildIceTowerBtn->setModeAndPlaySound(ObjectCursorInteractionsModes::PRESSED_ON);
             buildTowerType = ICE_TOWER;
 
             if (!towerManager->isBuildModeActive())
@@ -118,7 +102,7 @@ MenuOptionsCode BasicInterface::handlePressingOnButtons(){
                 towerManager->deactivateBuildMode();
         }
         else if (buildFireTowerBtn->isPointInRect(mouseCoords)){
-            buildFireTowerBtn->setModePressedOn();
+            buildFireTowerBtn->setModeAndPlaySound(ObjectCursorInteractionsModes::PRESSED_ON);
             buildTowerType = FIRE_TOWER;
 
             if (!towerManager->isBuildModeActive())
@@ -128,12 +112,12 @@ MenuOptionsCode BasicInterface::handlePressingOnButtons(){
         }
         else if (spawnEnemyBtn->isPointInRect(mouseCoords)){
 
-            spawnEnemyBtn->setModePressedOn();
+            spawnEnemyBtn->setModeAndPlaySound(ObjectCursorInteractionsModes::PRESSED_ON);
 
             enemyManager->startSpawning();
         }
         else if (exitToMainMenuBtn->isPointInRect(mouseCoords)){
-            exitToMainMenuBtn->setModePressedOn();
+            exitToMainMenuBtn->setModeAndPlaySound(ObjectCursorInteractionsModes::PRESSED_ON);
             code = QUIT_TO_MAIN_MENU;
         }
 

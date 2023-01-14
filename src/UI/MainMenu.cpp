@@ -1,26 +1,20 @@
 #include "MainMenu.h"
 
-MainMenu::MainMenu(){
+MainMenu::MainMenu(Renderer* renderer, SoundPlayer* soundPlayer){
+
+    this->renderer = renderer;
+    this->soundPlayer = soundPlayer;
     
     //TODO change button textures
     // TODO change button centers(height)
-    startGameBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                            Coords(SCREEN_WIDTH / 2, 150));
+    startGameBtn = new Button(Coords(SCREEN_WIDTH / 2, 150), renderer, soundPlayer);
     startGameBtn->setWidthHeight(500, 200);
                                     
 
-    settingsBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                            Coords(SCREEN_WIDTH / 2, 450));
+    settingsBtn = new Button(Coords(SCREEN_WIDTH / 2, 450), renderer, soundPlayer);
     settingsBtn->setWidthHeight(500, 200);
 
-    quitBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                            Coords(SCREEN_WIDTH / 2, 750));
+    quitBtn = new Button(Coords(SCREEN_WIDTH / 2, 750), renderer, soundPlayer);
     quitBtn->setWidthHeight(500, 200);
 
     createButtonsVec();
@@ -51,7 +45,7 @@ MenuOptionsCode MainMenu::makeFrameTurn(){
     return handlePressingOnButtons();
 }
 
-void MainMenu::render(Renderer* renderer){
+void MainMenu::render(){
 
     SDL_Color color = {150, 150, 100, 255};
     SDL_Rect rect = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};

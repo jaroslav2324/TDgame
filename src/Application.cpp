@@ -14,22 +14,14 @@ Application::Application(){
     if (Mix_Init(MIX_INIT_MP3) == 0)
         cout << "SDL_mixer error" << endl;
 
-    int frequency = 22050;
-    Uint32 audioFormat = AUDIO_S32LSB;
-    int audioChannels = 2;
-    int audioBuffers = 4096;
-
-    if (Mix_OpenAudio(frequency, audioFormat, audioChannels, audioBuffers) != 0)
-        cout << CoutTextColors::RED << "Unable to initialize audio" <<CoutTextColors::RESET << endl;
-
-
     renderer = new Renderer();
+    soundPlayer = new SoundPlayer();
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
 
-    mainMenu = new MainMenu();
-    optionsMenu = new OptionsMenu();
-    levelsMenu = new LevelsMenu();
+    mainMenu = new MainMenu(renderer, soundPlayer);
+    optionsMenu = new OptionsMenu(renderer, soundPlayer);
+    levelsMenu = new LevelsMenu(renderer, soundPlayer);
 }
 
 Application::~Application(){
@@ -64,6 +56,11 @@ Application::~Application(){
         renderer = nullptr;
     }
 
+    if (soundPlayer != nullptr){
+        delete soundPlayer;
+        soundPlayer = nullptr;
+    }
+
     Mix_CloseAudio();
     Mix_Quit();
     TTF_Quit();
@@ -89,7 +86,7 @@ void Application::loop(){
             if (activeSceneCode == ActiveScenesCodes::MAIN_MENU){
 
                 code = mainMenu->makeFrameTurn();
-                mainMenu->render(renderer);
+                mainMenu->render();
 
                 switch (code){
 
@@ -119,7 +116,7 @@ void Application::loop(){
             else if (activeSceneCode == ActiveScenesCodes::OPTIONS_MENU){
 
                 code  = optionsMenu->makeFrameTurn();
-                optionsMenu->render(renderer);
+                optionsMenu->render();
                 
                 switch (code){
 
@@ -155,7 +152,7 @@ void Application::loop(){
             else if (activeSceneCode == ActiveScenesCodes::CHOOSE_LEVEL_MENU){
 
                 code = levelsMenu->makeFrameTurn();
-                levelsMenu->render(renderer);
+                levelsMenu->render();
 
                 switch (code)
                 {
@@ -244,7 +241,7 @@ void Application::loadChosenLevel(){
         break;
     }
 
-    gameLevel = new GameLevel();
+    gameLevel = new GameLevel(renderer, soundPlayer);
 
     std::ofstream levelFileOut;
     levelFileOut.open(levelPath, std::ios::binary);

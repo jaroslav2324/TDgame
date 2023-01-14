@@ -34,6 +34,7 @@ class Application{
     bool quitApp = false;
 
     Renderer* renderer = nullptr;
+    SoundPlayer* soundPlayer = nullptr;
 
     ActiveScenesCodes activeSceneCode = ActiveScenesCodes::MAIN_MENU;
 

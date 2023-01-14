@@ -1,6 +1,6 @@
 #include "GameLevel.h"
 
-GameLevel::GameLevel(){
+GameLevel::GameLevel(Renderer* renderer, SoundPlayer* soundPlayer){
 
     enemiesWay = new EnemiesWay();
 
@@ -19,8 +19,7 @@ GameLevel::GameLevel(){
     grid = new Grid(Coords(100, 100), Coords(SCREEN_WIDTH, SCREEN_HEIGHT), TILESIZE, TILESIZE, GAME_LEVEL_WIDTH, GAME_LEVEL_HEIGHT
     );
 
-    interface = new BasicInterface(towerManager, enemyManager);
-
+    interface = new BasicInterface(towerManager, enemyManager, renderer, soundPlayer);
 }
 
 GameLevel::~GameLevel(){
@@ -70,7 +69,7 @@ void GameLevel::renderAll(Renderer* renderer){
     enemyManager->renderAll(renderer);
     towerManager->renderAllAttacks(renderer);
 
-    interface->render(renderer);
+    interface->render();
 }
 
 MenuOptionsCode GameLevel::makeFrameTurn(){

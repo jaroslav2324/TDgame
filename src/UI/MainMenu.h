@@ -16,12 +16,12 @@ using std::endl;
 class MainMenu: public Interface{
 
     public:
-    MainMenu();
+    MainMenu(Renderer* renderer,SoundPlayer* soundPlayer);
     ~MainMenu();
 
     MenuOptionsCode makeFrameTurn();
 
-    void render(Renderer* renderer);
+    void render();
 
     private:
 

@@ -1,14 +1,14 @@
 #include "OptionsMenu.h"
 
-OptionsMenu::OptionsMenu(){
+OptionsMenu::OptionsMenu(Renderer* renderer, SoundPlayer* soundPlayer){
+
+    this->renderer = renderer;
+    this->soundPlayer = soundPlayer;
     
     //TODO change button textures
     // TODO change button centers(height)
 
-    toMainMenuBtn = new Button(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, 
-                                         TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE,
-                                         TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE,
-                                            Coords(SCREEN_WIDTH / 2, 250));
+    toMainMenuBtn = new Button(Coords(SCREEN_WIDTH / 2, 250), renderer, soundPlayer);
     toMainMenuBtn->setWidthHeight(500, 200);
 
     createButtonsVec();
@@ -29,7 +29,7 @@ MenuOptionsCode OptionsMenu::makeFrameTurn(){
     return handlePressingOnButtons();
 }
 
-void OptionsMenu::render(Renderer* renderer){
+void OptionsMenu::render(){
 
     SDL_Color color = {150, 150, 150, 255};
     SDL_Rect rect = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};

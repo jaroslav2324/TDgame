@@ -314,6 +314,54 @@ src/Renderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Renderer.cpp.s
 .PHONY : src/Renderer.cpp.s
 
+src/SoundPlayer.o: src/SoundPlayer.cpp.o
+.PHONY : src/SoundPlayer.o
+
+# target to build an object file
+src/SoundPlayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/SoundPlayer.cpp.o
+.PHONY : src/SoundPlayer.cpp.o
+
+src/SoundPlayer.i: src/SoundPlayer.cpp.i
+.PHONY : src/SoundPlayer.i
+
+# target to preprocess a source file
+src/SoundPlayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/SoundPlayer.cpp.i
+.PHONY : src/SoundPlayer.cpp.i
+
+src/SoundPlayer.s: src/SoundPlayer.cpp.s
+.PHONY : src/SoundPlayer.s
+
+# target to generate assembly for a file
+src/SoundPlayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/SoundPlayer.cpp.s
+.PHONY : src/SoundPlayer.cpp.s
+
+src/SoundsEnumeration.o: src/SoundsEnumeration.cpp.o
+.PHONY : src/SoundsEnumeration.o
+
+# target to build an object file
+src/SoundsEnumeration.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/SoundsEnumeration.cpp.o
+.PHONY : src/SoundsEnumeration.cpp.o
+
+src/SoundsEnumeration.i: src/SoundsEnumeration.cpp.i
+.PHONY : src/SoundsEnumeration.i
+
+# target to preprocess a source file
+src/SoundsEnumeration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/SoundsEnumeration.cpp.i
+.PHONY : src/SoundsEnumeration.cpp.i
+
+src/SoundsEnumeration.s: src/SoundsEnumeration.cpp.s
+.PHONY : src/SoundsEnumeration.s
+
+# target to generate assembly for a file
+src/SoundsEnumeration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/SoundsEnumeration.cpp.s
+.PHONY : src/SoundsEnumeration.cpp.s
+
 src/TexturesEnum.o: src/TexturesEnum.cpp.o
 .PHONY : src/TexturesEnum.o
 
@@ -1039,6 +1087,12 @@ help:
 	@echo "... src/Renderer.o"
 	@echo "... src/Renderer.i"
 	@echo "... src/Renderer.s"
+	@echo "... src/SoundPlayer.o"
+	@echo "... src/SoundPlayer.i"
+	@echo "... src/SoundPlayer.s"
+	@echo "... src/SoundsEnumeration.o"
+	@echo "... src/SoundsEnumeration.i"
+	@echo "... src/SoundsEnumeration.s"
 	@echo "... src/TexturesEnum.o"
 	@echo "... src/TexturesEnum.i"
 	@echo "... src/TexturesEnum.s"

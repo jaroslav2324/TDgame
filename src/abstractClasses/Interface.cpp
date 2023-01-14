@@ -21,9 +21,9 @@ void Interface::handleHoveringOverButtons(){
 
     for (auto btn: buttonsVec)
         if (btn->isPointInRect(mouseCoords))
-            btn->setModeHoveredOver();
+            btn->setModeAndPlaySound(ObjectCursorInteractionsModes::HOVERED_OVER);
         else
-            btn->setModeNoCursorInteraction();
+            btn->setModeAndPlaySound(ObjectCursorInteractionsModes::NO_INTERACTION);
     
 }
 
@@ -39,7 +39,7 @@ MenuOptionsCode Interface::handlePressingOnButtons(){
 
         for (int i = 0 ; i < buttonsVec.size(); i++)
             if (buttonsVec[i]->isPointInRect(mouseCoords)){
-                buttonsVec[i]->setModePressedOn();
+                buttonsVec[i]->setModeAndPlaySound(ObjectCursorInteractionsModes::PRESSED_ON);
                 returnCode = buttonsReturnCodesVec[i];
         }
     }
@@ -50,7 +50,7 @@ MenuOptionsCode Interface::handlePressingOnButtons(){
 void Interface::renderButtons(Renderer* renderer){
 
     for (auto button: buttonsVec)
-        button->render(renderer);
+        button->render();
 }
 
 

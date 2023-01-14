@@ -5,9 +5,9 @@
 #include <random>
 
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
 
 #include "../settings.h"
+#include "../SoundPlayer.h"
 #include "../abstractClasses/Interface.h"
 #include "../entityManagers/TowerManager.h"
 #include "../entityManagers/EnemyManager.h"
@@ -20,11 +20,11 @@ using std::queue;
 //TODO rename
 class BasicInterface:  public Interface{
     public:
-    BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager);
+    BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager, Renderer* renderer, SoundPlayer* soundPlayer);
     ~BasicInterface();
 
     MenuOptionsCode handleCursorInteraction();
-    void render(Renderer* renderer);
+    void render();
 
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     void saveToBinaryFile(ostream& outpustStream);

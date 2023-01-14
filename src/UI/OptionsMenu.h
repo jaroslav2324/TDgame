@@ -7,12 +7,12 @@
 class OptionsMenu: public Interface{
 
     public:
-    OptionsMenu();
+    OptionsMenu(Renderer* renderer, SoundPlayer* soundPlayer);
     ~OptionsMenu();
 
     MenuOptionsCode makeFrameTurn();
 
-    void render(Renderer* renderer);
+    void render();
 
     private:
 

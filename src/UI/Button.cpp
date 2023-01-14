@@ -1,12 +1,18 @@
 #include "Button.h"
 
-Button::Button(TexturesEnumeration textureNoInteraction, TexturesEnumeration textureHoveredOver, TexturesEnumeration texturePressedOn, Coords coords){
+Button::Button(Coords coords, Renderer* renderer, SoundPlayer* soundPlayer, TexturesEnumeration textureNoInteraction, TexturesEnumeration textureHoveredOver, TexturesEnumeration texturePressedOn,
+    SoundsEnumeration soundHoverOver, SoundsEnumeration soundPressOn){
 
     Button::coords = coords;
+    this->renderer = renderer;
+    this->soundPlayer = soundPlayer;
 
     this->textureNoInteraction = textureNoInteraction;
     this->textureHoveredOver = textureHoveredOver;
     this->texturePressedOn = texturePressedOn;
+
+    this->soundHoverOver = soundHoverOver;
+    this->soundPressOn = soundPressOn;
 
     pressingCooldownTimer = new CountdownTimer(0);
 }
@@ -19,7 +25,7 @@ Button::~Button(){
     }
 }
 
-void Button::render(Renderer* renderer){
+void Button::render(){
 
     int x = coords.x - btnWidth / 2;
     int y = coords.y - btnHeight / 2;
@@ -46,17 +52,47 @@ void Button::render(Renderer* renderer){
     }
 }
 
-void Button::setModeNoCursorInteraction(){
-    btnCursorInteractionMode = NO_INTERACTION;
-}
+// void Button::setModeNoCursorInteraction(){
+//     btnCursorInteractionMode = NO_INTERACTION;
+// }
 
-void Button::setModePressedOn(){
-    btnCursorInteractionMode = PRESSED_ON;
-    pressingCooldownTimer->replaceTime(pressingCooldownTime);
-}
+// void Button::setModePressedOn(){
+//     btnCursorInteractionMode = PRESSED_ON;
+//     pressingCooldownTimer->replaceTime(pressingCooldownTime);
+// }
 
-void Button::setModeHoveredOver(){
-    btnCursorInteractionMode = HOVERED_OVER;
+// void Button::setModeHoveredOver(){
+//     btnCursorInteractionMode = HOVERED_OVER;
+// }
+
+void Button::setModeAndPlaySound(ObjectCursorInteractionsModes btnMode){
+
+    switch(btnMode){
+
+        case NO_INTERACTION:
+        btnCursorInteractionMode = NO_INTERACTION;
+        break;
+
+        case PRESSED_ON:
+        btnCursorInteractionMode = PRESSED_ON;
+        pressingCooldownTimer->replaceTime(pressingCooldownTime);
+        //TODO change channel
+        soundPlayer->playSound(soundPressOn, SoundChannels::EFFECTS_CHANNEL);
+        break;
+
+        case HOVERED_OVER:
+        if (btnCursorInteractionMode == ObjectCursorInteractionsModes::NO_INTERACTION){
+            //TODO change channel
+            soundPlayer->playSound(soundHoverOver, SoundChannels::EFFECTS_CHANNEL);
+        }
+        btnCursorInteractionMode = HOVERED_OVER;
+        
+        break;
+
+        default:
+        //TODO write something
+        break;
+    }
 }
 
 bool Button::isPointInRect(Coords point){

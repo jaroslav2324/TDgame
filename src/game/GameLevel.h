@@ -15,7 +15,7 @@ using std::endl;
 
 class GameLevel{
     public:
-    GameLevel();
+    GameLevel(Renderer* renderer, SoundPlayer* soundPlayer);
     ~GameLevel();
 
     MenuOptionsCode makeFrameTurn();
