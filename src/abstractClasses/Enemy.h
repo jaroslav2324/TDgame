@@ -10,7 +10,7 @@
 #include "../game/EnemiesWay.h"
 #include "../game/Base.h"
 #include "../game/Portal.h"
-#include "../approximateComparison.h"
+#include "../maths/approximateComparison.h"
 #include "../enemies/EnemyTypes.h"
 
 using std::string;

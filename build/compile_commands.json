@@ -26,8 +26,8 @@
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/approximateComparison.cpp",
-  "file": "/home/jaros/gitProjects/c++/TDgame/src/approximateComparison.cpp"
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
@@ -86,8 +86,8 @@
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/Coords.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Coords.cpp",
-  "file": "/home/jaros/gitProjects/c++/TDgame/src/Coords.cpp"
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/maths/Coords.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/maths/Coords.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
@@ -136,13 +136,13 @@
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/Line.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Line.cpp",
-  "file": "/home/jaros/gitProjects/c++/TDgame/src/Line.cpp"
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/maths/Line.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/maths/Line.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/maths/Line.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/Vector.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Vector.cpp",
-  "file": "/home/jaros/gitProjects/c++/TDgame/src/Vector.cpp"
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/maths/Vector.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/maths/Vector.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",

@@ -7,7 +7,7 @@
 #include <SDL2/SDL_image.h>
 
 #include "../Renderer.h"
-#include "../Coords.h"
+#include "../maths/Coords.h"
 #include "../Timers.h"
 #include "../ObjectCursorInteractionsModes.h"
 #include "../SoundPlayer.h"

@@ -7,7 +7,7 @@
 #include "SDL2/SDL.h"
 
 #include "../settings.h"
-#include "../Coords.h"
+#include "../maths/Coords.h"
 #include "../Renderer.h"
 
 /*Only graphical class, enemies spawn in enemy manager*/

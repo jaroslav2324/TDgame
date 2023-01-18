@@ -9,8 +9,8 @@
 #include "SDL2/SDL_ttf.h"
 
 #include "settings.h"
-#include "Coords.h"
-#include "Line.h"
+#include "maths/Coords.h"
+#include "maths/Line.h"
 #include "TexturesEnum.h"
 
 using std::map;

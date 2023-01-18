@@ -218,30 +218,6 @@ src/Application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Application.cpp.s
 .PHONY : src/Application.cpp.s
 
-src/Coords.o: src/Coords.cpp.o
-.PHONY : src/Coords.o
-
-# target to build an object file
-src/Coords.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Coords.cpp.o
-.PHONY : src/Coords.cpp.o
-
-src/Coords.i: src/Coords.cpp.i
-.PHONY : src/Coords.i
-
-# target to preprocess a source file
-src/Coords.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Coords.cpp.i
-.PHONY : src/Coords.cpp.i
-
-src/Coords.s: src/Coords.cpp.s
-.PHONY : src/Coords.s
-
-# target to generate assembly for a file
-src/Coords.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Coords.cpp.s
-.PHONY : src/Coords.cpp.s
-
 src/CoutTextColors.o: src/CoutTextColors.cpp.o
 .PHONY : src/CoutTextColors.o
 
@@ -265,30 +241,6 @@ src/CoutTextColors.s: src/CoutTextColors.cpp.s
 src/CoutTextColors.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/CoutTextColors.cpp.s
 .PHONY : src/CoutTextColors.cpp.s
-
-src/Line.o: src/Line.cpp.o
-.PHONY : src/Line.o
-
-# target to build an object file
-src/Line.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Line.cpp.o
-.PHONY : src/Line.cpp.o
-
-src/Line.i: src/Line.cpp.i
-.PHONY : src/Line.i
-
-# target to preprocess a source file
-src/Line.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Line.cpp.i
-.PHONY : src/Line.cpp.i
-
-src/Line.s: src/Line.cpp.s
-.PHONY : src/Line.s
-
-# target to generate assembly for a file
-src/Line.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Line.cpp.s
-.PHONY : src/Line.cpp.s
 
 src/Renderer.o: src/Renderer.cpp.o
 .PHONY : src/Renderer.o
@@ -554,30 +506,6 @@ src/UI/Slider.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Slider.cpp.s
 .PHONY : src/UI/Slider.cpp.s
 
-src/Vector.o: src/Vector.cpp.o
-.PHONY : src/Vector.o
-
-# target to build an object file
-src/Vector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Vector.cpp.o
-.PHONY : src/Vector.cpp.o
-
-src/Vector.i: src/Vector.cpp.i
-.PHONY : src/Vector.i
-
-# target to preprocess a source file
-src/Vector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Vector.cpp.i
-.PHONY : src/Vector.cpp.i
-
-src/Vector.s: src/Vector.cpp.s
-.PHONY : src/Vector.s
-
-# target to generate assembly for a file
-src/Vector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Vector.cpp.s
-.PHONY : src/Vector.cpp.s
-
 src/abstractClasses/Enemy.o: src/abstractClasses/Enemy.cpp.o
 .PHONY : src/abstractClasses/Enemy.o
 
@@ -745,30 +673,6 @@ src/abstractClasses/Tower.s: src/abstractClasses/Tower.cpp.s
 src/abstractClasses/Tower.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.s
 .PHONY : src/abstractClasses/Tower.cpp.s
-
-src/approximateComparison.o: src/approximateComparison.cpp.o
-.PHONY : src/approximateComparison.o
-
-# target to build an object file
-src/approximateComparison.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.o
-.PHONY : src/approximateComparison.cpp.o
-
-src/approximateComparison.i: src/approximateComparison.cpp.i
-.PHONY : src/approximateComparison.i
-
-# target to preprocess a source file
-src/approximateComparison.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.i
-.PHONY : src/approximateComparison.cpp.i
-
-src/approximateComparison.s: src/approximateComparison.cpp.s
-.PHONY : src/approximateComparison.s
-
-# target to generate assembly for a file
-src/approximateComparison.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/approximateComparison.cpp.s
-.PHONY : src/approximateComparison.cpp.s
 
 src/entityManagers/EnemyManager.o: src/entityManagers/EnemyManager.cpp.o
 .PHONY : src/entityManagers/EnemyManager.o
@@ -1010,6 +914,102 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/maths/Coords.o: src/maths/Coords.cpp.o
+.PHONY : src/maths/Coords.o
+
+# target to build an object file
+src/maths/Coords.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/maths/Coords.cpp.o
+.PHONY : src/maths/Coords.cpp.o
+
+src/maths/Coords.i: src/maths/Coords.cpp.i
+.PHONY : src/maths/Coords.i
+
+# target to preprocess a source file
+src/maths/Coords.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/maths/Coords.cpp.i
+.PHONY : src/maths/Coords.cpp.i
+
+src/maths/Coords.s: src/maths/Coords.cpp.s
+.PHONY : src/maths/Coords.s
+
+# target to generate assembly for a file
+src/maths/Coords.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/maths/Coords.cpp.s
+.PHONY : src/maths/Coords.cpp.s
+
+src/maths/Line.o: src/maths/Line.cpp.o
+.PHONY : src/maths/Line.o
+
+# target to build an object file
+src/maths/Line.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/maths/Line.cpp.o
+.PHONY : src/maths/Line.cpp.o
+
+src/maths/Line.i: src/maths/Line.cpp.i
+.PHONY : src/maths/Line.i
+
+# target to preprocess a source file
+src/maths/Line.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/maths/Line.cpp.i
+.PHONY : src/maths/Line.cpp.i
+
+src/maths/Line.s: src/maths/Line.cpp.s
+.PHONY : src/maths/Line.s
+
+# target to generate assembly for a file
+src/maths/Line.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/maths/Line.cpp.s
+.PHONY : src/maths/Line.cpp.s
+
+src/maths/Vector.o: src/maths/Vector.cpp.o
+.PHONY : src/maths/Vector.o
+
+# target to build an object file
+src/maths/Vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/maths/Vector.cpp.o
+.PHONY : src/maths/Vector.cpp.o
+
+src/maths/Vector.i: src/maths/Vector.cpp.i
+.PHONY : src/maths/Vector.i
+
+# target to preprocess a source file
+src/maths/Vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/maths/Vector.cpp.i
+.PHONY : src/maths/Vector.cpp.i
+
+src/maths/Vector.s: src/maths/Vector.cpp.s
+.PHONY : src/maths/Vector.s
+
+# target to generate assembly for a file
+src/maths/Vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/maths/Vector.cpp.s
+.PHONY : src/maths/Vector.cpp.s
+
+src/maths/approximateComparison.o: src/maths/approximateComparison.cpp.o
+.PHONY : src/maths/approximateComparison.o
+
+# target to build an object file
+src/maths/approximateComparison.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o
+.PHONY : src/maths/approximateComparison.cpp.o
+
+src/maths/approximateComparison.i: src/maths/approximateComparison.cpp.i
+.PHONY : src/maths/approximateComparison.i
+
+# target to preprocess a source file
+src/maths/approximateComparison.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.i
+.PHONY : src/maths/approximateComparison.cpp.i
+
+src/maths/approximateComparison.s: src/maths/approximateComparison.cpp.s
+.PHONY : src/maths/approximateComparison.s
+
+# target to generate assembly for a file
+src/maths/approximateComparison.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.s
+.PHONY : src/maths/approximateComparison.cpp.s
+
 src/towers/BasicTower.o: src/towers/BasicTower.cpp.o
 .PHONY : src/towers/BasicTower.o
 
@@ -1099,15 +1099,9 @@ help:
 	@echo "... src/Application.o"
 	@echo "... src/Application.i"
 	@echo "... src/Application.s"
-	@echo "... src/Coords.o"
-	@echo "... src/Coords.i"
-	@echo "... src/Coords.s"
 	@echo "... src/CoutTextColors.o"
 	@echo "... src/CoutTextColors.i"
 	@echo "... src/CoutTextColors.s"
-	@echo "... src/Line.o"
-	@echo "... src/Line.i"
-	@echo "... src/Line.s"
 	@echo "... src/Renderer.o"
 	@echo "... src/Renderer.i"
 	@echo "... src/Renderer.s"
@@ -1141,9 +1135,6 @@ help:
 	@echo "... src/UI/Slider.o"
 	@echo "... src/UI/Slider.i"
 	@echo "... src/UI/Slider.s"
-	@echo "... src/Vector.o"
-	@echo "... src/Vector.i"
-	@echo "... src/Vector.s"
 	@echo "... src/abstractClasses/Enemy.o"
 	@echo "... src/abstractClasses/Enemy.i"
 	@echo "... src/abstractClasses/Enemy.s"
@@ -1165,9 +1156,6 @@ help:
 	@echo "... src/abstractClasses/Tower.o"
 	@echo "... src/abstractClasses/Tower.i"
 	@echo "... src/abstractClasses/Tower.s"
-	@echo "... src/approximateComparison.o"
-	@echo "... src/approximateComparison.i"
-	@echo "... src/approximateComparison.s"
 	@echo "... src/entityManagers/EnemyManager.o"
 	@echo "... src/entityManagers/EnemyManager.i"
 	@echo "... src/entityManagers/EnemyManager.s"
@@ -1198,6 +1186,18 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/maths/Coords.o"
+	@echo "... src/maths/Coords.i"
+	@echo "... src/maths/Coords.s"
+	@echo "... src/maths/Line.o"
+	@echo "... src/maths/Line.i"
+	@echo "... src/maths/Line.s"
+	@echo "... src/maths/Vector.o"
+	@echo "... src/maths/Vector.i"
+	@echo "... src/maths/Vector.s"
+	@echo "... src/maths/approximateComparison.o"
+	@echo "... src/maths/approximateComparison.i"
+	@echo "... src/maths/approximateComparison.s"
 	@echo "... src/towers/BasicTower.o"
 	@echo "... src/towers/BasicTower.i"
 	@echo "... src/towers/BasicTower.s"

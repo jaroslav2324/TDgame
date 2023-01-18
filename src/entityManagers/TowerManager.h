@@ -6,7 +6,7 @@
 #include "../towers/BasicTower.h"
 #include "../towers/IceTower.h"
 #include "../towers/FireTower.h"
-#include "../approximateComparison.h"
+#include "../maths/approximateComparison.h"
 
 class TowerManager{
     public:

@@ -2,7 +2,7 @@
 #include "fstream"
 #include "iostream"
 
-#include "settings.h"
+#include "../settings.h"
 #include "Coords.h"
 #include "Vector.h"
 

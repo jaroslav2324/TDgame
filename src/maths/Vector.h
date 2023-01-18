@@ -3,7 +3,7 @@
 #include "fstream"
 #include "iostream"
 
-#include "settings.h"
+#include "../settings.h"
 
 using std::ostream;
 using std::istream; 

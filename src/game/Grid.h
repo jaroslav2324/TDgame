@@ -3,7 +3,7 @@
 
 #include "GridTile.h"
 #include "../settings.h"
-#include "../Coords.h"
+#include "../maths/Coords.h"
 #include "../Renderer.h"
 
 /*grid class for render tiles

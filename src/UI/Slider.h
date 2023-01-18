@@ -8,7 +8,7 @@
 #include "../CoutTextColors.h"
 #include "../TexturesEnum.h"
 #include "../Renderer.h"
-#include "../Coords.h"
+#include "../maths/Coords.h"
 
 using std::cout;
 using std::endl;

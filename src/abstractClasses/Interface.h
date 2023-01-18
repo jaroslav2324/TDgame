@@ -6,7 +6,7 @@
 
 #include "../CoutTextColors.h"
 #include "../UI/Button.h"
-#include "../Coords.h"
+#include "../maths/Coords.h"
 #include "../Renderer.h"
 #include "../UI/MenuOptionsCodes.h"
 

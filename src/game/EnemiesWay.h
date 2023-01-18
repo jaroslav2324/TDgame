@@ -6,7 +6,7 @@
 
 #include "SDL2/SDL.h"
 
-#include "../Coords.h"
+#include "../maths/Coords.h"
 #include "../Renderer.h"
 
 using std::unordered_map;

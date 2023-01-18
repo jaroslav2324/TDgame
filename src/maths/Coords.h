@@ -4,7 +4,7 @@
 #include <fstream>
 #include <math.h>
 
-#include "settings.h"
+#include "../settings.h"
 #include "Vector.h"
 
 using std::istream;
