@@ -530,6 +530,30 @@ src/UI/OptionsMenu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/OptionsMenu.cpp.s
 .PHONY : src/UI/OptionsMenu.cpp.s
 
+src/UI/Slider.o: src/UI/Slider.cpp.o
+.PHONY : src/UI/Slider.o
+
+# target to build an object file
+src/UI/Slider.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Slider.cpp.o
+.PHONY : src/UI/Slider.cpp.o
+
+src/UI/Slider.i: src/UI/Slider.cpp.i
+.PHONY : src/UI/Slider.i
+
+# target to preprocess a source file
+src/UI/Slider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Slider.cpp.i
+.PHONY : src/UI/Slider.cpp.i
+
+src/UI/Slider.s: src/UI/Slider.cpp.s
+.PHONY : src/UI/Slider.s
+
+# target to generate assembly for a file
+src/UI/Slider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/UI/Slider.cpp.s
+.PHONY : src/UI/Slider.cpp.s
+
 src/Vector.o: src/Vector.cpp.o
 .PHONY : src/Vector.o
 
@@ -1114,6 +1138,9 @@ help:
 	@echo "... src/UI/OptionsMenu.o"
 	@echo "... src/UI/OptionsMenu.i"
 	@echo "... src/UI/OptionsMenu.s"
+	@echo "... src/UI/Slider.o"
+	@echo "... src/UI/Slider.i"
+	@echo "... src/UI/Slider.s"
 	@echo "... src/Vector.o"
 	@echo "... src/Vector.i"
 	@echo "... src/Vector.s"

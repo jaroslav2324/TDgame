@@ -3,6 +3,7 @@
 #include "../abstractClasses/Interface.h"
 #include "../Timers.h"
 #include "Button.h"
+#include "Slider.h"
 
 class OptionsMenu: public Interface{
 
@@ -17,6 +18,7 @@ class OptionsMenu: public Interface{
     private:
 
     Button* toMainMenuBtn = nullptr;
+    Slider* musicVolumeSlider = nullptr;
 
     PeriodicTimer* fpsTimer = nullptr;
 

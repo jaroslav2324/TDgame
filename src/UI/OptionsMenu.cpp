@@ -11,6 +11,10 @@ OptionsMenu::OptionsMenu(Renderer* renderer, SoundPlayer* soundPlayer){
     toMainMenuBtn = new Button(Coords(SCREEN_WIDTH / 2, 250), renderer, soundPlayer);
     toMainMenuBtn->setWidthHeight(500, 200);
 
+    musicVolumeSlider = new Slider(renderer, {SCREEN_WIDTH / 2 - 250, 500, 500, 50});
+    musicVolumeSlider->setTitle("Music volume");
+    musicVolumeSlider->setTitleWidth(100);
+
     createButtonsVec();
     createButtonsReturnCodesVec();    
 }
@@ -21,11 +25,25 @@ OptionsMenu::~OptionsMenu(){
         delete toMainMenuBtn;
         toMainMenuBtn = nullptr;
     }
+
+    if (musicVolumeSlider != nullptr){
+        delete musicVolumeSlider;
+        musicVolumeSlider = nullptr;
+    }
 }
 
 MenuOptionsCode OptionsMenu::makeFrameTurn(){
 
     handleHoveringOverButtons();
+    //TODO rewrite, 
+    queue<Coords> queuePressedMouseCoords = savedMouseClicks;
+    while (!queuePressedMouseCoords.empty()){
+        Coords mouseCoords = queuePressedMouseCoords.front();
+        queuePressedMouseCoords.pop();
+
+        if (musicVolumeSlider->isPointInRect(mouseCoords))
+            musicVolumeSlider->setPosition(mouseCoords);
+    }
     return handlePressingOnButtons();
 }
 
@@ -36,6 +54,7 @@ void OptionsMenu::render(){
     renderer->renderFilledRect(&rect, color);
 
     renderButtons(renderer);
+    musicVolumeSlider->render();
 }
 
 void OptionsMenu::createButtonsVec(){
