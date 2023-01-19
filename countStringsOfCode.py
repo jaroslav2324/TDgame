@@ -11,6 +11,9 @@ rootPath = os.path.join(rootPath, 'src')
 
 for root, dirs, files in os.walk(rootPath):
    for name in files:
+        nameList = name.split(".")
+        if (nameList[-1] != "cpp" and nameList[-1] != "h"):
+            continue
         filePath = os.path.join(root, name)
         with open(filePath, 'r') as f:
             for line in f:
