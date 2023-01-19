@@ -4,7 +4,7 @@
 #include "GridTile.h"
 #include "../settings.h"
 #include "../maths/Coords.h"
-#include "../Renderer.h"
+#include "../engine/Engine.h"
 
 /*grid class for render tiles
 ONLY FOR RENDERING TILES*/

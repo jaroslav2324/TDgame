@@ -2,7 +2,7 @@
 
 #include "utility"
 
-#include "../Renderer.h"
+#include "../engine/Engine.h"
 #include "Enemy.h"
 
 /*basic class for all projectiles

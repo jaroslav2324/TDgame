@@ -24,6 +24,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../libs/SDL/include/SDL_revision.h.cmake"
   "../libs/SDL/sdl2-config.in"
   "../libs/SDL/sdl2.pc.in"
+  "../src/engine/CMakeLists.txt"
+  "../src/engine/rendering/CMakeLists.txt"
+  "../src/engine/sound/CMakeLists.txt"
   "/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -84,6 +87,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "libs/SDL/cmake_uninstall.cmake"
   "libs/SDL/include-config-debug/SDL_config.h"
   "libs/SDL/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/engine/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/engine/rendering/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/engine/sound/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

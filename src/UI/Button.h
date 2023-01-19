@@ -6,11 +6,10 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
-#include "../Renderer.h"
+#include "../engine/Engine.h"
 #include "../maths/Coords.h"
 #include "../Timers.h"
 #include "../ObjectCursorInteractionsModes.h"
-#include "../SoundPlayer.h"
 
 using std::ostream;
 using std::istream;

@@ -242,102 +242,6 @@ src/CoutTextColors.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/CoutTextColors.cpp.s
 .PHONY : src/CoutTextColors.cpp.s
 
-src/Renderer.o: src/Renderer.cpp.o
-.PHONY : src/Renderer.o
-
-# target to build an object file
-src/Renderer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o
-.PHONY : src/Renderer.cpp.o
-
-src/Renderer.i: src/Renderer.cpp.i
-.PHONY : src/Renderer.i
-
-# target to preprocess a source file
-src/Renderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Renderer.cpp.i
-.PHONY : src/Renderer.cpp.i
-
-src/Renderer.s: src/Renderer.cpp.s
-.PHONY : src/Renderer.s
-
-# target to generate assembly for a file
-src/Renderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/Renderer.cpp.s
-.PHONY : src/Renderer.cpp.s
-
-src/SoundPlayer.o: src/SoundPlayer.cpp.o
-.PHONY : src/SoundPlayer.o
-
-# target to build an object file
-src/SoundPlayer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/SoundPlayer.cpp.o
-.PHONY : src/SoundPlayer.cpp.o
-
-src/SoundPlayer.i: src/SoundPlayer.cpp.i
-.PHONY : src/SoundPlayer.i
-
-# target to preprocess a source file
-src/SoundPlayer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/SoundPlayer.cpp.i
-.PHONY : src/SoundPlayer.cpp.i
-
-src/SoundPlayer.s: src/SoundPlayer.cpp.s
-.PHONY : src/SoundPlayer.s
-
-# target to generate assembly for a file
-src/SoundPlayer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/SoundPlayer.cpp.s
-.PHONY : src/SoundPlayer.cpp.s
-
-src/SoundsEnumeration.o: src/SoundsEnumeration.cpp.o
-.PHONY : src/SoundsEnumeration.o
-
-# target to build an object file
-src/SoundsEnumeration.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/SoundsEnumeration.cpp.o
-.PHONY : src/SoundsEnumeration.cpp.o
-
-src/SoundsEnumeration.i: src/SoundsEnumeration.cpp.i
-.PHONY : src/SoundsEnumeration.i
-
-# target to preprocess a source file
-src/SoundsEnumeration.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/SoundsEnumeration.cpp.i
-.PHONY : src/SoundsEnumeration.cpp.i
-
-src/SoundsEnumeration.s: src/SoundsEnumeration.cpp.s
-.PHONY : src/SoundsEnumeration.s
-
-# target to generate assembly for a file
-src/SoundsEnumeration.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/SoundsEnumeration.cpp.s
-.PHONY : src/SoundsEnumeration.cpp.s
-
-src/TexturesEnum.o: src/TexturesEnum.cpp.o
-.PHONY : src/TexturesEnum.o
-
-# target to build an object file
-src/TexturesEnum.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o
-.PHONY : src/TexturesEnum.cpp.o
-
-src/TexturesEnum.i: src/TexturesEnum.cpp.i
-.PHONY : src/TexturesEnum.i
-
-# target to preprocess a source file
-src/TexturesEnum.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.i
-.PHONY : src/TexturesEnum.cpp.i
-
-src/TexturesEnum.s: src/TexturesEnum.cpp.s
-.PHONY : src/TexturesEnum.s
-
-# target to generate assembly for a file
-src/TexturesEnum.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.s
-.PHONY : src/TexturesEnum.cpp.s
-
 src/Timers.o: src/Timers.cpp.o
 .PHONY : src/Timers.o
 
@@ -673,6 +577,102 @@ src/abstractClasses/Tower.s: src/abstractClasses/Tower.cpp.s
 src/abstractClasses/Tower.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.s
 .PHONY : src/abstractClasses/Tower.cpp.s
+
+src/engine/rendering/Renderer.o: src/engine/rendering/Renderer.cpp.o
+.PHONY : src/engine/rendering/Renderer.o
+
+# target to build an object file
+src/engine/rendering/Renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.o
+.PHONY : src/engine/rendering/Renderer.cpp.o
+
+src/engine/rendering/Renderer.i: src/engine/rendering/Renderer.cpp.i
+.PHONY : src/engine/rendering/Renderer.i
+
+# target to preprocess a source file
+src/engine/rendering/Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.i
+.PHONY : src/engine/rendering/Renderer.cpp.i
+
+src/engine/rendering/Renderer.s: src/engine/rendering/Renderer.cpp.s
+.PHONY : src/engine/rendering/Renderer.s
+
+# target to generate assembly for a file
+src/engine/rendering/Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.s
+.PHONY : src/engine/rendering/Renderer.cpp.s
+
+src/engine/rendering/TexturesEnum.o: src/engine/rendering/TexturesEnum.cpp.o
+.PHONY : src/engine/rendering/TexturesEnum.o
+
+# target to build an object file
+src/engine/rendering/TexturesEnum.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/rendering/TexturesEnum.cpp.o
+.PHONY : src/engine/rendering/TexturesEnum.cpp.o
+
+src/engine/rendering/TexturesEnum.i: src/engine/rendering/TexturesEnum.cpp.i
+.PHONY : src/engine/rendering/TexturesEnum.i
+
+# target to preprocess a source file
+src/engine/rendering/TexturesEnum.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/rendering/TexturesEnum.cpp.i
+.PHONY : src/engine/rendering/TexturesEnum.cpp.i
+
+src/engine/rendering/TexturesEnum.s: src/engine/rendering/TexturesEnum.cpp.s
+.PHONY : src/engine/rendering/TexturesEnum.s
+
+# target to generate assembly for a file
+src/engine/rendering/TexturesEnum.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/rendering/TexturesEnum.cpp.s
+.PHONY : src/engine/rendering/TexturesEnum.cpp.s
+
+src/engine/sound/SoundPlayer.o: src/engine/sound/SoundPlayer.cpp.o
+.PHONY : src/engine/sound/SoundPlayer.o
+
+# target to build an object file
+src/engine/sound/SoundPlayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/sound/SoundPlayer.cpp.o
+.PHONY : src/engine/sound/SoundPlayer.cpp.o
+
+src/engine/sound/SoundPlayer.i: src/engine/sound/SoundPlayer.cpp.i
+.PHONY : src/engine/sound/SoundPlayer.i
+
+# target to preprocess a source file
+src/engine/sound/SoundPlayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/sound/SoundPlayer.cpp.i
+.PHONY : src/engine/sound/SoundPlayer.cpp.i
+
+src/engine/sound/SoundPlayer.s: src/engine/sound/SoundPlayer.cpp.s
+.PHONY : src/engine/sound/SoundPlayer.s
+
+# target to generate assembly for a file
+src/engine/sound/SoundPlayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/sound/SoundPlayer.cpp.s
+.PHONY : src/engine/sound/SoundPlayer.cpp.s
+
+src/engine/sound/SoundsEnumeration.o: src/engine/sound/SoundsEnumeration.cpp.o
+.PHONY : src/engine/sound/SoundsEnumeration.o
+
+# target to build an object file
+src/engine/sound/SoundsEnumeration.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/sound/SoundsEnumeration.cpp.o
+.PHONY : src/engine/sound/SoundsEnumeration.cpp.o
+
+src/engine/sound/SoundsEnumeration.i: src/engine/sound/SoundsEnumeration.cpp.i
+.PHONY : src/engine/sound/SoundsEnumeration.i
+
+# target to preprocess a source file
+src/engine/sound/SoundsEnumeration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/sound/SoundsEnumeration.cpp.i
+.PHONY : src/engine/sound/SoundsEnumeration.cpp.i
+
+src/engine/sound/SoundsEnumeration.s: src/engine/sound/SoundsEnumeration.cpp.s
+.PHONY : src/engine/sound/SoundsEnumeration.s
+
+# target to generate assembly for a file
+src/engine/sound/SoundsEnumeration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/sound/SoundsEnumeration.cpp.s
+.PHONY : src/engine/sound/SoundsEnumeration.cpp.s
 
 src/entityManagers/EnemyManager.o: src/entityManagers/EnemyManager.cpp.o
 .PHONY : src/entityManagers/EnemyManager.o
@@ -1102,18 +1102,6 @@ help:
 	@echo "... src/CoutTextColors.o"
 	@echo "... src/CoutTextColors.i"
 	@echo "... src/CoutTextColors.s"
-	@echo "... src/Renderer.o"
-	@echo "... src/Renderer.i"
-	@echo "... src/Renderer.s"
-	@echo "... src/SoundPlayer.o"
-	@echo "... src/SoundPlayer.i"
-	@echo "... src/SoundPlayer.s"
-	@echo "... src/SoundsEnumeration.o"
-	@echo "... src/SoundsEnumeration.i"
-	@echo "... src/SoundsEnumeration.s"
-	@echo "... src/TexturesEnum.o"
-	@echo "... src/TexturesEnum.i"
-	@echo "... src/TexturesEnum.s"
 	@echo "... src/Timers.o"
 	@echo "... src/Timers.i"
 	@echo "... src/Timers.s"
@@ -1156,6 +1144,18 @@ help:
 	@echo "... src/abstractClasses/Tower.o"
 	@echo "... src/abstractClasses/Tower.i"
 	@echo "... src/abstractClasses/Tower.s"
+	@echo "... src/engine/rendering/Renderer.o"
+	@echo "... src/engine/rendering/Renderer.i"
+	@echo "... src/engine/rendering/Renderer.s"
+	@echo "... src/engine/rendering/TexturesEnum.o"
+	@echo "... src/engine/rendering/TexturesEnum.i"
+	@echo "... src/engine/rendering/TexturesEnum.s"
+	@echo "... src/engine/sound/SoundPlayer.o"
+	@echo "... src/engine/sound/SoundPlayer.i"
+	@echo "... src/engine/sound/SoundPlayer.s"
+	@echo "... src/engine/sound/SoundsEnumeration.o"
+	@echo "... src/engine/sound/SoundsEnumeration.i"
+	@echo "... src/engine/sound/SoundsEnumeration.s"
 	@echo "... src/entityManagers/EnemyManager.o"
 	@echo "... src/entityManagers/EnemyManager.i"
 	@echo "... src/entityManagers/EnemyManager.s"

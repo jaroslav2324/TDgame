@@ -6,8 +6,8 @@
 #include "SDL2/SDL_image.h"
 
 #include "../settings.h"
+#include "../engine/Engine.h"
 #include "../maths/Coords.h"
-#include "../Renderer.h"
 
 class Base{
     public:

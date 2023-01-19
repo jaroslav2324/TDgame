@@ -65,15 +65,18 @@ CMAKE_BINARY_DIR = /home/jaros/gitProjects/c++/TDgame/build
 # The main recursive "all" target.
 all: CMakeFiles/TowerDefence.dir/all
 all: libs/SDL/all
+all: src/engine/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: libs/SDL/preinstall
+preinstall: src/engine/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/TowerDefence.dir/clean
 clean: libs/SDL/clean
+clean: src/engine/clean
 .PHONY : clean
 
 #=============================================================================
@@ -96,6 +99,54 @@ libs/SDL/clean: libs/SDL/CMakeFiles/SDL2-static.dir/clean
 libs/SDL/clean: libs/SDL/CMakeFiles/SDL2_test.dir/clean
 libs/SDL/clean: libs/SDL/CMakeFiles/uninstall.dir/clean
 .PHONY : libs/SDL/clean
+
+#=============================================================================
+# Directory level rules for directory src/engine
+
+# Recursive "all" directory target.
+src/engine/all: src/engine/rendering/all
+src/engine/all: src/engine/sound/all
+.PHONY : src/engine/all
+
+# Recursive "preinstall" directory target.
+src/engine/preinstall: src/engine/rendering/preinstall
+src/engine/preinstall: src/engine/sound/preinstall
+.PHONY : src/engine/preinstall
+
+# Recursive "clean" directory target.
+src/engine/clean: src/engine/rendering/clean
+src/engine/clean: src/engine/sound/clean
+.PHONY : src/engine/clean
+
+#=============================================================================
+# Directory level rules for directory src/engine/rendering
+
+# Recursive "all" directory target.
+src/engine/rendering/all:
+.PHONY : src/engine/rendering/all
+
+# Recursive "preinstall" directory target.
+src/engine/rendering/preinstall:
+.PHONY : src/engine/rendering/preinstall
+
+# Recursive "clean" directory target.
+src/engine/rendering/clean:
+.PHONY : src/engine/rendering/clean
+
+#=============================================================================
+# Directory level rules for directory src/engine/sound
+
+# Recursive "all" directory target.
+src/engine/sound/all:
+.PHONY : src/engine/sound/all
+
+# Recursive "preinstall" directory target.
+src/engine/sound/preinstall:
+.PHONY : src/engine/sound/preinstall
+
+# Recursive "clean" directory target.
+src/engine/sound/clean:
+.PHONY : src/engine/sound/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/TowerDefence.dir

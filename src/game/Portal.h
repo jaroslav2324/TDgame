@@ -8,7 +8,7 @@
 
 #include "../settings.h"
 #include "../maths/Coords.h"
-#include "../Renderer.h"
+#include "../engine/Engine.h"
 
 /*Only graphical class, enemies spawn in enemy manager*/
 class Portal{

@@ -7,7 +7,7 @@
 #include "SDL2/SDL.h"
 
 #include "../maths/Coords.h"
-#include "../Renderer.h"
+#include "../engine/Engine.h"
 
 using std::unordered_map;
 using std::ostream;

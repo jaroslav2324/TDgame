@@ -1,6 +1,26 @@
 [
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/engine/rendering/TexturesEnum.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.cpp"
+},
+{
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/Renderer.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/engine/rendering/Renderer.cpp"
+},
+{
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/engine/sound/SoundPlayer.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.cpp"
+},
+{
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/engine/sound/SoundsEnumeration.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundsEnumeration.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundsEnumeration.cpp"
+},
+{
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
   "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/game/Base.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/game/Base.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/game/Base.cpp"
 },
@@ -116,16 +136,6 @@
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/Renderer.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/Renderer.cpp",
-  "file": "/home/jaros/gitProjects/c++/TDgame/src/Renderer.cpp"
-},
-{
-  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/TexturesEnum.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.cpp",
-  "file": "/home/jaros/gitProjects/c++/TDgame/src/TexturesEnum.cpp"
-},
-{
-  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
   "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/abstractClasses/Interface.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Interface.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Interface.cpp"
 },
@@ -168,16 +178,6 @@
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
   "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/CoutTextColors.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/CoutTextColors.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/CoutTextColors.cpp"
-},
-{
-  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/SoundPlayer.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/SoundPlayer.cpp",
-  "file": "/home/jaros/gitProjects/c++/TDgame/src/SoundPlayer.cpp"
-},
-{
-  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
-  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/SoundsEnumeration.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/SoundsEnumeration.cpp",
-  "file": "/home/jaros/gitProjects/c++/TDgame/src/SoundsEnumeration.cpp"
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",

@@ -5,9 +5,8 @@
 
 #include "SDL2/SDL.h"
 
+#include "../engine/Engine.h"
 #include "../CoutTextColors.h"
-#include "../TexturesEnum.h"
-#include "../Renderer.h"
 #include "../maths/Coords.h"
 
 using std::cout;

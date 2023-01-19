@@ -7,7 +7,7 @@
 #include "../CoutTextColors.h"
 #include "../UI/Button.h"
 #include "../maths/Coords.h"
-#include "../Renderer.h"
+#include "../engine/Engine.h"
 #include "../UI/MenuOptionsCodes.h"
 
 using std::vector;

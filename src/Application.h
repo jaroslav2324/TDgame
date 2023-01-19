@@ -9,8 +9,8 @@
 #include <SDL2/SDL_ttf.h>
 
 #include "settings.h"
+#include "engine/Engine.h"
 #include "CoutTextColors.h"
-#include "Renderer.h"
 #include "LevelsEnum.h"
 #include "game/GameLevel.h"
 #include "UI/MainMenu.h"

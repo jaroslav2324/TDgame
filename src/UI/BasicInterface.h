@@ -6,8 +6,8 @@
 
 #include <SDL2/SDL.h>
 
+#include "../engine/Engine.h"
 #include "../settings.h"
-#include "../SoundPlayer.h"
 #include "../abstractClasses/Interface.h"
 #include "../entityManagers/TowerManager.h"
 #include "../entityManagers/EnemyManager.h"

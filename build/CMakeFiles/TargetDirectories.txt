@@ -8,3 +8,9 @@
 /home/jaros/gitProjects/c++/TDgame/build/libs/SDL/CMakeFiles/uninstall.dir
 /home/jaros/gitProjects/c++/TDgame/build/libs/SDL/CMakeFiles/edit_cache.dir
 /home/jaros/gitProjects/c++/TDgame/build/libs/SDL/CMakeFiles/rebuild_cache.dir
+/home/jaros/gitProjects/c++/TDgame/build/src/engine/CMakeFiles/edit_cache.dir
+/home/jaros/gitProjects/c++/TDgame/build/src/engine/CMakeFiles/rebuild_cache.dir
+/home/jaros/gitProjects/c++/TDgame/build/src/engine/rendering/CMakeFiles/edit_cache.dir
+/home/jaros/gitProjects/c++/TDgame/build/src/engine/rendering/CMakeFiles/rebuild_cache.dir
+/home/jaros/gitProjects/c++/TDgame/build/src/engine/sound/CMakeFiles/edit_cache.dir
+/home/jaros/gitProjects/c++/TDgame/build/src/engine/sound/CMakeFiles/rebuild_cache.dir

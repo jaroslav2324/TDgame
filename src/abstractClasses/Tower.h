@@ -8,7 +8,7 @@
 #include <SDL2/SDL.h>
 
 #include "../settings.h"
-#include "../Renderer.h"
+#include "../engine/Engine.h"
 #include "../Timers.h"
 #include "Enemy.h"
 #include "../entityManagers/EnemyManager.h"
