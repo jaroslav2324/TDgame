@@ -25,6 +25,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../libs/SDL/sdl2-config.in"
   "../libs/SDL/sdl2.pc.in"
   "../src/engine/CMakeLists.txt"
+  "../src/engine/HID/CMakeLists.txt"
   "../src/engine/rendering/CMakeLists.txt"
   "../src/engine/sound/CMakeLists.txt"
   "/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake"
@@ -88,6 +89,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "libs/SDL/include-config-debug/SDL_config.h"
   "libs/SDL/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/engine/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/engine/HID/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/engine/rendering/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/engine/sound/CMakeFiles/CMakeDirectoryInformation.cmake"
   )

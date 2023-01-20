@@ -16,6 +16,7 @@ Application::Application(){
 
     renderer = new Renderer();
     soundPlayer = new SoundPlayer();
+    systemEventsHandler = new SystemEventsHandler();
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
 
@@ -59,6 +60,11 @@ Application::~Application(){
     if (soundPlayer != nullptr){
         delete soundPlayer;
         soundPlayer = nullptr;
+    }
+
+    if (systemEventsHandler != nullptr){
+        delete systemEventsHandler;
+        systemEventsHandler = nullptr;
     }
 
     Mix_CloseAudio();
@@ -195,33 +201,79 @@ void Application::loop(){
 
 void Application::handleEvents(){
 
-        SDL_Event event;
-        while(SDL_PollEvent(&event)){
-            switch (event.type) {
-                case SDL_QUIT:    
-                    quitApp = true;        
-                    break;
-                case SDL_MOUSEBUTTONDOWN:
-                    if (event.button.button == SDL_BUTTON_LEFT){
+    systemEventsHandler->handleSystemEvents();
 
-                        int x, y;
-                        SDL_GetMouseState(&x, &y);
-                        Coords mouseCoords(x, y);
+    GameEvent event(GameEventType::UNDEFINED_GAME_EVENT);
 
-                        if (DEBUG_CONSOLE_OUTPUT_ON && DEBUG_OUTPUT_MOUSE_CLICKS)
-                            cout << "Mouse click registered at " << mouseCoords;
-                        
-                        if (activeSceneCode == ActiveScenesCodes::MAIN_MENU)
-                            mainMenu->saveMouseClickCoords(mouseCoords);
-                        else if (activeSceneCode == ActiveScenesCodes::OPTIONS_MENU)
-                            optionsMenu->saveMouseClickCoords(mouseCoords);
-                        else if (activeSceneCode == ActiveScenesCodes::CHOOSE_LEVEL_MENU)
-                            levelsMenu->saveMouseClickCoords(mouseCoords);
-                        else if (activeSceneCode == ActiveScenesCodes::GAME_LEVEL)
-                            gameLevel->saveMouseClickCoords(mouseCoords);
-                    }      
-            }
+    while(systemEventsHandler->popGameEvent(&event)){
+
+        switch (event.eventType)
+        {
+        case GameEventType::w_PRESSED:
+
+            //TODO remove
+            cout << "w pressed" << endl;
+            break;
+
+        case GameEventType::QUIT_GAME:
+            quitApp = true;
+            break;
+
+        case GameEventType::MOUSE_LEFT_BTN_PRESSED:
+        {
+            //TODO move coords saving to systemEventsHandler
+            int x, y;
+            SDL_GetMouseState(&x, &y);
+            Coords mouseCoords(x, y);
+
+            if (DEBUG_CONSOLE_OUTPUT_ON && DEBUG_OUTPUT_MOUSE_CLICKS)
+                cout << "Mouse click registered at " << mouseCoords;
+            
+            if (activeSceneCode == ActiveScenesCodes::MAIN_MENU)
+                mainMenu->saveMouseClickCoords(mouseCoords);
+            else if (activeSceneCode == ActiveScenesCodes::OPTIONS_MENU)
+                optionsMenu->saveMouseClickCoords(mouseCoords);
+            else if (activeSceneCode == ActiveScenesCodes::CHOOSE_LEVEL_MENU)
+                levelsMenu->saveMouseClickCoords(mouseCoords);
+            else if (activeSceneCode == ActiveScenesCodes::GAME_LEVEL)
+                gameLevel->saveMouseClickCoords(mouseCoords);
         }
+            break;
+        default:
+        
+            //TODO
+            cout << "Udefined game event" << endl;
+            break;
+        }
+    }
+
+        // SDL_Event event;
+        // while(SDL_PollEvent(&event)){
+        //     switch (event.type) {
+        //         case SDL_QUIT:    
+        //             quitApp = true;        
+        //             break;
+        //         case SDL_MOUSEBUTTONDOWN:
+        //             if (event.button.button == SDL_BUTTON_LEFT){
+
+        //                 int x, y;
+        //                 SDL_GetMouseState(&x, &y);
+        //                 Coords mouseCoords(x, y);
+
+        //                 if (DEBUG_CONSOLE_OUTPUT_ON && DEBUG_OUTPUT_MOUSE_CLICKS)
+        //                     cout << "Mouse click registered at " << mouseCoords;
+                        
+        //                 if (activeSceneCode == ActiveScenesCodes::MAIN_MENU)
+        //                     mainMenu->saveMouseClickCoords(mouseCoords);
+        //                 else if (activeSceneCode == ActiveScenesCodes::OPTIONS_MENU)
+        //                     optionsMenu->saveMouseClickCoords(mouseCoords);
+        //                 else if (activeSceneCode == ActiveScenesCodes::CHOOSE_LEVEL_MENU)
+        //                     levelsMenu->saveMouseClickCoords(mouseCoords);
+        //                 else if (activeSceneCode == ActiveScenesCodes::GAME_LEVEL)
+        //                     gameLevel->saveMouseClickCoords(mouseCoords);
+        //             }      
+        //     }
+        // }
 }
 
 void Application::loadChosenLevel(){

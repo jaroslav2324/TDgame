@@ -24,6 +24,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/ProjectileTower.cpp" "CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/abstractClasses/ProjectileTower.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/SplashwaveTower.cpp" "CMakeFiles/TowerDefence.dir/src/abstractClasses/SplashwaveTower.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/abstractClasses/SplashwaveTower.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.cpp" "CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.o.d"
+  "/home/jaros/gitProjects/c++/TDgame/src/engine/Engine.cpp" "CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.o.d"
+  "/home/jaros/gitProjects/c++/TDgame/src/engine/HID/SystemEventsHandler.cpp" "CMakeFiles/TowerDefence.dir/src/engine/HID/SystemEventsHandler.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/engine/HID/SystemEventsHandler.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/engine/rendering/Renderer.cpp" "CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.cpp" "CMakeFiles/TowerDefence.dir/src/engine/rendering/TexturesEnum.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/engine/rendering/TexturesEnum.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.cpp" "CMakeFiles/TowerDefence.dir/src/engine/sound/SoundPlayer.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/engine/sound/SoundPlayer.cpp.o.d"

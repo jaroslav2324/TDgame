@@ -104,19 +104,37 @@ libs/SDL/clean: libs/SDL/CMakeFiles/uninstall.dir/clean
 # Directory level rules for directory src/engine
 
 # Recursive "all" directory target.
+src/engine/all: src/engine/HID/all
 src/engine/all: src/engine/rendering/all
 src/engine/all: src/engine/sound/all
 .PHONY : src/engine/all
 
 # Recursive "preinstall" directory target.
+src/engine/preinstall: src/engine/HID/preinstall
 src/engine/preinstall: src/engine/rendering/preinstall
 src/engine/preinstall: src/engine/sound/preinstall
 .PHONY : src/engine/preinstall
 
 # Recursive "clean" directory target.
+src/engine/clean: src/engine/HID/clean
 src/engine/clean: src/engine/rendering/clean
 src/engine/clean: src/engine/sound/clean
 .PHONY : src/engine/clean
+
+#=============================================================================
+# Directory level rules for directory src/engine/HID
+
+# Recursive "all" directory target.
+src/engine/HID/all:
+.PHONY : src/engine/HID/all
+
+# Recursive "preinstall" directory target.
+src/engine/HID/preinstall:
+.PHONY : src/engine/HID/preinstall
+
+# Recursive "clean" directory target.
+src/engine/HID/clean:
+.PHONY : src/engine/HID/clean
 
 #=============================================================================
 # Directory level rules for directory src/engine/rendering
@@ -156,7 +174,7 @@ CMakeFiles/TowerDefence.dir/all: libs/SDL/CMakeFiles/SDL2main.dir/all
 CMakeFiles/TowerDefence.dir/all: libs/SDL/CMakeFiles/SDL2-static.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=69,70,71,72,73,74,75,76,77 "Built target TowerDefence"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=68,69,70,71,72,73,74,75,76,77 "Built target TowerDefence"
 .PHONY : CMakeFiles/TowerDefence.dir/all
 
 # Build rule for subdir invocation for target.
@@ -208,12 +226,12 @@ libs/SDL/CMakeFiles/sdl_headers_copy.dir/clean:
 libs/SDL/CMakeFiles/SDL2main.dir/all: libs/SDL/CMakeFiles/sdl_headers_copy.dir/all
 	$(MAKE) $(MAKESILENT) -f libs/SDL/CMakeFiles/SDL2main.dir/build.make libs/SDL/CMakeFiles/SDL2main.dir/depend
 	$(MAKE) $(MAKESILENT) -f libs/SDL/CMakeFiles/SDL2main.dir/build.make libs/SDL/CMakeFiles/SDL2main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num=68 "Built target SDL2main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jaros/gitProjects/c++/TDgame/build/CMakeFiles --progress-num= "Built target SDL2main"
 .PHONY : libs/SDL/CMakeFiles/SDL2main.dir/all
 
 # Build rule for subdir invocation for target.
 libs/SDL/CMakeFiles/SDL2main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/SDL/CMakeFiles/SDL2main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jaros/gitProjects/c++/TDgame/build/CMakeFiles 0
 .PHONY : libs/SDL/CMakeFiles/SDL2main.dir/rule

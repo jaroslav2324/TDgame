@@ -35,6 +35,8 @@ class Application{
 
     Renderer* renderer = nullptr;
     SoundPlayer* soundPlayer = nullptr;
+    // (SDL_Events)
+    SystemEventsHandler* systemEventsHandler = nullptr;
 
     ActiveScenesCodes activeSceneCode = ActiveScenesCodes::MAIN_MENU;
 

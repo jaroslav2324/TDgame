@@ -578,6 +578,54 @@ src/abstractClasses/Tower.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/abstractClasses/Tower.cpp.s
 .PHONY : src/abstractClasses/Tower.cpp.s
 
+src/engine/Engine.o: src/engine/Engine.cpp.o
+.PHONY : src/engine/Engine.o
+
+# target to build an object file
+src/engine/Engine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.o
+.PHONY : src/engine/Engine.cpp.o
+
+src/engine/Engine.i: src/engine/Engine.cpp.i
+.PHONY : src/engine/Engine.i
+
+# target to preprocess a source file
+src/engine/Engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.i
+.PHONY : src/engine/Engine.cpp.i
+
+src/engine/Engine.s: src/engine/Engine.cpp.s
+.PHONY : src/engine/Engine.s
+
+# target to generate assembly for a file
+src/engine/Engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.s
+.PHONY : src/engine/Engine.cpp.s
+
+src/engine/HID/SystemEventsHandler.o: src/engine/HID/SystemEventsHandler.cpp.o
+.PHONY : src/engine/HID/SystemEventsHandler.o
+
+# target to build an object file
+src/engine/HID/SystemEventsHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/HID/SystemEventsHandler.cpp.o
+.PHONY : src/engine/HID/SystemEventsHandler.cpp.o
+
+src/engine/HID/SystemEventsHandler.i: src/engine/HID/SystemEventsHandler.cpp.i
+.PHONY : src/engine/HID/SystemEventsHandler.i
+
+# target to preprocess a source file
+src/engine/HID/SystemEventsHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/HID/SystemEventsHandler.cpp.i
+.PHONY : src/engine/HID/SystemEventsHandler.cpp.i
+
+src/engine/HID/SystemEventsHandler.s: src/engine/HID/SystemEventsHandler.cpp.s
+.PHONY : src/engine/HID/SystemEventsHandler.s
+
+# target to generate assembly for a file
+src/engine/HID/SystemEventsHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/HID/SystemEventsHandler.cpp.s
+.PHONY : src/engine/HID/SystemEventsHandler.cpp.s
+
 src/engine/rendering/Renderer.o: src/engine/rendering/Renderer.cpp.o
 .PHONY : src/engine/rendering/Renderer.o
 
@@ -1144,6 +1192,12 @@ help:
 	@echo "... src/abstractClasses/Tower.o"
 	@echo "... src/abstractClasses/Tower.i"
 	@echo "... src/abstractClasses/Tower.s"
+	@echo "... src/engine/Engine.o"
+	@echo "... src/engine/Engine.i"
+	@echo "... src/engine/Engine.s"
+	@echo "... src/engine/HID/SystemEventsHandler.o"
+	@echo "... src/engine/HID/SystemEventsHandler.i"
+	@echo "... src/engine/HID/SystemEventsHandler.s"
 	@echo "... src/engine/rendering/Renderer.o"
 	@echo "... src/engine/rendering/Renderer.i"
 	@echo "... src/engine/rendering/Renderer.s"
