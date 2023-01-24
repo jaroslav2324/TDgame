@@ -11,11 +11,12 @@ Renderer::Renderer(){
     // fill paths of textures
     map<TexturesEnumeration, const char*> texturesPaths;
 
+    //TODO create list of paths
     texturesPaths[TexturesEnumeration::BASIC_ENEMY_TEXTURE] = "../data/assets/enemy.png";
     texturesPaths[TexturesEnumeration::ORC_ENEMY_TEXTURE] = "../data/assets/orc.jpeg";
     texturesPaths[TexturesEnumeration::BASIC_TOWER_TEXTURE] = "../data/assets/towers/towerSD1.jpeg";
     texturesPaths[TexturesEnumeration::ICE_TOWER_TEXTURE] = "../data/assets/towers/towerSD7.jpeg";
-    texturesPaths[TexturesEnumeration::FIRE_TOWER_TEXTURE] = "../data/assets/towers/towerSD11.jpeg";
+    texturesPaths[TexturesEnumeration::FIRE_TOWER_TEXTURE] = "../data/assets/towers/laserTower.png";
     texturesPaths[TexturesEnumeration::BASIC_PROJECTILE_TEXTURE] = "../data/assets/projectile.jpg";
     texturesPaths[TexturesEnumeration::ICEBALL_PROJECTILE_TEXTURE] = "../data/assets/iceballs/iceballSD4.jpeg";
     texturesPaths[TexturesEnumeration::FIREBALL_PROJECTILE_TEXTURE] = "../data/assets/fireballs/fireballSD1.jpeg";

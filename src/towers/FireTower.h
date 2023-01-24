@@ -12,7 +12,7 @@ class FireTower: public LaserTower{
 
         this->towerTextureType = TexturesEnumeration::FIRE_TOWER_TEXTURE;
 
-        laserColor = {255, 0, 0, 255};
+        laserColor = {255, 255, 0, 255};
 
         //setAttackTimer();
 
@@ -25,7 +25,7 @@ class FireTower: public LaserTower{
 
         this->towerTextureType = TexturesEnumeration::FIRE_TOWER_TEXTURE;
 
-        laserColor = {255, 0, 0, 255};
+        laserColor = {255, 255, 0, 255};
         //setAttackTimer();
 
     };
