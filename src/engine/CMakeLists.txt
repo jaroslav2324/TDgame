@@ -1,4 +1,5 @@
 
+add_subdirectory(utility)
 add_subdirectory(HID)
 add_subdirectory(rendering)
 add_subdirectory(sound)
@@ -18,6 +19,12 @@ endforeach()
 foreach(source ${SOUND_SOURCES})
     # //TODO change
     list(APPEND ENGINE_SOURCES sound/${source})
+    # message("../${source}")
+endforeach()
+
+foreach(source ${UTILITY_SOURCES})
+    # //TODO change
+    list(APPEND ENGINE_SOURCES utility/${source})
     # message("../${source}")
 endforeach()
 

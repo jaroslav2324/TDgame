@@ -7,11 +7,10 @@
 #include "SDL2/SDL.h"
 #include "SDL2/SDL_mixer.h"
 
-//todo create engine settings
-#include "../../settings.h"
+#include "../EngineSettings.h"
 #include "SoundsEnumeration.h"
 #include "SoundChannels.h"
-#include "../../CoutTextColors.h"
+#include "../utility/CoutTextColors.h"
 
 using std::map;
 using std::string;

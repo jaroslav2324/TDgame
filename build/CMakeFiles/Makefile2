@@ -66,17 +66,23 @@ CMAKE_BINARY_DIR = /home/jaros/gitProjects/c++/TDgame/build
 all: CMakeFiles/TowerDefence.dir/all
 all: libs/SDL/all
 all: src/engine/all
+all: src/game/all
+all: src/maths/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: libs/SDL/preinstall
 preinstall: src/engine/preinstall
+preinstall: src/game/preinstall
+preinstall: src/maths/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/TowerDefence.dir/clean
 clean: libs/SDL/clean
 clean: src/engine/clean
+clean: src/game/clean
+clean: src/maths/clean
 .PHONY : clean
 
 #=============================================================================
@@ -104,18 +110,21 @@ libs/SDL/clean: libs/SDL/CMakeFiles/uninstall.dir/clean
 # Directory level rules for directory src/engine
 
 # Recursive "all" directory target.
+src/engine/all: src/engine/utility/all
 src/engine/all: src/engine/HID/all
 src/engine/all: src/engine/rendering/all
 src/engine/all: src/engine/sound/all
 .PHONY : src/engine/all
 
 # Recursive "preinstall" directory target.
+src/engine/preinstall: src/engine/utility/preinstall
 src/engine/preinstall: src/engine/HID/preinstall
 src/engine/preinstall: src/engine/rendering/preinstall
 src/engine/preinstall: src/engine/sound/preinstall
 .PHONY : src/engine/preinstall
 
 # Recursive "clean" directory target.
+src/engine/clean: src/engine/utility/clean
 src/engine/clean: src/engine/HID/clean
 src/engine/clean: src/engine/rendering/clean
 src/engine/clean: src/engine/sound/clean
@@ -165,6 +174,174 @@ src/engine/sound/preinstall:
 # Recursive "clean" directory target.
 src/engine/sound/clean:
 .PHONY : src/engine/sound/clean
+
+#=============================================================================
+# Directory level rules for directory src/engine/utility
+
+# Recursive "all" directory target.
+src/engine/utility/all:
+.PHONY : src/engine/utility/all
+
+# Recursive "preinstall" directory target.
+src/engine/utility/preinstall:
+.PHONY : src/engine/utility/preinstall
+
+# Recursive "clean" directory target.
+src/engine/utility/clean:
+.PHONY : src/engine/utility/clean
+
+#=============================================================================
+# Directory level rules for directory src/game
+
+# Recursive "all" directory target.
+src/game/all: src/game/abstractClasses/all
+src/game/all: src/game/entityManagers/all
+src/game/all: src/game/enemies/all
+src/game/all: src/game/towers/all
+src/game/all: src/game/projectiles/all
+src/game/all: src/game/grid/all
+src/game/all: src/game/UI/all
+.PHONY : src/game/all
+
+# Recursive "preinstall" directory target.
+src/game/preinstall: src/game/abstractClasses/preinstall
+src/game/preinstall: src/game/entityManagers/preinstall
+src/game/preinstall: src/game/enemies/preinstall
+src/game/preinstall: src/game/towers/preinstall
+src/game/preinstall: src/game/projectiles/preinstall
+src/game/preinstall: src/game/grid/preinstall
+src/game/preinstall: src/game/UI/preinstall
+.PHONY : src/game/preinstall
+
+# Recursive "clean" directory target.
+src/game/clean: src/game/abstractClasses/clean
+src/game/clean: src/game/entityManagers/clean
+src/game/clean: src/game/enemies/clean
+src/game/clean: src/game/towers/clean
+src/game/clean: src/game/projectiles/clean
+src/game/clean: src/game/grid/clean
+src/game/clean: src/game/UI/clean
+.PHONY : src/game/clean
+
+#=============================================================================
+# Directory level rules for directory src/game/UI
+
+# Recursive "all" directory target.
+src/game/UI/all:
+.PHONY : src/game/UI/all
+
+# Recursive "preinstall" directory target.
+src/game/UI/preinstall:
+.PHONY : src/game/UI/preinstall
+
+# Recursive "clean" directory target.
+src/game/UI/clean:
+.PHONY : src/game/UI/clean
+
+#=============================================================================
+# Directory level rules for directory src/game/abstractClasses
+
+# Recursive "all" directory target.
+src/game/abstractClasses/all:
+.PHONY : src/game/abstractClasses/all
+
+# Recursive "preinstall" directory target.
+src/game/abstractClasses/preinstall:
+.PHONY : src/game/abstractClasses/preinstall
+
+# Recursive "clean" directory target.
+src/game/abstractClasses/clean:
+.PHONY : src/game/abstractClasses/clean
+
+#=============================================================================
+# Directory level rules for directory src/game/enemies
+
+# Recursive "all" directory target.
+src/game/enemies/all:
+.PHONY : src/game/enemies/all
+
+# Recursive "preinstall" directory target.
+src/game/enemies/preinstall:
+.PHONY : src/game/enemies/preinstall
+
+# Recursive "clean" directory target.
+src/game/enemies/clean:
+.PHONY : src/game/enemies/clean
+
+#=============================================================================
+# Directory level rules for directory src/game/entityManagers
+
+# Recursive "all" directory target.
+src/game/entityManagers/all:
+.PHONY : src/game/entityManagers/all
+
+# Recursive "preinstall" directory target.
+src/game/entityManagers/preinstall:
+.PHONY : src/game/entityManagers/preinstall
+
+# Recursive "clean" directory target.
+src/game/entityManagers/clean:
+.PHONY : src/game/entityManagers/clean
+
+#=============================================================================
+# Directory level rules for directory src/game/grid
+
+# Recursive "all" directory target.
+src/game/grid/all:
+.PHONY : src/game/grid/all
+
+# Recursive "preinstall" directory target.
+src/game/grid/preinstall:
+.PHONY : src/game/grid/preinstall
+
+# Recursive "clean" directory target.
+src/game/grid/clean:
+.PHONY : src/game/grid/clean
+
+#=============================================================================
+# Directory level rules for directory src/game/projectiles
+
+# Recursive "all" directory target.
+src/game/projectiles/all:
+.PHONY : src/game/projectiles/all
+
+# Recursive "preinstall" directory target.
+src/game/projectiles/preinstall:
+.PHONY : src/game/projectiles/preinstall
+
+# Recursive "clean" directory target.
+src/game/projectiles/clean:
+.PHONY : src/game/projectiles/clean
+
+#=============================================================================
+# Directory level rules for directory src/game/towers
+
+# Recursive "all" directory target.
+src/game/towers/all:
+.PHONY : src/game/towers/all
+
+# Recursive "preinstall" directory target.
+src/game/towers/preinstall:
+.PHONY : src/game/towers/preinstall
+
+# Recursive "clean" directory target.
+src/game/towers/clean:
+.PHONY : src/game/towers/clean
+
+#=============================================================================
+# Directory level rules for directory src/maths
+
+# Recursive "all" directory target.
+src/maths/all:
+.PHONY : src/maths/all
+
+# Recursive "preinstall" directory target.
+src/maths/preinstall:
+.PHONY : src/maths/preinstall
+
+# Recursive "clean" directory target.
+src/maths/clean:
+.PHONY : src/maths/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/TowerDefence.dir

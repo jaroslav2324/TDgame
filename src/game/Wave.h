@@ -5,7 +5,7 @@
 #include <list>
 
 #include "../settings.h"
-#include "../enemies/EnemyKinds.h"
+#include "enemies/EnemyKinds.h"
 
 using std::list;
 using std::ostream;

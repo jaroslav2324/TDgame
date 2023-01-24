@@ -44,6 +44,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/jaros/gitProjects/c++/TDgame/build/src/engine/utility/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/jaros/gitProjects/c++/TDgame/build/src/engine/HID/cmake_install.cmake")
 endif()
 

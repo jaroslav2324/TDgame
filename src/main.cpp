@@ -3,7 +3,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
-#include "Application.h"
+#include "game/Application.h"
 
 using std::cout;
 using std::endl;

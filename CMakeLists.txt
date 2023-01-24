@@ -9,6 +9,8 @@ project(TowerDefence)
  add_subdirectory( libs/SDL)
 
  add_subdirectory(src/engine)
+ add_subdirectory(src/game)
+ add_subdirectory(src/maths)
 
  set(SOURCES)
  foreach(source ${ENGINE_SOURCES})
@@ -16,15 +18,19 @@ project(TowerDefence)
         list(APPEND SOURCES src/engine/${source})
         # message("../${source}")
  endforeach()
+
+ foreach(source ${GAME_SOURCES})
+ # //TODO change
+     list(APPEND SOURCES src/game/${source})
+endforeach()
+
+foreach(source ${MATHS_SOURCES})
+# //TODO change
+    list(APPEND SOURCES src/maths/${source})
+endforeach()
  
 
-add_executable(${CMAKE_PROJECT_NAME} ${SOURCES} src/game/Base.cpp src/main.cpp src/game/GameLevel.cpp src/Timers.cpp src/game/EnemiesWay.cpp  src/maths/approximateComparison.cpp 
-src/abstractClasses/Enemy.cpp src/abstractClasses/ProjectileTower.cpp src/towers/BasicTower.cpp src/game/Grid.cpp src/entityManagers/EnemyManager.cpp src/abstractClasses/Projectile.cpp src/game/GridTile.cpp src/entityManagers/TowerManager.cpp
-src/UI/BasicInterface.cpp src/UI/Button.cpp src/game/Portal.cpp src/maths/Coords.cpp src/game/Wave.cpp src/UI/MainMenu.cpp src/Application.cpp 
- src/towers/IceTower.cpp src/towers/FireTower.cpp src/abstractClasses/Interface.cpp src/abstractClasses/Tower.cpp
- src/maths/Line.cpp src/maths/Vector.cpp src/abstractClasses/LaserTower.cpp src/abstractClasses/SplashwaveTower.cpp src/UI/OptionsMenu.cpp src/UI/LevelsMenu.cpp
- src/CoutTextColors.cpp src/UI/Slider.cpp
-)
+add_executable(${CMAKE_PROJECT_NAME} ${SOURCES} src/main.cpp)
 
 #target_include_directories(TowerDefence ${SDL2_INCLUDE_DIR})
 target_link_libraries( ${CMAKE_PROJECT_NAME} SDL2main SDL2-static SDL2_image SDL2_ttf SDL2_mixer)

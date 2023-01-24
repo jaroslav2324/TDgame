@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "../CoutTextColors.h"
+#include "utility/CoutTextColors.h"
 
 using std::cout;
 using std::endl;
