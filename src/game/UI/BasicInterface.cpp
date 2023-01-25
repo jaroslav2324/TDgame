@@ -1,12 +1,13 @@
 #include "BasicInterface.h"
 
-BasicInterface::BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager, Renderer* renderer, SoundPlayer* soundPlayer){
+BasicInterface::BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager, Grid* grid, Renderer* renderer, SoundPlayer* soundPlayer){
 
     this->renderer = renderer;
     this->soundPlayer = soundPlayer;
 
     this->towerManager = towerManager;
     this->enemyManager = enemyManager;
+    this->grid = grid;
 
     //TODO change button textures
     exitToMainMenuBtn = new Button(Coords(50, 25), renderer, soundPlayer);
@@ -123,8 +124,12 @@ MenuOptionsCode BasicInterface::handlePressingOnButtons(){
 
         else{
             if (towerManager->isBuildModeActive()){
+
+                if (!(grid->isPointInRect(mouseCoords)))
+                    continue;
+
                 if (towerManager->isTowerExistsInTile(mouseCoords)){
-                    //TODO warn player
+                    //TODO warn player, play sound
                     cout << "Tower already exists, coords: " << mouseCoords.x << " " << mouseCoords.y << endl;
                 }
                 else{

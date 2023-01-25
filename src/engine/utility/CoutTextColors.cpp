@@ -2,6 +2,7 @@
 
 ostream& operator<<(ostream& out, CoutTextColors textColor){
 
+    //TODO change out string
     if (textColor == CoutTextColors::RESET)
         out << "\033[0m";
 

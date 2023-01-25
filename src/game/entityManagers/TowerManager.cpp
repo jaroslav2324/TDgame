@@ -1,7 +1,8 @@
 #include "TowerManager.h"
 
-TowerManager::TowerManager(EnemyManager* enemyManager){
-    TowerManager::enemyManager = enemyManager;
+TowerManager::TowerManager(EnemyManager* enemyManager, Grid* grid){
+    this->enemyManager = enemyManager;
+    this->grid = grid;
 }
 
 TowerManager::~TowerManager(){
@@ -24,8 +25,16 @@ TowerManager::~TowerManager(){
 void TowerManager::buildTower(TowerTypes towerType, Coords mouseCoords){
 
     int x, y;
-    x = (int)mouseCoords.x - (int)mouseCoords.x % TILESIZE + TILESIZE / 2;
-    y = (int)mouseCoords.y - (int)mouseCoords.y % TILESIZE + TILESIZE / 2;
+    Coords gridStartCoords = grid->getStartCoords();
+
+    x = mouseCoords.x - gridStartCoords.x;
+    x = x / TILESIZE * TILESIZE + TILESIZE / 2;
+    x += gridStartCoords.x;
+
+    y = mouseCoords.y - gridStartCoords.y;
+    y = y / TILESIZE * TILESIZE + TILESIZE / 2;
+    y += gridStartCoords.y;
+
     Coords towerCoords(x, y);
     
     createAndAddTower(towerType, towerCoords);
@@ -97,9 +106,16 @@ void TowerManager::renderBuildingTower(Renderer* renderer){
     int mouseX, mouseY;
     int x, y;
 
+    Coords gridStartCoords = grid->getStartCoords();
+
     SDL_GetMouseState(&mouseX, &mouseY);
-    x = mouseX - mouseX % TILESIZE + TILESIZE / 2;
-    y = mouseY - mouseY % TILESIZE + TILESIZE / 2;
+    x = mouseX - gridStartCoords.x;
+    x = x / TILESIZE * TILESIZE + TILESIZE / 2;
+    x += gridStartCoords.x;
+
+    y = mouseY - gridStartCoords.y;
+    y = y / TILESIZE * TILESIZE + TILESIZE / 2;
+    y += gridStartCoords.y;
 
     buildingTower->setCoords(Coords(x, y));
     buildingTower->render(renderer);

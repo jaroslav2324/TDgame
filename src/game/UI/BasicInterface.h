@@ -11,6 +11,7 @@
 #include "../abstractClasses/Interface.h"
 #include "../entityManagers/TowerManager.h"
 #include "../entityManagers/EnemyManager.h"
+#include "../grid/Grid.h"
 #include "Button.h"
 #include "../Wave.h"
 #include "MenuOptionsCodes.h"
@@ -20,7 +21,7 @@ using std::queue;
 //TODO rename
 class BasicInterface:  public Interface{
     public:
-    BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager, Renderer* renderer, SoundPlayer* soundPlayer);
+    BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager, Grid* grid, Renderer* renderer, SoundPlayer* soundPlayer);
     ~BasicInterface();
 
     MenuOptionsCode handleCursorInteraction();
@@ -42,6 +43,7 @@ class BasicInterface:  public Interface{
 
     TowerManager * towerManager = nullptr;
     EnemyManager* enemyManager = nullptr;
+    Grid* grid = nullptr;
 
     // implement if you want to iterate over buttons
     virtual void createButtonsVec();

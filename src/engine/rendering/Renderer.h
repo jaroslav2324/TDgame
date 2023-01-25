@@ -8,10 +8,9 @@
 #include "SDL2/SDL_image.h"
 #include "SDL2/SDL_ttf.h"
 
-//TODO change
 #include "../../settings.h"
-#include "../../maths/Coords.h"
-#include "../../maths/Line.h"
+#include "../../maths/maths.h"
+
 #include "TexturesEnum.h"
 
 using std::map;

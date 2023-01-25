@@ -7,19 +7,19 @@ GameLevel::GameLevel(Renderer* renderer, SoundPlayer* soundPlayer){
     auto baseCoords = enemiesWay->getLastCoords();
     base = new Base(baseCoords);
     auto portalCoords = enemiesWay->getFirstCoords();
-    // cout << portalCoords;
     portal = new Portal(portalCoords);
 
 
     enemyManager = new EnemyManager(base, portal, enemiesWay);
-    towerManager = new TowerManager(enemyManager);
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
 
     grid = new Grid(Coords(100, 100), Coords(SCREEN_WIDTH, SCREEN_HEIGHT), TILESIZE, TILESIZE, GAME_LEVEL_WIDTH, GAME_LEVEL_HEIGHT
     );
 
-    interface = new BasicInterface(towerManager, enemyManager, renderer, soundPlayer);
+    towerManager = new TowerManager(enemyManager, grid);
+
+    interface = new BasicInterface(towerManager, enemyManager, grid, renderer, soundPlayer);
 }
 
 GameLevel::~GameLevel(){
@@ -75,9 +75,11 @@ void GameLevel::renderAll(Renderer* renderer){
 MenuOptionsCode GameLevel::makeFrameTurn(){
 
     //if base destroyed
-    //if(base->noHitPoitsLeft()){
-        //TODO end gameLevel
-    //}
+    if(base->noHitPoitsLeft()){
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            cout << CoutTextColors::MAGENTA << "No hit points left" << endl << CoutTextColors::RESET;
+        return QUIT_TO_MAIN_MENU;
+    }
 
     enemyManager->spawnEnemiesIfStarted();
     enemyManager->allEnemiesMove();

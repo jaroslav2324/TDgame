@@ -376,9 +376,11 @@ CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -1147,6 +1149,7 @@ CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /usr/include/c++/11/fstream
  /usr/include/c++/11/bits/codecvt.h
@@ -1155,6 +1158,7 @@ CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.o
  /usr/include/c++/11/bits/fstream.tcc
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/engine/rendering/TexturesEnum.cpp.o
@@ -2831,9 +2835,11 @@ CMakeFiles/TowerDefence.dir/src/game/Application.cpp.o
  /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/EngineSettings.h
@@ -2876,8 +2882,6 @@ CMakeFiles/TowerDefence.dir/src/game/Application.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/game/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
@@ -2890,6 +2894,8 @@ CMakeFiles/TowerDefence.dir/src/game/Application.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
  /home/jaros/gitProjects/c++/TDgame/src/game/entityManagers/TowerManager.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/Grid.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/GridTile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/TowerTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/BasicTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/ProjectileTower.h
@@ -2902,8 +2908,6 @@ CMakeFiles/TowerDefence.dir/src/game/Application.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/projectiles/IceballProjectile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/FireTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/LaserTower.h
- /home/jaros/gitProjects/c++/TDgame/src/game/grid/Grid.h
- /home/jaros/gitProjects/c++/TDgame/src/game/grid/GridTile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/BasicInterface.h
  /usr/include/c++/11/random
  /usr/include/c++/11/bits/random.h
@@ -3300,9 +3304,11 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -3348,8 +3354,6 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/enemies/EnemyKinds.h
  /home/jaros/gitProjects/c++/TDgame/src/game/enemies/BasicEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
@@ -3362,6 +3366,8 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
  /home/jaros/gitProjects/c++/TDgame/src/game/entityManagers/TowerManager.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/Grid.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/GridTile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/TowerTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/BasicTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/ProjectileTower.h
@@ -3374,8 +3380,6 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/projectiles/IceballProjectile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/FireTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/LaserTower.h
- /home/jaros/gitProjects/c++/TDgame/src/game/grid/Grid.h
- /home/jaros/gitProjects/c++/TDgame/src/game/grid/GridTile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/BasicInterface.h
  /usr/include/c++/11/random
  /usr/include/c++/11/bits/random.h
@@ -3788,9 +3792,11 @@ CMakeFiles/TowerDefence.dir/src/game/UI/BasicInterface.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -3805,12 +3811,12 @@ CMakeFiles/TowerDefence.dir/src/game/UI/BasicInterface.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/GameEvent.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/SystemEventsHandler.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Interface.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/Button.h
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/MenuOptionsCodes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/entityManagers/TowerManager.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/Grid.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/GridTile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/TowerTypes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/BasicTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/ProjectileTower.h
@@ -4231,9 +4237,11 @@ CMakeFiles/TowerDefence.dir/src/game/UI/Button.cpp.o
  /usr/include/c++/11/bits/erase_if.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -4258,8 +4266,6 @@ CMakeFiles/TowerDefence.dir/src/game/UI/Button.cpp.o
  /usr/include/c++/11/bits/vector.tcc
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
 
 CMakeFiles/TowerDefence.dir/src/game/UI/LevelsMenu.cpp.o
@@ -4638,9 +4644,11 @@ CMakeFiles/TowerDefence.dir/src/game/UI/LevelsMenu.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -4666,8 +4674,6 @@ CMakeFiles/TowerDefence.dir/src/game/UI/LevelsMenu.cpp.o
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Interface.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/Button.h
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/MenuOptionsCodes.h
@@ -5060,9 +5066,11 @@ CMakeFiles/TowerDefence.dir/src/game/UI/MainMenu.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -5076,8 +5084,6 @@ CMakeFiles/TowerDefence.dir/src/game/UI/MainMenu.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/GameEventType.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/GameEvent.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/SystemEventsHandler.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/Button.h
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/MenuOptionsCodes.h
@@ -5458,9 +5464,11 @@ CMakeFiles/TowerDefence.dir/src/game/UI/OptionsMenu.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -5486,8 +5494,6 @@ CMakeFiles/TowerDefence.dir/src/game/UI/OptionsMenu.cpp.o
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Interface.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/Button.h
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/MenuOptionsCodes.h
@@ -5869,9 +5875,11 @@ CMakeFiles/TowerDefence.dir/src/game/UI/Slider.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -5896,8 +5904,6 @@ CMakeFiles/TowerDefence.dir/src/game/UI/Slider.cpp.o
  /usr/include/c++/11/bits/vector.tcc
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
 
 CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.cpp
@@ -6470,9 +6476,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Enemy.cpp.o
  /usr/include/c++/11/bits/erase_if.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -6497,8 +6505,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Enemy.cpp.o
  /usr/include/c++/11/bits/vector.tcc
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
@@ -6896,9 +6902,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Interface.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -6912,8 +6920,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Interface.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/GameEventType.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/GameEvent.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/SystemEventsHandler.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/Button.h
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/MenuOptionsCodes.h
@@ -7304,9 +7310,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/LaserTower.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -7327,8 +7335,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/LaserTower.cpp.o
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
@@ -7736,9 +7742,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Projectile.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -7764,8 +7772,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Projectile.cpp.o
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
@@ -8162,9 +8168,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/ProjectileTower.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -8185,8 +8193,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/ProjectileTower.cpp.o
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
@@ -8604,9 +8610,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/SplashwaveTower.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -8627,8 +8635,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/SplashwaveTower.cpp.o
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
@@ -9046,9 +9052,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Tower.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -9069,8 +9077,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Tower.cpp.o
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
@@ -9502,9 +9508,11 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/EnemyManager.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -9525,8 +9533,6 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/EnemyManager.cpp.o
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
@@ -9763,15 +9769,7 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/TowerManager.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
- /home/jaros/gitProjects/c++/TDgame/src/game/towers/TowerTypes.h
- /home/jaros/gitProjects/c++/TDgame/src/game/towers/BasicTower.h
- /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/ProjectileTower.h
- /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Tower.h
- /usr/include/c++/11/list
- /usr/include/c++/11/bits/stl_list.h
- /usr/include/c++/11/bits/allocated_ptr.h
- /usr/include/c++/11/ext/aligned_buffer.h
- /usr/include/c++/11/bits/list.tcc
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/Grid.h
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_main.h
  /usr/local/include/SDL2/SDL_stdinc.h
@@ -9917,6 +9915,7 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/TowerManager.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/Renderer.h
  /usr/include/c++/11/map
  /usr/include/c++/11/bits/stl_tree.h
+ /usr/include/c++/11/ext/aligned_buffer.h
  /usr/include/c++/11/bits/node_handle.h
  /usr/include/c++/11/bits/stl_map.h
  /usr/include/c++/11/tuple
@@ -9952,6 +9951,15 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/TowerManager.cpp.o
  /usr/include/c++/11/bits/deque.tcc
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/GridTile.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/towers/TowerTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/towers/BasicTower.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/ProjectileTower.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Tower.h
+ /usr/include/c++/11/list
+ /usr/include/c++/11/bits/stl_list.h
+ /usr/include/c++/11/bits/allocated_ptr.h
+ /usr/include/c++/11/bits/list.tcc
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
@@ -10365,9 +10373,11 @@ CMakeFiles/TowerDefence.dir/src/game/grid/Base.cpp.o
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
  /usr/include/SDL2/SDL_ttf.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -10392,8 +10402,6 @@ CMakeFiles/TowerDefence.dir/src/game/grid/Base.cpp.o
  /usr/include/c++/11/bits/vector.tcc
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
 
 CMakeFiles/TowerDefence.dir/src/game/grid/EnemiesWay.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.cpp
@@ -11587,9 +11595,11 @@ CMakeFiles/TowerDefence.dir/src/game/grid/GridTile.cpp.o
  /usr/include/c++/11/bits/erase_if.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -11610,8 +11620,6 @@ CMakeFiles/TowerDefence.dir/src/game/grid/GridTile.cpp.o
  /usr/include/c++/11/bits/vector.tcc
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
 
 CMakeFiles/TowerDefence.dir/src/game/grid/Portal.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/Portal.cpp
@@ -12400,9 +12408,11 @@ CMakeFiles/TowerDefence.dir/src/game/towers/BasicTower.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -12423,8 +12433,6 @@ CMakeFiles/TowerDefence.dir/src/game/towers/BasicTower.cpp.o
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
@@ -12843,9 +12851,11 @@ CMakeFiles/TowerDefence.dir/src/game/towers/FireTower.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -12866,8 +12876,6 @@ CMakeFiles/TowerDefence.dir/src/game/towers/FireTower.cpp.o
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
@@ -13286,9 +13294,11 @@ CMakeFiles/TowerDefence.dir/src/game/towers/IceTower.cpp.o
  /usr/include/SDL2/close_code.h
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
  /usr/include/SDL2/SDL_mixer.h
@@ -13309,8 +13319,6 @@ CMakeFiles/TowerDefence.dir/src/game/towers/IceTower.cpp.o
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
@@ -13694,7 +13702,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/include/SDL2/SDL_version.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
- /home/jaros/gitProjects/c++/TDgame/src/Application.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/Application.h
  /usr/include/c++/11/fstream
  /usr/include/c++/11/bits/codecvt.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h
@@ -13708,6 +13716,8 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/include/SDL2/SDL_ttf.h
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/Engine.h
+ /home/jaros/gitProjects/c++/TDgame/src/engine/utility/Timers.h
+ /home/jaros/gitProjects/c++/TDgame/src/engine/utility/CoutTextColors.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/Renderer.h
  /usr/include/c++/11/map
  /usr/include/c++/11/bits/stl_tree.h
@@ -13722,14 +13732,16 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/stl_multimap.h
  /usr/include/c++/11/bits/erase_if.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
  /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundPlayer.h
+ /home/jaros/gitProjects/c++/TDgame/src/engine/EngineSettings.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundsEnumeration.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundChannels.h
- /home/jaros/gitProjects/c++/TDgame/src/CoutTextColors.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/GameEventType.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/GameEvent.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/SystemEventsHandler.h
@@ -13744,11 +13756,9 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/include/c++/11/bits/vector.tcc
  /usr/include/c++/11/bits/stl_heap.h
  /usr/include/c++/11/bits/stl_queue.h
- /home/jaros/gitProjects/c++/TDgame/src/engine/EngineSettings.h
- /home/jaros/gitProjects/c++/TDgame/src/Timers.h
- /home/jaros/gitProjects/c++/TDgame/src/LevelsEnum.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/LevelsEnum.h
  /home/jaros/gitProjects/c++/TDgame/src/game/GameLevel.h
- /home/jaros/gitProjects/c++/TDgame/src/entityManagers/EnemyManager.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/entityManagers/EnemyManager.h
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc
  /usr/include/c++/11/iomanip
@@ -13766,37 +13776,36 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/include/c++/11/bits/stl_list.h
  /usr/include/c++/11/bits/allocated_ptr.h
  /usr/include/c++/11/bits/list.tcc
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyKinds.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/BasicEnemy.h
- /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Enemy.h
- /home/jaros/gitProjects/c++/TDgame/src/game/EnemiesWay.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/enemies/EnemyKinds.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/enemies/BasicEnemy.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Enemy.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/EnemiesWay.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/bits/hashtable.h
  /usr/include/c++/11/bits/hashtable_policy.h
  /usr/include/c++/11/bits/enable_special_members.h
  /usr/include/c++/11/bits/unordered_map.h
- /home/jaros/gitProjects/c++/TDgame/src/game/Base.h
- /home/jaros/gitProjects/c++/TDgame/src/game/Portal.h
- /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/EnemyTypes.h
- /home/jaros/gitProjects/c++/TDgame/src/enemies/OrcEnemy.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/Base.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/Portal.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/enemies/EnemyTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/enemies/OrcEnemy.h
  /home/jaros/gitProjects/c++/TDgame/src/game/Wave.h
- /home/jaros/gitProjects/c++/TDgame/src/entityManagers/TowerManager.h
- /home/jaros/gitProjects/c++/TDgame/src/towers/TowerTypes.h
- /home/jaros/gitProjects/c++/TDgame/src/towers/BasicTower.h
- /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/ProjectileTower.h
- /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Tower.h
- /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Projectile.h
- /home/jaros/gitProjects/c++/TDgame/src/projectiles/BasicProjectile.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/entityManagers/TowerManager.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/Grid.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/grid/GridTile.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/towers/TowerTypes.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/towers/BasicTower.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/ProjectileTower.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Tower.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Projectile.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/projectiles/BasicProjectile.h
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
- /home/jaros/gitProjects/c++/TDgame/src/towers/IceTower.h
- /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/SplashwaveTower.h
- /home/jaros/gitProjects/c++/TDgame/src/projectiles/IceballProjectile.h
- /home/jaros/gitProjects/c++/TDgame/src/towers/FireTower.h
- /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/LaserTower.h
- /home/jaros/gitProjects/c++/TDgame/src/game/Grid.h
- /home/jaros/gitProjects/c++/TDgame/src/game/GridTile.h
- /home/jaros/gitProjects/c++/TDgame/src/UI/BasicInterface.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/towers/IceTower.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/SplashwaveTower.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/projectiles/IceballProjectile.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/towers/FireTower.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/LaserTower.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/UI/BasicInterface.h
  /usr/include/c++/11/random
  /usr/include/c++/11/bits/random.h
  /usr/include/c++/11/bits/uniform_int_dist.h
@@ -13807,14 +13816,14 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /usr/include/c++/11/bit
  /usr/include/c++/11/pstl/glue_numeric_defs.h
  /usr/include/c++/11/pstl/execution_defs.h
- /home/jaros/gitProjects/c++/TDgame/src/abstractClasses/Interface.h
- /home/jaros/gitProjects/c++/TDgame/src/UI/Button.h
- /home/jaros/gitProjects/c++/TDgame/src/UI/MenuOptionsCodes.h
- /home/jaros/gitProjects/c++/TDgame/src/UI/MainMenu.h
- /home/jaros/gitProjects/c++/TDgame/src/UI/OptionsMenu.h
- /home/jaros/gitProjects/c++/TDgame/src/UI/Slider.h
- /home/jaros/gitProjects/c++/TDgame/src/UI/LevelsMenu.h
- /home/jaros/gitProjects/c++/TDgame/src/UI/ActiveScenesCodes.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Interface.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/UI/Button.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/UI/MenuOptionsCodes.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/UI/MainMenu.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/UI/OptionsMenu.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/UI/Slider.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/UI/LevelsMenu.h
+ /home/jaros/gitProjects/c++/TDgame/src/game/UI/ActiveScenesCodes.h
 
 CMakeFiles/TowerDefence.dir/src/maths/Coords.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.cpp

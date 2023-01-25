@@ -375,9 +375,11 @@ CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.o: ../src/engine/Engine.cpp \
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -1144,6 +1146,7 @@ CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.o: ../src/engine/r
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
@@ -1152,6 +1155,7 @@ CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.o: ../src/engine/r
   /usr/include/c++/11/bits/fstream.tcc \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h
 
 CMakeFiles/TowerDefence.dir/src/engine/rendering/TexturesEnum.cpp.o: ../src/engine/rendering/TexturesEnum.cpp \
@@ -2822,9 +2826,11 @@ CMakeFiles/TowerDefence.dir/src/game/Application.cpp.o: ../src/game/Application.
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   ../src/engine/EngineSettings.h \
@@ -2867,8 +2873,6 @@ CMakeFiles/TowerDefence.dir/src/game/Application.cpp.o: ../src/game/Application.
   ../src/game/enemies/EnemyKinds.h \
   ../src/game/enemies/BasicEnemy.h \
   ../src/game/abstractClasses/Enemy.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -2881,6 +2885,8 @@ CMakeFiles/TowerDefence.dir/src/game/Application.cpp.o: ../src/game/Application.
   ../src/game/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
   ../src/game/entityManagers/TowerManager.h \
+  ../src/game/grid/Grid.h \
+  ../src/game/grid/GridTile.h \
   ../src/game/towers/TowerTypes.h \
   ../src/game/towers/BasicTower.h \
   ../src/game/abstractClasses/ProjectileTower.h \
@@ -2893,8 +2899,6 @@ CMakeFiles/TowerDefence.dir/src/game/Application.cpp.o: ../src/game/Application.
   ../src/game/projectiles/IceballProjectile.h \
   ../src/game/towers/FireTower.h \
   ../src/game/abstractClasses/LaserTower.h \
-  ../src/game/grid/Grid.h \
-  ../src/game/grid/GridTile.h \
   ../src/game/UI/BasicInterface.h \
   /usr/include/c++/11/random \
   /usr/include/c++/11/bits/random.h \
@@ -3290,9 +3294,11 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -3338,8 +3344,6 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   ../src/game/enemies/EnemyKinds.h \
   ../src/game/enemies/BasicEnemy.h \
   ../src/game/abstractClasses/Enemy.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -3352,6 +3356,8 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   ../src/game/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
   ../src/game/entityManagers/TowerManager.h \
+  ../src/game/grid/Grid.h \
+  ../src/game/grid/GridTile.h \
   ../src/game/towers/TowerTypes.h \
   ../src/game/towers/BasicTower.h \
   ../src/game/abstractClasses/ProjectileTower.h \
@@ -3364,8 +3370,6 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   ../src/game/projectiles/IceballProjectile.h \
   ../src/game/towers/FireTower.h \
   ../src/game/abstractClasses/LaserTower.h \
-  ../src/game/grid/Grid.h \
-  ../src/game/grid/GridTile.h \
   ../src/game/UI/BasicInterface.h \
   /usr/include/c++/11/random \
   /usr/include/c++/11/bits/random.h \
@@ -3777,9 +3781,11 @@ CMakeFiles/TowerDefence.dir/src/game/UI/BasicInterface.cpp.o: ../src/game/UI/Bas
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -3794,12 +3800,12 @@ CMakeFiles/TowerDefence.dir/src/game/UI/BasicInterface.cpp.o: ../src/game/UI/Bas
   ../src/engine/HID/GameEvent.h \
   ../src/engine/HID/SystemEventsHandler.h \
   ../src/game/abstractClasses/Interface.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/UI/Button.h \
   ../src/ObjectCursorInteractionsModes.h \
   ../src/game/UI/MenuOptionsCodes.h \
   ../src/game/entityManagers/TowerManager.h \
+  ../src/game/grid/Grid.h \
+  ../src/game/grid/GridTile.h \
   ../src/game/towers/TowerTypes.h \
   ../src/game/towers/BasicTower.h \
   ../src/game/abstractClasses/ProjectileTower.h \
@@ -4219,9 +4225,11 @@ CMakeFiles/TowerDefence.dir/src/game/UI/Button.cpp.o: ../src/game/UI/Button.cpp 
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -4246,8 +4254,6 @@ CMakeFiles/TowerDefence.dir/src/game/UI/Button.cpp.o: ../src/game/UI/Button.cpp 
   /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/ObjectCursorInteractionsModes.h
 
 CMakeFiles/TowerDefence.dir/src/game/UI/LevelsMenu.cpp.o: ../src/game/UI/LevelsMenu.cpp \
@@ -4625,9 +4631,11 @@ CMakeFiles/TowerDefence.dir/src/game/UI/LevelsMenu.cpp.o: ../src/game/UI/LevelsM
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -4653,8 +4661,6 @@ CMakeFiles/TowerDefence.dir/src/game/UI/LevelsMenu.cpp.o: ../src/game/UI/LevelsM
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
   ../src/game/abstractClasses/Interface.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/UI/Button.h \
   ../src/ObjectCursorInteractionsModes.h \
   ../src/game/UI/MenuOptionsCodes.h
@@ -5046,9 +5052,11 @@ CMakeFiles/TowerDefence.dir/src/game/UI/MainMenu.cpp.o: ../src/game/UI/MainMenu.
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -5062,8 +5070,6 @@ CMakeFiles/TowerDefence.dir/src/game/UI/MainMenu.cpp.o: ../src/game/UI/MainMenu.
   ../src/engine/HID/GameEventType.h \
   ../src/engine/HID/GameEvent.h \
   ../src/engine/HID/SystemEventsHandler.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/UI/Button.h \
   ../src/ObjectCursorInteractionsModes.h \
   ../src/game/UI/MenuOptionsCodes.h
@@ -5443,9 +5449,11 @@ CMakeFiles/TowerDefence.dir/src/game/UI/OptionsMenu.cpp.o: ../src/game/UI/Option
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -5471,8 +5479,6 @@ CMakeFiles/TowerDefence.dir/src/game/UI/OptionsMenu.cpp.o: ../src/game/UI/Option
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
   ../src/game/abstractClasses/Interface.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/UI/Button.h \
   ../src/ObjectCursorInteractionsModes.h \
   ../src/game/UI/MenuOptionsCodes.h \
@@ -5853,9 +5859,11 @@ CMakeFiles/TowerDefence.dir/src/game/UI/Slider.cpp.o: ../src/game/UI/Slider.cpp 
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -5879,9 +5887,7 @@ CMakeFiles/TowerDefence.dir/src/game/UI/Slider.cpp.o: ../src/game/UI/Slider.cpp 
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
-  /usr/include/c++/11/bits/stl_queue.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h
+  /usr/include/c++/11/bits/stl_queue.h
 
 CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o: ../src/game/Wave.cpp \
   /usr/include/stdc-predef.h \
@@ -6452,9 +6458,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Enemy.cpp.o: ../src/game/ab
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -6479,8 +6487,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Enemy.cpp.o: ../src/game/ab
   /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -6877,9 +6883,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Interface.cpp.o: ../src/gam
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -6893,8 +6901,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Interface.cpp.o: ../src/gam
   ../src/engine/HID/GameEventType.h \
   ../src/engine/HID/GameEvent.h \
   ../src/engine/HID/SystemEventsHandler.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/UI/Button.h \
   ../src/ObjectCursorInteractionsModes.h \
   ../src/game/UI/MenuOptionsCodes.h
@@ -7284,9 +7290,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/LaserTower.cpp.o: ../src/ga
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -7307,8 +7315,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/LaserTower.cpp.o: ../src/ga
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
   ../src/game/abstractClasses/Enemy.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -7715,9 +7721,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Projectile.cpp.o: ../src/ga
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -7743,8 +7751,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Projectile.cpp.o: ../src/ga
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
   ../src/game/abstractClasses/Enemy.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -8140,9 +8146,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/ProjectileTower.cpp.o: ../s
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -8163,8 +8171,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/ProjectileTower.cpp.o: ../s
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
   ../src/game/abstractClasses/Enemy.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -8581,9 +8587,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/SplashwaveTower.cpp.o: ../s
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -8604,8 +8612,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/SplashwaveTower.cpp.o: ../s
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
   ../src/game/abstractClasses/Enemy.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -9022,9 +9028,11 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Tower.cpp.o: ../src/game/ab
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -9045,8 +9053,6 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Tower.cpp.o: ../src/game/ab
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
   ../src/game/abstractClasses/Enemy.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -9477,9 +9483,11 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/EnemyManager.cpp.o: ../src/g
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -9500,8 +9508,6 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/EnemyManager.cpp.o: ../src/g
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
   ../src/game/abstractClasses/Enemy.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -9737,15 +9743,7 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/TowerManager.cpp.o: ../src/g
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
-  ../src/game/towers/TowerTypes.h \
-  ../src/game/towers/BasicTower.h \
-  ../src/game/abstractClasses/ProjectileTower.h \
-  ../src/game/abstractClasses/Tower.h \
-  /usr/include/c++/11/list \
-  /usr/include/c++/11/bits/stl_list.h \
-  /usr/include/c++/11/bits/allocated_ptr.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/bits/list.tcc \
+  ../src/game/grid/Grid.h \
   /usr/local/include/SDL2/SDL.h \
   /usr/local/include/SDL2/SDL_main.h \
   /usr/local/include/SDL2/SDL_stdinc.h \
@@ -9891,6 +9889,7 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/TowerManager.cpp.o: ../src/g
   ../src/engine/rendering/Renderer.h \
   /usr/include/c++/11/map \
   /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/stl_map.h \
   /usr/include/c++/11/tuple \
@@ -9926,6 +9925,15 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/TowerManager.cpp.o: ../src/g
   /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
+  ../src/game/grid/GridTile.h \
+  ../src/game/towers/TowerTypes.h \
+  ../src/game/towers/BasicTower.h \
+  ../src/game/abstractClasses/ProjectileTower.h \
+  ../src/game/abstractClasses/Tower.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/list.tcc \
   ../src/game/abstractClasses/Enemy.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
@@ -10338,9 +10346,11 @@ CMakeFiles/TowerDefence.dir/src/game/grid/Base.cpp.o: ../src/game/grid/Base.cpp 
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/SDL2/SDL_ttf.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -10364,9 +10374,7 @@ CMakeFiles/TowerDefence.dir/src/game/grid/Base.cpp.o: ../src/game/grid/Base.cpp 
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
-  /usr/include/c++/11/bits/stl_queue.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h
+  /usr/include/c++/11/bits/stl_queue.h
 
 CMakeFiles/TowerDefence.dir/src/game/grid/EnemiesWay.cpp.o: ../src/game/grid/EnemiesWay.cpp \
   /usr/include/stdc-predef.h \
@@ -11557,9 +11565,11 @@ CMakeFiles/TowerDefence.dir/src/game/grid/GridTile.cpp.o: ../src/game/grid/GridT
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -11579,9 +11589,7 @@ CMakeFiles/TowerDefence.dir/src/game/grid/GridTile.cpp.o: ../src/game/grid/GridT
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
-  /usr/include/c++/11/bits/stl_queue.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h
+  /usr/include/c++/11/bits/stl_queue.h
 
 CMakeFiles/TowerDefence.dir/src/game/grid/Portal.cpp.o: ../src/game/grid/Portal.cpp \
   /usr/include/stdc-predef.h \
@@ -12368,9 +12376,11 @@ CMakeFiles/TowerDefence.dir/src/game/towers/BasicTower.cpp.o: ../src/game/towers
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -12391,8 +12401,6 @@ CMakeFiles/TowerDefence.dir/src/game/towers/BasicTower.cpp.o: ../src/game/towers
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
   ../src/game/abstractClasses/Enemy.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -12810,9 +12818,11 @@ CMakeFiles/TowerDefence.dir/src/game/towers/FireTower.cpp.o: ../src/game/towers/
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -12833,8 +12843,6 @@ CMakeFiles/TowerDefence.dir/src/game/towers/FireTower.cpp.o: ../src/game/towers/
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
   ../src/game/abstractClasses/Enemy.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -13252,9 +13260,11 @@ CMakeFiles/TowerDefence.dir/src/game/towers/IceTower.cpp.o: ../src/game/towers/I
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
@@ -13275,8 +13285,6 @@ CMakeFiles/TowerDefence.dir/src/game/towers/IceTower.cpp.o: ../src/game/towers/I
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
   ../src/game/abstractClasses/Enemy.h \
-  ../src/maths/maths.h \
-  ../src/maths/approximateComparison.h \
   ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
@@ -13659,7 +13667,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
-  ../src/Application.h \
+  ../src/game/Application.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
@@ -13673,6 +13681,8 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/settings.h \
   ../src/engine/Engine.h \
+  ../src/engine/utility/Timers.h \
+  ../src/engine/utility/CoutTextColors.h \
   ../src/engine/rendering/Renderer.h \
   /usr/include/c++/11/map \
   /usr/include/c++/11/bits/stl_tree.h \
@@ -13687,14 +13697,16 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
+  ../src/maths/maths.h \
   ../src/maths/Coords.h \
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
   ../src/engine/sound/SoundPlayer.h \
+  ../src/engine/EngineSettings.h \
   ../src/engine/sound/SoundsEnumeration.h \
   ../src/engine/sound/SoundChannels.h \
-  ../src/CoutTextColors.h \
   ../src/engine/HID/GameEventType.h \
   ../src/engine/HID/GameEvent.h \
   ../src/engine/HID/SystemEventsHandler.h \
@@ -13709,11 +13721,9 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
-  ../src/engine/EngineSettings.h \
-  ../src/Timers.h \
-  ../src/LevelsEnum.h \
+  ../src/game/LevelsEnum.h \
   ../src/game/GameLevel.h \
-  ../src/entityManagers/EnemyManager.h \
+  ../src/game/entityManagers/EnemyManager.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/iomanip \
@@ -13731,37 +13741,36 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/stl_list.h \
   /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/bits/list.tcc \
-  ../src/enemies/EnemyKinds.h \
-  ../src/enemies/BasicEnemy.h \
-  ../src/abstractClasses/Enemy.h \
-  ../src/game/EnemiesWay.h \
+  ../src/game/enemies/EnemyKinds.h \
+  ../src/game/enemies/BasicEnemy.h \
+  ../src/game/abstractClasses/Enemy.h \
+  ../src/game/grid/EnemiesWay.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
   /usr/include/c++/11/bits/hashtable_policy.h \
   /usr/include/c++/11/bits/enable_special_members.h \
   /usr/include/c++/11/bits/unordered_map.h \
-  ../src/game/Base.h \
-  ../src/game/Portal.h \
-  ../src/maths/approximateComparison.h \
-  ../src/enemies/EnemyTypes.h \
-  ../src/enemies/OrcEnemy.h \
+  ../src/game/grid/Base.h \
+  ../src/game/grid/Portal.h \
+  ../src/game/enemies/EnemyTypes.h \
+  ../src/game/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
-  ../src/entityManagers/TowerManager.h \
-  ../src/towers/TowerTypes.h \
-  ../src/towers/BasicTower.h \
-  ../src/abstractClasses/ProjectileTower.h \
-  ../src/abstractClasses/Tower.h \
-  ../src/abstractClasses/Projectile.h \
-  ../src/projectiles/BasicProjectile.h \
+  ../src/game/entityManagers/TowerManager.h \
+  ../src/game/grid/Grid.h \
+  ../src/game/grid/GridTile.h \
+  ../src/game/towers/TowerTypes.h \
+  ../src/game/towers/BasicTower.h \
+  ../src/game/abstractClasses/ProjectileTower.h \
+  ../src/game/abstractClasses/Tower.h \
+  ../src/game/abstractClasses/Projectile.h \
+  ../src/game/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h \
-  ../src/towers/IceTower.h \
-  ../src/abstractClasses/SplashwaveTower.h \
-  ../src/projectiles/IceballProjectile.h \
-  ../src/towers/FireTower.h \
-  ../src/abstractClasses/LaserTower.h \
-  ../src/game/Grid.h \
-  ../src/game/GridTile.h \
-  ../src/UI/BasicInterface.h \
+  ../src/game/towers/IceTower.h \
+  ../src/game/abstractClasses/SplashwaveTower.h \
+  ../src/game/projectiles/IceballProjectile.h \
+  ../src/game/towers/FireTower.h \
+  ../src/game/abstractClasses/LaserTower.h \
+  ../src/game/UI/BasicInterface.h \
   /usr/include/c++/11/random \
   /usr/include/c++/11/bits/random.h \
   /usr/include/c++/11/bits/uniform_int_dist.h \
@@ -13772,14 +13781,14 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bit \
   /usr/include/c++/11/pstl/glue_numeric_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
-  ../src/abstractClasses/Interface.h \
-  ../src/UI/Button.h \
-  ../src/UI/MenuOptionsCodes.h \
-  ../src/UI/MainMenu.h \
-  ../src/UI/OptionsMenu.h \
-  ../src/UI/Slider.h \
-  ../src/UI/LevelsMenu.h \
-  ../src/UI/ActiveScenesCodes.h
+  ../src/game/abstractClasses/Interface.h \
+  ../src/game/UI/Button.h \
+  ../src/game/UI/MenuOptionsCodes.h \
+  ../src/game/UI/MainMenu.h \
+  ../src/game/UI/OptionsMenu.h \
+  ../src/game/UI/Slider.h \
+  ../src/game/UI/LevelsMenu.h \
+  ../src/game/UI/ActiveScenesCodes.h
 
 CMakeFiles/TowerDefence.dir/src/maths/Coords.cpp.o: ../src/maths/Coords.cpp \
   /usr/include/stdc-predef.h \
@@ -14621,52 +14630,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 ../src/maths/Vector.cpp:
 
-../src/UI/ActiveScenesCodes.h:
-
-../src/UI/LevelsMenu.h:
-
-../src/UI/Slider.h:
-
-../src/UI/OptionsMenu.h:
-
-../src/UI/MainMenu.h:
-
-../src/UI/MenuOptionsCodes.h:
-
-../src/abstractClasses/Interface.h:
-
-../src/abstractClasses/LaserTower.h:
-
-../src/UI/Button.h:
-
-../src/towers/FireTower.h:
-
-../src/projectiles/BasicProjectile.h:
-
-../src/abstractClasses/Projectile.h:
-
-../src/abstractClasses/Tower.h:
-
-../src/abstractClasses/ProjectileTower.h:
-
-../src/towers/BasicTower.h:
-
-../src/entityManagers/TowerManager.h:
-
-../src/enemies/OrcEnemy.h:
-
-../src/game/Base.h:
-
-../src/game/EnemiesWay.h:
-
-../src/entityManagers/EnemyManager.h:
-
-../src/LevelsEnum.h:
-
-../src/Timers.h:
-
-../src/CoutTextColors.h:
-
 ../src/main.cpp:
 
 /usr/include/SDL2/SDL_misc.h:
@@ -14761,19 +14724,13 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 ../src/maths/Coords.h:
 
-../src/enemies/EnemyTypes.h:
-
 /usr/include/c++/11/stdlib.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/popcntintrin.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
-../src/projectiles/IceballProjectile.h:
-
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
-../src/abstractClasses/SplashwaveTower.h:
 
 /usr/local/include/SDL2/SDL_main.h:
 
@@ -15023,8 +14980,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 /usr/include/c++/11/exception:
 
-../src/towers/TowerTypes.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vpopcntdqvlintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
@@ -15048,8 +15003,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 /usr/include/c++/11/fstream:
 
 /usr/include/features.h:
-
-../src/Application.h:
 
 /usr/include/c++/11/ext/numeric_traits.h:
 
@@ -15080,8 +15033,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 ../src/game/abstractClasses/Enemy.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-../src/abstractClasses/Enemy.h:
 
 /usr/include/c++/11/tr1/gamma.tcc:
 
@@ -15295,8 +15246,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 /usr/include/c++/11/bits/stl_deque.h:
 
-../src/game/GridTile.h:
-
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/local/include/SDL2/SDL_rect.h:
@@ -15348,8 +15297,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/hresetintrin.h:
-
-../src/game/Portal.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h:
 
@@ -15437,8 +15384,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/amxtileintrin.h:
 
-../src/enemies/BasicEnemy.h:
-
 ../src/game/grid/Base.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
@@ -15456,8 +15401,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 /usr/local/include/SDL2/SDL_keyboard.h:
 
 /usr/include/c++/11/deque:
-
-../src/towers/IceTower.h:
 
 /usr/local/include/SDL2/SDL_keycode.h:
 
@@ -15537,8 +15480,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 /usr/include/c++/11/bits/invoke.h:
 
-../src/game/Grid.h:
-
 /usr/include/SDL2/SDL_keycode.h:
 
 /usr/include/c++/11/bits/stl_multimap.h:
@@ -15567,6 +15508,8 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 ../src/maths/Line.h:
 
+../src/maths/approximateComparison.h:
+
 /usr/include/c++/11/cctype:
 
 ../src/engine/rendering/TexturesEnum.h:
@@ -15580,8 +15523,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 /usr/include/c++/11/streambuf:
 
 /usr/include/SDL2/SDL_endian.h:
-
-../src/UI/BasicInterface.h:
 
 ../src/engine/EngineSettings.h:
 
@@ -15657,8 +15598,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 /usr/include/c++/11/bits/unique_ptr.h:
 
-../src/enemies/EnemyKinds.h:
-
 /usr/include/c++/11/bits/quoted_string.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h:
@@ -15679,13 +15618,17 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 ../src/game/enemies/EnemyKinds.h:
 
-../src/maths/approximateComparison.h:
-
 /usr/include/c++/11/bits/hashtable.h:
 
 /usr/include/SDL2/SDL_scancode.h:
 
 /usr/include/c++/11/bits/hashtable_policy.h:
+
+../src/game/grid/Grid.h:
+
+../src/game/projectiles/IceballProjectile.h:
+
+../src/game/grid/GridTile.h:
 
 ../src/game/towers/TowerTypes.h:
 
@@ -15696,12 +15639,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
 
 ../src/game/towers/IceTower.h:
-
-../src/game/grid/Grid.h:
-
-../src/game/projectiles/IceballProjectile.h:
-
-../src/game/grid/GridTile.h:
 
 ../src/game/UI/BasicInterface.h:
 

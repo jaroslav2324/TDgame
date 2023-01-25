@@ -246,34 +246,6 @@ void Application::handleEvents(){
             break;
         }
     }
-
-        // SDL_Event event;
-        // while(SDL_PollEvent(&event)){
-        //     switch (event.type) {
-        //         case SDL_QUIT:    
-        //             quitApp = true;        
-        //             break;
-        //         case SDL_MOUSEBUTTONDOWN:
-        //             if (event.button.button == SDL_BUTTON_LEFT){
-
-        //                 int x, y;
-        //                 SDL_GetMouseState(&x, &y);
-        //                 Coords mouseCoords(x, y);
-
-        //                 if (DEBUG_CONSOLE_OUTPUT_ON && DEBUG_OUTPUT_MOUSE_CLICKS)
-        //                     cout << "Mouse click registered at " << mouseCoords;
-                        
-        //                 if (activeSceneCode == ActiveScenesCodes::MAIN_MENU)
-        //                     mainMenu->saveMouseClickCoords(mouseCoords);
-        //                 else if (activeSceneCode == ActiveScenesCodes::OPTIONS_MENU)
-        //                     optionsMenu->saveMouseClickCoords(mouseCoords);
-        //                 else if (activeSceneCode == ActiveScenesCodes::CHOOSE_LEVEL_MENU)
-        //                     levelsMenu->saveMouseClickCoords(mouseCoords);
-        //                 else if (activeSceneCode == ActiveScenesCodes::GAME_LEVEL)
-        //                     gameLevel->saveMouseClickCoords(mouseCoords);
-        //             }      
-        //     }
-        // }
 }
 
 void Application::loadChosenLevel(){

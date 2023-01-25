@@ -82,17 +82,17 @@ unordered_map<int, Coords> getWayInvS(){
     unordered_map<int, Coords> mapOfWaypoints;
 
     int numWaypoint = 0;
-    mapOfWaypoints[numWaypoint] = Coords(250, 250);
+    mapOfWaypoints[numWaypoint] = Coords(175, 175);
     numWaypoint++;
-    mapOfWaypoints[numWaypoint] = Coords(1050, 250);
+    mapOfWaypoints[numWaypoint] = Coords(1075, 175);
     numWaypoint++;
-    mapOfWaypoints[numWaypoint] = Coords(1050, 550);
+    mapOfWaypoints[numWaypoint] = Coords(1075, 475);
     numWaypoint++;
-    mapOfWaypoints[numWaypoint] = Coords(250, 550);
+    mapOfWaypoints[numWaypoint] = Coords(175, 475);
     numWaypoint++;
-    mapOfWaypoints[numWaypoint] = Coords(250, 750);
+    mapOfWaypoints[numWaypoint] = Coords(175, 775);
     numWaypoint++;
-    mapOfWaypoints[numWaypoint] = Coords(1050, 750);
+    mapOfWaypoints[numWaypoint] = Coords(1075, 775);
 
     return mapOfWaypoints;
 }
@@ -101,6 +101,7 @@ unordered_map<int, Coords> getWayS(){
 
     unordered_map<int, Coords> mapOfWaypoints;
 
+    //TODO change for 7x5 grid
     int numWaypoint = 0;
     mapOfWaypoints[numWaypoint] = Coords(1050, 250);
     numWaypoint++;
@@ -121,6 +122,7 @@ unordered_map<int, Coords> getWayZ(){
 
     unordered_map<int, Coords> mapOfWaypoints;
 
+    //TODO change for 7x5 grid
     int numWaypoint = 0;
     mapOfWaypoints[numWaypoint] = Coords(250, 250);
     numWaypoint++;

@@ -4,6 +4,7 @@
 
 #include "../../maths/maths.h"
 
+#include "../grid/Grid.h"
 #include "../towers/TowerTypes.h"
 #include "../towers/BasicTower.h"
 #include "../towers/IceTower.h"
@@ -11,7 +12,7 @@
 
 class TowerManager{
     public:
-    TowerManager(EnemyManager* enemyManager);
+    TowerManager(EnemyManager* enemyManager, Grid* grid);
     ~TowerManager();
 
     void buildTower(TowerTypes towerType, Coords coords);
@@ -33,8 +34,11 @@ class TowerManager{
     bool isTowerExistsInTile(Coords coords);
 
     private:
+    
     std::vector<Tower*> towerList;
+
     EnemyManager* enemyManager = nullptr;
+    Grid* grid = nullptr;
 
     bool buildModeOn = false;
     // tower sprite in build mode
