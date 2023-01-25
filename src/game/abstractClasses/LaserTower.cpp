@@ -2,11 +2,13 @@
 
 LaserTower::LaserTower(EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){
     aimedEnemiesType = EnemyTypes::ANY_TYPE_ENEMY;
+    towerType = TowerType::LASER_TOWER;
 }
 
 LaserTower::LaserTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords):
 Tower(enemyManager, damage, radius, attackSpeed, level, coords){
     aimedEnemiesType = EnemyTypes::ANY_TYPE_ENEMY;
+    towerType = TowerType::LASER_TOWER;
 }
 
 LaserTower::~LaserTower(){

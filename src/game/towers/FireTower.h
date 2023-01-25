@@ -5,6 +5,7 @@
 
 class FireTower: public LaserTower{
     public:
+    //TODO add default arguments and merge constructors
     FireTower(EnemyManager* enemyManager, Coords coords): LaserTower(enemyManager, coords){
         radius = 200;
         damage = 1;

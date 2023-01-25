@@ -43,6 +43,10 @@ double Tower::getRadius(){
     return radius;
 }
 
+TowerType Tower::getTowerType(){
+    return towerType;
+}
+
 void Tower::setDamage(double damage){
     Tower::damage = damage;
 }

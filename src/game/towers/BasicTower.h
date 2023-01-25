@@ -4,6 +4,7 @@
 
 class BasicTower: public ProjectileTower{
     public:
+    //TODO add default arguments and merge constructors
     BasicTower(EnemyManager* enemyManager, Coords coords): ProjectileTower(enemyManager, coords){
         attackSpeed = 750;
         radius = 200;

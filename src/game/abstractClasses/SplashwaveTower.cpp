@@ -2,11 +2,13 @@
 
 SplashwaveTower::SplashwaveTower(EnemyManager* enemyManager, Coords coords): Tower(enemyManager, coords){
     aimedEnemiesType = EnemyTypes::FLYING_ENEMY;
+    towerType = TowerType::SPLASHWAVE_TOWER;
 }
 
 SplashwaveTower::SplashwaveTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords):
 Tower(enemyManager, damage, radius, attackSpeed, level, coords){
     aimedEnemiesType = EnemyTypes::FLYING_ENEMY;
+    towerType = TowerType::SPLASHWAVE_TOWER;
 }
 
 SplashwaveTower::~SplashwaveTower(){

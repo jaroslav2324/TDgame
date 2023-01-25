@@ -22,7 +22,7 @@ TowerManager::~TowerManager(){
 }
 
 // pass any coords, these coords will be converted to right grid coords
-void TowerManager::buildTower(TowerTypes towerType, Coords mouseCoords){
+void TowerManager::buildTower(TowerKinds towerType, Coords mouseCoords){
 
     int x, y;
     Coords gridStartCoords = grid->getStartCoords();
@@ -130,32 +130,34 @@ void TowerManager::renderAllAttacks(Renderer* renderer){
     
     //TODO add towers
     for (auto towerPtr: towerList){
-        //TODO rewrite?
 
-        projPtr = dynamic_cast<ProjectileTower*>(towerPtr);
-        if (projPtr != nullptr){
+        if (towerPtr->getTowerType() == TowerType::PROJECTILE_TOWER){
+            projPtr = (ProjectileTower*)towerPtr;
             projPtr->renderAllProjectiles(renderer);
             continue;
         }
 
-        laserPtr = dynamic_cast<LaserTower*>(towerPtr);
-        if (laserPtr != nullptr){
+        if (towerPtr->getTowerType() == TowerType::LASER_TOWER){
+            laserPtr = (LaserTower*)towerPtr;
             laserPtr->renderLaser(renderer);
             continue;
         }
 
-        splashPtr = dynamic_cast<SplashwaveTower*>(towerPtr);
-        if (splashPtr != nullptr){
+        if (towerPtr->getTowerType() == TowerType::SPLASHWAVE_TOWER){
+            splashPtr = (SplashwaveTower*)towerPtr;
             splashPtr->renderSplashWave(renderer);
             continue;
         }
 
-        if (DEBUG_CONSOLE_OUTPUT_ON)
-            cout << "No dynamic cast " << endl;
+        if (towerPtr->getTowerType() == TowerType::UNDEFINED_TYPE){
+            if (DEBUG_CONSOLE_OUTPUT_ON)
+                cout << CoutTextColors::RED << "TOWER WITH UNDEFINED TYPE" << endl << CoutTextColors::RESET;
+        }
+
     }
 }
 
-void TowerManager::activateBuildMode(TowerTypes buildingTowerType){
+void TowerManager::activateBuildMode(TowerKinds buildingTowerType){
 
     buildModeOn = true;
 
@@ -198,7 +200,7 @@ bool TowerManager::isTowerExistsInTile(Coords coords)
     return false;
 }
 
-void TowerManager::createAndAddTower(TowerTypes towerType, Coords coords){
+void TowerManager::createAndAddTower(TowerKinds towerType, Coords coords){
 
     Tower* tower = nullptr;
         //TODO add types of towers
@@ -221,7 +223,7 @@ void TowerManager::createAndAddTower(TowerTypes towerType, Coords coords){
     towerList.push_back(tower);
 }
 
-Tower* TowerManager::createTower(TowerTypes towerType, Coords coords){
+Tower* TowerManager::createTower(TowerKinds towerType, Coords coords){
 
     Tower* tower = nullptr;
         //TODO add types of towers

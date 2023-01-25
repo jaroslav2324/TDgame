@@ -5,7 +5,7 @@
 #include "../../maths/maths.h"
 
 #include "../grid/Grid.h"
-#include "../towers/TowerTypes.h"
+#include "../towers/TowerKinds.h"
 #include "../towers/BasicTower.h"
 #include "../towers/IceTower.h"
 #include "../towers/FireTower.h"
@@ -15,7 +15,7 @@ class TowerManager{
     TowerManager(EnemyManager* enemyManager, Grid* grid);
     ~TowerManager();
 
-    void buildTower(TowerTypes towerType, Coords coords);
+    void buildTower(TowerKinds towerType, Coords coords);
     void addBuiltTower(Tower*);
     void destroyTower(Tower*);
 
@@ -26,7 +26,7 @@ class TowerManager{
     void renderAllTowers(Renderer* renderer);
     void renderAllAttacks(Renderer* renderer);
 
-    void activateBuildMode(TowerTypes buildingTowerType);
+    void activateBuildMode(TowerKinds buildingTowerType);
     void deactivateBuildMode();
     bool isBuildModeActive();
 
@@ -47,7 +47,7 @@ class TowerManager{
     void renderBuildingTower(Renderer* renderer);
 
     // adds tower to towers list
-    void createAndAddTower(TowerTypes towerType, Coords coords);
-    Tower* createTower(TowerTypes towerType, Coords coords);
+    void createAndAddTower(TowerKinds towerType, Coords coords);
+    Tower* createTower(TowerKinds towerType, Coords coords);
 
 };

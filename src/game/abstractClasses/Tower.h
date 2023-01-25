@@ -9,8 +9,10 @@
 
 #include "../../engine/Engine.h"
 #include "../../settings.h"
+
 #include "Enemy.h"
 #include "../entityManagers/EnemyManager.h"
+#include "../towers/TowerType.h"
 #include "Projectile.h"
 #include "../projectiles/BasicProjectile.h"
 #include "../../ObjectCursorInteractionsModes.h"
@@ -36,6 +38,8 @@ public:
     virtual void render(Renderer* renderer);
 
     double getExpForNextLvl(int currentLevel);
+
+    TowerType getTowerType();
 
     void setDamage(double damage);
     void setCoords(Coords coords);
@@ -76,6 +80,7 @@ protected:
     EnemyTypes aimedEnemiesType;
 
     TexturesEnumeration towerTextureType;
+    TowerType towerType = TowerType::UNDEFINED_TYPE;
 
     std::vector<double> listExpForLvls;
 

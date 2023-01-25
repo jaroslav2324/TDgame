@@ -2887,10 +2887,11 @@ CMakeFiles/TowerDefence.dir/src/game/Application.cpp.o: ../src/game/Application.
   ../src/game/entityManagers/TowerManager.h \
   ../src/game/grid/Grid.h \
   ../src/game/grid/GridTile.h \
-  ../src/game/towers/TowerTypes.h \
+  ../src/game/towers/TowerKinds.h \
   ../src/game/towers/BasicTower.h \
   ../src/game/abstractClasses/ProjectileTower.h \
   ../src/game/abstractClasses/Tower.h \
+  ../src/game/towers/TowerType.h \
   ../src/game/abstractClasses/Projectile.h \
   ../src/game/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h \
@@ -3358,10 +3359,11 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   ../src/game/entityManagers/TowerManager.h \
   ../src/game/grid/Grid.h \
   ../src/game/grid/GridTile.h \
-  ../src/game/towers/TowerTypes.h \
+  ../src/game/towers/TowerKinds.h \
   ../src/game/towers/BasicTower.h \
   ../src/game/abstractClasses/ProjectileTower.h \
   ../src/game/abstractClasses/Tower.h \
+  ../src/game/towers/TowerType.h \
   ../src/game/abstractClasses/Projectile.h \
   ../src/game/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h \
@@ -3806,7 +3808,7 @@ CMakeFiles/TowerDefence.dir/src/game/UI/BasicInterface.cpp.o: ../src/game/UI/Bas
   ../src/game/entityManagers/TowerManager.h \
   ../src/game/grid/Grid.h \
   ../src/game/grid/GridTile.h \
-  ../src/game/towers/TowerTypes.h \
+  ../src/game/towers/TowerKinds.h \
   ../src/game/towers/BasicTower.h \
   ../src/game/abstractClasses/ProjectileTower.h \
   ../src/game/abstractClasses/Tower.h \
@@ -3842,6 +3844,7 @@ CMakeFiles/TowerDefence.dir/src/game/UI/BasicInterface.cpp.o: ../src/game/UI/Bas
   ../src/game/enemies/BasicEnemy.h \
   ../src/game/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
+  ../src/game/towers/TowerType.h \
   ../src/game/abstractClasses/Projectile.h \
   ../src/game/projectiles/BasicProjectile.h \
   ../src/game/towers/IceTower.h \
@@ -7342,6 +7345,7 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/LaserTower.cpp.o: ../src/ga
   ../src/game/enemies/BasicEnemy.h \
   ../src/game/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
+  ../src/game/towers/TowerType.h \
   ../src/game/abstractClasses/Projectile.h \
   ../src/game/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h
@@ -8198,6 +8202,7 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/ProjectileTower.cpp.o: ../s
   ../src/game/enemies/BasicEnemy.h \
   ../src/game/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
+  ../src/game/towers/TowerType.h \
   ../src/game/abstractClasses/Projectile.h \
   ../src/game/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h
@@ -8639,6 +8644,7 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/SplashwaveTower.cpp.o: ../s
   ../src/game/enemies/BasicEnemy.h \
   ../src/game/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
+  ../src/game/towers/TowerType.h \
   ../src/game/abstractClasses/Projectile.h \
   ../src/game/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h
@@ -9080,6 +9086,7 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Tower.cpp.o: ../src/game/ab
   ../src/game/enemies/BasicEnemy.h \
   ../src/game/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
+  ../src/game/towers/TowerType.h \
   ../src/game/abstractClasses/Projectile.h \
   ../src/game/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h
@@ -9926,7 +9933,7 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/TowerManager.cpp.o: ../src/g
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
   ../src/game/grid/GridTile.h \
-  ../src/game/towers/TowerTypes.h \
+  ../src/game/towers/TowerKinds.h \
   ../src/game/towers/BasicTower.h \
   ../src/game/abstractClasses/ProjectileTower.h \
   ../src/game/abstractClasses/Tower.h \
@@ -9962,6 +9969,7 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/TowerManager.cpp.o: ../src/g
   ../src/game/enemies/BasicEnemy.h \
   ../src/game/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
+  ../src/game/towers/TowerType.h \
   ../src/game/abstractClasses/Projectile.h \
   ../src/game/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h \
@@ -12428,6 +12436,7 @@ CMakeFiles/TowerDefence.dir/src/game/towers/BasicTower.cpp.o: ../src/game/towers
   ../src/game/enemies/BasicEnemy.h \
   ../src/game/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
+  ../src/game/towers/TowerType.h \
   ../src/game/abstractClasses/Projectile.h \
   ../src/game/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h
@@ -12870,6 +12879,7 @@ CMakeFiles/TowerDefence.dir/src/game/towers/FireTower.cpp.o: ../src/game/towers/
   ../src/game/enemies/BasicEnemy.h \
   ../src/game/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
+  ../src/game/towers/TowerType.h \
   ../src/game/abstractClasses/Projectile.h \
   ../src/game/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h
@@ -13312,6 +13322,7 @@ CMakeFiles/TowerDefence.dir/src/game/towers/IceTower.cpp.o: ../src/game/towers/I
   ../src/game/enemies/BasicEnemy.h \
   ../src/game/enemies/OrcEnemy.h \
   ../src/game/Wave.h \
+  ../src/game/towers/TowerType.h \
   ../src/game/abstractClasses/Projectile.h \
   ../src/game/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h \
@@ -13758,10 +13769,11 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   ../src/game/entityManagers/TowerManager.h \
   ../src/game/grid/Grid.h \
   ../src/game/grid/GridTile.h \
-  ../src/game/towers/TowerTypes.h \
+  ../src/game/towers/TowerKinds.h \
   ../src/game/towers/BasicTower.h \
   ../src/game/abstractClasses/ProjectileTower.h \
   ../src/game/abstractClasses/Tower.h \
+  ../src/game/towers/TowerType.h \
   ../src/game/abstractClasses/Projectile.h \
   ../src/game/projectiles/BasicProjectile.h \
   ../src/ObjectCursorInteractionsModes.h \
@@ -14636,6 +14648,8 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 /usr/include/SDL2/SDL_locale.h:
 
+/usr/include/SDL2/SDL_timer.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/mwaitxintrin.h:
 
 /usr/include/c++/11/type_traits:
@@ -14822,8 +14836,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 ../src/game/entityManagers/TowerManager.h:
 
-/usr/include/SDL2/SDL_timer.h:
-
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/stdint.h:
@@ -14993,6 +15005,8 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/asm-generic/errno-base.h:
+
+../src/game/towers/TowerKinds.h:
 
 ../src/game/projectiles/BasicProjectile.h:
 
@@ -15338,6 +15352,8 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx5124vnniwintrin.h:
 
+../src/game/towers/TowerType.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vbmi2vlintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vnniintrin.h:
@@ -15629,8 +15645,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 ../src/game/projectiles/IceballProjectile.h:
 
 ../src/game/grid/GridTile.h:
-
-../src/game/towers/TowerTypes.h:
 
 ../src/game/abstractClasses/ProjectileTower.h:
 

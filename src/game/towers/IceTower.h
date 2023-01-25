@@ -5,6 +5,7 @@
 
 class IceTower: public SplashwaveTower{
     public:
+    //TODO add default arguments and merge constructors
     IceTower(EnemyManager* enemyManager, Coords coords): SplashwaveTower(enemyManager, coords){
         attackSpeed = 750;
         radius = 350;

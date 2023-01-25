@@ -34,7 +34,7 @@ class BasicInterface:  public Interface{
 
     private:   
     
-    TowerTypes buildTowerType = BASIC_TOWER;
+    TowerKinds buildTowerType = BASIC_TOWER;
     Button* exitToMainMenuBtn = nullptr;
     Button* buildBasicTowerBtn = nullptr;
     Button* buildIceTowerBtn = nullptr;
