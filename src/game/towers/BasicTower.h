@@ -2,27 +2,23 @@
 
 #include "../abstractClasses/ProjectileTower.h"
 
+namespace basic_tower_standart_properties{
+    const double BASIC_TOWER_RADIUS = 200;
+    const double BASIC_TOWER_DAMAGE = 2;
+    const double BASIC_TOWER_ATTACK_SPEED = 750;
+}
+
 class BasicTower: public ProjectileTower{
     public:
-    //TODO add default arguments and merge constructors
-    BasicTower(EnemyManager* enemyManager, Coords coords): ProjectileTower(enemyManager, coords){
-        attackSpeed = 750;
-        radius = 200;
 
+    BasicTower(EnemyManager* enemyManager,
+    Coords coords,
+    int level = 0,
+    double damage = basic_tower_standart_properties::BASIC_TOWER_DAMAGE,
+    double radius = basic_tower_standart_properties::BASIC_TOWER_RADIUS,
+    double attackSpeed = basic_tower_standart_properties::BASIC_TOWER_ATTACK_SPEED): ProjectileTower(enemyManager, damage, radius, attackSpeed, level, coords)
+    {
         this->towerTextureType = TexturesEnumeration::BASIC_TOWER_TEXTURE;
-
-        //setAttackTimer();
-
-    };
-    BasicTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords): 
-    ProjectileTower(enemyManager, damage, radius, attackSpeed, level, coords){
-        attackSpeed = 750;
-        radius = 200;
-
-        this->towerTextureType = TexturesEnumeration::BASIC_TOWER_TEXTURE;
-
-        //setAttackTimer();
-
     };
     ~BasicTower();
 

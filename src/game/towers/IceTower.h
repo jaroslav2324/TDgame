@@ -1,31 +1,24 @@
 #pragma once
 
 #include "../abstractClasses/SplashwaveTower.h"
-#include "../projectiles/IceballProjectile.h"
+
+namespace ice_tower_standart_properties{
+    const double ICE_TOWER_RADIUS = 350;
+    const double ICE_TOWER_DAMAGE = 0.2;
+    const double ICE_TOWER_ATTACK_SPEED = 750;
+}
 
 class IceTower: public SplashwaveTower{
     public:
-    //TODO add default arguments and merge constructors
-    IceTower(EnemyManager* enemyManager, Coords coords): SplashwaveTower(enemyManager, coords){
-        attackSpeed = 750;
-        radius = 350;
-        damage = 0.2;
 
+    IceTower(EnemyManager* enemyManager,
+    Coords coords,
+    int level = 0,
+    double damage = ice_tower_standart_properties::ICE_TOWER_DAMAGE,
+    double radius = ice_tower_standart_properties::ICE_TOWER_RADIUS,
+    double attackSpeed = ice_tower_standart_properties::ICE_TOWER_ATTACK_SPEED): SplashwaveTower(enemyManager, damage, radius, attackSpeed, level, coords)
+    {
         this->towerTextureType = TexturesEnumeration::ICE_TOWER_TEXTURE;
-
-        //setAttackTimer();
-
-    };
-    IceTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords): 
-    SplashwaveTower(enemyManager, damage, radius, attackSpeed, level, coords){
-        attackSpeed = 750;
-        radius = 350;
-        damage = 0.2;
-
-        this->towerTextureType = TexturesEnumeration::ICE_TOWER_TEXTURE;
-        
-        //setAttackTimer();
-
     };
     ~IceTower();
 

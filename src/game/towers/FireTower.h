@@ -1,35 +1,29 @@
 #pragma once
 
 #include "../abstractClasses/LaserTower.h"
-//#include "../projectiles/FireballProjectile.h"
+
+
+namespace fire_tower_standart_properties{
+    const double FIRE_TOWER_RADIUS = 200;
+    const double FIRE_TOWER_DPS = 1;
+    const double FIRE_TOWER_ATTACK_SPEED = 100;
+    const SDL_Color FIRE_TOWER_LASER_COLOR = {255, 255, 0, 255};
+}
 
 class FireTower: public LaserTower{
     public:
-    //TODO add default arguments and merge constructors
-    FireTower(EnemyManager* enemyManager, Coords coords): LaserTower(enemyManager, coords){
-        radius = 200;
-        damage = 1;
-        attackSpeed = 100;
 
-        this->towerTextureType = TexturesEnumeration::FIRE_TOWER_TEXTURE;
+    FireTower(EnemyManager* enemyManager,
+    Coords coords,
+    int level = 0,
+    double damage = fire_tower_standart_properties::FIRE_TOWER_DPS,
+    double radius = fire_tower_standart_properties::FIRE_TOWER_RADIUS,
+    double attackSpeed = fire_tower_standart_properties::FIRE_TOWER_ATTACK_SPEED) : LaserTower(enemyManager, damage, radius, attackSpeed, level, coords)
+    {
+        towerTextureType = TexturesEnumeration::FIRE_TOWER_TEXTURE;
+        laserColor = fire_tower_standart_properties::FIRE_TOWER_LASER_COLOR;
+    }
 
-        laserColor = {255, 255, 0, 255};
-
-        //setAttackTimer();
-
-    };
-    FireTower(EnemyManager* enemyManager, double damage, double radius, double attackSpeed, int level, Coords coords): 
-    LaserTower(enemyManager, damage, radius, attackSpeed, level, coords){
-        radius = 200;
-        damage = 1;
-        attackSpeed = 100;
-
-        this->towerTextureType = TexturesEnumeration::FIRE_TOWER_TEXTURE;
-
-        laserColor = {255, 255, 0, 255};
-        //setAttackTimer();
-
-    };
     ~FireTower();
 
     private:
