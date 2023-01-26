@@ -434,30 +434,6 @@ src/game/GameLevel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.s
 .PHONY : src/game/GameLevel.cpp.s
 
-src/game/UI/BasicInterface.o: src/game/UI/BasicInterface.cpp.o
-.PHONY : src/game/UI/BasicInterface.o
-
-# target to build an object file
-src/game/UI/BasicInterface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/UI/BasicInterface.cpp.o
-.PHONY : src/game/UI/BasicInterface.cpp.o
-
-src/game/UI/BasicInterface.i: src/game/UI/BasicInterface.cpp.i
-.PHONY : src/game/UI/BasicInterface.i
-
-# target to preprocess a source file
-src/game/UI/BasicInterface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/UI/BasicInterface.cpp.i
-.PHONY : src/game/UI/BasicInterface.cpp.i
-
-src/game/UI/BasicInterface.s: src/game/UI/BasicInterface.cpp.s
-.PHONY : src/game/UI/BasicInterface.s
-
-# target to generate assembly for a file
-src/game/UI/BasicInterface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/UI/BasicInterface.cpp.s
-.PHONY : src/game/UI/BasicInterface.cpp.s
-
 src/game/UI/Button.o: src/game/UI/Button.cpp.o
 .PHONY : src/game/UI/Button.o
 
@@ -481,6 +457,30 @@ src/game/UI/Button.s: src/game/UI/Button.cpp.s
 src/game/UI/Button.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/UI/Button.cpp.s
 .PHONY : src/game/UI/Button.cpp.s
+
+src/game/UI/HUDInterface.o: src/game/UI/HUDInterface.cpp.o
+.PHONY : src/game/UI/HUDInterface.o
+
+# target to build an object file
+src/game/UI/HUDInterface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/UI/HUDInterface.cpp.o
+.PHONY : src/game/UI/HUDInterface.cpp.o
+
+src/game/UI/HUDInterface.i: src/game/UI/HUDInterface.cpp.i
+.PHONY : src/game/UI/HUDInterface.i
+
+# target to preprocess a source file
+src/game/UI/HUDInterface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/UI/HUDInterface.cpp.i
+.PHONY : src/game/UI/HUDInterface.cpp.i
+
+src/game/UI/HUDInterface.s: src/game/UI/HUDInterface.cpp.s
+.PHONY : src/game/UI/HUDInterface.s
+
+# target to generate assembly for a file
+src/game/UI/HUDInterface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/game/UI/HUDInterface.cpp.s
+.PHONY : src/game/UI/HUDInterface.cpp.s
 
 src/game/UI/LevelsMenu.o: src/game/UI/LevelsMenu.cpp.o
 .PHONY : src/game/UI/LevelsMenu.o
@@ -1174,12 +1174,12 @@ help:
 	@echo "... src/game/GameLevel.o"
 	@echo "... src/game/GameLevel.i"
 	@echo "... src/game/GameLevel.s"
-	@echo "... src/game/UI/BasicInterface.o"
-	@echo "... src/game/UI/BasicInterface.i"
-	@echo "... src/game/UI/BasicInterface.s"
 	@echo "... src/game/UI/Button.o"
 	@echo "... src/game/UI/Button.i"
 	@echo "... src/game/UI/Button.s"
+	@echo "... src/game/UI/HUDInterface.o"
+	@echo "... src/game/UI/HUDInterface.i"
+	@echo "... src/game/UI/HUDInterface.s"
 	@echo "... src/game/UI/LevelsMenu.o"
 	@echo "... src/game/UI/LevelsMenu.i"
 	@echo "... src/game/UI/LevelsMenu.s"

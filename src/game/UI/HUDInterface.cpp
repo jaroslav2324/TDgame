@@ -1,6 +1,6 @@
-#include "BasicInterface.h"
+#include "HUDInterface.h"
 
-BasicInterface::BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager, Grid* grid, Renderer* renderer, SoundPlayer* soundPlayer){
+HUDInterface::HUDInterface(TowerManager* towerManager, EnemyManager* enemyManager, Grid* grid, Renderer* renderer, SoundPlayer* soundPlayer){
 
     this->renderer = renderer;
     this->soundPlayer = soundPlayer;
@@ -20,7 +20,7 @@ BasicInterface::BasicInterface(TowerManager* towerManager, EnemyManager* enemyMa
     createButtonsReturnCodesVec();    
 }
 
-BasicInterface::~BasicInterface(){
+HUDInterface::~HUDInterface(){
     
     if (buildBasicTowerBtn != nullptr){
         delete buildBasicTowerBtn;
@@ -48,12 +48,12 @@ BasicInterface::~BasicInterface(){
     }
 }
 
-MenuOptionsCode BasicInterface::handleCursorInteraction(){
+MenuOptionsCode HUDInterface::handleCursorInteraction(){
     handleHoveringOverButtons();
     return handlePressingOnButtons();
 }
 
-void BasicInterface::render(){
+void HUDInterface::render(){
 
     SDL_Color color = {150, 150, 100, 255};
     
@@ -75,7 +75,7 @@ void BasicInterface::render(){
     renderButtons(renderer);
 }
 
-MenuOptionsCode BasicInterface::handlePressingOnButtons(){
+MenuOptionsCode HUDInterface::handlePressingOnButtons(){
     
     MenuOptionsCode code = NO_CHANGES;
     // check pressing on buttons
@@ -143,7 +143,7 @@ MenuOptionsCode BasicInterface::handlePressingOnButtons(){
     return code;
 }
 
-void BasicInterface::createButtonsVec(){
+void HUDInterface::createButtonsVec(){
     buttonsVec.push_back(exitToMainMenuBtn);
     buttonsVec.push_back(buildBasicTowerBtn);
     buttonsVec.push_back(buildIceTowerBtn);
@@ -151,7 +151,7 @@ void BasicInterface::createButtonsVec(){
     buttonsVec.push_back(spawnEnemyBtn);
 }
 
-void BasicInterface::createButtonsReturnCodesVec(){
+void HUDInterface::createButtonsReturnCodesVec(){
     buttonsReturnCodesVec.push_back(MenuOptionsCode::QUIT_TO_MAIN_MENU);
     buttonsReturnCodesVec.push_back(MenuOptionsCode::NO_CHANGES);
     buttonsReturnCodesVec.push_back(MenuOptionsCode::NO_CHANGES);
@@ -160,7 +160,7 @@ void BasicInterface::createButtonsReturnCodesVec(){
 }
 
 // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
-void BasicInterface::saveToBinaryFile(ostream& outpustStream){
+void HUDInterface::saveToBinaryFile(ostream& outpustStream){
 
     if (DEBUG_CONSOLE_OUTPUT_ON && !SAVING_LEVELS_ON)
         cout << "Saving levels is turned off. Saving interface stopped." << endl;
@@ -178,7 +178,7 @@ void BasicInterface::saveToBinaryFile(ostream& outpustStream){
 }
 
 // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
-void BasicInterface::loadFromBinaryFile(istream& inputStream){
+void HUDInterface::loadFromBinaryFile(istream& inputStream){
 
     if (DEBUG_CONSOLE_OUTPUT_ON && !LOADING_LEVELS_ON)
         cout << "Loading levels is turned off. Loading interface stopped." << endl;

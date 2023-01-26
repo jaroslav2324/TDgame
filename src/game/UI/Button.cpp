@@ -90,7 +90,9 @@ void Button::setModeAndPlaySound(ObjectCursorInteractionsModes btnMode){
         break;
 
         default:
-        //TODO write something
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            cout << CoutTextColors::RED << "No such ObjectCursorInteractionModes" << endl << CoutTextColors::RESET;
+
         break;
     }
 }

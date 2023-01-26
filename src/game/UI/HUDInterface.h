@@ -18,11 +18,10 @@
 
 using std::queue;
 
-//TODO rename
-class BasicInterface:  public Interface{
+class HUDInterface:  public Interface{
     public:
-    BasicInterface(TowerManager* towerManager, EnemyManager* enemyManager, Grid* grid, Renderer* renderer, SoundPlayer* soundPlayer);
-    ~BasicInterface();
+    HUDInterface(TowerManager* towerManager, EnemyManager* enemyManager, Grid* grid, Renderer* renderer, SoundPlayer* soundPlayer);
+    ~HUDInterface();
 
     MenuOptionsCode handleCursorInteraction();
     void render();

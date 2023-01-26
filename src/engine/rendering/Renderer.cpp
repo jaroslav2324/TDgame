@@ -97,12 +97,7 @@ void Renderer::renderLine(Coords& point1, Coords& point2, SDL_Color& color, int 
     SDL_RenderDrawLine(renderer, point1.x, point1.y, point2.x, point2.y);
     return;
     }
-
-    //TODO add if needed
-    /*
-    renderFilledCircle(point1, width, color, color);
-    renderFilledCircle(point2, width, color, color);
-    */
+    
     Line centralLine(point1, point2);
     Line perpendicularLine = getPerpendicularLine(centralLine);
 

@@ -9,7 +9,7 @@
 #include "grid/Grid.h"
 #include "grid/Portal.h"
 #include "grid/Base.h"
-#include "UI/BasicInterface.h"
+#include "UI/HUDInterface.h"
 
 using std::cout;
 using std::endl;
@@ -32,7 +32,7 @@ class GameLevel{
 
     private:
 
-    BasicInterface* interface = nullptr;
+    HUDInterface* interface = nullptr;
     
     EnemyManager* enemyManager = nullptr;
     TowerManager* towerManager = nullptr;

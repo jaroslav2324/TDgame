@@ -19,7 +19,7 @@ GameLevel::GameLevel(Renderer* renderer, SoundPlayer* soundPlayer){
 
     towerManager = new TowerManager(enemyManager, grid);
 
-    interface = new BasicInterface(towerManager, enemyManager, grid, renderer, soundPlayer);
+    interface = new HUDInterface(towerManager, enemyManager, grid, renderer, soundPlayer);
 }
 
 GameLevel::~GameLevel(){

@@ -147,7 +147,6 @@ Enemy* EnemyManager::findNearestEnemyForTower(Coords towerCoords, double radius,
 }
 
 list<Enemy*> EnemyManager::findAllEnemiesForTower(Coords towerCoords, double radius, EnemyTypes enemyType){
-    //TODO add type of enemies
 
     list<Enemy*> listOfAimedEnemies;
 

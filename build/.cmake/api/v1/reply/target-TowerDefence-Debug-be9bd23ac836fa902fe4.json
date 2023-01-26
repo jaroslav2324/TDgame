@@ -375,7 +375,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/game/UI/BasicInterface.cpp",
+			"path" : "src/game/UI/HUDInterface.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
