@@ -776,6 +776,17 @@ CMakeFiles/TowerDefence.dir/src/engine/HID/SystemEventsHandler.cpp.o: ../src/eng
   /usr/local/include/SDL2/SDL_locale.h \
   /usr/local/include/SDL2/SDL_misc.h \
   ../src/engine/EngineSettings.h \
+  ../src/maths/maths.h \
+  ../src/maths/Coords.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
+  ../src/settings.h \
+  ../src/maths/Vector.h \
+  ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
   ../src/engine/utility/CoutTextColors.h \
   ../src/engine/HID/GameEvent.h \
   ../src/engine/HID/GameEventType.h
@@ -1714,14 +1725,19 @@ CMakeFiles/TowerDefence.dir/src/engine/sound/SoundPlayer.cpp.o: ../src/engine/so
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
   ../src/engine/EngineSettings.h \
-  ../src/engine/utility/CoutTextColors.h \
-  ../src/engine/sound/SoundsEnumeration.h \
+  ../src/maths/maths.h \
+  ../src/maths/Coords.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
   ../src/settings.h \
+  ../src/maths/Vector.h \
+  ../src/maths/Line.h \
+  ../src/maths/approximateComparison.h \
+  ../src/engine/utility/CoutTextColors.h \
+  ../src/engine/sound/SoundsEnumeration.h \
   ../src/engine/sound/SoundChannels.h
 
 CMakeFiles/TowerDefence.dir/src/engine/sound/SoundsEnumeration.cpp.o: ../src/engine/sound/SoundsEnumeration.cpp \
@@ -6080,6 +6096,11 @@ CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o: ../src/game/Wave.cpp \
   /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/list.tcc \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
   ../src/settings.h \
   ../src/game/enemies/EnemyKinds.h
 

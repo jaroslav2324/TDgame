@@ -36,6 +36,7 @@ public:
     void setDestroyed();
 
     virtual void render(Renderer* renderer);
+    virtual void renderRadiusZoneIfHoveredOver(Renderer* renderer);
 
     double getExpForNextLvl(int currentLevel);
 

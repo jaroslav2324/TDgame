@@ -23,7 +23,12 @@ class TowerManager{
 
     void allTowersAttack();
 
+    // set mode hovered over if mouse cursor is hovered over tower
+    void checkTowerHoveredOver();
+
     void renderAllTowers(Renderer* renderer);
+    // if mouse cursor hovered over any tower
+    void renderTowerRadiusIfHoveredOver(Renderer* renderer);
     void renderAllAttacks(Renderer* renderer);
 
     void activateBuildMode(TowerKinds buildingTowerType);

@@ -778,6 +778,17 @@ CMakeFiles/TowerDefence.dir/src/engine/HID/SystemEventsHandler.cpp.o
  /usr/local/include/SDL2/SDL_locale.h
  /usr/local/include/SDL2/SDL_misc.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/EngineSettings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
+ /usr/include/c++/11/fstream
+ /usr/include/c++/11/bits/codecvt.h
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h
+ /usr/include/c++/11/bits/fstream.tcc
+ /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/utility/CoutTextColors.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/GameEvent.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/HID/GameEventType.h
@@ -1719,14 +1730,19 @@ CMakeFiles/TowerDefence.dir/src/engine/sound/SoundPlayer.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/EngineSettings.h
- /home/jaros/gitProjects/c++/TDgame/src/engine/utility/CoutTextColors.h
- /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundsEnumeration.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/maths.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/Coords.h
  /usr/include/c++/11/fstream
  /usr/include/c++/11/bits/codecvt.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h
  /usr/include/c++/11/bits/fstream.tcc
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/Vector.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/Line.h
+ /home/jaros/gitProjects/c++/TDgame/src/maths/approximateComparison.h
+ /home/jaros/gitProjects/c++/TDgame/src/engine/utility/CoutTextColors.h
+ /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundsEnumeration.h
  /home/jaros/gitProjects/c++/TDgame/src/engine/sound/SoundChannels.h
 
 CMakeFiles/TowerDefence.dir/src/engine/sound/SoundsEnumeration.cpp.o
@@ -6097,6 +6113,11 @@ CMakeFiles/TowerDefence.dir/src/game/Wave.cpp.o
  /usr/include/c++/11/bits/allocated_ptr.h
  /usr/include/c++/11/ext/aligned_buffer.h
  /usr/include/c++/11/bits/list.tcc
+ /usr/include/c++/11/vector
+ /usr/include/c++/11/bits/stl_uninitialized.h
+ /usr/include/c++/11/bits/stl_vector.h
+ /usr/include/c++/11/bits/stl_bvector.h
+ /usr/include/c++/11/bits/vector.tcc
  /home/jaros/gitProjects/c++/TDgame/src/settings.h
  /home/jaros/gitProjects/c++/TDgame/src/game/enemies/EnemyKinds.h
 

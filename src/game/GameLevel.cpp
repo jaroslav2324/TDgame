@@ -66,6 +66,7 @@ void GameLevel::renderAll(Renderer* renderer){
     portal->render(renderer);
     base->render(renderer);
     towerManager->renderAllTowers(renderer);
+    towerManager->renderTowerRadiusIfHoveredOver(renderer);
     enemyManager->renderAll(renderer);
     towerManager->renderAllAttacks(renderer);
 
@@ -85,6 +86,7 @@ MenuOptionsCode GameLevel::makeFrameTurn(){
     enemyManager->allEnemiesMove();
     //cout << base->getHitPoits() << endl;
 
+    towerManager->checkTowerHoveredOver();
     towerManager->allTowersAttack();
     enemyManager->findAndDeleteKilledEnemies();
 

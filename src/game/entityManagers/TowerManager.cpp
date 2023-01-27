@@ -75,27 +75,35 @@ void TowerManager::allTowersAttack(){
     }
 }
 
-void TowerManager::renderAllTowers(Renderer* renderer){
-
+void TowerManager::checkTowerHoveredOver(){
     // check cursor hovering over towers
+    //TODO get from SystemEventsHandler
     int x, y;
     SDL_GetMouseState(&x, &y);
     Coords mouseCoords(x, y);
 
-    // render towers
     for (auto towerPtr: towerList){
 
         if (towerPtr->isPointInRect(mouseCoords))
             towerPtr->setModeHoveredOver();
         else
             towerPtr->setModeNoCursorInteraction();
-
-        towerPtr->render(renderer);
-
     }
+}
+
+void TowerManager::renderAllTowers(Renderer* renderer){
+
+    // render towers
+    for (auto towerPtr: towerList)
+        towerPtr->render(renderer);
 
     if (buildModeOn)
         renderBuildingTower(renderer);
+}
+
+void TowerManager::renderTowerRadiusIfHoveredOver(Renderer* renderer){
+    for (auto towerPtr: towerList)
+        towerPtr->renderRadiusZoneIfHoveredOver(renderer);
 }
 
 void TowerManager::renderBuildingTower(Renderer* renderer){

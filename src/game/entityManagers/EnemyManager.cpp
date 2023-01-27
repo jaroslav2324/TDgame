@@ -239,7 +239,6 @@ void EnemyManager::setWave(Wave wave){
 }
 
 void EnemyManager::spawnEnemiesInWave(){
-    //TODO check
     
     if (currentWave.listEnemiesTypes.size() <= 0){
 
