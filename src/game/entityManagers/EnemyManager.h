@@ -58,7 +58,7 @@ class EnemyManager{
     bool startedSpawning = false;
 
     // Controls frequency of spawning
-    PeriodicTimer* enemyInWaveSpawnTimer = nullptr;
+    CountdownTimer* enemyInWaveSpawnTimer = nullptr;
     //timer before wave start
     CountdownTimer* countdownBeforeWaveTimer = nullptr;
     // used for sorting enemies by distance to the base

@@ -10,6 +10,8 @@ SystemEventsHandler::~SystemEventsHandler(){
 
 void SystemEventsHandler::handleSystemEvents(){
 
+    saveCurrentMouseCoords();
+
     SDL_Event event;
     while(SDL_PollEvent(&event)){
 
@@ -110,4 +112,16 @@ bool SystemEventsHandler::popGameEvent(GameEvent* dstEvent){
     *dstEvent = queueOfGameEvents.front();
     queueOfGameEvents.pop();
     return true;
+}
+
+void SystemEventsHandler::saveCurrentMouseCoords(){
+    int x, y;
+    SDL_GetMouseState(&x, &y);
+
+    savedCurrentMouseCoords.x = x;
+    savedCurrentMouseCoords.y = y;
+}
+
+Coords SystemEventsHandler::getCurrentMouseCoords(){
+    return savedCurrentMouseCoords;
 }

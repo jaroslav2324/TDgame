@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 
+#include "../maths/maths.h"
 #include "utility/CoutTextColors.h"
 
 using std::cout;

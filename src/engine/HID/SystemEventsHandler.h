@@ -30,9 +30,12 @@ class SystemEventsHandler{
     // handle queue of SDL_Events
     void handleSystemEvents();
 
+    Coords getCurrentMouseCoords();
+
     private:
 
-    // map<Uint32, CountdownTimer*> delayEventActivateTimers;
+    void saveCurrentMouseCoords();
+    Coords savedCurrentMouseCoords;
 
     queue<GameEvent> queueOfGameEvents;
 };

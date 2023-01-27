@@ -3,10 +3,12 @@
 #include <iostream>
 #include <fstream>
 #include <list>
+#include <vector>
 
 #include "../settings.h"
 #include "enemies/EnemyKinds.h"
 
+using std::vector;
 using std::list;
 using std::ostream;
 using std::istream;
@@ -22,19 +24,28 @@ struct Wave{
 
     int size();
 
-    //TODO  add countdown before each enemy
+    list<int> listCountdownBeforeEnemies;
     list<EnemyKinds> listEnemiesTypes;
-    double spawnPeriod;
     // in ms
     double countdownBeforeWave = 10000;
 };
 
 
-// value is period between spawning enemies
 
-Wave getBasicWave(uint amount, double msSpawnPeriod, double countdownBeforeWave);
-Wave getOrcWave(uint amount, double msSpawnPeriod, double countdownBeforeWave);
-Wave getBasicOrcWave(uint amount, double msSpawnPeriod, double countdownBeforeWave);
+// for wave with const period between enemy spawn
+Wave getBasicWave(uint amount, double countdownBeforeWave, int countdownBeforeEachEnemy);
+// for wave with const period between enemy spawn
+Wave getOrcWave(uint amount, double countdownBeforeWave, int countdownBeforeEachEnemy);
+// for wave with const period between enemy spawn
+Wave getBasicOrcWave(uint amount, double countdownBeforeWave, int countdownBeforeEachEnemy);
+
+//TODO add check lendth of vector and amount
+// for custom wave
+Wave getBasicWave(uint amount, double countdownBeforeWave, vector<int> vectorCountdownsBeforeEachEnemy);
+// for custom wave
+Wave getOrcWave(uint amount, double countdownBeforeWave, vector<int> vectorCountdownsBeforeEachEnemy);
+// for custom wave
+Wave getBasicOrcWave(uint amount, double countdownBeforeWave, vector<int> vectorCountdownsBeforeEachEnemy);
 
 // lists of waves for different levels
 list<Wave> getListWaves1();

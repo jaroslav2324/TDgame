@@ -4,38 +4,67 @@ int Wave::size(){
     return listEnemiesTypes.size();
 }
 
-Wave getBasicWave(uint amount, double msSpawnPeriod, double countdownBeforeWave){
+Wave getBasicWave(uint amount, double countdownBeforeWave, int countdownBeforeEachEnemy){
+
+    vector<int> vectorCountdownsBeforeEachEnemy;
+
+    for (int i = 0; i < amount; i++)
+        vectorCountdownsBeforeEachEnemy.push_back(countdownBeforeEachEnemy);
+
+    return getBasicWave(amount, countdownBeforeWave, vectorCountdownsBeforeEachEnemy);
+}
+
+Wave getBasicWave(uint amount, double countdownBeforeWave, vector<int> vectorCountdownsBeforeEachEnemy){
 
     Wave wave;
     wave.countdownBeforeWave = countdownBeforeWave;
 
     int waveLen = amount;
 
-
-    for (int i = 0; i < waveLen; i ++)
+    for (int i = 0; i < waveLen; i ++){
         wave.listEnemiesTypes.push_back(BASIC_ENEMY);
-
-    wave.spawnPeriod = msSpawnPeriod;
+        wave.listCountdownBeforeEnemies.push_back(vectorCountdownsBeforeEachEnemy[i]);
+    }
 
     return wave;
 }
 
-Wave getOrcWave(uint amount, double msSpawnPeriod, double countdownBeforeWave){
+Wave getOrcWave(uint amount, double countdownBeforeWave, int countdownBeforeEachEnemy){
+
+    vector<int> vectorCountdownsBeforeEachEnemy;
+
+    for (int i = 0; i < amount; i++)
+        vectorCountdownsBeforeEachEnemy.push_back(countdownBeforeEachEnemy);
+
+    return getOrcWave(amount, countdownBeforeWave, vectorCountdownsBeforeEachEnemy);
+}
+
+Wave getOrcWave(uint amount, double countdownBeforeWave, vector<int> vectorCountdownsBeforeEachEnemy){
 
     Wave wave;
     wave.countdownBeforeWave = countdownBeforeWave;
 
     int waveLen = amount;
 
-    for (int i = 0; i < waveLen; i ++)
+    for (int i = 0; i < waveLen; i ++){
         wave.listEnemiesTypes.push_back(ORC_ENEMY);
-
-    wave.spawnPeriod = msSpawnPeriod;
+        wave.listCountdownBeforeEnemies.push_back(vectorCountdownsBeforeEachEnemy[i]);
+    }
 
     return wave;
 }
 
-Wave getBasicOrcWave(uint amount, double msSpawnPeriod, double countdownBeforeWave){
+Wave getBasicOrcWave(uint amount, double countdownBeforeWave, int countdownBeforeEachEnemy){
+
+    vector<int> vectorCountdownsBeforeEachEnemy;
+
+    for (int i = 0; i < amount; i++)
+        vectorCountdownsBeforeEachEnemy.push_back(countdownBeforeEachEnemy);
+
+    return getBasicOrcWave(amount, countdownBeforeWave, vectorCountdownsBeforeEachEnemy);
+}
+
+Wave getBasicOrcWave(uint amount, double countdownBeforeWave, vector<int> vectorCountdownsBeforeEachEnemy){
 
     Wave wave;
     wave.countdownBeforeWave = countdownBeforeWave;
@@ -53,9 +82,8 @@ Wave getBasicOrcWave(uint amount, double msSpawnPeriod, double countdownBeforeWa
             wave.listEnemiesTypes.push_back(BASIC_ENEMY);
             isOrc = true; 
         }
+        wave.listCountdownBeforeEnemies.push_back(vectorCountdownsBeforeEachEnemy[i]);
     }
-
-    wave.spawnPeriod = msSpawnPeriod;
 
     return wave;
 }
@@ -64,11 +92,11 @@ list<Wave> getListWaves1(){
     
     list<Wave> listOfWaves;
 
-    listOfWaves.push_back(getBasicWave(5, 1500, 5000));
-    listOfWaves.push_back(getOrcWave(5, 1500, 8000));
-    listOfWaves.push_back(getBasicOrcWave(8, 1500, 10000));
-    listOfWaves.push_back(getBasicWave(12, 1000, 12000));
-    listOfWaves.push_back(getOrcWave(12, 1000, 12000));
+    listOfWaves.push_back(getBasicWave(5, 5000, 1000));
+    listOfWaves.push_back(getOrcWave(5, 8000, 1500));
+    listOfWaves.push_back(getBasicOrcWave(8, 10000, 500));
+    listOfWaves.push_back(getBasicWave(12, 12000, 300));
+    listOfWaves.push_back(getOrcWave(12, 12000, 1000));
 
     return listOfWaves;
 }
@@ -88,9 +116,7 @@ void Wave::saveToBinaryFile(ostream& outpustStream){
 
     if (!SAVING_LEVELS_ON)
         return;
-    //TODO add countdownBeforeWave
-    // save spawnning period
-    outpustStream.write((char*)&spawnPeriod, sizeof(spawnPeriod));
+    //TODO add countdownBeforeWave, each enemy
 
     // save list of enemies types
     for (auto enemyType: listEnemiesTypes)
@@ -104,9 +130,7 @@ void Wave::loadFromBinaryFile(istream& inputStream){
 
     if (!LOADING_LEVELS_ON)
         return;
-    //TODO add countdownBeforeWave
-    // load spawnning period
-    inputStream.read((char*)&spawnPeriod, sizeof(spawnPeriod));
+    //TODO add countdownBeforeWave, each enemy
 
     EnemyKinds type;
     // load list of enemies types

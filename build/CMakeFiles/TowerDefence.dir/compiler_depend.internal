@@ -2906,7 +2906,6 @@ CMakeFiles/TowerDefence.dir/src/game/Application.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/IceTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/SplashwaveTower.h
- /home/jaros/gitProjects/c++/TDgame/src/game/projectiles/IceballProjectile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/FireTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/LaserTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/HUDInterface.h
@@ -3379,7 +3378,6 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/IceTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/SplashwaveTower.h
- /home/jaros/gitProjects/c++/TDgame/src/game/projectiles/IceballProjectile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/FireTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/LaserTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/HUDInterface.h
@@ -4267,7 +4265,6 @@ CMakeFiles/TowerDefence.dir/src/game/UI/HUDInterface.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/projectiles/BasicProjectile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/IceTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/SplashwaveTower.h
- /home/jaros/gitProjects/c++/TDgame/src/game/projectiles/IceballProjectile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/FireTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/LaserTower.h
 
@@ -10001,7 +9998,6 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/TowerManager.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/IceTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/SplashwaveTower.h
- /home/jaros/gitProjects/c++/TDgame/src/game/projectiles/IceballProjectile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/FireTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/LaserTower.h
 
@@ -13360,7 +13356,6 @@ CMakeFiles/TowerDefence.dir/src/game/towers/IceTower.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/Projectile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/projectiles/BasicProjectile.h
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
- /home/jaros/gitProjects/c++/TDgame/src/game/projectiles/IceballProjectile.h
 
 CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/main.cpp
@@ -13814,7 +13809,6 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o
  /home/jaros/gitProjects/c++/TDgame/src/ObjectCursorInteractionsModes.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/IceTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/SplashwaveTower.h
- /home/jaros/gitProjects/c++/TDgame/src/game/projectiles/IceballProjectile.h
  /home/jaros/gitProjects/c++/TDgame/src/game/towers/FireTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/abstractClasses/LaserTower.h
  /home/jaros/gitProjects/c++/TDgame/src/game/UI/HUDInterface.h

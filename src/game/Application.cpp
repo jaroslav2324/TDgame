@@ -221,10 +221,8 @@ void Application::handleEvents(){
 
         case GameEventType::MOUSE_LEFT_BTN_PRESSED:
         {
-            //TODO move coords saving to systemEventsHandler
-            int x, y;
-            SDL_GetMouseState(&x, &y);
-            Coords mouseCoords(x, y);
+
+            Coords mouseCoords = systemEventsHandler->getCurrentMouseCoords();
 
             if (DEBUG_CONSOLE_OUTPUT_ON && DEBUG_OUTPUT_MOUSE_CLICKS)
                 cout << "Mouse click registered at " << mouseCoords;
