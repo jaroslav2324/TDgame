@@ -7,7 +7,7 @@
 #include "SDL2/SDL.h"
 
 #include "../EngineSettings.h"
-#include "GameEvent.h"
+#include "GameEvents.h"
 
 using std::cout;
 using std::endl;
@@ -26,12 +26,13 @@ class SystemEventsHandler{
     bool popGameEvent(GameEvent* dstEvent);
     // push to queue of GameEvents
     void pushGameEvent(GameEvent event);
-    void pushGameEvent(GameEventType eventType);
 
     // handle queue of SDL_Events
     void handleSystemEvents();
 
     Coords getCurrentMouseCoords();
+
+    queue<GameEvent>* getQueueOfGameEventsPtr();
 
     private:
 

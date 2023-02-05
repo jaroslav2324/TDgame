@@ -17,7 +17,7 @@ using std::endl;
 class MainMenu: public Interface{
 
     public:
-    MainMenu(Renderer* renderer,SoundPlayer* soundPlayer);
+    MainMenu(Renderer* renderer,SoundPlayer* soundPlayer, SystemEventsHandler* sysEventsHandler);
     ~MainMenu();
 
     MenuOptionsCode makeFrameTurn();

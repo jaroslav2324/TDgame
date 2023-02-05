@@ -16,14 +16,13 @@ using std::map;
 
 class Interface{
     public:
-    Interface();
+    Interface(Renderer* renderer, SoundPlayer* soundPlayer, SystemEventsHandler* sysEventsHandler);
     ~Interface();
 
     virtual void render() = 0;
+
+    //TODO remove
     void saveMouseClickCoords(Coords coords);
-    //TODO replace&
-    void setLeftMouseReleased();
-    void seteftMousePressed();
 
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     virtual void saveToBinaryFile(ostream& outpustStream);
@@ -34,10 +33,10 @@ class Interface{
 
     Renderer* renderer = nullptr;
     SoundPlayer* soundPlayer = nullptr;
+    SystemEventsHandler* sysEventsHandler = nullptr;
 
+    //TODO remove
     queue<Coords> savedMouseClicks;
-    //TODO replace?
-    bool leftMousePressed = false;
 
     // Use for iteration over buttons
     vector<Button*> buttonsVec;

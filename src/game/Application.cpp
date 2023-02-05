@@ -20,9 +20,9 @@ Application::Application(){
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
 
-    mainMenu = new MainMenu(renderer, soundPlayer);
-    optionsMenu = new OptionsMenu(renderer, soundPlayer);
-    levelsMenu = new LevelsMenu(renderer, soundPlayer);
+    mainMenu = new MainMenu(renderer, soundPlayer, systemEventsHandler);
+    optionsMenu = new OptionsMenu(renderer, soundPlayer, systemEventsHandler);
+    levelsMenu = new LevelsMenu(renderer, soundPlayer, systemEventsHandler);
 }
 
 Application::~Application(){
@@ -203,44 +203,82 @@ void Application::handleEvents(){
 
     systemEventsHandler->handleSystemEvents();
 
-    GameEvent event(GameEventType::UNDEFINED_GAME_EVENT);
+    GameEvent event;
 
     while(systemEventsHandler->popGameEvent(&event)){
 
         switch (event.eventType)
         {
-        case GameEventType::w_PRESSED:
+        case GameEventType::GLOBAL_EVENT:
+            switch (event.globalGameEvent.gEvType)
+            {
+            case GlobalEventType::QUIT_GAME:
+                quitApp = true;
+                break;
+            
+            default:
+                break;
+            }
+        break;
 
+        case GameEventType::KEYBOARD_EVENT:
+            switch(event.keyboardGameEvent.kEvType)
+            {
+            case KeyboardEventType::w_PRESSED:
             //TODO remove
             cout << "w pressed" << endl;
             break;
-
-        case GameEventType::QUIT_GAME:
-            quitApp = true;
-            break;
-
-        case GameEventType::MOUSE_LEFT_BTN_PRESSED:
-        {
-
-            Coords mouseCoords = systemEventsHandler->getCurrentMouseCoords();
-
-            if (DEBUG_CONSOLE_OUTPUT_ON && DEBUG_OUTPUT_MOUSE_CLICKS)
-                cout << "Mouse click registered at " << mouseCoords;
             
-            if (activeSceneCode == ActiveScenesCodes::MAIN_MENU)
-                mainMenu->saveMouseClickCoords(mouseCoords);
-            else if (activeSceneCode == ActiveScenesCodes::OPTIONS_MENU)
-                optionsMenu->saveMouseClickCoords(mouseCoords);
-            else if (activeSceneCode == ActiveScenesCodes::CHOOSE_LEVEL_MENU)
-                levelsMenu->saveMouseClickCoords(mouseCoords);
-            else if (activeSceneCode == ActiveScenesCodes::GAME_LEVEL)
-                gameLevel->saveMouseClickCoords(mouseCoords);
-        }
+            case KeyboardEventType::s_PRESSED:
+            //TODO remove
+            cout << "s pressed" << endl;
             break;
+
+            //TODO
+            case KeyboardEventType::s_RELEASED:
+            case KeyboardEventType::w_RELEASED:
+            default:
+                //TODO 
+                break;
+            }
+        break;
+            
+
+
+        case GameEventType::MOUSE_EVENT:
+        
+            switch(event.mouseGameEvent.mEvType)
+            {
+                case MouseEventType::MOUSE_LEFT_BTN_PRESSED:
+                if (DEBUG_CONSOLE_OUTPUT_ON && DEBUG_OUTPUT_MOUSE_CLICKS)
+                    cout << "Mouse click registered at " << event.mouseGameEvent.mouseCoords;
+                
+                if (activeSceneCode == ActiveScenesCodes::MAIN_MENU)
+                    mainMenu->saveMouseClickCoords(event.mouseGameEvent.mouseCoords);
+                else if (activeSceneCode == ActiveScenesCodes::OPTIONS_MENU)
+                    optionsMenu->saveMouseClickCoords(event.mouseGameEvent.mouseCoords);
+                else if (activeSceneCode == ActiveScenesCodes::CHOOSE_LEVEL_MENU)
+                    levelsMenu->saveMouseClickCoords(event.mouseGameEvent.mouseCoords);
+                else if (activeSceneCode == ActiveScenesCodes::GAME_LEVEL)
+                    gameLevel->saveMouseClickCoords(event.mouseGameEvent.mouseCoords);
+                break;
+
+                case MouseEventType::MOUSE_LEFT_BTN_RELEASED:
+                //TODO
+                default:
+                    break;
+            }
+        break;
+
+        case GameEventType::UNDEFINED_GAME_EVENT:
+            //TODO
+            cout << "Undefined game event" << endl;
+        break;
+
         default:
         
             //TODO
-            cout << "Udefined game event" << endl;
+            cout << "No game event" << endl;
             break;
         }
     }
@@ -263,7 +301,7 @@ void Application::loadChosenLevel(){
         break;
     }
 
-    gameLevel = new GameLevel(renderer, soundPlayer);
+    gameLevel = new GameLevel(renderer, soundPlayer, systemEventsHandler);
 
     std::ofstream levelFileOut;
     levelFileOut.open(levelPath, std::ios::binary);

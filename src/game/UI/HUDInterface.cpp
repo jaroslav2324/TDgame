@@ -1,9 +1,12 @@
 #include "HUDInterface.h"
 
-HUDInterface::HUDInterface(TowerManager* towerManager, EnemyManager* enemyManager, Grid* grid, Renderer* renderer, SoundPlayer* soundPlayer){
-
-    this->renderer = renderer;
-    this->soundPlayer = soundPlayer;
+HUDInterface::HUDInterface(TowerManager* towerManager,
+EnemyManager* enemyManager,
+Grid* grid,
+Renderer* renderer,
+SoundPlayer* soundPlayer,
+SystemEventsHandler* sysEventsHandler):
+Interface(renderer, soundPlayer, sysEventsHandler){
 
     this->towerManager = towerManager;
     this->enemyManager = enemyManager;

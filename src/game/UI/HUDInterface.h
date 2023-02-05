@@ -20,7 +20,7 @@ using std::queue;
 
 class HUDInterface:  public Interface{
     public:
-    HUDInterface(TowerManager* towerManager, EnemyManager* enemyManager, Grid* grid, Renderer* renderer, SoundPlayer* soundPlayer);
+    HUDInterface(TowerManager* towerManager, EnemyManager* enemyManager, Grid* grid, Renderer* renderer, SoundPlayer* soundPlayer, SystemEventsHandler* sysEventsHandler);
     ~HUDInterface();
 
     MenuOptionsCode handleCursorInteraction();

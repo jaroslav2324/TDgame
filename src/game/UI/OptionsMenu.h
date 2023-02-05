@@ -9,7 +9,7 @@
 class OptionsMenu: public Interface{
 
     public:
-    OptionsMenu(Renderer* renderer, SoundPlayer* soundPlayer);
+    OptionsMenu(Renderer* renderer, SoundPlayer* soundPlayer, SystemEventsHandler* sysEventsHandler);
     ~OptionsMenu();
 
     MenuOptionsCode makeFrameTurn();

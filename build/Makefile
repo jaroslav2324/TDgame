@@ -218,6 +218,30 @@ src/engine/Engine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.s
 .PHONY : src/engine/Engine.cpp.s
 
+src/engine/HID/GameEvents.o: src/engine/HID/GameEvents.cpp.o
+.PHONY : src/engine/HID/GameEvents.o
+
+# target to build an object file
+src/engine/HID/GameEvents.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/HID/GameEvents.cpp.o
+.PHONY : src/engine/HID/GameEvents.cpp.o
+
+src/engine/HID/GameEvents.i: src/engine/HID/GameEvents.cpp.i
+.PHONY : src/engine/HID/GameEvents.i
+
+# target to preprocess a source file
+src/engine/HID/GameEvents.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/HID/GameEvents.cpp.i
+.PHONY : src/engine/HID/GameEvents.cpp.i
+
+src/engine/HID/GameEvents.s: src/engine/HID/GameEvents.cpp.s
+.PHONY : src/engine/HID/GameEvents.s
+
+# target to generate assembly for a file
+src/engine/HID/GameEvents.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TowerDefence.dir/build.make CMakeFiles/TowerDefence.dir/src/engine/HID/GameEvents.cpp.s
+.PHONY : src/engine/HID/GameEvents.cpp.s
+
 src/engine/HID/SystemEventsHandler.o: src/engine/HID/SystemEventsHandler.cpp.o
 .PHONY : src/engine/HID/SystemEventsHandler.o
 
@@ -1147,6 +1171,9 @@ help:
 	@echo "... src/engine/Engine.o"
 	@echo "... src/engine/Engine.i"
 	@echo "... src/engine/Engine.s"
+	@echo "... src/engine/HID/GameEvents.o"
+	@echo "... src/engine/HID/GameEvents.i"
+	@echo "... src/engine/HID/GameEvents.s"
 	@echo "... src/engine/HID/SystemEventsHandler.o"
 	@echo "... src/engine/HID/SystemEventsHandler.i"
 	@echo "... src/engine/HID/SystemEventsHandler.s"

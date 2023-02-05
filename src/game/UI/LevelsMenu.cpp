@@ -1,9 +1,7 @@
 #include "LevelsMenu.h"
 
-LevelsMenu::LevelsMenu(Renderer* renderer, SoundPlayer* soundPlayer){
-
-    this->renderer = renderer;
-    this->soundPlayer = soundPlayer;
+LevelsMenu::LevelsMenu(Renderer* renderer, SoundPlayer* soundPlayer, SystemEventsHandler* sysEventsHandler):
+Interface(renderer, soundPlayer, sysEventsHandler){
     
     //TODO change button textures
     // TODO change button centers(height)

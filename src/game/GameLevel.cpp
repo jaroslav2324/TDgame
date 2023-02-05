@@ -1,6 +1,6 @@
 #include "GameLevel.h"
 
-GameLevel::GameLevel(Renderer* renderer, SoundPlayer* soundPlayer){
+GameLevel::GameLevel(Renderer* renderer, SoundPlayer* soundPlayer, SystemEventsHandler* sysEventsHandler){
 
     enemiesWay = new EnemiesWay();
 
@@ -19,7 +19,7 @@ GameLevel::GameLevel(Renderer* renderer, SoundPlayer* soundPlayer){
 
     towerManager = new TowerManager(enemyManager, grid);
 
-    interface = new HUDInterface(towerManager, enemyManager, grid, renderer, soundPlayer);
+    interface = new HUDInterface(towerManager, enemyManager, grid, renderer, soundPlayer, sysEventsHandler);
 }
 
 GameLevel::~GameLevel(){

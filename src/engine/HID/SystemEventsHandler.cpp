@@ -13,30 +13,34 @@ void SystemEventsHandler::handleSystemEvents(){
     saveCurrentMouseCoords();
 
     SDL_Event event;
+    GameEvent gameEvent;
     while(SDL_PollEvent(&event)){
-
         switch(event.type){
 
             case SDL_QUIT:
-            pushGameEvent(GameEventType::QUIT_GAME);
-            break;
+                gameEvent = GlobalGameEvent(GlobalEventType::QUIT_GAME);
+                pushGameEvent(gameEvent);
+                break;
 
             case SDL_KEYDOWN:
 
                 switch (event.key.keysym.sym){
 
                 case SDLK_w:
-                pushGameEvent(GameEventType::w_PRESSED);
+                gameEvent = KeyboardGameEvent(KeyboardEventType::w_PRESSED);
+                pushGameEvent(gameEvent);
                 break;
 
                 case SDLK_s:
-                pushGameEvent(GameEventType::s_PRESSED);
+                gameEvent = KeyboardGameEvent(KeyboardEventType::s_PRESSED);
+                pushGameEvent(gameEvent);
                 break;
 
                 default:
                 if (DEBUG_ENGINE_OUTPUT)
                     cout << CoutTextColors::YELLOW << "No case for pressed key " << event.key.keysym.sym << endl << CoutTextColors::RESET;
-                pushGameEvent(GameEventType::UNDEFINED_GAME_EVENT);
+                gameEvent = UndefinedGameEvent();
+                pushGameEvent(gameEvent);
                 }
             break;
 
@@ -45,17 +49,21 @@ void SystemEventsHandler::handleSystemEvents(){
                 switch (event.key.keysym.sym){
 
                 case SDLK_w:
-                pushGameEvent(GameEventType::w_RELEASED);
+                gameEvent = KeyboardGameEvent(KeyboardEventType::w_RELEASED);
+                pushGameEvent(gameEvent);
                 break;
 
                 case SDLK_s:
-                pushGameEvent(GameEventType::s_RELEASED);
+                gameEvent = KeyboardGameEvent(KeyboardEventType::s_RELEASED);
+                pushGameEvent(gameEvent);
                 break;
 
                 default:
+
                 if (DEBUG_ENGINE_OUTPUT)
                     cout << CoutTextColors::YELLOW << "No case for released key " << event.key.keysym.sym << endl << CoutTextColors::RESET;
-                pushGameEvent(GameEventType::UNDEFINED_GAME_EVENT);
+                gameEvent = UndefinedGameEvent();
+                pushGameEvent(gameEvent);
                 }
             break;
 
@@ -64,14 +72,16 @@ void SystemEventsHandler::handleSystemEvents(){
                 switch (event.button.button){
 
                 case SDL_BUTTON_LEFT:
-                    pushGameEvent(GameEventType::MOUSE_LEFT_BTN_PRESSED);
-                    break;
+                gameEvent = MouseGameEvent(MouseEventType::MOUSE_LEFT_BTN_PRESSED, Coords(event.button.x, event.button.y));
+                pushGameEvent(gameEvent);
+                break;
                 
                 default:
                 if (DEBUG_ENGINE_OUTPUT)
                     cout << CoutTextColors::YELLOW << "No case for pressed mouse button " << event.button.button << endl << CoutTextColors::RESET;
-                pushGameEvent(GameEventType::UNDEFINED_GAME_EVENT);
-                    break;
+                gameEvent = UndefinedGameEvent();
+                pushGameEvent(gameEvent);
+                break;
                 }
             break;
 
@@ -80,13 +90,16 @@ void SystemEventsHandler::handleSystemEvents(){
                 switch (event.button.button){
 
                 case SDL_BUTTON_LEFT:
-                pushGameEvent(GameEventType::MOUSE_LEFT_BTN_RELEASED);
+
+                gameEvent = MouseGameEvent(MouseEventType::MOUSE_LEFT_BTN_RELEASED, Coords(event.button.x, event.button.y));
+                pushGameEvent(gameEvent);
                 break;
             
                 default:
                 if (DEBUG_ENGINE_OUTPUT)
                     cout << CoutTextColors::YELLOW << "No case for released mouse button " << event.button.button << endl << CoutTextColors::RESET;
-                pushGameEvent(GameEventType::UNDEFINED_GAME_EVENT);
+                gameEvent = UndefinedGameEvent();
+                pushGameEvent(gameEvent);
                 break;
             }
             break;
@@ -96,12 +109,12 @@ void SystemEventsHandler::handleSystemEvents(){
     }
 }
 
-void SystemEventsHandler::pushGameEvent(GameEvent event){
-    queueOfGameEvents.push(event);
+queue<GameEvent>* SystemEventsHandler::getQueueOfGameEventsPtr(){
+    return &queueOfGameEvents;
 }
 
-void SystemEventsHandler::pushGameEvent(GameEventType eventType){
-    queueOfGameEvents.push(GameEvent(eventType));
+void SystemEventsHandler::pushGameEvent(GameEvent event){
+    queueOfGameEvents.push(event);
 }
 
 bool SystemEventsHandler::popGameEvent(GameEvent* dstEvent){

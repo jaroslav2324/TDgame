@@ -8,7 +8,7 @@
 class LevelsMenu: public Interface{
 
     public:
-    LevelsMenu(Renderer* renderer, SoundPlayer* soundPlayer);
+    LevelsMenu(Renderer* renderer, SoundPlayer* soundPlayer, SystemEventsHandler* sysEventsHandler);
     ~LevelsMenu();
 
     MenuOptionsCode makeFrameTurn();

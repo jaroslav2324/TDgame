@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/jaros/gitProjects/c++/TDgame/src/engine/Engine.cpp" "CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.o.d"
+  "/home/jaros/gitProjects/c++/TDgame/src/engine/HID/GameEvents.cpp" "CMakeFiles/TowerDefence.dir/src/engine/HID/GameEvents.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/engine/HID/GameEvents.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/engine/HID/SystemEventsHandler.cpp" "CMakeFiles/TowerDefence.dir/src/engine/HID/SystemEventsHandler.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/engine/HID/SystemEventsHandler.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/engine/rendering/Renderer.cpp" "CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.o.d"
   "/home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.cpp" "CMakeFiles/TowerDefence.dir/src/engine/rendering/TexturesEnum.cpp.o" "gcc" "CMakeFiles/TowerDefence.dir/src/engine/rendering/TexturesEnum.cpp.o.d"

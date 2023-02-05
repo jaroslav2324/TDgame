@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.o.d"
+  "CMakeFiles/TowerDefence.dir/src/engine/HID/GameEvents.cpp.o"
+  "CMakeFiles/TowerDefence.dir/src/engine/HID/GameEvents.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/engine/HID/SystemEventsHandler.cpp.o"
   "CMakeFiles/TowerDefence.dir/src/engine/HID/SystemEventsHandler.cpp.o.d"
   "CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.o"

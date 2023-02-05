@@ -6,6 +6,11 @@
 },
 {
   "directory": "/home/jaros/gitProjects/c++/TDgame/build",
+  "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/engine/HID/GameEvents.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/engine/HID/GameEvents.cpp",
+  "file": "/home/jaros/gitProjects/c++/TDgame/src/engine/HID/GameEvents.cpp"
+},
+{
+  "directory": "/home/jaros/gitProjects/c++/TDgame/build",
   "command": "/usr/bin/g++  -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include -I/home/jaros/gitProjects/c++/TDgame/build/libs/SDL/include-config-debug -g -o CMakeFiles/TowerDefence.dir/src/engine/rendering/TexturesEnum.cpp.o -c /home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.cpp",
   "file": "/home/jaros/gitProjects/c++/TDgame/src/engine/rendering/TexturesEnum.cpp"
 },

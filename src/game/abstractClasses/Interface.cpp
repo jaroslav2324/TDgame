@@ -1,7 +1,9 @@
 #include "Interface.h"
 
-Interface::Interface(){
-
+Interface::Interface(Renderer* renderer, SoundPlayer* soundPlayer, SystemEventsHandler* sysEventsHandler){
+    this->renderer = renderer;
+    this->soundPlayer = soundPlayer;
+    this->sysEventsHandler = sysEventsHandler;
 }
 
 Interface::~Interface(){
@@ -11,15 +13,6 @@ Interface::~Interface(){
 void Interface::saveMouseClickCoords(Coords coords){
     savedMouseClicks.push(coords);
 }
-
-void Interface::seteftMousePressed(){
-    leftMousePressed = true;
-}
-
-void Interface::setLeftMouseReleased(){
-    leftMousePressed = false;
-}
-
 
 void Interface::handleHoveringOverButtons(){
 
