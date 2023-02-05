@@ -14,6 +14,7 @@ using std::endl;
 using std::queue;
 using std::map;
 
+//TODO rename
 // Class for handle SDL_Events
 class SystemEventsHandler{
     public:

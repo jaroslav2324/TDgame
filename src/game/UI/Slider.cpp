@@ -142,3 +142,15 @@ void Slider::setPosition(Coords mouseCoords){
     int x = mouseCoords.x - rect.x - barLineStartShift;
     setPosition(x * 100 / (rect.w - barLineStartShift - barLineEndShift));
 }
+
+void Slider::setMovingAfterMouse(){
+    moveAfterMouseCursor = true;
+}
+
+void Slider::unsetMovingAfterMouse(){
+    moveAfterMouseCursor = false;
+}
+
+bool Slider::isMovingAfterMouse(){
+    return moveAfterMouseCursor;
+}

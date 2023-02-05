@@ -12,6 +12,14 @@ void Interface::saveMouseClickCoords(Coords coords){
     savedMouseClicks.push(coords);
 }
 
+void Interface::seteftMousePressed(){
+    leftMousePressed = true;
+}
+
+void Interface::setLeftMouseReleased(){
+    leftMousePressed = false;
+}
+
 
 void Interface::handleHoveringOverButtons(){
 

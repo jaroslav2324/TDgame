@@ -24,6 +24,9 @@ class SoundPlayer{
     SoundPlayer();
     ~SoundPlayer();
 
+    // volume 0-100
+    void setVolume(SoundChannels soundChannel, u_char volume);
+
     void playSound(SoundsEnumeration soundNum, SoundChannels channel = SoundChannels::ALL_CHANNELS, int loops = 0);
 
     private:

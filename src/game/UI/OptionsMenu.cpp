@@ -35,15 +35,29 @@ OptionsMenu::~OptionsMenu(){
 MenuOptionsCode OptionsMenu::makeFrameTurn(){
 
     handleHoveringOverButtons();
+
     //TODO rewrite, 
     queue<Coords> queuePressedMouseCoords = savedMouseClicks;
     while (!queuePressedMouseCoords.empty()){
         Coords mouseCoords = queuePressedMouseCoords.front();
         queuePressedMouseCoords.pop();
 
-        if (musicVolumeSlider->isPointInRect(mouseCoords))
+        if (musicVolumeSlider->isPointInRect(mouseCoords) && !musicVolumeSlider->isMovingAfterMouse()){
+            musicVolumeSlider->setMovingAfterMouse();
             musicVolumeSlider->setPosition(mouseCoords);
+        }
+        else if (!musicVolumeSlider->isPointInRect(mouseCoords) && musicVolumeSlider->isMovingAfterMouse())
+            musicVolumeSlider->unsetMovingAfterMouse();
+  
     }
+
+    //TODO move getting coords to HID
+    if (musicVolumeSlider->isMovingAfterMouse()){
+        int x, y;
+        SDL_GetMouseState(&x, &y);
+        musicVolumeSlider->setPosition(Coords(x, y));
+    }
+
     return handlePressingOnButtons();
 }
 

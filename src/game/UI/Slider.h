@@ -47,6 +47,11 @@ class Slider{
     void setTitleHeight(int titleHeight);
     void setTitleRect(SDL_Rect titleRect);
 
+    void setMovingAfterMouse();
+    void unsetMovingAfterMouse();
+
+    bool isMovingAfterMouse();
+
     // bar position directly(MIN_POSITION-MAX_POSITION value)
     void setPosition(int position);
     // set bar position with mouse coords
@@ -76,7 +81,7 @@ class Slider{
     TexturesEnumeration barTexture;
 
     SDL_Color backgroundColor = {127, 127, 127, 255};
-    SDL_Color barColor = {0, 150, 0, 255};
+    SDL_Color barColor = {255, 128, 0, 255};
     SDL_Color lineColor = {100, 100, 100, 255};
     SDL_Color titleColor = {255, 255, 255, 255};
 
@@ -84,4 +89,6 @@ class Slider{
     SDL_Rect titleRect = {0, 0, 0, 0};
     int titleWidth = 50;
     int titleHeight = 25;
+
+    bool moveAfterMouseCursor = false;
 };

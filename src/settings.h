@@ -24,3 +24,8 @@
 
 /*used in comparison of coordinates*/
 #define EPSILON_COORDS 1
+
+struct Settings{
+    int musicVolume = 100;
+};
+

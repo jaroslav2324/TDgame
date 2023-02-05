@@ -54,3 +54,10 @@ SoundPlayer::~SoundPlayer(){
 void SoundPlayer::playSound(SoundsEnumeration soundNum, SoundChannels channel, int loops){
     Mix_PlayChannel(static_cast<int>(channel), sounds[soundNum], loops);
 }
+
+void SoundPlayer::setVolume(SoundChannels soundChannel, u_char volume){
+
+    int volume128 = (double)volume / 100 * MIX_MAX_VOLUME;
+
+    Mix_Volume(static_cast<int>(soundChannel), volume128);
+}

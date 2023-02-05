@@ -21,6 +21,9 @@ class Interface{
 
     virtual void render() = 0;
     void saveMouseClickCoords(Coords coords);
+    //TODO replace&
+    void setLeftMouseReleased();
+    void seteftMousePressed();
 
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     virtual void saveToBinaryFile(ostream& outpustStream);
@@ -33,6 +36,8 @@ class Interface{
     SoundPlayer* soundPlayer = nullptr;
 
     queue<Coords> savedMouseClicks;
+    //TODO replace?
+    bool leftMousePressed = false;
 
     // Use for iteration over buttons
     vector<Button*> buttonsVec;
