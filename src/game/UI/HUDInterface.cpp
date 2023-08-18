@@ -14,10 +14,15 @@ Interface(renderer, soundPlayer, sysEventsHandler){
 
     //TODO change button textures
     exitToMainMenuBtn = new Button(Coords(50, 25), renderer, soundPlayer);
+    exitToMainMenuBtn->setLabel("Main Menu");
     buildBasicTowerBtn = new Button(Coords(50, 300), renderer, soundPlayer);
+    buildBasicTowerBtn->setLabel("Basic");
     buildIceTowerBtn = new Button(Coords(50, 450), renderer, soundPlayer);
-    buildFireTowerBtn = new Button(Coords(50, 600), renderer, soundPlayer);                                   
+    buildIceTowerBtn->setLabel("Ice");
+    buildFireTowerBtn = new Button(Coords(50, 600), renderer, soundPlayer);  
+    buildFireTowerBtn->setLabel("Fire");                                
     spawnEnemyBtn = new Button(Coords(600, 40), renderer, soundPlayer);
+    spawnEnemyBtn->setLabel("Start waves");
 
     createButtonsVec();
     createButtonsReturnCodesVec();    

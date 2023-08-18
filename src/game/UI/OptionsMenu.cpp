@@ -8,6 +8,7 @@ Interface(renderer, soundPlayer, sysEventsHandler){
 
     toMainMenuBtn = new Button(Coords(SCREEN_WIDTH / 2, 250), renderer, soundPlayer);
     toMainMenuBtn->setWidthHeight(500, 200);
+    toMainMenuBtn->setLabel("Main Menu");
 
     musicVolumeSlider = new Slider(renderer, {SCREEN_WIDTH / 2 - 250, 500, 500, 50});
     musicVolumeSlider->setTitle("Music volume");

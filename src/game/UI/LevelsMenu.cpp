@@ -8,18 +8,23 @@ Interface(renderer, soundPlayer, sysEventsHandler){
 
     toMainMenuBtn = new Button(Coords(150, 100), renderer, soundPlayer);
     toMainMenuBtn->setWidthHeight(200, 100);
+    toMainMenuBtn->setLabel("Main Menu");
 
     chooseLvl1Btn = new Button(Coords(SCREEN_WIDTH / 3, SCREEN_HEIGHT / 3), renderer, soundPlayer);
     chooseLvl1Btn->setWidthHeight(100, 100);
+    chooseLvl1Btn->setLabel("1");
 
     chooseLvl2Btn = new Button(Coords((SCREEN_WIDTH * 2) / 3, SCREEN_HEIGHT / 3), renderer, soundPlayer);
     chooseLvl2Btn->setWidthHeight(100, 100);
+    chooseLvl2Btn->setLabel("2");
 
     chooseLvl3Btn = new Button(Coords(SCREEN_WIDTH / 3, ((SCREEN_HEIGHT * 2) / 3)), renderer, soundPlayer);
     chooseLvl3Btn->setWidthHeight(100, 100);
+    chooseLvl3Btn->setLabel("3");
 
     chooseLvl4Btn = new Button(Coords((SCREEN_WIDTH * 2) / 3, (SCREEN_HEIGHT * 2) / 3), renderer, soundPlayer);
     chooseLvl4Btn->setWidthHeight(100, 100);
+    chooseLvl4Btn->setLabel("4");
 
     createButtonsVec();
     createButtonsReturnCodesVec();    
