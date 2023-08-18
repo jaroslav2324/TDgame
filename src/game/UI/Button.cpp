@@ -50,6 +50,17 @@ void Button::render(){
     default:
         break;
     }
+
+    // render label
+    if (label != ""){
+        int rectX = (coords.x - btnWidth * 0.5) + btnWidth * 0.2;
+        int rectY = (coords.y - btnHeight * 0.5) + btnHeight * 0.2;
+        int rectWidth = btnWidth * 0.6;
+        int rectHeight = btnHeight * 0.6;
+        SDL_Rect textRect = {rectX, rectY, rectWidth, rectHeight};
+        SDL_Color textClr = {0, 0, 0, 255};
+        renderer->renderText(label, &textRect, textClr);
+    }
 }
 
 // void Button::setModeNoCursorInteraction(){
@@ -113,6 +124,10 @@ bool Button::isPointInRect(Coords point){
 void Button::setWidthHeight(int width, int height){
     btnWidth = width;
     btnHeight = height;
+}
+
+void Button::setLabel(string label){
+    this->label = label;
 }
 
 bool Button::isPressingCooldownInactive(){

@@ -38,6 +38,7 @@ public:
     bool isPointInRect(Coords point);
 
     void setWidthHeight(int width, int height);
+    void setLabel(string label);
 
     bool isPressingCooldownInactive();
 
@@ -66,6 +67,8 @@ private:
 
     Renderer* renderer = nullptr;
     SoundPlayer* soundPlayer = nullptr;
+
+    string label = "";
 
     // void setModeNoCursorInteraction();
     // void setModeHoveredOver();

@@ -7,13 +7,16 @@ Interface(renderer, soundPlayer, sysEventsHandler){
     // TODO change button centers(height)
     startGameBtn = new Button(Coords(SCREEN_WIDTH / 2, 150), renderer, soundPlayer);
     startGameBtn->setWidthHeight(500, 200);
+    startGameBtn->setLabel("Start");
                                     
 
     settingsBtn = new Button(Coords(SCREEN_WIDTH / 2, 450), renderer, soundPlayer);
     settingsBtn->setWidthHeight(500, 200);
+    settingsBtn->setLabel("Settings");
 
     quitBtn = new Button(Coords(SCREEN_WIDTH / 2, 750), renderer, soundPlayer);
     quitBtn->setWidthHeight(500, 200);
+    quitBtn->setLabel("Quit");
 
     createButtonsVec();
     createButtonsReturnCodesVec();    
