@@ -1,8 +1,12 @@
 #pragma once
 
+// this header file contains infiormation about Coords struct, functions for manipulating with rects, coords, points
+
 #include <iostream>
 #include <fstream>
 #include <math.h>
+
+#include "SDL2/SDL.h"
 
 #include "../settings.h"
 #include "Vector.h"
@@ -25,12 +29,19 @@ struct Coords{
 
     Coords operator+(Coords& coords);
     Coords operator+(Vector& vec);
+    // for initialisation
     Coords& operator()(double x, double y);
 
 };
-
-double distance(Coords& point1, Coords& point2);
-
+// print coords
 ostream& operator<<(ostream& os, const Coords& coords);
+// print rect
+ostream& operator<<(ostream& os, const SDL_Rect& rect);
+
 
 typedef Coords Point;
+
+// calculate distance between two points
+double distance(Point& point1, Point& point2);
+// check is point lies inside rect
+bool isPointInRect(Point& point, SDL_Rect& rect);

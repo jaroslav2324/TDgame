@@ -3,6 +3,7 @@
 #include "SDL2/SDL.h"
 
 #include "../../maths/maths.h"
+#include "../../maths/Coords.h"
 #include "../../engine/Engine.h"
 #include "../../settings.h"
 
@@ -12,7 +13,7 @@
 ONLY FOR RENDERING TILES*/
 class Grid{
     public:
-    Grid(Coords startCoords, Coords endCoords, int tileWidth = TILESIZE, int tileHeight = TILESIZE, 
+    Grid(SDL_Rect gridRect, int tileWidth = TILESIZE, int tileHeight = TILESIZE, 
          int gridTilesAmountWidth = GAME_LEVEL_WIDTH, int gridTilesAmountHeight = GAME_LEVEL_HEIGHT);
 
     ~Grid();
@@ -23,10 +24,11 @@ class Grid{
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     void loadFromBinaryFile(istream& inputStream);
 
-    bool isPointInRect(Point p);
+    bool isPointInGridRect(Point p);
 
     Coords getStartCoords();
     Coords getEndCoords();
+    SDL_Rect getGridRect();
 
     private:
     int gridTilesAmountWidth = 0;
@@ -37,6 +39,7 @@ class Grid{
 
     Coords startCoords;
     Coords endCoords;
+    SDL_Rect gridRect;
     
     GridTile*** gridTilesField = nullptr;
 };

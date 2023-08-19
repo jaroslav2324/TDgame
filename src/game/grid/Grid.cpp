@@ -1,9 +1,11 @@
 #include "Grid.h"
 
-Grid::Grid(Coords startCoords, Coords endCoords, int tileWidth, int tileHeight, int gridTilesAmountWidth, int gridTilesAmountHeight){
+Grid::Grid(SDL_Rect gridRect, int tileWidth, int tileHeight, int gridTilesAmountWidth, int gridTilesAmountHeight){
 
-    this->startCoords = startCoords;
-    this->endCoords = endCoords;
+    this->gridRect = gridRect;
+    Coords startCoords(gridRect.x, gridRect.y);
+    Coords endCoords(gridRect.x + gridRect.w, gridRect.y + gridRect.h);
+    
     this->tileWidth = tileWidth;
     this->tileHeight = tileHeight;
     this->gridTilesAmountWidth = gridTilesAmountWidth;
@@ -41,20 +43,20 @@ void Grid::renderGrid(Renderer* renderer){
             gridTilesField[i][j]->render(renderer);
 }
 
-bool Grid::isPointInRect(Point p){
-
-    if (p.x > startCoords.x && p.x < endCoords.x &&
-        p.y > startCoords.y && p.y < endCoords.y)
-        return true;
-    return false;
+bool Grid::isPointInGridRect(Point p){
+    return isPointInRect(p, gridRect);
 }
 
 Coords Grid::getStartCoords(){
-    return startCoords;
+    return Coords(gridRect.x, gridRect.y);
 }
 
 Coords Grid::getEndCoords(){
-    return endCoords;
+    return Coords(gridRect.x + gridRect.w, gridRect.y + gridRect.h);
+}
+
+SDL_Rect Grid::getGridRect(){
+    return gridRect;
 }
 
 void Grid::saveToBinaryFile(ostream& outpustStream){

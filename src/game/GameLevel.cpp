@@ -14,8 +14,8 @@ GameLevel::GameLevel(Renderer* renderer, SoundPlayer* soundPlayer, SystemEventsH
 
     fpsTimer = new PeriodicTimer(1 / FPS * 1000);
 
-    grid = new Grid(Coords(100, 100), Coords(SCREEN_WIDTH, SCREEN_HEIGHT), TILESIZE, TILESIZE, GAME_LEVEL_WIDTH, GAME_LEVEL_HEIGHT
-    );
+    SDL_Rect gridRect = {100, 100, SCREEN_WIDTH - 100, SCREEN_HEIGHT - 100};
+    grid = new Grid(gridRect, TILESIZE, TILESIZE, GAME_LEVEL_WIDTH, GAME_LEVEL_HEIGHT);
 
     towerManager = new TowerManager(enemyManager, grid);
 

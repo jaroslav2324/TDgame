@@ -14,6 +14,11 @@ ostream& operator<<(ostream& os, const Coords& coords){
     return os;
 }
 
+ostream& operator<<(ostream& os, const SDL_Rect& rect){
+    os << "Rect: { " << rect.x << ", " << rect.y << ", " << rect.w << ", " << rect.h << "}" << std::endl;
+    return os;
+}
+
 void Coords::saveToBinaryFile(ostream& outpustStream){
 
     if (DEBUG_CONSOLE_OUTPUT_ON && !SAVING_LEVELS_ON)
@@ -67,4 +72,10 @@ Coords& Coords::operator()(double x, double y){
     return *this;
 }
 
+bool isPointInRect(Point& point, SDL_Rect& rect){
+    if (point.x >= rect.x && point.x <= rect.x + rect.w &&
+        point.y >= rect.y && point.y <= rect.y + rect.h)
+        return true;
+    return false;
+}
 

@@ -133,7 +133,7 @@ MenuOptionsCode HUDInterface::handlePressingOnButtons(){
         else{
             if (towerManager->isBuildModeActive()){
 
-                if (!(grid->isPointInRect(mouseCoords)))
+                if (!(grid->isPointInGridRect(mouseCoords)))
                     continue;
 
                 if (towerManager->isTowerExistsInTile(mouseCoords)){
