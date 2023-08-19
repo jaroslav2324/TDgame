@@ -59,8 +59,7 @@ void Button::render(){
         int rectHeight = btnHeight * 0.6;
         SDL_Rect textRect = {rectX, rectY, rectWidth, rectHeight};
         SDL_Color textClr = {0, 0, 0, 255};
-        TextSizes textSize = TextSizes::s24;
-        renderer->renderText(label, &textRect, textClr, textSize);
+        renderer->renderText(label, &textRect, textClr, labelTextSize);
     }
 }
 
@@ -129,6 +128,10 @@ void Button::setWidthHeight(int width, int height){
 
 void Button::setLabel(string label){
     this->label = label;
+}
+
+void Button::setLabelTextSize(TextSizes labelTextSize){
+    this->labelTextSize = labelTextSize;
 }
 
 bool Button::isPressingCooldownInactive(){

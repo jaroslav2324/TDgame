@@ -39,6 +39,7 @@ public:
 
     void setWidthHeight(int width, int height);
     void setLabel(string label);
+    void setLabelTextSize(TextSizes labelTextSize);
 
     bool isPressingCooldownInactive();
 
@@ -69,6 +70,7 @@ private:
     SoundPlayer* soundPlayer = nullptr;
 
     string label = "";
+    TextSizes labelTextSize = TextSizes::s48;
 
     // void setModeNoCursorInteraction();
     // void setModeHoveredOver();
