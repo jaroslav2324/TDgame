@@ -10,13 +10,17 @@
 
 #include "../../settings.h"
 #include "../../maths/maths.h"
+#include "../utility/CoutTextColors.h"
 
 #include "TexturesEnum.h"
+#include "TextSizes.h"
 
 using std::map;
 using std::string;
 using std::cout;
 using std::endl;
+
+
 
 class Renderer{
 
@@ -32,8 +36,8 @@ class Renderer{
     void renderLine(Coords& point1, Coords& point2, SDL_Color& color, int width = 1);
     void renderCircle(Coords& center, int radius, SDL_Color& color, int borderWidth = 1);
     void renderFilledCircle(Coords center, int radius, SDL_Color& fillColor);
-    void renderText(const char* text, const SDL_Rect* rect, SDL_Color& color);
-    void renderText(string& str, const SDL_Rect* rect, SDL_Color& color);
+    void renderText(const char* text, const SDL_Rect* rect, SDL_Color& color, TextSizes textSize);
+    void renderText(string& str, const SDL_Rect* rect, SDL_Color& color, TextSizes textSize);
 
     private:
 
@@ -42,5 +46,9 @@ class Renderer{
 
     map<TexturesEnumeration, SDL_Texture*> textures;
 
-    TTF_Font* freeSans = nullptr;
+    TTF_Font* freeSans24 = nullptr;
+    TTF_Font* freeSans48 = nullptr;
+    TTF_Font* freeSans64 = nullptr;
+
+    SDL_Surface* createTextSurface(const char* text, SDL_Color& color, TextSizes textSize);
 };

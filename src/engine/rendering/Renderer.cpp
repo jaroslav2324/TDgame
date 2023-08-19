@@ -6,7 +6,9 @@ Renderer::Renderer(){
     this->renderer = renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     // fonts
-    freeSans = TTF_OpenFont("../data/fonts/freesans/FreeSans/FreeSans.ttf", 24);
+    freeSans24 = TTF_OpenFont("../data/fonts/freesans/FreeSans/FreeSans.ttf", 24);
+    freeSans48 = TTF_OpenFont("../data/fonts/freesans/FreeSans/FreeSans.ttf", 48);
+    freeSans64 = TTF_OpenFont("../data/fonts/freesans/FreeSans/FreeSans.ttf", 64);
 
     // fill paths of textures
     map<TexturesEnumeration, const char*> texturesPaths;
@@ -70,9 +72,9 @@ Renderer::~Renderer(){
         window = nullptr;
     }
 
-    if (freeSans != nullptr){
-        TTF_CloseFont(freeSans);
-        freeSans = nullptr;
+    if (freeSans24 != nullptr){
+        TTF_CloseFont(freeSans24);
+        freeSans24 = nullptr;
     }
 }
 
@@ -206,9 +208,11 @@ void Renderer::renderFilledCircle(Coords center, int radius, SDL_Color& fillColo
     renderTexture(TexturesEnumeration::WHITE_CIRCLE, &rect); 
 }
 
-void Renderer::renderText(const char* text, const SDL_Rect* rect, SDL_Color& color){
+void Renderer::renderText(const char* text, const SDL_Rect* rect, SDL_Color& color, TextSizes textSize){
     
-    SDL_Surface* messageSurface = TTF_RenderText_Blended(freeSans, text, color);
+    SDL_Surface* messageSurface = nullptr; 
+    messageSurface = createTextSurface(text, color, textSize);
+
     SDL_Texture* messageTexture = SDL_CreateTextureFromSurface(renderer, messageSurface);
     
     SDL_RenderCopy(renderer, messageTexture, 0, rect);
@@ -217,10 +221,34 @@ void Renderer::renderText(const char* text, const SDL_Rect* rect, SDL_Color& col
     SDL_FreeSurface(messageSurface);
 }
 
-void Renderer::renderText(string& str, const SDL_Rect* rect, SDL_Color& color){
-    renderText(str.c_str(), rect, color);
+void Renderer::renderText(string& str, const SDL_Rect* rect, SDL_Color& color, TextSizes textSize){
+    renderText(str.c_str(), rect, color, textSize);
 }
 
 void Renderer::renderPresent(){
     SDL_RenderPresent(renderer);
+}
+
+SDL_Surface* Renderer::createTextSurface(const char* text, SDL_Color& color, TextSizes textSize){
+
+    SDL_Surface* textSurface = nullptr; 
+    switch (textSize)
+    {
+    case TextSizes::s24:
+        textSurface = TTF_RenderText_Blended(freeSans24, text, color);
+        break;
+    case TextSizes::s48:
+        textSurface = TTF_RenderText_Blended(freeSans48, text, color);
+        break;
+    case TextSizes::s64:
+        textSurface = TTF_RenderText_Blended(freeSans64, text, color);
+        break;
+    
+    default:
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            cout << CoutTextColors::RED << "No loaded font with size " <<  (int)textSize << CoutTextColors::RESET << endl;
+            return nullptr;
+        break;
+    }
+    return textSurface;
 }

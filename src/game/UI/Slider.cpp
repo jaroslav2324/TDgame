@@ -57,7 +57,7 @@ void Slider::render(){
     else
         renderer->renderFilledRect(&barRect, barColor);
 
-    renderer->renderText(title, &titleRect, titleColor);
+    renderer->renderText(title, &titleRect, titleColor, TextSizes::s24);
 }
 
 

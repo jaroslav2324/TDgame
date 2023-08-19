@@ -59,7 +59,8 @@ void Button::render(){
         int rectHeight = btnHeight * 0.6;
         SDL_Rect textRect = {rectX, rectY, rectWidth, rectHeight};
         SDL_Color textClr = {0, 0, 0, 255};
-        renderer->renderText(label, &textRect, textClr);
+        TextSizes textSize = TextSizes::s24;
+        renderer->renderText(label, &textRect, textClr, textSize);
     }
 }
 

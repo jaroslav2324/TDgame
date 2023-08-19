@@ -381,6 +381,7 @@ CMakeFiles/TowerDefence.dir/src/engine/Engine.cpp.o: ../src/engine/Engine.cpp \
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -1389,7 +1390,9 @@ CMakeFiles/TowerDefence.dir/src/engine/rendering/Renderer.cpp.o: ../src/engine/r
   ../src/maths/Vector.h \
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
-  ../src/engine/rendering/TexturesEnum.h
+  ../src/engine/utility/CoutTextColors.h \
+  ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h
 
 CMakeFiles/TowerDefence.dir/src/engine/rendering/TexturesEnum.cpp.o: ../src/engine/rendering/TexturesEnum.cpp \
   /usr/include/stdc-predef.h \
@@ -3070,6 +3073,7 @@ CMakeFiles/TowerDefence.dir/src/game/Application.cpp.o: ../src/game/Application.
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   ../src/engine/EngineSettings.h \
   ../src/engine/sound/SoundsEnumeration.h \
@@ -3538,6 +3542,7 @@ CMakeFiles/TowerDefence.dir/src/game/GameLevel.cpp.o: ../src/game/GameLevel.cpp 
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -4004,6 +4009,7 @@ CMakeFiles/TowerDefence.dir/src/game/UI/Button.cpp.o: ../src/game/UI/Button.cpp 
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -4431,6 +4437,7 @@ CMakeFiles/TowerDefence.dir/src/game/UI/HUDInterface.cpp.o: ../src/game/UI/HUDIn
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -4875,6 +4882,7 @@ CMakeFiles/TowerDefence.dir/src/game/UI/LevelsMenu.cpp.o: ../src/game/UI/LevelsM
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -5296,6 +5304,7 @@ CMakeFiles/TowerDefence.dir/src/game/UI/MainMenu.cpp.o: ../src/game/UI/MainMenu.
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -5693,6 +5702,7 @@ CMakeFiles/TowerDefence.dir/src/game/UI/OptionsMenu.cpp.o: ../src/game/UI/Option
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -6103,6 +6113,7 @@ CMakeFiles/TowerDefence.dir/src/game/UI/Slider.cpp.o: ../src/game/UI/Slider.cpp 
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -6707,6 +6718,7 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Enemy.cpp.o: ../src/game/ab
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -7132,6 +7144,7 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Interface.cpp.o: ../src/gam
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -7539,6 +7552,7 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/LaserTower.cpp.o: ../src/ga
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -7971,6 +7985,7 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Projectile.cpp.o: ../src/ga
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -8396,6 +8411,7 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/ProjectileTower.cpp.o: ../s
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -8838,6 +8854,7 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/SplashwaveTower.cpp.o: ../s
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -9280,6 +9297,7 @@ CMakeFiles/TowerDefence.dir/src/game/abstractClasses/Tower.cpp.o: ../src/game/ab
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -9736,6 +9754,7 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/EnemyManager.cpp.o: ../src/g
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -10154,6 +10173,7 @@ CMakeFiles/TowerDefence.dir/src/game/entityManagers/TowerManager.cpp.o: ../src/g
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -10599,6 +10619,7 @@ CMakeFiles/TowerDefence.dir/src/game/grid/Base.cpp.o: ../src/game/grid/Base.cpp 
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -11009,6 +11030,7 @@ CMakeFiles/TowerDefence.dir/src/game/grid/EnemiesWay.cpp.o: ../src/game/grid/Ene
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -11414,6 +11436,7 @@ CMakeFiles/TowerDefence.dir/src/game/grid/Grid.cpp.o: ../src/game/grid/Grid.cpp 
   /usr/include/SDL2/close_code.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -11818,6 +11841,7 @@ CMakeFiles/TowerDefence.dir/src/game/grid/GridTile.cpp.o: ../src/game/grid/GridT
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   ../src/engine/EngineSettings.h \
@@ -12217,6 +12241,7 @@ CMakeFiles/TowerDefence.dir/src/game/grid/Portal.cpp.o: ../src/game/grid/Portal.
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/SDL2/SDL_ttf.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   ../src/engine/EngineSettings.h \
@@ -12629,6 +12654,7 @@ CMakeFiles/TowerDefence.dir/src/game/towers/BasicTower.cpp.o: ../src/game/towers
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -13072,6 +13098,7 @@ CMakeFiles/TowerDefence.dir/src/game/towers/FireTower.cpp.o: ../src/game/towers/
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -13515,6 +13542,7 @@ CMakeFiles/TowerDefence.dir/src/game/towers/IceTower.cpp.o: ../src/game/towers/I
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   /usr/include/SDL2/SDL_mixer.h \
   /usr/include/SDL2/SDL_stdinc.h \
@@ -13952,6 +13980,7 @@ CMakeFiles/TowerDefence.dir/src/main.cpp.o: ../src/main.cpp \
   ../src/maths/Line.h \
   ../src/maths/approximateComparison.h \
   ../src/engine/rendering/TexturesEnum.h \
+  ../src/engine/rendering/TextSizes.h \
   ../src/engine/sound/SoundPlayer.h \
   ../src/engine/EngineSettings.h \
   ../src/engine/sound/SoundsEnumeration.h \
@@ -14887,6 +14916,8 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 /usr/include/SDL2/SDL_timer.h:
 
+/usr/include/SDL2/SDL_system.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/mwaitxintrin.h:
 
 /usr/include/c++/11/type_traits:
@@ -15621,8 +15652,6 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/shaintrin.h:
 
-/usr/include/SDL2/SDL_system.h:
-
 /usr/include/c++/11/cwchar:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512erintrin.h:
@@ -15768,6 +15797,8 @@ CMakeFiles/TowerDefence.dir/src/maths/approximateComparison.cpp.o: ../src/maths/
 /usr/include/SDL2/close_code.h:
 
 ../src/settings.h:
+
+../src/engine/rendering/TextSizes.h:
 
 ../src/maths/Vector.h:
 

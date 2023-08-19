@@ -206,7 +206,7 @@ void EnemyManager::renderAll(Renderer* renderer){
     // render countdown before waves 
     if (!startedSpawning){
         SDL_Rect rect = {x, y, 150, 75};
-        renderer->renderText("Start wave!", &rect, textColor);
+        renderer->renderText("Start wave!", &rect, textColor, TextSizes::s24);
     }
     else{
 
@@ -225,11 +225,11 @@ void EnemyManager::renderAll(Renderer* renderer){
             string screenText = "Before next wave " + strUntilNextWave + "s";
 
             SDL_Rect rect = {x, y, 400, 75};
-            renderer->renderText(screenText, &rect, textColor);
+            renderer->renderText(screenText, &rect, textColor, TextSizes::s24);
         }
         else if (enemyInWaveSpawnTimer != nullptr && listOfSpawningWaves.size() != 0){
             SDL_Rect rect = {x, y, 200, 75};
-            renderer->renderText("Wave is here!", &rect, textColor);
+            renderer->renderText("Wave is here!", &rect, textColor, TextSizes::s24);
         }
     }
 }

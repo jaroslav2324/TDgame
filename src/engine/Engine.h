@@ -7,3 +7,4 @@
 #include "HID/GameEventTypes.h"
 #include "HID/GameEvents.h"
 #include "HID/SystemEventsHandler.h"
+#include "rendering/TextSizes.h"
