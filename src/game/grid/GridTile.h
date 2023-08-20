@@ -26,6 +26,7 @@ class GridTile{
     // file must be opened in binary mode. Using with other streams is not recommended(unknown result).
     void loadFromBinaryFile(istream& inputStream);
 
+    void setGridTileTextureType(TexturesEnumeration textureType);
     void render(Renderer* renderer);
     
     private:

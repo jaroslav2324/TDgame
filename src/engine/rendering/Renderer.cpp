@@ -3,7 +3,7 @@
 Renderer::Renderer(){
 
     this->window = SDL_CreateWindow("TD_Game", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-    this->renderer = renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    this->renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     // fonts
     freeSans24 = TTF_OpenFont("../data/fonts/freesans/FreeSans/FreeSans.ttf", 24);
@@ -14,12 +14,12 @@ Renderer::Renderer(){
     map<TexturesEnumeration, const char*> texturesPaths;
 
     //TODO create list of paths
-    texturesPaths[TexturesEnumeration::BASIC_ENEMY_TEXTURE] = "../data/assets/enemy.png";
+    texturesPaths[TexturesEnumeration::BASIC_ENEMY_TEXTURE] = "../data/assets/enemy.jpeg";
     texturesPaths[TexturesEnumeration::ORC_ENEMY_TEXTURE] = "../data/assets/orc.jpeg";
     texturesPaths[TexturesEnumeration::BASIC_TOWER_TEXTURE] = "../data/assets/towers/towerSD1.jpeg";
     texturesPaths[TexturesEnumeration::ICE_TOWER_TEXTURE] = "../data/assets/towers/towerSD7.jpeg";
     texturesPaths[TexturesEnumeration::FIRE_TOWER_TEXTURE] = "../data/assets/towers/laserTower.png";
-    texturesPaths[TexturesEnumeration::BASIC_PROJECTILE_TEXTURE] = "../data/assets/projectile.jpg";
+    texturesPaths[TexturesEnumeration::BASIC_PROJECTILE_TEXTURE] = "../data/assets/white_circle.png";
     texturesPaths[TexturesEnumeration::ICEBALL_PROJECTILE_TEXTURE] = "../data/assets/iceballs/iceballSD4.jpeg";
     texturesPaths[TexturesEnumeration::FIREBALL_PROJECTILE_TEXTURE] = "../data/assets/fireballs/fireballSD1.jpeg";
     texturesPaths[TexturesEnumeration::BASIC_GRID_TILE_TEXTURE] = "../data/assets/groundTiles/groundTileSD5.jpeg";
@@ -37,7 +37,7 @@ Renderer::Renderer(){
     if (DEBUG_CONSOLE_OUTPUT_ON)
         for (const auto textureNum: TexturesEnumeration())
             if (texturesPaths.find(textureNum) == texturesPaths.end())
-                cout << "No path was added for texture " << textureNum << endl;
+                cout << CoutTextColors::YELLOW << "No path was added for texture " << textureNum << CoutTextColors::RESET << endl;
         
   
     // load textures
@@ -46,7 +46,7 @@ Renderer::Renderer(){
 
         if (DEBUG_CONSOLE_OUTPUT_ON)
             if (textures[textureNum] == nullptr)
-                cout << "Wrong path for texture " << textureNum << endl;
+                cout << CoutTextColors::RED << "Wrong path for texture " << textureNum << CoutTextColors::RESET << endl;
 
 
         if (DEBUG_CONSOLE_OUTPUT_ON)
@@ -75,6 +75,14 @@ Renderer::~Renderer(){
     if (freeSans24 != nullptr){
         TTF_CloseFont(freeSans24);
         freeSans24 = nullptr;
+    }
+    if (freeSans48 != nullptr){
+        TTF_CloseFont(freeSans48);
+        freeSans48 = nullptr;
+    }
+    if (freeSans64 != nullptr){
+        TTF_CloseFont(freeSans64);
+        freeSans64 = nullptr;
     }
 }
 

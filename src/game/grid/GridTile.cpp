@@ -11,6 +11,10 @@ GridTile::~GridTile(){
 
 }
 
+void GridTile::setGridTileTextureType(TexturesEnumeration textureType){
+    this->gridTileTextureType = textureType;
+}
+
 void GridTile::render(Renderer* renderer){
 
     int x = coords.x - TILESIZE/ 2;
