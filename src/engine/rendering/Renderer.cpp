@@ -50,7 +50,7 @@ Renderer::Renderer(){
 
 
         if (DEBUG_CONSOLE_OUTPUT_ON)
-            cout << textureNum;
+            cout << CoutTextColors::GREEN << "Texture loaded: " << textureNum << CoutTextColors::RESET;
     }
 
     if (DEBUG_CONSOLE_OUTPUT_ON)
