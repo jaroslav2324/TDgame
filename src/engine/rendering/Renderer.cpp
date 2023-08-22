@@ -17,6 +17,7 @@ Renderer::Renderer(){
     // fill paths of textures
     map<TexturesEnumeration, const char*> texturesPaths;
 
+    // TODO move to level loading
     loadTexture(TexturesEnumeration::BASIC_ENEMY_TEXTURE, "../data/assets/enemy.jpeg");
     loadTexture(TexturesEnumeration::ORC_ENEMY_TEXTURE, "../data/assets/orc.jpeg");
     loadTexture(TexturesEnumeration::BASIC_TOWER_TEXTURE, "../data/assets/towers/towerSD1.jpeg");
@@ -57,6 +58,22 @@ void Renderer::loadTexture(TexturesEnumeration textureNum, const char* texturePa
             else
                 cout << CoutTextColors::GREEN << "Texture loaded: " << textureNum << CoutTextColors::RESET;
         }
+}
+
+void Renderer::unloadTexture(TexturesEnumeration textureNum){
+    if (textures[textureNum] != nullptr){
+        SDL_DestroyTexture(textures[textureNum]);
+        textures[textureNum] = nullptr;
+    }
+}
+
+void Renderer::replaceTexture(TexturesEnumeration replaceTextureNum, string& newTexturePath){
+    replaceTexture(replaceTextureNum, newTexturePath.c_str());
+}
+
+void Renderer::replaceTexture(TexturesEnumeration replaceTextureNum, const char* newTexturePath){
+    unloadTexture(replaceTextureNum);
+    loadTexture(replaceTextureNum, newTexturePath);
 }
 
 Renderer::~Renderer(){

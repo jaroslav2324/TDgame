@@ -28,8 +28,17 @@ class Renderer{
     Renderer();
     ~Renderer();
 
+    // loads texture if it has not been already loaded 
     void loadTexture(TexturesEnumeration textureNum, string& texturePath);
+    // loads texture if it has not been already loaded
     void loadTexture(TexturesEnumeration textureNum, const char* texturePath);
+    // unloads texture if it exists(not nullptr)
+    void unloadTexture(TexturesEnumeration textureNum);
+    // destroys previous texture and loads new one
+    void replaceTexture(TexturesEnumeration replaceTextureNum, string& newTexturePath);
+    // destroys previous texture and loads new one
+    void replaceTexture(TexturesEnumeration replaceTextureNum, const char* newTexturePath);
+
 
     void renderPresent();
     void renderTexture(TexturesEnumeration textureNum, const SDL_Rect* textureRect);
