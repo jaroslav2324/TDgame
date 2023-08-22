@@ -1,4 +1,0 @@
-
-set(UTILITY_SOURCES Timers.cpp CoutTextColors.cpp)
-set(UTILITY_SOURCES ${UTILITY_SOURCES} PARENT_SCOPE)
-

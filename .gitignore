@@ -33,5 +33,6 @@
 
 # vscode
 .vscode
-# tried to add SDL_image in code but failed
-SDL_image-release-2.6.2
+
+# build folder
+build
