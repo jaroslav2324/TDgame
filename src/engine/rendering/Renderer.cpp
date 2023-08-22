@@ -5,6 +5,10 @@ Renderer::Renderer(){
     this->window = SDL_CreateWindow("TD_Game", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     this->renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
+    // init texture pointers with nullptr
+    for (auto& pair: textures)
+        pair.second = nullptr;
+    
     // fonts
     freeSans24 = TTF_OpenFont("../data/fonts/freesans/FreeSans/FreeSans.ttf", 24);
     freeSans48 = TTF_OpenFont("../data/fonts/freesans/FreeSans/FreeSans.ttf", 48);
@@ -13,48 +17,46 @@ Renderer::Renderer(){
     // fill paths of textures
     map<TexturesEnumeration, const char*> texturesPaths;
 
-    //TODO create list of paths
-    texturesPaths[TexturesEnumeration::BASIC_ENEMY_TEXTURE] = "../data/assets/enemy.jpeg";
-    texturesPaths[TexturesEnumeration::ORC_ENEMY_TEXTURE] = "../data/assets/orc.jpeg";
-    texturesPaths[TexturesEnumeration::BASIC_TOWER_TEXTURE] = "../data/assets/towers/towerSD1.jpeg";
-    texturesPaths[TexturesEnumeration::ICE_TOWER_TEXTURE] = "../data/assets/towers/towerSD7.jpeg";
-    texturesPaths[TexturesEnumeration::FIRE_TOWER_TEXTURE] = "../data/assets/towers/laserTower.png";
-    texturesPaths[TexturesEnumeration::BASIC_PROJECTILE_TEXTURE] = "../data/assets/white_circle.png";
-    texturesPaths[TexturesEnumeration::ICEBALL_PROJECTILE_TEXTURE] = "../data/assets/iceballs/iceballSD4.jpeg";
-    texturesPaths[TexturesEnumeration::FIREBALL_PROJECTILE_TEXTURE] = "../data/assets/fireballs/fireballSD1.jpeg";
-    texturesPaths[TexturesEnumeration::BASIC_GRID_TILE_TEXTURE] = "../data/assets/groundTiles/groundTileSD5.jpeg";
-    texturesPaths[TexturesEnumeration::PORTAL_TEXTURE] = "../data/assets/portal.jpg";
-    texturesPaths[TexturesEnumeration::BASE_TEXTURE] = "../data/assets/base.jpg";
-    texturesPaths[TexturesEnumeration::TEST_TEXTURE] = "../data/assets/test.jpeg";
-    texturesPaths[TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE] = "../data/assets/white_square.jpg";
-    texturesPaths[TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE] = "../data/assets/light_grey_square.jpg";
-    texturesPaths[TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE] = "../data/assets/dark_grey_square.png";
-    texturesPaths[TexturesEnumeration::WHITE_CIRCLE] = "../data/assets/white_circle.png";
-    // add new paths here
+    loadTexture(TexturesEnumeration::BASIC_ENEMY_TEXTURE, "../data/assets/enemy.jpeg");
+    loadTexture(TexturesEnumeration::ORC_ENEMY_TEXTURE, "../data/assets/orc.jpeg");
+    loadTexture(TexturesEnumeration::BASIC_TOWER_TEXTURE, "../data/assets/towers/towerSD1.jpeg");
+    loadTexture(TexturesEnumeration::ICE_TOWER_TEXTURE, "../data/assets/towers/towerSD7.jpeg");
+    loadTexture(TexturesEnumeration::FIRE_TOWER_TEXTURE, "../data/assets/towers/laserTower.png");
+    loadTexture(TexturesEnumeration::BASIC_PROJECTILE_TEXTURE, "../data/assets/white_circle.png");
+    loadTexture(TexturesEnumeration::ICEBALL_PROJECTILE_TEXTURE, "../data/assets/iceballs/iceballSD4.jpeg");
+    loadTexture(TexturesEnumeration::FIREBALL_PROJECTILE_TEXTURE, "../data/assets/fireballs/fireballSD1.jpeg");
+    loadTexture(TexturesEnumeration::BASIC_GRID_TILE_TEXTURE, "../data/assets/groundTiles/groundTileSD5.jpeg");
+    loadTexture(TexturesEnumeration::PORTAL_TEXTURE, "../data/assets/portal.jpg");
+    loadTexture(TexturesEnumeration::BASE_TEXTURE, "../data/assets/base.jpg");
+    loadTexture(TexturesEnumeration::TEST_TEXTURE, "../data/assets/test.jpeg");
+    loadTexture(TexturesEnumeration::TEST_BUTTON_NO_INTERACTION_TEXTURE, "../data/assets/white_square.jpg");
+    loadTexture(TexturesEnumeration::TEST_BUTTON_HOVERED_OVER_TEXTURE, "../data/assets/light_grey_square.jpg");
+    loadTexture(TexturesEnumeration::TEST_BUTTON_PRESSED_ON_TEXTURE, "../data/assets/dark_grey_square.png");
+    loadTexture(TexturesEnumeration::WHITE_CIRCLE, "../data/assets/white_circle.png");
 
-
-    // if something was not loaded
-    if (DEBUG_CONSOLE_OUTPUT_ON)
-        for (const auto textureNum: TexturesEnumeration())
-            if (texturesPaths.find(textureNum) == texturesPaths.end())
-                cout << CoutTextColors::YELLOW << "No path was added for texture " << textureNum << CoutTextColors::RESET << endl;
         
-  
-    // load textures
-    for (const auto textureNum: TexturesEnumeration()){
-        textures[textureNum] = IMG_LoadTexture(renderer, texturesPaths[textureNum]);
-
-        if (DEBUG_CONSOLE_OUTPUT_ON)
-            if (textures[textureNum] == nullptr)
-                cout << CoutTextColors::RED << "Wrong path for texture " << textureNum << CoutTextColors::RESET << endl;
-
-
-        if (DEBUG_CONSOLE_OUTPUT_ON)
-            cout << CoutTextColors::GREEN << "Texture loaded: " << textureNum << CoutTextColors::RESET;
-    }
-
     if (DEBUG_CONSOLE_OUTPUT_ON)
         cout << endl << endl;
+}
+
+void Renderer::loadTexture(TexturesEnumeration textureNum, string& texturePath){
+    loadTexture(textureNum, texturePath.c_str());
+}
+
+void Renderer::loadTexture(TexturesEnumeration textureNum, const char* texturePath){
+    if (textures[textureNum] != nullptr){
+        if (DEBUG_CONSOLE_OUTPUT_ON)
+            cout << CoutTextColors::YELLOW << "Texture " << textureNum << " has been already loaded" << CoutTextColors::RESET << endl;
+        return;
+    }
+
+    textures[textureNum] = IMG_LoadTexture(renderer, texturePath);
+    if (DEBUG_CONSOLE_OUTPUT_ON){
+            if (textures[textureNum] == nullptr)
+                cout << CoutTextColors::RED << "Texture" << textureNum << " with path " << texturePath << "not loaded" << CoutTextColors::RESET << endl;
+            else
+                cout << CoutTextColors::GREEN << "Texture loaded: " << textureNum << CoutTextColors::RESET;
+        }
 }
 
 Renderer::~Renderer(){

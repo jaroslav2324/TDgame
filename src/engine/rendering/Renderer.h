@@ -25,9 +25,11 @@ using std::endl;
 class Renderer{
 
     public:
-    //TODO separate loading textures for levels and menus
     Renderer();
     ~Renderer();
+
+    void loadTexture(TexturesEnumeration textureNum, string& texturePath);
+    void loadTexture(TexturesEnumeration textureNum, const char* texturePath);
 
     void renderPresent();
     void renderTexture(TexturesEnumeration textureNum, const SDL_Rect* textureRect);

@@ -1,5 +1,8 @@
 #include "Grid.h"
 
+// TODO fix more than 1 tower on tile
+
+
 Grid::Grid(SDL_Rect gridRect, int tileWidth, int tileHeight, int gridTilesAmountWidth, int gridTilesAmountHeight){
 
     this->gridRect = gridRect;
