@@ -2,7 +2,7 @@
 
 Tower defence game.
 c++ and SDL, SDL_image, SDL_mixer, SDL_ttf libraries are used. Over 6k lines of code(counted by new lines).
-project is built with CMake for Linux Ubuntu.
+project has been built with CMake for Linux Ubuntu.
 
 Screenshots:
 
